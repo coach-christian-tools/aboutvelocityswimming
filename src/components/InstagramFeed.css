@@ -1,0 +1,88 @@
+.insta-feed-section {
+  background-color: var(--background);
+  padding-bottom: 5rem;
+}
+
+.insta-scroll-container {
+  width: 100%;
+  overflow-x: auto;
+  padding: 1rem 2rem 2rem 2rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) rgba(0,0,0,0.1);
+  /* Smooth scrolling */
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Custom scrollbar for webkit */
+.insta-scroll-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.insta-scroll-container::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+
+.insta-scroll-container::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 10px;
+}
+
+.insta-scroll-track {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  padding-bottom: 1rem;
+}
+
+.insta-card {
+  width: 320px;
+  flex-shrink: 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  background: white;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.insta-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.insta-img-wrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.insta-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.insta-card:hover .insta-img {
+  transform: scale(1.05);
+}
+
+.insta-content {
+  padding: 1.25rem;
+}
+
+.insta-title {
+  color: var(--primary);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.insta-caption {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}

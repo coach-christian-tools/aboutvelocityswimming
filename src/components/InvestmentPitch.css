@@ -1,0 +1,122 @@
+.investment-pitch {
+  background-color: var(--background);
+  position: relative;
+}
+
+.pitch-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.roi-card, .tiers-card {
+  padding: 3rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.roi-card h3, .tiers-card h3 {
+  color: var(--primary);
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.roi-card p {
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: auto;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-number {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  color: var(--text-main);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.85rem;
+}
+
+.tiers-card {
+  background-color: var(--primary);
+  color: white;
+}
+
+.tiers-card h3 {
+  color: white;
+}
+
+.tier-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.tier-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+}
+
+.tier-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.tier-header h4 {
+  font-size: 1.25rem;
+  color: white;
+}
+
+.tier-badge {
+  background-color: var(--accent);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.tier-item p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 992px) {
+  .pitch-grid {
+    grid-template-columns: 1fr;
+  }
+}

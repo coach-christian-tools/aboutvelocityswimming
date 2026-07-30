@@ -1,0 +1,177 @@
+.youth-dev {
+  background-color: var(--background-alt);
+  position: relative;
+  overflow: hidden;
+}
+
+.youth-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.section-title {
+  font-size: clamp(2rem, 3vw, 3rem);
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--accent);
+  margin-top: 1rem;
+  border-radius: 2px;
+}
+
+.lead-text {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  margin-bottom: 3rem;
+  line-height: 1.6;
+}
+
+.feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.feature-item {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.feature-text h3 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.feature-text p {
+  color: var(--text-muted);
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.youth-images {
+  position: relative;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-lg);
+  overflow: visible; /* so blob can peek out */
+}
+
+.carousel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  z-index: 2;
+  position: relative;
+  transition: opacity 0.5s ease-in-out;
+  border: 4px solid white;
+}
+
+.carousel-controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  z-index: 3;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(5px);
+}
+
+.carousel-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: var(--primary);
+  cursor: pointer;
+  padding: 0 0.5rem;
+  transition: color var(--transition-fast);
+}
+
+.carousel-btn:hover {
+  color: var(--accent);
+}
+
+.carousel-dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(19, 65, 93, 0.3);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+.carousel-dot.active {
+  background: var(--accent);
+  transform: scale(1.3);
+}
+
+.accent-blob {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+  opacity: 0.15;
+  z-index: 0;
+  border-radius: 50%;
+  filter: blur(40px);
+}
+
+@media (max-width: 992px) {
+  .youth-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .youth-images {
+    height: 400px;
+    margin-top: 2rem;
+  }
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "image": "/assets/photos/whs-seniors.jpeg",
+    "title": "Athlete Spotlight",
+    "caption": "So proud of our seniors! #VelocitySwimming #ClassOf2024"
+  },
+  {
+    "id": "2",
+    "image": "/assets/photos/tie-dye-smile.jpeg",
+    "title": "Team Bonding",
+    "caption": "Tie-dye Friday was a huge success. Look at those smiles! 🎨🏊‍♀️"
+  },
+  {
+    "id": "3",
+    "image": "/assets/photos/champs-arms-raised.JPG",
+    "title": "Championship Ready",
+    "caption": "That feeling when the hard work pays off. 🥇 #Champs"
+  },
+  {
+    "id": "4",
+    "image": "/assets/photos/hike.jpg",
+    "title": "Beyond the Pool",
+    "caption": "Building endurance and exploring our beautiful valley! 🏔️"
+  }
+]
