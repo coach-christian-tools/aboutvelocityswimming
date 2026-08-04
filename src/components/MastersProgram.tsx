@@ -1,13 +1,27 @@
+import { client, urlFor } from "../sanity/client";
 import "./MastersProgram.css";
 import ImageWithLightbox from "./ImageWithLightbox";
 
-export default function MastersProgram() {
+export const revalidate = 60;
+
+export default async function MastersProgram() {
+  let mastersProgramImageSrc = "/assets/photos/masters.jpeg";
+
+  try {
+    const data = await client.fetch(`*[_type == "pagePhotos"][0]`);
+    if (data?.mastersProgramImage) {
+      mastersProgramImageSrc = urlFor(data.mastersProgramImage).url();
+    }
+  } catch (error) {
+    console.error("Failed to fetch MastersProgram image from Sanity:", error);
+  }
+
   return (
     <section className="section masters-program">
       <div className="container">
         <div className="masters-grid">
           <div className="masters-image-wrapper">
-            <ImageWithLightbox src="/assets/photos/masters.jpeg" alt="Masters swimming camaraderie" className="masters-img" />
+            <ImageWithLightbox src={mastersProgramImageSrc} alt="Masters swimming camaraderie" className="masters-img" />
             <div className="accent-square"></div>
           </div>
           

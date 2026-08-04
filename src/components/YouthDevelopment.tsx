@@ -1,10 +1,10 @@
-"use client";
-
-import { useState, useEffect } from "react";
+import { client, urlFor } from "../sanity/client";
 import "./YouthDevelopment.css";
-import ImageWithLightbox from "./ImageWithLightbox";
+import Carousel from "./Carousel";
 
-const carouselImages = [
+export const revalidate = 60;
+
+const fallbackImages = [
   "/assets/photos/audrey-fun.jpeg",
   "/assets/photos/champs-arms-raised.JPG",
   "/assets/photos/city-pool-camp.JPG",
@@ -15,18 +15,20 @@ const carouselImages = [
   "/assets/photos/water-splash.jpeg"
 ];
 
-export default function YouthDevelopment() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % carouselImages.length);
-    }, 4000);
-    return () => clearInterval(timer);
-  }, []);
-
-  const nextSlide = () => setCurrentIndex((prev) => (prev + 1) % carouselImages.length);
-  const prevSlide = () => setCurrentIndex((prev) => (prev - 1 + carouselImages.length) % carouselImages.length);
+export default async function YouthDevelopment() {
+  let images = fallbackImages;
+  
+  try {
+    const carouselData = await client.fetch(
+      `*[_type == "carousel" && name == "Youth Development"][0]`
+    );
+    
+    if (carouselData?.images?.length > 0) {
+      images = carouselData.images.map((img: any) => urlFor(img).url());
+    }
+  } catch (error) {
+    console.error("Failed to fetch Youth Development carousel from Sanity:", error);
+  }
 
   return (
     <section id="about" className="section youth-dev">
@@ -58,29 +60,7 @@ export default function YouthDevelopment() {
           </div>
           
           <div className="youth-images">
-            <div className="carousel-container">
-              <ImageWithLightbox 
-                src={carouselImages[currentIndex]} 
-                alt={`Velocity Youth Development ${currentIndex + 1}`} 
-                className="carousel-img" 
-              />
-              
-              <div className="carousel-controls">
-                <button onClick={prevSlide} className="carousel-btn">&larr;</button>
-                <div className="carousel-dots">
-                  {carouselImages.map((_, idx) => (
-                    <button 
-                      key={idx} 
-                      className={`carousel-dot ${idx === currentIndex ? 'active' : ''}`}
-                      onClick={() => setCurrentIndex(idx)}
-                      aria-label={`Go to slide ${idx + 1}`}
-                    />
-                  ))}
-                </div>
-                <button onClick={nextSlide} className="carousel-btn">&rarr;</button>
-              </div>
-              <div className="accent-blob"></div>
-            </div>
+            <Carousel images={images} altPrefix="Velocity Youth Development" />
           </div>
         </div>
       </div>

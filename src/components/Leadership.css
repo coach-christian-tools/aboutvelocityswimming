@@ -23,96 +23,78 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: white;
   padding: 2.5rem;
+  border-radius: var(--radius-lg);
 }
 
-.dark-glass:hover {
-  background: rgba(255, 255, 255, 0.08);
+/* CARE Section */
+.care-section {
+  margin-bottom: 4rem;
+  padding: 3rem;
 }
 
-/* Collage Styles */
-.coach-collage {
-  position: relative;
-  height: 280px;
+.care-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+}
+
+.care-intro h3 {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.care-intro p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.care-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.care-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.care-letter {
+  font-size: 4rem;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 1rem;
+  text-shadow: 0 4px 15px rgba(10, 133, 108, 0.4);
+}
+
+.care-content h4 {
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+  color: white;
+}
+
+.care-content p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Coach Carousels */
+.coach-carousel-wrapper {
   margin-bottom: 2.5rem;
+  height: 350px;
   width: 100%;
+  position: relative;
 }
 
-.collage-accent-blob {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 70%;
-  height: 70%;
-  background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
-  opacity: 0.15;
-  z-index: 0;
-  border-radius: 50%;
-  filter: blur(30px);
-}
-
-.collage-img {
-  position: absolute;
-  border-radius: var(--radius-md);
-  border: 4px solid rgba(255, 255, 255, 0.1);
-  box-shadow: var(--shadow-lg);
-  object-fit: cover;
-  transition: z-index 0s, border-color var(--transition-fast);
-}
-
-.collage-img:hover {
-  z-index: 10 !important;
-  border-color: var(--accent);
-}
-
-/* Audrey's Collage (3 images) */
-.audrey-collage .img-1 {
-  width: 55%;
-  height: 70%;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-
-.audrey-collage .img-2 {
-  width: 60%;
-  height: 60%;
-  bottom: 0;
-  right: 0;
-  z-index: 2;
-}
-
-.audrey-collage .img-3 {
-  width: 45%;
-  height: 45%;
-  top: 20%;
-  left: 25%;
-  z-index: 3;
-}
-
-/* Christian's Collage (3 images) */
-.christian-collage .img-1 {
-  width: 55%;
-  height: 70%;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-
-.christian-collage .img-2 {
-  width: 60%;
-  height: 60%;
-  bottom: 0;
-  right: 0;
-  z-index: 2;
-}
-
-.christian-collage .img-3 {
-  width: 45%;
-  height: 45%;
-  top: 20%;
-  left: 25%;
-  z-index: 3;
+.coach-carousel {
+  height: 100%;
 }
 
 .coach-info {
@@ -157,5 +139,11 @@
 @media (max-width: 992px) {
   .coaches-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .care-section {
+    padding: 2rem;
   }
 }

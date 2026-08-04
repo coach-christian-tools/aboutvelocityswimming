@@ -1,9 +1,39 @@
-"use client";
-
+import { client, urlFor } from "../sanity/client";
 import "./Leadership.css";
-import ImageWithLightbox from "./ImageWithLightbox";
+import Carousel from "./Carousel";
 
-export default function Leadership() {
+export const revalidate = 60;
+
+const fallbackAudrey = [
+  "/assets/photos/audrey-eddings.jpeg",
+  "/assets/photos/audrey-fun.jpeg",
+  "/assets/photos/audrey-ribellia.jpeg"
+];
+
+const fallbackChristian = [
+  "/assets/photos/cutter-spartan.jpeg",
+  "/assets/photos/cutter-smile.JPG",
+  "/assets/photos/cutter-huddle.JPG"
+];
+
+export default async function Leadership() {
+  let audreyImages = fallbackAudrey;
+  let christianImages = fallbackChristian;
+
+  try {
+    const audreyData = await client.fetch(`*[_type == "carousel" && name == "Audrey Hyde"][0]`);
+    if (audreyData?.images?.length > 0) {
+      audreyImages = audreyData.images.map((img: any) => urlFor(img).url());
+    }
+
+    const christianData = await client.fetch(`*[_type == "carousel" && name == "Christian Cutter"][0]`);
+    if (christianData?.images?.length > 0) {
+      christianImages = christianData.images.map((img: any) => urlFor(img).url());
+    }
+  } catch (error) {
+    console.error("Failed to fetch Leadership carousels from Sanity:", error);
+  }
+
   return (
     <section id="coaches" className="section leadership">
       <div className="container">
@@ -14,21 +44,59 @@ export default function Leadership() {
           </p>
         </div>
 
+        {/* C.A.R.E. Charter Section */}
+        <div className="care-section glass-panel dark-glass">
+          <div className="care-intro">
+            <h3>Our C.A.R.E. Charter</h3>
+            <p>
+              We are committed to building a competitive, supportive, and disciplined environment.
+              Success isn't just measured by the stopwatch, but by character, teamwork, and dedication.
+            </p>
+          </div>
+          <div className="care-grid">
+            <div className="care-item">
+              <div className="care-letter">C</div>
+              <div className="care-content">
+                <h4>Control</h4>
+                <p>Mastering focus and managing emotions with composure, in and out of the water.</p>
+              </div>
+            </div>
+            <div className="care-item">
+              <div className="care-letter">A</div>
+              <div className="care-content">
+                <h4>Accountability</h4>
+                <p>Owning our performance, communicating honestly, and learning from every mistake.</p>
+              </div>
+            </div>
+            <div className="care-item">
+              <div className="care-letter">R</div>
+              <div className="care-content">
+                <h4>Respect</h4>
+                <p>Treating coaches, teammates, competitors, and facilities with utmost integrity.</p>
+              </div>
+            </div>
+            <div className="care-item">
+              <div className="care-letter">E</div>
+              <div className="care-content">
+                <h4>Effort</h4>
+                <p>Pushing past limits, staying committed to goals, and embracing discipline.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="coaches-grid">
           <div className="coach-card glass-panel dark-glass">
-            
-            <div className="coach-collage audrey-collage">
-              <div className="collage-accent-blob"></div>
-              <ImageWithLightbox src="/assets/photos/audrey-eddings.jpeg" alt="Coach Audrey with Eddings" className="collage-img img-1" />
-              <ImageWithLightbox src="/assets/photos/audrey-fun.jpeg" alt="Coach Audrey having fun" className="collage-img img-2" />
-              <ImageWithLightbox src="/assets/photos/audrey-ribellia.jpeg" alt="Coach Audrey with Ribellia" className="collage-img img-3" />
+
+            <div className="coach-carousel-wrapper">
+              <Carousel images={audreyImages} altPrefix="Coach Audrey" className="coach-carousel" />
             </div>
 
             <div className="coach-info">
               <h3 className="coach-name">Audrey Hyde</h3>
               <p className="coach-role">Co-Head Coach (12 & Under)</p>
             </div>
-            
+
             <div className="qa-section">
               <div className="qa-item">
                 <h4>What does success look like for developing swimmers?</h4>
@@ -46,12 +114,9 @@ export default function Leadership() {
           </div>
 
           <div className="coach-card glass-panel dark-glass">
-            
-            <div className="coach-collage christian-collage">
-              <div className="collage-accent-blob"></div>
-              <ImageWithLightbox src="/assets/photos/cutter-spartan.jpeg" alt="Coach Christian Spartan" className="collage-img img-1" />
-              <ImageWithLightbox src="/assets/photos/cutter-smile.JPG" alt="Coach Christian Smiling" className="collage-img img-2" />
-              <ImageWithLightbox src="/assets/photos/cutter-huddle.JPG" alt="Coach Christian Huddle" className="collage-img img-3" />
+
+            <div className="coach-carousel-wrapper">
+              <Carousel images={christianImages} altPrefix="Coach Christian" className="coach-carousel" />
             </div>
 
             <div className="coach-info">

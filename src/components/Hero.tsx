@@ -1,10 +1,24 @@
+import { client, urlFor } from "../sanity/client";
 import "./Hero.css";
 
-export default function Hero() {
+export const revalidate = 60;
+
+export default async function Hero() {
+  let heroImageSrc = "/assets/photos/practice.jpg";
+
+  try {
+    const data = await client.fetch(`*[_type == "pagePhotos"][0]`);
+    if (data?.heroImage) {
+      heroImageSrc = urlFor(data.heroImage).url();
+    }
+  } catch (error) {
+    console.error("Failed to fetch Hero image from Sanity:", error);
+  }
+
   return (
     <section className="hero">
       <div className="hero-background">
-        <img src="/assets/photos/practice.jpg" alt="Velocity Swimming Practice" className="hero-img" />
+        <img src={heroImageSrc} alt="Velocity Swimming Practice" className="hero-img" />
         <div className="hero-overlay"></div>
       </div>
       

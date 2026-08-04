@@ -1,7 +1,25 @@
+import { client, urlFor } from "../sanity/client";
 import "./VelocityInAction.css";
 import ImageWithLightbox from "./ImageWithLightbox";
 
-export default function VelocityInAction() {
+export const revalidate = 60;
+
+export default async function VelocityInAction() {
+  let athleteSpotlightImageSrc = "/assets/photos/whs-seniors.jpeg";
+  let beyondThePoolImageSrc = "/assets/photos/hike.jpg";
+
+  try {
+    const data = await client.fetch(`*[_type == "pagePhotos"][0]`);
+    if (data?.athleteSpotlightImage) {
+      athleteSpotlightImageSrc = urlFor(data.athleteSpotlightImage).url();
+    }
+    if (data?.beyondThePoolImage) {
+      beyondThePoolImageSrc = urlFor(data.beyondThePoolImage).url();
+    }
+  } catch (error) {
+    console.error("Failed to fetch VelocityInAction images from Sanity:", error);
+  }
+
   return (
     <section id="programs" className="section velocity-action">
       <div className="container">
@@ -15,7 +33,7 @@ export default function VelocityInAction() {
         <div className="action-grid">
           <div className="action-card glass-panel">
             <div className="action-img-container">
-              <ImageWithLightbox src="/assets/photos/whs-seniors.jpeg" alt="Athlete spotlight" className="action-img action-img-spotlight" />
+              <ImageWithLightbox src={athleteSpotlightImageSrc} alt="Athlete spotlight" className="action-img action-img-spotlight" />
             </div>
             <div className="action-content">
               <h3>Athlete Spotlights</h3>
@@ -28,7 +46,7 @@ export default function VelocityInAction() {
 
           <div className="action-card glass-panel">
             <div className="action-img-container">
-              <ImageWithLightbox src="/assets/photos/hike.jpg" alt="Community impact" className="action-img" />
+              <ImageWithLightbox src={beyondThePoolImageSrc} alt="Community impact" className="action-img" />
             </div>
             <div className="action-content">
               <h3>Beyond the Pool</h3>
