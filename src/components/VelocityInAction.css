@@ -76,30 +76,9 @@
 .action-content p {
   color: var(--text-muted);
   line-height: 1.6;
-  font-style: italic;
-  flex-grow: 1;
+  font-size: 1rem;
 }
 
-.testimonial-author {
-  display: block;
-  margin-top: 1.5rem;
-  font-weight: 600;
-  color: var(--text-main);
-  font-family: var(--font-heading);
-}
-
-.text-link {
-  display: inline-block;
-  margin-top: 1.5rem;
-  color: var(--accent);
-  font-weight: 600;
-  font-family: var(--font-heading);
-}
-
-.text-link:hover {
-  color: var(--accent-hover);
-  text-decoration: underline;
-}
 
 @media (max-width: 768px) {
   .action-grid {

@@ -21,7 +21,7 @@ export default async function VelocityInAction() {
   }
 
   return (
-    <section id="programs" className="section velocity-action">
+    <section id="community" className="section velocity-action">
       <div className="container">
         <div className="text-center mb-12">
           <h2 className="section-title centered">Velocity in Action</h2>
@@ -38,9 +38,8 @@ export default async function VelocityInAction() {
             <div className="action-content">
               <h3>Athlete Spotlights</h3>
               <p>
-                "Swimming with Velocity taught me that hard work isn't just about winning medals; it's about pushing past your own limitations. The coaches believed in me before I believed in myself."
+                Congratulations to Marieka, Sadie, Lindsay, and Aurelia! We are so proud of your dedication and achievements with Velocity Swimming and wish you all the best in your exciting college swimming careers.
               </p>
-              <span className="testimonial-author">— Velocity Senior Athlete</span>
             </div>
           </div>
 
@@ -53,11 +52,11 @@ export default async function VelocityInAction() {
               <p>
                 From volunteering at the Serve Wenatchee Valley food drive to completing our 5-mile cancer research endurance swim, our team is dedicated to giving back and developing true citizens.
               </p>
-              <a href="#" className="text-link">Read our community stories &rarr;</a>
             </div>
           </div>
         </div>
       </div>
     </section>
+
   );
 }

@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import YouthDevelopment from "@/components/YouthDevelopment";
+import Programs from "@/components/Programs";
 import VelocityInAction from "@/components/VelocityInAction";
 import Leadership from "@/components/Leadership";
 import MastersProgram from "@/components/MastersProgram";
@@ -14,6 +15,7 @@ export default function Home() {
       <Header />
       <Hero />
       <YouthDevelopment />
+      <Programs />
       <VelocityInAction />
       <Leadership />
       <MastersProgram />
@@ -23,3 +25,4 @@ export default function Home() {
     </main>
   );
 }
+

@@ -1,38 +1,58 @@
 .investment-pitch {
-  background-color: var(--background);
+  background-color: var(--background-alt);
   position: relative;
 }
 
-.pitch-grid {
+.section-badge {
+  display: inline-block;
+  background-color: rgba(10, 133, 108, 0.1);
+  color: var(--accent);
+  padding: 0.35rem 1rem;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.75rem;
+}
+
+.max-w-3xl {
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Why Partner Overview Banner */
+.pitch-overview-card {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-}
-
-.roi-card, .tiers-card {
-  padding: 3rem;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 2.5rem;
+  padding: 2.5rem;
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
+  align-items: center;
+  background: white;
+  border: 1px solid rgba(19, 65, 93, 0.08);
+  box-shadow: var(--shadow-sm);
 }
 
-.roi-card h3, .tiers-card h3 {
+.overview-content h3 {
   color: var(--primary);
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
 }
 
-.roi-card p {
+.overview-content p {
   color: var(--text-muted);
   line-height: 1.6;
-  margin-bottom: 2rem;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
 }
 
 .stats-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  margin-top: auto;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  border-left: 2px solid rgba(19, 65, 93, 0.1);
+  padding-left: 2rem;
 }
 
 .stat-item {
@@ -42,81 +62,340 @@
 
 .stat-number {
   font-family: var(--font-heading);
-  font-size: 3rem;
+  font-size: 2.25rem;
   font-weight: 700;
   color: var(--accent);
-  line-height: 1;
-  margin-bottom: 0.5rem;
+  line-height: 1.1;
+  margin-bottom: 0.35rem;
 }
 
 .stat-label {
   color: var(--text-main);
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  font-size: 0.75rem;
+  line-height: 1.3;
 }
 
-.tiers-card {
-  background-color: var(--primary);
-  color: white;
+/* 4-Tier Grid */
+.sponsorship-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  align-items: stretch;
 }
 
-.tiers-card h3 {
-  color: white;
-}
-
-.tier-list {
+.sponsorship-card {
+  position: relative;
+  background: white;
+  border: 1px solid rgba(19, 65, 93, 0.12);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
 }
 
-.tier-item {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 1.5rem;
-  border-radius: var(--radius-md);
+.sponsorship-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
 }
 
-.tier-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0.75rem;
+/* Highlighted (Platinum) Card */
+.sponsorship-card.highlighted {
+  border: 2px solid var(--accent);
+  box-shadow: 0 10px 25px -5px rgba(10, 133, 108, 0.15);
 }
 
-.tier-header h4 {
-  font-size: 1.25rem;
+/* Meet Sponsor (Exclusive) Card */
+.sponsorship-card.meet-sponsor-card {
+  background: linear-gradient(180deg, #13415D 0%, #0D2C40 100%);
+  color: white;
+  border: 1px solid #1A5980;
+}
+
+.sponsorship-card.meet-sponsor-card .tier-title {
   color: white;
 }
 
-.tier-badge {
+.sponsorship-card.meet-sponsor-card .tier-price {
+  color: #34D399;
+}
+
+.sponsorship-card.meet-sponsor-card .tier-period {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.sponsorship-card.meet-sponsor-card .tier-description {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.sponsorship-card.meet-sponsor-card .benefits-label {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.sponsorship-card.meet-sponsor-card .benefit-item {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.sponsorship-card.meet-sponsor-card .card-divider {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Badges */
+.card-badge {
+  position: absolute;
+  top: -12px;
+  right: 18px;
   background-color: var(--accent);
   color: white;
   padding: 0.25rem 0.75rem;
   border-radius: var(--radius-full);
-  font-size: 0.75rem;
-  font-weight: bold;
+  font-size: 0.72rem;
+  font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: 0.75px;
+  box-shadow: var(--shadow-sm);
 }
 
-.tier-item p {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 0.95rem;
-  line-height: 1.5;
+.card-badge.badge-exclusive {
+  background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+  color: #1E293B;
+  font-weight: 800;
+}
+
+/* Card Header */
+.card-header {
+  margin-bottom: 1.25rem;
+}
+
+.tier-title {
+  font-size: 1.35rem;
+  color: var(--primary);
+  margin-bottom: 0.35rem;
+}
+
+.tier-tagline {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: #F59E0B;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.tier-price-wrapper {
+  display: flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  margin: 0.75rem 0 0.5rem 0;
+}
+
+.tier-price {
+  font-family: var(--font-heading);
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1.1;
+}
+
+.highlighted .tier-price {
+  color: var(--accent);
+}
+
+.tier-period {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.tier-description {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+  margin-top: 0.5rem;
+  min-height: 2.6rem;
+}
+
+.card-divider {
+  height: 1px;
+  background-color: rgba(19, 65, 93, 0.08);
+  margin-bottom: 1.25rem;
+}
+
+/* Card Body & Benefits */
+.card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.benefits-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.tier-benefits-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: var(--text-main);
+}
+
+.check-icon-svg {
+  width: 1.15rem;
+  height: 1.15rem;
+  color: var(--accent);
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.meet-sponsor-card .check-icon-svg {
+  color: #34D399;
 }
 
 .w-full {
   width: 100%;
 }
 
-.mt-6 {
-  margin-top: 1.5rem;
+.mb-12 {
+  margin-bottom: 3rem;
 }
 
-@media (max-width: 992px) {
-  .pitch-grid {
-    grid-template-columns: 1fr;
+/* Validity & CTA Banner */
+.sponsorship-validity-banner {
+  background: white;
+  border: 1px solid rgba(19, 65, 93, 0.1);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.validity-info {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.validity-icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.validity-title {
+  font-size: 1.05rem;
+  color: var(--text-main);
+  margin-bottom: 0.25rem;
+}
+
+.validity-subtitle {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+.validity-cta {
+  flex-shrink: 0;
+}
+
+/* Dark Mode Adjustments */
+@media (prefers-color-scheme: dark) {
+  .pitch-overview-card {
+    background: var(--background-alt);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .overview-content h3 {
+    color: var(--text-main);
+  }
+
+  .stats-grid {
+    border-left-color: rgba(255, 255, 255, 0.15);
+  }
+
+  .sponsorship-card {
+    background: var(--background-alt);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .tier-title {
+    color: var(--text-main);
+  }
+
+  .tier-price {
+    color: var(--text-main);
+  }
+
+  .highlighted .tier-price {
+    color: #34D399;
+  }
+
+  .sponsorship-validity-banner {
+    background: var(--background-alt);
+    border-color: rgba(255, 255, 255, 0.1);
   }
 }
+
+/* Responsive Breakpoints */
+@media (max-width: 1200px) {
+  .sponsorship-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .pitch-overview-card {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1.75rem;
+  }
+
+  .stats-grid {
+    border-left: none;
+    border-top: 2px solid rgba(19, 65, 93, 0.1);
+    padding-left: 0;
+    padding-top: 1.5rem;
+  }
+
+  .sponsorship-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sponsorship-validity-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .validity-info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .validity-cta, .validity-cta .btn {
+    width: 100%;
+  }
+}
+

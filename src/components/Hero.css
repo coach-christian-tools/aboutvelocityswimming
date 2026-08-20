@@ -27,7 +27,9 @@
 }
 
 @keyframes slowZoom {
-  to { transform: scale(1); }
+  to {
+    transform: scale(1);
+  }
 }
 
 .hero-overlay {

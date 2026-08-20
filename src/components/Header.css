@@ -8,11 +8,28 @@
   padding: 1.5rem 0;
 }
 
+/* Initial dark state for secondary pages before scroll */
+.header.header-dark-bg:not(.scrolled) {
+  background-color: var(--primary-dark);
+  background-image: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  padding: 1.25rem 0;
+}
+
+.header.header-dark-bg:not(.scrolled) .nav-links a {
+  color: white;
+  text-shadow: none;
+}
+
+/* Scrolled state for all pages (Home & Legal) */
 .header.scrolled {
   background-color: var(--background);
+  background-image: none;
   box-shadow: var(--shadow-md);
   padding: 1rem 0;
 }
+
+
 
 .header-container {
   display: flex;

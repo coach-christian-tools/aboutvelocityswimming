@@ -1,9 +1,14 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import "./Header.css";
 
-export default function Header() {
+interface HeaderProps {
+  darkBackground?: boolean;
+}
+
+export default function Header({ darkBackground = false }: HeaderProps) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -15,25 +20,53 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={`header ${scrolled ? "scrolled" : ""}`}>
+    <header className={`header ${scrolled ? "scrolled" : ""} ${darkBackground ? "header-dark-bg" : ""}`}>
       <div className="header-container">
-        <a href="#" className="logo-link">
+        <Link href="/" className="logo-link">
           <picture>
-            <source media="(min-width: 768px)" srcSet={scrolled ? "/assets/logo-variations/contrast/Long%20Contrast.svg" : "/assets/logo-variations/white/Long%20White.svg"} />
-            <source media="(min-width: 480px)" srcSet={scrolled ? "/assets/logo-variations/contrast/Small%20Contrast.svg" : "/assets/logo-variations/white/Small%20White.svg"} />
-            <img src={scrolled ? "/assets/logo-variations/contrast/Initials%20Contrast.svg" : "/assets/logo-variations/white/Initials%20White.svg"} alt="Velocity Swimming Logo" className="logo" />
+            <source
+              media="(min-width: 768px)"
+              srcSet={
+                scrolled
+                  ? "/assets/logo-variations/contrast/Long%20Contrast.svg"
+                  : "/assets/logo-variations/white/Long%20White.svg"
+              }
+            />
+            <source
+              media="(min-width: 480px)"
+              srcSet={
+                scrolled
+                  ? "/assets/logo-variations/contrast/Small%20Contrast.svg"
+                  : "/assets/logo-variations/white/Small%20White.svg"
+              }
+            />
+            <img
+              src={
+                scrolled
+                  ? "/assets/logo-variations/contrast/Initials%20Contrast.svg"
+                  : "/assets/logo-variations/white/Initials%20White.svg"
+              }
+              alt="Velocity Swimming Logo"
+              className="logo"
+            />
           </picture>
-        </a>
-        
+        </Link>
+
+
         <nav className="nav-links">
-          <a href="#about">About</a>
-          <a href="#programs">Programs</a>
-          <a href="#coaches">Coaches</a>
-          <a href="#sponsors">Sponsors</a>
+          <Link href="/#about">About</Link>
+          <Link href="/#programs">Programs</Link>
+          <Link href="/#coaches">Coaches</Link>
+          <Link href="/#sponsors">Sponsors</Link>
         </nav>
 
         <div className="cta-container">
-          <a href="https://www.gomotionapp.com/team/ievs/page/online-registration1" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+          <a
+            href="https://www.gomotionapp.com/team/ievs/page/online-registration1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-primary"
+          >
             Join the Team
           </a>
         </div>
@@ -41,3 +74,4 @@ export default function Header() {
     </header>
   );
 }
+
