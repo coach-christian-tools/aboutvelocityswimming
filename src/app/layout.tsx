@@ -15,7 +15,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://velocityswimming.com"),
+  metadataBase: new URL("https://aboutvelocityswimming.com"),
   title: "Velocity Swimming | Wenatchee Valley",
   description: "Fostering excellence, resilience, and community from learn-to-swim to masters in North Central Washington.",
   keywords: [
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Velocity Swimming | Wenatchee Valley",
     description: "Fostering excellence, resilience, and community from learn-to-swim to masters in North Central Washington.",
-    url: "https://velocityswimming.com",
+    url: "https://aboutvelocityswimming.com",
     siteName: "Velocity Swimming",
     locale: "en_US",
     type: "website",
