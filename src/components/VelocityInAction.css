@@ -80,6 +80,17 @@
 }
 
 
+@media (prefers-color-scheme: dark) {
+  .action-card {
+    background: var(--background-alt);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .action-content h3 {
+    color: var(--text-main);
+  }
+}
+
 @media (max-width: 768px) {
   .action-grid {
     grid-template-columns: 1fr;

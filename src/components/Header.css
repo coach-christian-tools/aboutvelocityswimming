@@ -88,6 +88,21 @@
   width: 100%;
 }
 
+@media (prefers-color-scheme: dark) {
+  .header.scrolled {
+    background-color: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  }
+
+  .header.scrolled .nav-links a {
+    color: #F8FAFC;
+    text-shadow: none;
+  }
+}
+
 @media (max-width: 768px) {
   .nav-links {
     display: none;

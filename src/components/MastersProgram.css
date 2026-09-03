@@ -85,6 +85,12 @@
   margin-top: 2rem;
 }
 
+@media (prefers-color-scheme: dark) {
+  .benefits-list strong {
+    color: var(--text-main);
+  }
+}
+
 @media (max-width: 992px) {
   .masters-grid {
     grid-template-columns: 1fr;

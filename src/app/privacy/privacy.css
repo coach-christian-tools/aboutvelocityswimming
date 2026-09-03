@@ -157,7 +157,8 @@
     border-color: var(--accent);
   }
 
-  .legal-title-block h1 {
+  .legal-title-block h1,
+  .legal-header h1 {
     color: var(--text-main);
   }
 

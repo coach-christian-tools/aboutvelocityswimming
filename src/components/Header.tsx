@@ -24,6 +24,21 @@ export default function Header({ darkBackground = false }: HeaderProps) {
       <div className="header-container">
         <Link href="/" className="logo-link">
           <picture>
+            {/* Dark mode: always maintain white logo */}
+            <source
+              media="(prefers-color-scheme: dark) and (min-width: 768px)"
+              srcSet="/assets/logo-variations/white/Long%20White.svg"
+            />
+            <source
+              media="(prefers-color-scheme: dark) and (min-width: 480px)"
+              srcSet="/assets/logo-variations/white/Small%20White.svg"
+            />
+            <source
+              media="(prefers-color-scheme: dark)"
+              srcSet="/assets/logo-variations/white/Initials%20White.svg"
+            />
+
+            {/* Light mode: toggle between white (unscrolled) and contrast (scrolled) */}
             <source
               media="(min-width: 768px)"
               srcSet={
