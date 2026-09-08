@@ -320,40 +320,179 @@
 }
 
 /* Dark Mode Adjustments */
+:root[data-theme="dark"] .pitch-overview-card {
+  background: var(--background-alt);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+:root[data-theme="dark"] .overview-content h3 {
+  color: var(--text-main);
+}
+
+:root[data-theme="dark"] .stats-grid {
+  border-left-color: rgba(255, 255, 255, 0.15);
+  border-top-color: rgba(255, 255, 255, 0.15);
+}
+
+:root[data-theme="dark"] .stat-number {
+  color: #34D399;
+}
+
+:root[data-theme="dark"] .stat-label {
+  color: #E2E8F0;
+}
+
+:root[data-theme="dark"] .sponsorship-card {
+  background: var(--background-alt);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+:root[data-theme="dark"] .sponsorship-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+:root[data-theme="dark"] .sponsorship-card.highlighted {
+  border-color: var(--accent);
+  box-shadow: 0 10px 25px -5px rgba(10, 133, 108, 0.35);
+}
+
+:root[data-theme="dark"] .sponsorship-card.meet-sponsor-card {
+  background: linear-gradient(180deg, #0d273a 0%, #081a27 100%);
+  border-color: rgba(52, 211, 153, 0.3);
+  box-shadow: 0 8px 25px -4px rgba(0, 0, 0, 0.5);
+}
+
+:root[data-theme="dark"] .tier-title {
+  color: var(--text-main);
+}
+
+:root[data-theme="dark"] .tier-price {
+  color: var(--text-main);
+}
+
+:root[data-theme="dark"] .highlighted .tier-price {
+  color: #34D399;
+}
+
+:root[data-theme="dark"] .tier-period {
+  color: #94A3B8;
+}
+
+:root[data-theme="dark"] .card-divider {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+:root[data-theme="dark"] .benefits-label {
+  color: #94A3B8;
+}
+
+:root[data-theme="dark"] .benefit-item {
+  color: #E2E8F0;
+}
+
+:root[data-theme="dark"] .benefit-item .check-icon-svg {
+  color: #34D399;
+}
+
+:root[data-theme="dark"] .sponsorship-validity-banner {
+  background: var(--background-alt);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+:root[data-theme="dark"] .validity-title {
+  color: var(--text-main);
+}
+
 @media (prefers-color-scheme: dark) {
-  .pitch-overview-card {
+  :root:not([data-theme="light"]) .pitch-overview-card {
     background: var(--background-alt);
-    border-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   }
 
-  .overview-content h3 {
+  :root:not([data-theme="light"]) .overview-content h3 {
     color: var(--text-main);
   }
 
-  .stats-grid {
+  :root:not([data-theme="light"]) .stats-grid {
     border-left-color: rgba(255, 255, 255, 0.15);
+    border-top-color: rgba(255, 255, 255, 0.15);
   }
 
-  .sponsorship-card {
-    background: var(--background-alt);
-    border-color: rgba(255, 255, 255, 0.1);
-  }
-
-  .tier-title {
-    color: var(--text-main);
-  }
-
-  .tier-price {
-    color: var(--text-main);
-  }
-
-  .highlighted .tier-price {
+  :root:not([data-theme="light"]) .stat-number {
     color: #34D399;
   }
 
-  .sponsorship-validity-banner {
+  :root:not([data-theme="light"]) .stat-label {
+    color: #E2E8F0;
+  }
+
+  :root:not([data-theme="light"]) .sponsorship-card {
     background: var(--background-alt);
-    border-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  }
+
+  :root:not([data-theme="light"]) .sponsorship-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+
+  :root:not([data-theme="light"]) .sponsorship-card.highlighted {
+    border-color: var(--accent);
+    box-shadow: 0 10px 25px -5px rgba(10, 133, 108, 0.35);
+  }
+
+  :root:not([data-theme="light"]) .sponsorship-card.meet-sponsor-card {
+    background: linear-gradient(180deg, #0d273a 0%, #081a27 100%);
+    border-color: rgba(52, 211, 153, 0.3);
+    box-shadow: 0 8px 25px -4px rgba(0, 0, 0, 0.5);
+  }
+
+  :root:not([data-theme="light"]) .tier-title {
+    color: var(--text-main);
+  }
+
+  :root:not([data-theme="light"]) .tier-price {
+    color: var(--text-main);
+  }
+
+  :root:not([data-theme="light"]) .highlighted .tier-price {
+    color: #34D399;
+  }
+
+  :root:not([data-theme="light"]) .tier-period {
+    color: #94A3B8;
+  }
+
+  :root:not([data-theme="light"]) .card-divider {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  :root:not([data-theme="light"]) .benefits-label {
+    color: #94A3B8;
+  }
+
+  :root:not([data-theme="light"]) .benefit-item {
+    color: #E2E8F0;
+  }
+
+  :root:not([data-theme="light"]) .benefit-item .check-icon-svg {
+    color: #34D399;
+  }
+
+  :root:not([data-theme="light"]) .sponsorship-validity-banner {
+    background: var(--background-alt);
+    border-color: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  :root:not([data-theme="light"]) .validity-title {
+    color: var(--text-main);
   }
 }
 

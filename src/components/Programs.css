@@ -317,32 +317,129 @@
 }
 
 /* Dark Mode Adjustments */
+:root[data-theme="dark"] .division-card {
+  background: var(--background-alt);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+:root[data-theme="dark"] .division-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+:root[data-theme="dark"] .division-card.featured-division {
+  border-color: var(--accent);
+  box-shadow: 0 8px 25px -4px rgba(10, 133, 108, 0.35);
+}
+
+:root[data-theme="dark"] .division-badge {
+  background-color: rgba(52, 211, 153, 0.15);
+  color: #34D399;
+}
+
+:root[data-theme="dark"] .featured-division .division-badge {
+  background-color: var(--accent);
+  color: white;
+}
+
+:root[data-theme="dark"] .division-title {
+  color: var(--text-main);
+}
+
+:root[data-theme="dark"] .groups-title {
+  color: #E2E8F0;
+}
+
+:root[data-theme="dark"] .group-pill-card {
+  background-color: rgba(15, 23, 42, 0.6);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+:root[data-theme="dark"] .group-head strong {
+  color: var(--text-main);
+}
+
+:root[data-theme="dark"] .group-age {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #F1F5F9;
+}
+
+:root[data-theme="dark"] .division-footer-meta {
+  border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+:root[data-theme="dark"] .meta-label {
+  color: #E2E8F0;
+}
+
+:root[data-theme="dark"] .registration-flow-card {
+  background: linear-gradient(135deg, #0d2334 0%, #081724 60%, #06232d 100%);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.5);
+}
+
 @media (prefers-color-scheme: dark) {
-  .division-card {
+  :root:not([data-theme="light"]) .division-card {
     background: var(--background-alt);
-    border-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
   }
 
-  .division-title {
-    color: var(--text-main);
+  :root:not([data-theme="light"]) .division-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+    border-color: rgba(255, 255, 255, 0.2);
   }
 
-  .groups-title {
-    color: var(--text-main);
+  :root:not([data-theme="light"]) .division-card.featured-division {
+    border-color: var(--accent);
+    box-shadow: 0 8px 25px -4px rgba(10, 133, 108, 0.35);
   }
 
-  .group-pill-card {
-    background-color: rgba(255, 255, 255, 0.04);
-    border-color: rgba(255, 255, 255, 0.08);
+  :root:not([data-theme="light"]) .division-badge {
+    background-color: rgba(52, 211, 153, 0.15);
+    color: #34D399;
   }
 
-  .group-age {
-    background-color: rgba(255, 255, 255, 0.1);
+  :root:not([data-theme="light"]) .featured-division .division-badge {
+    background-color: var(--accent);
     color: white;
   }
 
-  .meta-label {
+  :root:not([data-theme="light"]) .division-title {
     color: var(--text-main);
+  }
+
+  :root:not([data-theme="light"]) .groups-title {
+    color: #E2E8F0;
+  }
+
+  :root:not([data-theme="light"]) .group-pill-card {
+    background-color: rgba(15, 23, 42, 0.6);
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+
+  :root:not([data-theme="light"]) .group-head strong {
+    color: var(--text-main);
+  }
+
+  :root:not([data-theme="light"]) .group-age {
+    background-color: rgba(255, 255, 255, 0.12);
+    color: #F1F5F9;
+  }
+
+  :root:not([data-theme="light"]) .division-footer-meta {
+    border-top-color: rgba(255, 255, 255, 0.1);
+  }
+
+  :root:not([data-theme="light"]) .meta-label {
+    color: #E2E8F0;
+  }
+
+  :root:not([data-theme="light"]) .registration-flow-card {
+    background: linear-gradient(135deg, #0d2334 0%, #081724 60%, #06232d 100%);
+    border-color: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.5);
   }
 }
 

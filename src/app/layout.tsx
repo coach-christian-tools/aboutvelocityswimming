@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Outfit } from "next/font/google";
+import { Inter, Outfit, Bebas_Neue } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -11,6 +11,13 @@ const inter = Inter({
 const outfit = Outfit({
   subsets: ["latin"],
   variable: "--font-outfit",
+  display: "swap",
+});
+
+const bebas = Bebas_Neue({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-bebas",
   display: "swap",
 });
 
@@ -60,8 +67,33 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.variable} ${outfit.variable}`}>
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var stored = localStorage.getItem('velocity-theme') || 'system';
+                  var systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                  var theme = stored === 'system' ? (systemDark ? 'dark' : 'light') : stored;
+                  document.documentElement.setAttribute('data-theme', theme);
+                  document.documentElement.setAttribute('data-theme-preference', stored);
+
+                  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+                    var curPref = localStorage.getItem('velocity-theme') || 'system';
+                    if (curPref === 'system') {
+                      var newTheme = e.matches ? 'dark' : 'light';
+                      document.documentElement.setAttribute('data-theme', newTheme);
+                    }
+                  });
+                } catch (e) {}
+              })();
+            `,
+          }}
+        />
+      </head>
+      <body className={`${inter.variable} ${outfit.variable} ${bebas.variable}`}>
         {children}
       </body>
     </html>

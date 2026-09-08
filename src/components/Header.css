@@ -88,8 +88,44 @@
   width: 100%;
 }
 
+/* Minimal Header for Store Page */
+.header.header-minimal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: transparent;
+  box-shadow: none;
+  padding: 1.5rem 0;
+  pointer-events: none;
+}
+
+.header.header-minimal .logo-link {
+  pointer-events: auto;
+}
+
+.header-container-minimal {
+  max-width: 100%;
+  padding: 0 2.5rem;
+  justify-content: flex-start;
+}
+
+:root[data-theme="dark"] .header.scrolled {
+  background-color: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+:root[data-theme="dark"] .header.scrolled .nav-links a {
+  color: #F8FAFC;
+  text-shadow: none;
+}
+
 @media (prefers-color-scheme: dark) {
-  .header.scrolled {
+  :root:not([data-theme="light"]) .header.scrolled {
     background-color: rgba(15, 23, 42, 0.95);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -97,7 +133,7 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
   }
 
-  .header.scrolled .nav-links a {
+  :root:not([data-theme="light"]) .header.scrolled .nav-links a {
     color: #F8FAFC;
     text-shadow: none;
   }

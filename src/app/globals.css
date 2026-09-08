@@ -14,6 +14,7 @@
   /* Typography */
   --font-heading: 'Outfit', sans-serif;
   --font-body: 'Inter', sans-serif;
+  --font-street: var(--font-bebas), 'Bebas Neue', 'Impact', 'Arial Black', sans-serif;
 
   /* Spacing */
   --section-padding: 5rem 2rem;
@@ -32,16 +33,38 @@
   --transition-normal: 300ms ease-in-out;
 }
 
+:root[data-theme="dark"] {
+  --background: #0F172A;
+  --background-alt: #1E293B;
+  --text-main: #F8FAFC;
+  --text-muted: #94A3B8;
+}
+
+:root[data-theme="dark"] h1,
+:root[data-theme="dark"] h2,
+:root[data-theme="dark"] h3,
+:root[data-theme="dark"] h4,
+:root[data-theme="dark"] h5,
+:root[data-theme="dark"] h6,
+:root[data-theme="dark"] .section-title {
+  color: var(--text-main);
+}
+
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --background: #0F172A;
     --background-alt: #1E293B;
     --text-main: #F8FAFC;
     --text-muted: #94A3B8;
   }
 
-  h1, h2, h3, h4, h5, h6,
-  .section-title {
+  :root:not([data-theme="light"]) h1,
+  :root:not([data-theme="light"]) h2,
+  :root:not([data-theme="light"]) h3,
+  :root:not([data-theme="light"]) h4,
+  :root:not([data-theme="light"]) h5,
+  :root:not([data-theme="light"]) h6,
+  :root:not([data-theme="light"]) .section-title {
     color: var(--text-main);
   }
 }
@@ -112,12 +135,22 @@ button, .btn {
   color: white;
 }
 
+:root[data-theme="dark"] .btn-secondary {
+  color: var(--background-alt);
+  border-color: var(--background-alt);
+}
+
+:root[data-theme="dark"] .btn-secondary:hover {
+  background-color: var(--background-alt);
+  color: var(--primary);
+}
+
 @media (prefers-color-scheme: dark) {
-  .btn-secondary {
+  :root:not([data-theme="light"]) .btn-secondary {
     color: var(--background-alt);
     border-color: var(--background-alt);
   }
-  .btn-secondary:hover {
+  :root:not([data-theme="light"]) .btn-secondary:hover {
     background-color: var(--background-alt);
     color: var(--primary);
   }
@@ -149,8 +182,13 @@ button, .btn {
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
+:root[data-theme="dark"] .glass-panel {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
 @media (prefers-color-scheme: dark) {
-  .glass-panel {
+  :root:not([data-theme="light"]) .glass-panel {
     background: rgba(15, 23, 42, 0.7);
     border: 1px solid rgba(255, 255, 255, 0.05);
   }
