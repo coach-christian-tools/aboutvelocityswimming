@@ -37,6 +37,12 @@ export default function Footer() {
 
       document.documentElement.setAttribute("data-theme", targetTheme);
       document.documentElement.setAttribute("data-theme-preference", preference);
+
+      const metaTheme = document.querySelector('meta[name="theme-color"]');
+      if (metaTheme) {
+        metaTheme.setAttribute("content", targetTheme === "dark" ? "#070D16" : "#FFFFFF");
+      }
+
       window.dispatchEvent(new Event("velocity-theme-change"));
     } catch (e) {}
   };

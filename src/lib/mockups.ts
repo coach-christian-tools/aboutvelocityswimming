@@ -11,7 +11,10 @@ export function getProductMockupImages(productName: string): string[] {
     // Attempt exact match or case-insensitive match
     const entries = fs.readdirSync(mockupsBase);
     const matchedFolder = entries.find(
-      (folder) => folder.toLowerCase() === productName.toLowerCase()
+      (folder) =>
+        folder.toLowerCase() === productName.toLowerCase() ||
+        productName.toLowerCase().includes(folder.toLowerCase()) ||
+        folder.toLowerCase().includes(productName.toLowerCase())
     );
 
     if (!matchedFolder) {

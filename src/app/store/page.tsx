@@ -40,7 +40,7 @@ export default async function StorePage() {
   const products = await getProducts();
   
   return (
-    <main style={{ overflow: "hidden", position: "relative" }}>
+    <main className="store-page-root">
       {/* Floating Back to Home Page Button in Bottom Left */}
       <Link href="/" className="floating-home-btn" aria-label="Back to Home Page">
         <svg
@@ -62,7 +62,7 @@ export default async function StorePage() {
       
       <div className="luxury-scroll-container">
         {/* Intro Section - Streetwear Hero with Photos */}
-        <section className="luxury-section">
+        <section className="luxury-section hero-section">
           <div className="luxury-hero animate-fade-in">
             <span className="hero-drop-badge">Drop 01 // 2026-2027</span>
             
@@ -74,32 +74,44 @@ export default async function StorePage() {
               Limited Edition Streetwear Designed by Caden Ankrom
             </p>
 
-            {/* Streetwear Lookbook Photo Teaser */}
+            {/* Streetwear Lookbook Photo Teaser (Desktop only, click scrolls to shirt) */}
             <div className="hero-lookbook-strip" aria-label="Collection preview photos">
-              <div className="hero-lookbook-card tilt-left">
+              <a
+                href="#product-liquid-script"
+                className="hero-lookbook-card tilt-left"
+                aria-label="Scroll to Liquid Script shirt"
+              >
                 <img
                   src="/mockups/Liquid%20Script/mens-box-tee-black-back-6aa096b58e80c.png"
                   alt="Liquid Script Box Tee"
                   loading="eager"
                 />
                 <span>Liquid Script</span>
-              </div>
-              <div className="hero-lookbook-card tilt-center">
+              </a>
+              <a
+                href="#product-high-tide-horizon"
+                className="hero-lookbook-card tilt-center"
+                aria-label="Scroll to High Tide Horizon shirt"
+              >
                 <img
                   src="/mockups/High%20Tide%20Horizon/mens-box-tee-white-front-6aa096fc885de.png"
                   alt="High Tide Horizon Box Tee"
                   loading="eager"
                 />
                 <span>High Tide</span>
-              </div>
-              <div className="hero-lookbook-card tilt-right">
+              </a>
+              <a
+                href="#product-apex-glitch"
+                className="hero-lookbook-card tilt-right"
+                aria-label="Scroll to Apex Glitch shirt"
+              >
                 <img
                   src="/mockups/Apex%20Glitch/mens-box-tee-white-back-6aa097db68e1d.png"
                   alt="Apex Glitch Box Tee"
                   loading="eager"
                 />
                 <span>Apex Glitch</span>
-              </div>
+              </a>
             </div>
 
             <a href="#artist-bio" className="artist-link-top">
@@ -118,13 +130,25 @@ export default async function StorePage() {
             const product = p.sync_product;
             const variants = p.sync_variants;
             const firstVariant = variants[0];
+            const rawSlug = product.name.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+            const productSlug = rawSlug.includes("liquid-script")
+              ? "liquid-script"
+              : rawSlug.includes("high-tide")
+              ? "high-tide-horizon"
+              : rawSlug.includes("apex-glitch")
+              ? "apex-glitch"
+              : rawSlug;
             
             // Only mockup photos, no design/artwork files
             const localMockups = getProductMockupImages(product.name);
             const images = localMockups.length > 0 ? localMockups : [product.thumbnail_url];
 
             return (
-              <section key={product.id} className="luxury-section">
+              <section
+                key={product.id}
+                id={`product-${productSlug}`}
+                className="luxury-section"
+              >
                 <div className="product-showcase">
                   <div className="luxury-images">
                     <StoreProductGallery images={images} productName={product.name} />

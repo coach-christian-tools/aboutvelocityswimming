@@ -6,6 +6,7 @@
   --accent: #0A856C;
   --accent-hover: #086A56;
   --background: #FFFFFF;
+  --top-gradient-bg: #FFFFFF;
   --background-alt: #F8FAFC;
   --text-main: #1E293B;
   --text-muted: #475569;
@@ -34,8 +35,9 @@
 }
 
 :root[data-theme="dark"] {
-  --background: #0F172A;
-  --background-alt: #1E293B;
+  --background: #070D16;
+  --top-gradient-bg: #070D16;
+  --background-alt: #0F1D2F;
   --text-main: #F8FAFC;
   --text-muted: #94A3B8;
 }
@@ -52,8 +54,9 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --background: #0F172A;
-    --background-alt: #1E293B;
+    --background: #070D16;
+    --top-gradient-bg: #070D16;
+    --background-alt: #0F1D2F;
     --text-main: #F8FAFC;
     --text-muted: #94A3B8;
   }
@@ -136,8 +139,14 @@ button, .btn {
 }
 
 :root[data-theme="dark"] .btn-secondary {
-  color: var(--background-alt);
-  border-color: var(--background-alt);
+  color: #F8FAFC;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+:root[data-theme="dark"] .btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.6);
 }
 
 :root[data-theme="dark"] .btn-secondary:hover {

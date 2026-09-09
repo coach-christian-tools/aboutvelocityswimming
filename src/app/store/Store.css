@@ -1,10 +1,22 @@
+.store-page-root {
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: #FFFFFF;
+}
+
+:root[data-theme="dark"] .store-page-root {
+  background-color: #070D16;
+}
+
 /* Atmospheric Gradient Container */
 .luxury-scroll-container {
-  height: 100vh;
-  overflow-y: auto;
-  scroll-snap-type: y mandatory;
+  min-height: 100vh;
+  min-height: 100dvh;
   scroll-behavior: smooth;
   width: 100%;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
   background-color: #F8FAFC;
   background-image: 
     radial-gradient(at 15% 15%, rgba(19, 65, 93, 0.12) 0px, transparent 55%),
@@ -29,8 +41,8 @@
 
 .luxury-section {
   min-height: 100vh;
+  min-height: 100dvh;
   width: 100%;
-  scroll-snap-align: start;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -38,11 +50,11 @@
   position: relative;
   padding: 80px 2rem 2rem;
   background-color: transparent;
+  scroll-margin-top: 2.5rem;
 }
 
 .footer-section {
   width: 100%;
-  scroll-snap-align: start;
 }
 
 /* Street Style Hero Section */
@@ -155,7 +167,7 @@
   color: #94A3B8;
 }
 
-/* Lookbook photo strip in hero */
+/* Lookbook photo strip in hero (Desktop only) */
 .hero-lookbook-strip {
   display: flex;
   align-items: center;
@@ -164,6 +176,12 @@
   margin: 1.5rem 0 2rem;
   width: 100%;
   max-width: 720px;
+}
+
+@media (max-width: 768px) {
+  .hero-lookbook-strip {
+    display: none !important;
+  }
 }
 
 .hero-lookbook-card {
@@ -183,6 +201,9 @@
   padding: 0.75rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 .hero-lookbook-card:hover {
@@ -341,10 +362,47 @@
   flex-wrap: wrap;
 }
 
+.artist-links .btn-secondary {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1.5px solid rgba(19, 65, 93, 0.25);
+  color: var(--primary);
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all var(--transition-normal);
+}
+
+.artist-links .btn-secondary:hover {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(19, 65, 93, 0.2);
+}
+
+:root[data-theme="dark"] .artist-links .btn-secondary {
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  color: #F8FAFC;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+:root[data-theme="dark"] .artist-links .btn-secondary:hover {
+  background: #1E293B;
+  color: #34D399;
+  border-color: #34D399;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
 /* Product Detail Page Specific */
 .product-detail-page {
-  padding-top: 110px;
+  padding-top: calc(110px + env(safe-area-inset-top, 0px));
   min-height: 100vh;
+  min-height: 100dvh;
   background-color: #F8FAFC;
   background-image: 
     radial-gradient(at 15% 15%, rgba(19, 65, 93, 0.12) 0px, transparent 55%),

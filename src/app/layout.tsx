@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Outfit, Bebas_Neue } from "next/font/google";
 import "./globals.css";
 
@@ -20,6 +20,16 @@ const bebas = Bebas_Neue({
   variable: "--font-bebas",
   display: "swap",
 });
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#FFFFFF" },
+    { media: "(prefers-color-scheme: dark)", color: "#070D16" },
+  ],
+  viewportFit: "cover",
+  width: "device-width",
+  initialScale: 1,
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://aboutvelocityswimming.com"),
@@ -80,11 +90,19 @@ export default function RootLayout({
                   document.documentElement.setAttribute('data-theme', theme);
                   document.documentElement.setAttribute('data-theme-preference', stored);
 
+                  var metaTheme = document.querySelector('meta[name="theme-color"]');
+                  if (metaTheme) {
+                    metaTheme.setAttribute('content', theme === 'dark' ? '#070D16' : '#FFFFFF');
+                  }
+
                   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
                     var curPref = localStorage.getItem('velocity-theme') || 'system';
                     if (curPref === 'system') {
                       var newTheme = e.matches ? 'dark' : 'light';
                       document.documentElement.setAttribute('data-theme', newTheme);
+                      if (metaTheme) {
+                        metaTheme.setAttribute('content', newTheme === 'dark' ? '#070D16' : '#FFFFFF');
+                      }
                     }
                   });
                 } catch (e) {}
