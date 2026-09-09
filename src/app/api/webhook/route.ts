@@ -31,20 +31,23 @@ export async function POST(req: NextRequest) {
     const syncVariantId = session.metadata?.sync_variant_id;
     
     const sessionAny = session as any;
-    if (syncVariantId && (sessionAny.shipping_details || sessionAny.customer_details)) {
-      const shipping = sessionAny.shipping_details || sessionAny.customer_details;
-      const address = shipping.address;
-      
+    // In Stripe Checkout sessions, physical shipping address is in shipping_details or collected_information.shipping_details
+    const shipping = sessionAny.shipping_details || sessionAny.collected_information?.shipping_details || sessionAny.customer_details;
+    const address = shipping?.address || sessionAny.customer_details?.address;
+
+    if (syncVariantId && shipping && address?.line1 && address?.city && address?.state) {
       // Prepare Printful Order payload
       const printfulOrder = {
         recipient: {
-          name: shipping.name,
-          address1: address?.line1,
-          address2: address?.line2 || undefined,
-          city: address?.city,
-          state_code: address?.state, // Stripe state matches Printful state_code usually
-          country_code: address?.country,
-          zip: address?.postal_code,
+          name: shipping.name || sessionAny.customer_details?.name || "Valued Customer",
+          address1: address.line1,
+          address2: address.line2 || undefined,
+          city: address.city,
+          state_code: address.state, // Stripe state code e.g. WA
+          country_code: address.country || "US",
+          zip: address.postal_code,
+          email: sessionAny.customer_details?.email || undefined,
+          phone: shipping.phone || sessionAny.customer_details?.phone || undefined,
         },
         items: [
           {
@@ -67,9 +70,16 @@ export async function POST(req: NextRequest) {
         const printfulData = await response.json();
         
         if (printfulData.code !== 200) {
-          console.error("Printful Order Error:", printfulData);
-          // Return 500 so Stripe retries or logs the failure
-          return NextResponse.json({ error: "Failed to create Printful order" }, { status: 500 });
+          console.error("Printful Order Error:", JSON.stringify(printfulData));
+          // Return 500 with Printful detail so Stripe / logs show the exact reason
+          return NextResponse.json(
+            { 
+              error: "Failed to create Printful order", 
+              printful_code: printfulData.code, 
+              details: printfulData.result || printfulData.error 
+            }, 
+            { status: 500 }
+          );
         }
         
         console.log("Printful order created successfully:", printfulData.result.id);
@@ -77,6 +87,12 @@ export async function POST(req: NextRequest) {
         console.error("Failed to call Printful API:", error);
         return NextResponse.json({ error: "Failed to communicate with Printful" }, { status: 500 });
       }
+    } else {
+      console.warn("Skipping Printful order creation - missing variant or address details:", {
+        syncVariantId,
+        hasShipping: !!shipping,
+        address
+      });
     }
   }
 
