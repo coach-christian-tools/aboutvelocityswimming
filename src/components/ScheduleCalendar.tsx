@@ -22,8 +22,6 @@ function eventKind(title: string) {
 export default function ScheduleCalendar({ initialMonth, today }: { initialMonth: string; today: string }) {
   const [month, setMonth] = useState(initialMonth);
   const [view, setView] = useState<"month" | "agenda">("month");
-  const [title, setTitle] = useState("");
-  const [location, setLocation] = useState("");
   const [search, setSearch] = useState("");
   const [result, setResult] = useState<{ month: string; events: CalendarEvent[]; error?: string } | null>(null);
   const [attempt, setAttempt] = useState(0);
@@ -54,15 +52,12 @@ export default function ScheduleCalendar({ initialMonth, today }: { initialMonth
   const loading = result?.month !== month;
   const events = useMemo(() => result?.month === month ? result.events : [], [result, month]);
   const days = monthDays(month);
-  const titles = [...new Set(events.map(event => event.title))].sort((a, b) => a.localeCompare(b));
-  const locations = [...new Set(events.map(event => event.location).filter(Boolean))].sort((a, b) => a.localeCompare(b));
   const filtered = useMemo(() => events.filter(event =>
-    (!title || event.title === title) && (!location || event.location === location) &&
     (!search.trim() || `${event.title} ${event.location} ${event.description}`.toLowerCase().includes(search.trim().toLowerCase())),
-  ), [events, title, location, search]);
+  ), [events, search]);
   const visibleEvents = filtered.filter(event => event.startDay <= `${month}-31` && event.endDay >= `${month}-01`);
   const agenda = days.filter(day => day.startsWith(month)).map(day => ({ day, events: eventsOnDay(filtered, day) })).filter(day => day.events.length);
-  const hasFilters = Boolean(title || location || search);
+  const hasFilters = Boolean(search.trim());
   const monthLabel = monthFormatter.format(new Date(`${month}-01T12:00:00Z`));
 
   function moveMonth(direction: number) {
@@ -70,23 +65,14 @@ export default function ScheduleCalendar({ initialMonth, today }: { initialMonth
     setMonth(new Date(Date.UTC(year, number - 1 + direction, 1)).toISOString().slice(0, 7));
   }
 
-  function clearFilters() { setTitle(""); setLocation(""); setSearch(""); }
+  function clearFilters() { setSearch(""); }
 
   return (
-    <section className={styles.calendar} aria-labelledby="calendar-title">
-      <div className={styles.heading}>
-        <div className={styles.headingText}>
-          <span className={styles.icon}><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3" /><path d="M7 3v4m10-4v4M3 11h18m-13 5h2m4 0h2" /></svg></span>
-          <div><h2 id="calendar-title">The team calendar</h2><p>Practices, meets, and everything in between.</p></div>
-        </div>
-        <a className={styles.subscribe} href={CALENDAR_URL} target="_blank" rel="noopener noreferrer">Add to my calendar <span aria-hidden="true">↗</span></a>
-      </div>
-
+    <section className={styles.calendar} aria-label="Team calendar">
       <div className={styles.filters}>
-        <label>Group or event<select value={title} onChange={event => setTitle(event.target.value)}><option value="">All groups &amp; events</option>{title && !titles.includes(title) ? <option value={title}>{title}</option> : null}{titles.map(value => <option key={value} value={value}>{value}</option>)}</select></label>
-        <label>Location<select value={location} onChange={event => setLocation(event.target.value)}><option value="">All locations</option>{location && !locations.includes(location) ? <option value={location}>{location}</option> : null}{locations.map(value => <option key={value} value={value}>{value}</option>)}</select></label>
         <label>Search<input type="search" placeholder="Find a practice or meet…" value={search} onChange={event => setSearch(event.target.value)} /></label>
-        {hasFilters ? <button type="button" className={styles.clear} onClick={clearFilters}>Clear filters</button> : null}
+        {hasFilters ? <button type="button" className={styles.clear} onClick={clearFilters}>Clear search</button> : null}
+        <a className={styles.subscribe} href={CALENDAR_URL} target="_blank" rel="noopener noreferrer">Add to my calendar <span aria-hidden="true">↗</span></a>
       </div>
       {hasFilters ? <p className={styles.filterNote}>Showing matching events only. <button type="button" onClick={clearFilters}>Show all events</button> to check team notices and schedule changes.</p> : null}
 
@@ -99,7 +85,7 @@ export default function ScheduleCalendar({ initialMonth, today }: { initialMonth
         <div className={styles.views} role="group" aria-label="Calendar view"><button type="button" aria-pressed={view === "month"} onClick={() => setView("month")}>Month</button><button type="button" aria-pressed={view === "agenda"} onClick={() => setView("agenda")}>Agenda</button></div>
       </div>
 
-      <div className={styles.summary}><p role="status" aria-live="polite">{loading ? "Loading calendar…" : result?.error ? "Calendar unavailable" : `${visibleEvents.length} ${visibleEvents.length === 1 ? "event" : "events"}${hasFilters ? " matching your filters" : " this month"}`}</p><span>All times Pacific</span></div>
+      <div className={styles.summary}><p role="status" aria-live="polite">{loading ? "Loading calendar…" : result?.error ? "Calendar unavailable" : `${visibleEvents.length} ${visibleEvents.length === 1 ? "event" : "events"}${hasFilters ? " matching your search" : " this month"}`}</p><span>All times Pacific</span></div>
 
       {loading ? <div className={styles.message} aria-busy="true"><span className={styles.loadingDot} />Finding your time in the water…</div> : result?.error ? (
         <div className={styles.message} role="alert"><h3>We couldn’t load the calendar.</h3><p>{result.error}</p><button type="button" onClick={() => { setResult(null); setAttempt(value => value + 1); }}>Try again</button><a href={CALENDAR_URL} target="_blank" rel="noopener noreferrer">Open Google Calendar ↗</a></div>
@@ -118,7 +104,7 @@ export default function ScheduleCalendar({ initialMonth, today }: { initialMonth
               <div className={styles.agendaEvents}>{dayEvents.map(event => <button type="button" className={`${styles.agendaEvent} ${styles[eventKind(event.title)]}`} key={event.id} onClick={() => setSelected(event)}><span className={styles.agendaTime}>{timeLabel(event)}</span><span className={styles.agendaDetails}><strong>{event.title}</strong>{event.location ? <span>{event.location}</span> : null}</span><span className={styles.detailArrow} aria-hidden="true">↗</span></button>)}</div>
             </section>) : null}
           </div>
-          {!visibleEvents.length ? <div className={styles.message}><h3>{hasFilters ? "No events match these filters." : "No events scheduled this month."}</h3><p>{hasFilters ? "Try another group, location, or search." : "Check another month or come back for schedule updates."}</p>{hasFilters ? <button type="button" onClick={clearFilters}>Clear filters</button> : null}</div> : null}
+          {!visibleEvents.length ? <div className={styles.message}><h3>{hasFilters ? "No events match your search." : "No events scheduled this month."}</h3><p>{hasFilters ? "Try another search." : "Check another month or come back for schedule updates."}</p>{hasFilters ? <button type="button" onClick={clearFilters}>Clear search</button> : null}</div> : null}
         </>
       )}
 

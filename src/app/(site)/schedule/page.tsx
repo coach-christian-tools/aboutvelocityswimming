@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import SectionPage from "@/components/SectionPage";
+import Footer from "@/components/Footer";
+import styles from "@/components/ScheduleCalendar.module.css";
 import ScheduleCalendar from "@/components/ScheduleCalendar";
 import { calendarDate } from "@/lib/calendar-shared";
 
@@ -13,8 +14,11 @@ export const metadata: Metadata = {
 export default function SchedulePage() {
   const today = calendarDate(new Date());
   return (
-    <SectionPage eyebrow="Make time for the water" title="Schedule" description="Your week in the pool, all in one place. Find your practice, plan for meet weekends, and stay in step with the team.">
-      <ScheduleCalendar initialMonth={today.slice(0, 7)} today={today} />
-    </SectionPage>
+    <>
+      <main className={styles.page}>
+        <ScheduleCalendar initialMonth={today.slice(0, 7)} today={today} />
+      </main>
+      <Footer />
+    </>
   );
 }

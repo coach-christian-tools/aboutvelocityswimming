@@ -9,6 +9,7 @@ import "./Header.css";
 const sections = [
   { href: "/schedule", label: "Schedule" },
   { href: "/news", label: "News" },
+  { href: "/tools", label: "Tools" },
 ];
 const aboutSections = [
   { href: "/#overview", label: "Overview" },
@@ -21,7 +22,6 @@ const aboutSections = [
   { href: "/#social", label: "Social Highlights" },
 ];
 const moreSections = [
-  { href: "/tools", label: "Tools" },
   { href: "/store", label: "Store" },
   { href: "/sponsors", label: "Sponsors" },
   { href: "https://www.gomotionapp.com/team/ievs/page/home", label: "SportsEngine" },
