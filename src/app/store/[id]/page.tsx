@@ -115,10 +115,10 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
             
             <h1>{sync_product.name}</h1>
             
-            <ProductForm productName={sync_product.name} variants={sync_variants} />
+            <ProductForm productId={sync_product.id} productName={sync_product.name} variants={sync_variants} />
             
             <div className="product-description" style={{ marginTop: "2.25rem", color: "var(--text-muted)" }}>
-              <p>Part of Velocity's 2026-2027 Caden Ankrom Collection. Each purchase supports Velocity Swimming and the artist.</p>
+              <p>Part of Velocity&apos;s 2026-2027 Caden Ankrom Collection. Each purchase supports Velocity Swimming and the artist.</p>
             </div>
           </div>
           
