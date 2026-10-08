@@ -1,39 +1,14 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Velocity Swimming
 
-## Getting Started
+The public website and Swim Resources share one Next.js app and one npm installation. Use Node 24 (`nvm use`), then `npm ci` and `npm run dev`. The website is at `/`; open Swim Resources from `/tools` or directly at `/tools/swim-resources`.
 
-First, run the development server:
+Swim Resources includes the imported coaching portal, public times/standards, attendance, reviewed imports, and evidence-maintenance tools. Its code is isolated under `src/features/swim-resources`; scripts and tests are grouped under their own `swim-resources` directories. The separate website/resource root layouts preserve their existing styles and themes, with full page loads when crossing between them.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+See [the migration record](docs/swim-resources/MIGRATION.md) for the source snapshot, local data continuity, route mapping, and validation. See [the resource developer guide](docs/swim-resources/README.md) and [fresh dataset workflow](docs/swim-resources/FRESH-DATASET.md) for collection and Firebase emulator commands. Run all maintenance commands from this repository root.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Use `.env.example` for a new synthetic environment; do not overwrite an existing `.env.local`. The local migration retains commerce settings and uses the current Swim Resources dataset. Secrets and private evidence remain ignored.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Checks: `npm run verify` runs strict migrated-code lint, global TypeScript, commerce and resource regression tests, and a production build with private-file checks. `npm run test:rules` runs the Firestore/Storage emulator suite (Firebase CLI 15.30.2 and Java 21+). `npm run lint` still checks the whole website and includes its pre-existing lint findings.
 
 ## Store checkout and fulfillment
 
@@ -72,3 +47,9 @@ It mocks provider responses and never creates real payments or orders.
 
 Provider references: [Printful Orders API](https://developers.printful.com/docs/#tag/Orders-API)
 and [Stripe fulfillment](https://docs.stripe.com/checkout/fulfillment).
+
+## Workshare
+
+The family and administrator portal now lives at `/tools/workshare`, using the
+existing Workshare Firebase project. See [setup and verification](docs/workshare/README.md)
+and the [production cutover runbook](docs/workshare/DEPLOYMENT.md).

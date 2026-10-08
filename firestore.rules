@@ -1,0 +1,105 @@
+rules_version = '2';
+
+// Cutter Coach — Firestore security rules
+//
+// Verified coaches can read/write private data. Public visitors can read only
+// public_athletes, athlete bests, and standards. UI gates are cosmetic;
+// these rules enforce access. Publish profiles before deploying these rules.
+// Deploy with an explicit target: firebase deploy --project <id> --only firestore:rules
+// Maintenance scripts use Admin SDK credentials, explicit targets and dry-run defaults.
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isCoach() {
+      return request.auth != null
+        && request.auth.token.email_verified == true
+        && request.auth.token.email.matches('.*@velocity-swimming\\.com');
+    }
+
+    // ── Public read: athlete profiles + bests ──────────────────────────────
+    match /athletes/{athleteId} {
+      allow read, write: if isCoach();
+
+      match /bests/{bestId} {
+        allow read: if true;
+        allow create, update: if isCoach() && request.resource.data.keys().hasOnly(['eventCode', 'distance', 'stroke', 'course', 'bestTimeMs', 'bestTimeDisplay', 'swimDate', 'meetName', 'swimId', 'standard', 'ageWhenSwum', 'clubRankAllTime', 'clubRankActiveRoster']);
+        allow delete: if isCoach();
+      }
+    }
+
+    // Public profile documents are deliberately separate from private athletes.
+    match /public_athletes/{athleteId} {
+      allow read: if true;
+      allow create, update: if isCoach()
+        && request.resource.data.keys().hasOnly(['id', 'name', 'aliases', 'swimcloudId'])
+        && request.resource.data.keys().hasAll(['id', 'name', 'aliases'])
+        && request.resource.data.id == athleteId
+        && request.resource.data.name.keys().hasOnly(['first', 'last', 'preferred'])
+        && request.resource.data.aliases is list;
+      allow delete: if isCoach();
+    }
+
+    // ── Public read: time standards ────────────────────────────────────────
+    match /standards/{setId} {
+      allow read: if true;
+      allow create, update: if isCoach() && request.resource.data.keys().hasOnly(['category', 'id', 'name', 'governingBody', 'seasonYears', 'effectiveDate', 'expirationDate', 'cuts', 'createdAt', 'updatedAt']);
+      allow delete: if isCoach();
+    }
+
+    // ── Sync handshake: coaches create/read only; the Cloud Function
+    //    (admin SDK) bypasses these rules to update status. ─────────────────
+    match /sync_requests/{reqId} {
+      allow read, create: if isCoach();
+      allow update, delete: if false;
+    }
+
+    // ── Coach-only data ────────────────────────────────────────────────────
+    match /attendance/{docId}   { allow read, write: if isCoach(); }
+    match /swims/{docId}        { allow read, write: if isCoach(); }
+    match /results/{docId}      { allow read, write: if isCoach() && database != 'velocity-v2'; }
+    match /events/{docId}       { allow read, write: if isCoach(); }
+    match /teams/{docId} { allow read, write: if isCoach(); }
+    match /people/{docId} { allow read, write: if isCoach(); }
+    match /venues/{docId} { allow read, write: if isCoach(); }
+    match /documents/{docId} { allow read, write: if isCoach(); }
+    match /meets/{docId}        { allow read, write: if isCoach(); }
+    match /practice_sessions/{docId} { allow read, write: if isCoach(); }
+    match /analytics_snapshots/{docId} { allow read, write: if isCoach(); }
+    match /roster_metadata/{docId}     { allow read, write: if isCoach(); }
+    match /chatbot_conversations/{docId} {
+      // Retired: permit authorized cleanup, never new history writes.
+      allow read, delete: if isCoach();
+      allow create, update: if false;
+      match /messages/{messageId} {
+        allow read, delete: if isCoach();
+        allow create, update: if false;
+      }
+    }
+    match /import_batches/{batchId} {
+      allow read, write: if isCoach();
+      match /changes/{rowId} { allow read, write: if isCoach(); }
+    }
+    match /import_review_items/{itemId} { allow read, write: if isCoach(); }
+    match /import_state/{stateId} { allow read, write: if isCoach(); }
+
+    // Private source facts and mutable provenance summaries.
+    match /sources/{sourceId} {
+      allow read: if isCoach();
+      allow write: if false;
+      match /checks/{checkId} { allow read: if isCoach(); allow write: if false; }
+      match /revisions/{revisionId} { allow read: if isCoach(); allow write: if false; }
+    }
+    match /source_bindings/{bindingId} { allow read: if isCoach(); allow write: if false; }
+    match /record_provenance/{recordId} {
+      allow read, create, update: if isCoach(); allow delete: if false;
+      match /events/{eventId} { allow read, create: if isCoach(); allow update, delete: if false; }
+      match /disagreements/{issueId} {
+        allow read, create: if isCoach();
+        allow update: if isCoach() && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['status', 'resolutionEventId']);
+        allow delete: if false;
+      }
+    }
+    // Everything else: denied by default.
+  }
+}

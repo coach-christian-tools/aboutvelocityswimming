@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Copy HTML",
+  "version": "1.0",
+  "description": "Copies the original HTML source code of the current page with a single click.",
+  "action": {},
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ]
+}

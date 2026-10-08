@@ -1,0 +1,21 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "swims",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "eventCode", "order": "ASCENDING" },
+        { "fieldPath": "timeMs", "order": "ASCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "swims",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "course", "order": "ASCENDING" },
+        { "fieldPath": "timeMs", "order": "ASCENDING" }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}

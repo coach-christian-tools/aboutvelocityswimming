@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -19,8 +23,11 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
-    }
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    "allowImportingTsExtensions": true
   },
   "include": [
     "next-env.d.ts",
@@ -28,7 +35,14 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
-    "**/*.mts"
+    "**/*.mts",
+    ".next-workshare-test/types/**/*.ts",
+    ".next-workshare-test/dev/types/**/*.ts"
   ],
-  "exclude": ["node_modules", "studio-velocity-swimming-marketing"]
+  "exclude": [
+    "node_modules",
+    "studio-velocity-swimming-marketing",
+    "backups",
+    "firebase/workshare/functions"
+  ]
 }

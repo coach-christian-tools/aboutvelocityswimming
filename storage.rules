@@ -1,0 +1,18 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    function isCoach() {
+      return request.auth != null && request.auth.token.email_verified == true
+        && request.auth.token.email.matches('.*@velocity-swimming[.]com$');
+    }
+    match /evidence/{project}/{database}/{source}/{hash} {
+      allow read: if isCoach();
+      // Archives are created only through the guarded admin CLI; no client mutation.
+      allow write: if false;
+    }
+    match /legacy-archives/{archive}/{file=**} {
+      allow read: if isCoach();
+      allow write: if false;
+    }
+  }
+}

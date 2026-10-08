@@ -1,0 +1,73 @@
+{
+  "version": 2,
+  "id": "synthetic_example_1",
+  "collectedAt": "2026-10-06T17:00:00Z",
+  "sources": [
+    {
+      "id": "example_export",
+      "name": "Synthetic roster example",
+      "kind": "roster_export",
+      "reference": "fixture:synthetic-export",
+      "collectedAt": "2026-10-06T17:00:00Z",
+      "coverage": "complete",
+      "scope": "Documentation fixture only; contains no real athletes.",
+      "revisionId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "checkId": "synthetic_check"
+    }
+  ],
+  "rows": [
+    {
+      "id": "example_athlete",
+      "kind": "athlete",
+      "sourceIds": [
+        "example_export"
+      ],
+      "verified": true,
+      "data": {
+        "teamUnifyId": "fixture_001",
+        "name": {
+          "first": "Example",
+          "last": "Swimmer"
+        },
+        "dob": "2012-01-01",
+        "gender": "F",
+        "status": "active",
+        "currentGroup": {
+          "name": "Juniors"
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "example_export",
+          "revisionId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "checkId": "synthetic_check",
+          "checkedAt": "2026-10-06T17:00:00Z",
+          "fields": [
+            "teamUnifyId",
+            "name.first",
+            "name.last",
+            "dob",
+            "gender",
+            "status",
+            "currentGroup.name"
+          ],
+          "context": "Documentation fixture",
+          "excerpt": "Synthetic example only. No real athlete or live source."
+        }
+      ]
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "example_omission",
+      "sourceIds": [
+        "example_export"
+      ],
+      "message": "An omitted athlete needs source coverage review. No automatic deactivation."
+    }
+  ],
+  "target": {
+    "project": "demo-cutter-coach",
+    "database": "velocity-v2"
+  }
+}

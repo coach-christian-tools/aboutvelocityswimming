@@ -40,3 +40,18 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Swim Resources private local work and credentials
+/backups/
+/db_*.json
+/export.csv
+scripts/**/serviceAccountKey*.json
+*-debug.log
+__pycache__/
+!.env.example
+
+# Workshare backend and isolated browser test build
+firebase/workshare/functions/node_modules/
+firebase/workshare/functions/lib/
+firebase/workshare/.firebase/
+.next-workshare-test/

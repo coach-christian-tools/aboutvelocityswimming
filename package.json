@@ -4,26 +4,70 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && node scripts/swim-resources/check-private-artifacts.mjs",
     "start": "next start",
     "lint": "eslint",
-    "test:commerce": "node scripts/test-commerce.mjs"
+    "test:commerce": "node scripts/test-commerce.mjs",
+    "typecheck": "next typegen && tsc --noEmit",
+    "lint:swim-resources": "eslint \"src/features/swim-resources/**\" \"src/app/(swim-resources)/**\" src/app/api/swim-resources scripts/swim-resources tests/swim-resources extensions/swim-resources vitest.config.mts vitest.rules.config.mts postcss.config.mjs --max-warnings 0",
+    "test": "npm run test:commerce && npm run test:swim-resources && npm run test:workshare",
+    "test:swim-resources": "vitest run",
+    "test:rules": "firebase emulators:exec --config firebase.emulators.json --project demo-cutter-coach --only firestore,storage \"vitest run --config vitest.rules.config.mts\"",
+    "verify": "npm run lint:swim-resources && npm run typecheck && npm test && npm run build",
+    "migrate:profiles": "node scripts/swim-resources/migrate-public-profiles.mjs",
+    "test:calendar": "node scripts/test-calendar.mjs",
+    "dev:workshare": "node scripts/workshare/dev.mjs",
+    "lint:workshare": "eslint \"src/features/workshare/**\" \"src/app/(workshare)/**\" scripts/workshare tests/workshare --max-warnings 0",
+    "test:workshare": "node --import ./scripts/workshare/register-typescript.mjs --test tests/workshare/*.test.ts",
+    "build:workshare:functions": "npm --prefix firebase/workshare/functions run build",
+    "emulators:workshare": "node scripts/workshare/firebase.mjs emulators:start",
+    "test:workshare:emulators": "npm run build:workshare:functions && node scripts/workshare/firebase.mjs emulators:exec",
+    "deploy:workshare:functions": "node scripts/workshare/firebase.mjs deploy:functions",
+    "deploy:workshare:rules": "node scripts/workshare/firebase.mjs deploy:rules",
+    "verify:workshare": "npm run lint:workshare && npm run typecheck && npm run test:workshare && npm run build:workshare:functions"
   },
   "dependencies": {
     "@sanity/image-url": "^2.1.1",
     "@stripe/stripe-js": "^9.8.0",
     "next": "16.2.12",
     "next-sanity": "^13.2.3",
+    "node-ical": "^0.26.1",
     "react": "19.2.4",
     "react-dom": "19.2.4",
-    "stripe": "^22.2.3"
+    "stripe": "^22.2.3",
+    "@google-cloud/storage": "^8.2.0",
+    "firebase": "^12.12.1",
+    "firebase-admin": "^14.5.0",
+    "lucide-react": "^1.21.0",
+    "clsx": "^2.1.1",
+    "date-fns": "^4.4.0",
+    "framer-motion": "^13.1.0",
+    "react-router-dom": "^7.18.2",
+    "tailwind-merge": "^3.6.0"
   },
   "devDependencies": {
-    "@types/node": "^20",
+    "@types/node": "^24.19.1",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.12",
-    "typescript": "^5"
+    "typescript": "^5",
+    "@firebase/rules-unit-testing": "^5.0.2",
+    "@tailwindcss/postcss": "^4.3.3",
+    "csv-parse": "^7.0.2",
+    "iconv-lite": "^0.7.3",
+    "tailwindcss": "^4.3.3",
+    "vitest": "^5.0.3",
+    "firebase-tools": "15.30.2",
+    "playwright": "^1.64.0"
+  },
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "overrides": {
+    "@grpc/grpc-js": "1.14.5",
+    "gaxios": {
+      "uuid": "11.1.1"
+    }
   }
 }

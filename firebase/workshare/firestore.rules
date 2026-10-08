@@ -1,0 +1,71 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isAdmin() {
+      return request.auth != null && (
+        exists(/databases/$(database)/documents/admins/$(request.auth.uid)) ||
+        (request.auth.token.get('email_verified', false) == true && request.auth.token.email != null && request.auth.token.email.matches('(?i).*@velocity-swimming\\.com$'))
+      );
+    }
+    
+    function isFamilyMember(familyId) {
+      return request.auth != null && request.auth.token.get('email_verified', false) == true && request.auth.token.email != null &&
+        exists(/databases/$(database)/documents/families/$(familyId)) && (
+          request.auth.token.email in get(/databases/$(database)/documents/families/$(familyId)).data.authorizedEmails ||
+          request.auth.token.email.lower() in get(/databases/$(database)/documents/families/$(familyId)).data.authorizedEmails
+        );
+    }
+
+    match /admins/{uid} {
+      allow read: if request.auth != null;
+      allow write: if false;
+    }
+
+    match /_otp_codes/{docId} {
+      allow read, write: if false;
+    }
+
+    match /_guest_invitations/{invitationId} {
+      allow read, write: if false;
+    }
+    match /_invitation_limits/{uid} {
+      allow read, write: if false;
+    }
+
+    match /families/{familyId} {
+      allow get: if isAdmin() || isFamilyMember(familyId);
+      // Listing families is restricted to admins and the family members themselves
+      allow list: if isAdmin() || (request.auth != null && request.auth.token.get('email_verified', false) == true && request.auth.token.email != null && (
+        request.auth.token.email in resource.data.authorizedEmails ||
+        request.auth.token.email.lower() in resource.data.authorizedEmails
+      ));
+      allow write: if isAdmin();
+    }
+
+    match /postings/{postingId} {
+      allow get: if request.auth != null;
+      // Logged in users can see the job board
+      allow list: if request.auth != null;
+      allow write: if isAdmin();
+    }
+
+    match /registrations/{registrationId} {
+      allow read: if isAdmin() || isFamilyMember(resource.data.familyId); 
+      // Signup and cancellation are server-only so capacity cannot be bypassed.
+      allow create, delete: if false;
+      allow update: if isAdmin() &&
+        request.resource.data.diff(resource.data).affectedKeys().hasOnly(['status', 'shiftSnapshot']) &&
+        request.resource.data.status in ['Pending', 'Complete', 'Incomplete'];
+    }
+
+    match /manual_hours/{hourId} {
+      allow read: if isAdmin() || isFamilyMember(resource.data.familyId);
+      allow write: if isAdmin();
+    }
+
+    match /work_descriptions/{descId} {
+      allow read: if request.auth != null;
+      allow write: if isAdmin();
+    }
+  }
+}

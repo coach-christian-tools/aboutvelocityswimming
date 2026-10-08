@@ -1,0 +1,29 @@
+# Keep private data and local maintenance artifacts out of source uploads.
+.git/
+.github/
+.env*
+!.env.example
+.vercel/
+node_modules/
+.next/
+backups/
+coverage/
+db_*.json
+export.csv
+scripts/**/serviceAccountKey*.json
+*.pem
+*.csv
+scratch_*.html
+*-debug.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.DS_Store
+*.tsbuildinfo
+
+# Workshare backend and isolated browser test build
+firebase/workshare/functions/node_modules/
+firebase/workshare/functions/lib/
+firebase/workshare/.firebase/
+.next-workshare-test/

@@ -1,0 +1,9 @@
+export const workshareEmulatorEnv = {
+  NEXT_PUBLIC_WORKSHARE_USE_FIREBASE_EMULATORS: 'true',
+  NEXT_PUBLIC_WORKSHARE_FIREBASE_PROJECT_ID: 'demo-velocityworkshare',
+  NEXT_PUBLIC_WORKSHARE_FIREBASE_API_KEY: 'emulator-only',
+  NEXT_PUBLIC_WORKSHARE_FIREBASE_AUTH_DOMAIN: 'demo-velocityworkshare.firebaseapp.com',
+  NEXT_PUBLIC_WORKSHARE_FIREBASE_APP_ID: 'emulator-only',
+  NEXT_PUBLIC_WORKSHARE_FIREBASE_MESSAGING_SENDER_ID: '123456',
+  NEXT_PUBLIC_WORKSHARE_FIREBASE_STORAGE_BUCKET: 'demo-velocityworkshare.appspot.com',
+};

@@ -12,6 +12,10 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    "backups/**",
+    ".next-workshare-test/**",
+    "firebase/workshare/functions/lib/**",
+    "firebase/workshare/functions/node_modules/**",
   ]),
 ]);
 
