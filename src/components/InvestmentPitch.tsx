@@ -94,7 +94,7 @@ export default function InvestmentPitch() {
         {/* Section Header */}
         <div className="text-center mb-12">
           <span className="section-badge">Partnership Opportunities</span>
-          <h2 className="section-title centered">Invest in Our Community</h2>
+          <h1 className="section-title centered">Invest in Our Community</h1>
           <p className="lead-text centered max-w-3xl">
             Supporting Velocity Swimming is an investment in the future of the Wenatchee Valley youth and a high-visibility partnership for your business.
           </p>

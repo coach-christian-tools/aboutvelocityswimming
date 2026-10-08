@@ -3,24 +3,7 @@
   position: relative;
 }
 
-.section-badge {
-  display: inline-block;
-  background-color: rgba(10, 133, 108, 0.1);
-  color: var(--accent);
-  padding: 0.35rem 1rem;
-  border-radius: var(--radius-full);
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 0.75rem;
-}
 
-.max-w-3xl {
-  max-width: 48rem;
-  margin-left: auto;
-  margin-right: auto;
-}
 
 /* Why Partner Overview Banner */
 .pitch-overview-card {
@@ -272,13 +255,7 @@
   color: #34D399;
 }
 
-.w-full {
-  width: 100%;
-}
 
-.mb-12 {
-  margin-bottom: 3rem;
-}
 
 /* Validity & CTA Banner */
 .sponsorship-validity-banner {

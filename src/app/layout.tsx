@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Outfit, Bebas_Neue } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
+import NavigationScroll from "@/components/NavigationScroll";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -24,7 +26,7 @@ const bebas = Bebas_Neue({
 export const viewport: Viewport = {
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#FFFFFF" },
-    { media: "(prefers-color-scheme: dark)", color: "#070D16" },
+    { media: "(prefers-color-scheme: dark)", color: "#102638" },
   ],
   viewportFit: "cover",
   width: "device-width",
@@ -92,7 +94,7 @@ export default function RootLayout({
 
                   var metaTheme = document.querySelector('meta[name="theme-color"]');
                   if (metaTheme) {
-                    metaTheme.setAttribute('content', theme === 'dark' ? '#070D16' : '#FFFFFF');
+                    metaTheme.setAttribute('content', theme === 'dark' ? '#102638' : '#FFFFFF');
                   }
 
                   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
@@ -101,7 +103,7 @@ export default function RootLayout({
                       var newTheme = e.matches ? 'dark' : 'light';
                       document.documentElement.setAttribute('data-theme', newTheme);
                       if (metaTheme) {
-                        metaTheme.setAttribute('content', newTheme === 'dark' ? '#070D16' : '#FFFFFF');
+                        metaTheme.setAttribute('content', newTheme === 'dark' ? '#102638' : '#FFFFFF');
                       }
                     }
                   });
@@ -112,6 +114,8 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.variable} ${outfit.variable} ${bebas.variable}`}>
+        <NavigationScroll />
+        <Header />
         {children}
       </body>
     </html>

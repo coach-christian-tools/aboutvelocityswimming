@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "./privacy.css";
 
@@ -12,7 +11,7 @@ export const metadata: Metadata = {
 export default function PrivacyPolicy() {
   return (
     <>
-      <Header darkBackground={true} />
+
       <main className="legal-page">
         <div className="container">
           <div className="legal-header">

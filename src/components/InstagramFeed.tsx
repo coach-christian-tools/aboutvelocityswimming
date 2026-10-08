@@ -36,7 +36,7 @@ export default function InstagramFeed() {
   }, []);
 
   return (
-    <section className="section insta-feed-section">
+    <section id="social" className="section insta-feed-section">
       <div className="container">
         <div className="text-center mb-12">
           <span className="section-badge">Social Highlights</span>

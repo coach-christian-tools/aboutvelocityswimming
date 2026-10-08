@@ -4,6 +4,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://aboutvelocityswimming.com'
 
   return [
+    ...['schedule', 'news', 'tools', 'store', 'sponsors'].map((route) => ({
+      url: `${baseUrl}/${route}`,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    })),
     {
       url: baseUrl,
       lastModified: new Date(),

@@ -1,8 +1,15 @@
+import type { Metadata } from "next";
+import Image from "next/image";
 import Footer from "@/components/Footer";
 import StoreProductGallery from "@/components/StoreProductGallery";
 import Link from "next/link";
 import { getProductMockupImages } from "@/lib/mockups";
 import "./Store.css";
+
+export const metadata: Metadata = {
+  title: "Store | Velocity Swimming",
+  description: "Shop the Velocity Swimming collection and support our team and local artists.",
+};
 
 async function getProducts() {
   if (!process.env.PRINTFUL_API_KEY) {
@@ -23,7 +30,7 @@ async function getProducts() {
   }
   
   const productsWithDetails = await Promise.all(
-    data.result.map(async (p: any) => {
+    data.result.map(async (p: { id: number }) => {
       const detailRes = await fetch(`https://api.printful.com/store/products/${p.id}`, {
         headers: { Authorization: `Bearer ${process.env.PRINTFUL_API_KEY}` },
         next: { revalidate: 3600 }
@@ -41,24 +48,6 @@ export default async function StorePage() {
   
   return (
     <main className="store-page-root">
-      {/* Floating Back to Home Page Button in Bottom Left */}
-      <Link href="/" className="floating-home-btn" aria-label="Back to Home Page">
-        <svg
-          width="18"
-          height="18"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          aria-hidden="true"
-        >
-          <line x1="19" y1="12" x2="5" y2="12" />
-          <polyline points="12 19 5 12 12 5" />
-        </svg>
-        <span>Back to Home Page</span>
-      </Link>
       
       <div className="luxury-scroll-container">
         {/* Intro Section - Streetwear Hero with Photos */}
@@ -81,7 +70,10 @@ export default async function StorePage() {
                 className="hero-lookbook-card tilt-left"
                 aria-label="Scroll to Liquid Script shirt"
               >
-                <img
+                <Image
+                  width={150}
+                  height={190}
+                  sizes="150px"
                   src="/mockups/Liquid%20Script/mens-box-tee-black-back-6aa096b58e80c.png"
                   alt="Liquid Script Box Tee"
                   loading="eager"
@@ -93,7 +85,10 @@ export default async function StorePage() {
                 className="hero-lookbook-card tilt-center"
                 aria-label="Scroll to High Tide Horizon shirt"
               >
-                <img
+                <Image
+                  width={150}
+                  height={190}
+                  sizes="150px"
                   src="/mockups/High%20Tide%20Horizon/mens-box-tee-white-front-6aa096fc885de.png"
                   alt="High Tide Horizon Box Tee"
                   loading="eager"
@@ -105,7 +100,10 @@ export default async function StorePage() {
                 className="hero-lookbook-card tilt-right"
                 aria-label="Scroll to Apex Glitch shirt"
               >
-                <img
+                <Image
+                  width={150}
+                  height={190}
+                  sizes="150px"
                   src="/mockups/Apex%20Glitch/mens-box-tee-white-back-6aa097db68e1d.png"
                   alt="Apex Glitch Box Tee"
                   loading="eager"
@@ -172,9 +170,9 @@ export default async function StorePage() {
             <h2 className="artist-title">About Caden Ankrom</h2>
             <div className="artist-bio">
               <p>
-                Caden Ankrom is the designer behind Velocity's 2026-2027 collection. 
-                By purchasing from this collection, you are directly supporting both Caden's 
-                continued work as an independent designer and Velocity Swimming's programs.
+                Caden Ankrom is the designer behind Velocity&apos;s 2026-2027 collection.
+                By purchasing from this collection, you are directly supporting both Caden&apos;s
+                continued work as an independent designer and Velocity Swimming&apos;s programs.
               </p>
             </div>
             <div className="artist-links">

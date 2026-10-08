@@ -17,7 +17,7 @@ export default async function MastersProgram() {
   }
 
   return (
-    <section className="section masters-program">
+    <section id="masters" className="section masters-program">
       <div className="container">
         <div className="masters-grid">
           <div className="masters-image-wrapper">

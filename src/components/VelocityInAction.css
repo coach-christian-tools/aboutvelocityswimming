@@ -3,23 +3,9 @@
   position: relative;
 }
 
-.text-center {
-  text-align: center;
-}
 
-.mb-12 {
-  margin-bottom: 3rem;
-}
 
-.centered {
-  margin-left: auto;
-  margin-right: auto;
-}
 
-.centered.section-title::after {
-  margin-left: auto;
-  margin-right: auto;
-}
 
 .action-grid {
   display: grid;

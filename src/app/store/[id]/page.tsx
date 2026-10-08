@@ -1,9 +1,15 @@
+import type { Metadata } from "next";
 import Footer from "@/components/Footer";
 import ProductForm from "./ProductForm";
 import ProductDetailGallery from "@/components/ProductDetailGallery";
 import Link from "next/link";
 import { getProductMockupImages } from "@/lib/mockups";
 import "../Store.css";
+
+export const metadata: Metadata = {
+  title: "Shop the Collection | Velocity Swimming",
+  description: "Explore the Velocity Swimming collection and select your size.",
+};
 
 async function getProduct(id: string) {
   if (!process.env.PRINTFUL_API_KEY) {
@@ -33,24 +39,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
   if (!productData) {
     return (
       <main className="product-detail-page" style={{ position: "relative" }}>
-        <Link href="/" className="floating-home-btn" aria-label="Back to Home Page">
-          <svg
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            aria-hidden="true"
-          >
-            <line x1="19" y1="12" x2="5" y2="12" />
-            <polyline points="12 19 5 12 12 5" />
-          </svg>
-          <span>Back to Home Page</span>
-        </Link>
-        <div className="section container text-center" style={{ paddingTop: "140px" }}>
+        <div className="section container text-center" style={{ paddingTop: "3rem" }}>
           <h1 style={{ color: "var(--primary)" }}>Product Not Found</h1>
           <Link href="/store" className="btn btn-secondary" style={{ marginTop: "2rem" }}>
             Back to Store
@@ -69,24 +58,6 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
 
   return (
     <main className="product-detail-page" style={{ position: "relative" }}>
-      {/* Floating Back to Home Page Button in Bottom Left */}
-      <Link href="/" className="floating-home-btn" aria-label="Back to Home Page">
-        <svg
-          width="18"
-          height="18"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          aria-hidden="true"
-        >
-          <line x1="19" y1="12" x2="5" y2="12" />
-          <polyline points="12 19 5 12 12 5" />
-        </svg>
-        <span>Back to Home Page</span>
-      </Link>
       
       <div className="section" style={{ padding: "0 1.5rem" }}>
         <div className="product-detail-grid">

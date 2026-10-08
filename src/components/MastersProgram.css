@@ -85,8 +85,12 @@
   margin-top: 2rem;
 }
 
+:root[data-theme="dark"] .benefits-list strong {
+  color: var(--text-main);
+}
+
 @media (prefers-color-scheme: dark) {
-  .benefits-list strong {
+  :root:not([data-theme="light"]) .benefits-list strong {
     color: var(--text-main);
   }
 }

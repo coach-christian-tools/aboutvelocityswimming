@@ -1,5 +1,5 @@
 .legal-page {
-  padding: 8rem 2rem 5rem 2rem;
+  padding: 3rem 2rem 5rem;
   background-color: var(--background-alt);
   min-height: 100vh;
 }
@@ -191,7 +191,7 @@
 
 @media (max-width: 768px) {
   .legal-page {
-    padding: 6.5rem 1.25rem 3rem 1.25rem;
+    padding: 2.5rem 1.25rem 3rem;
   }
 
   .legal-content {

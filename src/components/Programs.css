@@ -104,7 +104,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 0.15rem;
+  gap: 0.5rem;
+  flex-wrap: wrap;
 }
 
 .group-head strong {
@@ -113,6 +114,7 @@
 }
 
 .group-age {
+  white-space: nowrap;
   background-color: rgba(19, 65, 93, 0.08);
   color: var(--primary);
   font-size: 0.68rem;
@@ -121,11 +123,6 @@
   border-radius: var(--radius-full);
 }
 
-.group-desc {
-  font-size: 0.78rem;
-  color: var(--text-muted);
-  line-height: 1.35;
-}
 
 .division-footer-meta {
   border-top: 1px solid rgba(19, 65, 93, 0.08);
@@ -361,6 +358,7 @@
 }
 
 :root[data-theme="dark"] .group-age {
+  white-space: nowrap;
   background-color: rgba(255, 255, 255, 0.12);
   color: #F1F5F9;
 }
@@ -424,6 +422,7 @@
   }
 
   :root:not([data-theme="light"]) .group-age {
+  white-space: nowrap;
     background-color: rgba(255, 255, 255, 0.12);
     color: #F1F5F9;
   }

@@ -1,7 +1,13 @@
-import Header from "@/components/Header";
+import type { Metadata } from "next";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import { getStripe } from "@/lib/stripe";
+
+export const metadata: Metadata = {
+  title: "Payment Confirmation | Velocity Swimming",
+  description: "Check the status of your Velocity Swimming store payment.",
+  robots: { index: false, follow: false },
+};
 
 export default async function SuccessPage({ searchParams }: {
   searchParams: Promise<{ session_id?: string | string[] }>;
@@ -19,8 +25,8 @@ export default async function SuccessPage({ searchParams }: {
     }
   }
   return (
-    <main className="store-page" style={{ background: "#FFFFFF" }}>
-      <Header minimal={true} />
+    <main className="store-page" style={{ background: "var(--background)" }}>
+
       <div className="section" style={{ minHeight: '60vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <div className="container" style={{ textAlign: 'center' }}>
           <h1 className="store-title animate-fade-in">{paid ? "Thank You!" : "Payment Confirmation"}</h1>

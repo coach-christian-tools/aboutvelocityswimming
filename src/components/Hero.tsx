@@ -1,5 +1,6 @@
 import { client, urlFor } from "../sanity/client";
 import "./Hero.css";
+import Link from "next/link";
 
 export const revalidate = 60;
 
@@ -16,7 +17,7 @@ export default async function Hero() {
   }
 
   return (
-    <section className="hero">
+    <section id="overview" className="hero">
       <div className="hero-background">
         <img src={heroImageSrc} alt="Velocity Swimming Practice" className="hero-img" />
         <div className="hero-overlay"></div>
@@ -31,7 +32,7 @@ export default async function Hero() {
         </p>
         
         <div className="hero-ctas">
-          <a href="#sponsors" className="btn btn-secondary glass-btn">Partner With Us</a>
+          <Link href="/sponsors" className="btn btn-secondary glass-btn">Partner With Us</Link>
           <a href="https://www.gomotionapp.com/team/ievs/page/online-registration1" target="_blank" rel="noopener noreferrer" className="btn btn-primary">Join the Team</a>
         </div>
       </div>

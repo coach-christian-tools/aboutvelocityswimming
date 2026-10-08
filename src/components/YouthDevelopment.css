@@ -11,29 +11,8 @@
   align-items: center;
 }
 
-.section-title {
-  font-size: clamp(2rem, 3vw, 3rem);
-  color: var(--primary);
-  margin-bottom: 1.5rem;
-  position: relative;
-}
 
-.section-title::after {
-  content: '';
-  display: block;
-  width: 60px;
-  height: 4px;
-  background-color: var(--accent);
-  margin-top: 1rem;
-  border-radius: 2px;
-}
 
-.lead-text {
-  font-size: 1.25rem;
-  color: var(--text-muted);
-  margin-bottom: 3rem;
-  line-height: 1.6;
-}
 
 .feature-list {
   display: flex;

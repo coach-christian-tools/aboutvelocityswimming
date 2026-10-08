@@ -40,7 +40,7 @@ export default function Footer() {
 
       const metaTheme = document.querySelector('meta[name="theme-color"]');
       if (metaTheme) {
-        metaTheme.setAttribute("content", targetTheme === "dark" ? "#070D16" : "#FFFFFF");
+        metaTheme.setAttribute("content", targetTheme === "dark" ? "#102638" : "#FFFFFF");
       }
 
       window.dispatchEvent(new Event("velocity-theme-change"));

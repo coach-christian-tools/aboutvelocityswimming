@@ -1,133 +1,232 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore } from "react";
+import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import "./Header.css";
 
-interface HeaderProps {
-  darkBackground?: boolean;
-  minimal?: boolean;
-}
+const sections = [
+  { href: "/schedule", label: "Schedule" },
+  { href: "/news", label: "News" },
+];
+const aboutSections = [
+  { href: "/#overview", label: "Overview" },
+  { href: "/#about", label: "Youth Development" },
+  { href: "/#programs", label: "Programs" },
+  { href: "/#join", label: "How to Join" },
+  { href: "/#community", label: "Velocity in Action" },
+  { href: "/#coaches", label: "Coaches" },
+  { href: "/#masters", label: "Masters Swimming" },
+  { href: "/#social", label: "Social Highlights" },
+];
+const moreSections = [
+  { href: "/tools", label: "Tools" },
+  { href: "/store", label: "Store" },
+  { href: "/sponsors", label: "Sponsors" },
+  { href: "https://www.gomotionapp.com/team/ievs/page/home", label: "SportsEngine" },
+  { href: "https://www.gomotionapp.com/team/wzielsc/page/home", label: "Inland Empire" },
+];
 
-export default function Header({ darkBackground = false, minimal = false }: HeaderProps) {
-  const [scrolled, setScrolled] = useState(false);
-  const [activeTheme, setActiveTheme] = useState<string>("light");
+function subscribeScroll(callback: () => void) {
+  window.addEventListener("scroll", callback, { passive: true });
+  return () => window.removeEventListener("scroll", callback);
+}
+const getScrollSnapshot = () => window.scrollY > 24;
+const getServerScrollSnapshot = () => false;
+
+function Navigation({ pathname }: { pathname: string }) {
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<"about" | "more" | null>(null);
+  const aboutOpen = openDropdown === "about";
+  const moreOpen = openDropdown === "more";
+  const moreToggle = useRef<HTMLButtonElement>(null);
+  const moreActive = moreSections.some(({ href }) => href.startsWith("/") && (pathname === href || pathname.startsWith(href + "/")));
+  const headerRef = useRef<HTMLElement>(null);
+  const mobileToggle = useRef<HTMLButtonElement>(null);
+  const aboutLink = useRef<HTMLAnchorElement>(null);
+  const aboutToggle = useRef<HTMLButtonElement>(null);
+  const scrolled = useSyncExternalStore(subscribeScroll, getScrollSnapshot, getServerScrollSnapshot);
+  const isHome = pathname === "/";
+  const overlay = isHome && !scrolled && !mobileOpen;
+
+  function closeMenus() {
+    setMobileOpen(false);
+    setOpenDropdown(null);
+  }
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-
-    const updateThemeState = () => {
-      const themeAttr = document.documentElement.getAttribute("data-theme");
-      if (themeAttr) {
-        setActiveTheme(themeAttr);
-      } else {
-        const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-        setActiveTheme(isDark ? "dark" : "light");
+    function dismissOutside(event: PointerEvent) {
+      if (event.target instanceof Node && !headerRef.current?.contains(event.target)) {
+        setMobileOpen(false);
+        setOpenDropdown(null);
       }
-    };
-
-    updateThemeState();
-    const observer = new MutationObserver(updateThemeState);
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
-    window.addEventListener("velocity-theme-change", updateThemeState);
-
+    }
+    function resetMenus() {
+      setMobileOpen(false);
+      setOpenDropdown(null);
+    }
+    const breakpoint = window.matchMedia("(max-width: 960px)");
+    breakpoint.addEventListener("change", resetMenus);
+    document.addEventListener("pointerdown", dismissOutside);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("velocity-theme-change", updateThemeState);
-      observer.disconnect();
+      breakpoint.removeEventListener("change", resetMenus);
+      document.removeEventListener("pointerdown", dismissOutside);
     };
   }, []);
 
-  if (minimal) {
-    return (
-      <header className="header header-minimal">
-        <div className="header-container header-container-minimal">
-          <Link href="/" className="logo-link" aria-label="Velocity Swimming Home">
-            <picture>
-              <source
-                media="(min-width: 768px)"
-                srcSet="/assets/logo-variations/contrast/Long%20Contrast.svg"
-              />
-              <source
-                media="(min-width: 480px)"
-                srcSet="/assets/logo-variations/contrast/Small%20Contrast.svg"
-              />
-              <img
-                src="/assets/logo-variations/contrast/Initials%20Contrast.svg"
-                alt="Velocity Swimming Logo"
-                className="logo"
-              />
-            </picture>
+  return (
+    <>
+      <header
+        ref={headerRef}
+        className={`site-header${overlay ? " site-header-overlay" : ""}`}
+        onKeyDown={(event) => {
+          if (event.key !== "Escape") return;
+          if (aboutOpen) {
+            if (window.matchMedia("(min-width: 961px)").matches) {
+              aboutLink.current?.focus();
+            } else {
+              aboutToggle.current?.focus();
+            }
+            setOpenDropdown(null);
+          } else if (moreOpen) {
+            moreToggle.current?.focus();
+            setOpenDropdown(null);
+          } else if (mobileOpen) {
+            setMobileOpen(false);
+            mobileToggle.current?.focus();
+          }
+        }}
+        onBlur={(event) => {
+          if (!event.currentTarget.contains(event.relatedTarget)) closeMenus();
+        }}
+      >
+        <div className="site-header-inner">
+          <Link href="/" className="site-logo" aria-label="Velocity Swimming home" onClick={closeMenus}>
+            <Image className="site-logo-contrast" src="/assets/logo-variations/contrast/Long%20Contrast.svg" width={1822} height={400} alt="" loading="eager" />
+            <Image className="site-logo-white" src="/assets/logo-variations/white/Long%20White.svg" width={1822} height={400} alt="" loading="eager" />
           </Link>
+
+          <button
+            ref={mobileToggle}
+            className="site-menu-toggle"
+            type="button"
+            aria-expanded={mobileOpen}
+            aria-controls="site-navigation"
+            aria-label={mobileOpen ? "Close navigation" : "Open navigation"}
+            onClick={() => { setMobileOpen(!mobileOpen); setOpenDropdown(null); }}
+          >
+            <span>{mobileOpen ? "Close" : "Menu"}</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+              <path d={mobileOpen ? "m6 6 12 12M6 18 18 6" : "M4 7h16M4 12h16M4 17h16"} />
+            </svg>
+          </button>
+
+          <nav id="site-navigation" aria-label="Main navigation" className={`site-navigation${mobileOpen ? " is-open" : ""}`}>
+            <div className="site-nav-links">
+              <div className="site-about"
+                onPointerEnter={(event) => {
+                  if (event.pointerType === "mouse" && window.matchMedia("(min-width: 961px)").matches) setOpenDropdown("about");
+                }}
+                onPointerLeave={(event) => {
+                  if (event.pointerType === "mouse" && window.matchMedia("(min-width: 961px)").matches && !event.currentTarget.contains(document.activeElement)) setOpenDropdown(null);
+                }}
+                onBlur={(event) => {
+                if (!event.currentTarget.contains(event.relatedTarget)) setOpenDropdown(null);
+              }}>
+                <div className="site-about-heading">
+                  <Link
+                    ref={aboutLink}
+                    href="/"
+                    className="site-nav-link"
+                    aria-current={isHome ? "page" : undefined}
+                    aria-expanded={aboutOpen}
+                    aria-controls="about-sections"
+                    onFocus={() => {
+                      if (window.matchMedia("(min-width: 961px)").matches) setOpenDropdown("about");
+                    }}
+                    onKeyDown={(event) => {
+                      if (event.key === "ArrowDown" && aboutOpen) {
+                        event.preventDefault();
+                        event.currentTarget.closest(".site-about")?.querySelector<HTMLAnchorElement>(".site-dropdown a")?.focus();
+                      }
+                    }}
+                    onClick={closeMenus}
+                  >About</Link>
+                  <button
+                    ref={aboutToggle}
+                    className="site-about-toggle"
+                    type="button"
+                    aria-label="About sections"
+                    aria-expanded={aboutOpen}
+                    aria-controls="about-sections"
+                    onClick={() => setOpenDropdown(aboutOpen ? null : "about")}
+                  >
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+                  </button>
+                </div>
+                <ul id="about-sections" className="site-dropdown" hidden={!aboutOpen}>
+                  {aboutSections.map(({ href, label }) => <li key={href}><Link href={href} aria-current={pathname === href ? "page" : undefined} onClick={closeMenus}>{label}</Link></li>)}
+                </ul>
+              </div>
+              {sections.map(({ href, label }) => (
+                <Link key={href} href={href} className="site-nav-link" aria-current={pathname === href || pathname.startsWith(`${href}/`) ? "page" : undefined} onClick={closeMenus}>{label}</Link>
+              ))}
+              <div className="site-more"
+                onPointerEnter={(event) => {
+                  if (event.pointerType === "mouse" && window.matchMedia("(min-width: 961px)").matches) setOpenDropdown("more");
+                }}
+                onPointerLeave={(event) => {
+                  if (event.pointerType === "mouse" && window.matchMedia("(min-width: 961px)").matches && !event.currentTarget.contains(document.activeElement)) setOpenDropdown(null);
+                }}
+                onBlur={(event) => {
+                  if (!event.currentTarget.contains(event.relatedTarget)) setOpenDropdown(null);
+                }}
+              >
+                <button
+                  ref={moreToggle}
+                  type="button"
+                  className="site-nav-link site-more-toggle"
+                  aria-expanded={moreOpen}
+                  aria-controls="more-sections"
+                  data-active={moreActive || undefined}
+                  onClick={() => setOpenDropdown(moreOpen ? null : "more")}
+                  onKeyDown={(event) => {
+                    if (event.key === "ArrowDown" && moreOpen) {
+                      event.preventDefault();
+                      event.currentTarget.closest(".site-more")?.querySelector<HTMLAnchorElement>(".site-dropdown a")?.focus();
+                    }
+                  }}
+                >More</button>
+                <ul id="more-sections" className="site-dropdown" hidden={!moreOpen}>
+                  {moreSections.map(({ href, label }) => (
+                    <li key={href}>
+                      {href.startsWith("/") ? (
+                        <Link href={href} aria-current={pathname === href ? "page" : pathname.startsWith(href + "/") ? "true" : undefined} onClick={closeMenus}>{label}</Link>
+                      ) : (
+                        <a href={href} target="_blank" rel="noopener noreferrer" aria-label={label + " (external site, opens in a new tab)"} onClick={closeMenus}>
+                          {label}
+                          <svg className="site-external-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                            <path d="M15 3h6v6M10 14 21 3M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5" />
+                          </svg>
+                        </a>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+            <a href="https://www.gomotionapp.com/team/ievs/page/online-registration1" target="_blank" rel="noopener noreferrer" className="btn btn-primary site-join" onClick={closeMenus}>Join the Team</a>
+          </nav>
         </div>
       </header>
-    );
-  }
-
-  const isDark = activeTheme === "dark";
-
-  return (
-    <header className={`header ${scrolled ? "scrolled" : ""} ${darkBackground ? "header-dark-bg" : ""}`}>
-      <div className="header-container">
-        <Link href="/" className="logo-link" aria-label="Velocity Swimming Home">
-          <picture>
-            <source
-              media="(min-width: 768px)"
-              srcSet={
-                isDark
-                  ? "/assets/logo-variations/white/Long%20White.svg"
-                  : (scrolled
-                      ? "/assets/logo-variations/contrast/Long%20Contrast.svg"
-                      : "/assets/logo-variations/white/Long%20White.svg")
-              }
-            />
-            <source
-              media="(min-width: 480px)"
-              srcSet={
-                isDark
-                  ? "/assets/logo-variations/white/Small%20White.svg"
-                  : (scrolled
-                      ? "/assets/logo-variations/contrast/Small%20Contrast.svg"
-                      : "/assets/logo-variations/white/Small%20White.svg")
-              }
-            />
-            <img
-              src={
-                isDark
-                  ? "/assets/logo-variations/white/Initials%20White.svg"
-                  : (scrolled
-                      ? "/assets/logo-variations/contrast/Initials%20Contrast.svg"
-                      : "/assets/logo-variations/white/Initials%20White.svg")
-              }
-              alt="Velocity Swimming Logo"
-              className="logo"
-            />
-          </picture>
-        </Link>
-
-        <nav className="nav-links">
-          <Link href="/#about">About</Link>
-          <Link href="/#programs">Programs</Link>
-          <Link href="/#coaches">Coaches</Link>
-          <Link href="/#sponsors">Sponsors</Link>
-          <Link href="/store">Store</Link>
-        </nav>
-
-        <div className="cta-container">
-          <a
-            href="https://www.gomotionapp.com/team/ievs/page/online-registration1"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-primary"
-          >
-            Join the Team
-          </a>
-        </div>
-      </div>
-    </header>
+      {!isHome && <div className="site-header-spacer" aria-hidden="true" />}
+    </>
   );
 }
 
+export default function Header() {
+  const pathname = usePathname();
+  // A route change resets disclosures without an effect or a flash of stale state.
+  return <Navigation key={pathname} pathname={pathname} />;
+}

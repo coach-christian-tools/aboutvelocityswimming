@@ -1,0 +1,74 @@
+.page {
+  --page-line: color-mix(in srgb, var(--text-main) 14%, transparent);
+  --page-accent: #0A856C;
+  min-height: calc(100svh - var(--site-header-height));
+  padding: clamp(3rem, 7vw, 6rem) 2rem 6rem;
+  background: var(--background);
+}
+.container { max-width: var(--max-width); margin-inline: auto; }
+.intro { margin-bottom: 3.5rem; max-width: 760px; }
+.eyebrow { font-size: 0.74rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--page-accent); margin-bottom: 1.15rem; }
+.intro h1 { font-size: clamp(3.5rem, 7vw, 6rem); letter-spacing: -0.055em; font-weight: 600; line-height: 1; color: var(--text-main); }
+.intro h1 span { color: var(--page-accent); }
+.description { font-size: clamp(1.05rem, 2vw, 1.25rem); line-height: 1.65; color: var(--text-muted); margin-top: 1.5rem; max-width: 640px; }
+.panel { border: 1px solid var(--page-line); border-radius: 20px; overflow: hidden; }
+.practicePanel { display: grid; grid-template-columns: 0.85fr 1.15fr; background: var(--background-alt); }
+.panelContent { padding: clamp(2rem, 4vw, 3.5rem); display: flex; flex-direction: column; align-items: flex-start; justify-content: center; }
+.panelContent h2, .tool h2, .archive h2 { font-size: clamp(1.5rem, 3vw, 2rem); letter-spacing: -0.035em; color: var(--text-main); margin-bottom: 1rem; }
+.panelContent p, .tool p, .archive p, .sectionHeading p { color: var(--text-muted); font-size: 1rem; line-height: 1.75; max-width: 510px; }
+.status { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.4rem 0.75rem; border: 1px solid var(--page-line); border-radius: 99px; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.025em; color: var(--text-muted); }
+.status::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--page-accent); }
+.panelContent .status { margin-bottom: 1.5rem; }
+.action { display: inline-flex; align-items: center; gap: 1.25rem; margin-top: 1.75rem; padding: 0.9rem 1.3rem; border-radius: 99px; background: var(--accent); color: white; font-size: 0.9rem; font-weight: 600; line-height: 1.4; }
+.action:hover { background: var(--accent-hover); }
+.calendarArt { display: grid; place-items: center; min-height: 330px; padding: 2.5rem; background: #123e53; position: relative; overflow: hidden; }
+.calendarArt::before { content: ""; position: absolute; width: 480px; height: 480px; border: 1px solid #ffffff18; border-radius: 50%; box-shadow: 0 0 0 40px #ffffff06, 0 0 0 80px #ffffff04; }
+.calendarDrawing { width: min(100%, 260px); position: relative; color: #d4f3e9; transform: rotate(-5deg); }
+.sectionHeading { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 1rem; margin: 3.5rem 0 1.3rem; }
+.sectionHeading h2 { font-size: 1.4rem; color: var(--text-main); letter-spacing: -0.025em; }
+.sectionHeading p { font-size: 0.86rem; }
+.emptyMeet { display: flex; align-items: center; gap: 1.5rem; padding: 2rem; border: 1px dashed var(--page-line); border-radius: 16px; }
+.icon { color: var(--page-accent); display: grid; place-items: center; width: 56px; height: 56px; border-radius: 16px; background: color-mix(in srgb, var(--page-accent) 9%, transparent); flex-shrink: 0; }
+.emptyMeet h3 { font-size: 1.05rem; margin-bottom: 0.4rem; color: var(--text-main); }
+.emptyMeet p { font-size: 0.92rem; color: var(--text-muted); line-height: 1.65; }
+.newsFeature { display: grid; grid-template-columns: 1fr 1fr; background: var(--background-alt); }
+.issueCover { min-height: 400px; padding: 2.5rem; background: #123e53; color: white; display: flex; flex-direction: column; justify-content: space-between; position: relative; isolation: isolate; overflow: hidden; }
+.issueCover::before { content: ""; position: absolute; z-index: -1; width: 400px; height: 400px; border-radius: 50%; border: 1px solid #b4edcf44; right: -220px; bottom: -160px; box-shadow: 0 0 0 32px #b4edcf12, 0 0 0 64px #b4edcf0a, 0 0 0 96px #b4edcf06; }
+.coverBrand { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; }
+.coverTitle { font-family: var(--font-heading); font-size: clamp(2.9rem, 5vw, 4.4rem); line-height: 1.02; letter-spacing: -0.04em; padding: 2.5rem 0; }
+.coverTitle em { color: #a8e6ca; font-style: normal; }
+.coverFooter { font-size: 0.8rem; color: #c2d8df; border-top: 1px solid #ffffff30; padding-top: 1rem; }
+.archive { padding: 2rem; border-top: 1px solid var(--page-line); }
+.archive h2 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+.archive p { font-size: 0.92rem; }
+.tools { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; }
+.tool { display: flex; flex-direction: column; align-items: flex-start; padding: 2rem; border: 1px solid var(--page-line); border-radius: 18px; background: var(--background-alt); }
+.toolTop { width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 2.5rem; }
+.toolNumber { font-size: 0.75rem; letter-spacing: 0.1em; color: var(--text-muted); }
+.toolAudience { font-size: 0.68rem !important; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; margin-bottom: 0.5rem; }
+.tool h2 { font-size: 1.45rem; margin-bottom: 0.8rem; }
+.tool p { font-size: 0.92rem; }
+.tool .status { margin-top: auto; }
+.toolDescription { padding-bottom: 2rem; }
+.toolsNote { margin-top: 2rem; font-size: 0.9rem; line-height: 1.7; color: var(--text-muted); }
+:global(:root[data-theme="dark"]) .page { --page-accent: #68d9b6; }
+@media (prefers-color-scheme: dark) {
+  :global(:root:not([data-theme="light"])) .page { --page-accent: #68d9b6; }
+}
+@media (max-width: 960px) {
+  .tools { gap: 1rem; }
+  .tool { padding: 1.5rem; }
+}
+@media (max-width: 700px) {
+  .page { padding: 3rem 1.25rem 4rem; }
+  .intro { margin-bottom: 2.5rem; }
+  .practicePanel, .newsFeature, .tools { grid-template-columns: 1fr; }
+  .calendarArt { min-height: 210px; padding: 1.5rem; }
+  .calendarDrawing { max-width: 180px; }
+  .panelContent { padding: 2rem 1.5rem; }
+  .issueCover { min-height: 330px; padding: 2rem; }
+  .emptyMeet { align-items: flex-start; padding: 1.5rem; gap: 1rem; }
+  .tool { padding: 1.75rem; }
+  .toolTop { margin-bottom: 1.75rem; }
+  .sectionHeading { margin-top: 2.5rem; }
+}

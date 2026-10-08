@@ -15,12 +15,10 @@ const DIVISIONS = [
       {
         name: "Splash",
         age: "12 & Under",
-        desc: "Foundations of freestyle and backstroke, water safety, and listening skills.",
       },
       {
         name: "Pre-Team",
         age: "12 & Under",
-        desc: "Advanced technique transitions into breaststroke, butterfly, and lane sharing.",
       },
     ],
   },
@@ -35,7 +33,6 @@ const DIVISIONS = [
       {
         name: "18&U Rec Group",
         age: "18 & Under",
-        desc: "Sustained aerobic conditioning, technique refinement across all 4 strokes, and team camaraderie.",
       },
     ],
   },
@@ -50,22 +47,18 @@ const DIVISIONS = [
       {
         name: "10&U Prep",
         age: "10 & Under",
-        desc: "Streamlines, turns, underwater dolphin kicking, and legal finishes in all 4 strokes.",
       },
       {
         name: "Age Groupers",
         age: "Ages 10–12",
-        desc: "Pace clock autonomy, IM training, legal stroke transitions, and race pacing.",
       },
       {
         name: "Juniors",
         age: "Ages 13–14",
-        desc: "Threshold endurance sets, dryland & mobility training, and race data goal-setting.",
       },
       {
         name: "Seniors",
         age: "Ages 15 & Over",
-        desc: "Pinnacle high school, regional & national competition with customized race paces.",
       },
     ],
   },
@@ -80,7 +73,6 @@ const DIVISIONS = [
       {
         name: "VS Masters",
         age: "19 & Over",
-        desc: "Coached stroke mechanics, stamina building, and social network for lifelong fitness.",
       },
     ],
   },
@@ -143,7 +135,6 @@ export default function Programs() {
                         <strong>{group.name}</strong>
                         <span className="group-age">{group.age}</span>
                       </div>
-                      <p className="group-desc">{group.desc}</p>
                     </div>
                   ))}
                 </div>
@@ -164,7 +155,7 @@ export default function Programs() {
 
 
         {/* Registration Process & CTA */}
-        <div className="registration-flow-card glass-panel">
+        <div id="join" className="registration-flow-card glass-panel">
           <div className="flow-header text-center">
             <span className="flow-badge">Get Started</span>
             <h3>How to Join Velocity Swimming</h3>
