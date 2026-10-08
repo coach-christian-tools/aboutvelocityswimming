@@ -11,14 +11,14 @@ export const metadata: Metadata = {
 };
 
 const tools = [
+  { title: "Swim Resources", audience: "For swimmers & coaches", icon: "book" as const, description: "Explore swimming knowledge, time standards, and helpful tools as our resource library grows.", href: SWIM_RESOURCES_PATH },
   { title: "Workshare", audience: "For families", icon: "people" as const, description: "Find volunteer opportunities, sign up for shifts, and keep track of your family’s workshare hours.", href: WORKSHARE_PATH },
   { title: "Coach Attendance", audience: "For coaches", icon: "attendance" as const, description: "Take practice attendance and keep swimmer participation organized throughout the season." },
-  { title: "Swim Resources", audience: "For swimmers & coaches", icon: "book" as const, description: "Explore swimming knowledge, time standards, and helpful tools as our resource library grows.", href: SWIM_RESOURCES_PATH },
 ];
 
 export default function ToolsPage() {
   return (
-    <SectionPage eyebrow="Built around our team" title="Tools" description="Less searching, more swimming. We’re bringing the resources families and coaches use into one familiar place.">
+    <SectionPage>
       <div className={styles.tools}>
         {tools.map((tool, index) => (
           <article className={styles.tool} key={tool.title}>

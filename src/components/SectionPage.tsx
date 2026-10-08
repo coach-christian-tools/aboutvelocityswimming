@@ -3,20 +3,20 @@ import Footer from "./Footer";
 import styles from "./SectionPage.module.css";
 
 export default function SectionPage({ eyebrow, title, description, children }: {
-  eyebrow: string;
-  title: string;
-  description: string;
+  eyebrow?: string;
+  title?: string;
+  description?: string;
   children: ReactNode;
 }) {
   return (
     <>
       <main className={styles.page}>
         <div className={styles.container}>
-          <header className={styles.intro}>
+          {title ? <header className={styles.intro}>
             <p className={styles.eyebrow}>{eyebrow}</p>
             <h1>{title}<span aria-hidden="true">.</span></h1>
             <p className={styles.description}>{description}</p>
-          </header>
+          </header> : null}
           {children}
         </div>
       </main>

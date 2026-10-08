@@ -41,7 +41,7 @@
 .meet { --event-color: var(--blue); }
 .notice { --event-color: var(--amber); }
 .agenda { border-top: 1px solid var(--line); }
-.mobileAgenda { display: none; }
+.mobileAgenda, .mobilePicker { display: none; }
 .agendaDay { display: grid; grid-template-columns: 85px minmax(0, 1fr); padding: 1.25rem 2rem; gap: 1.5rem; border-bottom: 1px solid var(--line); }
 .agendaDate { display: flex; flex-direction: column; align-items: center; gap: .4rem; padding-top: .5rem; }
 .agendaDate span { font-size: .65rem; text-transform: uppercase; letter-spacing: .1em; color: var(--text-muted); }
@@ -81,8 +81,24 @@
 .description { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--line); white-space: pre-wrap; }
 .dialog > .subscribe { margin-top: 1.75rem; }
 @media (max-width: 800px) {
+  .filters .subscribe { display: none; }
   .monthGrid, .views { display: none; }
-  .mobileAgenda { display: block; border-top: 1px solid var(--line); }
+  .mobileAgenda { display: block; }
+  .mobilePicker { display: block; padding: 0 1.25rem 1.25rem; }
+  .pickerHint { color: var(--text-muted); font-size: .8rem; margin-bottom: 1rem; }
+  .dateGrid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: .35rem; }
+  .dateWeekday { text-align: center; color: var(--text-muted); font-size: .65rem; font-weight: 600; padding: .5rem 0; }
+  .dateButton { min-height: 48px; padding: .65rem .25rem .35rem; display: flex; flex-direction: column; gap: .45rem; background: transparent; border: 1px solid transparent; border-radius: 10px; color: var(--text-main); font-size: .9rem; }
+  .dateButton:hover:not(:disabled):not([aria-pressed="true"]) { background: var(--background-alt); }
+  .dateButton:disabled { opacity: .3; cursor: default; }
+  .dateToday { border-color: var(--green); color: var(--green); }
+  .dateButton[aria-pressed="true"] { background: var(--accent); color: white; border-color: var(--accent); }
+  .dateButton[aria-pressed="true"]:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
+  .dateDots { display: flex; justify-content: center; gap: 3px; height: 4px; }
+  .dateDots i { width: 4px; height: 4px; border-radius: 50%; }
+  .dateButton[aria-pressed="true"] .dateDots i { background: white; }
+  .selectedDateHeading { border-top: 1px solid var(--line); padding: 1.25rem 1.25rem 0; font-size: 1rem; font-weight: 600; }
+  .dayEmpty { padding: 1rem 1.25rem 1.5rem; color: var(--text-muted); font-size: .85rem; line-height: 1.6; }
   .agendaTime { flex-basis: 140px; }
 }
 @media (max-width: 550px) {
