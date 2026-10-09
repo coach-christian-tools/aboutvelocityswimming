@@ -7,15 +7,15 @@ import SectionPage, { SectionIcon } from "@/components/SectionPage";
 import styles from "@/components/SectionPage.module.css";
 const tools = [
   {
-    title: "Swim Resources",
+    title: "Inland Empire Times Database",
     audience: "For swimmers & coaches",
     icon: "book" as const,
     description:
-      "Explore swimming knowledge, time standards, and helpful tools as our resource library grows.",
-    href: SWIM_RESOURCES_PATH,
+      "Explore approved results and time standards for Inland Empire athletes wherever they compete.",
+    href: "/tools/times",
   },
   {
-    title: "Workshare",
+    title: "Velocity Workshare",
     audience: "For families",
     icon: "people" as const,
     description:
@@ -23,12 +23,12 @@ const tools = [
     href: WORKSHARE_PATH,
   },
   {
-    title: "Coach Attendance",
-    audience: "For coaches",
-    href: SWIM_RESOURCES_PATH + "/attendance",
-    icon: "attendance" as const,
+    title: "USA Swimming Knowledge Base",
+    audience: "For the swimming community",
+    href: "/tools/knowledge",
+    icon: "book" as const,
     description:
-      "Take practice attendance and keep swimmer participation organized throughout the season.",
+      "Find meet, region, LSC, team, and venue information with original source links.",
   },
 ];
 
@@ -61,7 +61,7 @@ export default function ToolsDirectory() {
               >
                 {tool.title === "Coach Attendance" && !isAdmin
                   ? "Staff sign-in"
-                  : tool.title === "Workshare" && !user
+                  : tool.title === "Velocity Workshare" && !user
                     ? "Family sign-in"
                     : "Open " + tool.title}{" "}
                 →
@@ -72,6 +72,14 @@ export default function ToolsDirectory() {
           </article>
         ))}
       </div>
+      {isAdmin && (
+        <p className={styles.toolsNote}>
+          <Link href="/tools/review">Review collected changes</Link> ·{" "}
+          <Link href={SWIM_RESOURCES_PATH + "/attendance"}>
+            Coach attendance
+          </Link>
+        </p>
+      )}
       <p className={styles.toolsNote}>
         {loading
           ? "Checking your account…"

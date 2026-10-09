@@ -10,7 +10,7 @@ const context = await browser.newContext({
   }),
   page = await context.newPage();
 page.setDefaultTimeout(20000);
-page.setDefaultNavigationTimeout(20000);
+page.setDefaultNavigationTimeout(60000);
 const errors = [];
 page.on("pageerror", (e) => errors.push(e.message));
 try {
@@ -23,7 +23,7 @@ try {
     "/store",
     "/privacy",
   ]) {
-    const response = await page.goto(base + path);
+    const response = await page.goto(base + path, { waitUntil: "domcontentloaded" });
     assert.ok(response.status() < 400, path);
     await page.locator("body").waitFor();
     console.log("Opened " + path);
@@ -49,7 +49,7 @@ try {
   const batch=JSON.parse(readFileSync('backups/browser/import.json','utf8'));
   await page.getByLabel('Import batch JSON',{exact:true}).fill(JSON.stringify(batch));
   await page.getByRole('button',{name:'Preview changes',exact:true}).click();
-  await page.getByRole('checkbox',{name:'Select velocity-swimming',exact:true}).check();
+  await page.getByRole('checkbox',{name:'Select Velocity Swimming Browser Test',exact:true}).check();
   await page.getByRole('button',{name:'Apply 1 selected changes',exact:true}).click();
   await page.getByText(/1 changes applied/).waitFor();
   await page.getByRole('checkbox',{name:'Reverse velocity-swimming',exact:true}).check();

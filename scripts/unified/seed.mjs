@@ -34,6 +34,14 @@ for (const [label, email] of users) {
     if (error) throw error;
   }
 }
+// Local staff permissions are explicit; a team email domain alone grants no access.
+const staffUsers = await client.auth.admin.listUsers();
+if (staffUsers.error) throw staffUsers.error;
+const staffId = staffUsers.data.users.find(
+  (user) => user.email === "coach@velocity-swimming.com",
+)?.id;
+const grant = await client.from("administrators").upsert({ user_id: staffId });
+if (grant.error) throw grant.error;
 const athlete = (id, first, last, gender) => ({
   id,
   name: { first, last },

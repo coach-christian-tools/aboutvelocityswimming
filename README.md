@@ -1,3 +1,24 @@
+## Unified backend and collection
+
+The website and tools use Supabase (`hgsghjqefynhbavmkehv`). Firebase-specific guides below describe the archived migration history, not the active runtime.
+
+- `/tools/workshare`: private households and commitments. Members are independent of Times athletes.
+- `/tools/times`: public approved Inland Empire athlete profiles and race history, including meets outside the region.
+- `/tools/knowledge`: approved meet, organization, venue, and document entries with source links.
+- `/tools/review`: staff-only evidence and before/after review. Approve, hold, or decline a bounded batch. Approval checks for stale data and applies all changes atomically.
+
+Staff access requires a verified account and either an explicit user grant in `public.administrators` or a verified email listed in `private.administrator_emails`. Team email domains alone do not grant staff access. Collector tokens cannot grant permissions or publish records.
+
+Use Node 24. For synthetic local development: start OrbStack/Docker, run `supabase start`, `npm run seed:local`, then `npm run dev:local`. The local wrapper uses the ignored `supabase/.env.local`; ordinary `npm run dev` uses the configured hosted backend. Never seed production.
+
+Run `npm run verify` for lint, types, unit/database tests, and production build. Before `npm run test:browser`, run `node scripts/unified/import-fixture.mjs`. `npm run test:collection:browser` verifies collection → hold → approval → public display against local synthetic data.
+
+Current-machine collection uses the ignored, mode-0600 `.env.collection.local` (project URL, publishable key, `VELOCITY_COLLECTOR_TOKEN`). Run `npm run collection:stage -- backups/<batch>.json`. Each batch has `division`, `scope`, `sourceUrl`, `capturedAt`, `coverage`, `evidence`, and 1–100 `writes` (`path` and proposed `after` object), limited to 2 MB. The server captures current values for review. Repeated identical proposals retain their earlier decision. Missing records in a partial scrape are never treated as deletions. Revoke a worker through `private.collection_workers.revoked_at`.
+
+No recurring crawler or email reminder schedule is enabled by this setup. Collection scope is requested manually; authenticated source browsing runs on this machine. Mac Mini operation is deferred. Configure Supabase custom SMTP with Resend and the code templates in `supabase/templates/` before opening family email sign-in. Legacy Firebase data requires a verified import; creating the hosted schema does not transfer it automatically.
+
+---
+
 # Velocity Swimming
 
 The public website and Swim Resources share one Next.js app and one npm installation. Use Node 24 (`nvm use`), then `npm ci` and `npm run dev`. The website is at `/`; open Swim Resources from `/tools` or directly at `/tools/swim-resources`.

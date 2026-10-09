@@ -21,7 +21,9 @@
     "dev:local": "node scripts/unified/dev.mjs --hostname 127.0.0.1 --port 3001",
     "seed:local": "node scripts/unified/seed.mjs",
     "verify:browser": "npm run test:browser",
-    "db:types": "supabase gen types --local > src/lib/supabase/database.types.ts"
+    "db:types": "supabase gen types --local > src/lib/supabase/database.types.ts",
+    "collection:stage": "node --env-file=.env.collection.local scripts/collection/stage.mjs",
+    "test:collection:browser": "node scripts/collection/browser-check.mjs"
   },
   "dependencies": {
     "@stripe/stripe-js": "^9.8.0",

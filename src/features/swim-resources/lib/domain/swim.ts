@@ -1,4 +1,3 @@
-import { VELOCITY_TEAM_ID } from './entities.ts';
 import type { Swim } from '@/features/swim-resources/types/schema';
 import { isCalendarDate } from './date.ts';
 import { formatSwimTime, parseSwimTime } from './swim-time.ts';
@@ -22,9 +21,11 @@ export function canonicalSwim(input: Partial<Swim>): Swim {
   const meetId = input.meet!.id || `${input.meet!.name}_${input.meet!.date}`.toLowerCase().replace(/[^a-z0-9_-]/g, '_');
   const eventCode = `${input.distance}_${input.stroke}_${input.course}`;
   if (input.eventCode && input.eventCode !== eventCode && !input.isRelay) fail('eventCode matching distance, stroke and course');
-  const id = input.id || `${input.athleteId}_${input.eventCode || eventCode}_${meetId}_${input.round}`;
+  const source = input.externalResult;
+  if (source && (!/^[a-zA-Z0-9_-]+$/.test(source.namespace) || !/^[a-zA-Z0-9_-]+$/.test(source.id))) fail('external result identity');
+  const id = input.id || (source ? `result_${source.namespace}_${source.id}` : `${input.athleteId}_${input.eventCode || eventCode}_${meetId}_${input.round}`);
   if (id.includes('/')) fail('document ID');
-  return { ...input, teamId: input.teamId ?? VELOCITY_TEAM_ID, id, eventCode: input.eventCode || eventCode, timeMs: timeMs ?? 0,
+  return { ...input, id, eventCode: input.eventCode || eventCode, timeMs: timeMs ?? 0,
     timeDisplay: formatSwimTime(timeMs ?? 0), meet: { ...input.meet, id: meetId },
     metadata: { source: input.metadata?.source || 'manual', createdAt: input.metadata?.createdAt || new Date().toISOString() },
   } as Swim;

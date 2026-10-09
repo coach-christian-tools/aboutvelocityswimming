@@ -49,17 +49,17 @@ export type Database = {
       athlete_bests: {
         Row: {
           athlete_id: string;
-          data: Json;
+          data: NonNullable<Json>;
           event_code: string;
         };
         Insert: {
           athlete_id: string;
-          data: Json;
+          data: NonNullable<Json>;
           event_code: string;
         };
         Update: {
           athlete_id?: string;
-          data?: Json;
+          data?: NonNullable<Json>;
           event_code?: string;
         };
         Relationships: [
@@ -74,25 +74,25 @@ export type Database = {
       };
       athletes: {
         Row: {
-          data: Json;
+          data: NonNullable<Json>;
           group_id: string | null;
           id: string;
           person_id: string;
           team_id: string | null;
         };
         Insert: {
-          data: Json;
+          data: NonNullable<Json>;
           group_id?: string | null;
           id: string;
           person_id: string;
-          team_id?: string | null;
+          team_id?: never;
         };
         Update: {
-          data?: Json;
+          data?: NonNullable<Json>;
           group_id?: string | null;
           id?: string;
           person_id?: string;
-          team_id?: string | null;
+          team_id?: never;
         };
         Relationships: [
           {
@@ -121,21 +121,21 @@ export type Database = {
       attendance: {
         Row: {
           athlete_id: string | null;
-          data: Json;
+          data: NonNullable<Json>;
           id: string;
           session_id: string | null;
         };
         Insert: {
-          athlete_id?: string | null;
-          data: Json;
+          athlete_id?: never;
+          data: NonNullable<Json>;
           id: string;
-          session_id?: string | null;
+          session_id?: never;
         };
         Update: {
-          athlete_id?: string | null;
-          data?: Json;
+          athlete_id?: never;
+          data?: NonNullable<Json>;
           id?: string;
-          session_id?: string | null;
+          session_id?: never;
         };
         Relationships: [
           {
@@ -154,10 +154,102 @@ export type Database = {
           },
         ];
       };
+      collection_batches: {
+        Row: {
+          captured_at: string;
+          coverage: string;
+          division: string;
+          evidence: NonNullable<Json>;
+          fingerprint: string;
+          id: string;
+          reads: NonNullable<Json>;
+          received_at: string;
+          review_note: string | null;
+          reviewed_at: string | null;
+          reviewed_by: string | null;
+          scope: string;
+          source_url: string;
+          status: string;
+          worker_id: string;
+          writes: NonNullable<Json>;
+        };
+        Insert: {
+          captured_at: string;
+          coverage: string;
+          division: string;
+          evidence: NonNullable<Json>;
+          fingerprint: string;
+          id?: string;
+          reads: NonNullable<Json>;
+          received_at?: string;
+          review_note?: string | null;
+          reviewed_at?: string | null;
+          reviewed_by?: string | null;
+          scope: string;
+          source_url: string;
+          status?: string;
+          worker_id: string;
+          writes: NonNullable<Json>;
+        };
+        Update: {
+          captured_at?: string;
+          coverage?: string;
+          division?: string;
+          evidence?: NonNullable<Json>;
+          fingerprint?: string;
+          id?: string;
+          reads?: NonNullable<Json>;
+          received_at?: string;
+          review_note?: string | null;
+          reviewed_at?: string | null;
+          reviewed_by?: string | null;
+          scope?: string;
+          source_url?: string;
+          status?: string;
+          worker_id?: string;
+          writes?: NonNullable<Json>;
+        };
+        Relationships: [];
+      };
+      collection_reviews: {
+        Row: {
+          batch_id: string;
+          decision: string;
+          id: number;
+          note: string | null;
+          reviewed_at: string;
+          reviewer_id: string;
+        };
+        Insert: {
+          batch_id: string;
+          decision: string;
+          id?: never;
+          note?: string | null;
+          reviewed_at?: string;
+          reviewer_id: string;
+        };
+        Update: {
+          batch_id?: string;
+          decision?: string;
+          id?: never;
+          note?: string | null;
+          reviewed_at?: string;
+          reviewer_id?: string;
+        };
+        Relationships: [
+          {
+            foreignKeyName: "collection_reviews_batch_id_fkey";
+            columns: ["batch_id"];
+            isOneToOne: false;
+            referencedRelation: "collection_batches";
+            referencedColumns: ["id"];
+          },
+        ];
+      };
       documents: {
         Row: {
           athlete_id: string | null;
-          data: Json;
+          data: NonNullable<Json>;
           id: string;
           meet_id: string | null;
           person_id: string | null;
@@ -165,22 +257,22 @@ export type Database = {
           venue_id: string | null;
         };
         Insert: {
-          athlete_id?: string | null;
-          data: Json;
+          athlete_id?: never;
+          data: NonNullable<Json>;
           id: string;
-          meet_id?: string | null;
-          person_id?: string | null;
-          team_id?: string | null;
-          venue_id?: string | null;
+          meet_id?: never;
+          person_id?: never;
+          team_id?: never;
+          venue_id?: never;
         };
         Update: {
-          athlete_id?: string | null;
-          data?: Json;
+          athlete_id?: never;
+          data?: NonNullable<Json>;
           id?: string;
-          meet_id?: string | null;
-          person_id?: string | null;
-          team_id?: string | null;
-          venue_id?: string | null;
+          meet_id?: never;
+          person_id?: never;
+          team_id?: never;
+          venue_id?: never;
         };
         Relationships: [
           {
@@ -222,33 +314,33 @@ export type Database = {
       };
       evidence_records: {
         Row: {
-          data: Json;
+          data: NonNullable<Json>;
           path: string;
           root: string | null;
         };
         Insert: {
-          data: Json;
+          data: NonNullable<Json>;
           path: string;
-          root?: string | null;
+          root?: never;
         };
         Update: {
-          data?: Json;
+          data?: NonNullable<Json>;
           path?: string;
-          root?: string | null;
+          root?: never;
         };
         Relationships: [];
       };
       families: {
         Row: {
-          data: Json;
+          data: NonNullable<Json>;
           id: string;
         };
         Insert: {
-          data: Json;
+          data: NonNullable<Json>;
           id: string;
         };
         Update: {
-          data?: Json;
+          data?: NonNullable<Json>;
           id?: string;
         };
         Relationships: [];
@@ -309,20 +401,70 @@ export type Database = {
           },
         ];
       };
+      knowledge_entries: {
+        Row: {
+          data: NonNullable<Json>;
+          effective_from: string | null;
+          effective_until: string | null;
+          ends_on: string | null;
+          id: string;
+          kind: string;
+          parent_id: string | null;
+          source_url: string;
+          starts_on: string | null;
+          title: string;
+          updated_at: string;
+        };
+        Insert: {
+          data: NonNullable<Json>;
+          effective_from?: string | null;
+          effective_until?: string | null;
+          ends_on?: string | null;
+          id: string;
+          kind?: never;
+          parent_id?: never;
+          source_url?: never;
+          starts_on?: string | null;
+          title?: never;
+          updated_at?: string;
+        };
+        Update: {
+          data?: NonNullable<Json>;
+          effective_from?: string | null;
+          effective_until?: string | null;
+          ends_on?: string | null;
+          id?: string;
+          kind?: never;
+          parent_id?: never;
+          source_url?: never;
+          starts_on?: string | null;
+          title?: never;
+          updated_at?: string;
+        };
+        Relationships: [
+          {
+            foreignKeyName: "knowledge_entries_parent_id_fkey";
+            columns: ["parent_id"];
+            isOneToOne: false;
+            referencedRelation: "knowledge_entries";
+            referencedColumns: ["id"];
+          },
+        ];
+      };
       manual_hours: {
         Row: {
-          data: Json;
+          data: NonNullable<Json>;
           family_id: string | null;
           id: string;
         };
         Insert: {
-          data: Json;
-          family_id?: string | null;
+          data: NonNullable<Json>;
+          family_id?: never;
           id: string;
         };
         Update: {
-          data?: Json;
-          family_id?: string | null;
+          data?: NonNullable<Json>;
+          family_id?: never;
           id?: string;
         };
         Relationships: [
@@ -337,25 +479,25 @@ export type Database = {
       };
       meets: {
         Row: {
-          data: Json;
+          data: NonNullable<Json>;
           host_team_id: string | null;
           id: string;
           team_id: string | null;
           venue_id: string | null;
         };
         Insert: {
-          data: Json;
-          host_team_id?: string | null;
+          data: NonNullable<Json>;
+          host_team_id?: never;
           id: string;
-          team_id?: string | null;
-          venue_id?: string | null;
+          team_id?: never;
+          venue_id?: never;
         };
         Update: {
-          data?: Json;
-          host_team_id?: string | null;
+          data?: NonNullable<Json>;
+          host_team_id?: never;
           id?: string;
-          team_id?: string | null;
-          venue_id?: string | null;
+          team_id?: never;
+          venue_id?: never;
         };
         Relationships: [
           {
@@ -383,22 +525,22 @@ export type Database = {
       };
       people: {
         Row: {
-          data: Json;
+          data: NonNullable<Json>;
           id: string;
           name: string | null;
           team_id: string | null;
         };
         Insert: {
-          data: Json;
+          data: NonNullable<Json>;
           id: string;
-          name?: string | null;
-          team_id?: string | null;
+          name?: never;
+          team_id?: never;
         };
         Update: {
-          data?: Json;
+          data?: NonNullable<Json>;
           id?: string;
-          name?: string | null;
-          team_id?: string | null;
+          name?: never;
+          team_id?: never;
         };
         Relationships: [
           {
@@ -412,19 +554,19 @@ export type Database = {
       };
       postings: {
         Row: {
-          data: Json;
+          data: NonNullable<Json>;
           id: string;
           meet_id: string | null;
         };
         Insert: {
-          data: Json;
+          data: NonNullable<Json>;
           id: string;
-          meet_id?: string | null;
+          meet_id?: never;
         };
         Update: {
-          data?: Json;
+          data?: NonNullable<Json>;
           id?: string;
-          meet_id?: string | null;
+          meet_id?: never;
         };
         Relationships: [
           {
@@ -438,30 +580,47 @@ export type Database = {
       };
       practice_sessions: {
         Row: {
-          data: Json;
+          data: NonNullable<Json>;
+          group_id: string | null;
+          group_name: string | null;
           id: string;
+          practice_date: string | null;
         };
         Insert: {
-          data: Json;
+          data: NonNullable<Json>;
+          group_id?: never;
+          group_name?: never;
           id: string;
+          practice_date?: never;
         };
         Update: {
-          data?: Json;
+          data?: NonNullable<Json>;
+          group_id?: never;
+          group_name?: never;
           id?: string;
+          practice_date?: never;
         };
-        Relationships: [];
+        Relationships: [
+          {
+            foreignKeyName: "practice_sessions_group_id_fkey";
+            columns: ["group_id"];
+            isOneToOne: false;
+            referencedRelation: "training_groups";
+            referencedColumns: ["id"];
+          },
+        ];
       };
       public_athletes: {
         Row: {
-          data: Json;
+          data: NonNullable<Json>;
           id: string;
         };
         Insert: {
-          data: Json;
+          data: NonNullable<Json>;
           id: string;
         };
         Update: {
-          data?: Json;
+          data?: NonNullable<Json>;
           id?: string;
         };
         Relationships: [
@@ -474,27 +633,63 @@ export type Database = {
           },
         ];
       };
+      public_swims: {
+        Row: {
+          athlete_id: string;
+          data: NonNullable<Json>;
+          id: string;
+          swim_date: string;
+        };
+        Insert: {
+          athlete_id: string;
+          data: NonNullable<Json>;
+          id: string;
+          swim_date: string;
+        };
+        Update: {
+          athlete_id?: string;
+          data?: NonNullable<Json>;
+          id?: string;
+          swim_date?: string;
+        };
+        Relationships: [
+          {
+            foreignKeyName: "public_swims_athlete_id_fkey";
+            columns: ["athlete_id"];
+            isOneToOne: false;
+            referencedRelation: "public_athletes";
+            referencedColumns: ["id"];
+          },
+          {
+            foreignKeyName: "public_swims_id_fkey";
+            columns: ["id"];
+            isOneToOne: true;
+            referencedRelation: "swims";
+            referencedColumns: ["id"];
+          },
+        ];
+      };
       registrations: {
         Row: {
           assignee_key: string | null;
-          data: Json;
+          data: NonNullable<Json>;
           family_id: string | null;
           id: string;
           posting_id: string | null;
         };
         Insert: {
-          assignee_key?: string | null;
-          data: Json;
-          family_id?: string | null;
+          assignee_key?: never;
+          data: NonNullable<Json>;
+          family_id?: never;
           id: string;
-          posting_id?: string | null;
+          posting_id?: never;
         };
         Update: {
-          assignee_key?: string | null;
-          data?: Json;
-          family_id?: string | null;
+          assignee_key?: never;
+          data?: NonNullable<Json>;
+          family_id?: never;
           id?: string;
-          posting_id?: string | null;
+          posting_id?: never;
         };
         Relationships: [
           {
@@ -553,49 +748,58 @@ export type Database = {
       };
       standards: {
         Row: {
-          data: Json;
+          data: NonNullable<Json>;
           id: string;
         };
         Insert: {
-          data: Json;
+          data: NonNullable<Json>;
           id: string;
         };
         Update: {
-          data?: Json;
+          data?: NonNullable<Json>;
           id?: string;
         };
         Relationships: [];
       };
       swims: {
         Row: {
-          athlete_id: string | null;
-          course: string | null;
-          data: Json;
-          event_code: string | null;
+          athlete_id: string;
+          course: string;
+          data: NonNullable<Json>;
+          event_code: string;
           id: string;
-          meet_id: string | null;
-          status: string | null;
+          is_official: boolean;
+          is_relay: boolean;
+          meet_id: string;
+          round: string;
+          status: string;
           time_ms: number | null;
         };
         Insert: {
-          athlete_id?: string | null;
-          course?: string | null;
-          data: Json;
-          event_code?: string | null;
+          athlete_id?: never;
+          course?: never;
+          data: NonNullable<Json>;
+          event_code?: never;
           id: string;
-          meet_id?: string | null;
-          status?: string | null;
-          time_ms?: number | null;
+          is_official?: never;
+          is_relay?: never;
+          meet_id?: never;
+          round?: never;
+          status?: never;
+          time_ms?: never;
         };
         Update: {
-          athlete_id?: string | null;
-          course?: string | null;
-          data?: Json;
-          event_code?: string | null;
+          athlete_id?: never;
+          course?: never;
+          data?: NonNullable<Json>;
+          event_code?: never;
           id?: string;
-          meet_id?: string | null;
-          status?: string | null;
-          time_ms?: number | null;
+          is_official?: never;
+          is_relay?: never;
+          meet_id?: never;
+          round?: never;
+          status?: never;
+          time_ms?: never;
         };
         Relationships: [
           {
@@ -616,19 +820,19 @@ export type Database = {
       };
       teams: {
         Row: {
-          data: Json;
+          data: NonNullable<Json>;
           id: string;
           name: string | null;
         };
         Insert: {
-          data: Json;
+          data: NonNullable<Json>;
           id: string;
-          name?: string | null;
+          name?: never;
         };
         Update: {
-          data?: Json;
+          data?: NonNullable<Json>;
           id?: string;
-          name?: string | null;
+          name?: never;
         };
         Relationships: [];
       };
@@ -649,19 +853,19 @@ export type Database = {
       };
       venues: {
         Row: {
-          data: Json;
+          data: NonNullable<Json>;
           id: string;
           team_id: string | null;
         };
         Insert: {
-          data: Json;
+          data: NonNullable<Json>;
           id: string;
-          team_id?: string | null;
+          team_id?: never;
         };
         Update: {
-          data?: Json;
+          data?: NonNullable<Json>;
           id?: string;
-          team_id?: string | null;
+          team_id?: never;
         };
         Relationships: [
           {
@@ -675,18 +879,53 @@ export type Database = {
       };
       work_descriptions: {
         Row: {
-          data: Json;
+          data: NonNullable<Json>;
           id: string;
         };
         Insert: {
-          data: Json;
+          data: NonNullable<Json>;
           id: string;
         };
         Update: {
-          data?: Json;
+          data?: NonNullable<Json>;
           id?: string;
         };
         Relationships: [];
+      };
+      workshare_members: {
+        Row: {
+          family_id: string;
+          group_name: string;
+          id: string;
+          name: string;
+          source_ids: NonNullable<Json>;
+          updated_at: string;
+        };
+        Insert: {
+          family_id: string;
+          group_name?: string;
+          id: string;
+          name: string;
+          source_ids?: NonNullable<Json>;
+          updated_at?: string;
+        };
+        Update: {
+          family_id?: string;
+          group_name?: string;
+          id?: string;
+          name?: string;
+          source_ids?: NonNullable<Json>;
+          updated_at?: string;
+        };
+        Relationships: [
+          {
+            foreignKeyName: "workshare_members_family_id_fkey";
+            columns: ["family_id"];
+            isOneToOne: false;
+            referencedRelation: "families";
+            referencedColumns: ["id"];
+          },
+        ];
       };
     };
     Views: {
@@ -708,6 +947,13 @@ export type Database = {
         Args: { reads: Json; writes: Json };
         Returns: undefined;
       };
+      export_records: {
+        Args: { after_path?: string };
+        Returns: {
+          data: Json;
+          path: string;
+        }[];
+      };
       finish_shift_reminder: {
         Args: {
           delivery_id?: string;
@@ -717,8 +963,8 @@ export type Database = {
         };
         Returns: undefined;
       };
-      is_staff: { Args: never; Returns: boolean };
-      projection_counts: { Args: never; Returns: Json };
+      is_staff: { Args: Record<PropertyKey, never>; Returns: boolean };
+      projection_counts: { Args: Record<PropertyKey, never>; Returns: Json };
       query_records: {
         Args: {
           after_id?: string;
@@ -731,6 +977,14 @@ export type Database = {
           data: Json;
           path: string;
         }[];
+      };
+      review_collection: {
+        Args: { batch_id: string; decision: string; note?: string };
+        Returns: undefined;
+      };
+      stage_collection: {
+        Args: { batch: Json; worker_token: string };
+        Returns: string;
       };
       times_page: {
         Args: {

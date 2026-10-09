@@ -9,7 +9,7 @@ describe('maintenance script write targeting', () => {
     ['--project', 'demo-cutter-coach', '--apply', '--confirm-project', 'different'],
     ['--project', 'demo-cutter-coach', '--key'],
   ])('fails before connecting when targeting is missing or ambiguous: %j', (...args) => {
-    const result = spawnSync(process.execPath, ['scripts/swim-resources/migrate-public-profiles.mjs', ...args], { encoding: 'utf8' });
+    const result = spawnSync(process.execPath, ['scripts/swim-resources/archive-dataset.mjs', ...args], { encoding: 'utf8' });
     expect(result.status).not.toBe(0);
     expect(result.stderr).toMatch(/Supply|confirm-project/);
     expect(result.stdout).toBe('');

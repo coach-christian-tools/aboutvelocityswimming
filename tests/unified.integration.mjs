@@ -299,7 +299,7 @@ await test("authorization uses verified server identity and explicit administrat
     { stdio: "pipe" },
   );
 });
-await test("canonical roster edits flow into linked families and inactive ranks", async () => {
+await test("Times roster edits preserve independent Workshare identities and update inactive ranks", async () => {
   const before = await record(staff, "athletes/test-swimmer-a");
   await collect("athletes/test-swimmer-a", {
     ...before,
@@ -308,8 +308,8 @@ await test("canonical roster edits flow into linked families and inactive ranks"
     status: "inactive",
   });
   const family = await record(familyA, "families/family-a");
-  assert.equal(family.children[0].name, "Avery Updated");
-  assert.equal(family.children[0].group, "Seniors");
+  assert.equal(family.children[0].name, "Avery Example");
+  assert.equal(family.children[0].group, "Juniors");
   const best = (await query(anon, "athletes/test-swimmer-a/bests"))[0].data;
   assert.equal(best.clubRankActiveRoster, null);
   await collect("athletes/test-swimmer-a", before);
@@ -406,4 +406,77 @@ await test("reminder queue claims once across workers and preserves delivery rec
     ),
     false,
   );
+});
+await test("collection is staging-only, isolated, deduplicated and atomically reviewed", async () => {
+  const token = "local-collector-" + crypto.randomUUID();
+  const tokenHash = (await import("node:crypto")).createHash("sha256").update(token).digest("hex");
+  execFileSync("docker", ["exec", "supabase_db_aboutvelocityswimming", "psql", "-U", "postgres", "-v", "ON_ERROR_STOP=1", "-c",
+    `insert into private.collection_workers(name,token_hash,divisions) values('Synthetic collector','${tokenHash}',array['times','workshare','knowledge']);`], { stdio: "pipe" });
+  const base = { division: "knowledge", scope: "Synthetic test", sourceUrl: "https://example.test/meet/" + crypto.randomUUID(), capturedAt: new Date().toISOString(), coverage: "partial", evidence: { text: "Synthetic meet evidence" } };
+  const suffix = Date.now();
+  const id = "test-knowledge-" + suffix;
+  const batch = { ...base, writes: [{ path: "knowledge_entries/" + id, after: { kind: "meet", title: "Synthetic meet", sourceUrl: base.sourceUrl, startsOn: "2026-10-01", endsOn: "2026-10-02" } }] };
+  const stage = (value, worker_token = token) => anon.rpc("stage_collection", { worker_token, batch: value });
+  assert.ok((await stage(batch, "wrong-token")).error);
+  const staged = await stage(batch); assert.ifError(staged.error);
+  assert.equal((await anon.from("knowledge_entries").select("id").eq("id", id)).data.length, 0);
+  assert.equal((await familyA.from("collection_batches").select("id")).data.length, 0);
+  assert.equal((await anon.from("collection_batches").select("id")).data?.length ?? 0, 0);
+  const duplicate = await stage(batch); assert.ifError(duplicate.error); assert.equal(duplicate.data, staged.data);
+  assert.ok((await familyA.rpc("review_collection", { batch_id: staged.data, decision: "approved", note: "" })).error);
+  assert.ifError((await staff.rpc("review_collection", { batch_id: staged.data, decision: "held", note: "Check source" })).error);
+  assert.equal((await anon.from("knowledge_entries").select("id").eq("id", id)).data.length, 0);
+  assert.ifError((await staff.rpc("review_collection", { batch_id: staged.data, decision: "approved", note: "Verified" })).error);
+  assert.equal((await anon.from("knowledge_entries").select("id").eq("id", id)).data.length, 1);
+  assert.ok((await staff.rpc("review_collection", { batch_id: staged.data, decision: "approved", note: "Again" })).error);
+  assert.ok((await stage({ ...batch, division: "workshare" })).error);
+  assert.ok((await stage({ ...batch, writes: [{ path: "knowledge_entries/" + id, after: null }] })).error);
+
+  const declined = await stage({ ...batch, writes: [{ ...batch.writes[0], path: "knowledge_entries/declined-" + suffix }] }); assert.ifError(declined.error);
+  assert.ifError((await staff.rpc("review_collection", { batch_id: declined.data, decision: "declined", note: "Wrong match" })).error);
+  const repeated = await stage({ ...batch, writes: [{ ...batch.writes[0], path: "knowledge_entries/declined-" + suffix }] });
+  assert.equal(repeated.data, declined.data);
+  assert.equal((await staff.from("collection_batches").select("status").eq("id", declined.data).single()).data.status, "declined");
+
+  const before = await record(staff, "teams/velocity-swimming");
+  const stale = await stage({ ...base, division: "times", writes: [
+    { path: "teams/stale-" + suffix, after: { name: "Must not be written" } },
+    { path: "teams/velocity-swimming", after: { ...before, name: "Collected name" } }
+  ] }); assert.ifError(stale.error);
+  await collect("teams/velocity-swimming", { ...before, name: "Edited since collection" });
+  const decision = await staff.rpc("review_collection", { batch_id: stale.data, decision: "approved", note: "" });
+  assert.equal(decision.error?.code, "40001");
+  assert.equal(await record(staff, "teams/stale-" + suffix), null);
+  await collect("teams/velocity-swimming", before);
+
+  const family = await record(staff, "families/family-a");
+  assert.ok((await stage({ ...base, division: "workshare", writes: [{ path: "families/family-a", after: { ...family, children: [] } }] })).error);
+  assert.ok((await stage({ ...base, division: "workshare", writes: [{ path: "families/family-a", after: { ...family, authorizedEmails: [] } }] })).error);
+  const members = await stage({ ...base, division: "workshare", writes: [{ path: "families/family-a", after: { ...family, accountName: "Reviewed household" } }] }); assert.ifError(members.error);
+  assert.ifError((await staff.rpc("review_collection", { batch_id: members.data, decision: "approved", note: "Verified roster" })).error);
+  assert.equal((await record(familyA, "families/family-a")).accountName, "Reviewed household");
+  await collect("families/family-a", family);
+  execFileSync("docker", ["exec", "supabase_db_aboutvelocityswimming", "psql", "-U", "postgres", "-c", `update private.collection_workers set revoked_at=now() where token_hash='${tokenHash}';`], { stdio: "pipe" });
+  assert.ok((await stage(batch)).error);
+});
+await test("Workshare-only children never become public athletes", async () => {
+  const before = await record(staff, "families/family-a");
+  const athletesBefore = await query(anon, "public_athletes");
+  await collect("families/family-a", { ...before, children: [...before.children, { name: "Private Child", group: "No Assignment" }] });
+  assert.equal((await record(familyA, "families/family-a")).children.length, 2);
+  assert.equal((await query(anon, "public_athletes")).length, athletesBefore.length);
+  const members = await familyB.from("workshare_members").select("id").eq("family_id", "family-a");
+  assert.deepEqual(members.data, []);
+  await collect("families/family-a", before);
+});
+await test("public race history never exposes private source fields", async () => {
+  const before = await record(staff, "swims/test-race-1");
+  await collect("swims/test-race-1", { ...before, dob: "2012-02-15", notes: "private", swimsId: "private-id" });
+  const publicRace = await anon.from("public_swims").select("*").eq("id", "test-race-1").single();
+  assert.ifError(publicRace.error);
+  assert.equal(publicRace.data.data.timeMs, 64000);
+  assert.equal(publicRace.data.data.dob, undefined);
+  assert.equal(publicRace.data.data.notes, undefined);
+  assert.equal(publicRace.data.data.swimsId, undefined);
+  await collect("swims/test-race-1", before);
 });

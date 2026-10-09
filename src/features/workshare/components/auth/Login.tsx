@@ -314,8 +314,8 @@ export function Login() {
             </button>
           </div>
 
-          {/* Admin Google Sign-In */}
-          <div className="mt-6 pt-6 border-t border-slate-100 text-center">
+          {/* Show OAuth only after the provider is configured in Supabase. */}
+          {process.env.NEXT_PUBLIC_GOOGLE_AUTH_ENABLED === "true" && <div className="mt-6 pt-6 border-t border-slate-100 text-center">
             <button
               type="button"
               onClick={handleGoogleAdminLogin}
@@ -342,7 +342,7 @@ export function Login() {
               </svg>
               <span>{googleLoading ? "Connecting to Google..." : "Sign in with Google"}</span>
             </button>
-          </div>
+          </div>}
         </Card>
         <p className="mt-4 text-center text-sm text-slate-500"><a href="/tools" className="hover:underline">← Back to Tools</a></p>
       </div>

@@ -38,6 +38,12 @@ describe('swim times and ledger identity', () => {
     expect(() => canonicalSwim({ ...swim, status: undefined })).toThrow('status');
     expect(() => canonicalSwim({ ...swim, meet: { ...swim.meet, date: '2026-02-31' } })).toThrow('meet name and date');
   });
+  it('keeps repeated swimoffs distinct by provider result ID', () => {
+    const results = ['185541666', '185541765', '185541761'].map(id => canonicalSwim({ ...swim, round: 'S', externalResult: { namespace: 'swimcloud', id } }));
+    expect(new Set(results.map(result => result.id)).size).toBe(3);
+    expect(canonicalSwim({ ...swim, externalResult: { namespace: 'swimcloud', id: '185541666' } }).id).toBe(results[0].id);
+    expect(results[0].teamId).toBeUndefined();
+  });
   it('preserves multiple meets/rounds and rejects inconsistent event specifications', () => {
     const first = canonicalSwim(swim);
     expect(canonicalSwim({ ...swim, meet: { ...swim.meet, id: 'meet_two' } }).id).not.toBe(first.id);

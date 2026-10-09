@@ -63,7 +63,7 @@ export interface Athlete {
 
 export interface Swim {
   teamId?: string; // Missing legacy ownership resolves to Velocity Swimming.
-  id: string;                         // Deterministic: `${athleteId}_${eventCode}_${meetId}_${round}`
+  id: string;                         // Prefer stable externalResult identity; preserve existing IDs.
   athleteId: string;                  // Foreign key to `athletes`
   isOfficial?: boolean; // False for exhibition or unofficial times.
   externalResult?: { namespace: string; id: string }; // Stable source race identity, including repeated swim-offs.
