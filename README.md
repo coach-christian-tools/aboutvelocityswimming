@@ -15,7 +15,11 @@ Run `npm run verify` for lint, types, unit/database tests, and production build.
 
 Current-machine collection uses the ignored, mode-0600 `.env.collection.local` (project URL, publishable key, `VELOCITY_COLLECTOR_TOKEN`). Run `npm run collection:stage -- backups/<batch>.json`. Each batch has `division`, `scope`, `sourceUrl`, `capturedAt`, `coverage`, `evidence`, and 1–100 `writes` (`path` and proposed `after` object), limited to 2 MB. The server captures current values for review. Repeated identical proposals retain their earlier decision. Missing records in a partial scrape are never treated as deletions. Revoke a worker through `private.collection_workers.revoked_at`.
 
-No recurring crawler or email reminder schedule is enabled by this setup. Collection scope is requested manually; authenticated source browsing runs on this machine. Mac Mini operation is deferred. Configure Supabase custom SMTP with Resend and the code templates in `supabase/templates/` before opening family email sign-in. Legacy Firebase data requires a verified import; creating the hosted schema does not transfer it automatically.
+No recurring crawler or email reminder schedule is enabled by this setup. Collection scope is requested manually; authenticated source browsing runs on this machine. Mac Mini operation is deferred. Legacy Firebase data requires a verified import; creating the hosted schema does not transfer it automatically.
+
+Production deployment `74bb260` passed Vercel and GitHub CI on October 9, 2026. The hosted tools, public empty states, and staff sign-in gate were checked. One Times pilot batch is pending administrator review; it has not been published.
+
+Email setup: Resend domain `mail.aboutvelocityswimming.com` (ID `8f907898-471f-4482-b9da-2ee1d2d9b807`) has its DKIM TXT and both sending CNAME records installed in Squarespace and confirmed through public DNS. Resend verification is pending. After verification, create a sending-only key scoped to that domain and configure Supabase SMTP (`smtp.resend.com`, port 465, username `resend`, sender `Velocity Swimming <noreply@mail.aboutvelocityswimming.com>`). Use `supabase/templates/code.html` for confirmation and magic-link templates, confirm the email OTP length matches the six-digit UI, and test delivery and administrator sign-in before opening family access. Never commit the SMTP password.
 
 ---
 
