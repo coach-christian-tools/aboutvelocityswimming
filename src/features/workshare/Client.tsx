@@ -1,6 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import type { WorkshareView } from "./App";
 import { Component, type ReactNode } from "react";
 import { hasWorkshareConfiguration } from "./lib/config";
 
@@ -20,7 +21,7 @@ class WorkshareBoundary extends Component<{ children: ReactNode }, { failed: boo
   static getDerivedStateFromError() { return { failed: true }; }
   render() { return this.state.failed ? <Unavailable /> : this.props.children; }
 }
-export default function WorkshareClient() {
+export default function WorkshareClient({view}:{view:WorkshareView}) {
   if (!hasWorkshareConfiguration) return <Unavailable />;
-  return <WorkshareBoundary><App /></WorkshareBoundary>;
+  return <WorkshareBoundary><App view={view} /></WorkshareBoundary>;
 }

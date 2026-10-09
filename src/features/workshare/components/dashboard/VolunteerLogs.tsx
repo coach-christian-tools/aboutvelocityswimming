@@ -30,8 +30,8 @@ export function VolunteerLogs() {
 
   if (!familyId) {
     return (
-      <div className="p-12 text-center text-slate-500 font-medium bg-white rounded-2xl border border-dashed border-slate-300">
-        <h3 className="text-xl font-bold text-[#13415D] mb-2">Volunteer Logs</h3>
+      <div className="p-12 text-center text-slate-500 font-medium bg-surface rounded-2xl border border-dashed border-slate-300">
+        <h3 className="text-xl font-bold text-text-primary mb-2">Volunteer Logs</h3>
         <p className="text-sm">You are viewing the client side, but your account is not linked to a specific family.</p>
       </div>
     )
@@ -50,11 +50,11 @@ export function VolunteerLogs() {
   return (
     <div className="space-y-6 max-w-4xl mx-auto">
       <div>
-        <h2 className="text-2xl sm:text-3xl font-extrabold text-[#13415D] tracking-tight">Volunteer Logs</h2>
+        <h2 className="text-2xl sm:text-3xl font-extrabold text-text-primary tracking-tight">Volunteer Logs</h2>
         <p className="text-sm text-slate-500 mt-1">Review your family&apos;s completed shifts and hour adjustments.</p>
       </div>
 
-      <Card className="p-6 bg-white border border-slate-200">
+      <Card className="p-6 bg-surface border border-slate-200">
         <div className="flex gap-3 mb-6">
           <div className="relative flex-1">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
@@ -63,7 +63,7 @@ export function VolunteerLogs() {
               placeholder="Search logs..."
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}
-              className="w-full pl-9 pr-3 py-2 text-sm bg-white border border-slate-200 rounded-lg focus:outline-none focus:border-[#0A856C] focus:ring-1 focus:ring-[#0A856C]"
+              className="w-full pl-9 pr-3 py-2 text-sm bg-surface border border-slate-200 rounded-lg focus:outline-none focus:border-[#0A856C] focus:ring-1 focus:ring-[#0A856C]"
             />
           </div>
           <div className="relative">
@@ -71,7 +71,7 @@ export function VolunteerLogs() {
             <select
               value={typeFilter}
               onChange={e => setTypeFilter(e.target.value as typeof typeFilter)}
-              className="pl-9 pr-8 py-2 text-sm bg-white border border-slate-200 rounded-lg focus:outline-none focus:border-[#0A856C] focus:ring-1 focus:ring-[#0A856C] appearance-none min-w-[140px]"
+              className="pl-9 pr-8 py-2 text-sm bg-surface border border-slate-200 rounded-lg focus:outline-none focus:border-[#0A856C] focus:ring-1 focus:ring-[#0A856C] appearance-none min-w-[140px]"
             >
               <option value="All">All Types</option>
               <option value="General">General</option>
@@ -91,12 +91,12 @@ export function VolunteerLogs() {
             </div>
           ) : (
             combinedLogs.map(log => (
-              <div key={log.id} className="bg-slate-50 p-4 rounded-xl border border-slate-200 shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div key={log.id} className="bg-bg p-4 rounded-xl border border-slate-200 shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div>
                   <div className="flex items-center gap-2 mb-1">
-                    <h4 className="font-bold text-[#13415D] text-base">{log.title}</h4>
+                    <h4 className="font-bold text-text-primary text-base">{log.title}</h4>
                     <span className={`px-2 py-0.5 text-[10px] rounded-full font-bold uppercase tracking-wide ${
-                      log.type === "General" ? "bg-[#0A856C]/10 text-[#0A856C]" : "bg-[#13415D]/10 text-[#13415D]"
+                      log.type === "General" ? "bg-[#0A856C]/10 text-accent" : "bg-[#13415D]/10 text-text-primary"
                     }`}>
                       {log.type}
                     </span>
@@ -122,7 +122,7 @@ export function VolunteerLogs() {
                   </div>
                 </div>
                 <div className="flex items-center justify-between sm:flex-col sm:items-end gap-1">
-                  <div className="text-lg font-bold text-[#0A856C]">+{log.hours} hrs</div>
+                  <div className="text-lg font-bold text-accent">+{log.hours} hrs</div>
                   <span className={`px-2 py-0.5 rounded-full text-[11px] font-semibold ${
                     log.status === "Complete" ? "bg-emerald-100 text-emerald-700" :
                     log.status === "Incomplete" ? "bg-red-100 text-red-700" :

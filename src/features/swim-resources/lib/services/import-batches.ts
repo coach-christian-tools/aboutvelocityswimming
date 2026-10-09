@@ -1,7 +1,7 @@
 import { assertFreshTarget, verifyRowEvidence, importedProvenance, prepareOrigins, writeWithOrigins } from './evidence';
 import { factFields, evidenceKey, initialProvenance, hasAttentionReasons, type Provenance } from '@/features/swim-resources/lib/domain/evidence';
 import { ENTITY_COLLECTIONS, VELOCITY_TEAM_ID, canonicalEntity, entityReferences, type EntityKind } from '@/features/swim-resources/lib/domain/entities';
-import { auth, db } from '@/features/swim-resources/lib/firebase';
+import { auth, db } from '@/features/swim-resources/lib/backend';
 import { batchDigest, observationDigest, changedFields, IMPORT_COLLECTIONS, matchImportAthlete, mergeImportPatch, parseImportBatch, stableJson, validateImportData } from '@/features/swim-resources/lib/domain/import-batch';
 import type { ImportBatch, ImportPreviewRow, ImportRow, JsonRecord } from '@/features/swim-resources/lib/domain/import-batch';
 import { publicAthlete, type FirestoreAthlete } from '@/features/swim-resources/lib/domain/athlete';
@@ -11,7 +11,7 @@ import { canonicalAthlete } from './athletes';
 import { canonicalMeet } from './meet-tools';
 import { refreshSwimProjections } from './swim-projections';
 import type { Athlete, Meet, Swim } from '@/features/swim-resources/types/schema';
-import { collection, doc, getDoc, getDocs, query, where, runTransaction } from 'firebase/firestore';
+import { collection, doc, getDoc, getDocs, query, where, runTransaction } from '@/lib/data';
 
 export interface ImportPreview { batch: ImportBatch; digest: string; rows: ImportPreviewRow[]; reviewedIssues: string[]; reviewHistoryAvailable: boolean }
 export interface ImportReceipt {
@@ -196,7 +196,7 @@ export async function acknowledgeImportItem(preview: ImportPreview, id: string):
 
 function coachId(): string {
   const user = auth.currentUser;
-  if (!user?.emailVerified || !user.email?.endsWith('@velocity-swimming.com')) throw new Error('Sign in with a verified Velocity coach account.');
+  if (!user?.staff) throw new Error('Sign in with a verified Velocity coach account.');
   return user.uid;
 }
 export async function retryImportProjections(batchId: string): Promise<void> {

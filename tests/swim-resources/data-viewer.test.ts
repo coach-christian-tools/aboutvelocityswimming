@@ -1,6 +1,4 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { Bytes, GeoPoint, Timestamp, doc, getFirestore, terminate } from 'firebase/firestore';
-import { initializeApp, deleteApp } from 'firebase/app';
 import { VIEWER_COLLECTIONS, fieldValue, isViewerCoach, legacyViewerHref, parseViewerFilter, resolveViewerPath, viewerHref } from '@/features/swim-resources/lib/domain/data-viewer';
 import { normalizeFirestoreValue, summaryValue } from '@/features/swim-resources/lib/domain/firestore-values';
 
@@ -8,15 +6,14 @@ const mock = vi.hoisted(() => ({
   user: { email: 'coach@velocity-swimming.com', emailVerified: true } as { email: string | null; emailVerified: boolean } | null,
   documents: new Map<string, Record<string, unknown>>(), reads: [] as { path: string; constraints: { kind: string; value?: unknown; field?: string }[] }[], writes: 0,
 }));
-vi.mock('@/features/swim-resources/lib/firebase', () => ({ db: {}, auth: { get currentUser() { return mock.user; } } }));
-vi.mock('firebase/firestore', async importOriginal => {
-  const original = await importOriginal<typeof import('firebase/firestore')>();
+vi.mock('@/features/swim-resources/lib/backend', () => ({ db: {}, auth: { get currentUser() { return mock.user; } } }));
+vi.mock('@/lib/data', async importOriginal => {
+  const original = await importOriginal<typeof import('@/lib/data')>();
   const reference = (path: string) => ({ path, parent: { path: path.split('/').slice(0, -1).join('/') } });
   const snapshot = (path: string) => ({ id: path.split('/').at(-1)!, ref: reference(path), data: () => mock.documents.get(path), exists: () => mock.documents.has(path) });
   return { ...original,
     collection: (_db: unknown, path: string) => reference(path),
-    // Keep real doc() for the SDK-value serialization test.
-    doc: (database: unknown, path: string) => database && typeof database === 'object' && 'type' in database ? original.doc(database as ReturnType<typeof original.getFirestore>, path) : reference(path),
+    doc: (_database:unknown,path:string)=>reference(path),
     where: (field: string, _operator: string, value: unknown) => ({ kind: 'where', field, value }),
     limit: (value: number) => ({ kind: 'limit', value }),
     startAfter: (value: { ref: { path: string } }) => ({ kind: 'cursor', value: value.ref.path }),
@@ -119,17 +116,9 @@ describe('filters and legacy links', () => {
     expect(viewerHref('athletes/a#1/bests')).toBe('/tools/swim-resources/admin/data/athletes/a%231/bests');
   });
 });
-describe('Firestore value rendering', () => {
-  it('preserves nested values, timestamp precision, coordinates, bytes and safe references', async () => {
-    const app = initializeApp({ projectId: 'demo-viewer-values', apiKey: 'synthetic' }, 'viewer-values');
-    const database = getFirestore(app);
-    try {
-      const result = normalizeFirestoreValue({ date: new Timestamp(1, 123456789), point: new GeoPoint(47, -120), ref: doc(database, 'athletes/a1'), bytes: Bytes.fromUint8Array(new Uint8Array([1, 2])), nested: [null, false, { text: '<script>literal</script>' }], value: NaN });
-      expect(result).toMatchObject({ date: { _type: 'timestamp', seconds: 1, nanoseconds: 123456789 }, point: { latitude: 47, longitude: -120 }, ref: { _type: 'reference', path: 'athletes/a1' }, bytes: { base64: 'AQI=' }, nested: [null, false, { text: '<script>literal</script>' }], value: 'NaN' });
-      expect(JSON.stringify(result)).not.toContain('apiKey');
-      expect(summaryValue(new GeoPoint(47, -120))).toBe('47, -120');
-      expect(summaryValue(undefined)).toBe('—');
-      expect(summaryValue([1, 2])).toBe('[2 items]');
-    } finally { await terminate(database); await deleteApp(app); }
-  });
+describe('JSON value rendering',()=>{
+ it('preserves dates, nested literal text and safe numeric output',()=>{
+  expect(normalizeFirestoreValue({date:new Date('2026-10-01T00:00:00Z'),nested:[null,false,{text:'<script>literal</script>'}],value:NaN})).toEqual({date:'2026-10-01T00:00:00.000Z',nested:[null,false,{text:'<script>literal</script>'}],value:'NaN'});
+  expect(summaryValue(undefined)).toBe('—');
+ });
 });

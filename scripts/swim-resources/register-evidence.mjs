@@ -7,7 +7,7 @@ const args = process.argv.slice(2), option = key => args.includes(key) ? args[ar
 if (args.includes('--help')) { console.log('register-evidence --project <id> --database velocity-v2 --config backups/... [--apply --confirm-project <id> --confirm-database velocity-v2]'); process.exit(0); }
 const context = adminDatabase(); if (context.database !== 'velocity-v2') throw new Error('Only fresh sources can be registered.');
 const configuration = JSON.parse(await readFile(privatePath(option('--config')), 'utf8'));
-if (configuration.target?.project !== context.project || configuration.target.database !== context.database || !Array.isArray(configuration.sources) || !Array.isArray(configuration.bindings) || configuration.sources.length + configuration.bindings.length > 100) throw new Error('Invalid source configuration target or size.');
+if (configuration.target?.provider !== 'supabase' || configuration.target?.project !== context.project || configuration.target.database !== context.database || !Array.isArray(configuration.sources) || !Array.isArray(configuration.bindings) || configuration.sources.length + configuration.bindings.length > 100) throw new Error('Invalid source configuration target or size.');
 if (new Set(configuration.sources.map(s => s.id)).size !== configuration.sources.length || new Set(configuration.bindings.map(b => b.id)).size !== configuration.bindings.length) throw new Error('Duplicate configuration IDs.');
 configuration.sources = configuration.sources.map(source => ({ ...source, intervalDays: source.intervalDays ?? 30 }));
 configuration.bindings = configuration.bindings.map(binding => ({ ...binding, priority: binding.priority ?? null }));

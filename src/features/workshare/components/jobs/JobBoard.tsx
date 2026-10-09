@@ -1,9 +1,11 @@
+import {Dialog} from "@/components/shared/Dialog";
+import {teamWallTime, teamDate, formatTeamDate} from "@/lib/dates"
 import { createGuestLink, registerForShift } from "../../lib/invitations"
 import { errorMessage } from "../../lib/errors"
 import { preservePostingCredit } from "../../lib/postingCredit"
 import { useEffect, useState } from "react"
-import { collection, onSnapshot, addDoc, doc, updateDoc, Timestamp } from "firebase/firestore"
-import { db } from "../../lib/firebase"
+import { collection, onSnapshot, addDoc, doc, updateDoc, Instant } from "@/lib/data"
+import { db } from "../../lib/backend"
 import type { Posting } from "../../types"
 import { useAuth } from "../../contexts/auth"
 import { Button } from "../ui/Button"
@@ -56,9 +58,9 @@ export function JobBoard() {
       setEditingJob(job)
       setTitle(job.title)
       setType(job.type)
-      setDate(job.date.toDate().toISOString().split('T')[0])
-      setStartTime(job.startTime ? job.startTime.toDate().toTimeString().slice(0,5) : "")
-      setEndTime(job.endTime ? job.endTime.toDate().toTimeString().slice(0,5) : "")
+      setDate(teamDate(job.date.toDate()))
+      setStartTime(job.startTime ? formatTeamDate(job.startTime.toDate(), {hour:'2-digit',minute:'2-digit',hourCycle:'h23'}) : "")
+      setEndTime(job.endTime ? formatTeamDate(job.endTime.toDate(), {hour:'2-digit',minute:'2-digit',hourCycle:'h23'}) : "")
       setDescription(job.description || "")
       setMinPos(job.positions.min)
       setDesiredPos(job.positions.desired)
@@ -83,32 +85,16 @@ export function JobBoard() {
   const saveJob = async (e: React.FormEvent) => {
     e.preventDefault()
     
-    const dateObj = new Date(date)
-    dateObj.setMinutes(dateObj.getMinutes() + dateObj.getTimezoneOffset()) 
-    const firestoreDate = Timestamp.fromDate(dateObj)
-    
-    let firestoreStart = null
-    if (startTime) {
-      const [h, m] = startTime.split(':')
-      const d = new Date(dateObj)
-      d.setHours(parseInt(h), parseInt(m))
-      firestoreStart = Timestamp.fromDate(d)
-    }
-
-    let firestoreEnd = null
-    if (endTime) {
-      const [h, m] = endTime.split(':')
-      const d = new Date(dateObj)
-      d.setHours(parseInt(h), parseInt(m))
-      firestoreEnd = Timestamp.fromDate(d)
-    }
+    const shiftDate = Instant.fromDate(teamWallTime(date))
+    const shiftStart = startTime ? Instant.fromDate(teamWallTime(date, startTime)) : null
+    const shiftEnd = endTime ? Instant.fromDate(teamWallTime(date, endTime)) : null
 
     const jobData = {
       title,
       type,
-      date: firestoreDate,
-      startTime: firestoreStart,
-      endTime: firestoreEnd,
+      date: shiftDate,
+      startTime: shiftStart,
+      endTime: shiftEnd,
       description,
       positions: { min: minPos, desired: desiredPos, max: maxPos },
       pointOfContact: poc,
@@ -174,7 +160,7 @@ export function JobBoard() {
       {/* Header & Actions */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#13415D] tracking-tight">Workshare Shifts</h2>
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-text-primary tracking-tight">Workshare Shifts</h2>
           <p className="text-sm text-slate-500 mt-1">Claim shifts for your family or share guest proxy links.</p>
         </div>
         {effectiveIsAdmin && (
@@ -200,7 +186,7 @@ export function JobBoard() {
             className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all whitespace-nowrap cursor-pointer ${
               filterType === t
                 ? "bg-[#0A856C] text-white shadow-xs"
-                : "bg-white text-[#13415D] border border-slate-200 hover:bg-slate-50"
+                : "bg-surface text-text-primary border border-slate-200 hover:bg-bg"
             }`}
           >
             {t === "All" ? "All Shifts" : `${t} Pool`}
@@ -211,7 +197,7 @@ export function JobBoard() {
       {/* Grid of Job Postings */}
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {filteredJobs.map(job => (
-          <Card key={job.id} className="flex flex-col relative overflow-hidden bg-white border border-slate-200 p-5 hover:border-slate-300 transition-all">
+          <Card key={job.id} className="flex flex-col relative overflow-hidden bg-surface border border-slate-200 p-5 hover:border-slate-300 transition-all">
             <div 
               className={`absolute top-0 left-0 bottom-0 w-1.5 ${
                 job.type === 'General' ? 'bg-[#0A856C]' : 'bg-[#13415D]'
@@ -220,11 +206,11 @@ export function JobBoard() {
             
             <div className="pl-2 flex-1 flex flex-col">
               <div className="flex justify-between items-start gap-2 mb-2">
-                <h3 className="font-bold text-base text-[#13415D] leading-tight">{job.title}</h3>
+                <h3 className="font-bold text-base text-text-primary leading-tight">{job.title}</h3>
                 <span className={`text-[11px] font-bold px-2 py-0.5 rounded-md whitespace-nowrap ${
                   job.type === 'General' 
-                    ? 'bg-[#0A856C]/10 text-[#0A856C]' 
-                    : 'bg-[#13415D]/10 text-[#13415D]'
+                    ? 'bg-[#0A856C]/10 text-accent' 
+                    : 'bg-[#13415D]/10 text-text-primary'
                 }`}>
                   {job.type}
                 </span>
@@ -287,7 +273,7 @@ export function JobBoard() {
           </Card>
         ))}
         {filteredJobs.length === 0 && (
-          <div className="col-span-full py-12 px-4 text-center bg-white rounded-2xl border border-dashed border-slate-300">
+          <div className="col-span-full py-12 px-4 text-center bg-surface rounded-2xl border border-dashed border-slate-300">
             <p className="text-sm font-semibold text-slate-500">No shifts found for this filter.</p>
           </div>
         )}
@@ -295,21 +281,21 @@ export function JobBoard() {
 
       {/* Family Declare Modal */}
       {isDeclareOpen && selectedJob && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs">
-          <Card className="w-full max-w-sm bg-white shadow-xl relative z-10 border border-slate-200 p-6">
+        <Dialog onClose={() => setIsDeclareOpen(false)} className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs">
+          <Card className="w-full max-w-sm bg-surface shadow-xl relative z-10 border border-slate-200 p-6">
             <div className="flex justify-between items-center mb-4">
-              <h3 className="text-lg font-bold text-[#13415D]">Declare for Shift</h3>
-              <button onClick={() => setIsDeclareOpen(false)} className="p-1 text-slate-400 hover:text-slate-600 rounded-full transition-colors"><X className="w-5 h-5"/></button>
+              <h3 className="text-lg font-bold text-text-primary">Declare for Shift</h3>
+              <button aria-label="Close dialog" onClick={() => setIsDeclareOpen(false)} className="p-1 text-slate-400 hover:text-slate-600 rounded-full transition-colors"><X className="w-5 h-5"/></button>
             </div>
             <form onSubmit={handleDeclare} className="space-y-4">
               {actionError && <p role="alert" className="text-sm text-red-600">{actionError}</p>}
-              <div className="p-3 bg-slate-50 rounded-xl border border-slate-100">
+              <div className="p-3 bg-bg rounded-xl border border-slate-100">
                 <p className="text-xs text-slate-500">Selected shift:</p>
-                <p className="text-sm font-bold text-[#13415D]">{selectedJob.title}</p>
+                <p className="text-sm font-bold text-text-primary">{selectedJob.title}</p>
                 <p className="text-xs text-slate-600 mt-1">{selectedJob.date.toDate().toLocaleDateString()}</p>
               </div>
               <div>
-                <label htmlFor="shift-assignee" className="block text-xs font-semibold text-[#13415D] mb-1">Assignee Full Name</label>
+                <label htmlFor="shift-assignee" className="block text-xs font-semibold text-text-primary mb-1">Assignee Full Name</label>
                 <Input id="shift-assignee" required maxLength={161} value={assigneeName} onChange={e => setAssigneeName(e.target.value)} placeholder="e.g. John Doe" />
               </div>
               <div className="pt-2 flex justify-end gap-2">
@@ -318,16 +304,16 @@ export function JobBoard() {
               </div>
             </form>
           </Card>
-        </div>
+        </Dialog>
       )}
 
       {/* Admin Modal */}
       {effectiveIsAdmin && isModalOpen && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-4 bg-slate-900/60 backdrop-blur-xs overflow-y-auto">
-          <Card className="w-full max-w-lg max-h-[calc(100dvh-2rem)] sm:max-h-[90vh] flex flex-col bg-white shadow-xl relative z-10 border border-slate-200 p-5 sm:p-6 overflow-hidden m-auto">
+        <Dialog onClose={() => setIsModalOpen(false)} className="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-4 bg-slate-900/60 backdrop-blur-xs overflow-y-auto">
+          <Card className="w-full max-w-lg max-h-[calc(100dvh-2rem)] sm:max-h-[90vh] flex flex-col bg-surface shadow-xl relative z-10 border border-slate-200 p-5 sm:p-6 overflow-hidden m-auto">
             <div className="flex justify-between items-center mb-4 pb-3 border-b border-slate-100 shrink-0">
-              <h3 className="text-xl font-bold text-[#13415D]">{editingJob ? "Edit Shift" : "Create New Shift"}</h3>
-              <button
+              <h3 className="text-xl font-bold text-text-primary">{editingJob ? "Edit Shift" : "Create New Shift"}</h3>
+              <button aria-label="Close dialog"
                 type="button"
                 onClick={() => setIsModalOpen(false)}
                 className="p-1 text-slate-400 hover:text-slate-600 rounded-full transition-colors cursor-pointer"
@@ -338,14 +324,14 @@ export function JobBoard() {
             <form onSubmit={saveJob} className="flex flex-col flex-1 min-h-0">
               <div className="space-y-4 overflow-y-auto pr-1 sm:pr-2 flex-1 min-h-0">
                 <div>
-                  <label className="block text-xs font-semibold text-[#13415D] mb-1">Shift Title</label>
+                  <label className="block text-xs font-semibold text-text-primary mb-1">Shift Title</label>
                   <Input required value={title} onChange={e => setTitle(e.target.value)} placeholder="e.g. Snack Bar Setup" />
                 </div>
                 <div>
-                  <label className="block text-xs font-semibold text-[#13415D] mb-1">Shift Category</label>
+                  <label className="block text-xs font-semibold text-text-primary mb-1">Shift Category</label>
                   <div className="relative">
                     <select 
-                      className="flex h-11 w-full appearance-none rounded-lg border border-slate-300 bg-white pl-3.5 pr-10 py-2 text-sm text-[#13415D] focus-visible:outline-none focus-visible:border-[#0A856C] focus-visible:ring-2 focus-visible:ring-[#0A856C]/20 cursor-pointer"
+                      className="flex h-11 w-full appearance-none rounded-lg border border-slate-300 bg-surface pl-3.5 pr-10 py-2 text-sm text-text-primary focus-visible:outline-none focus-visible:border-[#0A856C] focus-visible:ring-2 focus-visible:ring-[#0A856C]/20 cursor-pointer"
                       value={type}
                       onChange={e => setType(e.target.value as Posting["type"])}
                     >
@@ -356,44 +342,44 @@ export function JobBoard() {
                   </div>
                 </div>
                 <div>
-                  <label className="block text-xs font-semibold text-[#13415D] mb-1">Date</label>
+                  <label className="block text-xs font-semibold text-text-primary mb-1">Date</label>
                   <Input type="date" required value={date} onChange={e => setDate(e.target.value)} />
                 </div>
                 <div className="grid grid-cols-2 gap-3">
                   <div>
-                    <label className="block text-xs font-semibold text-[#13415D] mb-1">Start Time</label>
+                    <label className="block text-xs font-semibold text-text-primary mb-1">Start Time</label>
                     <Input type="time" value={startTime} onChange={e => setStartTime(e.target.value)} />
                   </div>
                   <div>
-                    <label className="block text-xs font-semibold text-[#13415D] mb-1">End Time</label>
+                    <label className="block text-xs font-semibold text-text-primary mb-1">End Time</label>
                     <Input type="time" value={endTime} onChange={e => setEndTime(e.target.value)} />
                   </div>
                 </div>
                 <div className="grid grid-cols-3 gap-3">
                   <div>
-                    <label className="block text-xs font-semibold text-[#13415D] mb-1">Min Spots</label>
+                    <label className="block text-xs font-semibold text-text-primary mb-1">Min Spots</label>
                     <Input type="number" min={1} required value={minPos} onChange={e => setMinPos(Number(e.target.value))} />
                   </div>
                   <div>
-                    <label className="block text-xs font-semibold text-[#13415D] mb-1">Desired</label>
+                    <label className="block text-xs font-semibold text-text-primary mb-1">Desired</label>
                     <Input type="number" min={1} required value={desiredPos} onChange={e => setDesiredPos(Number(e.target.value))} />
                   </div>
                   <div>
-                    <label className="block text-xs font-semibold text-[#13415D] mb-1">Max Spots</label>
+                    <label className="block text-xs font-semibold text-text-primary mb-1">Max Spots</label>
                     <Input type="number" min={1} required value={maxPos} onChange={e => setMaxPos(Number(e.target.value))} />
                   </div>
                 </div>
                 <div>
-                  <label className="block text-xs font-semibold text-[#13415D] mb-1">Description</label>
+                  <label className="block text-xs font-semibold text-text-primary mb-1">Description</label>
                   <textarea 
-                    className="flex min-h-[70px] w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-[#13415D] focus-visible:outline-none focus-visible:border-[#0A856C] focus-visible:ring-2 focus-visible:ring-[#0A856C]/20"
+                    className="flex min-h-[70px] w-full rounded-lg border border-slate-300 bg-surface px-3 py-2 text-sm text-text-primary focus-visible:outline-none focus-visible:border-[#0A856C] focus-visible:ring-2 focus-visible:ring-[#0A856C]/20"
                     value={description}
                     onChange={e => setDescription(e.target.value)} 
                     placeholder="Details about responsibilities and location..."
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-semibold text-[#13415D] mb-1">Point of Contact / Lead</label>
+                  <label className="block text-xs font-semibold text-text-primary mb-1">Point of Contact / Lead</label>
                   <Input value={poc} onChange={e => setPoc(e.target.value)} placeholder="e.g. coach@example.com" />
                 </div>
               </div>
@@ -403,7 +389,7 @@ export function JobBoard() {
               </div>
             </form>
           </Card>
-        </div>
+        </Dialog>
       )}
     </div>
   )

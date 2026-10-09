@@ -4,7 +4,8 @@ import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import "./Header.css";
+import styles from "./Header.module.css";
+import { scopedClasses } from "@/lib/styles";
 
 const sections = [
   { href: "/schedule", label: "Schedule" },
@@ -79,7 +80,7 @@ function Navigation({ pathname }: { pathname: string }) {
     <>
       <header
         ref={headerRef}
-        className={`site-header${overlay ? " site-header-overlay" : ""}`}
+        className={scopedClasses(styles, `site-header${overlay ? " site-header-overlay" : ""}`)}
         onKeyDown={(event) => {
           if (event.key !== "Escape") return;
           if (aboutOpen) {
@@ -101,15 +102,15 @@ function Navigation({ pathname }: { pathname: string }) {
           if (!event.currentTarget.contains(event.relatedTarget)) closeMenus();
         }}
       >
-        <div className="site-header-inner">
-          <Link href="/" className="site-logo" aria-label="Velocity Swimming home" onClick={closeMenus}>
-            <Image className="site-logo-contrast" src="/assets/logo-variations/contrast/Long%20Contrast.svg" width={1822} height={400} alt="" loading="eager" />
-            <Image className="site-logo-white" src="/assets/logo-variations/white/Long%20White.svg" width={1822} height={400} alt="" loading="eager" />
+        <div className={scopedClasses(styles, 'site-header-inner')}>
+          <Link href="/" className={scopedClasses(styles, 'site-logo')} aria-label="Velocity Swimming home" onClick={closeMenus}>
+            <Image className={scopedClasses(styles, 'site-logo-contrast')} src="/assets/logo-variations/contrast/Long%20Contrast.svg" width={1822} height={400} alt="" loading="eager" />
+            <Image className={scopedClasses(styles, 'site-logo-white')} src="/assets/logo-variations/white/Long%20White.svg" width={1822} height={400} alt="" loading="eager" />
           </Link>
 
           <button
             ref={mobileToggle}
-            className="site-menu-toggle"
+            className={scopedClasses(styles, 'site-menu-toggle')}
             type="button"
             aria-expanded={mobileOpen}
             aria-controls="site-navigation"
@@ -122,9 +123,9 @@ function Navigation({ pathname }: { pathname: string }) {
             </svg>
           </button>
 
-          <nav id="site-navigation" aria-label="Main navigation" className={`site-navigation${mobileOpen ? " is-open" : ""}`}>
-            <div className="site-nav-links">
-              <div className="site-about"
+          <nav id="site-navigation" aria-label="Main navigation" className={scopedClasses(styles, `site-navigation${mobileOpen ? " is-open" : ""}`)}>
+            <div className={scopedClasses(styles, 'site-nav-links')}>
+              <div className={scopedClasses(styles, 'site-about')}
                 onPointerEnter={(event) => {
                   if (event.pointerType === "mouse" && window.matchMedia("(min-width: 961px)").matches) setOpenDropdown("about");
                 }}
@@ -134,11 +135,11 @@ function Navigation({ pathname }: { pathname: string }) {
                 onBlur={(event) => {
                 if (!event.currentTarget.contains(event.relatedTarget)) setOpenDropdown(null);
               }}>
-                <div className="site-about-heading">
+                <div className={scopedClasses(styles, 'site-about-heading')}>
                   <Link
                     ref={aboutLink}
                     href="/"
-                    className="site-nav-link"
+                    className={scopedClasses(styles, 'site-nav-link')}
                     aria-current={isHome ? "page" : undefined}
                     aria-expanded={aboutOpen}
                     aria-controls="about-sections"
@@ -155,7 +156,7 @@ function Navigation({ pathname }: { pathname: string }) {
                   >About</Link>
                   <button
                     ref={aboutToggle}
-                    className="site-about-toggle"
+                    className={scopedClasses(styles, 'site-about-toggle')}
                     type="button"
                     aria-label="About sections"
                     aria-expanded={aboutOpen}
@@ -165,14 +166,14 @@ function Navigation({ pathname }: { pathname: string }) {
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
                   </button>
                 </div>
-                <ul id="about-sections" className="site-dropdown" hidden={!aboutOpen}>
+                <ul id="about-sections" className={scopedClasses(styles, 'site-dropdown')} hidden={!aboutOpen}>
                   {aboutSections.map(({ href, label }) => <li key={href}><Link href={href} aria-current={pathname === href ? "page" : undefined} onClick={closeMenus}>{label}</Link></li>)}
                 </ul>
               </div>
               {sections.map(({ href, label }) => (
-                <Link key={href} href={href} className="site-nav-link" aria-current={pathname === href || pathname.startsWith(`${href}/`) ? "page" : undefined} onClick={closeMenus}>{label}</Link>
+                <Link key={href} href={href} className={scopedClasses(styles, 'site-nav-link')} aria-current={pathname === href || pathname.startsWith(`${href}/`) ? "page" : undefined} onClick={closeMenus}>{label}</Link>
               ))}
-              <div className="site-more"
+              <div className={scopedClasses(styles, 'site-more')}
                 onPointerEnter={(event) => {
                   if (event.pointerType === "mouse" && window.matchMedia("(min-width: 961px)").matches) setOpenDropdown("more");
                 }}
@@ -186,7 +187,7 @@ function Navigation({ pathname }: { pathname: string }) {
                 <button
                   ref={moreToggle}
                   type="button"
-                  className="site-nav-link site-more-toggle"
+                  className={scopedClasses(styles, 'site-nav-link site-more-toggle')}
                   aria-expanded={moreOpen}
                   aria-controls="more-sections"
                   data-active={moreActive || undefined}
@@ -198,7 +199,7 @@ function Navigation({ pathname }: { pathname: string }) {
                     }
                   }}
                 >More</button>
-                <ul id="more-sections" className="site-dropdown" hidden={!moreOpen}>
+                <ul id="more-sections" className={scopedClasses(styles, 'site-dropdown')} hidden={!moreOpen}>
                   {moreSections.map(({ href, label }) => (
                     <li key={href}>
                       {href.startsWith("/") ? (
@@ -206,7 +207,7 @@ function Navigation({ pathname }: { pathname: string }) {
                       ) : (
                         <a href={href} target="_blank" rel="noopener noreferrer" aria-label={label + " (external site, opens in a new tab)"} onClick={closeMenus}>
                           {label}
-                          <svg className="site-external-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                          <svg className={scopedClasses(styles, 'site-external-icon')} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                             <path d="M15 3h6v6M10 14 21 3M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5" />
                           </svg>
                         </a>
@@ -216,11 +217,11 @@ function Navigation({ pathname }: { pathname: string }) {
                 </ul>
               </div>
             </div>
-            <a href="https://www.gomotionapp.com/team/ievs/page/online-registration1" target="_blank" rel="noopener noreferrer" className="btn btn-primary site-join" onClick={closeMenus}>Join the Team</a>
+            <a href="https://www.gomotionapp.com/team/ievs/page/online-registration1" target="_blank" rel="noopener noreferrer" className={scopedClasses(styles, 'btn btn-primary site-join')} onClick={closeMenus}>Join the Team</a>
           </nav>
         </div>
       </header>
-      {!isHome && <div className="site-header-spacer" aria-hidden="true" />}
+      {!isHome && <div className={scopedClasses(styles, 'site-header-spacer')} aria-hidden="true" />}
     </>
   );
 }

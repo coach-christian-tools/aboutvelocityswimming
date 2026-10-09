@@ -4,7 +4,8 @@ import ProductForm from "./ProductForm";
 import ProductDetailGallery from "@/components/ProductDetailGallery";
 import Link from "next/link";
 import { getProductMockupImages } from "@/lib/mockups";
-import "../Store.css";
+import styles from "../Store.module.css";
+import { scopedClasses } from "@/lib/styles";
 
 export const metadata: Metadata = {
   title: "Shop the Collection | Velocity Swimming",
@@ -38,10 +39,10 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
 
   if (!productData) {
     return (
-      <main className="product-detail-page" style={{ position: "relative" }}>
-        <div className="section container text-center" style={{ paddingTop: "3rem" }}>
+      <main className={scopedClasses(styles, "product-detail-page")} style={{ position: "relative" }}>
+        <div className={scopedClasses(styles, "section container text-center")} style={{ paddingTop: "3rem" }}>
           <h1 style={{ color: "var(--primary)" }}>Product Not Found</h1>
-          <Link href="/store" className="btn btn-secondary" style={{ marginTop: "2rem" }}>
+          <Link href="/store" className={scopedClasses(styles, "btn btn-secondary")} style={{ marginTop: "2rem" }}>
             Back to Store
           </Link>
         </div>
@@ -57,16 +58,16 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
   const imagesArray = localMockups.length > 0 ? localMockups : [sync_product.thumbnail_url];
 
   return (
-    <main className="product-detail-page" style={{ position: "relative" }}>
+    <main className={scopedClasses(styles, "product-detail-page")} style={{ position: "relative" }}>
       
-      <div className="section" style={{ padding: "0 1.5rem" }}>
-        <div className="product-detail-grid">
+      <div className={scopedClasses(styles, "section")} style={{ padding: "0 1.5rem" }}>
+        <div className={scopedClasses(styles, "product-detail-grid")}>
           
-          <div className="product-detail-images">
+          <div className={scopedClasses(styles, "product-detail-images")}>
             <ProductDetailGallery images={imagesArray} productName={sync_product.name} />
           </div>
           
-          <div className="product-detail-info">
+          <div className={scopedClasses(styles, "product-detail-info")}>
             <Link
               href="/store"
               style={{
@@ -88,7 +89,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
             
             <ProductForm productId={sync_product.id} productName={sync_product.name} variants={sync_variants} />
             
-            <div className="product-description" style={{ marginTop: "2.25rem", color: "var(--text-muted)" }}>
+            <div className={scopedClasses(styles, "product-description")} style={{ marginTop: "2.25rem", color: "var(--text-muted)" }}>
               <p>Part of Velocity&apos;s 2026-2027 Caden Ankrom Collection. Each purchase supports Velocity Swimming and the artist.</p>
             </div>
           </div>

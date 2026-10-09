@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
-import { collection, doc, onSnapshot, query, where } from "firebase/firestore"
-import { db } from "../lib/firebase"
+import { collection, doc, onSnapshot, query, where } from "@/lib/data"
+import { db } from "../lib/backend"
 import type { ManualHour, Posting, Registration } from "../types"
 
 interface Activity {

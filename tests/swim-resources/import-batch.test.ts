@@ -12,7 +12,7 @@ describe('source-grounded roster identity', () => {
     expect(matchImportAthlete({ name: athlete.name, dob: '2012-01-02' }, [athlete]).conflict).toContain('birth');
   });
   it('never deactivates omissions from filtered exports or blanks, and preserves duplicate names for review', () => {
-    const source = { id: 'export', name: 'Fixture', revisionId: 'a'.repeat(64), checkId: 'check', target: { project: 'synthetic-project', database: 'velocity-v2' }, kind: 'roster_export', reference: 'fixture:export', collectedAt: '2026-10-06T17:00:00Z', coverage: 'partial', scope: 'Filtered' };
+    const source = { id: 'export', name: 'Fixture', revisionId: 'a'.repeat(64), checkId: 'check', target: { provider: 'supabase', project: 'synthetic-project', database: 'velocity-v2' }, kind: 'roster_export', reference: 'fixture:export', collectedAt: '2026-10-06T17:00:00Z', coverage: 'partial', scope: 'Filtered' };
     const batch = rosterBatch([{ 'Memb. First Name': 'Alex', 'Memb. Last Name': 'Lee', Birthday: '1/1/2012', Location: '', ID: 'tu1' }], [athlete, { ...athlete, id: 'two', teamUnifyId: 'tu2', name: { first: 'Other', last: 'Person' } }], source, 'batch', { teamUnifyId: 'ID' });
     expect(batch.rows[0].data).not.toHaveProperty('status');
     expect(batch.rows).toHaveLength(1);
@@ -29,7 +29,7 @@ describe('source-grounded roster identity', () => {
     expect(() => parseImportBatch('{"version":1,"__proto__":{}}')).toThrow('Unsafe');
   });
   it('reads modern export values, keeps alumni intent, and omits unrelated historical memberships', () => {
-    const source = { id: 'export', name: 'Fixture', revisionId: 'a'.repeat(64), checkId: 'check', target: { project: 'synthetic-project', database: 'velocity-v2' }, kind: 'roster_export', reference: 'fixture:export', collectedAt: '2026-10-06T17:00:00Z', coverage: 'complete', scope: 'All non-deleted memberships' };
+    const source = { id: 'export', name: 'Fixture', revisionId: 'a'.repeat(64), checkId: 'check', target: { provider: 'supabase', project: 'synthetic-project', database: 'velocity-v2' }, kind: 'roster_export', reference: 'fixture:export', collectedAt: '2026-10-06T17:00:00Z', coverage: 'complete', scope: 'All non-deleted memberships' };
     const batch = rosterBatch([
       { 'Memb. First Name': 'Alex', 'Memb. Last Name': 'Lee', Birthday: '2012-01-01 00:00:00', Gender: 'Male', Roster: 'Seniors', 'Billing Group': 'Not Assigned', Location: 'Leave of Absence', 'Member Status': 'Active' },
       { 'Memb. First Name': 'Historical', 'Memb. Last Name': 'Member', Birthday: '1/1/1980', 'Member Status': 'Cancelled/Hidden' },

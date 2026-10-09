@@ -11,7 +11,7 @@ import { rosterBatch } from './lib/roster-batch.mjs';
 const args = process.argv.slice(2);
 const option = name => args.includes(name) ? args[args.indexOf(name) + 1] : undefined;
 if (args.includes('--help')) {
-  console.log('node scripts/swim-resources/update-roster.mjs --project <id> --database velocity-v2 --source <id> --check <id> --csv backups/.../current-roster.csv [--encoding utf8|macroman] [--firebase-cli | --key <key.json>] [--out backups/imports/<project>/velocity-v2/pending/roster.json] [--complete] [--teamunify-id-column <header>] [--swims-id-column <header>] [--swimcloud-id-column <header>]');
+  console.log('node scripts/swim-resources/update-roster.mjs --project <id> --database velocity-v2 --source <id> --check <id> --csv backups/.../current-roster.csv [--encoding utf8|macroman]  [--out backups/imports/<project>/velocity-v2/pending/roster.json] [--complete] [--teamunify-id-column <header>] [--swims-id-column <header>] [--swimcloud-id-column <header>]');
   process.exit(0);
 }
 if (args.includes('--apply')) throw new Error('Roster writes require selected review in the Import page. This script only stages JSON.');

@@ -1,0 +1,378 @@
+@import "tailwindcss";
+@theme inline {
+  --font-sans: var(--font-inter), sans-serif;
+  --color-bg: var(--background);
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-text-primary: var(--text-main);
+  --color-text-secondary: var(--text-muted);
+  --color-primary-blue: var(--accent);
+  --color-primary-ink: var(--primary-ink);
+  --color-hover-bg: var(--background-alt);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-present: #16a34a;
+  --color-absent: #dc2626;
+  --color-unmarked: #cbd5e1;
+  --color-brand-dark: var(--primary);
+  --color-brand-dark-hover: var(--primary-dark);
+  --color-brand-dark-light: var(--background-alt);
+  --color-brand-accent: var(--accent);
+  --color-brand-accent-hover: var(--accent-hover);
+  --color-brand-accent-light: var(--background-alt);
+  --color-brand-accent-muted: var(--background-alt);
+}
+:root {
+  --primary-ink: #fff;
+  --primary: #13415d;
+  --primary-light: #1a5980;
+  --primary-dark: #0d2c40;
+  --accent: #0a856c;
+  --accent-hover: #086a56;
+  --background: #fff;
+  --surface: #fff;
+  --background-alt: #f3f7f8;
+  --top-gradient-bg: #fff;
+  --border: #dce5ea;
+  --text-main: #1e293b;
+  --text-muted: #475569;
+  --text-light: #f8fafc;
+  --foreground: var(--text-main);
+  --font-heading: var(--font-outfit), sans-serif;
+  --font-body: var(--font-inter), sans-serif;
+  --font-street: var(--font-bebas), sans-serif;
+  --section-padding: 5rem 2rem;
+  --max-width: 1200px;
+  --site-header-height: calc(88px + env(safe-area-inset-top, 0px));
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-full: 9999px;
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+  --shadow-sm: 0 1px 3px #13415d12;
+  --shadow-md: 0 4px 12px #13415d14;
+  --shadow-lg: 0 10px 25px #13415d1a;
+  --color-bg: var(--background);
+  --color-surface: var(--surface);
+  --color-text-primary: var(--text-main);
+  --color-text-secondary: var(--text-muted);
+  --color-primary-blue: var(--accent);
+  --color-border: var(--border);
+  --color-hover-bg: var(--background-alt);
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --primary-ink: #102638;
+  --background: #102638;
+  --surface: #163247;
+  --background-alt: #1d3d52;
+  --top-gradient-bg: #102638;
+  --border: #365468;
+  --text-main: #f8fafc;
+  --text-muted: #b0c2d0;
+  --accent: #53c9ad;
+  --accent-hover: #70ddc2;
+}
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    background: var(--background);
+    color: var(--text-main);
+    font-family: var(--font-body);
+    line-height: 1.5;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+  }
+  a {
+    color: inherit;
+  }
+  button,
+  input,
+  select,
+  textarea {
+    font: inherit;
+  }
+  button {
+    cursor: pointer;
+  }
+  :where(a, button, input, select, textarea):focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+  }
+}
+.portal-shell {
+  padding-top: calc(var(--site-header-height) + 24px);
+  min-height: 100vh;
+}
+:root[data-theme="dark"] .portal-shell :is(.bg-white, .bg-slate-50) {
+  background: var(--surface);
+}
+:root[data-theme="dark"]
+  .portal-shell
+  :is(.text-slate-500, .text-slate-600, .text-slate-700) {
+  color: var(--text-muted);
+}
+.theme-light-only {
+  display: block;
+}
+.theme-dark-only {
+  display: none;
+}
+:root[data-theme="dark"] .theme-light-only {
+  display: none;
+}
+:root[data-theme="dark"] .theme-dark-only {
+  display: block;
+}
+@media (max-width: 960px) {
+  :root {
+    --site-header-height: calc(76px + env(safe-area-inset-top, 0px));
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.admin-simple {
+  min-height: 100vh;
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+  font-size: 14px;
+  line-height: 1.5;
+}
+.admin-simple .admin-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--color-border);
+}
+.admin-simple nav,
+.admin-simple .admin-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+.admin-simple main {
+  padding: 20px;
+  min-width: 0;
+}
+.admin-simple h1 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.admin-simple h2 {
+  font-size: 18px;
+  font-weight: 600;
+}
+.admin-simple h3,
+.admin-simple h4 {
+  font-size: 15px;
+  font-weight: 600;
+}
+.admin-simple p {
+  margin: 8px 0;
+}
+.admin-simple a {
+  color: var(--color-primary-blue);
+  text-decoration: underline;
+  overflow-wrap: anywhere;
+}
+.admin-simple button,
+.admin-simple input,
+.admin-simple select,
+.admin-simple textarea {
+  font: inherit;
+  color: inherit;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 0;
+  padding: 5px 8px;
+  max-width: 100%;
+}
+.admin-simple button {
+  cursor: pointer;
+}
+.admin-simple button:disabled {
+  cursor: default;
+  opacity: 0.55;
+}
+.admin-simple label {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+.admin-simple input[type="checkbox"] {
+  accent-color: var(--color-text-primary);
+}
+.admin-simple
+  :is(
+    a,
+    button,
+    input,
+    select,
+    textarea,
+    summary,
+    .admin-table-scroll
+  ):focus-visible {
+  outline: 2px solid var(--color-primary-blue);
+  outline-offset: 2px;
+}
+.admin-simple .admin-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 12px;
+  margin: 16px 0;
+}
+.admin-simple .admin-filters label {
+  display: grid;
+  gap: 4px;
+}
+.admin-simple .admin-controls {
+  margin: 12px 0;
+}
+.admin-simple table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+.admin-simple th,
+.admin-simple td {
+  border-bottom: 1px solid var(--color-border);
+  padding: 8px;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+.admin-simple th {
+  font-weight: 600;
+}
+.admin-simple .admin-fields {
+  table-layout: fixed;
+}
+.admin-simple .admin-fields th:first-child {
+  width: 28%;
+}
+.admin-simple .admin-table-scroll {
+  overflow-x: auto;
+}
+.admin-simple .admin-table-scroll > table {
+  min-width: 600px;
+}
+.admin-simple .admin-maintenance-record {
+  min-width: 170px;
+}
+.admin-simple .admin-maintenance-attention {
+  min-width: 280px;
+}
+.admin-simple .admin-maintenance-date {
+  min-width: 110px;
+}
+.admin-simple .admin-maintenance-evidence {
+  min-width: 140px;
+}
+.admin-simple pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  padding: 8px;
+  font-size: 12px;
+}
+.admin-simple code {
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+.admin-simple summary {
+  cursor: pointer;
+}
+.admin-simple details {
+  margin: 8px 0;
+}
+.admin-simple .admin-value {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.admin-simple .admin-section {
+  padding: 12px 0;
+  border-top: 1px solid var(--color-border);
+}
+.admin-simple [role="alert"] {
+  border-left: 2px solid currentColor;
+  padding-left: 10px;
+}
+@media (max-width: 600px) {
+  .admin-simple main,
+  .admin-simple .admin-header {
+    padding: 12px;
+  }
+  .admin-simple .admin-filters {
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .admin-simple .admin-fields th,
+  .admin-simple .admin-fields td {
+    padding: 5px;
+  }
+}
+
+/* Read-only schema diagram, using the shared admin theme. */
+.admin-simple .admin-map-scroll {
+  overflow-x: auto;
+  border: 1px solid var(--color-border);
+  margin: 12px 0;
+}
+.admin-simple .admin-map-edge {
+  fill: none;
+  stroke: currentColor;
+}
+.admin-simple .admin-map-node {
+  cursor: pointer;
+}
+.admin-simple .admin-map-node rect {
+  fill: var(--color-bg);
+  stroke: var(--color-text-primary);
+}
+.admin-simple .admin-map-node text,
+.admin-simple .admin-map-heading {
+  fill: var(--color-text-primary);
+  font:
+    14px system-ui,
+    sans-serif;
+}
+.admin-simple .admin-map-node .admin-map-path {
+  font-size: 11px;
+}
+.admin-simple .admin-map-node:focus-visible {
+  outline: none;
+}
+.admin-simple .admin-map-node:focus-visible rect {
+  stroke: var(--color-primary-blue);
+  stroke-width: 3;
+}
+.admin-simple .admin-map-scroll:focus-visible {
+  outline: 2px solid var(--color-primary-blue);
+}
+.admin-simple .admin-map-field {
+  display: inline-block;
+  margin-right: 8px;
+}

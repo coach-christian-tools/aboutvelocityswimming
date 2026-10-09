@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import "./InvestmentPitch.css";
+import styles from "./InvestmentPitch.module.css";
+import { scopedClasses } from "@/lib/styles";
 
 const SPONSORSHIP_TIERS = [
   {
@@ -89,72 +90,72 @@ export default function InvestmentPitch() {
   };
 
   return (
-    <section id="sponsors" className="section investment-pitch">
-      <div className="container">
+    <section id="sponsors" className={scopedClasses(styles, 'section investment-pitch')}>
+      <div className={scopedClasses(styles, 'container')}>
         {/* Section Header */}
-        <div className="text-center mb-12">
-          <span className="section-badge">Partnership Opportunities</span>
-          <h1 className="section-title centered">Invest in Our Community</h1>
-          <p className="lead-text centered max-w-3xl">
+        <div className={scopedClasses(styles, 'text-center mb-12')}>
+          <span className={scopedClasses(styles, 'section-badge')}>Partnership Opportunities</span>
+          <h1 className={scopedClasses(styles, 'section-title centered')}>Invest in Our Community</h1>
+          <p className={scopedClasses(styles, 'lead-text centered max-w-3xl')}>
             Supporting Velocity Swimming is an investment in the future of the Wenatchee Valley youth and a high-visibility partnership for your business.
           </p>
         </div>
 
         {/* Why Partner Overview Banner */}
-        <div className="pitch-overview-card glass-panel mb-12">
-          <div className="overview-content">
+        <div className={scopedClasses(styles, 'pitch-overview-card glass-panel mb-12')}>
+          <div className={scopedClasses(styles, 'overview-content')}>
             <h3>Why Partner With Velocity Swimming?</h3>
             <p>
               By sponsoring our club, you are directly supporting the physical and mental development of hundreds of local youth. Your brand will be associated with a health-oriented community pillar dedicated to excellence, character, and resilience.
             </p>
           </div>
-          <div className="stats-grid">
-            <div className="stat-item">
-              <span className="stat-number">40+</span>
-              <span className="stat-label">Years of History</span>
+          <div className={scopedClasses(styles, 'stats-grid')}>
+            <div className={scopedClasses(styles, 'stat-item')}>
+              <span className={scopedClasses(styles, 'stat-number')}>40+</span>
+              <span className={scopedClasses(styles, 'stat-label')}>Years of History</span>
             </div>
-            <div className="stat-item">
-              <span className="stat-number">1,000+</span>
-              <span className="stat-label">Meet Program Eyes</span>
+            <div className={scopedClasses(styles, 'stat-item')}>
+              <span className={scopedClasses(styles, 'stat-number')}>1,000+</span>
+              <span className={scopedClasses(styles, 'stat-label')}>Meet Program Eyes</span>
             </div>
-            <div className="stat-item">
-              <span className="stat-number">100s</span>
-              <span className="stat-label">Local Families Reached</span>
+            <div className={scopedClasses(styles, 'stat-item')}>
+              <span className={scopedClasses(styles, 'stat-number')}>100s</span>
+              <span className={scopedClasses(styles, 'stat-label')}>Local Families Reached</span>
             </div>
           </div>
         </div>
 
         {/* Sponsorship Tiers Grid */}
-        <div className="sponsorship-grid">
+        <div className={scopedClasses(styles, 'sponsorship-grid')}>
           {SPONSORSHIP_TIERS.map((tier) => (
             <div
               key={tier.name}
-              className={`sponsorship-card ${tier.highlight ? "highlighted" : ""} ${tier.isMeetSponsor ? "meet-sponsor-card" : ""}`}
+              className={scopedClasses(styles, `sponsorship-card ${tier.highlight ? "highlighted" : ""} ${tier.isMeetSponsor ? "meet-sponsor-card" : ""}`)}
             >
               {tier.badge && (
-                <span className={`card-badge ${tier.isMeetSponsor ? "badge-exclusive" : ""}`}>
+                <span className={scopedClasses(styles, `card-badge ${tier.isMeetSponsor ? "badge-exclusive" : ""}`)}>
                   {tier.badge}
                 </span>
               )}
-              <div className="card-header">
-                <h3 className="tier-title">{tier.name}</h3>
-                {tier.tagline && <p className="tier-tagline">{tier.tagline}</p>}
-                <div className="tier-price-wrapper">
-                  <span className="tier-price">{tier.price}</span>
-                  {tier.period && <span className="tier-period">/ {tier.period}</span>}
+              <div className={scopedClasses(styles, 'card-header')}>
+                <h3 className={scopedClasses(styles, 'tier-title')}>{tier.name}</h3>
+                {tier.tagline && <p className={scopedClasses(styles, 'tier-tagline')}>{tier.tagline}</p>}
+                <div className={scopedClasses(styles, 'tier-price-wrapper')}>
+                  <span className={scopedClasses(styles, 'tier-price')}>{tier.price}</span>
+                  {tier.period && <span className={scopedClasses(styles, 'tier-period')}>/ {tier.period}</span>}
                 </div>
-                <p className="tier-description">{tier.description}</p>
+                <p className={scopedClasses(styles, 'tier-description')}>{tier.description}</p>
               </div>
 
-              <div className="card-divider" />
+              <div className={scopedClasses(styles, 'card-divider')} />
 
-              <div className="card-body">
-                <span className="benefits-label">Included Benefits:</span>
-                <ul className="tier-benefits-list">
+              <div className={scopedClasses(styles, 'card-body')}>
+                <span className={scopedClasses(styles, 'benefits-label')}>Included Benefits:</span>
+                <ul className={scopedClasses(styles, 'tier-benefits-list')}>
                   {tier.benefits.map((benefit, idx) => (
-                    <li key={idx} className="benefit-item">
+                    <li key={idx} className={scopedClasses(styles, 'benefit-item')}>
                       <svg
-                        className="check-icon-svg"
+                        className={scopedClasses(styles, 'check-icon-svg')}
                         viewBox="0 0 20 20"
                         fill="currentColor"
                         aria-hidden="true"
@@ -175,23 +176,23 @@ export default function InvestmentPitch() {
         </div>
 
         {/* Validity & CTA Footer */}
-        <div className="sponsorship-validity-banner">
-          <div className="validity-info">
-            <span className="validity-icon">🗓️</span>
+        <div className={scopedClasses(styles, 'sponsorship-validity-banner')}>
+          <div className={scopedClasses(styles, 'validity-info')}>
+            <span className={scopedClasses(styles, 'validity-icon')}>🗓️</span>
             <div>
-              <p className="validity-title">
+              <p className={scopedClasses(styles, 'validity-title')}>
                 <strong>Annual Term:</strong> Sponsorship is valid for 1 year from September to August.
               </p>
-              <p className="validity-subtitle">
+              <p className={scopedClasses(styles, 'validity-subtitle')}>
                 Interested in supporting our team? Connect with our board to set up your sponsorship.
               </p>
             </div>
           </div>
-          <div className="validity-cta">
+          <div className={scopedClasses(styles, 'validity-cta')}>
             <a
               href="mailto:execboard@velocity-swimming.com?subject=Velocity%20Swimming%20Sponsorship%20Inquiry"
               onClick={handleContactBoard}
-              className="btn btn-primary"
+              className={scopedClasses(styles, 'btn btn-primary')}
             >
               Contact the Board to Sponsor
             </a>
@@ -200,8 +201,8 @@ export default function InvestmentPitch() {
       </div>
 
       {toastMessage && (
-        <div className="copy-toast" role="alert" aria-live="polite">
-          <span className="copy-toast-icon">✓</span>
+        <div className={scopedClasses(styles, 'copy-toast')} role="alert" aria-live="polite">
+          <span className={scopedClasses(styles, 'copy-toast-icon')}>✓</span>
           <span>{toastMessage}</span>
         </div>
       )}

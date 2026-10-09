@@ -6,7 +6,7 @@ import { collectHttp } from './lib/source-collector.mjs';
 import { validateSource } from '../../src/features/swim-resources/lib/domain/evidence.ts';
 import { importDirectory } from '../../src/features/swim-resources/lib/domain/database-target.ts';
 const args = process.argv.slice(2), option = key => args.includes(key) ? args[args.indexOf(key) + 1] : undefined;
-if (args.includes('--help')) { console.log('collect-sources --project <id> --database velocity-v2 [--source <id> | --due] [--input backups/... --content-type <mime>] [--firebase-cli]'); process.exit(0); }
+if (args.includes('--help')) { console.log('collect-sources --project <id> --database velocity-v2 [--source <id> | --due] [--input backups/... --content-type <mime>] '); process.exit(0); }
 if (args.includes('--apply')) throw new Error('Collection stages captures only. Apply through reconcile-evidence.');
 const context = adminDatabase(); if (context.database !== 'velocity-v2') throw new Error('Collection requires velocity-v2.');
 if (!!option('--source') === args.includes('--due')) throw new Error('Choose --source or --due.');
@@ -42,5 +42,5 @@ for (const source of sources) {
   } catch { captures.push({ sourceId: source.id, checkId: runId, at, outcome: 'failed', error: 'Source unavailable, capture invalid, or access required.' }); }
 }
 const manifest = directory + '/bundle.json';
-await privateWrite(manifest, JSON.stringify({ version: 2, target: { project: context.project, database: context.database }, id: runId, captures, observations: [] }, null, 2));
+await privateWrite(manifest, JSON.stringify({ version: 3, target: { provider: 'supabase', project: context.project, database: context.database }, id: runId, captures, observations: [] }, null, 2));
 console.log(JSON.stringify({ mode: 'staged-only', sources: captures.length, retrieved: captures.filter(c => c.outcome === 'retrieved').length, manifest }));

@@ -55,3 +55,5 @@ firebase/workshare/functions/node_modules/
 firebase/workshare/functions/lib/
 firebase/workshare/.firebase/
 .next-workshare-test/
+
+.next-velocity-test/

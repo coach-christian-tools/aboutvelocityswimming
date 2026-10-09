@@ -15,7 +15,7 @@ for (const trace of traces) {
   const { files } = JSON.parse(await readFile(trace, 'utf8'));
   for (const file of files) {
     const path = relative(root, resolve(trace, '..', file)).split('\\').join('/');
-    if (path.startsWith('backups/') || /^db_.*\.json$/.test(path) || path === 'export.csv' || /^scripts\/(?:[^/]+\/)*serviceAccountKey[^/]*\.json$/.test(path) || /^\.env[^/]*$/.test(path)) exposed.add(path);
+    if (path.startsWith('backups/') || /^db_.*\.json$/.test(path) || path === 'export.csv' || /^scripts\/(?:[^/]+\/)*serviceAccountKey[^/]*\.json$/.test(path) || /(^|\/)\.env[^/]*$/.test(path)) exposed.add(path);
   }
 }
 if (exposed.size) throw new Error('Private local files appear in production traces: ' + [...exposed].join(', '));

@@ -49,5 +49,5 @@ export function rosterBatch(rows, athletes, source, batchId, idColumns = {}) {
   for (const athlete of athletes) if (!matched.has(athlete.id) && athlete.status !== 'alumni') {
     unresolved.push({ id: 'absent_' + athlete.id, sourceIds: [source.id], message: 'Athlete ' + athlete.id + ' was not matched in this export. Review source coverage; no status change proposed.' });
   }
-  return { version: 2, target: source.target, id: batchId, collectedAt: source.collectedAt, sources: [source], rows: proposals.map(row => ({ ...row, evidence: [{ sourceId: source.id, revisionId: source.revisionId, checkId: source.checkId, checkedAt: source.collectedAt, fields: factFields(row.data), context: source.scope, excerpt: 'Matched roster export row; original capture retained.' }] })), unresolved };
+  return { version: 3, target: source.target, id: batchId, collectedAt: source.collectedAt, sources: [source], rows: proposals.map(row => ({ ...row, evidence: [{ sourceId: source.id, revisionId: source.revisionId, checkId: source.checkId, checkedAt: source.collectedAt, fields: factFields(row.data), context: source.scope, excerpt: 'Matched roster export row; original capture retained.' }] })), unresolved };
 }

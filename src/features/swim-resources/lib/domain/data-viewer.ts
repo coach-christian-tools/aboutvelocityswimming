@@ -96,8 +96,8 @@ export function parseViewerFilter(configuration: CollectionConfig, params: URLSe
   return { field: path, value: raw };
 }
 
-export function isViewerCoach(user: { email: string | null; emailVerified: boolean } | null): boolean {
-  return user?.emailVerified === true && !!user.email?.endsWith('@velocity-swimming.com');
+export function isViewerCoach(user: { email: string | null; emailVerified: boolean; staff?: boolean } | null): boolean {
+  return user?.staff === true || (user?.emailVerified === true && !!user.email?.toLowerCase().endsWith('@velocity-swimming.com'));
 }
 
 export const LEGACY_COLLECTIONS: Record<string, string> = {

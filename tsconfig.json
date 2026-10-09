@@ -36,13 +36,14 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts",
-    ".next-workshare-test/types/**/*.ts",
-    ".next-workshare-test/dev/types/**/*.ts"
+    ".next-velocity-test/types/**/*.ts",
+    ".next-velocity-test/dev/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
-    "studio-velocity-swimming-marketing",
     "backups",
-    "firebase/workshare/functions"
+    "firebase/workshare/functions",
+    "tests/legacy-firebase",
+    "supabase/functions"
   ]
 }

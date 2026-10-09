@@ -1,7 +1,7 @@
 import { createHash } from 'node:crypto';
 import { readFile, writeFile, mkdir, lstat, realpath } from 'node:fs/promises';
 import { resolve, dirname, relative } from 'node:path';
-import { Storage } from '@google-cloud/storage';
+
 export const MAX_CAPTURE_BYTES = 20 * 1024 * 1024;
 export const hashBytes = bytes => createHash('sha256').update(bytes).digest('hex');
 export function privatePath(path, root = 'backups') {
@@ -20,8 +20,11 @@ export async function captureBytes(path, expected) {
   const bytes = await readFile(full); if (hashBytes(bytes) !== expected) throw new Error('Capture changed after collection.'); return bytes;
 }
 export function archiveStorage(context) {
-  // The same guarded credentials are used for Firestore and Storage.
-  return new Storage(context.storageOptions);
+ return {bucket(name){if(name!=='evidence')throw new Error('Captures require the private evidence bucket.');return {file(path){const bucket=context.client.storage.from(name);return {
+ async save(bytes,options={}){const {error}=await bucket.upload(path,bytes,{contentType:options.metadata?.contentType,upsert:false});if(error)throw Object.assign(error,{code:Number(error.statusCode)});},
+ async download(){const {data,error}=await bucket.download(path);if(error)throw error;return [Buffer.from(await data.arrayBuffer())];},
+ async getMetadata(){const {data,error}=await bucket.info(path);if(error)throw error;return [{generation:data.id}];}
+ };}};}};
 }
 export async function archiveCapture(context, bucket, sourceId, capture, bytes, storage = archiveStorage(context)) {
   if (!bucket || !/^[a-z0-9._-]+$/.test(bucket)) throw new Error('Supply a private archive bucket.');

@@ -1,5 +1,5 @@
 import { useState, useEffect, type ReactNode } from "react"
-import { Link, useLocation, useNavigate } from "react-router-dom"
+import { Link, useLocation, useNavigate } from "@/features/workshare/lib/navigation"
 import { LogOut, Home, Briefcase, Users, Settings, ClipboardList, Shield, Eye, EyeOff, PanelLeftClose, PanelLeftOpen } from "lucide-react"
 import { useAuth } from "../../contexts/auth"
 import { VSLogo } from "../ui/VSLogo"
@@ -202,16 +202,16 @@ export function MainLayout({ children, isAdmin = false }: { children: ReactNode,
   ]
 
   return (
-    <div className="min-h-screen bg-slate-50 text-[#13415D] flex flex-col md:flex-row">
+    <div className="min-h-screen bg-bg text-text-primary flex flex-col md:flex-row">
       {/* Mobile Top Header */}
-      <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 px-4 py-3 flex items-center justify-between md:hidden">
+      <header className="sticky top-[var(--site-header-height)] z-40 bg-surface/95 backdrop-blur-md border-b border-slate-200/80 px-4 py-3 flex items-center justify-between md:hidden">
         <Link to="/" className="flex items-center">
           <VSLogo size="sm" />
         </Link>
         <div className="flex items-center gap-2">
           <a href="/tools" className="text-xs underline p-2">Tools</a>
           {effectiveIsAdmin && (
-            <span className="inline-flex items-center gap-1 text-[11px] font-bold bg-[#0A856C]/10 text-[#0A856C] px-2 py-0.5 rounded-full">
+            <span className="inline-flex items-center gap-1 text-[11px] font-bold bg-[#0A856C]/10 text-accent px-2 py-0.5 rounded-full">
               <Shield className="w-3.5 h-3.5" /> Admin
             </span>
           )}
@@ -219,7 +219,7 @@ export function MainLayout({ children, isAdmin = false }: { children: ReactNode,
             <button
               onClick={handleToggleClientMode}
               aria-label={clientMode ? "To Admin" : "View Client"}
-              className="p-2 rounded-lg text-slate-500 hover:text-[#13415D] hover:bg-slate-100 transition-colors"
+              className="p-2 rounded-lg text-slate-500 hover:text-text-primary hover:bg-slate-100 transition-colors"
             >
               {clientMode ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
             </button>
@@ -241,10 +241,10 @@ export function MainLayout({ children, isAdmin = false }: { children: ReactNode,
           onClick={handleOpenSidebar}
           aria-label="Open navigation sidebar"
           title="Open sidebar (⌘B or [)"
-          className="hidden md:flex items-center gap-2 px-3 py-2 rounded-xl bg-white/95 backdrop-blur-md border border-slate-200/90 shadow-sm text-slate-600 hover:text-[#0A856C] hover:bg-white hover:border-[#0A856C]/40 hover:shadow transition-all cursor-pointer z-40 fixed bottom-4 left-4 group focus-visible:ring-2 focus-visible:ring-[#0A856C]"
+          className="hidden md:flex items-center gap-2 px-3 py-2 rounded-xl bg-surface/95 backdrop-blur-md border border-slate-200/90 shadow-sm text-slate-600 hover:text-accent hover:bg-surface hover:border-[#0A856C]/40 hover:shadow transition-all cursor-pointer z-40 fixed bottom-4 left-4 group focus-visible:ring-2 focus-visible:ring-[#0A856C]"
         >
-          <PanelLeftOpen className="w-4 h-4 text-slate-500 group-hover:text-[#0A856C] transition-colors" />
-          <span className="text-xs font-semibold text-[#13415D] group-hover:text-[#0A856C] transition-colors">
+          <PanelLeftOpen className="w-4 h-4 text-slate-500 group-hover:text-accent transition-colors" />
+          <span className="text-xs font-semibold text-text-primary group-hover:text-accent transition-colors">
             Expand
           </span>
         </button>
@@ -256,8 +256,9 @@ export function MainLayout({ children, isAdmin = false }: { children: ReactNode,
         aria-hidden={isCollapsed}
         style={{
           width: isCollapsed ? 0 : `${sidebarWidth}px`,
+          top:"var(--site-header-height)",height:"calc(100dvh - var(--site-header-height))",
         }}
-        className={`hidden md:flex flex-col h-screen sticky top-0 bg-white z-30 shrink-0 relative overflow-hidden ${isCollapsed
+        className={`hidden md:flex flex-col h-screen sticky top-0 bg-surface z-30 shrink-0 relative overflow-hidden ${isCollapsed
           ? "border-r-0 shadow-none pointer-events-none"
           : "border-r border-slate-200/90 shadow-xs"
           } ${isDragging ? "select-none transition-none" : "transition-[width] duration-200 ease-in-out"}`}
@@ -298,7 +299,7 @@ export function MainLayout({ children, isAdmin = false }: { children: ReactNode,
               <VSLogo size="md" />
             </Link>
             {effectiveIsAdmin && (
-              <div className="mt-3 inline-flex items-center gap-1.5 text-xs font-semibold bg-[#0A856C]/10 text-[#0A856C] px-2.5 py-1 rounded-full whitespace-nowrap">
+              <div className="mt-3 inline-flex items-center gap-1.5 text-xs font-semibold bg-[#0A856C]/10 text-accent px-2.5 py-1 rounded-full whitespace-nowrap">
                 <Shield className="w-3.5 h-3.5 shrink-0" /> <span className="truncate">Administrator</span>
               </div>
             )}
@@ -315,10 +316,10 @@ export function MainLayout({ children, isAdmin = false }: { children: ReactNode,
                   to={link.to}
                   className={`flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-sm transition-all ${active
                     ? "bg-[#0A856C] text-white shadow-xs font-semibold"
-                    : "text-[#13415D] hover:bg-slate-100/80 hover:text-[#0A856C]"
+                    : "text-text-primary hover:bg-slate-100/80 hover:text-accent"
                     }`}
                 >
-                  <Icon className={`w-5 h-5 shrink-0 ${active ? "text-white" : "text-[#13415D]/70"}`} />
+                  <Icon className={`w-5 h-5 shrink-0 ${active ? "text-white" : "text-text-primary/70"}`} />
                   <span className="truncate">{link.label}</span>
                 </Link>
               )
@@ -328,12 +329,12 @@ export function MainLayout({ children, isAdmin = false }: { children: ReactNode,
           <div className="p-4 border-t border-slate-100 mt-auto overflow-hidden">
             <div className="mb-2 px-2">
               <p className="text-xs text-slate-400 font-medium truncate">Logged in as</p>
-              <p className="text-xs font-semibold text-[#13415D] truncate">{user?.email?.split('@')[0]}</p>
+              <p className="text-xs font-semibold text-text-primary truncate">{user?.email?.split('@')[0]}</p>
             </div>
             {(isAdmin || authIsAdmin) && (
               <button
                 onClick={handleToggleClientMode}
-                className="flex w-full items-center gap-2.5 px-3 py-2 mb-1 rounded-xl text-sm font-semibold text-[#13415D] hover:bg-slate-100 transition-colors cursor-pointer"
+                className="flex w-full items-center gap-2.5 px-3 py-2 mb-1 rounded-xl text-sm font-semibold text-text-primary hover:bg-slate-100 transition-colors cursor-pointer"
               >
                 {clientMode ? (
                   <>
@@ -360,7 +361,7 @@ export function MainLayout({ children, isAdmin = false }: { children: ReactNode,
               onClick={() => setIsCollapsed(true)}
               aria-label="Collapse navigation sidebar"
               title="Collapse sidebar (⌘B or [)"
-              className="flex w-full items-center gap-2.5 px-3 py-2 rounded-xl text-sm font-semibold text-slate-600 hover:bg-slate-100 hover:text-[#13415D] transition-colors cursor-pointer"
+              className="flex w-full items-center gap-2.5 px-3 py-2 rounded-xl text-sm font-semibold text-slate-600 hover:bg-slate-100 hover:text-text-primary transition-colors cursor-pointer"
             >
               <PanelLeftClose className="w-4 h-4 shrink-0 text-slate-500" />
               <span className="truncate">Collapse</span>
@@ -377,7 +378,7 @@ export function MainLayout({ children, isAdmin = false }: { children: ReactNode,
       </main>
 
       {/* Mobile Sticky Bottom Tab Navigation */}
-      <nav className="fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-slate-200/90 py-1.5 px-2 flex justify-around items-center md:hidden shadow-lg safe-area-bottom">
+      <nav className="fixed bottom-0 left-0 right-0 z-50 bg-surface/95 backdrop-blur-md border-t border-slate-200/90 py-1.5 px-2 flex justify-around items-center md:hidden shadow-lg safe-area-bottom">
         {navLinks.map((link) => {
           const Icon = link.icon
           const active = isActive(link.to)
@@ -386,12 +387,12 @@ export function MainLayout({ children, isAdmin = false }: { children: ReactNode,
               key={link.to}
               to={link.to}
               className={`flex flex-col items-center justify-center py-1 px-3 rounded-lg text-xs font-medium transition-all ${active
-                ? "text-[#0A856C] font-bold"
-                : "text-slate-500 hover:text-[#13415D]"
+                ? "text-accent font-bold"
+                : "text-slate-500 hover:text-text-primary"
                 }`}
             >
               <div className={`p-1 rounded-full ${active ? "bg-[#0A856C]/10" : ""}`}>
-                <Icon className={`w-5 h-5 ${active ? "text-[#0A856C]" : "text-slate-500"}`} />
+                <Icon className={`w-5 h-5 ${active ? "text-accent" : "text-slate-500"}`} />
               </div>
               <span className="text-[10px] mt-0.5">{link.label}</span>
             </Link>

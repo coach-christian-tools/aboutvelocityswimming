@@ -1,13 +1,13 @@
-import { auth, db, FIREBASE_PROJECT_ID, FIRESTORE_DATABASE_ID } from '@/features/swim-resources/lib/firebase';
-import { doc, getDoc, runTransaction, type Transaction } from 'firebase/firestore';
-import { getBlob, ref } from 'firebase/storage';
-import { storage } from '@/features/swim-resources/lib/firebase';
+import { auth, db, BACKEND_PROJECT_ID, DATASET_ID } from '@/features/swim-resources/lib/backend';
+import { doc, getDoc, runTransaction, type Transaction } from '@/lib/data';
+import { browserClient } from '@/lib/supabase/client';
+
 import { evidenceKey, initialProvenance, reconcileObservation, factFields, getFact, stableFacts, semanticFacts, safeEvidenceId, type EvidenceSource, type EvidenceBinding, type ObservationEvidence, type Provenance } from '@/features/swim-resources/lib/domain/evidence';
 import { isViewerCoach } from '@/features/swim-resources/lib/domain/data-viewer';
 import type { ImportBatch, ImportPreviewRow } from '@/features/swim-resources/lib/domain/import-batch';
 
 export function assertFreshTarget(target?: ImportBatch['target']): void {
-  if (FIRESTORE_DATABASE_ID !== 'velocity-v2' || (target && (target.project !== FIREBASE_PROJECT_ID || target.database !== FIRESTORE_DATABASE_ID))) throw new Error('Import is enabled only for the matching fresh velocity-v2 database.');
+  if (DATASET_ID !== 'velocity-v2' || (target && (target.project !== BACKEND_PROJECT_ID || target.database !== DATASET_ID))) throw new Error('Import is enabled only for the matching fresh velocity-v2 database.');
 }
 export async function verifyRowEvidence(batch: ImportBatch, row: ImportPreviewRow['row'], get = (path: string) => getDoc(doc(db, path))) {
   for (const evidence of row.evidence) {
@@ -69,8 +69,9 @@ export async function readRevisionCapture(sourceId: string, revisionId: string):
   if (!safeEvidenceId(sourceId) || !/^[a-f0-9]{64}$/.test(revisionId)) throw new Error('Invalid archive reference.');
   const revision = await getDoc(doc(db, 'sources', sourceId, 'revisions', revisionId));
   const data = revision.data();
-  if (!data || data.hash !== revisionId || typeof data.storagePath !== 'string' || !data.storagePath.startsWith(`evidence/${FIREBASE_PROJECT_ID}/${FIRESTORE_DATABASE_ID}/${sourceId}/`)) throw new Error('Invalid archived revision.');
-  const blob = await getBlob(ref(storage, `gs://${data.bucket}/${data.storagePath}`), 20 * 1024 * 1024);
+  if (!data || data.hash !== revisionId || typeof data.storagePath !== 'string' || !data.storagePath.startsWith(`evidence/${BACKEND_PROJECT_ID}/${DATASET_ID}/${sourceId}/`)) throw new Error('Invalid archived revision.');
+  const {data:blob,error}=await browserClient().storage.from('evidence').download(data.storagePath);
+  if(error||!blob)throw new Error('Unable to open this private capture.');
   const hash = await evidenceKeyBytes(await blob.arrayBuffer()); if (hash !== revisionId) throw new Error('Archive checksum mismatch.');
   return blob;
 }

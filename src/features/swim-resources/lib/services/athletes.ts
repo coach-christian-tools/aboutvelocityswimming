@@ -2,9 +2,9 @@ import { assertFreshTarget, prepareOrigins, writeWithOrigins } from './evidence'
 import { VELOCITY_TEAM_ID, validateEntityLinks } from '@/features/swim-resources/lib/domain/entities';
 import { normalizeAthleteStatus, publicAthlete, type FirestoreAthlete } from '@/features/swim-resources/lib/domain/athlete';
 import { isCalendarDate } from '@/features/swim-resources/lib/domain/date';
-import { db } from '@/features/swim-resources/lib/firebase';
+import { db } from '@/features/swim-resources/lib/backend';
 import { cleanFirestoreData } from '@/features/swim-resources/lib/utils/firestore-cleaner';
-import { collection, doc, getDocs, runTransaction } from 'firebase/firestore';
+import { collection, doc, getDocs, runTransaction } from '@/lib/data';
 import { buildAliases, statusToLocation } from './athlete-fields';
 
 const LEGACY_FIELDS = ['firstName', 'lastName', 'group', 'rosterGroup', 'location', 'email', 'phone', 'notes', '_formattedGroup'];

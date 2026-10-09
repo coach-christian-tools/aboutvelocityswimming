@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "id": "synthetic_example_1",
   "collectedAt": "2026-10-06T17:00:00Z",
   "sources": [
@@ -67,6 +67,7 @@
     }
   ],
   "target": {
+    "provider": "supabase",
     "project": "demo-cutter-coach",
     "database": "velocity-v2"
   }

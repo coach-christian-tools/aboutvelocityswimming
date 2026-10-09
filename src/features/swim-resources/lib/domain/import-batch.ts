@@ -28,8 +28,8 @@ export interface ImportRow {
   evidence: ObservationEvidence[];
 }
 export interface ImportBatch {
-  version: 2;
-  target: { project: string; database: 'velocity-v2' };
+  version: 3;
+  target: { provider: 'supabase'; project: string; database: 'velocity-v2' };
   id: string;
   collectedAt: string;
   sources: ImportSource[];
@@ -76,9 +76,9 @@ export function parseImportBatch(input: unknown): ImportBatch {
     input = JSON.parse(input);
   }
   assertJson(input);
-  if (!record(input) || input.version !== 2 || !record(input.target) || typeof input.target.project !== 'string' || !/^[a-zA-Z0-9_-]+$/.test(input.target.project) || input.target.database !== 'velocity-v2' || !safeId(input.id) || !isoTimestamp(input.collectedAt) ||
+  if (!record(input) || input.version !== 3 || !record(input.target) || input.target.provider !== 'supabase' || typeof input.target.project !== 'string' || !/^[a-zA-Z0-9_-]+$/.test(input.target.project) || input.target.database !== 'velocity-v2' || !safeId(input.id) || !isoTimestamp(input.collectedAt) ||
       !Array.isArray(input.sources) || !Array.isArray(input.rows) || !Array.isArray(input.unresolved)) {
-    throw new Error('Expected evidence-backed ImportBatch version 2 with id, collectedAt, sources, rows, and unresolved.');
+    throw new Error('Expected evidence-backed ImportBatch version 3 with id, collectedAt, sources, rows, and unresolved.');
   }
   if (!input.sources.length || input.sources.length > 100 || input.rows.length > 1000) throw new Error('Use 1–100 sources and at most 1,000 rows per batch.');
   if (new TextEncoder().encode(JSON.stringify({ sources: input.sources, unresolved: input.unresolved })).length > 750000) throw new Error('Source and unresolved metadata exceed the receipt size limit.');
@@ -164,7 +164,7 @@ const allowed: Record<ImportKind, string[]> = {
   standard: ['category', 'id', 'name', 'governingBody', 'seasonYears', 'effectiveDate', 'expirationDate', 'cuts'],
   athlete: ['teamId', 'personId', 'documentIds', 'id', 'name', 'dob', 'gender', 'status', 'currentGroup', 'aliases', 'teamUnifyId', 'swimsId', 'swimcloudId', 'graduatingYear', 'contact'],
   meet: ['teamId', 'hostTeamId', 'venueId', 'contactPersonIds', 'documentIds', 'id', 'name', 'sanctionNumber', 'host', 'hostClub', 'location', 'dates', 'type', 'venue', 'events'],
-  swim: ['teamId', 'id', 'athleteId', 'externalResult', 'athleteName', 'gender', 'ageAtSwim', 'ageGroup', 'eventCode', 'distance', 'stroke', 'course', 'isRelay', 'relay', 'timeMs', 'timeDisplay', 'splits', 'reactionTimeMs', 'status', 'dqDetails', 'meet', 'round'],
+  swim: ['teamId', 'id', 'athleteId', 'externalResult', 'athleteName', 'gender', 'ageAtSwim', 'ageGroup', 'eventCode', 'distance', 'stroke', 'course', 'isOfficial', 'isRelay', 'relay', 'timeMs', 'timeDisplay', 'splits', 'reactionTimeMs', 'status', 'dqDetails', 'meet', 'round'],
 };
 export function validateImportData(kind: ImportKind, data: JsonRecord): void {
   if (Object.hasOwn(ENTITY_COLLECTIONS, kind)) { validateEntityPatch(kind as EntityKind, data); return; }
@@ -221,6 +221,7 @@ export function validateImportData(kind: ImportKind, data: JsonRecord): void {
     if (data.events !== undefined) throw new Error('Event schedules require a separate reviewed schedule import. Meet imports accept metadata and document ID links.');
   }
   if (kind === 'swim') {
+    if(data.isOfficial!==undefined&&typeof data.isOfficial!=='boolean')throw new Error('Invalid official status');
     if (data.athleteName !== undefined) keys(data.athleteName, ['first', 'last'], 'race name');
     if (data.meet !== undefined) keys(data.meet, ['id', 'name', 'date', 'location', 'altitudeFeet'], 'race meet');
     if (data.timeMs !== undefined && (!Number.isInteger(data.timeMs) || Number(data.timeMs) < 0)) throw new Error('Race timeMs must be integer milliseconds.');

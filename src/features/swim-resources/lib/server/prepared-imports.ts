@@ -1,3 +1,4 @@
+import {BACKEND_PROJECT_ID,DATASET_ID} from '@/features/swim-resources/lib/backend';
 import { importDirectory } from '@/features/swim-resources/lib/domain/database-target';
 import { constants } from 'node:fs';
 import { open, readdir } from 'node:fs/promises';
@@ -6,7 +7,7 @@ import { IMPORT_COLLECTIONS, parseImportBatch } from '@/features/swim-resources/
 import type { ImportBatch } from '@/features/swim-resources/lib/domain/import-batch';
 import type { PreparedImportSummary } from '@/features/swim-resources/lib/domain/prepared-import';
 
-const pendingDirectory = () => join(process.cwd(), importDirectory(process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID || process.env.NEXT_PUBLIC_ATTENDANCE_FIREBASE_PROJECT_ID || 'unconfigured', process.env.NEXT_PUBLIC_FIRESTORE_DATABASE_ID || '(default)'), 'pending');
+const pendingDirectory = () => join(process.cwd(), importDirectory(BACKEND_PROJECT_ID, DATASET_ID), 'pending');
 
 export async function readPreparedImport(file: string, directory = pendingDirectory()): Promise<ImportBatch> {
   if (!/^[a-zA-Z0-9_-]{1,128}\.json$/.test(file)) throw new Error('Invalid prepared import name.');
@@ -16,7 +17,7 @@ export async function readPreparedImport(file: string, directory = pendingDirect
     const stat = await handle.stat();
     if (!stat.isFile() || stat.size > 4 * 1024 * 1024) throw new Error('Invalid prepared import file.');
     const batch = parseImportBatch(await handle.readFile('utf8'));
-    if (directory === pendingDirectory() && (batch.target.project !== (process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID || process.env.NEXT_PUBLIC_ATTENDANCE_FIREBASE_PROJECT_ID) || batch.target.database !== process.env.NEXT_PUBLIC_FIRESTORE_DATABASE_ID)) throw new Error('Batch belongs to another database.');
+    if (directory === pendingDirectory() && (batch.target.project !== BACKEND_PROJECT_ID || batch.target.database !== DATASET_ID)) throw new Error('Batch belongs to another database.');
     return batch;
   } finally {
     await handle.close();

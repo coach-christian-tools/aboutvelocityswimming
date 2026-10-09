@@ -1,0 +1,11 @@
+import {collection,db, type DocumentData, type QueryDocumentSnapshot} from '@/lib/data';
+import type {Athlete,AttendanceEntry,Meet,StandardSet,Swim} from '../types/schema';
+export {db}; export {auth} from '@/lib/auth';
+export const DATASET_ID='velocity-v2';
+export const BACKEND_PROJECT_ID=process.env.NEXT_PUBLIC_SUPABASE_URL?.split('//')[1]?.split('.')[0]?.split(':')[0]??'local';
+const converter=<T extends DocumentData>()=>({toFirestore:(data:T)=>data,fromFirestore:(snapshot:QueryDocumentSnapshot)=>snapshot.data() as T});
+export const athletesCol=collection(db,'athletes').withConverter(converter<Athlete>());
+export const swimsCol=collection(db,'swims').withConverter(converter<Swim>());
+export const attendanceCol=collection(db,'attendance').withConverter(converter<AttendanceEntry>());
+export const standardsCol=collection(db,'standards').withConverter(converter<StandardSet>());
+export const meetsCol=collection(db,'meets').withConverter(converter<Meet>());

@@ -5,7 +5,7 @@ import RevisionDownload from './RevisionDownload';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useMemo, useState, type FormEvent } from 'react';
-import type { QueryDocumentSnapshot } from 'firebase/firestore';
+import type { QueryDocumentSnapshot } from '@/lib/data';
 import { loadedAttention, fieldValue, parseViewerFilter, resolveViewerPath, viewerHref, type CollectionConfig, type ViewerFilter, type ViewerPath } from '@/features/swim-resources/lib/domain/data-viewer';
 import { owningTeam, relatedQueries, relationshipPath, VELOCITY_TEAM_ID } from '@/features/swim-resources/lib/domain/entities';
 import { normalizeFirestoreValue, summaryValue } from '@/features/swim-resources/lib/domain/firestore-values';

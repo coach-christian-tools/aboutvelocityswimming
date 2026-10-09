@@ -1,94 +1,103 @@
-import { useEffect, useState } from "react"
-import type { ReactNode } from "react"
-import type { User } from "firebase/auth"
-import { onAuthStateChanged, signOut } from "firebase/auth"
-import { doc, getDoc, collection, query, where, getDocs } from "firebase/firestore"
-import { AuthContext } from "./auth"
-import { auth, db } from "../lib/firebase"
+"use client";
+import { useEffect, useState } from "react";
+import type { ReactNode } from "react";
+import type { User } from "@/lib/auth";
+import { onAuthStateChanged, signOut } from "@/lib/auth";
+import { collection, query, where, getDocs } from "@/lib/data";
+import { AuthContext } from "./auth";
+import { auth, db } from "../lib/backend";
 
 export function AuthProvider({ children }: { children: ReactNode }) {
-  const [user, setUser] = useState<User | null>(null)
-  const [isAdmin, setIsAdmin] = useState(false)
-  const [familyId, setFamilyId] = useState<string | null>(null)
-  const [loading, setLoading] = useState(true)
-  const [clientMode, setClientMode] = useState(false)
-  const [previewFamilyId, setPreviewFamilyId] = useState<string | null>(null)
+  const [user, setUser] = useState<User | null>(null);
+  const [isAdmin, setIsAdmin] = useState(false);
+  const [familyId, setFamilyId] = useState<string | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [clientMode, setClientMode] = useState(false);
+  const [previewFamilyId, setPreviewFamilyId] = useState<string | null>(null);
 
   useEffect(() => {
-    let generation = 0
-    const unsubscribe = onAuthStateChanged(auth, async (firebaseUser) => {
-      const currentGeneration = ++generation
-      setLoading(true)
-      setIsAdmin(false)
-      setFamilyId(null)
-      setClientMode(false)
-      setPreviewFamilyId(null)
-      setUser(firebaseUser)
+    let generation = 0;
+    const unsubscribe = onAuthStateChanged(auth, async (accountUser) => {
+      const currentGeneration = ++generation;
+      setLoading(true);
+      setIsAdmin(false);
+      setFamilyId(null);
+      setClientMode(false);
+      setPreviewFamilyId(null);
+      setUser(accountUser);
 
-      if (firebaseUser) {
+      if (accountUser) {
         try {
-          let isAdminUser = false
-          const userEmail = firebaseUser.email?.toLowerCase().trim() || ""
-          const isVelocityAdmin = firebaseUser.emailVerified && userEmail.endsWith("@velocity-swimming.com")
+          const isAdminUser = accountUser.staff;
+          const userEmail = accountUser.email?.toLowerCase().trim() || "";
 
-          if (isVelocityAdmin) {
-            isAdminUser = true
-          } else {
-            try {
-              const adminDoc = await getDoc(doc(db, "admins", firebaseUser.uid))
-              if (adminDoc.exists()) {
-                isAdminUser = true
-              }
-            } catch {
-              // Ignore if admins collection lookup fails
-            }
-          }
+          let foundFamilyId = null;
+          const familiesRef = collection(db, "families");
 
-          let foundFamilyId = null
-          const familiesRef = collection(db, "families")
-
-          if (firebaseUser.email && firebaseUser.emailVerified) {
-            const q = query(familiesRef, where("authorizedEmails", "array-contains", firebaseUser.email))
-            const snapshot = await getDocs(q)
+          if (accountUser.email && accountUser.emailVerified) {
+            const q = query(
+              familiesRef,
+              where("authorizedEmails", "array-contains", accountUser.email),
+            );
+            const snapshot = await getDocs(q);
             if (!snapshot.empty) {
-              foundFamilyId = snapshot.docs[0].id
+              foundFamilyId = snapshot.docs[0].id;
             } else {
-              const qLower = query(familiesRef, where("authorizedEmails", "array-contains", userEmail))
-              const snapshotLower = await getDocs(qLower)
+              const qLower = query(
+                familiesRef,
+                where("authorizedEmails", "array-contains", userEmail),
+              );
+              const snapshotLower = await getDocs(qLower);
               if (!snapshotLower.empty) {
-                foundFamilyId = snapshotLower.docs[0].id
+                foundFamilyId = snapshotLower.docs[0].id;
               }
             }
           }
 
-          if (currentGeneration !== generation) return
-          setIsAdmin(isAdminUser)
-          setFamilyId(foundFamilyId)
+          if (currentGeneration !== generation) return;
+          setIsAdmin(isAdminUser);
+          setFamilyId(foundFamilyId);
         } catch (error) {
-          if (currentGeneration !== generation) return
-          console.error("Error fetching user roles:", error)
-          setIsAdmin(false)
-          setFamilyId(null)
+          if (currentGeneration !== generation) return;
+          console.error("Error fetching user roles:", error);
+          setIsAdmin(false);
+          setFamilyId(null);
         }
       } else {
-        setIsAdmin(false)
-        setFamilyId(null)
+        setIsAdmin(false);
+        setFamilyId(null);
       }
-      if (currentGeneration === generation) setLoading(false)
-    })
+      if (currentGeneration === generation) setLoading(false);
+    });
 
-    return () => { generation++; unsubscribe() }
-  }, [])
+    return () => {
+      generation++;
+      unsubscribe();
+    };
+  }, []);
 
   const logout = async () => {
-    await signOut(auth)
-  }
+    await signOut(auth);
+  };
 
-  const effectiveFamilyId = (clientMode && previewFamilyId) ? previewFamilyId : familyId;
+  const effectiveFamilyId =
+    clientMode && previewFamilyId ? previewFamilyId : familyId;
 
   return (
-    <AuthContext.Provider value={{ user, isAdmin, familyId: effectiveFamilyId, loading, logout, clientMode, setClientMode, previewFamilyId, setPreviewFamilyId }}>
+    <AuthContext.Provider
+      value={{
+        user,
+        isAdmin,
+        familyId: effectiveFamilyId,
+        loading,
+        logout,
+        clientMode,
+        setClientMode,
+        previewFamilyId,
+        setPreviewFamilyId,
+      }}
+    >
       {children}
     </AuthContext.Provider>
-  )
+  );
 }

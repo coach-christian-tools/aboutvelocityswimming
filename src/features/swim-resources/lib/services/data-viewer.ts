@@ -1,6 +1,6 @@
-import { auth, db } from '@/features/swim-resources/lib/firebase';
+import { auth, db } from '@/features/swim-resources/lib/backend';
 import { isViewerCoach, parseViewerFilter, resolveViewerPath, validDocumentId, type ViewerFilter } from '@/features/swim-resources/lib/domain/data-viewer';
-import { collection, doc, getDocFromServer, getDocsFromServer, limit, query, startAfter, where, type DocumentData, type QueryConstraint, type QueryDocumentSnapshot } from 'firebase/firestore';
+import { collection, doc, getDocFromServer, getDocsFromServer, limit, query, startAfter, where, type DocumentData, type QueryConstraint, type QueryDocumentSnapshot } from '@/lib/data';
 
 export const VIEWER_PAGE_SIZE = 100;
 export interface ViewerRecord { id: string; path: string; data: DocumentData }

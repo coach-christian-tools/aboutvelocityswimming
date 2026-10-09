@@ -2,13 +2,14 @@
 
 import { useState, useSyncExternalStore } from "react";
 import Link from "next/link";
-import "./Footer.css";
+import styles from "./Footer.module.css";
+import { scopedClasses } from "@/lib/styles";
 
 function subscribeTheme(callback: () => void) {
-  window.addEventListener("velocity-theme-change", callback);
+  window.addEventListener("theme-change", callback);
   window.addEventListener("storage", callback);
   return () => {
-    window.removeEventListener("velocity-theme-change", callback);
+    window.removeEventListener("theme-change", callback);
     window.removeEventListener("storage", callback);
   };
 }
@@ -43,8 +44,8 @@ export default function Footer() {
         metaTheme.setAttribute("content", targetTheme === "dark" ? "#102638" : "#FFFFFF");
       }
 
-      window.dispatchEvent(new Event("velocity-theme-change"));
-    } catch (e) {}
+      window.dispatchEvent(new Event("theme-change"));
+    } catch {}
   };
 
   const handleCopyEmail = (e: React.MouseEvent, email: string, label: string) => {
@@ -72,17 +73,17 @@ export default function Footer() {
   };
 
   return (
-    <footer className="footer">
-      <div className="container">
-        <div className="footer-grid">
-          <div className="footer-brand">
-            <img src="/assets/logo-variations/contrast/Long%20Contrast.svg" alt="Velocity Swimming Logo" className="footer-logo" />
-            <p className="footer-mission">
+    <footer className={scopedClasses(styles, 'footer')}>
+      <div className={scopedClasses(styles, 'container')}>
+        <div className={scopedClasses(styles, 'footer-grid')}>
+          <div className={scopedClasses(styles, 'footer-brand')}>
+            <img src="/assets/logo-variations/contrast/Long%20Contrast.svg" alt="Velocity Swimming Logo" className={scopedClasses(styles, 'footer-logo')} />
+            <p className={scopedClasses(styles, 'footer-mission')}>
               Promoting the development of life skills through the sport of swimming in the greater Wenatchee Valley.
             </p>
           </div>
 
-          <div className="footer-links">
+          <div className={scopedClasses(styles, 'footer-links')}>
             <h4>Quick Links</h4>
             <ul>
               <li><a href="https://www.gomotionapp.com/team/ievs/page/online-registration1" target="_blank" rel="noopener noreferrer">SportsEngine Registration</a></li>
@@ -90,10 +91,10 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="footer-contact">
+          <div className={scopedClasses(styles, 'footer-contact')}>
             <h4>Contact Us</h4>
             <p><strong>PO Box 2791</strong><br />Wenatchee, WA 98807</p>
-            <div className="contact-emails">
+            <div className={scopedClasses(styles, 'contact-emails')}>
               <a
                 href="mailto:execboard@velocity-swimming.com"
                 onClick={(e) => handleCopyEmail(e, "execboard@velocity-swimming.com", "Board email")}
@@ -119,13 +120,13 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="footer-bottom">
+        <div className={scopedClasses(styles, 'footer-bottom')}>
           <p>&copy; {new Date().getFullYear()} Velocity Swimming. All rights reserved.</p>
 
-          <div className="theme-switcher" role="radiogroup" aria-label="Theme preference">
+          <div className={scopedClasses(styles, 'theme-switcher')} role="radiogroup" aria-label="Theme preference">
             <button
               type="button"
-              className={`theme-btn ${themePreference === "system" ? "active" : ""}`}
+              className={scopedClasses(styles, `theme-btn ${themePreference === "system" ? "active" : ""}`)}
               onClick={() => handleThemeChange("system")}
               title="System appearance"
               aria-label="Use system color theme"
@@ -141,7 +142,7 @@ export default function Footer() {
             </button>
             <button
               type="button"
-              className={`theme-btn ${themePreference === "light" ? "active" : ""}`}
+              className={scopedClasses(styles, `theme-btn ${themePreference === "light" ? "active" : ""}`)}
               onClick={() => handleThemeChange("light")}
               title="Light theme"
               aria-label="Use light color theme"
@@ -163,7 +164,7 @@ export default function Footer() {
             </button>
             <button
               type="button"
-              className={`theme-btn ${themePreference === "dark" ? "active" : ""}`}
+              className={scopedClasses(styles, `theme-btn ${themePreference === "dark" ? "active" : ""}`)}
               onClick={() => handleThemeChange("dark")}
               title="Dark theme"
               aria-label="Use dark color theme"
@@ -177,9 +178,9 @@ export default function Footer() {
             </button>
           </div>
 
-          <div className="footer-legal-links">
+          <div className={scopedClasses(styles, 'footer-legal-links')}>
             <Link href="/privacy">Privacy Policy</Link>
-            <span className="footer-legal-divider">&bull;</span>
+            <span className={scopedClasses(styles, 'footer-legal-divider')}>&bull;</span>
             <Link href="/terms">Terms of Service</Link>
           </div>
         </div>
@@ -187,8 +188,8 @@ export default function Footer() {
       </div>
 
       {toastMessage && (
-        <div className="copy-toast" role="alert" aria-live="polite">
-          <span className="copy-toast-icon">✓</span>
+        <div className={scopedClasses(styles, 'copy-toast')} role="alert" aria-live="polite">
+          <span className={scopedClasses(styles, 'copy-toast-icon')}>✓</span>
           <span>{toastMessage}</span>
         </div>
       )}

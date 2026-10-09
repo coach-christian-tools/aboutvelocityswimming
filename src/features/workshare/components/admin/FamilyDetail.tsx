@@ -1,9 +1,11 @@
+import {teamWallTime} from "@/lib/dates"
+import SwimmerPicker from "@/components/shared/SwimmerPicker";
 import { completedHours as calculateCompletedHours, volunteerLogs } from "../../lib/hours"
 import { CHILD_GROUPS, DIVISION_STYLES, normalizeEmails } from "../../lib/families"
 import { useEffect, useState, useRef, useMemo } from "react"
-import { useParams, useNavigate, Link } from "react-router-dom"
-import { doc, onSnapshot, updateDoc, deleteDoc, collection, query, where, addDoc, Timestamp } from "firebase/firestore"
-import { db } from "../../lib/firebase"
+import { useParams, useNavigate, Link } from "@/features/workshare/lib/navigation"
+import { doc, onSnapshot, updateDoc, deleteDoc, collection, query, where, addDoc, Instant } from "@/lib/data"
+import { db } from "../../lib/backend"
 import type { Family, Child, ChildGroup, Registration, Posting, ManualHour, WorkDescription } from "../../types"
 import { Button } from "../ui/Button"
 import { Card } from "../ui/Card"
@@ -227,6 +229,7 @@ function FamilyDetailContent() {
 
     const authorizedEmails = normalizeEmails(emails)
     const validChildren = children.map(c => ({
+      ...(c.id ? {id:c.id} : {}),
       name: c.name.trim(),
       group: c.group
     })).filter(c => c.name.length > 0)
@@ -317,12 +320,11 @@ function FamilyDetailContent() {
       }
 
       // Add Manual Hour
-      const [year, month, day] = giveDate.split("-").map(Number)
-      const d = new Date(year, month - 1, day)
+      const d = teamWallTime(giveDate)
 
       await addDoc(collection(db, "manual_hours"), {
         familyId,
-        date: Timestamp.fromDate(d),
+        date: Instant.fromDate(d),
         startTime: giveStartTime || null,
         endTime: giveEndTime || null,
         hours: hrs,
@@ -359,12 +361,12 @@ function FamilyDetailContent() {
       <div className="space-y-4 py-8">
         <Link
           to="/admin/families"
-          className="inline-flex items-center text-sm font-semibold text-[#0A856C] hover:underline"
+          className="inline-flex items-center text-sm font-semibold text-accent hover:underline"
         >
           <ArrowLeft className="w-4 h-4 mr-1.5" />
           Back to Families
         </Link>
-        <Card className="p-8 text-center bg-white border border-slate-200">
+        <Card className="p-8 text-center bg-surface border border-slate-200">
           <p className="text-slate-500 font-medium">Family not found or may have been deleted.</p>
         </Card>
       </div>
@@ -383,13 +385,13 @@ function FamilyDetailContent() {
         <div>
           <Link
             to="/admin/families"
-            className="inline-flex items-center text-xs font-semibold text-slate-500 hover:text-[#0A856C] transition-colors mb-2"
+            className="inline-flex items-center text-xs font-semibold text-slate-500 hover:text-accent transition-colors mb-2"
           >
             <ArrowLeft className="w-3.5 h-3.5 mr-1" />
             Back to Family Roster
           </Link>
           <div className="flex items-center gap-3 flex-wrap">
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#13415D] tracking-tight">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-text-primary tracking-tight">
               {family.accountName || "Unnamed Family"}
             </h2>
             <span
@@ -411,7 +413,7 @@ function FamilyDetailContent() {
             <div className="flex items-baseline gap-1">
               <span
                 className={`text-2xl sm:text-3xl font-extrabold tracking-tight ${
-                  completedHours.general >= reqGen && reqGen > 0 ? "text-[#0A856C]" : "text-[#13415D]"
+                  completedHours.general >= reqGen && reqGen > 0 ? "text-accent" : "text-text-primary"
                 }`}
               >
                 {formattedGen}
@@ -427,7 +429,7 @@ function FamilyDetailContent() {
             <div className="flex items-baseline gap-1">
               <span
                 className={`text-2xl sm:text-3xl font-extrabold tracking-tight ${
-                  completedHours.event >= reqEvent && reqEvent > 0 ? "text-[#0A856C]" : "text-[#13415D]"
+                  completedHours.event >= reqEvent && reqEvent > 0 ? "text-accent" : "text-text-primary"
                 }`}
               >
                 {formattedEvent}
@@ -441,7 +443,7 @@ function FamilyDetailContent() {
       {/* Resizable Two-Halves Container */}
       <div
         ref={containerRef}
-        className="flex flex-col md:flex-row w-full bg-white border border-slate-200 rounded-2xl shadow-xs overflow-hidden min-h-[640px]"
+        className="flex flex-col md:flex-row w-full bg-surface border border-slate-200 rounded-2xl shadow-xs overflow-hidden min-h-[640px]"
       >
         {/* Left Half: Family Edit Form */}
         <div
@@ -452,10 +454,10 @@ function FamilyDetailContent() {
         >
           <div className="flex items-center justify-between pb-3 border-b border-slate-100">
             <div>
-              <h3 className="text-lg font-bold text-[#13415D]">Family Profile & Settings</h3>
+              <h3 className="text-lg font-bold text-text-primary">Family Profile & Settings</h3>
             </div>
             {saveSuccess && (
-              <span className="inline-flex items-center text-xs font-semibold text-[#0A856C] bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-200">
+              <span className="inline-flex items-center text-xs font-semibold text-accent bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-200">
                 <Check className="w-3.5 h-3.5 mr-1" />
                 Saved
               </span>
@@ -466,7 +468,7 @@ function FamilyDetailContent() {
             {/* Account Name & Division */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-xs font-semibold text-[#13415D] mb-1">Account Name</label>
+                <label className="block text-xs font-semibold text-text-primary mb-1">Account Name</label>
                 <Input
                   required
                   value={accountName}
@@ -475,10 +477,10 @@ function FamilyDetailContent() {
                 />
               </div>
               <div>
-                <label className="block text-xs font-semibold text-[#13415D] mb-1">Division</label>
+                <label className="block text-xs font-semibold text-text-primary mb-1">Division</label>
                 <div className="relative">
                   <select
-                    className="flex h-11 w-full appearance-none rounded-lg border border-slate-300 bg-white pl-3.5 pr-10 py-2 text-sm text-[#13415D] focus-visible:outline-none focus-visible:border-[#0A856C] focus-visible:ring-2 focus-visible:ring-[#0A856C]/20 cursor-pointer"
+                    className="flex h-11 w-full appearance-none rounded-lg border border-slate-300 bg-surface pl-3.5 pr-10 py-2 text-sm text-text-primary focus-visible:outline-none focus-visible:border-[#0A856C] focus-visible:ring-2 focus-visible:ring-[#0A856C]/20 cursor-pointer"
                     value={category}
                     onChange={e => setCategory(e.target.value as Family["category"])}
                   >
@@ -494,7 +496,7 @@ function FamilyDetailContent() {
 
             {/* Authorized Emails */}
             <div>
-              <label className="block text-xs font-semibold text-[#13415D] mb-1">
+              <label className="block text-xs font-semibold text-text-primary mb-1">
                 Authorized Emails (comma-separated)
               </label>
               <Input
@@ -509,7 +511,7 @@ function FamilyDetailContent() {
             <div className="space-y-2.5 pt-2">
               <div className="flex items-center justify-between">
                 <div>
-                  <label className="block text-xs font-semibold text-[#13415D]">Swimmers</label>
+                  <label className="block text-xs font-semibold text-text-primary">Swimmers</label>
                   <p className="text-[11px] text-slate-500">Registered children and assigned practice group.</p>
                 </div>
                 <Button
@@ -517,7 +519,7 @@ function FamilyDetailContent() {
                   variant="outline"
                   size="sm"
                   onClick={handleAddChild}
-                  className="h-8 text-xs px-2.5 text-[#0A856C] border-[#0A856C]/30 hover:bg-[#0A856C]/10"
+                  className="h-8 text-xs px-2.5 text-accent border-[#0A856C]/30 hover:bg-[#0A856C]/10"
                 >
                   <Plus className="w-3.5 h-3.5 mr-1" />
                   Add Child
@@ -529,22 +531,17 @@ function FamilyDetailContent() {
                   {children.map((child, index) => (
                     <div
                       key={index}
-                      className="flex items-center gap-2 bg-slate-50 p-2.5 rounded-lg border border-slate-200"
+                      className="flex items-center gap-2 bg-bg p-2.5 rounded-lg border border-slate-200"
                     >
                       <div className="flex-1">
-                        <Input
-                          placeholder="Child Name"
-                          value={child.name}
-                          onChange={e => handleChildChange(index, "name", e.target.value)}
-                          className="h-9 text-xs"
-                          required
-                        />
+                        <SwimmerPicker child={child} onChange={value=>setChildren(previous=>previous.map((item,i)=>i===index?value:item))}/>
                       </div>
                       <div className="relative w-40 sm:w-44">
                         <select
                           value={child.group}
+                          disabled={Boolean(child.id)}
                           onChange={e => handleChildChange(index, "group", e.target.value as ChildGroup)}
-                          className="flex h-9 w-full appearance-none rounded-lg border border-slate-300 bg-white pl-3 pr-9 py-1 text-xs text-[#13415D] focus-visible:outline-none focus-visible:border-[#0A856C] focus-visible:ring-2 focus-visible:ring-[#0A856C]/20 cursor-pointer"
+                          className="flex h-9 w-full appearance-none rounded-lg border border-slate-300 bg-surface pl-3 pr-9 py-1 text-xs text-text-primary focus-visible:outline-none focus-visible:border-[#0A856C] focus-visible:ring-2 focus-visible:ring-[#0A856C]/20 cursor-pointer"
                         >
                           {CHILD_GROUPS.map(grp => (
                             <option key={grp} value={grp}>
@@ -566,7 +563,7 @@ function FamilyDetailContent() {
                   ))}
                 </div>
               ) : (
-                <div className="text-xs text-slate-400 italic bg-slate-50 border border-dashed border-slate-200 rounded-lg p-3 text-center">
+                <div className="text-xs text-slate-400 italic bg-bg border border-dashed border-slate-200 rounded-lg p-3 text-center">
                   No children registered yet. Click &quot;Add Child&quot; to add swimmers.
                 </div>
               )}
@@ -575,7 +572,7 @@ function FamilyDetailContent() {
             {/* Numerical inputs for required hours */}
             <div className="grid grid-cols-2 gap-3 pt-2">
               <div>
-                <label className="block text-xs font-semibold text-[#13415D] mb-1">General Pool Hours Req.</label>
+                <label className="block text-xs font-semibold text-text-primary mb-1">General Pool Hours Req.</label>
                 <Input
                   type="text"
                   inputMode="numeric"
@@ -586,7 +583,7 @@ function FamilyDetailContent() {
                 />
               </div>
               <div>
-                <label className="block text-xs font-semibold text-[#13415D] mb-1">Event-Specific Hours Req.</label>
+                <label className="block text-xs font-semibold text-text-primary mb-1">Event-Specific Hours Req.</label>
                 <Input
                   type="text"
                   inputMode="numeric"
@@ -644,7 +641,7 @@ function FamilyDetailContent() {
               isDragging ? "bg-[#0A856C]" : "bg-slate-200 group-hover:bg-slate-300"
             }`}
           />
-          <div className="absolute p-1 bg-white border border-slate-200 rounded-full shadow-xs text-slate-400">
+          <div className="absolute p-1 bg-surface border border-slate-200 rounded-full shadow-xs text-slate-400">
             <GripVertical className="w-3 h-3" />
           </div>
         </div>
@@ -654,22 +651,22 @@ function FamilyDetailContent() {
 
         {/* Right Half: Volunteer Logs */}
         <div
-          className="w-full md:overflow-y-auto p-6 bg-slate-50/50 flex flex-col"
+          className="w-full md:overflow-y-auto p-6 bg-bg/50 flex flex-col"
           {...(typeof window !== "undefined" && window.innerWidth >= 768
             ? { style: { width: `${100 - splitPercent}%` } }
             : {})}
         >
           <div className="flex items-center justify-between pb-3 border-b border-slate-200">
             <div className="flex items-center gap-2">
-              <ClipboardList className="w-5 h-5 text-[#0A856C]" />
-              <h3 className="text-lg font-bold text-[#13415D]">Volunteer Logs</h3>
+              <ClipboardList className="w-5 h-5 text-accent" />
+              <h3 className="text-lg font-bold text-text-primary">Volunteer Logs</h3>
             </div>
             <Button
               type="button"
               variant="outline"
               size="sm"
               onClick={() => setIsGiveHoursOpen(true)}
-              className="text-[#0A856C] border-[#0A856C]/30 hover:bg-[#0A856C]/10"
+              className="text-accent border-[#0A856C]/30 hover:bg-[#0A856C]/10"
             >
               <Plus className="w-4 h-4 mr-1.5" />
               Give Hours
@@ -677,9 +674,9 @@ function FamilyDetailContent() {
           </div>
 
           {isGiveHoursOpen && (
-            <div className="mb-6 p-4 bg-white border border-slate-200 rounded-xl shadow-xs animate-in fade-in zoom-in-95 duration-200 mt-4">
+            <div className="mb-6 p-4 bg-surface border border-slate-200 rounded-xl shadow-xs animate-in fade-in zoom-in-95 duration-200 mt-4">
               <div className="flex items-center justify-between mb-4">
-                <h4 className="font-bold text-[#13415D]">Give Manual Hours</h4>
+                <h4 className="font-bold text-text-primary">Give Manual Hours</h4>
                 <button
                   type="button"
                   onClick={() => setIsGiveHoursOpen(false)}
@@ -691,28 +688,28 @@ function FamilyDetailContent() {
               <form onSubmit={handleGiveHoursSubmit} className="space-y-4">
                 <div className="grid grid-cols-2 gap-3">
                   <div>
-                    <label className="block text-xs font-semibold text-[#13415D] mb-1">Date</label>
+                    <label className="block text-xs font-semibold text-text-primary mb-1">Date</label>
                     <Input type="date" required value={giveDate} onChange={e => setGiveDate(e.target.value)} />
                   </div>
                   <div>
-                    <label className="block text-xs font-semibold text-[#13415D] mb-1">Hours</label>
+                    <label className="block text-xs font-semibold text-text-primary mb-1">Hours</label>
                     <Input type="number" step="0.1" required value={giveHours} onChange={e => setGiveHours(e.target.value)} placeholder="e.g. 2.5" />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-2 gap-3">
                   <div>
-                    <label className="block text-xs font-semibold text-[#13415D] mb-1">Start Time (Opt)</label>
+                    <label className="block text-xs font-semibold text-text-primary mb-1">Start Time (Opt)</label>
                     <Input type="time" value={giveStartTime} onChange={e => setGiveStartTime(e.target.value)} />
                   </div>
                   <div>
-                    <label className="block text-xs font-semibold text-[#13415D] mb-1">Stop Time (Opt)</label>
+                    <label className="block text-xs font-semibold text-text-primary mb-1">Stop Time (Opt)</label>
                     <Input type="time" value={giveEndTime} onChange={e => setGiveEndTime(e.target.value)} />
                   </div>
                 </div>
 
                 <div className="relative">
-                  <label className="block text-xs font-semibold text-[#13415D] mb-1">Description of Work (Opt)</label>
+                  <label className="block text-xs font-semibold text-text-primary mb-1">Description of Work (Opt)</label>
                   <div className="relative">
                     <Input
                       value={giveDescription}
@@ -725,14 +722,14 @@ function FamilyDetailContent() {
                     <ChevronDown className="absolute right-2.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" />
                   </div>
                   {showDescDropdown && workDescriptions.length > 0 && (
-                    <div className="absolute z-50 w-full mt-1 bg-white border border-slate-200 rounded-lg shadow-lg max-h-48 overflow-y-auto">
+                    <div className="absolute z-50 w-full mt-1 bg-surface border border-slate-200 rounded-lg shadow-lg max-h-48 overflow-y-auto">
                       {workDescriptions
                         .filter(d => d.text.toLowerCase().includes(giveDescription.toLowerCase()))
                         .map(d => (
                           <button
                             key={d.id}
                             type="button"
-                            className="w-full text-left px-3 py-2 text-sm text-[#13415D] hover:bg-slate-50 transition-colors"
+                            className="w-full text-left px-3 py-2 text-sm text-text-primary hover:bg-bg transition-colors"
                             onClick={() => {
                               setGiveDescription(d.text)
                               setShowDescDropdown(false)
@@ -746,14 +743,14 @@ function FamilyDetailContent() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-[#13415D] mb-1">Hour Type</label>
-                  <div className="flex rounded-lg border border-slate-200 p-0.5 bg-slate-50">
+                  <label className="block text-xs font-semibold text-text-primary mb-1">Hour Type</label>
+                  <div className="flex rounded-lg border border-slate-200 p-0.5 bg-bg">
                     <button
                       type="button"
                       onClick={() => setGiveType("General")}
                       className={`flex-1 py-1.5 text-xs font-semibold rounded-md transition-all ${
                         giveType === "General"
-                          ? "bg-white text-[#13415D] shadow-sm border border-slate-200/50"
+                          ? "bg-surface text-text-primary shadow-sm border border-slate-200/50"
                           : "text-slate-500 hover:text-slate-700"
                       }`}
                     >
@@ -764,7 +761,7 @@ function FamilyDetailContent() {
                       onClick={() => setGiveType("Event-Specific")}
                       className={`flex-1 py-1.5 text-xs font-semibold rounded-md transition-all ${
                         giveType === "Event-Specific"
-                          ? "bg-white text-[#13415D] shadow-sm border border-slate-200/50"
+                          ? "bg-surface text-text-primary shadow-sm border border-slate-200/50"
                           : "text-slate-500 hover:text-slate-700"
                       }`}
                     >
@@ -790,7 +787,7 @@ function FamilyDetailContent() {
                 placeholder="Search logs..."
                 value={searchQuery}
                 onChange={e => setSearchQuery(e.target.value)}
-                className="w-full pl-9 pr-3 py-2 text-sm bg-white border border-slate-200 rounded-lg focus:outline-none focus:border-[#0A856C] focus:ring-1 focus:ring-[#0A856C]"
+                className="w-full pl-9 pr-3 py-2 text-sm bg-surface border border-slate-200 rounded-lg focus:outline-none focus:border-[#0A856C] focus:ring-1 focus:ring-[#0A856C]"
               />
             </div>
             <div className="relative">
@@ -798,7 +795,7 @@ function FamilyDetailContent() {
               <select
                 value={typeFilter}
                 onChange={e => setTypeFilter(e.target.value as typeof typeFilter)}
-                className="pl-9 pr-9 py-2 text-sm bg-white border border-slate-200 rounded-lg focus:outline-none focus:border-[#0A856C] focus:ring-1 focus:ring-[#0A856C] appearance-none cursor-pointer"
+                className="pl-9 pr-9 py-2 text-sm bg-surface border border-slate-200 rounded-lg focus:outline-none focus:border-[#0A856C] focus:ring-1 focus:ring-[#0A856C] appearance-none cursor-pointer"
               >
                 <option value="All">All Types</option>
                 <option value="General">General</option>
@@ -819,17 +816,17 @@ function FamilyDetailContent() {
               </div>
             ) : (
               combinedLogs.map(log => (
-                <div key={log.id} className="bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs">
+                <div key={log.id} className="bg-surface p-3.5 rounded-xl border border-slate-200 shadow-xs">
                   <div className="flex items-start justify-between gap-3 mb-2">
                     <div>
-                      <h4 className="font-bold text-[#13415D] text-sm">{log.title}</h4>
+                      <h4 className="font-bold text-text-primary text-sm">{log.title}</h4>
                       <p className="text-xs text-slate-500 mt-0.5">
                         {format(log.date, "MMM d, yyyy")}
                         {log.startTime && log.endTime && ` • ${log.startTime} - ${log.endTime}`}
                       </p>
                     </div>
                     <div className="text-right">
-                      <div className="text-sm font-bold text-[#0A856C] whitespace-nowrap">+{log.hours} hrs</div>
+                      <div className="text-sm font-bold text-accent whitespace-nowrap">+{log.hours} hrs</div>
                       <div className="text-[10px] font-semibold text-slate-400 uppercase tracking-wide mt-0.5">
                         {log.type}
                       </div>

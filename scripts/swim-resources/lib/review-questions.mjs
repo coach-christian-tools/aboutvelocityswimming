@@ -8,7 +8,7 @@ function validateUpdate(update) {
 }
 /** Audit annotations never accept facts or advance verification/change dates. */
 export async function updateReviewQuestions(context, manifest, at = new Date().toISOString()) {
-  if (context.database !== 'velocity-v2' || manifest.version !== 1 || !safeEvidenceId(manifest.id) || manifest.target?.project !== context.project || manifest.target.database !== context.database || !isoTime(at) || !Array.isArray(manifest.updates) || !manifest.updates.length || manifest.updates.length > 25) throw new Error('Invalid review-question target or size.');
+  if (context.database !== 'velocity-v2' || manifest.version !== 1 || manifest.target?.provider !== 'supabase' || !safeEvidenceId(manifest.id) || manifest.target?.project !== context.project || manifest.target.database !== context.database || !isoTime(at) || !Array.isArray(manifest.updates) || !manifest.updates.length || manifest.updates.length > 25) throw new Error('Invalid review-question target or size.');
   manifest.updates.forEach(validateUpdate);
   if (new Set(manifest.updates.map(update => `${update.targetPath}/${update.id}`)).size !== manifest.updates.length) throw new Error('Duplicate review question.');
   const report = { changed: 0, unchanged: 0 };

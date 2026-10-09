@@ -19,7 +19,7 @@ const subscribe = (callback: () => void) => {
 };
 
 const getSnapshot = (): ThemeMode => {
-  const saved = localStorage.getItem('theme') as ThemeMode | null;
+  const saved = localStorage.getItem('velocity-theme') as ThemeMode | null;
   if (saved === 'light' || saved === 'dark' || saved === 'system') {
     return saved;
   }
@@ -32,9 +32,9 @@ export default function ThemeToggle({ singleIcon = false }: ThemeToggleProps) {
   const mode = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
   const setTheme = (newMode: ThemeMode) => {
-    localStorage.setItem('theme', newMode);
+    localStorage.setItem('velocity-theme', newMode);
     if (newMode === 'system') {
-      document.documentElement.removeAttribute('data-theme');
+      document.documentElement.setAttribute('data-theme', window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
     } else {
       document.documentElement.setAttribute('data-theme', newMode);
     }

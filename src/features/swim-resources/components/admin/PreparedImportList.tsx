@@ -3,8 +3,8 @@
 
 import { PREPARED_IMPORTS_PATH } from '../../lib/routes.ts';
 import { useEffect, useState } from 'react';
-import { onAuthStateChanged } from 'firebase/auth';
-import { auth } from '@/features/swim-resources/lib/firebase';
+import { onAuthStateChanged } from '@/lib/auth';
+import { auth } from '@/features/swim-resources/lib/backend';
 import type { PreparedImportSummary } from '@/features/swim-resources/lib/domain/prepared-import';
 
 async function preparedRequest(file?: string, signal?: AbortSignal) {

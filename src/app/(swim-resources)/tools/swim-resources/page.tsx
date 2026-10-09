@@ -1,29 +1,4 @@
-import AdminLoginFooter from '@/features/swim-resources/components/AdminLoginFooter';
-import FlipLogo from '@/features/swim-resources/components/FlipLogo';
-import UnderConstruction from '@/features/swim-resources/components/UnderConstruction';
 import Link from 'next/link';
-
-export default function Home() {
-  return (
-    <div className="min-h-screen bg-bg flex flex-col justify-between">
-      <nav aria-label="Website navigation" className="px-4 pt-4">
-        <Link href="/tools" className="text-primary-blue hover:underline">← Back to Tools</Link>
-      </nav>
-      <main className="container mx-auto px-4 max-w-xl flex-1 flex flex-col items-center justify-center py-12">
-        <div className="flex justify-center mb-8">
-          <FlipLogo />
-        </div>
-        <div className="w-full bg-surface border border-border rounded-2xl p-6 sm:p-8 shadow-xs">
-          <UnderConstruction 
-            showHomeLink={false}
-            title="Under Construction"
-            description="Velocity's Data Hub is currently being built. Check back soon for updates!"
-            className="p-0"
-          />
-        </div>
-      </main>
-
-      <AdminLoginFooter />
-    </div>
-  );
-}
+import AdminLoginFooter from '@/features/swim-resources/components/AdminLoginFooter';
+const links=[['Times and records','Browse best times and team records.','times'],['USA Swimming standards','Compare event times with motivational standards.','standards/usa'],['Championship standards','Review qualifying and bonus cuts.','standards/champ'],['Practice attendance','Coaching tools connected to the shared roster.','attendance']];
+export default function ResourceHome(){return <main className="mx-auto max-w-5xl px-6 py-8"><Link className="text-accent underline" href="/tools">All tools</Link><h1 className="text-4xl mt-4 mb-3">Swim Resources</h1><p className="text-text-secondary mb-8">Swimming standards, results, and coaching tools in one place.</p><div className="grid sm:grid-cols-2 gap-5">{links.map(([title,description,path])=><Link key={path} href={'/tools/swim-resources/'+path} className="rounded-xl border border-border bg-surface p-6 hover:bg-hover-bg"><h2 className="text-xl mb-2">{title}</h2><p className="text-text-secondary">{description}</p></Link>)}</div><AdminLoginFooter/></main>;}

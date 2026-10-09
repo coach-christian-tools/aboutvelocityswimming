@@ -1,4 +1,4 @@
-import { Timestamp } from "firebase/firestore"
+import { Instant } from "@/lib/data"
 
 export type ChildGroup = 
   | "No Assignment"
@@ -39,9 +39,9 @@ export interface Posting {
   id: string
   type: "General" | "Event-Specific"
   title: string
-  date: Timestamp
-  startTime?: Timestamp | null
-  endTime?: Timestamp | null
+  date: Instant
+  startTime?: Instant | null
+  endTime?: Instant | null
   description?: string | null
   positions: {
     min: number
@@ -69,7 +69,7 @@ export interface Registration {
 export interface ManualHour {
   id: string
   familyId: string
-  date: Timestamp
+  date: Instant
   startTime?: string | null
   endTime?: string | null
   hours: number

@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import "./Programs.css";
+import styles from "./Programs.module.css";
+import { scopedClasses } from "@/lib/styles";
 
 const DIVISIONS = [
   {
@@ -105,47 +106,47 @@ export default function Programs() {
   };
 
   return (
-    <section id="programs" className="section programs-section">
-      <div className="container">
+    <section id="programs" className={scopedClasses(styles, 'section programs-section')}>
+      <div className={scopedClasses(styles, 'container')}>
         {/* Section Header */}
-        <div className="text-center mb-12">
-          <span className="section-badge">Programs & Pathways</span>
-          <h2 className="section-title centered">Team Divisions & Training Groups</h2>
-          <p className="lead-text centered max-w-3xl">
+        <div className={scopedClasses(styles, 'text-center mb-12')}>
+          <span className={scopedClasses(styles, 'section-badge')}>Programs & Pathways</span>
+          <h2 className={scopedClasses(styles, 'section-title centered')}>Team Divisions & Training Groups</h2>
+          <p className={scopedClasses(styles, 'lead-text centered max-w-3xl')}>
             From first-time swimmers mastering the water to athletes competing on the national stage, Velocity Swimming provides structured pathways for every age and ambition.
           </p>
         </div>
 
         {/* Divisions Cards Grid */}
-        <div className="divisions-grid mb-16">
+        <div className={scopedClasses(styles, 'divisions-grid mb-16')}>
           {DIVISIONS.map((div) => (
-            <div key={div.id} className={`division-card ${div.id === "competitive" ? "featured-division" : ""}`}>
-              <div className="division-header">
-                <span className="division-badge">{div.badge}</span>
-                <h3 className="division-title">{div.name}</h3>
-                <p className="division-summary">{div.summary}</p>
+            <div key={div.id} className={scopedClasses(styles, `division-card ${div.id === "competitive" ? "featured-division" : ""}`)}>
+              <div className={scopedClasses(styles, 'division-header')}>
+                <span className={scopedClasses(styles, 'division-badge')}>{div.badge}</span>
+                <h3 className={scopedClasses(styles, 'division-title')}>{div.name}</h3>
+                <p className={scopedClasses(styles, 'division-summary')}>{div.summary}</p>
               </div>
 
-              <div className="division-groups">
-                <span className="groups-title">Training Groups</span>
-                <div className="groups-list">
+              <div className={scopedClasses(styles, 'division-groups')}>
+                <span className={scopedClasses(styles, 'groups-title')}>Training Groups</span>
+                <div className={scopedClasses(styles, 'groups-list')}>
                   {div.groups.map((group) => (
-                    <div key={group.name} className="group-pill-card">
-                      <div className="group-head">
+                    <div key={group.name} className={scopedClasses(styles, 'group-pill-card')}>
+                      <div className={scopedClasses(styles, 'group-head')}>
                         <strong>{group.name}</strong>
-                        <span className="group-age">{group.age}</span>
+                        <span className={scopedClasses(styles, 'group-age')}>{group.age}</span>
                       </div>
                     </div>
                   ))}
                 </div>
               </div>
 
-              <div className="division-footer-meta">
-                <div className="meta-item">
-                  <span className="meta-label">Commitment:</span> {div.commitment}
+              <div className={scopedClasses(styles, 'division-footer-meta')}>
+                <div className={scopedClasses(styles, 'meta-item')}>
+                  <span className={scopedClasses(styles, 'meta-label')}>Commitment:</span> {div.commitment}
                 </div>
-                <div className="meta-item">
-                  <span className="meta-label">Placement:</span> {div.entry}
+                <div className={scopedClasses(styles, 'meta-item')}>
+                  <span className={scopedClasses(styles, 'meta-label')}>Placement:</span> {div.entry}
                 </div>
               </div>
             </div>
@@ -155,61 +156,61 @@ export default function Programs() {
 
 
         {/* Registration Process & CTA */}
-        <div id="join" className="registration-flow-card glass-panel">
-          <div className="flow-header text-center">
-            <span className="flow-badge">Get Started</span>
+        <div id="join" className={scopedClasses(styles, 'registration-flow-card glass-panel')}>
+          <div className={scopedClasses(styles, 'flow-header text-center')}>
+            <span className={scopedClasses(styles, 'flow-badge')}>Get Started</span>
             <h3>How to Join Velocity Swimming</h3>
             <p>Ready to jump into the pool? Follow our 3-step registration process to get placed and cleared for practice.</p>
           </div>
 
-          <div className="steps-grid">
-            <div className="step-card">
-              <div className="step-number">1</div>
+          <div className={scopedClasses(styles, 'steps-grid')}>
+            <div className={scopedClasses(styles, 'step-card')}>
+              <div className={scopedClasses(styles, 'step-number')}>1</div>
               <h4>Review Policies</h4>
               <p>
                 Familiarize yourself with our team culture, safety guidelines, and the <strong>C.A.R.E. Charter</strong> (Control, Accountability, Respect, Effort).
               </p>
             </div>
 
-            <div className="step-card">
-              <div className="step-number">2</div>
+            <div className={scopedClasses(styles, 'step-card')}>
+              <div className={scopedClasses(styles, 'step-number')}>2</div>
               <h4>Schedule a Tryout</h4>
               <p>
                 New swimmers attend a quick placement evaluation:
               </p>
-              <div className="tryout-links">
+              <div className={scopedClasses(styles, 'tryout-links')}>
                 <a
                   href="mailto:coachaudrey@velocity-swimming.com"
                   onClick={(e) => handleCopyEmail(e, "coachaudrey@velocity-swimming.com", "Coach Audrey's email")}
-                  className="tryout-btn"
+                  className={scopedClasses(styles, 'tryout-btn')}
                 >
                   <strong>12 & Under:</strong> Email Coach Audrey
                 </a>
                 <a
                   href="mailto:coachchristian@velocity-swimming.com"
                   onClick={(e) => handleCopyEmail(e, "coachchristian@velocity-swimming.com", "Coach Christian's email")}
-                  className="tryout-btn"
+                  className={scopedClasses(styles, 'tryout-btn')}
                 >
                   <strong>13 & Over:</strong> Email Coach Christian
                 </a>
-                <span className="masters-note">
+                <span className={scopedClasses(styles, 'masters-note')}>
                   <em><strong>Masters (19+):</strong> No test required — drop in to a practice!</em>
                 </span>
               </div>
             </div>
 
-            <div className="step-card">
-              <div className="step-number">3</div>
+            <div className={scopedClasses(styles, 'step-card')}>
+              <div className={scopedClasses(styles, 'step-number')}>3</div>
               <h4>Complete Clearance</h4>
               <p>
                 Sign your Division Agreement, submit registration fees, and complete your clearance on our SportsEngine platform.
               </p>
-              <div className="mt-4">
+              <div className={scopedClasses(styles, 'mt-4')}>
                 <a
                   href="https://www.gomotionapp.com/team/ievs/page/online-registration1"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-primary w-full register-cta-btn"
+                  className={scopedClasses(styles, 'btn btn-primary w-full register-cta-btn')}
                 >
                   Register on SportsEngine &rarr;
                 </a>
@@ -220,8 +221,8 @@ export default function Programs() {
       </div>
 
       {toastMessage && (
-        <div className="copy-toast" role="alert" aria-live="polite">
-          <span className="copy-toast-icon">✓</span>
+        <div className={scopedClasses(styles, 'copy-toast')} role="alert" aria-live="polite">
+          <span className={scopedClasses(styles, 'copy-toast-icon')}>✓</span>
           <span>{toastMessage}</span>
         </div>
       )}

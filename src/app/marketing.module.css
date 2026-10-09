@@ -1,0 +1,273 @@
+.marketing-site {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: var(--font-body);
+  background-color: var(--background);
+  color: var(--text-main);
+  scroll-behavior: smooth;
+}
+
+.marketing-site :is(h1, h2, h3, h4, h5, h6) {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.marketing-site a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.marketing-site :is(button, :global(.btn)) {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-normal);
+}
+
+.marketing-site :global(.btn-primary) {
+  background-color: var(--accent);
+  color: var(--primary-ink);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-md);
+}
+
+.marketing-site :global(.btn-primary):hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.marketing-site :global(.btn-secondary) {
+  background-color: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-full);
+}
+
+.marketing-site :global(.btn-secondary):hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+:global(:root)[data-theme="dark"] .marketing-site :global(.btn-secondary) {
+  color: var(--text-main);
+  border-color: #8ba9bc;
+}
+:global(:root)[data-theme="dark"]
+  .marketing-site
+  :global(.btn-secondary):hover {
+  background-color: var(--background-alt);
+  color: var(--text-main);
+  border-color: var(--text-main);
+}
+@media (prefers-color-scheme: dark) {
+  :global(:root):not([data-theme="light"])
+    .marketing-site
+    :global(.btn-secondary) {
+    color: var(--text-main);
+    border-color: #8ba9bc;
+  }
+  :global(:root):not([data-theme="light"])
+    .marketing-site
+    :global(.btn-secondary):hover {
+    background-color: var(--background-alt);
+    color: var(--text-main);
+    border-color: var(--text-main);
+  }
+}
+
+.marketing-site :global(.section) {
+  padding: var(--section-padding);
+}
+
+.marketing-site :global(.container) {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.marketing-site :global(.animate-fade-in) {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.marketing-site :global(.glass-panel) {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+:global(:root)[data-theme="dark"] .marketing-site :global(.glass-panel) {
+  background: rgba(22, 50, 71, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@media (prefers-color-scheme: dark) {
+  :global(:root):not([data-theme="light"])
+    .marketing-site
+    :global(.glass-panel) {
+    background: rgba(22, 50, 71, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+}
+
+/* Copy Toast Notification */
+.marketing-site :global(.copy-toast) {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #0d2c40;
+  color: white;
+  padding: 0.85rem 1.65rem;
+  border-radius: var(--radius-full);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  z-index: 99999;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: 1px solid rgba(10, 133, 108, 0.5);
+  animation: toastFadeIn 0.3s ease-out;
+  pointer-events: none;
+}
+
+.marketing-site :global(.copy-toast-icon) {
+  background: var(--accent);
+  color: white;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+@keyframes toastFadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 15px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+@media (max-width: 576px) {
+  .marketing-site :global(.copy-toast) {
+    width: 90%;
+    max-width: 360px;
+    text-align: center;
+    justify-content: center;
+    font-size: 0.88rem;
+  }
+}
+
+/* Shared navigation clearance, including links from other pages. */
+.marketing-site main [id] {
+  scroll-margin-top: calc(var(--site-header-height) + 24px);
+}
+.marketing-site :where(a, button):focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marketing-site {
+    scroll-behavior: auto;
+  }
+}
+
+/* Shared section typography and layout utilities. */
+.marketing-site :global(.section-badge) {
+  display: inline-block;
+  background-color: rgba(10, 133, 108, 0.1);
+  color: var(--accent);
+  padding: 0.35rem 1rem;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.75rem;
+}
+
+.marketing-site :global(.max-w-3xl) {
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.marketing-site :global(.w-full) {
+  width: 100%;
+}
+
+.marketing-site :global(.section-title) {
+  font-size: clamp(2rem, 3vw, 3rem);
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.marketing-site :global(.section-title)::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--accent);
+  margin-top: 1rem;
+  border-radius: 2px;
+}
+
+.marketing-site :global(.lead-text) {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  margin-bottom: 3rem;
+  line-height: 1.6;
+}
+
+.marketing-site :global(.text-center) {
+  text-align: center;
+}
+
+.marketing-site :global(.mb-12) {
+  margin-bottom: 3rem;
+}
+
+.marketing-site :global(.centered) {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.marketing-site :global(.centered):global(.section-title)::after {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+:global(:root)[data-theme="dark"] .marketing-site :is(h1, h2, h3, h4, h5, h6) {
+  color: var(--text-main);
+}

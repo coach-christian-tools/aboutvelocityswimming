@@ -1,9 +1,11 @@
+import {Dialog} from "@/components/shared/Dialog";
+import SwimmerPicker from "@/components/shared/SwimmerPicker";
 import { postingHours } from "../../lib/hours"
 import { CHILD_GROUPS, DIVISION_STYLES, normalizeEmails } from "../../lib/families"
 import { useEffect, useState, useMemo } from "react"
-import { useNavigate } from "react-router-dom"
-import { collection, onSnapshot, addDoc } from "firebase/firestore"
-import { db } from "../../lib/firebase"
+import { useNavigate } from "@/features/workshare/lib/navigation"
+import { collection, onSnapshot, addDoc } from "@/lib/data"
+import { db } from "../../lib/backend"
 import type { Family, Child, ChildGroup, Registration, Posting, ManualHour } from "../../types"
 import { Button } from "../ui/Button"
 import { Card } from "../ui/Card"
@@ -228,6 +230,7 @@ export function FamiliesAdmin() {
 
     const authorizedEmails = normalizeEmails(emails)
     const validChildren = children.map(c => ({
+      ...(c.id ? {id:c.id} : {}),
       name: c.name.trim(),
       group: c.group
     })).filter(c => c.name.length > 0)
@@ -258,7 +261,7 @@ export function FamiliesAdmin() {
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#13415D] tracking-tight">Family Roster</h2>
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-text-primary tracking-tight">Family Roster</h2>
         </div>
         <div className="flex flex-wrap items-center gap-2.5 self-start sm:self-auto">
           <Button variant="outline" size="sm" onClick={handleExport}>
@@ -289,7 +292,7 @@ export function FamiliesAdmin() {
             <select
               value={divisionFilter}
               onChange={e => setDivisionFilter(e.target.value)}
-              className="flex h-10 w-full appearance-none rounded-lg border border-slate-300 bg-white pl-3.5 pr-10 py-1.5 text-xs font-medium text-[#13415D] focus-visible:outline-none focus-visible:border-[#0A856C] focus-visible:ring-2 focus-visible:ring-[#0A856C]/20 cursor-pointer"
+              className="flex h-10 w-full appearance-none rounded-lg border border-slate-300 bg-surface pl-3.5 pr-10 py-1.5 text-xs font-medium text-text-primary focus-visible:outline-none focus-visible:border-[#0A856C] focus-visible:ring-2 focus-visible:ring-[#0A856C]/20 cursor-pointer"
             >
               <option value="ALL">All Divisions ({families.length})</option>
               <option value="Competitive">Competitive</option>
@@ -306,22 +309,22 @@ export function FamiliesAdmin() {
       </div>
 
       {/* Families List / Table */}
-      <Card className="p-0 md:p-0 overflow-hidden bg-white border border-slate-200 shadow-xs">
+      <Card className="p-0 md:p-0 overflow-hidden bg-surface border border-slate-200 shadow-xs">
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse min-w-[500px]">
             <thead>
-              <tr className="border-b border-slate-100 bg-slate-50/70">
+              <tr className="border-b border-slate-100 bg-bg/70">
                 <th
                   onClick={() => handleSort("account")}
-                  className="py-3.5 px-4 font-bold text-xs uppercase tracking-wider text-slate-500 cursor-pointer select-none hover:text-[#13415D] transition-colors group"
+                  className="py-3.5 px-4 font-bold text-xs uppercase tracking-wider text-slate-500 cursor-pointer select-none hover:text-text-primary transition-colors group"
                 >
                   <div className="flex items-center gap-1.5">
                     <span>Account</span>
                     {sortField === "account" ? (
                       sortOrder === "asc" ? (
-                        <ArrowUp className="w-3.5 h-3.5 text-[#0A856C]" />
+                        <ArrowUp className="w-3.5 h-3.5 text-accent" />
                       ) : (
-                        <ArrowDown className="w-3.5 h-3.5 text-[#0A856C]" />
+                        <ArrowDown className="w-3.5 h-3.5 text-accent" />
                       )
                     ) : (
                       <ArrowUpDown className="w-3.5 h-3.5 text-slate-400 opacity-40 group-hover:opacity-80 transition-opacity" />
@@ -333,15 +336,15 @@ export function FamiliesAdmin() {
                 </th>
                 <th
                   onClick={() => handleSort("general")}
-                  className="py-3.5 px-4 font-bold text-xs uppercase tracking-wider text-slate-500 cursor-pointer select-none hover:text-[#13415D] transition-colors group"
+                  className="py-3.5 px-4 font-bold text-xs uppercase tracking-wider text-slate-500 cursor-pointer select-none hover:text-text-primary transition-colors group"
                 >
                   <div className="flex items-center gap-1.5">
                     <span>General Hours</span>
                     {sortField === "general" ? (
                       sortOrder === "asc" ? (
-                        <ArrowUp className="w-3.5 h-3.5 text-[#0A856C]" />
+                        <ArrowUp className="w-3.5 h-3.5 text-accent" />
                       ) : (
-                        <ArrowDown className="w-3.5 h-3.5 text-[#0A856C]" />
+                        <ArrowDown className="w-3.5 h-3.5 text-accent" />
                       )
                     ) : (
                       <ArrowUpDown className="w-3.5 h-3.5 text-slate-400 opacity-40 group-hover:opacity-80 transition-opacity" />
@@ -350,15 +353,15 @@ export function FamiliesAdmin() {
                 </th>
                 <th
                   onClick={() => handleSort("event")}
-                  className="py-3.5 px-4 font-bold text-xs uppercase tracking-wider text-slate-500 cursor-pointer select-none hover:text-[#13415D] transition-colors group"
+                  className="py-3.5 px-4 font-bold text-xs uppercase tracking-wider text-slate-500 cursor-pointer select-none hover:text-text-primary transition-colors group"
                 >
                   <div className="flex items-center gap-1.5">
                     <span>Event Hours</span>
                     {sortField === "event" ? (
                       sortOrder === "asc" ? (
-                        <ArrowUp className="w-3.5 h-3.5 text-[#0A856C]" />
+                        <ArrowUp className="w-3.5 h-3.5 text-accent" />
                       ) : (
-                        <ArrowDown className="w-3.5 h-3.5 text-[#0A856C]" />
+                        <ArrowDown className="w-3.5 h-3.5 text-accent" />
                       )
                     ) : (
                       <ArrowUpDown className="w-3.5 h-3.5 text-slate-400 opacity-40 group-hover:opacity-80 transition-opacity" />
@@ -384,12 +387,12 @@ export function FamiliesAdmin() {
                         navigate(`/admin/families/${f.id}`)
                       }
                     }}
-                    className="hover:bg-slate-50/80 cursor-pointer transition-colors focus-visible:outline-none focus-visible:bg-slate-50"
+                    className="hover:bg-bg/80 cursor-pointer transition-colors focus-visible:outline-none focus-visible:bg-bg"
                     title="View family details"
                   >
                     <td className="py-3.5 px-4">
                       <div className="flex items-center gap-2 flex-wrap">
-                        <span className="font-bold text-sm text-[#13415D]">
+                        <span className="font-bold text-sm text-text-primary">
                           {formatAccountName(f.accountName) || <span className="text-slate-400 font-normal italic">Unnamed Family</span>}
                         </span>
                         <span
@@ -409,7 +412,7 @@ export function FamiliesAdmin() {
                               key={idx}
                               className="inline-flex items-center px-2 py-0.5 rounded-md text-xs font-medium bg-slate-100 text-slate-700 border border-slate-200"
                             >
-                              <span className="font-semibold text-[#13415D] mr-1">
+                              <span className="font-semibold text-text-primary mr-1">
                                 {child.name ? child.name.trim().split(/\s+/)[0] : ""}
                               </span>
                               <span className="text-slate-500 text-[11px]">({child.group})</span>
@@ -423,7 +426,7 @@ export function FamiliesAdmin() {
                     <td className="py-3.5 px-4">
                       <span
                         className={`text-base sm:text-lg font-bold tracking-tight ${
-                          completed.general >= reqGen && reqGen > 0 ? "text-[#0A856C]" : "text-[#13415D]"
+                          completed.general >= reqGen && reqGen > 0 ? "text-accent" : "text-text-primary"
                         }`}
                       >
                         {formatHours(completed.general)} of {formatHours(reqGen)} Complete
@@ -432,7 +435,7 @@ export function FamiliesAdmin() {
                     <td className="py-3.5 px-4">
                       <span
                         className={`text-base sm:text-lg font-bold tracking-tight ${
-                          completed.event >= reqEvent && reqEvent > 0 ? "text-[#0A856C]" : "text-[#13415D]"
+                          completed.event >= reqEvent && reqEvent > 0 ? "text-accent" : "text-text-primary"
                         }`}
                       >
                         {formatHours(completed.event)} of {formatHours(reqEvent)} Complete
@@ -455,11 +458,11 @@ export function FamiliesAdmin() {
 
       {/* Add / Edit Modal */}
       {isModalOpen && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs">
-          <Card className="w-full max-w-xl max-h-[90vh] flex flex-col bg-white shadow-xl relative z-10 border border-slate-200 p-6 overflow-hidden">
+        <Dialog onClose={() => setIsModalOpen(false)} className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs">
+          <Card className="w-full max-w-xl max-h-[90vh] flex flex-col bg-surface shadow-xl relative z-10 border border-slate-200 p-6 overflow-hidden">
             <div className="flex justify-between items-center mb-5 pb-2 border-b border-slate-100 shrink-0">
-              <h3 className="text-xl font-bold text-[#13415D]">Add New Family</h3>
-              <button
+              <h3 className="text-xl font-bold text-text-primary">Add New Family</h3>
+              <button aria-label="Close dialog"
                 onClick={() => setIsModalOpen(false)}
                 className="p-1 text-slate-400 hover:text-slate-600 rounded-full transition-colors cursor-pointer"
               >
@@ -471,7 +474,7 @@ export function FamiliesAdmin() {
               {/* Account Name and Division on the same row, name on left */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-semibold text-[#13415D] mb-1">Account Name</label>
+                  <label className="block text-xs font-semibold text-text-primary mb-1">Account Name</label>
                   <Input
                     required
                     value={accountName}
@@ -480,10 +483,10 @@ export function FamiliesAdmin() {
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-semibold text-[#13415D] mb-1">Division</label>
+                  <label className="block text-xs font-semibold text-text-primary mb-1">Division</label>
                   <div className="relative">
                     <select
-                      className="flex h-11 w-full appearance-none rounded-lg border border-slate-300 bg-white pl-3.5 pr-10 py-2 text-sm text-[#13415D] focus-visible:outline-none focus-visible:border-[#0A856C] focus-visible:ring-2 focus-visible:ring-[#0A856C]/20 cursor-pointer"
+                      className="flex h-11 w-full appearance-none rounded-lg border border-slate-300 bg-surface pl-3.5 pr-10 py-2 text-sm text-text-primary focus-visible:outline-none focus-visible:border-[#0A856C] focus-visible:ring-2 focus-visible:ring-[#0A856C]/20 cursor-pointer"
                       value={category}
                       onChange={e => setCategory(e.target.value as Family["category"])}
                     >
@@ -499,7 +502,7 @@ export function FamiliesAdmin() {
 
               {/* Authorized Emails */}
               <div>
-                <label className="block text-xs font-semibold text-[#13415D] mb-1">Authorized Emails (comma-separated)</label>
+                <label className="block text-xs font-semibold text-text-primary mb-1">Authorized Emails (comma-separated)</label>
                 <Input
                   required
                   value={emails}
@@ -512,7 +515,7 @@ export function FamiliesAdmin() {
               <div className="space-y-2.5 pt-1">
                 <div className="flex items-center justify-between">
                   <div>
-                    <label className="block text-xs font-semibold text-[#13415D]">Swimmers</label>
+                    <label className="block text-xs font-semibold text-text-primary">Swimmers</label>
                     <p className="text-[11px] text-slate-500">Add children and their assigned swim group.</p>
                   </div>
                   <Button
@@ -520,7 +523,7 @@ export function FamiliesAdmin() {
                     variant="outline"
                     size="sm"
                     onClick={handleAddChild}
-                    className="h-8 text-xs px-2.5 text-[#0A856C] border-[#0A856C]/30 hover:bg-[#0A856C]/10"
+                    className="h-8 text-xs px-2.5 text-accent border-[#0A856C]/30 hover:bg-[#0A856C]/10"
                   >
                     <Plus className="w-3.5 h-3.5 mr-1" />
                     Add Child
@@ -530,21 +533,16 @@ export function FamiliesAdmin() {
                 {children.length > 0 ? (
                   <div className="space-y-2 max-h-48 overflow-y-auto pr-1">
                     {children.map((child, index) => (
-                      <div key={index} className="flex items-center gap-2 bg-slate-50 p-2.5 rounded-lg border border-slate-200">
+                      <div key={index} className="flex items-center gap-2 bg-bg p-2.5 rounded-lg border border-slate-200">
                         <div className="flex-1">
-                          <Input
-                            placeholder="Child Name"
-                            value={child.name}
-                            onChange={e => handleChildChange(index, "name", e.target.value)}
-                            className="h-9 text-xs"
-                            required
-                          />
+                          <SwimmerPicker child={child} onChange={value=>setChildren(previous=>previous.map((item,i)=>i===index?value:item))}/>
                         </div>
                         <div className="relative w-40 sm:w-44">
                           <select
                             value={child.group}
+                          disabled={Boolean(child.id)}
                             onChange={e => handleChildChange(index, "group", e.target.value as ChildGroup)}
-                            className="flex h-9 w-full appearance-none rounded-lg border border-slate-300 bg-white pl-3 pr-9 py-1 text-xs text-[#13415D] focus-visible:outline-none focus-visible:border-[#0A856C] focus-visible:ring-2 focus-visible:ring-[#0A856C]/20 cursor-pointer"
+                            className="flex h-9 w-full appearance-none rounded-lg border border-slate-300 bg-surface pl-3 pr-9 py-1 text-xs text-text-primary focus-visible:outline-none focus-visible:border-[#0A856C] focus-visible:ring-2 focus-visible:ring-[#0A856C]/20 cursor-pointer"
                           >
                             {CHILD_GROUPS.map(grp => (
                               <option key={grp} value={grp}>{grp}</option>
@@ -564,7 +562,7 @@ export function FamiliesAdmin() {
                     ))}
                   </div>
                 ) : (
-                  <div className="text-xs text-slate-400 italic bg-slate-50 border border-dashed border-slate-200 rounded-lg p-3 text-center">
+                  <div className="text-xs text-slate-400 italic bg-bg border border-dashed border-slate-200 rounded-lg p-3 text-center">
                     No children added yet. Click &quot;Add Child&quot; to add swimmers.
                   </div>
                 )}
@@ -573,7 +571,7 @@ export function FamiliesAdmin() {
               {/* Numerical inputs as text inputs with validation */}
               <div className="grid grid-cols-2 gap-3 pt-1">
                 <div>
-                  <label className="block text-xs font-semibold text-[#13415D] mb-1">General Pool Hours</label>
+                  <label className="block text-xs font-semibold text-text-primary mb-1">General Pool Hours</label>
                   <Input
                     type="text"
                     inputMode="numeric"
@@ -584,7 +582,7 @@ export function FamiliesAdmin() {
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-semibold text-[#13415D] mb-1">Event-Specific Hours</label>
+                  <label className="block text-xs font-semibold text-text-primary mb-1">Event-Specific Hours</label>
                   <Input
                     type="text"
                     inputMode="numeric"
@@ -605,7 +603,7 @@ export function FamiliesAdmin() {
               </div>
             </form>
           </Card>
-        </div>
+        </Dialog>
       )}
     </div>
   )

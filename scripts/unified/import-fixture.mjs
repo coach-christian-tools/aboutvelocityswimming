@@ -1,0 +1,12 @@
+import {createClient} from '@supabase/supabase-js';
+import {execFileSync} from 'node:child_process';
+import {mkdirSync,writeFileSync} from 'node:fs';
+const config=JSON.parse(execFileSync('supabase',['status','--output','json'],{encoding:'utf8',stdio:['ignore','pipe','ignore']}));
+if(config.API_URL!=='http://127.0.0.1:54321')throw new Error('Synthetic imports use the local backend only.');
+const client=createClient(config.API_URL,config.SERVICE_ROLE_KEY,{auth:{persistSession:false}}),id='browser-import-'+Date.now(),at=new Date().toISOString();
+const bytes=new TextEncoder().encode('Synthetic reviewed team-name correction.'),hash=Buffer.from(await crypto.subtle.digest('SHA-256',bytes)).toString('hex'),path='evidence/127/velocity-v2/'+id+'/'+hash;
+const upload=await client.storage.from('evidence').upload(path,bytes,{contentType:'text/plain',upsert:false});if(upload.error)throw upload.error;
+const records=[['sources/'+id,{id,name:'Synthetic browser source',kind:'document',reference:'https://example.test/'+id,retrieval:'local',intervalDays:30,enabled:true,scope:'Synthetic browser test'}],['sources/'+id+'/revisions/'+hash,{hash,bucket:'evidence',storagePath:path,contentType:'text/plain',size:bytes.length,capturedAt:at}],['sources/'+id+'/checks/check',{outcome:'retrieved',revisionId:hash,at}]];
+const result=await client.rpc('collect_records',{reads:[],writes:records.map(([path,after])=>({path,after}))});if(result.error)throw result.error;
+const batch={version:3,target:{provider:'supabase',project:'127',database:'velocity-v2'},id,collectedAt:at,sources:[{id,name:'Synthetic browser source',kind:'document',reference:'https://example.test/'+id,revisionId:hash,checkId:'check',collectedAt:at,coverage:'complete',scope:'Synthetic browser test'}],rows:[{id:'team-name',kind:'team',verified:true,sourceIds:[id],data:{id:'velocity-swimming',name:'Velocity Swimming Browser Test'},evidence:[{sourceId:id,revisionId:hash,checkId:'check',checkedAt:at,fields:['name'],context:'Synthetic browser test',excerpt:'Synthetic reviewed team-name correction.'}]}],unresolved:[]};
+mkdirSync('backups/browser',{recursive:true,mode:0o700});writeFileSync('backups/browser/import.json',JSON.stringify(batch),{mode:0o600});console.log('Synthetic reviewed import prepared.');

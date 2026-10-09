@@ -1,6 +1,2 @@
-import { swimResourcesPath } from '../../../../../../features/swim-resources/lib/routes.ts';
-import { redirect } from 'next/navigation';
-
-export default function AttendanceAdminPage() {
-  redirect(swimResourcesPath("/admin/data/attendance"));
-}
+import AttendanceBoard from '@/features/swim-resources/components/AttendanceBoard';
+export default function AttendanceAdminPage(){return <AttendanceBoard/>;}

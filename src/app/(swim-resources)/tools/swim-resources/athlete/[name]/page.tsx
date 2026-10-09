@@ -2,9 +2,9 @@
 
 import AthleteBestTimes from '@/features/swim-resources/components/AthleteBestTimes';
 import type { PublicAthlete } from '@/features/swim-resources/lib/domain/athlete';
-import { db } from '@/features/swim-resources/lib/firebase';
+import { db } from '@/features/swim-resources/lib/backend';
 import type { AthleteBest } from '@/features/swim-resources/types/schema';
-import { collection, getDocs, query, where } from 'firebase/firestore';
+import { collection, getDocs, query, where } from '@/lib/data';
 import { useParams } from 'next/navigation';
 import { Suspense, useEffect, useState } from 'react';
 

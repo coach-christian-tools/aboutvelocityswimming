@@ -1,27 +1,16 @@
-import { adminDatabase } from './lib/admin.mjs';
-import { archiveStorage, privateWrite, hashBytes } from './lib/evidence-archive.mjs';
-import { exportDataset, verifyArchive, decodeValue, storageReferences, publishDatasetArchive } from './lib/dataset-archive.mjs';
-import { readFile } from 'node:fs/promises';
-const args = process.argv.slice(2), option = key => args.includes(key) ? args[args.indexOf(key) + 1] : undefined;
-if (args.includes('--help')) { console.log('archive-dataset --project <id> --database "(default)" [--firebase-cli] [--bucket <private-bucket> --apply --confirm-project <id> --confirm-database "(default)"]'); process.exit(0); }
-const context = adminDatabase(), archive = await exportDataset(context.db);
-const verification = await exportDataset(context.db);
-if (archive.fingerprint !== verification.fingerprint) throw new Error('Dataset changed during export. Stop source writers and retry.');
-verifyArchive(archive);
-const id = 'archive_' + Date.now(), directory = `backups/archives/${context.project}/${context.database}/${id}`;
-const storage = archiveStorage(context), references = new Set(), files = [];
-for (const entry of archive.entries) storageReferences(decodeValue(entry.data, context.db), references);
-for (const reference of references) {
-  const { bucket, object } = JSON.parse(reference);
-  const [bytes] = await storage.bucket(bucket).file(object).download();
-  const hash = hashBytes(bytes); await privateWrite(`${directory}/files/${hash}`, bytes); files.push({ bucket, object, hash, size: bytes.length });
-}
-const filesFingerprint = hashBytes(JSON.stringify(files.map(file => [file.bucket, file.object, file.hash, file.size]).sort()));
-if ((await exportDataset(context.db)).fingerprint !== archive.fingerprint) throw new Error('Dataset changed while archiving files.');
-const manifest = { ...archive, filesFingerprint, project: context.project, database: context.database, archivedAt: new Date().toISOString(), files };
-await privateWrite(`${directory}/dataset.json`, JSON.stringify(manifest));
-if (context.apply) {
-  const bucket = option('--bucket'); if (!bucket) throw new Error('Supply a private archive bucket.');
-  await publishDatasetArchive(storage, bucket, `legacy-archives/${context.project}/${context.database}/${id}`, manifest, hash => readFile(`${directory}/files/${hash}`));
-}
-console.log(JSON.stringify({ mode: context.apply ? 'archived-private-cloud' : 'archived-local', records: archive.entries.length, files: files.length, fingerprint: archive.fingerprint, manifest: directory + '/dataset.json' }));
+import {mkdir,writeFile} from 'node:fs/promises';
+import {join} from 'node:path';
+import {adminDatabase} from './lib/admin.mjs';
+import {exportDataset,storageReferences} from './lib/dataset-archive.mjs';
+import {archiveStorage,hashBytes,privatePath} from './lib/evidence-archive.mjs';
+const args=process.argv.slice(2),option=k=>args[args.indexOf(k)+1];
+if(args.includes('--help')){console.log('archive-dataset --project <Supabase-ref> --database velocity-v2 --out backups/<folder>');process.exit(0);}
+const context=adminDatabase(),dir=privatePath(option('--out')),archive=await exportDataset(context.db),storage=archiveStorage(context),files=[];
+await mkdir(join(dir,'files'),{recursive:true,mode:0o700});
+const refs=new Set();for(const e of archive.entries)for(const ref of storageReferences(e.data))refs.add(ref);
+// Encoded values are inspected after decoding to preserve literal field names.
+const {decodeValue}=await import('./lib/dataset-archive.mjs');
+for(const e of archive.entries)for(const ref of storageReferences(decodeValue(e.data)))refs.add(ref);
+for(const ref of refs){const {bucket,object}=JSON.parse(ref),bytes=(await storage.bucket(bucket).file(object).download())[0],hash=hashBytes(bytes);await writeFile(join(dir,'files',hash),bytes,{mode:0o600});files.push({bucket,object,hash,size:bytes.length});}
+archive.files=files;archive.filesFingerprint=hashBytes(JSON.stringify(files.map(f=>[f.bucket,f.object,f.hash,f.size]).sort()));archive.project=context.project;
+await writeFile(join(dir,'dataset.json'),JSON.stringify(archive),{mode:0o600});console.log(JSON.stringify({records:archive.entries.length,files:files.length,fingerprint:archive.fingerprint}));

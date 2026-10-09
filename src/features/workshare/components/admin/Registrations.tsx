@@ -1,8 +1,8 @@
 import { cancelShiftRegistration } from "../../lib/invitations"
 import { errorMessage } from "../../lib/errors"
 import { useEffect, useState } from "react"
-import { collection, onSnapshot, doc, runTransaction } from "firebase/firestore"
-import { db } from "../../lib/firebase"
+import { collection, onSnapshot, doc, runTransaction } from "@/lib/data"
+import { db } from "../../lib/backend"
 import type { Registration, Posting, Family } from "../../types"
 import { Button } from "../ui/Button"
 import { Card } from "../ui/Card"
@@ -83,7 +83,7 @@ export function RegistrationsAdmin() {
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#13415D] tracking-tight">Roster & Attendance</h2>
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-text-primary tracking-tight">Roster & Attendance</h2>
           <p className="text-sm text-slate-500 mt-1">Review shift completions, guests, and mark attendance.</p>
         </div>
         <Button variant="outline" size="sm" onClick={handleExport} className="self-start sm:self-auto">
@@ -92,11 +92,11 @@ export function RegistrationsAdmin() {
         </Button>
       </div>
 
-      <Card className="p-0 md:p-0 overflow-hidden bg-white border border-slate-200 shadow-xs">
+      <Card className="p-0 md:p-0 overflow-hidden bg-surface border border-slate-200 shadow-xs">
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse min-w-[650px]">
             <thead>
-              <tr className="border-b border-slate-100 bg-slate-50/70">
+              <tr className="border-b border-slate-100 bg-bg/70">
                 <th className="py-3.5 px-4 font-bold text-xs uppercase tracking-wider text-slate-500">Shift Name</th>
                 <th className="py-3.5 px-4 font-bold text-xs uppercase tracking-wider text-slate-500">Date</th>
                 <th className="py-3.5 px-4 font-bold text-xs uppercase tracking-wider text-slate-500">Family</th>
@@ -110,8 +110,8 @@ export function RegistrationsAdmin() {
                 const post = r.shiftSnapshot || postings[r.postingId]
                 const fam = families[r.familyId]
                 return (
-                  <tr key={r.id} className="hover:bg-slate-50/50 transition-colors">
-                    <td className="py-3.5 px-4 text-sm font-bold text-[#13415D]">
+                  <tr key={r.id} className="hover:bg-bg/50 transition-colors">
+                    <td className="py-3.5 px-4 text-sm font-bold text-text-primary">
                       {post?.title || <span className="text-red-500 font-normal">Deleted Shift</span>}
                     </td>
                     <td className="py-3.5 px-4 text-xs text-slate-600">
@@ -120,24 +120,24 @@ export function RegistrationsAdmin() {
                     <td className="py-3.5 px-4 text-xs text-slate-600">
                       {fam ? (
                         <div>
-                          <span className="font-semibold text-[#13415D] block">{fam.accountName || "Unnamed Family"}</span>
+                          <span className="font-semibold text-text-primary block">{fam.accountName || "Unnamed Family"}</span>
                           <span className="text-slate-500 text-[11px]">{fam.authorizedEmails.join(", ")}</span>
                         </div>
                       ) : (
                         <span className="text-red-500">Deleted Family</span>
                       )}
                     </td>
-                    <td className="py-3.5 px-4 text-xs font-semibold text-[#13415D]">
+                    <td className="py-3.5 px-4 text-xs font-semibold text-text-primary">
                       {r.assignee.name}
                       {r.assignee.isGuest && (
-                        <span className="ml-1.5 text-[10px] bg-[#13415D]/10 text-[#13415D] px-2 py-0.5 rounded-full font-bold">
+                        <span className="ml-1.5 text-[10px] bg-[#13415D]/10 text-text-primary px-2 py-0.5 rounded-full font-bold">
                           Guest ({r.assignee.relation})
                         </span>
                       )}
                     </td>
                     <td className="py-3.5 px-4">
                       <span className={`text-xs px-2.5 py-0.5 rounded-full font-bold inline-flex items-center gap-1 ${
-                        r.status === 'Complete' ? 'bg-[#0A856C]/10 text-[#0A856C]' :
+                        r.status === 'Complete' ? 'bg-[#0A856C]/10 text-accent' :
                         r.status === 'Incomplete' ? 'bg-red-50 text-red-600' :
                         'bg-amber-50 text-amber-700'
                       }`}>
@@ -150,7 +150,7 @@ export function RegistrationsAdmin() {
                         {r.status === 'Pending' && (
                           <>
                             <button 
-                              className="p-1.5 text-[#0A856C] hover:bg-[#0A856C]/10 rounded-lg transition-colors cursor-pointer" 
+                              className="p-1.5 text-accent hover:bg-[#0A856C]/10 rounded-lg transition-colors cursor-pointer" 
                               onClick={() => updateStatus(r.id, "Complete")} 
                               title="Mark Complete"
                             >

@@ -1,8 +1,7 @@
-import { client, urlFor } from "../sanity/client";
-import "./YouthDevelopment.css";
+import styles from "./YouthDevelopment.module.css";
+import { scopedClasses } from "@/lib/styles";
 import Carousel from "./Carousel";
 
-export const revalidate = 60;
 
 const fallbackImages = [
   "/assets/photos/audrey-fun.jpeg",
@@ -15,43 +14,32 @@ const fallbackImages = [
   "/assets/photos/water-splash.jpeg"
 ];
 
-export default async function YouthDevelopment() {
-  let images = fallbackImages;
+export default function YouthDevelopment() {
+  const images = fallbackImages;
   
-  try {
-    const carouselData = await client.fetch(
-      `*[_type == "carousel" && name == "Youth Development"][0]`
-    );
-    
-    if (carouselData?.images?.length > 0) {
-      images = carouselData.images.map((img: any) => urlFor(img).url());
-    }
-  } catch (error) {
-    console.error("Failed to fetch Youth Development carousel from Sanity:", error);
-  }
 
   return (
-    <section id="about" className="section youth-dev">
-      <div className="container">
-        <div className="youth-grid">
-          <div className="youth-content">
-            <h2 className="section-title">More Than Just Faster Times</h2>
-            <p className="lead-text">
+    <section id="about" className={scopedClasses(styles, 'section youth-dev')}>
+      <div className={scopedClasses(styles, 'container')}>
+        <div className={scopedClasses(styles, 'youth-grid')}>
+          <div className={scopedClasses(styles, 'youth-content')}>
+            <h2 className={scopedClasses(styles, 'section-title')}>More Than Just Faster Times</h2>
+            <p className={scopedClasses(styles, 'lead-text')}>
               Swimming is a vehicle for holistic youth development. We believe in building character alongside building athletes.
             </p>
             
-            <div className="feature-list">
-              <div className="feature-item glass-panel">
-                <div className="feature-icon">🧠</div>
-                <div className="feature-text">
+            <div className={scopedClasses(styles, 'feature-list')}>
+              <div className={scopedClasses(styles, 'feature-item glass-panel')}>
+                <div className={scopedClasses(styles, 'feature-icon')}>🧠</div>
+                <div className={scopedClasses(styles, 'feature-text')}>
                   <h3>Cognitive & Academic Growth</h3>
                   <p>Research from Griffith University shows that young swimmers consistently hit cognitive, language, and physical milestones earlier than their non-swimming peers.</p>
                 </div>
               </div>
               
-              <div className="feature-item glass-panel">
-                <div className="feature-icon">❤️</div>
-                <div className="feature-text">
+              <div className={scopedClasses(styles, 'feature-item glass-panel')}>
+                <div className={scopedClasses(styles, 'feature-icon')}>❤️</div>
+                <div className={scopedClasses(styles, 'feature-text')}>
                   <h3>Mental & Emotional Health</h3>
                   <p>Individual goal-setting combined with team camaraderie reduces anxiety, builds lifelong resilience, and teaches the valuable lesson of delayed gratification.</p>
                 </div>
@@ -59,7 +47,7 @@ export default async function YouthDevelopment() {
             </div>
           </div>
           
-          <div className="youth-images">
+          <div className={scopedClasses(styles, 'youth-images')}>
             <Carousel images={images} altPrefix="Velocity Youth Development" />
           </div>
         </div>

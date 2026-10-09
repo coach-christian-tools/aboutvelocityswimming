@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import "./StoreProductGallery.css";
+import styles from "./StoreProductGallery.module.css";
+import { scopedClasses } from "@/lib/styles";
 
 interface StoreProductGalleryProps {
   images: string[];
@@ -49,19 +50,19 @@ export default function StoreProductGallery({ images, productName }: StoreProduc
 
   return (
     <div
-      className="store-gallery"
+      className={scopedClasses(styles, 'store-gallery')}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       role="region"
       aria-label={`${productName} image gallery`}
     >
-      <div className="store-gallery-stage">
+      <div className={scopedClasses(styles, 'store-gallery-stage')}>
         {validImages.map((src, idx) => (
           <img
             key={src + idx}
             src={src}
             alt={`${productName} - View ${idx + 1}`}
-            className={`store-gallery-image ${idx === currentIndex ? "active" : ""}`}
+            className={scopedClasses(styles, `store-gallery-image ${idx === currentIndex ? "active" : ""}`)}
             loading={idx === 0 ? "eager" : "lazy"}
           />
         ))}
@@ -70,7 +71,7 @@ export default function StoreProductGallery({ images, productName }: StoreProduc
           <>
             <button
               type="button"
-              className="gallery-nav-btn prev"
+              className={scopedClasses(styles, 'gallery-nav-btn prev')}
               onClick={handlePrev}
               aria-label="Previous image"
             >
@@ -80,7 +81,7 @@ export default function StoreProductGallery({ images, productName }: StoreProduc
             </button>
             <button
               type="button"
-              className="gallery-nav-btn next"
+              className={scopedClasses(styles, 'gallery-nav-btn next')}
               onClick={handleNext}
               aria-label="Next image"
             >
@@ -93,12 +94,12 @@ export default function StoreProductGallery({ images, productName }: StoreProduc
       </div>
 
       {total > 1 && (
-        <div className="store-gallery-dots" role="tablist">
+        <div className={scopedClasses(styles, 'store-gallery-dots')} role="tablist">
           {validImages.map((_, idx) => (
             <button
               key={idx}
               type="button"
-              className={`gallery-dot ${idx === currentIndex ? "active" : ""}`}
+              className={scopedClasses(styles, `gallery-dot ${idx === currentIndex ? "active" : ""}`)}
               onClick={(e) => handleDotClick(idx, e)}
               role="tab"
               aria-selected={idx === currentIndex}

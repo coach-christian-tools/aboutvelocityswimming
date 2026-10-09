@@ -1,5 +1,5 @@
-import { collection, getDocs, query, where, writeBatch, doc } from "firebase/firestore"
-import { db } from "./firebase"
+import { collection, getDocs, query, where, writeBatch, doc } from "@/lib/data"
+import { db } from "./backend"
 import type { Posting } from "../types"
 
 // Preserve legacy completed registrations before an administrator edits a shift.

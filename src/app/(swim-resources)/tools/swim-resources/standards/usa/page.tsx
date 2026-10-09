@@ -9,20 +9,20 @@ import EventSelector, {
 import StandardsEventTable from '@/features/swim-resources/components/standards/StandardsEventTable';
 import rawStandardsData from '@/features/swim-resources/lib/data/raw-standards.json';
 import { currentStandard } from '@/features/swim-resources/lib/domain/standards';
-import { standardsCol, FIRESTORE_DATABASE_ID } from '@/features/swim-resources/lib/firebase';
+import { standardsCol, DATASET_ID } from '@/features/swim-resources/lib/backend';
 import {
   transformRawStandardsToStandardSets,
   type RawStandardEntry
 } from '@/features/swim-resources/lib/utils/standards-transformer';
 import type { StandardSet } from '@/features/swim-resources/types/schema';
-import { onSnapshot } from 'firebase/firestore';
+import { onSnapshot } from '@/lib/data';
 import { ArrowLeft, Award, Flame } from 'lucide-react';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 export default function UsaStandardsPage() {
   const [motivationalSet, setMotivationalSet] = useState<StandardSet | null>(() => {
-    if (FIRESTORE_DATABASE_ID === 'velocity-v2') return null;
+    if (DATASET_ID === 'velocity-v2') return null;
     const bundled = transformRawStandardsToStandardSets(rawStandardsData as RawStandardEntry[]);
     return bundled.motivationalSet;
   });
@@ -38,8 +38,8 @@ export default function UsaStandardsPage() {
   useEffect(() => {
     const unsubscribe = onSnapshot(standardsCol, (snapshot) => {
       const sets = snapshot.docs.map(d => d.data());
-      const match = FIRESTORE_DATABASE_ID === 'velocity-v2' ? currentStandard(sets, 'motivational') : sets.find(s => s.id === 'usas_motivational_2024_2028');
-      if (FIRESTORE_DATABASE_ID === 'velocity-v2' || match) setMotivationalSet(match ?? null);
+      const match = DATASET_ID === 'velocity-v2' ? currentStandard(sets, 'motivational') : sets.find(s => s.id === 'usas_motivational_2024_2028');
+      if (DATASET_ID === 'velocity-v2' || match) setMotivationalSet(match ?? null);
     });
     return () => unsubscribe();
   }, []);

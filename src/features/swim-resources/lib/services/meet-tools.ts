@@ -2,9 +2,9 @@ import { assertFreshTarget, prepareOrigins } from './evidence';
 import { canonicalMeet } from '@/features/swim-resources/lib/domain/meet';
 export { canonicalMeet } from '@/features/swim-resources/lib/domain/meet';
 import { formatSwimTime, parseSwimTime } from '@/features/swim-resources/lib/domain/swim-time';
-import { db } from '@/features/swim-resources/lib/firebase';
+import { db } from '@/features/swim-resources/lib/backend';
 import type { Meet, StandardSet, StandardTierCut } from '@/features/swim-resources/types/schema';
-import { doc, runTransaction } from 'firebase/firestore';
+import { doc, runTransaction } from '@/lib/data';
 
 export type PoolCourse = 'SCY' | 'LCM' | 'SCM';
 export type Stroke = 'FR' | 'BK' | 'BR' | 'FL' | 'IM';

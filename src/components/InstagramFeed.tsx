@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect } from "react";
-import "./InstagramFeed.css";
+import styles from "./InstagramFeed.module.css";
+import { scopedClasses } from "@/lib/styles";
 
 const POST_URLS = [
   "https://www.instagram.com/p/DboPboND0BE/?utm_source=ig_embed&utm_campaign=loading",
@@ -15,9 +16,8 @@ export default function InstagramFeed() {
     const existingScript = document.getElementById("instagram-embed-script");
 
     const processEmbeds = () => {
-      if ((window as any).instgrm?.Embeds?.process) {
-        (window as any).instgrm.Embeds.process();
-      }
+      const embeds=(window as Window & {instgrm?:{Embeds?:{process():void}}}).instgrm?.Embeds;
+      embeds?.process();
     };
 
     if (!existingScript) {
@@ -36,29 +36,29 @@ export default function InstagramFeed() {
   }, []);
 
   return (
-    <section id="social" className="section insta-feed-section">
-      <div className="container">
-        <div className="text-center mb-12">
-          <span className="section-badge">Social Highlights</span>
-          <h2 className="section-title centered">Follow Our Journey</h2>
-          <p className="lead-text centered">
+    <section id="social" className={scopedClasses(styles, 'section insta-feed-section')}>
+      <div className={scopedClasses(styles, 'container')}>
+        <div className={scopedClasses(styles, 'text-center mb-12')}>
+          <span className={scopedClasses(styles, 'section-badge')}>Social Highlights</span>
+          <h2 className={scopedClasses(styles, 'section-title centered')}>Follow Our Journey</h2>
+          <p className={scopedClasses(styles, 'lead-text centered')}>
             Stay up to date with the latest from Velocity Swimming on Instagram{" "}
             <a
               href="https://www.instagram.com/velocity.swim"
               target="_blank"
               rel="noopener noreferrer"
-              className="insta-handle-link"
+              className={scopedClasses(styles, 'insta-handle-link')}
             >
               @velocity.swim
             </a>
           </p>
         </div>
 
-        <div className="insta-embeds-grid">
+        <div className={scopedClasses(styles, 'insta-embeds-grid')}>
           {POST_URLS.map((url, index) => (
-            <div key={index} className="insta-embed-card">
+            <div key={index} className={scopedClasses(styles, 'insta-embed-card')}>
               <blockquote
-                className="instagram-media"
+                className={scopedClasses(styles, 'instagram-media')}
                 data-instgrm-captioned
                 data-instgrm-permalink={url}
                 data-instgrm-version="14"

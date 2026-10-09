@@ -6,7 +6,7 @@ import { entityReferences } from '../../../src/features/swim-resources/lib/domai
 
 /** Archives precede atomic facts/provenance/receipt commits. Dry runs never write. */
 export async function reconcileBundle(context, bundle, bucket, archive = archiveCapture) {
-  if (context.database !== 'velocity-v2' || bundle.version !== 2 || bundle.target?.project !== context.project || bundle.target.database !== context.database || !Array.isArray(bundle.captures) || !Array.isArray(bundle.observations) || bundle.captures.length > 100 || bundle.observations.length > 100) throw new Error('Invalid reconciliation target or bundle size.');
+  if (context.database !== 'velocity-v2' || bundle.version !== 3 || bundle.target?.provider !== 'supabase' || bundle.target?.project !== context.project || bundle.target.database !== context.database || !Array.isArray(bundle.captures) || !Array.isArray(bundle.observations) || bundle.captures.length > 100 || bundle.observations.length > 100) throw new Error('Invalid reconciliation target or bundle size.');
   const report = { checks: 0, changed: 0, held: 0, failures: 0, skipped: 0 };
   const keys = bundle.captures.map(c => `${c.sourceId}/${c.checkId}`);
   if (new Set(keys).size !== keys.length) throw new Error('Duplicate capture check.');

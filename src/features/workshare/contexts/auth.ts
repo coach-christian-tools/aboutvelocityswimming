@@ -1,16 +1,17 @@
-import { createContext, useContext } from "react"
-import type { User } from "firebase/auth"
+"use client";
+import { createContext, useContext } from "react";
+import type { User } from "@/lib/auth";
 
 interface AuthContextType {
-  user: User | null
-  isAdmin: boolean
-  familyId: string | null
-  loading: boolean
-  logout: () => Promise<void>
-  clientMode: boolean
-  setClientMode: (mode: boolean) => void
-  previewFamilyId: string | null
-  setPreviewFamilyId: (id: string | null) => void
+  user: User | null;
+  isAdmin: boolean;
+  familyId: string | null;
+  loading: boolean;
+  logout: () => Promise<void>;
+  clientMode: boolean;
+  setClientMode: (mode: boolean) => void;
+  previewFamilyId: string | null;
+  setPreviewFamilyId: (id: string | null) => void;
 }
 
 export const AuthContext = createContext<AuthContextType>({
@@ -23,6 +24,6 @@ export const AuthContext = createContext<AuthContextType>({
   setClientMode: () => {},
   previewFamilyId: null,
   setPreviewFamilyId: () => {},
-})
+});
 
-export const useAuth = () => useContext(AuthContext)
+export const useAuth = () => useContext(AuthContext);

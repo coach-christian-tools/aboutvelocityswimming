@@ -2,9 +2,10 @@ import { factFields } from '@/features/swim-resources/lib/domain/evidence';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 const mock = vi.hoisted(() => ({ documents: new Map<string, Record<string, unknown>>(), failNextCommit: false, failAtCommit: 0, commits: 0 }));
-vi.mock('@/features/swim-resources/lib/firebase', () => ({ db: {}, FIREBASE_PROJECT_ID: 'synthetic-project', FIRESTORE_DATABASE_ID: 'velocity-v2', auth: { currentUser: { uid: 'coach', email: 'coach@velocity-swimming.com', emailVerified: true } } }));
-vi.mock('firebase/firestore', async importOriginal => {
-  const original = await importOriginal<typeof import('firebase/firestore')>();
+vi.mock('@/features/swim-resources/lib/backend', () => ({ db: {}, BACKEND_PROJECT_ID: 'synthetic-project', DATASET_ID: 'velocity-v2', auth: { currentUser: { uid: 'coach', email: 'coach@velocity-swimming.com', emailVerified: true, staff:true } } }));
+vi.mock('@/lib/supabase/client',()=>({browserClient:()=>({rpc:async()=>({data:{totalBestsWritten:[...mock.documents.keys()].filter(k=>k.startsWith('swims/')).length,athletesCount:1},error:null})})}));
+vi.mock('@/lib/data', async importOriginal => {
+  const original = await importOriginal<typeof import('@/lib/data')>();
   const path = (...parts: unknown[]) => parts.filter(p => typeof p === 'string').join('/');
   const snapshot = (reference: string) => ({ id: reference.split('/').at(-1), ref: reference, exists: () => mock.documents.has(reference), data: () => mock.documents.get(reference) });
   const batch = () => {
@@ -87,29 +88,11 @@ describe('canonical athlete writes', () => {
   });
 });
 
-describe('materialized swim projections', () => {
-  it('refreshes and prunes athlete bests without reading or writing retired collections', async () => {
-    const retired = ['records', 'goals', 'film_sessions'];
-    for (const name of retired) mock.documents.set(`${name}/historical`, { legacy: name });
-    const reads = vi.spyOn(await import('firebase/firestore'), 'getDocs');
-    reads.mockClear();
-    mock.documents.set('athletes/a1', { id: 'a1', name: validSwim.athleteName, status: 'active' });
-    mock.documents.set('swims/s1', validSwim);
-    expect(await refreshSwimProjections()).toEqual({ bestsUpdated: 1 });
-    expect(mock.documents.get('athletes/a1/bests/100_FR_SCY')).toMatchObject({ bestTimeMs: 54000 });
-    mock.documents.set('athletes/a1/bests/obsolete', { bestTimeMs: 1 });
-    expect(await refreshSwimProjections()).toEqual({ bestsUpdated: 1 });
-    expect(mock.documents.has('athletes/a1/bests/obsolete')).toBe(false);
-    mock.documents.delete('swims/s1');
-    expect(await refreshSwimProjections()).toEqual({ bestsUpdated: 0 });
-    expect(mock.documents.has('athletes/a1/bests/100_FR_SCY')).toBe(false);
-    for (const name of retired) {
-      expect([...mock.documents.keys()].filter(path => path.startsWith(name + '/'))).toEqual([`${name}/historical`]);
-      expect(mock.documents.get(`${name}/historical`)).toEqual({ legacy: name });
-      expect(reads.mock.calls.some(([reference]) => String(reference) === name)).toBe(false);
-    }
-    reads.mockRestore();
-  });
+describe('database projection status',()=>{
+ it('reports committed counts without scanning or writing result collections',async()=>{
+ const reads=vi.spyOn(await import('@/lib/data'),'getDocs');reads.mockClear();
+ mock.documents.set('swims/s1',validSwim);expect(await refreshSwimProjections()).toEqual({bestsUpdated:1});expect(reads).not.toHaveBeenCalled();reads.mockRestore();
+ });
 });
 
 describe('meet editor persistence', () => {
@@ -129,7 +112,7 @@ type TestRow = Omit<ImportRow, 'evidence'>;
 const evidenceFor = (data: Record<string, unknown>) => [{ sourceId: 'source', revisionId: 'a'.repeat(64), checkId: 'check', checkedAt: '2026-10-06T17:00:00Z', fields: factFields(data).length ? factFields(data) : ['id'], context: 'Synthetic test', excerpt: 'Synthetic verified fact' }];
 function importBatch(rows: TestRow[], id = 'batch1'): ImportBatch {
   mock.documents.set('sources/source/checks/' + id, { outcome: 'retrieved', revisionId: 'a'.repeat(64), at: '2026-10-06T17:00:00Z' });
-  return { version: 2, target: { project: 'synthetic-project', database: 'velocity-v2' }, id, collectedAt: '2026-10-06T17:00:00Z', sources: [{ id: 'source', name: 'Verified fixture', revisionId: 'a'.repeat(64), checkId: id, kind: 'result_file', reference: 'fixture:results', collectedAt: '2026-10-06T17:00:00Z', coverage: 'complete', scope: 'Synthetic test' }], rows: rows.map(row => ({ ...row, evidence: evidenceFor(row.data).map(e => ({ ...e, checkId: id })) })), unresolved: [] };
+  return { version: 3, target: { provider: 'supabase', project: 'synthetic-project', database: 'velocity-v2' }, id, collectedAt: '2026-10-06T17:00:00Z', sources: [{ id: 'source', name: 'Verified fixture', revisionId: 'a'.repeat(64), checkId: id, kind: 'result_file', reference: 'fixture:results', collectedAt: '2026-10-06T17:00:00Z', coverage: 'complete', scope: 'Synthetic test' }], rows: rows.map(row => ({ ...row, evidence: evidenceFor(row.data).map(e => ({ ...e, checkId: id })) })), unresolved: [] };
 }
 const athleteRow = (data: Record<string, unknown>, id = 'row1'): TestRow => ({ id, kind: 'athlete', sourceIds: ['source'], verified: true, data });
 const raceRow = (data: Record<string, unknown>, id = 'race1'): TestRow => ({ id, kind: 'swim', sourceIds: ['source'], verified: true, data });
@@ -195,11 +178,11 @@ describe('reviewed import batches', () => {
     expect(preview.rows.every(row => row.status !== 'conflict')).toBe(true);
     await applyImportBatch(preview, ['race1', 'scm', 'dq']);
     expect(mock.documents.has('swims/alternate')).toBe(false);
-    expect(mock.documents.get('athletes/a1/bests/100_FR_SCY')?.bestTimeMs).toBe(53000);
-    expect(mock.documents.get('athletes/a1/bests/100_FR_SCM')?.bestTimeMs).toBe(58000);
+    expect(mock.documents.get('swims/s1')?.timeMs).toBe(53000);
+    expect(mock.documents.get('swims/scm')?.course).toBe('SCM');
     await reverseImportChanges('batch1', ['race1', 'scm', 'dq']);
-    expect(mock.documents.get('athletes/a1/bests/100_FR_SCY')?.bestTimeMs).toBe(54000);
-    expect(mock.documents.has('athletes/a1/bests/100_FR_SCM')).toBe(false);
+    expect(mock.documents.get('swims/s1')?.timeMs).toBe(54000);
+    expect(mock.documents.has('swims/scm')).toBe(false);
   });
   it('persists pending projection failures and supports recovery without rewriting imported races', async () => {
     const preview = await previewImportBatch(importBatch([raceRow(validSwim)]));

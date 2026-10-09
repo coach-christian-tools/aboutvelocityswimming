@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
-import { collection, onSnapshot, addDoc, updateDoc, deleteDoc, doc } from "firebase/firestore"
-import { db } from "../../lib/firebase"
+import { collection, onSnapshot, addDoc, updateDoc, deleteDoc, doc } from "@/lib/data"
+import { db } from "../../lib/backend"
 import type { WorkDescription } from "../../types"
 import { Button } from "../ui/Button"
 import { Card } from "../ui/Card"
@@ -86,16 +86,16 @@ export function Settings() {
   return (
     <div className="max-w-4xl mx-auto space-y-6">
       <div className="flex items-center gap-3 pb-4 border-b border-slate-200">
-        <SettingsIcon className="w-8 h-8 text-[#0A856C]" />
+        <SettingsIcon className="w-8 h-8 text-accent" />
         <div>
-          <h1 className="text-2xl font-extrabold text-[#13415D] tracking-tight">Admin Settings</h1>
+          <h1 className="text-2xl font-extrabold text-text-primary tracking-tight">Admin Settings</h1>
           <p className="text-sm text-slate-500">Manage portal configurations and preset options.</p>
         </div>
       </div>
 
-      <Card className="p-6 border border-slate-200 bg-white">
+      <Card className="p-6 border border-slate-200 bg-surface">
         <div className="mb-6">
-          <h2 className="text-lg font-bold text-[#13415D] mb-1">Work Descriptions</h2>
+          <h2 className="text-lg font-bold text-text-primary mb-1">Work Descriptions</h2>
           <p className="text-xs text-slate-500">
             These are the predefined options that appear in the &quot;Description of Work&quot; autocomplete when assigning manual hours.
           </p>
@@ -121,7 +121,7 @@ export function Settings() {
         ) : (
           <div className="border border-slate-200 rounded-xl overflow-hidden divide-y divide-slate-100">
             {descriptions.map((desc) => (
-              <div key={desc.id} className="flex items-center justify-between p-3 bg-white hover:bg-slate-50 transition-colors">
+              <div key={desc.id} className="flex items-center justify-between p-3 bg-surface hover:bg-bg transition-colors">
                 {editingId === desc.id ? (
                   <div className="flex-1 flex items-center gap-2 mr-4">
                     <Input
@@ -142,7 +142,7 @@ export function Settings() {
                     </Button>
                   </div>
                 ) : (
-                  <div className="text-sm text-[#13415D] font-medium pl-2">
+                  <div className="text-sm text-text-primary font-medium pl-2">
                     {desc.text}
                   </div>
                 )}
@@ -151,7 +151,7 @@ export function Settings() {
                   <div className="flex items-center gap-1">
                     <button
                       onClick={() => startEdit(desc)}
-                      className="p-2 text-slate-400 hover:text-[#0A856C] hover:bg-[#0A856C]/10 rounded-lg transition-colors"
+                      className="p-2 text-slate-400 hover:text-accent hover:bg-[#0A856C]/10 rounded-lg transition-colors"
                       title="Edit description"
                     >
                       <Edit2 className="w-4 h-4" />

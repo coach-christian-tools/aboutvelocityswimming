@@ -54,7 +54,7 @@ describe('review-question audit', () => {
     const context = { project: 'synthetic', database: 'velocity-v2', apply, db: { doc: (path: string) => ({ path, collection: (name: string) => ({ doc: (id: string) => ({ path: `${path}/${name}/${id}` }) }) }), runTransaction: async (work: (tx: unknown) => unknown) => work({ get: async (ref: { path: string }) => { const path = ref.path.replace(/record_provenance\/[a-f0-9]{64}/, 'record_provenance/key'); return { exists: documents.has(path), data: () => documents.get(path) }; }, set: (ref: { path: string }, data: Record<string, unknown>) => documents.set(ref.path.replace(/record_provenance\/[a-f0-9]{64}/, 'record_provenance/key'), structuredClone(data)), create: (ref: { path: string }, data: Record<string, unknown>) => documents.set(ref.path.replace(/record_provenance\/[a-f0-9]{64}/, 'record_provenance/key'), structuredClone(data)) }) } };
     return { context, documents };
   }
-  const manifest = { version: 1, id: 'open-question', target: { project: 'synthetic', database: 'velocity-v2' }, updates: [update] };
+  const manifest = { version: 1, id: 'open-question', target: { provider: 'supabase', project: 'synthetic', database: 'velocity-v2' }, updates: [update] };
   it('previews without writes, applies idempotently, preserves dates/facts and retains resolution history', async () => {
     const { context, documents } = fixture(false), before = structuredClone(documents);
     expect(await updateReviewQuestions(context, manifest, at)).toEqual({ changed: 1, unchanged: 0 }); expect(documents).toEqual(before);
@@ -72,7 +72,7 @@ describe('review-question audit', () => {
   });
   it('rejects mismatched targets, unarchived evidence and fake resolution', async () => {
     const { context, documents } = fixture(true);
-    await expect(updateReviewQuestions(context, { ...manifest, target: { project: 'other', database: 'velocity-v2' } })).rejects.toThrow('target');
+    await expect(updateReviewQuestions(context, { ...manifest, target: { provider: 'supabase', project: 'other', database: 'velocity-v2' } })).rejects.toThrow('target');
     await expect(updateReviewQuestions(context, { ...manifest, updates: [{ ...update, status: 'resolved' }] })).rejects.toThrow('Resolution');
     await expect(updateReviewQuestions(context, { ...manifest, updates: [{ ...update, status: 'resolved', resolution: 'Answer' }] })).rejects.toThrow('open question');
     documents.delete('sources/official/revisions/' + field.revisionId);

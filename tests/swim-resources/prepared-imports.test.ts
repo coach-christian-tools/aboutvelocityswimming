@@ -7,21 +7,20 @@ import { authorizePreparedImports } from '@/features/swim-resources/lib/server/l
 import { listPreparedImports, readPreparedImport } from '@/features/swim-resources/lib/server/prepared-imports';
 import { GET } from '@/app/api/swim-resources/admin/imports/prepared/route';
 
-const sdk = vi.hoisted(() => ({ verify: vi.fn(), initialize: vi.fn() }));
-vi.mock('firebase-admin/app', () => ({ getApps: () => [], initializeApp: sdk.initialize }));
-vi.mock('firebase-admin/auth', () => ({ getAuth: () => ({ verifyIdToken: sdk.verify }) }));
+const sdk=vi.hoisted(()=>({verify:vi.fn(),initialize:vi.fn(),staff:vi.fn()}));
+vi.mock('@supabase/supabase-js',()=>({createClient:sdk.initialize}));
 
 const request = (token?: string, hostname = 'localhost') => new Request('http://' + hostname + ':3000/api/swim-resources/admin/imports/prepared', { headers: token ? { Authorization: 'Bearer ' + token } : {} });
 const fixture = (id: string, kind: ImportKind): ImportBatch => ({
-  version: 2, target: { project: 'synthetic-project', database: 'velocity-v2' }, id, collectedAt: '2026-10-06T17:00:00Z',
+  version: 3, target: { provider: 'supabase', project: 'synthetic-project', database: 'velocity-v2' }, id, collectedAt: '2026-10-06T17:00:00Z',
   sources: [{ id: 'source', name: 'Synthetic fixture', revisionId: 'a'.repeat(64), checkId: 'check', kind: 'document', reference: 'fixture:source', collectedAt: '2026-10-06T17:00:00Z', coverage: 'partial', scope: 'Synthetic records only' }],
   rows: [{ id: 'row', kind, verified: true, sourceIds: ['source'], data: { id: 'synthetic' }, evidence: [{ sourceId: 'source', revisionId: 'a'.repeat(64), checkId: 'check', checkedAt: '2026-10-06T17:00:00Z', fields: ['id'], context: 'Synthetic', excerpt: 'Synthetic' }] }], unresolved: [],
 });
 let directory: string;
 beforeEach(async () => {
   vi.clearAllMocks();
-  vi.stubEnv('NODE_ENV', 'development'); vi.stubEnv('NEXT_PUBLIC_FIREBASE_PROJECT_ID', 'synthetic-project'); vi.stubEnv('FIREBASE_AUTH_EMULATOR_HOST', '');
-  sdk.verify.mockResolvedValue({ email: 'coach@velocity-swimming.com', email_verified: true });
+  vi.stubEnv('NODE_ENV', 'development'); vi.stubEnv('NEXT_PUBLIC_SUPABASE_URL','https://synthetic-project.supabase.co');vi.stubEnv('NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY','synthetic-public-key');
+  sdk.initialize.mockReturnValue({auth:{getUser:sdk.verify},rpc:sdk.staff});sdk.verify.mockResolvedValue({data:{user:{id:'coach'}},error:null});sdk.staff.mockResolvedValue({data:true});
   directory = await mkdtemp(join(tmpdir(), 'cutter-prepared-test-'));
 });
 afterEach(async () => { await rm(directory, { recursive: true, force: true }); vi.unstubAllEnvs(); });
@@ -32,25 +31,23 @@ describe('prepared import access', () => {
     expect(anonymous.status).toBe(401);
     expect(anonymous.headers.get('cache-control')).toBe('private, no-store');
     expect(sdk.verify).not.toHaveBeenCalled();
-    sdk.verify.mockRejectedValue(new Error('Synthetic invalid or expired token'));
+    sdk.verify.mockResolvedValue({data:{user:null},error:new Error('Synthetic invalid token')});
     expect((await GET(request('invalid'))).status).toBe(401);
   });
   it('requires a verified Velocity coach and verifies against the configured project', async () => {
-    for (const claims of [{ email: 'other@example.com', email_verified: true }, { email: 'coach@velocity-swimming.com', email_verified: false }]) {
-      sdk.verify.mockResolvedValue(claims);
-      expect((await authorizePreparedImports(request('signed-fixture')))?.status).toBe(403);
-    }
-    sdk.verify.mockResolvedValue({ email: 'coach@velocity-swimming.com', email_verified: true });
+    sdk.staff.mockResolvedValue({data:false});
+    expect((await authorizePreparedImports(request('signed-fixture')))?.status).toBe(403);
+    sdk.staff.mockResolvedValue({data:true});
     expect(await authorizePreparedImports(request('signed-fixture'))).toBeNull();
     expect(sdk.verify).toHaveBeenLastCalledWith('signed-fixture');
-    expect(sdk.initialize).toHaveBeenLastCalledWith({ projectId: 'synthetic-project' }, 'prepared-imports-synthetic-project');
+    expect(sdk.initialize).toHaveBeenLastCalledWith('https://synthetic-project.supabase.co','synthetic-public-key',expect.objectContaining({auth:{persistSession:false}}));
   });
   it('does not publish local batches in production, over a remote host, or through unsigned emulator auth', async () => {
     vi.stubEnv('NODE_ENV', 'production');
     expect((await GET(request('signed-fixture'))).status).toBe(404);
     vi.stubEnv('NODE_ENV', 'development');
     expect((await GET(request('signed-fixture', 'example.com'))).status).toBe(404);
-    vi.stubEnv('FIREBASE_AUTH_EMULATOR_HOST', '127.0.0.1:9099');
+    vi.stubEnv('NEXT_PUBLIC_SUPABASE_URL','');
     expect((await GET(request('unsigned-emulator'))).status).toBe(503);
     expect(sdk.verify).not.toHaveBeenCalled();
   });

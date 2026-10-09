@@ -5,7 +5,7 @@ import { swimResourcesPath } from '../../lib/routes.ts';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import type { QueryDocumentSnapshot } from 'firebase/firestore';
+import type { QueryDocumentSnapshot } from '@/lib/data';
 import { isoTime, type EvidenceSource, type Provenance } from '@/features/swim-resources/lib/domain/evidence';
 import { VIEWER_COLLECTIONS, viewerHref } from '@/features/swim-resources/lib/domain/data-viewer';
 import { maintenanceRecord, maintenanceSource, maintenanceSelection, visibleMaintenance, MAINTENANCE_ISSUES, MAINTENANCE_LABELS, type MaintenanceRow } from '@/features/swim-resources/lib/domain/maintenance';

@@ -1,7 +1,7 @@
 'use client';
 
 import { useMemo, useState } from 'react';
-import { FIRESTORE_DATABASE_ID } from '@/features/swim-resources/lib/firebase';
+import { DATASET_ID } from '@/features/swim-resources/lib/backend';
 import BatchImportPanel from '@/features/swim-resources/components/admin/BatchImportPanel';
 
 /** Legacy HTML remains useful as a capture, but a PB list is not a race history. */
@@ -32,6 +32,6 @@ export default function ImportPage() {
       <button aria-pressed={mode === 'batch'}  onClick={() => setMode('batch')}>Structured batch</button>
       <button aria-pressed={mode === 'html'}  onClick={() => setMode('html')}>Inspect HTML</button>
     </div>
-    {mode === 'batch' ? FIRESTORE_DATABASE_ID === 'velocity-v2' ? <BatchImportPanel /> : <p>Fresh imports require velocity-v2. Switch only after the archive and new dataset pass release verification.</p> : <HtmlObservations />}
+    {mode === 'batch' ? DATASET_ID === 'velocity-v2' ? <BatchImportPanel /> : <p>Fresh imports require velocity-v2. Switch only after the archive and new dataset pass release verification.</p> : <HtmlObservations />}
   </div>;
 }

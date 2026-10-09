@@ -1,4 +1,4 @@
-import { describe, expect, it, vi } from 'vitest';
+import { describe, expect, it } from 'vitest';
 import { initialProvenance, reconcileObservation, recordCheck, freshness, semanticFacts, type EvidenceBinding, type EvidenceSource, type ObservationEvidence } from '../../src/features/swim-resources/lib/domain/evidence';
 import { databaseId, importDirectory } from '../../src/features/swim-resources/lib/domain/database-target';
 import { encodeValue, decodeValue, verifyArchive, storageReferences, publishDatasetArchive, collectionCounts } from '../../scripts/swim-resources/lib/dataset-archive.mjs';
@@ -8,7 +8,6 @@ import { collectHttp, publicAddress } from '../../scripts/swim-resources/lib/sou
 import { currentStandard } from '../../src/features/swim-resources/lib/domain/standards';
 import { validateImportData } from '../../src/features/swim-resources/lib/domain/import-batch';
 import type { StandardSet } from '../../src/features/swim-resources/types/schema';
-import { Timestamp, GeoPoint, Firestore } from 'firebase-admin/firestore';
 const at = '2026-10-07T12:00:00Z', later = '2026-10-08T12:00:00Z';
 const source: EvidenceSource = { id: 'official', name: 'Official', reference: 'https://example.test', kind: 'website', scope: 'Current season', retrieval: 'http', intervalDays: 30, enabled: true };
 const binding: EvidenceBinding = { id: 'meet', sourceId: source.id, targetPath: 'meets/test', fields: ['name', 'host'], context: 'season-2026', priority: 1 };
@@ -71,25 +70,14 @@ describe('database and immutable archive boundaries', () => {
     expect(importDirectory('demo-a', '(default)')).not.toBe(importDirectory('demo-a', 'velocity-v2'));
     expect(() => importDirectory('../private', 'velocity-v2')).toThrow(); expect(() => privatePath('public/evidence.html')).toThrow();
   });
-  it('refuses restoration hosts that could target live Storage or mix live and emulator data', () => {
-    const args = process.argv;
-    try {
-      process.argv = ['node', 'fixture', '--project', 'demo-verification', '--database', 'restore-test'];
-      vi.stubEnv('FIRESTORE_EMULATOR_HOST', '127.0.0.1:8088'); vi.stubEnv('STORAGE_EMULATOR_HOST', 'https://storage.googleapis.com');
-      expect(() => adminDatabase()).toThrow('local Firestore and Storage');
-      vi.stubEnv('FIRESTORE_EMULATOR_HOST', 'firestore.googleapis.com:443'); vi.stubEnv('STORAGE_EMULATOR_HOST', 'http://127.0.0.1:9199');
-      expect(() => adminDatabase()).toThrow('local Firestore and Storage');
-      vi.stubEnv('FIRESTORE_EMULATOR_HOST', '');
-      expect(() => adminDatabase()).toThrow('mix live Firestore');
-    } finally { process.argv = args; vi.unstubAllEnvs(); }
+  it('rejects an old backend target before creating a collector', () => {
+ const args=process.argv;try {process.argv=['node','fixture','--project','old-firebase','--database','(default)'];expect(()=>adminDatabase()).toThrow('Supply SUPABASE_URL');}finally{process.argv=args;}
   });
-  it('preserves Firestore types without colliding with ordinary objects and detects archive tampering', () => {
-    const db = new Firestore({ projectId: 'demo-archive' });
-    const input = { literal: { type: 'timestamp', seconds: 5 }, time: new Timestamp(10, 123), location: new GeoPoint(47, -122), bytes: Buffer.from('private'), ref: db.doc('teams/velocity-swimming'), values: [NaN, Infinity, null, true] };
-    const encoded = encodeValue(input), decoded = decodeValue(encoded, db);
-    expect(encodeValue(decoded)).toEqual(encoded);
+  it('preserves application values and detects archive tampering', () => {
+    const input={literal:{type:'timestamp',seconds:5},time:new Date(at),bytes:Buffer.from('private'),values:[NaN,Infinity,null,true]};
+    const encoded=encodeValue(input),decoded=decodeValue(encoded);expect(encodeValue(decoded)).toEqual(encoded);
     const entries = [{ path: 'test/record', data: encoded, hash: hashBytes(JSON.stringify(encoded)) }];
-    const archive = { version: 1, entries, fingerprint: hashBytes(JSON.stringify(entries.map(e => [e.path, e.hash]))) };
+    const archive = { version: 2, provider: 'supabase', entries, fingerprint: hashBytes(JSON.stringify(entries.map(e => [e.path, e.hash]))) };
     verifyArchive(archive); entries[0].hash = 'wrong'; expect(() => verifyArchive(archive)).toThrow('checksum');
     expect([...storageReferences({ bucket: 'private.test', storagePath: 'evidence/capture' })]).toHaveLength(1);
   });
@@ -105,7 +93,7 @@ describe('database and immutable archive boundaries', () => {
   it('verifies deduplicated archived files before publishing a completion manifest', async () => {
     const bytes = Buffer.from('same document'), hash = hashBytes(bytes), saved = new Map<string, Buffer>(), order: string[] = [];
     const storage = { bucket: () => ({ file: (path: string) => ({ save: async (value: Buffer) => { if (saved.has(path)) throw new Error('overwrite'); order.push(path); saved.set(path, value); }, download: async () => [saved.get(path)] }) }) };
-    const archive = { version: 1, entries: [], counts: collectionCounts([]), fingerprint: hashBytes('[]'), files: [{ bucket: 'old', object: 'one', hash, size: bytes.length }, { bucket: 'old', object: 'two', hash, size: bytes.length }] };
+    const archive = { version: 2, provider: 'supabase', entries: [], counts: collectionCounts([]), fingerprint: hashBytes('[]'), files: [{ bucket: 'old', object: 'one', hash, size: bytes.length }, { bucket: 'old', object: 'two', hash, size: bytes.length }] };
     await publishDatasetArchive(storage, 'private', 'qualified/archive', archive, async () => bytes);
     expect(order).toEqual([`qualified/archive/${hash}`, 'qualified/archive/dataset.json']);
     order.length = 0;

@@ -1,4 +1,4 @@
-name: Verify website and Swim Resources
+name: Verify Velocity Swimming
 on:
   pull_request:
   push:
@@ -7,28 +7,31 @@ permissions:
 jobs:
   verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 24
           cache: npm
-      - uses: actions/setup-java@v4
+      - uses: supabase/setup-cli@v1
         with:
-          distribution: temurin
-          java-version: 21
+          version: 2.117.0
       - run: npm ci
+      - run: supabase start -x studio,imgproxy,logflare,vector,supavisor
+      - run: npm run seed:local
       - run: npm run verify
-        env:
-          NEXT_PUBLIC_FIREBASE_API_KEY: demo-api-key
-          NEXT_PUBLIC_FIREBASE_PROJECT_ID: demo-cutter-coach
-          NEXT_PUBLIC_FIRESTORE_DATABASE_ID: velocity-v2
-          NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET: demo-cutter-coach.appspot.com
-      - run: npm install --global firebase-tools@15.30.2
-      - run: npm run test:rules
-      - name: Report retained website dependency advisories
-        continue-on-error: true
-        run: npm audit --omit=dev --audit-level=high
-        # Existing Next/Sanity findings are recorded in docs/swim-resources/MIGRATION.md.
-        # Framework upgrades are outside this migration's preserved-version scope.
+      - run: npx playwright install --with-deps chromium
+      - name: Verify browser workflows
+        run: |
+          npm run dev:local > /tmp/velocity-next.log 2>&1 &
+          for attempt in $(seq 1 60); do
+            curl --fail --silent http://127.0.0.1:3001/tools > /dev/null && break
+            sleep 1
+          done
+          npm run test:browser
+      - name: Check database advisors
+        run: supabase db advisors --local --type all --fail-on error
+      - name: Stop local services
+        if: always()
+        run: supabase stop

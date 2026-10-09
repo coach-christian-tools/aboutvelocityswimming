@@ -39,7 +39,7 @@ export function VSLogo({
         className={`${imgHeightClasses[size]} w-auto object-contain flex-shrink-0`} 
       />
       {showBadge && (
-        <span className={`font-extrabold tracking-wider uppercase bg-[#0A856C]/10 text-[#0A856C] rounded-md font-sans ${badgeClasses[size]}`}>
+        <span className={`font-extrabold tracking-wider uppercase bg-[#0A856C]/10 text-accent rounded-md font-sans ${badgeClasses[size]}`}>
           Workshare
         </span>
       )}

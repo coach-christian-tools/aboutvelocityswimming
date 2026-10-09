@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { useLocation } from "react-router-dom"
+import { useLocation } from "@/features/workshare/lib/navigation"
 import { getGuestInvitation, redeemGuestInvitation } from "../../lib/invitations"
 import type { GuestInvitationDetails } from "../../lib/invitations"
 import { errorMessage } from "../../lib/errors"
@@ -54,7 +54,7 @@ function GuestInvitationForm({ token }: { token: string }) {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-slate-50 flex items-center justify-center p-4">
+      <div className="min-h-screen bg-bg flex items-center justify-center p-4">
         <div className="text-slate-500 font-medium animate-pulse">Loading shift details...</div>
       </div>
     )
@@ -62,12 +62,12 @@ function GuestInvitationForm({ token }: { token: string }) {
 
   if (!job || !details) {
     return (
-      <div className="min-h-screen bg-slate-50 flex items-center justify-center p-4">
-        <Card className="w-full max-w-md text-center bg-white border border-red-200 p-8">
+      <div className="min-h-screen bg-bg flex items-center justify-center p-4">
+        <Card className="w-full max-w-md text-center bg-surface border border-red-200 p-8">
           <div className="w-12 h-12 rounded-full bg-red-50 text-red-600 flex items-center justify-center mx-auto mb-3">
             <AlertTriangle className="w-6 h-6" />
           </div>
-          <h2 className="text-xl font-bold text-[#13415D] mb-2">Invalid or Expired Link</h2>
+          <h2 className="text-xl font-bold text-text-primary mb-2">Invalid or Expired Link</h2>
           <p className="text-sm text-slate-500">This invitation is invalid, expired, revoked, or already used. Older guest links no longer work. Ask the family to generate a new link.</p>
         </Card>
       </div>
@@ -76,16 +76,16 @@ function GuestInvitationForm({ token }: { token: string }) {
 
   if (submitted) {
     return (
-      <div className="min-h-screen bg-slate-50 flex items-center justify-center p-4">
-        <Card className="w-full max-w-md text-center bg-white border border-[#0A856C]/30 p-8 shadow-sm">
-          <div className="w-16 h-16 bg-[#0A856C]/10 text-[#0A856C] rounded-full flex items-center justify-center mx-auto mb-4">
+      <div className="min-h-screen bg-bg flex items-center justify-center p-4">
+        <Card className="w-full max-w-md text-center bg-surface border border-[#0A856C]/30 p-8 shadow-sm">
+          <div className="w-16 h-16 bg-[#0A856C]/10 text-accent rounded-full flex items-center justify-center mx-auto mb-4">
             <CheckCircle2 className="w-8 h-8" />
           </div>
-          <h2 className="text-2xl font-extrabold text-[#13415D] mb-2">Thank You!</h2>
+          <h2 className="text-2xl font-extrabold text-text-primary mb-2">Thank You!</h2>
           <p className="text-sm text-slate-600">
             You have successfully registered to cover <strong>{job.title}</strong> as a guest volunteer.
           </p>
-          <div className="mt-4 p-3 bg-slate-50 rounded-xl border border-slate-100 text-xs text-slate-500">
+          <div className="mt-4 p-3 bg-bg rounded-xl border border-slate-100 text-xs text-slate-500">
             Credit has been linked to the <strong>{details.familyName}</strong> family.
           </div>
         </Card>
@@ -94,7 +94,7 @@ function GuestInvitationForm({ token }: { token: string }) {
   }
 
   return (
-    <div className="min-h-screen bg-slate-50 flex flex-col items-center justify-center p-4 sm:p-6">
+    <div className="min-h-screen bg-bg flex flex-col items-center justify-center p-4 sm:p-6">
       <div className="w-full max-w-md flex flex-col items-center">
         {/* Brand Header */}
         <div className="mb-6 text-center">
@@ -102,17 +102,17 @@ function GuestInvitationForm({ token }: { token: string }) {
           <p className="text-sm text-slate-500 font-medium">Guest Proxy Volunteer Registration</p>
         </div>
 
-        <Card className="w-full bg-white shadow-sm border border-slate-200 p-6 sm:p-8">
+        <Card className="w-full bg-surface shadow-sm border border-slate-200 p-6 sm:p-8">
           {/* Shift Details Box */}
           <div className="bg-[#13415D]/5 border border-[#13415D]/15 p-4 rounded-xl mb-6">
-            <div className="flex items-center gap-1.5 text-xs font-bold text-[#0A856C] uppercase tracking-wider mb-1">
+            <div className="flex items-center gap-1.5 text-xs font-bold text-accent uppercase tracking-wider mb-1">
               <UserCheck className="w-3.5 h-3.5" /> Volunteering On Behalf Of
             </div>
-            <p className="font-extrabold text-[#13415D] text-sm truncate">{details.familyName}</p>
+            <p className="font-extrabold text-text-primary text-sm truncate">{details.familyName}</p>
             
             <div className="my-3 border-t border-slate-200/80" />
             
-            <p className="font-bold text-base text-[#13415D]">{job.title}</p>
+            <p className="font-bold text-base text-text-primary">{job.title}</p>
             <div className="mt-1 space-y-1 text-xs text-slate-600">
               <div className="flex items-center gap-1.5">
                 <Calendar className="w-3.5 h-3.5 text-slate-400" />
@@ -133,16 +133,16 @@ function GuestInvitationForm({ token }: { token: string }) {
             {error && <p role="alert" className="text-sm text-red-600">{error}</p>}
             <div className="grid grid-cols-2 gap-3">
               <div>
-                <label htmlFor="guest-first-name" className="block text-xs font-semibold text-[#13415D] mb-1">First Name</label>
+                <label htmlFor="guest-first-name" className="block text-xs font-semibold text-text-primary mb-1">First Name</label>
                 <Input id="guest-first-name" required maxLength={80} value={firstName} onChange={e => setFirstName(e.target.value)} placeholder="Jane" />
               </div>
               <div>
-                <label htmlFor="guest-last-name" className="block text-xs font-semibold text-[#13415D] mb-1">Last Name</label>
+                <label htmlFor="guest-last-name" className="block text-xs font-semibold text-text-primary mb-1">Last Name</label>
                 <Input id="guest-last-name" required maxLength={80} value={lastName} onChange={e => setLastName(e.target.value)} placeholder="Doe" />
               </div>
             </div>
             <div>
-              <label htmlFor="guest-relation" className="block text-xs font-semibold text-[#13415D] mb-1">Relation to Family</label>
+              <label htmlFor="guest-relation" className="block text-xs font-semibold text-text-primary mb-1">Relation to Family</label>
               <Input id="guest-relation" required maxLength={100} value={relation} onChange={e => setRelation(e.target.value)} placeholder="e.g. Grandparent, Family Friend, Relative" />
             </div>
             <div className="pt-2">

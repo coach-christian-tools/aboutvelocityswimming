@@ -1,4 +1,4 @@
-const https = require('https');
+import https from 'node:https';
 const options = {
   hostname: 'api.printful.com',
   path: '/store/products',

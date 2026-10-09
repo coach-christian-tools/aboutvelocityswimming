@@ -1,9 +1,9 @@
 import { errorCode, errorMessage } from "../../lib/errors"
 import { useState, useEffect, useRef } from "react"
-import { signInWithCustomToken, GoogleAuthProvider, signInWithPopup, signInWithEmailAndPassword } from "firebase/auth"
-import { httpsCallable } from "firebase/functions"
-import { useNavigate } from "react-router-dom"
-import { auth, functions } from "../../lib/firebase"
+import { signInWithGoogle, signInWithEmailAndPassword } from "@/lib/auth"
+import { browserClient } from "@/lib/supabase/client"
+import { useNavigate } from "@/features/workshare/lib/navigation"
+import { auth } from "../../lib/backend"
 import { useAuth } from "../../contexts/auth"
 import { Button } from "../ui/Button"
 import { Input } from "../ui/Input"
@@ -60,15 +60,15 @@ export function Login() {
     setLoading(true)
 
     try {
-      const sendOtpFn = httpsCallable<{ email: string }, { success: boolean; message: string }>(functions, "sendOtp")
-      await sendOtpFn({ email: email.trim() })
+      const {error} = await browserClient().auth.signInWithOtp({email:email.trim()});
+      if(error)throw error;
       setStep("code")
       setCountdown(60)
       setSuccessMessage(`We sent a 6-digit code to ${email.trim()}`)
     } catch (err: unknown) {
       console.error("OTP send error:", err)
       if (errorCode(err) === "functions/not-found" || errorCode(err) === "not-found") {
-        setError("The Cloud Function has not been deployed yet. Please run 'npm run deploy:functions' in your project terminal.")
+        setError("Email sign-in is temporarily unavailable. Please try again shortly.")
       } else {
         setError(errorMessage(err) || "Failed to send verification code. Please check your email.")
       }
@@ -89,13 +89,8 @@ export function Login() {
     setLoading(true)
 
     try {
-      const verifyOtpFn = httpsCallable<{ email: string; code: string }, { success: boolean; token: string }>(functions, "verifyOtp")
-      const result = await verifyOtpFn({ email: email.trim(), code: cleanCode })
-      if (result.data?.token) {
-        await signInWithCustomToken(auth, result.data.token)
-      } else {
-        throw new Error("No session token received. Please try again.")
-      }
+      const {error}=await browserClient().auth.verifyOtp({email:email.trim(),token:cleanCode,type:'email'});
+      if(error)throw error;
     } catch (err: unknown) {
       console.error("OTP verify error:", err)
       setError(errorMessage(err) || "Invalid or expired code. Please try again.")
@@ -122,15 +117,13 @@ export function Login() {
     setSuccessMessage("")
     setGoogleLoading(true)
     try {
-      const provider = new GoogleAuthProvider()
-      provider.setCustomParameters({ prompt: "select_account" })
-      await signInWithPopup(auth, provider)
+      await signInWithGoogle()
     } catch (err: unknown) {
       console.error("Google sign in error:", err)
       if (errorCode(err) === "auth/operation-not-allowed" || errorCode(err) === "auth/configuration-not-found") {
-        setError("Google Sign-In is not enabled yet in your Firebase project. Go to Firebase Console > Authentication > Sign-in method > Enable Google.")
+        setError("Google sign-in is temporarily unavailable. Please use your email code.")
       } else if (errorCode(err) === "auth/unauthorized-domain") {
-        setError("This domain is not authorized. Add 'localhost' in Firebase Console > Authentication > Settings > Authorized domains.")
+        setError("Google sign-in is unavailable on this address. Please use your email code.")
       } else if (errorCode(err) === "auth/popup-blocked") {
         setError("Sign-in popup was blocked by your browser. Please allow popups for this site and try again.")
       } else if (errorCode(err) === "auth/popup-closed-by-user") {
@@ -150,16 +143,16 @@ export function Login() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-50 flex flex-col items-center justify-center p-4 sm:p-6">
+    <div className="min-h-screen bg-bg flex flex-col items-center justify-center p-4 sm:p-6">
       <div className="w-full max-w-md flex flex-col items-center">
         {/* Brand Header */}
         <div className="mb-6 flex flex-col items-center text-center">
           <VSLogo size="lg" showBadge={false} className="mb-2" />
-          <p className="text-sm text-slate-500 font-medium">Family Volunteer & Shift Management</p>
+          <p className="text-sm text-slate-500 font-medium">Family and coaching tools</p>
         </div>
 
-        <Card className="w-full bg-white shadow-sm border border-slate-200 p-6 sm:p-8">
-          <h2 className="text-2xl font-bold mb-1 text-[#13415D] text-center">
+        <Card className="w-full bg-surface shadow-sm border border-slate-200 p-6 sm:p-8">
+          <h2 className="text-2xl font-bold mb-1 text-text-primary text-center">
             {step === "code" ? "Enter Verification Code" : "Sign In to Portal"}
           </h2>
           <p className="text-xs text-slate-500 text-center mb-6">
@@ -167,13 +160,13 @@ export function Login() {
           </p>
 
           {error && (
-            <div className="p-3.5 mb-5 text-sm font-medium text-red-600 bg-red-50 border border-red-200 rounded-xl">
+            <div role="alert" className="p-3.5 mb-5 text-sm font-medium text-red-600 bg-red-50 border border-red-200 rounded-xl">
               {error}
             </div>
           )}
 
           {successMessage && step === "code" && (
-            <div className="p-3.5 mb-5 text-sm font-medium text-[#0A856C] bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-2">
+            <div className="p-3.5 mb-5 text-sm font-medium text-accent bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 flex-shrink-0" />
               <span>{successMessage}</span>
             </div>
@@ -185,11 +178,12 @@ export function Login() {
               {step === "email" ? (
                 <form onSubmit={handleSendCode} className="space-y-4">
                   <div>
-                    <label className="block text-xs font-semibold uppercase tracking-wider text-slate-600 mb-1.5">
+                    <label htmlFor="login-email" className="block text-xs font-semibold uppercase tracking-wider text-slate-600 mb-1.5">
                       Email Address
                     </label>
                     <div className="relative">
                       <Input 
+                        id="login-email"
                         type="email" 
                         required 
                         value={email}
@@ -237,7 +231,7 @@ export function Login() {
                       value={otpCode}
                       onChange={(e) => handleOtpChange(e.target.value)}
                       placeholder="• • • • • •"
-                      className="text-center font-mono text-2xl tracking-[0.4em] h-14 bg-slate-50 font-bold"
+                      className="text-center font-mono text-2xl tracking-[0.4em] h-14 bg-bg font-bold"
                       autoComplete="one-time-code"
                     />
                   </div>
@@ -326,7 +320,7 @@ export function Login() {
               type="button"
               onClick={handleGoogleAdminLogin}
               disabled={loading || googleLoading}
-              className="inline-flex items-center justify-center gap-2 text-xs font-semibold text-slate-600 hover:text-[#0A856C] transition-colors py-2 px-3 rounded-lg hover:bg-slate-50 cursor-pointer"
+              className="inline-flex items-center justify-center gap-2 text-xs font-semibold text-slate-600 hover:text-accent transition-colors py-2 px-3 rounded-lg hover:bg-bg cursor-pointer"
             >
               <svg className="w-4 h-4" viewBox="0 0 24 24">
                 <path
@@ -346,7 +340,7 @@ export function Login() {
                   d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"
                 />
               </svg>
-              <span>{googleLoading ? "Connecting to Google..." : "Staff & Admin Sign-In (Google)"}</span>
+              <span>{googleLoading ? "Connecting to Google..." : "Sign in with Google"}</span>
             </button>
           </div>
         </Card>

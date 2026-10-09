@@ -2,9 +2,8 @@ import { afterEach, expect, it, vi } from 'vitest';
 import { GET } from '@/app/api/swim-resources/admin/imports/prepared/route';
 
 const sdkLoad = vi.hoisted(() => vi.fn());
-vi.mock('firebase-admin/auth', () => {
-  sdkLoad();
-  throw new Error('Synthetic hosted runtime cannot load the Auth SDK.');
+vi.mock('@supabase/supabase-js', () => {
+  return {createClient:()=>{sdkLoad();throw new Error('Hosted runtime cannot load prepared imports.');}};
 });
 afterEach(() => vi.unstubAllEnvs());
 
