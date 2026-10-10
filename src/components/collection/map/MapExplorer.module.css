@@ -1,0 +1,382 @@
+.explorer {
+  color: var(--text-main);
+}
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1.2rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+.breadcrumb button {
+  color: var(--text-main);
+  background: transparent;
+  padding: 0.35rem 0;
+}
+.stage {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: clamp(1rem, 3vw, 2.25rem);
+  margin-bottom: 1.4rem;
+}
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.heading h2 {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  line-height: 1.15;
+  margin-bottom: 0.65rem;
+}
+.heading p:not(.eyebrow) {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+}
+.step {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+  padding-top: 0.3rem;
+}
+.nationalMap {
+  width: 100%;
+  max-height: 490px;
+  display: block;
+  margin: 1rem auto;
+}
+.compact .nationalMap {
+  max-height: 220px;
+}
+.zone {
+  cursor: pointer;
+  outline: none;
+}
+.zone:hover path,
+.zone:focus-visible path,
+.zone[aria-pressed="true"] path {
+  stroke: var(--accent);
+  stroke-width: 3px;
+  filter: brightness(0.94);
+}
+.zoneName {
+  font:
+    600 15px var(--font-heading),
+    sans-serif;
+  fill: #183b40;
+  pointer-events: none;
+}
+.zoneButtons {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+.zoneButtons button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-main);
+  padding: 0.65rem 1rem;
+  font-size: 0.85rem;
+}
+.zoneButtons span {
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 50%;
+}
+.zoneButtons button[aria-pressed="true"] {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent);
+}
+.regionLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 0.8fr);
+  gap: 2rem;
+  margin-top: 1.5rem;
+  align-items: start;
+}
+.regionMap {
+  width: 100%;
+  height: 440px;
+}
+.boundaries {
+  fill: none;
+  stroke: #405858;
+  stroke-width: 0.65;
+  pointer-events: none;
+  opacity: 0.6;
+}
+.lscLabel {
+  cursor: pointer;
+  outline: none;
+}
+.lscLabel rect {
+  fill: var(--surface);
+  stroke: var(--border);
+  stroke-width: 0.4;
+}
+.lscLabel text {
+  fill: var(--text-main);
+  font:
+    600 7px var(--font-body),
+    sans-serif;
+  pointer-events: none;
+}
+.lscLabel:hover rect,
+.lscLabel:focus-visible rect,
+.lscLabel[aria-pressed="true"] rect {
+  stroke: var(--accent);
+  stroke-width: 2;
+}
+.lscButtons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.45rem;
+}
+.lscButtons button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.3rem;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: var(--background-alt);
+  color: var(--text-main);
+  font-size: 0.8rem;
+  padding: 0.7rem;
+  text-align: left;
+}
+.lscButtons svg {
+  flex-shrink: 0;
+}
+.lscButtons button[aria-pressed="true"] {
+  border-color: var(--accent);
+  background: var(--surface);
+}
+.localLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(250px, 1fr);
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+.localCanvas {
+  background: var(--background-alt);
+  border-radius: 15px;
+  padding: 1rem;
+}
+.localCanvas svg {
+  display: block;
+  width: 100%;
+  height: 440px;
+}
+.marker {
+  cursor: pointer;
+  outline: none;
+}
+.marker circle {
+  fill: #147d75;
+  stroke: #fff;
+  stroke-width: 2;
+}
+.marker[data-estimate="true"] circle {
+  fill: var(--surface);
+  stroke: #147d75;
+  stroke-width: 2;
+}
+.marker text {
+  fill: var(--text-main);
+  font-weight: 700;
+  pointer-events: none;
+}
+.marker[data-active="true"] circle,
+.marker:hover circle,
+.marker:focus-visible circle {
+  stroke: var(--text-main);
+  stroke-width: 3.5;
+}
+.legend {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin: 0.6rem 0;
+}
+.solidDot,
+.hollowDot {
+  width: 10px;
+  height: 10px;
+  border: 2px solid #147d75;
+  border-radius: 50%;
+}
+.solidDot {
+  background: #147d75;
+}
+.hollowDot {
+  margin-left: 0.75rem;
+  background: var(--surface);
+}
+.note,
+.attribution {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  line-height: 1.65;
+}
+.localCanvas .note {
+  text-align: center;
+  max-width: 440px;
+  margin: auto;
+}
+.search {
+  display: grid;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.search input {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--text-main);
+  background: var(--background-alt);
+  padding: 0.8rem;
+  width: 100%;
+}
+.teamPanel .note {
+  margin: 0.8rem 0;
+}
+.teamList {
+  max-height: 400px;
+  overflow-y: auto;
+  display: grid;
+  gap: 0.4rem;
+  padding: 2px;
+}
+.teamList button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: space-between;
+  padding: 0.8rem;
+  text-align: left;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-main);
+  font-size: 0.85rem;
+}
+.teamList button[aria-pressed="true"] {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent);
+}
+.teamList small {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+.teamList svg {
+  flex-shrink: 0;
+  color: var(--text-muted);
+}
+.teamDetail {
+  border-top: 1px solid var(--border);
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+}
+.teamDetail h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 1.3rem;
+}
+.teamDetail a,
+.attribution a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.teamDetail time {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+.teamDetail p,
+.teamDetail li {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  margin-top: 0.75rem;
+}
+.teamDetail ul {
+  list-style: none;
+}
+.attribution {
+  margin: 1rem 0.3rem 2rem;
+}
+.explorer button:focus-visible,
+.explorer a:focus-visible,
+.search input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+@media (max-width: 750px) {
+  .regionLayout,
+  .localLayout {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .regionMap {
+    height: 380px;
+  }
+  .localCanvas svg {
+    height: 360px;
+  }
+  .heading {
+    flex-wrap: wrap;
+  }
+  .step {
+    display: none;
+  }
+  .teamList {
+    max-height: 300px;
+  }
+  .zoneButtons button {
+    font-size: 0.75rem;
+    padding: 0.6rem 0.8rem;
+  }
+  .nationalMap {
+    min-height: 240px;
+  }
+  .compact .nationalMap {
+    min-height: 140px;
+    max-height: 180px;
+  }
+  .teamDetail .heading {
+    gap: 0.4rem;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .zone path,
+  .lscLabel rect {
+    transition:
+      stroke 0.15s,
+      filter 0.15s;
+  }
+}

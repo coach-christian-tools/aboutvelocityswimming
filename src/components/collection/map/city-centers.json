@@ -1,0 +1,82 @@
+{
+  "Coeur d'Alene, ID": {
+    "latitude": 47.702887,
+    "longitude": -116.795799
+  },
+  "Lewiston, ID": {
+    "latitude": 46.39313,
+    "longitude": -116.993472
+  },
+  "Moscow, ID": {
+    "latitude": 46.730609,
+    "longitude": -116.998909
+  },
+  "Sandpoint, ID": {
+    "latitude": 48.281694,
+    "longitude": -116.560013
+  },
+  "Baker City, OR": {
+    "latitude": 44.774972,
+    "longitude": -117.831808
+  },
+  "La Grande, OR": {
+    "latitude": 45.324471,
+    "longitude": -118.086891
+  },
+  "Pendleton, OR": {
+    "latitude": 45.675609,
+    "longitude": -118.819548
+  },
+  "Cheney, WA": {
+    "latitude": 47.49113,
+    "longitude": -117.581546
+  },
+  "Clarkston, WA": {
+    "latitude": 46.415405,
+    "longitude": -117.050135
+  },
+  "Ellensburg, WA": {
+    "latitude": 47.000124,
+    "longitude": -120.54954
+  },
+  "Goldendale, WA": {
+    "latitude": 45.819145,
+    "longitude": -120.823366
+  },
+  "Kennewick, WA": {
+    "latitude": 46.197622,
+    "longitude": -119.175923
+  },
+  "Moses Lake, WA": {
+    "latitude": 47.12785,
+    "longitude": -119.276384
+  },
+  "Pasco, WA": {
+    "latitude": 46.266113,
+    "longitude": -119.121426
+  },
+  "Pullman, WA": {
+    "latitude": 46.733126,
+    "longitude": -117.168277
+  },
+  "Richland, WA": {
+    "latitude": 46.28698,
+    "longitude": -119.294045
+  },
+  "Spokane, WA": {
+    "latitude": 47.666935,
+    "longitude": -117.433322
+  },
+  "Walla Walla, WA": {
+    "latitude": 46.067006,
+    "longitude": -118.337033
+  },
+  "Wenatchee, WA": {
+    "latitude": 47.435985,
+    "longitude": -120.329266
+  },
+  "Yakima, WA": {
+    "latitude": 46.590938,
+    "longitude": -120.5494
+  }
+}

@@ -1,10 +1,12 @@
 "use client";
 import { useEffect, useState } from "react";
+import dynamic from "next/dynamic";
 import { ExternalLink, Search } from "lucide-react";
 import { browserClient, hasBackendConfiguration } from "@/lib/supabase/client";
 import { field, originalSource, reviewedDate, type WikiEntry } from "./wiki";
 import styles from "./KnowledgeBase.module.css";
-const tabs = [{ id: "team", label: "Teams" }, { id: "meet", label: "Meets" }, { id: "document", label: "Documents" }, { id: "organization", label: "Organizations" }] as const;
+const MapExplorer = dynamic(() => import("./map/MapExplorer"), { loading: () => <p role="status">Loading map explorer…</p> });
+const tabs = [{ id: "map", label: "Map" }, { id: "team", label: "Teams" }, { id: "meet", label: "Meets" }, { id: "document", label: "Documents" }, { id: "organization", label: "Organizations" }] as const;
 type Tab = typeof tabs[number]["id"];
 function Chips({ label, entries, selected, onChange }: { label: string; entries: WikiEntry[]; selected: string[]; onChange: (value: string[]) => void }) {
   return <fieldset className={styles.chips}><legend>{label}</legend>
@@ -14,7 +16,7 @@ function Chips({ label, entries, selected, onChange }: { label: string; entries:
   </fieldset>;
 }
 export default function KnowledgeBase() {
-  const [tab, setTab] = useState<Tab>("team");
+  const [tab, setTab] = useState<Tab>("map");
   const [organization, setOrganization] = useState("zone");
   const [facets, setFacets] = useState<WikiEntry[]>([]);
   const [facetError, setFacetError] = useState("");
@@ -53,7 +55,7 @@ export default function KnowledgeBase() {
   }, [revision]);
   useEffect(() => {
     let active = true;
-    if (!hasBackendConfiguration || invalidDates) return;
+    if (!hasBackendConfiguration || invalidDates || tab === "map") return;
     let request = browserClient().from("knowledge_entries").select("*").eq("kind", tab === "organization" ? organization : tab);
     if (query) request = request.ilike("title", `%${query.replace(/[\\%_]/g, "\\$&")}%`);
     if (tab === "team" || tab === "meet") {
@@ -88,6 +90,8 @@ export default function KnowledgeBase() {
       }} onClick={() => { setTab(item.id); clear(); }}>{item.label}</button>)}
     </div>
     <div role="tabpanel" id="wiki-panel" aria-labelledby={`wiki-tab-${tab}`} className={styles.panel}>
+      {tab === "map" && facetError && <p role="alert">{facetError} <button onClick={() => setRevision(value => value + 1)}>Retry filters</button></p>}
+      {tab === "map" ? <MapExplorer facets={facets} /> : <>
       <div className={styles.filters}>
         <label className={styles.search}><Search size={18} aria-hidden="true" /><span className="sr-only">Search {tab === "organization" ? "organizations" : `${tab}s`}</span><input type="search" placeholder={`Search ${tab === "organization" ? "organizations" : `${tab}s`}…`} value={search} onChange={event => setSearch(event.target.value)} /></label>
         {(tab === "team" || tab === "meet") && <>
@@ -117,6 +121,7 @@ export default function KnowledgeBase() {
         })}</div>
       </>}
       <nav aria-label="Knowledge pages" className={styles.pagination}><button disabled={!offset || loading || invalidDates} onClick={() => { setOffset(offset - 24); setLoading(true); }}>Previous</button><button disabled={!hasNext || loading || invalidDates} onClick={() => { setOffset(offset + 24); setLoading(true); }}>Next</button></nav>
+      </>}
     </div>
   </section>;
 }
