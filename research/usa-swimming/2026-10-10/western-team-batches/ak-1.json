@@ -1,0 +1,1550 @@
+{
+  "division": "knowledge",
+  "scope": "Western Zone swim teams \u2014 Alaska Swimming",
+  "sourceUrl": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf",
+  "capturedAt": "2026-10-10T08:09:39.044999+00:00",
+  "coverage": "partial",
+  "evidence": {
+    "checkedAt": "2026-10-10",
+    "lscCode": "AK",
+    "directoryRowsCollected": 22,
+    "batchRows": 22,
+    "enumeration": "All named rows in the retrieved official directory/roster sources; independent current registration is not guaranteed.",
+    "deduplication": "Compared against 84 published knowledge records and an empty pending queue; facilities combined by organization key; Inland Empire\u2019s 19 existing teams were retained without duplicates.",
+    "remaining": "Missing codes, unreachable websites, registration status, and conflicting sources are visible in each record. Sierra Nevada BBST remains name/code unresolved from official evidence."
+  },
+  "writes": [
+    {
+      "path": "knowledge_entries/usa-team-ak-yeti",
+      "after": {
+        "kind": "team",
+        "title": "Aquatic Foundation of Alaska",
+        "officialName": "Aquatic Foundation of Alaska",
+        "abbreviation": "YETI",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ak",
+        "lscId": "usa-lsc-ak",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.swimyetiswim.com",
+        "sourceUrl": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf",
+        "summary": "Aquatic Foundation of Alaska is a swim team/program listed by Alaska Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Anchorage, AK",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Alaska Swimming",
+            "targetId": "usa-lsc-ak"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "swimcoachdenise@gmail.com",
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(907) 440-8405",
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Grant Gamblin",
+            "email": "aquaticfoundationalaska@gmail.com",
+            "phone": "19073172254"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf",
+            "title": "Alaska Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.swimyetiswim.com",
+            "title": "Aquatic Foundation of Alaska Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.swimyetiswim.com/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ak-ast",
+      "after": {
+        "kind": "team",
+        "title": "Aurora Swim Team",
+        "officialName": "Aurora Swim Team",
+        "abbreviation": "AST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ak",
+        "lscId": "usa-lsc-ak",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.swimast.org",
+        "sourceUrl": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf",
+        "summary": "Aurora Swim Team is a swim team/program listed by Alaska Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Anchorage, AK",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Alaska Swimming",
+            "targetId": "usa-lsc-ak"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "akswimcoach@hotmail.com",
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(907) 947-6870",
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Cindy Pitta",
+            "email": "swimasap@gci.net",
+            "phone": "19072767946"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf",
+            "title": "Alaska Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ak-bbsc",
+      "after": {
+        "kind": "team",
+        "title": "Baranof Barracudas Swim Club",
+        "officialName": "Baranof Barracudas Swim Club",
+        "abbreviation": "BBSC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ak",
+        "lscId": "usa-lsc-ak",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/asbbsc/page/home",
+        "sourceUrl": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf",
+        "summary": "Baranof Barracudas Swim Club is a swim team/program listed by Alaska Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Sitka, AK",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Alaska Swimming",
+            "targetId": "usa-lsc-ak"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "orbisondean@gmail.com",
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(907) 738-5918",
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Kevin Knox",
+            "email": "bbsc.sitka@gmail.com",
+            "phone": "19077384664"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf",
+            "title": "Alaska Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/asbbsc/page/home",
+            "title": "Baranof Barracudas Swim Club Home",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Name variation: LSC lists Baranof Barracudas Swim Club; USA Swimming lists Baranof Barracuda Swim Club."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ak-cac",
+      "after": {
+        "kind": "team",
+        "title": "Chugiak Aquatics Club",
+        "officialName": "Chugiak Aquatics Club",
+        "abbreviation": "CAC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ak",
+        "lscId": "usa-lsc-ak",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/team/akcac/page/home",
+        "sourceUrl": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf",
+        "summary": "Chugiak Aquatics Club is a swim team/program listed by Alaska Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Anchorage, AK; Chugiak, AK",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Alaska Swimming",
+            "targetId": "usa-lsc-ak"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "garrity_patrick@mac.com",
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(907) 854-8740",
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Patrick Garrity",
+            "email": "Garrity_Patrick@mac.com",
+            "phone": "19078548740"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Anne Williams",
+            "email": "wiliamsanne@mac.com",
+            "phone": "19076965180"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf",
+            "title": "Alaska Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.teamunify.com/team/akcac/page/home",
+            "title": "Chugiak Aquatics Club Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/akcac/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ak-ci",
+      "after": {
+        "kind": "team",
+        "title": "Cordova Iceworm Swim Team",
+        "officialName": "Cordova Iceworm Swim Team",
+        "abbreviation": "CI",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ak",
+        "lscId": "usa-lsc-ak",
+        "zoneId": "usa-zone-western",
+        "website": null,
+        "sourceUrl": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf",
+        "summary": "Cordova Iceworm Swim Team is a swim team/program listed by Alaska Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Cordova, AK",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Alaska Swimming",
+            "targetId": "usa-lsc-ak"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "cordovaiceworms@gmail.com",
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(907) 330-4202",
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Laura Hanson",
+            "email": "cordovaiceworms@gmail.com",
+            "phone": "19074243749"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf",
+            "title": "Alaska Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Official team website not established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ak-cwsc",
+      "after": {
+        "kind": "team",
+        "title": "Craig Waverunners Swim Club",
+        "officialName": "Craig Waverunners Swim Club",
+        "abbreviation": "CWSC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ak",
+        "lscId": "usa-lsc-ak",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/akcwsc/page/home",
+        "sourceUrl": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf",
+        "summary": "Craig Waverunners Swim Club is a swim team/program listed by Alaska Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Club-specific coverage not established; listed within Alaska Swimming.",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Alaska Swimming",
+            "targetId": "usa-lsc-ak"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "craigwaverunners@gmail.com",
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(907) 401-3336",
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf",
+            "title": "Alaska Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "Club-specific service area / location not established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ak-gsc",
+      "after": {
+        "kind": "team",
+        "title": "Glacier Swim Club",
+        "officialName": "Glacier Swim Club",
+        "abbreviation": "GSC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ak",
+        "lscId": "usa-lsc-ak",
+        "zoneId": "usa-zone-western",
+        "website": "https://gsc-swim.com",
+        "sourceUrl": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf",
+        "summary": "Glacier Swim Club is a swim team/program listed by Alaska Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Juneau, AK",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Alaska Swimming",
+            "targetId": "usa-lsc-ak"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "gsc.assistant@gmail.com",
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(907) 321-7781",
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Daemon Vargas",
+            "email": "juneaugsc@gmail.com",
+            "phone": "15093870451"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Scott Griffith",
+            "email": "glacierswimclub@gci.net",
+            "phone": "19075230840"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf",
+            "title": "Alaska Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ak-hdst",
+      "after": {
+        "kind": "team",
+        "title": "Haines Dolphins Swim Team",
+        "officialName": "Haines Dolphins Swim Team",
+        "abbreviation": "HDST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ak",
+        "lscId": "usa-lsc-ak",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.hainesdolphins.org",
+        "sourceUrl": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf",
+        "summary": "Haines Dolphins Swim Team is a swim team/program listed by Alaska Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Haines, AK",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Alaska Swimming",
+            "targetId": "usa-lsc-ak"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "richard_chapell@yahoo.com",
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(907) 303-7204",
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Sydney Wray",
+            "email": "sydneywray87@gmail.com",
+            "phone": "19073142278"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf",
+            "title": "Alaska Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ak-ksc",
+      "after": {
+        "kind": "team",
+        "title": "Kachemak Swim Club",
+        "officialName": "Kachemak Swim Club",
+        "abbreviation": "KSC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ak",
+        "lscId": "usa-lsc-ak",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.kachemakswim.org",
+        "sourceUrl": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf",
+        "summary": "Kachemak Swim Club is a swim team/program listed by Alaska Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Homer, AK",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Alaska Swimming",
+            "targetId": "usa-lsc-ak"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "kachemakswimclub@gmail.com",
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(907) 756-3990",
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Melissa Miller",
+            "email": "ladyminak@gmail.com",
+            "phone": "19072993593"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf",
+            "title": "Alaska Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ak-kkw",
+      "after": {
+        "kind": "team",
+        "title": "Ketchikan Killer Whales",
+        "officialName": "Ketchikan Killer Whales",
+        "abbreviation": "KKW",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ak",
+        "lscId": "usa-lsc-ak",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/akkkw/page/home",
+        "sourceUrl": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf",
+        "summary": "Ketchikan Killer Whales is a swim team/program listed by Alaska Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Ketchikan, AK",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Alaska Swimming",
+            "targetId": "usa-lsc-ak"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "angelaputrino@hotmail.com",
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(509) 792-4497",
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Gary Crowe",
+            "email": "coachgary417@gmail.com",
+            "phone": "19077994430"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf",
+            "title": "Alaska Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/akkkw/page/home",
+            "title": "Ketchikan Killer Whales Home",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ak-kkf",
+      "after": {
+        "kind": "team",
+        "title": "Kodiak Kingfishers Swim Club Inc.",
+        "officialName": "Kodiak Kingfishers Swim Club Inc.",
+        "abbreviation": "KKF",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ak",
+        "lscId": "usa-lsc-ak",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/akkksc/page/home",
+        "sourceUrl": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf",
+        "summary": "Kodiak Kingfishers Swim Club Inc. is a swim team/program listed by Alaska Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Kodiak, AK",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Alaska Swimming",
+            "targetId": "usa-lsc-ak"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "kodiakkingfishers99615@gmail.com",
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(907) 229-1432",
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Joe Robinson",
+            "email": "joemax323@yahoo.com",
+            "phone": "19079421222"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf",
+            "title": "Alaska Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/akkksc/page/home",
+            "title": "Kodiak Kingfishers Swim Club Home",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ak-msst",
+      "after": {
+        "kind": "team",
+        "title": "Midnight Sun Swim Team",
+        "officialName": "Midnight Sun Swim Team",
+        "abbreviation": "MSST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ak",
+        "lscId": "usa-lsc-ak",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.midnightsunswimteam.org",
+        "sourceUrl": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf",
+        "summary": "Midnight Sun Swim Team is a swim team/program listed by Alaska Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Fairbanks, AK",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Alaska Swimming",
+            "targetId": "usa-lsc-ak"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "patrick.j.burda@gmail.com",
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(440) 570-8586",
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Patrick Burda",
+            "email": "patrick.j.burda@gmail.com",
+            "phone": "14405708586"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf",
+            "title": "Alaska Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ak-nnst",
+      "after": {
+        "kind": "team",
+        "title": "Nome Northstar Swim Team",
+        "officialName": "Nome Northstar Swim Team",
+        "abbreviation": "NNST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ak",
+        "lscId": "usa-lsc-ak",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/aknnst/page/home",
+        "sourceUrl": "https://www.gomotionapp.com/team/aknaac/page/teams",
+        "summary": "Nome Northstar Swim Team is a swim team/program listed by Alaska Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Nome, AK",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Alaska Swimming",
+            "targetId": "usa-lsc-ak"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "Internal LSC area",
+            "name": "Northern Area",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Melissa Ford",
+            "email": "melissa@nomesweethomes.com",
+            "phone": "19073043871"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/aknaac/page/teams",
+            "title": "Alaska Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ak-npac",
+      "after": {
+        "kind": "team",
+        "title": "North Pole Aquatic Club",
+        "officialName": "North Pole Aquatic Club",
+        "abbreviation": "NPAC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ak",
+        "lscId": "usa-lsc-ak",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.northpoleswimming.org",
+        "sourceUrl": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf",
+        "summary": "North Pole Aquatic Club is a swim team/program listed by Alaska Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "North Pole, AK",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Alaska Swimming",
+            "targetId": "usa-lsc-ak"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "npacpresident2022@gmail.com",
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "North Pole Aquatic Club",
+            "email": "northpoleswimming@gmail.com",
+            "phone": "19073288173"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf",
+            "title": "Alaska Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.northpoleswimming.org",
+            "title": "North Pole Aquatic Club Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/aknpac/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ak-nlsc",
+      "after": {
+        "kind": "team",
+        "title": "Northern Lights Swim Club",
+        "officialName": "Northern Lights Swim Club",
+        "abbreviation": "NLSC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ak",
+        "lscId": "usa-lsc-ak",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.nlscak.org",
+        "sourceUrl": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf",
+        "summary": "Northern Lights Swim Club is a swim team/program listed by Alaska Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Anchorage, AK; Palmer, AK",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Alaska Swimming",
+            "targetId": "usa-lsc-ak"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "coachcliff@nlscak.org",
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(907) 727-4117",
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Cliff Murray",
+            "email": "coachcliff@nlscak.org",
+            "phone": "19072777946"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf",
+            "title": "Alaska Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ak-ppst",
+      "after": {
+        "kind": "team",
+        "title": "Peninsula Piranhas Swim Team",
+        "officialName": "Peninsula Piranhas Swim Team",
+        "abbreviation": "PPST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ak",
+        "lscId": "usa-lsc-ak",
+        "zoneId": "usa-zone-western",
+        "website": "http://teamunify.com/akppst",
+        "sourceUrl": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf",
+        "summary": "Peninsula Piranhas Swim Team is a swim team/program listed by Alaska Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Kenai, AK",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Alaska Swimming",
+            "targetId": "usa-lsc-ak"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "ppstalaska@gmail.com",
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(907) 283-7476",
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "William Hubler",
+            "email": "whubler@kpbsd.k12.ak.us",
+            "phone": "19072837476"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf",
+            "title": "Alaska Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ak-stsc",
+      "after": {
+        "kind": "team",
+        "title": "Seward Tsunami Swim Club",
+        "officialName": "Seward Tsunami Swim Club",
+        "abbreviation": "STSC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ak",
+        "lscId": "usa-lsc-ak",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/akstsc",
+        "sourceUrl": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf",
+        "summary": "Seward Tsunami Swim Club is a swim team/program listed by Alaska Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Seward, AK",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Alaska Swimming",
+            "targetId": "usa-lsc-ak"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "sewardtsunamis@gmail.com",
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "solomon.damico@gmail.com",
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(303) 304-7932",
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Seward Tsunami Swim Club",
+            "email": "sewardtsunamis@gmail.com",
+            "phone": "13033047932"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf",
+            "title": "Alaska Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ak-sss",
+      "after": {
+        "kind": "team",
+        "title": "Soldotna Silver Salmon",
+        "officialName": "Soldotna Silver Salmon",
+        "abbreviation": "SSS",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ak",
+        "lscId": "usa-lsc-ak",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.silversalmonswimteam.captynsites.com",
+        "sourceUrl": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf",
+        "summary": "Soldotna Silver Salmon is a swim team/program listed by Alaska Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Soldotna, AK",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Alaska Swimming",
+            "targetId": "usa-lsc-ak"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "soldotnasilverslamon.treasurer@gmail.com",
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(907) 394-2357",
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Stephanie Snyder",
+            "email": "akssst@gmail.com",
+            "phone": "19073943149"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf",
+            "title": "Alaska Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ak-sst",
+      "after": {
+        "kind": "team",
+        "title": "Stingray Swim Team",
+        "officialName": "Stingray Swim Team",
+        "abbreviation": "SST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ak",
+        "lscId": "usa-lsc-ak",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/team/aksst/page/home",
+        "sourceUrl": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf",
+        "summary": "Stingray Swim Team is a swim team/program listed by Alaska Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Fairbanks, AK",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Alaska Swimming",
+            "targetId": "usa-lsc-ak"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "jmgregory8487@msn.com",
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(907) 251-7952",
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Josh Gregory",
+            "email": "coachjosh@outlook.com",
+            "phone": "19076891407"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf",
+            "title": "Alaska Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.teamunify.com/team/aksst/page/home",
+            "title": "Stingray Swim Team Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/aksst/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ak-valdez-torpedoes-swim-club",
+      "after": {
+        "kind": "team",
+        "title": "Valdez Torpedoes Swim Club",
+        "officialName": "Valdez Torpedoes Swim Club",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ak",
+        "lscId": "usa-lsc-ak",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/akvtsc/page/home",
+        "sourceUrl": "https://www.gomotionapp.com/team/akcas/page/central-area-teams",
+        "summary": "Valdez Torpedoes Swim Club is a swim team/program listed by Alaska Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Valdez, AK",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Alaska Swimming",
+            "targetId": "usa-lsc-ak"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "Internal LSC area",
+            "name": "Central Area",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Kathryn Peltier",
+            "email": "vtscswim@gmail.com",
+            "phone": "19077275000"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/akcas/page/central-area-teams",
+            "title": "Alaska Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ak-vsc",
+      "after": {
+        "kind": "team",
+        "title": "Viking Swim Club",
+        "officialName": "Viking Swim Club",
+        "abbreviation": "VSC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ak",
+        "lscId": "usa-lsc-ak",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/team/aspvsc/page/home",
+        "sourceUrl": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf",
+        "summary": "Viking Swim Club is a swim team/program listed by Alaska Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Petersburg, AK",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Alaska Swimming",
+            "targetId": "usa-lsc-ak"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "vikingswim99833@gmail.com",
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(907) 518-0922",
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Scott Burt",
+            "email": "bigbend17@gmail.com",
+            "phone": "13254399585"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf",
+            "title": "Alaska Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.teamunify.com/team/aspvsc/page/home",
+            "title": "Viking Swim Club Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/aspvsc/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ak-wsc",
+      "after": {
+        "kind": "team",
+        "title": "Wrangell Swim Club",
+        "officialName": "Wrangell Swim Club",
+        "abbreviation": "WSC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ak",
+        "lscId": "usa-lsc-ak",
+        "zoneId": "usa-zone-western",
+        "website": null,
+        "sourceUrl": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf",
+        "summary": "Wrangell Swim Club is a swim team/program listed by Alaska Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Club-specific coverage not established; listed within Alaska Swimming.",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Alaska Swimming",
+            "targetId": "usa-lsc-ak"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "wrangellswimclub@gmail.com",
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(907) 470-4844",
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/wzaslsc/UserFiles/Image/QuickUpload/january-2026-club-list_098713.pdf",
+            "title": "Alaska Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Official team website not established from available sources.",
+          "Club-specific service area / location not established from available sources."
+        ]
+      }
+    }
+  ]
+}

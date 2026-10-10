@@ -1,0 +1,3091 @@
+{
+  "division": "knowledge",
+  "scope": "Western Zone swim teams \u2014 Arizona Swimming",
+  "sourceUrl": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+  "capturedAt": "2026-10-10T08:09:39.054253+00:00",
+  "coverage": "partial",
+  "evidence": {
+    "checkedAt": "2026-10-10",
+    "lscCode": "AZ",
+    "directoryRowsCollected": 43,
+    "batchRows": 43,
+    "enumeration": "All named rows in the retrieved official directory/roster sources; independent current registration is not guaranteed.",
+    "deduplication": "Compared against 84 published knowledge records and an empty pending queue; facilities combined by organization key; Inland Empire\u2019s 19 existing teams were retained without duplicates.",
+    "remaining": "Missing codes, unreachable websites, registration status, and conflicting sources are visible in each record. Sierra Nevada BBST remains name/code unresolved from official evidence."
+  },
+  "writes": [
+    {
+      "path": "knowledge_entries/usa-team-az-aft",
+      "after": {
+        "kind": "team",
+        "title": "Aqua Fit Tucson",
+        "officialName": "Aqua Fit Tucson",
+        "abbreviation": "AFT",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-az",
+        "lscId": "usa-lsc-az",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.aquafittucson.weebly.com",
+        "sourceUrl": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+        "summary": "Aqua Fit Tucson is a swim team/program listed by Arizona Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Tucson, Arizona",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Arizona Swimming",
+            "targetId": "usa-lsc-az"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "swimteamtucson@gmail.com",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(520) 468-2642",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Linda Marinos",
+            "email": "swimteamtucson@gmail.com",
+            "phone": "15208616920"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+            "title": "Arizona Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-az-bear",
+      "after": {
+        "kind": "team",
+        "title": "Aquabear Swim Team",
+        "officialName": "Aquabear Swim Team",
+        "abbreviation": "BEAR",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-az",
+        "lscId": "usa-lsc-az",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.aquabearswimclub.com",
+        "sourceUrl": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+        "summary": "Aquabear Swim Team is a swim team/program listed by Arizona Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Tucson, Arizona",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Arizona Swimming",
+            "targetId": "usa-lsc-az"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "justinmslade@gmail.com",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(520) 820-3233",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Justin M Slade",
+            "email": "justin@aquabearswimclub.com",
+            "phone": "15208203233"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+            "title": "Arizona Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.aquabearswimclub.com",
+            "title": "Aquabear Swim Club | Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.theaquabears.com/"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-az-aqfo",
+      "after": {
+        "kind": "team",
+        "title": "AquaForce",
+        "officialName": "AquaForce",
+        "abbreviation": "AQFO",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-az",
+        "lscId": "usa-lsc-az",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.aquaforceswimming.org",
+        "sourceUrl": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+        "summary": "AquaForce is a swim team/program listed by Arizona Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Yuma, Arizona",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Arizona Swimming",
+            "targetId": "usa-lsc-az"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "mdusek0804@gmail.com",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(928) 257-0797",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Jenn Coleman",
+            "email": "jennyjumpup@gmail.com",
+            "phone": "19284466770"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Amy Dusek",
+            "email": "aquaforceyuma@gmail.com",
+            "phone": "19282570797"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+            "title": "Arizona Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-az-aasc",
+      "after": {
+        "kind": "team",
+        "title": "Arizona Anthem Swim Club",
+        "officialName": "Arizona Anthem Swim Club",
+        "abbreviation": "AASC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-az",
+        "lscId": "usa-lsc-az",
+        "zoneId": "usa-zone-western",
+        "website": "https://anthemswimclub.com/",
+        "sourceUrl": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+        "summary": "Arizona Anthem Swim Club is a swim team/program listed by Arizona Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Anthem, Arizona",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Arizona Swimming",
+            "targetId": "usa-lsc-az"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "dmorse@anthemcouncil.com",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(623) 879-3000",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+            "title": "Arizona Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-az-azac",
+      "after": {
+        "kind": "team",
+        "title": "Arizona Aquatic Club",
+        "officialName": "Arizona Aquatic Club",
+        "abbreviation": "AZAC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-az",
+        "lscId": "usa-lsc-az",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.arizonaaquaticclub.com",
+        "sourceUrl": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+        "summary": "Arizona Aquatic Club is a swim team/program listed by Arizona Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Chandler, Arizona",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Arizona Swimming",
+            "targetId": "usa-lsc-az"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "machojnacki2@gmail.com",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(480) 282-1138",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "John Hojnacki",
+            "email": "john.hojnacki@intel.com",
+            "phone": "14804448431"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+            "title": "Arizona Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-az-azcc",
+      "after": {
+        "kind": "team",
+        "title": "Arizona Country Club",
+        "officialName": "Arizona Country Club",
+        "abbreviation": "AZCC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-az",
+        "lscId": "usa-lsc-az",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.azcountryclub.com",
+        "sourceUrl": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+        "summary": "Arizona Country Club is a swim team/program listed by Arizona Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Phoenix, Arizona",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Arizona Swimming",
+            "targetId": "usa-lsc-az"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "pharris@azcountryclub.com",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(480) 899-1554",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Phillip Harris",
+            "email": "pharris@azcountryclub.com",
+            "phone": "14808283782"
+          },
+          {
+            "role": "Public team website contact",
+            "email": "info@arizonacc.com",
+            "url": "https://www.azcountryclub.com"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+            "title": "Arizona Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.azcountryclub.com",
+            "title": "Home | Arizona Country Club - Phoenix, AZ",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-az-ad",
+      "after": {
+        "kind": "team",
+        "title": "Arizona Dolphins",
+        "officialName": "Arizona Dolphins",
+        "abbreviation": "AD",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-az",
+        "lscId": "usa-lsc-az",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/aztvv/page/home",
+        "sourceUrl": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+        "summary": "Arizona Dolphins is a swim team/program listed by Arizona Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Verrado, Arizona",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Arizona Swimming",
+            "targetId": "usa-lsc-az"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "tayla.arizonadolphins@gmail.com",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(407) 342-3088",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Paul Root",
+            "email": "paul.anthemdolphins@gmail.com",
+            "phone": "19284602859"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+            "title": "Arizona Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/aztvv/page/home",
+            "title": "Arizona Dolphins Swim Club-HOME",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-az-azsl",
+      "after": {
+        "kind": "team",
+        "title": "Arizona Seals Swimming Academy",
+        "officialName": "Arizona Seals Swimming Academy",
+        "abbreviation": "AZSL",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-az",
+        "lscId": "usa-lsc-az",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/azseals/page/home",
+        "sourceUrl": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+        "summary": "Arizona Seals Swimming Academy is a swim team/program listed by Arizona Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Maricopa, Arizona",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Arizona Swimming",
+            "targetId": "usa-lsc-az"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "megg.obrien92@gmail.com",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(423) 834-6809",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Brock Armstrong",
+            "email": "azseals.president@gmail.com",
+            "phone": "15208270608"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+            "title": "Arizona Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/azseals/page/home",
+            "title": "Arizona Seals Swimming Academy Home",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-az-asg",
+      "after": {
+        "kind": "team",
+        "title": "Arizona Swimming Gauchos",
+        "officialName": "Arizona Swimming Gauchos",
+        "abbreviation": "ASG",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-az",
+        "lscId": "usa-lsc-az",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/azasg",
+        "sourceUrl": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+        "summary": "Arizona Swimming Gauchos is a swim team/program listed by Arizona Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Glendale, Arizona",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Arizona Swimming",
+            "targetId": "usa-lsc-az"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "azswimminggauchos@gmail.com",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(623) 824-1195",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Arizona Swimming Gauchos",
+            "email": "azswimminggauchos@gmail.com",
+            "phone": "16238241195"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+            "title": "Arizona Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.gomotionapp.com/azasg",
+            "title": "Arizona Swimming Gauchos Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/azasg/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-az-trit",
+      "after": {
+        "kind": "team",
+        "title": "Arizona Tritons",
+        "officialName": "Arizona Tritons",
+        "abbreviation": "TRIT",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-az",
+        "lscId": "usa-lsc-az",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.aztritons.com",
+        "sourceUrl": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+        "summary": "Arizona Tritons is a swim team/program listed by Arizona Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Gilbert, Arizona",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Arizona Swimming",
+            "targetId": "usa-lsc-az"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "jessicaenglund@gmail.com",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(419) 705-1475",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Jessica Englund",
+            "email": "tritonelitecoachingservices@gmail.com",
+            "phone": "14197051475"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+            "title": "Arizona Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.aztritons.com",
+            "title": "Arizona Tritons",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://aztritons.com/"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-az-evst",
+      "after": {
+        "kind": "team",
+        "title": "East Valley Swim Team",
+        "officialName": "East Valley Swim Team",
+        "abbreviation": "EVST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-az",
+        "lscId": "usa-lsc-az",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.eastvalleyswimteam.com",
+        "sourceUrl": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+        "summary": "East Valley Swim Team is a swim team/program listed by Arizona Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Chandler, Arizona",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Arizona Swimming",
+            "targetId": "usa-lsc-az"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "lennme@yahoo.com",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(480) 547-1623",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Maria Hass",
+            "email": "coachmhass@gmail.com",
+            "phone": "14805471623"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+            "title": "Arizona Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.eastvalleyswimteam.com",
+            "title": "East Valley Swim Team - Swim Team, Stroke Development, Swim Club",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://eastvalleyswimteam.com/"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-az-fss",
+      "after": {
+        "kind": "team",
+        "title": "Flagstaff Snow Sharks Inc",
+        "officialName": "Flagstaff Snow Sharks Inc",
+        "abbreviation": "FSS",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-az",
+        "lscId": "usa-lsc-az",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.flagstaffsnowsharks.org",
+        "sourceUrl": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+        "summary": "Flagstaff Snow Sharks Inc is a swim team/program listed by Arizona Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Flagstaff, Arizona",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Arizona Swimming",
+            "targetId": "usa-lsc-az"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "jeffreyflag@gmail.com",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "stilsober1@hotmail.com",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(928) 699-2878",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Martha VanLuvanee",
+            "email": "stilsober1@hotmail.com",
+            "phone": "19288483537"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+            "title": "Arizona Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-az-fast",
+      "after": {
+        "kind": "team",
+        "title": "Flying Fish Arizona Swim Team",
+        "officialName": "Flying Fish Arizona Swim Team",
+        "abbreviation": "FAST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-az",
+        "lscId": "usa-lsc-az",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.fastswimteam.com",
+        "sourceUrl": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+        "summary": "Flying Fish Arizona Swim Team is a swim team/program listed by Arizona Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Tucson, Arizona",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Arizona Swimming",
+            "targetId": "usa-lsc-az"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "rick@fastswimteam.com",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(520) 820-5744",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Matt Brauer",
+            "email": "matt@fastswimteam.com",
+            "phone": "15208205744"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+            "title": "Arizona Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.fastswimteam.com",
+            "title": "Flying Fish Arizona Swim Team Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/wzasfast/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-az-gm",
+      "after": {
+        "kind": "team",
+        "title": "Gold Medal Swim Club",
+        "officialName": "Gold Medal Swim Club",
+        "abbreviation": "GM",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-az",
+        "lscId": "usa-lsc-az",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.goldmedalswimclub.com",
+        "sourceUrl": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+        "summary": "Gold Medal Swim Club is a swim team/program listed by Arizona Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Phoenix, Arizona",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Arizona Swimming",
+            "targetId": "usa-lsc-az"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(602) 820-4354",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Mike Walker",
+            "email": "walker@goldmedalswimschool.com",
+            "phone": "14802874000"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+            "title": "Arizona Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.goldmedalswimclub.com",
+            "title": "Kids Swim Lessons | Swimming Classes | Gold Medal Swim School",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://goldmedalswimschool.com/"
+          }
+        ],
+        "gaps": [
+          "The LSC email includes an internal space and was not treated as a valid email address."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-az-gcu",
+      "after": {
+        "kind": "team",
+        "title": "Grand Canyon University",
+        "officialName": "Grand Canyon University",
+        "abbreviation": "GCU",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-az",
+        "lscId": "usa-lsc-az",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.lopes.com",
+        "sourceUrl": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+        "summary": "Grand Canyon University is a swim team/program listed by Arizona Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Phoenix, Arizona",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Arizona Swimming",
+            "targetId": "usa-lsc-az"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "steve.schaffer@gcu.edu",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(602) 639-6913",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Steve Schaffer",
+            "email": "steve.schaffer@gcu.edu",
+            "phone": "16026396913"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+            "title": "Arizona Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-az-hsst",
+      "after": {
+        "kind": "team",
+        "title": "Havasu Stingrays Swim Team",
+        "officialName": "Havasu Stingrays Swim Team",
+        "abbreviation": "HSST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-az",
+        "lscId": "usa-lsc-az",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.havasustringrays.com",
+        "sourceUrl": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+        "summary": "Havasu Stingrays Swim Team is a swim team/program listed by Arizona Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Lake Havasu City, Arizona",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Arizona Swimming",
+            "targetId": "usa-lsc-az"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "hsstheadcoach@gmail.com",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(661) 547-2343",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Rick Wheeler",
+            "email": "HSSTHeadCoach@gmail.com",
+            "phone": "15037083230"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+            "title": "Arizona Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-az-jsc",
+      "after": {
+        "kind": "team",
+        "title": "J Swim Club",
+        "officialName": "J Swim Club",
+        "abbreviation": "JSC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-az",
+        "lscId": "usa-lsc-az",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/azjccssc/page/home",
+        "sourceUrl": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+        "summary": "J Swim Club is a swim team/program listed by Arizona Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Phoenix, Arizona",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Arizona Swimming",
+            "targetId": "usa-lsc-az"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "kelleyc@valleyofthesunj.org",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(425) 280-7847",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Debbie Meek",
+            "email": "debbiem@mpjcc.org",
+            "phone": "14804817035"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+            "title": "Arizona Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/azjccssc/page/home",
+            "title": "J Swim Club Home",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-az-life",
+      "after": {
+        "kind": "team",
+        "title": "Life Time Arizona Swim Team",
+        "officialName": "Life Time Arizona Swim Team",
+        "abbreviation": "LIFE",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-az",
+        "lscId": "usa-lsc-az",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/azltast/page/home",
+        "sourceUrl": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+        "summary": "Life Time Arizona Swim Team is a swim team/program listed by Arizona Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Phoenix, Arizona",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Arizona Swimming",
+            "targetId": "usa-lsc-az"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "tfox16@cox.net",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(480) 390-7373",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Tyler Fox",
+            "email": "tfox16@cox.net",
+            "phone": "14803907373"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+            "title": "Arizona Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/azltast/page/home",
+            "title": "Life Time Arizona Swim Team Home",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-az-lope",
+      "after": {
+        "kind": "team",
+        "title": "Lopes Aquatics",
+        "officialName": "Lopes Aquatics",
+        "abbreviation": "LOPE",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-az",
+        "lscId": "usa-lsc-az",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.lopes.com",
+        "sourceUrl": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+        "summary": "Lopes Aquatics is a swim team/program listed by Arizona Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Phoenix, Arizona",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Arizona Swimming",
+            "targetId": "usa-lsc-az"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "steve.schaffer@gcu.edu",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(602) 639-6913",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Steve Schaffer",
+            "email": "steve.schaffer@gcu.edu",
+            "phone": "16026396913"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+            "title": "Arizona Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-az-mac",
+      "after": {
+        "kind": "team",
+        "title": "Mesa Aquatics Club",
+        "officialName": "Mesa Aquatics Club",
+        "abbreviation": "MAC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-az",
+        "lscId": "usa-lsc-az",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.mesaaquaticsclub.com",
+        "sourceUrl": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+        "summary": "Mesa Aquatics Club is a swim team/program listed by Arizona Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Mesa, Arizona",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Arizona Swimming",
+            "targetId": "usa-lsc-az"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "meg@mesaswims.com",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(480) 818-3117",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Meg Zajdzinski",
+            "email": "thezteam6@gmail.com",
+            "phone": "14808183117"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+            "title": "Arizona Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.mesaaquaticsclub.com",
+            "title": "Mesa Aquatics Club Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.mesaaquaticsclub.com/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-az-mmr",
+      "after": {
+        "kind": "team",
+        "title": "Morenci Manta Ray Swim Team",
+        "officialName": "Morenci Manta Ray Swim Team",
+        "abbreviation": "MMR",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-az",
+        "lscId": "usa-lsc-az",
+        "zoneId": "usa-zone-western",
+        "website": "https://morenci.recdesk.com/Community/Program",
+        "sourceUrl": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+        "summary": "Morenci Manta Ray Swim Team is a swim team/program listed by Arizona Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Morenci, Arizona",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Arizona Swimming",
+            "targetId": "usa-lsc-az"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "kverland1@fmi.com",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(928) 865-6621",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Brenna Bayardo",
+            "email": "bbayardo@fmi.com",
+            "phone": "15209097298"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+            "title": "Arizona Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://morenci.recdesk.com/Community/Program",
+            "title": "Programs",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-az-ov",
+      "after": {
+        "kind": "team",
+        "title": "Oro Valley Swim Team",
+        "officialName": "Oro Valley Swim Team",
+        "abbreviation": "OV",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-az",
+        "lscId": "usa-lsc-az",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.orovalleyswimteam.com",
+        "sourceUrl": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+        "summary": "Oro Valley Swim Team is a swim team/program listed by Arizona Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Tucson, Arizona",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Arizona Swimming",
+            "targetId": "usa-lsc-az"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "valacer@hotmail.com",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(520) 358-4121",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Stan Valacer",
+            "email": "orovalleyswimteam@gmail.com",
+            "phone": "15203584121"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+            "title": "Arizona Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.orovalleyswimteam.com",
+            "title": "Oro Valley Swim Team Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/azprp/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-az-psc",
+      "after": {
+        "kind": "team",
+        "title": "Phoenix Swim Club",
+        "officialName": "Phoenix Swim Club",
+        "abbreviation": "PSC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-az",
+        "lscId": "usa-lsc-az",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.phoenixswimclub.org",
+        "sourceUrl": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+        "summary": "Phoenix Swim Club is a swim team/program listed by Arizona Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Phoenix, Arizona",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Arizona Swimming",
+            "targetId": "usa-lsc-az"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "dtownsend@phoenixswimclub.org",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(520) 248-9488",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Sandy Lee",
+            "email": "slee@phoenixswimclub.org",
+            "phone": "16024680319"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Brendan Nguyen",
+            "email": "brendan.nguyen@vosymca.org",
+            "phone": "16239355193"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Colleen Bolan",
+            "email": "Colleen.Bolan@vosymca.org",
+            "phone": "14805969622"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+            "title": "Arizona Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-az-fork",
+      "after": {
+        "kind": "team",
+        "title": "Pitchfork Aquatics",
+        "officialName": "Pitchfork Aquatics",
+        "abbreviation": "FORK",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-az",
+        "lscId": "usa-lsc-az",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.pitchforkaquatics.org",
+        "sourceUrl": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+        "summary": "Pitchfork Aquatics is a swim team/program listed by Arizona Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Tempe, Arizona",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Arizona Swimming",
+            "targetId": "usa-lsc-az"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "cocolopr@gmail.com",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(480) 526-0189",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Rob Richardson",
+            "email": "rob@pitchforkaquatics.org",
+            "phone": "16028997665"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Robert Richardson",
+            "email": "rob@pitchforkaquatics.org",
+            "phone": "16028997665"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+            "title": "Arizona Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-az-pst",
+      "after": {
+        "kind": "team",
+        "title": "Prescott Swim Team Inc",
+        "officialName": "Prescott Swim Team Inc",
+        "abbreviation": "PST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-az",
+        "lscId": "usa-lsc-az",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.prescottswimteam.com",
+        "sourceUrl": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+        "summary": "Prescott Swim Team Inc is a swim team/program listed by Arizona Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Prescott, Arizona",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Arizona Swimming",
+            "targetId": "usa-lsc-az"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "william_riviere@yahoo.com",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(928) 925-6501",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "William Riviere",
+            "email": "william_riviere@yahoo.com",
+            "phone": "19289256501"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+            "title": "Arizona Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.prescottswimteam.com",
+            "title": "Prescott Swim Team | Competitive Youth Swimming in Prescott, AZ",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://prescottswimteam.com/"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-az-rio",
+      "after": {
+        "kind": "team",
+        "title": "Rio Salado Swim Club",
+        "officialName": "Rio Salado Swim Club",
+        "abbreviation": "RIO",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-az",
+        "lscId": "usa-lsc-az",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.rioswimteam.org",
+        "sourceUrl": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+        "summary": "Rio Salado Swim Club is a swim team/program listed by Arizona Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Chandler, Arizona",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Arizona Swimming",
+            "targetId": "usa-lsc-az"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "melissa@rioswimteam.org",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(480) 404-6191",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "David Tait",
+            "email": "david@rioswimteam.org",
+            "phone": "16027926888"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "na",
+            "email": "na@na.com",
+            "phone": "10000000000"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+            "title": "Arizona Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-az-rays",
+      "after": {
+        "kind": "team",
+        "title": "Sahuarita Stingrays",
+        "officialName": "Sahuarita Stingrays",
+        "abbreviation": "RAYS",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-az",
+        "lscId": "usa-lsc-az",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/recssaz/page/home",
+        "sourceUrl": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+        "summary": "Sahuarita Stingrays is a swim team/program listed by Arizona Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Tucson, Arizona",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Arizona Swimming",
+            "targetId": "usa-lsc-az"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "coachmichelle@sahuaritastingrays.com",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(915) 472-3653",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Andrew Harris",
+            "email": "admin@sahuaritastingrays.com",
+            "phone": "15209900356"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+            "title": "Arizona Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/recssaz/page/home",
+            "title": "Home",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-az-sman",
+      "after": {
+        "kind": "team",
+        "title": "San Manuel Sea Lions",
+        "officialName": "San Manuel Sea Lions",
+        "abbreviation": "SMAN",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-az",
+        "lscId": "usa-lsc-az",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.sealionsswimteam.com",
+        "sourceUrl": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+        "summary": "San Manuel Sea Lions is a swim team/program listed by Arizona Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "San Manuel, Arizona",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Arizona Swimming",
+            "targetId": "usa-lsc-az"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "agort@theriver.com",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(520) 404-7093",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "William Kellam",
+            "email": "wsk52657@yahoo.com",
+            "phone": "15206033944"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+            "title": "Arizona Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.sealionsswimteam.com",
+            "title": "Sea Lions Swim Team",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.sealionsswimteam.com/"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-az-sac",
+      "after": {
+        "kind": "team",
+        "title": "Scottsdale Aquatic Club",
+        "officialName": "Scottsdale Aquatic Club",
+        "abbreviation": "SAC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-az",
+        "lscId": "usa-lsc-az",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.scottsdaleswim.com",
+        "sourceUrl": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+        "summary": "Scottsdale Aquatic Club is a swim team/program listed by Arizona Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Scottsdale, Arizona",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Arizona Swimming",
+            "targetId": "usa-lsc-az"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "scott.goodrich@scottsdaleaquaticclub.org",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(623) 326-8216",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Courtney Werner",
+            "email": "sacaquaticclub@gmail.com",
+            "phone": "14809515368"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+            "title": "Arizona Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.scottsdaleswim.com",
+            "title": "Scottsdale Aquatic Club Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/assac/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-az-cdog",
+      "after": {
+        "kind": "team",
+        "title": "Seadogs Swim Club",
+        "officialName": "Seadogs Swim Club",
+        "abbreviation": "CDOG",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-az",
+        "lscId": "usa-lsc-az",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.cdogsswim.com",
+        "sourceUrl": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+        "summary": "Seadogs Swim Club is a swim team/program listed by Arizona Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Mesa, Arizona",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Arizona Swimming",
+            "targetId": "usa-lsc-az"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "seadogsswim@gmail.com",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(480) 807-3317",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Janine Simioni",
+            "email": "seadogsswim@gmail.com",
+            "phone": "14808073317"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+            "title": "Arizona Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-az-sccs",
+      "after": {
+        "kind": "team",
+        "title": "Seville Country Club Sharks",
+        "officialName": "Seville Country Club Sharks",
+        "abbreviation": "SCCS",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-az",
+        "lscId": "usa-lsc-az",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.sevillesharks.com",
+        "sourceUrl": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+        "summary": "Seville Country Club Sharks is a swim team/program listed by Arizona Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Gilbert, Arizona",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Arizona Swimming",
+            "targetId": "usa-lsc-az"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "jessicaenglund@gmail.com",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(419) 705-1475",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Jessica Englund",
+            "email": "sevillecountryclubsharks@gmail.com",
+            "phone": "14807228100"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+            "title": "Arizona Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-az-svtt",
+      "after": {
+        "kind": "team",
+        "title": "Sierra Vista Tsunami Team",
+        "officialName": "Sierra Vista Tsunami Team",
+        "abbreviation": "SVTT",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-az",
+        "lscId": "usa-lsc-az",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.swimsvtt.org",
+        "sourceUrl": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+        "summary": "Sierra Vista Tsunami Team is a swim team/program listed by Arizona Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Sierra Vista, Arizona",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Arizona Swimming",
+            "targetId": "usa-lsc-az"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "coachmartiswimsv@gmail.com",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(520) 227-3842",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Angela Pasley",
+            "email": "registrar@swimsvtt.org",
+            "phone": "15202201811"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+            "title": "Arizona Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-az-swas",
+      "after": {
+        "kind": "team",
+        "title": "South West Aquatic Sports",
+        "officialName": "South West Aquatic Sports",
+        "abbreviation": "SWAS",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-az",
+        "lscId": "usa-lsc-az",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.swaquaticsports.com",
+        "sourceUrl": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+        "summary": "South West Aquatic Sports is a swim team/program listed by Arizona Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Tucson, Arizona",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Arizona Swimming",
+            "targetId": "usa-lsc-az"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "swaquaticsports@gmail.com",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(520) 488-8996",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Patty Olstad",
+            "email": "swaquaticsports@gmail.com",
+            "phone": "15204888996"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+            "title": "Arizona Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.swaquaticsports.com",
+            "title": "South West Aquatic Sports Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.swaquaticsports.com/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-az-sun",
+      "after": {
+        "kind": "team",
+        "title": "Sun Devil Swimming",
+        "officialName": "Sun Devil Swimming",
+        "abbreviation": "SUN",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-az",
+        "lscId": "usa-lsc-az",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.thesundevils.com",
+        "sourceUrl": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+        "summary": "Sun Devil Swimming is a swim team/program listed by Arizona Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Tempe, Arizona",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Arizona Swimming",
+            "targetId": "usa-lsc-az"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "hbehm@asu.edu",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(801) 201-6614",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Herbert Behm",
+            "email": "hbehm@asu.edu",
+            "phone": "18012016614"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+            "title": "Arizona Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.thesundevils.com",
+            "title": "Sun Devil Athletics | Arizona State University",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://sundevils.com/"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-az-s2",
+      "after": {
+        "kind": "team",
+        "title": "Surprise Storm",
+        "officialName": "Surprise Storm",
+        "abbreviation": "S2",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-az",
+        "lscId": "usa-lsc-az",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.surprisestorm.com",
+        "sourceUrl": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+        "summary": "Surprise Storm is a swim team/program listed by Arizona Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Surprise, Arizona",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Arizona Swimming",
+            "targetId": "usa-lsc-az"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "joseph.north@surpriseaz.gov",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(623) 222-2548",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Joseph North",
+            "email": "joseph.north@surpriseaz.gov",
+            "phone": "16232222548"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+            "title": "Arizona Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-az-nep",
+      "after": {
+        "kind": "team",
+        "title": "Swim Neptune",
+        "officialName": "Swim Neptune",
+        "abbreviation": "NEP",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-az",
+        "lscId": "usa-lsc-az",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.swimneptune.com",
+        "sourceUrl": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+        "summary": "Swim Neptune is a swim team/program listed by Arizona Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Phoenix, Arizona",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Arizona Swimming",
+            "targetId": "usa-lsc-az"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "joe@swimneptune.com",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(480) 695-7946",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Joe Zemaitis",
+            "email": "joe@swimneptune.com",
+            "phone": "10000000000"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Helen Zemaitis",
+            "email": "coachhelen@cox.net",
+            "phone": "14806950667"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+            "title": "Arizona Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.swimneptune.com",
+            "title": "Swim Neptune Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/assn/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-az-tsc",
+      "after": {
+        "kind": "team",
+        "title": "Tatum Swim Club",
+        "officialName": "Tatum Swim Club",
+        "abbreviation": "TSC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-az",
+        "lscId": "usa-lsc-az",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/aztsc/page/home",
+        "sourceUrl": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+        "summary": "Tatum Swim Club is a swim team/program listed by Arizona Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Anthem, Arizona",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Arizona Swimming",
+            "targetId": "usa-lsc-az"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "sto5az@gmail.com",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(623) 565-6095",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Antone Bencich",
+            "email": "abencich@arcisgolf.com",
+            "phone": "14805852999"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+            "title": "Arizona Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/aztsc/page/home",
+            "title": "Tatum Swim Club Home",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-az-ford",
+      "after": {
+        "kind": "team",
+        "title": "Tucson Ford Dealers Aquatics",
+        "officialName": "Tucson Ford Dealers Aquatics",
+        "abbreviation": "FORD",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-az",
+        "lscId": "usa-lsc-az",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.fordaquatics.net",
+        "sourceUrl": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+        "summary": "Tucson Ford Dealers Aquatics is a swim team/program listed by Arizona Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Tucson, Arizona",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Arizona Swimming",
+            "targetId": "usa-lsc-az"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "eliot@fordaquatics.org",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(203) 823-6201",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Emma Munsch",
+            "email": "emmadarlington89@gmail.com",
+            "phone": "15206618984"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+            "title": "Arizona Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-az-tjcc",
+      "after": {
+        "kind": "team",
+        "title": "Tucson J Stingrays",
+        "officialName": "Tucson J Stingrays",
+        "abbreviation": "TJCC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-az",
+        "lscId": "usa-lsc-az",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.tucsonjstingrays.org/",
+        "sourceUrl": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+        "summary": "Tucson J Stingrays is a swim team/program listed by Arizona Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Tucson, Arizona",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Arizona Swimming",
+            "targetId": "usa-lsc-az"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "eholt@tucsonjcc.org",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(520) 299-3000",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+            "title": "Arizona Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-az-zona",
+      "after": {
+        "kind": "team",
+        "title": "University of Arizona",
+        "officialName": "University of Arizona",
+        "abbreviation": "ZONA",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-az",
+        "lscId": "usa-lsc-az",
+        "zoneId": "usa-zone-western",
+        "website": "https://arizonawildcats.com/index.aspx",
+        "sourceUrl": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+        "summary": "University of Arizona is a swim team/program listed by Arizona Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Tucson, Arizona",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Arizona Swimming",
+            "targetId": "usa-lsc-az"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "benloorz@arizona.edu",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(510) 227-0219",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Tracy Duchac",
+            "email": "tld1@arizona.edu",
+            "phone": "15206269766"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+            "title": "Arizona Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-az-vcst",
+      "after": {
+        "kind": "team",
+        "title": "Ventana Canyon Swim Team",
+        "officialName": "Ventana Canyon Swim Team",
+        "abbreviation": "VCST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-az",
+        "lscId": "usa-lsc-az",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/azsvcst/page/home",
+        "sourceUrl": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+        "summary": "Ventana Canyon Swim Team is a swim team/program listed by Arizona Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Tucson, Arizona",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Arizona Swimming",
+            "targetId": "usa-lsc-az"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "sbusch@ventanacanyonclub.com",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(520) 370-0106",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Sam Busch",
+            "email": "sbusch@thelodgeatventanacanyon.com",
+            "phone": "15203700106"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+            "title": "Arizona Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/azsvcst/page/home",
+            "title": "Ventana Canyon Swim Team Home",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-az-heat",
+      "after": {
+        "kind": "team",
+        "title": "Yuma Aquatics",
+        "officialName": "Yuma Aquatics",
+        "abbreviation": "HEAT",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-az",
+        "lscId": "usa-lsc-az",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.heatswimteam.org",
+        "sourceUrl": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+        "summary": "Yuma Aquatics is a swim team/program listed by Arizona Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Yuma, Arizona",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Arizona Swimming",
+            "targetId": "usa-lsc-az"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "myfrab0808@gmail.com",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(928) 446-1362",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Shannon Rouff",
+            "email": "shannon.rouff@gmail.com",
+            "phone": "19285815288"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+            "title": "Arizona Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-az-yuma",
+      "after": {
+        "kind": "team",
+        "title": "Yuma Krakens",
+        "officialName": "Yuma Krakens",
+        "abbreviation": "YUMA",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-az",
+        "lscId": "usa-lsc-az",
+        "zoneId": "usa-zone-western",
+        "website": "https://yumaaquaacademy.captyn.com/",
+        "sourceUrl": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+        "summary": "Yuma Krakens is a swim team/program listed by Arizona Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Yuma, Arizona",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Arizona Swimming",
+            "targetId": "usa-lsc-az"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "mattsonfamily@msn.com",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(928) 920-0990",
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Sean Smith",
+            "email": "info@yumaaquaacademy.com",
+            "phone": "19287506330"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://airtable.com/embed/apprwPj9sBvFVnu1K/shrSt5QcDQwEYJKsD?viewControls=on",
+            "title": "Arizona Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    }
+  ]
+}

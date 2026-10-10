@@ -1,0 +1,21 @@
+{
+  "status": "staged; pending staff approval",
+  "reviewUrl": "https://aboutvelocityswimming.com/tools/review",
+  "batches": [
+    {
+      "category": "rules",
+      "count": 11,
+      "id": "a71f8920-6a29-4eec-8581-da977ae33a1c"
+    },
+    {
+      "category": "safety",
+      "count": 8,
+      "id": "b5b2ef0b-48a1-4111-929b-c5991a63f250"
+    },
+    {
+      "category": "times",
+      "count": 16,
+      "id": "d6378428-18e6-4f09-b81a-98cc0f2eb64a"
+    }
+  ]
+}

@@ -1,0 +1,1518 @@
+{
+  "division": "knowledge",
+  "scope": "Western Zone swim teams \u2014 San Diego-Imperial Swimming",
+  "sourceUrl": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs",
+  "capturedAt": "2026-10-10T08:09:39.147758+00:00",
+  "coverage": "partial",
+  "evidence": {
+    "checkedAt": "2026-10-10",
+    "lscCode": "SI",
+    "directoryRowsCollected": 23,
+    "batchRows": 23,
+    "enumeration": "All named rows in the retrieved official directory/roster sources; independent current registration is not guaranteed.",
+    "deduplication": "Compared against 84 published knowledge records and an empty pending queue; facilities combined by organization key; Inland Empire\u2019s 19 existing teams were retained without duplicates.",
+    "remaining": "Missing codes, unreachable websites, registration status, and conflicting sources are visible in each record. Sierra Nevada BBST remains name/code unresolved from official evidence."
+  },
+  "writes": [
+    {
+      "path": "knowledge_entries/usa-team-si-bay-club-aquatics",
+      "after": {
+        "kind": "team",
+        "title": "Bay Club Aquatics",
+        "officialName": "Bay Club Aquatics",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-si",
+        "lscId": "usa-lsc-si",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.teamunify.com/sibccv",
+        "sourceUrl": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs",
+        "summary": "Bay Club Aquatics is a swim team/program listed by San Diego-Imperial Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Club-specific coverage not established; listed within San Diego-Imperial Swimming.",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "San Diego-Imperial Swimming",
+            "targetId": "usa-lsc-si"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "nico.kintz@bayclubs.com",
+            "url": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs",
+            "title": "San Diego-Imperial Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "USA Swimming club code / official abbreviation not established; none inferred.",
+          "Similar names in different LSCs prevent a unique national-map match; only the LSC directory is used.",
+          "Club-specific service area / location not established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-si-cali-piranhas",
+      "after": {
+        "kind": "team",
+        "title": "Cali Piranhas",
+        "officialName": "Cali Piranhas",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-si",
+        "lscId": "usa-lsc-si",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.calipiranha.com/",
+        "sourceUrl": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs",
+        "summary": "Cali Piranhas is a swim team/program listed by San Diego-Imperial Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Club-specific coverage not established; listed within San Diego-Imperial Swimming.",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "San Diego-Imperial Swimming",
+            "targetId": "usa-lsc-si"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "calipiranha@gmail.com",
+            "url": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs",
+            "title": "San Diego-Imperial Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "http://www.calipiranha.com/",
+            "title": "CALI PIRANHA SWIM TEAM",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://calipiranha.com/"
+          }
+        ],
+        "gaps": [
+          "USA Swimming club code / official abbreviation not established; none inferred.",
+          "Club-specific service area / location not established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-si-college-area-swim-team",
+      "after": {
+        "kind": "team",
+        "title": "College Area Swim Team",
+        "officialName": "College Area Swim Team",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-si",
+        "lscId": "usa-lsc-si",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.castswim.com/",
+        "sourceUrl": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs",
+        "summary": "College Area Swim Team is a swim team/program listed by San Diego-Imperial Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "El Cajon, CA; La Mesa, CA; San Diego, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "San Diego-Imperial Swimming",
+            "targetId": "usa-lsc-si"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "castcoachdave@gmail.com",
+            "url": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Dave Kilmer",
+            "email": "dave@castswim.com",
+            "phone": "16199977946"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs",
+            "title": "San Diego-Imperial Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-si-fallbrook-associated-swim-team",
+      "after": {
+        "kind": "team",
+        "title": "Fallbrook Associated Swim Team",
+        "officialName": "Fallbrook Associated Swim Team",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-si",
+        "lscId": "usa-lsc-si",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.swimfast.com/",
+        "sourceUrl": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs",
+        "summary": "Fallbrook Associated Swim Team is a swim team/program listed by San Diego-Imperial Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Fallbrook, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "San Diego-Imperial Swimming",
+            "targetId": "usa-lsc-si"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "sseanmary@aol.com",
+            "url": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Sean Redmond",
+            "email": "seanmary@aol.com",
+            "phone": "17607167679"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs",
+            "title": "San Diego-Imperial Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.swimfast.com/",
+            "title": "Fallbrook Associated Swim Team Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.swimfast.com/page/home"
+          }
+        ],
+        "gaps": [
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-si-heartland-swim-association",
+      "after": {
+        "kind": "team",
+        "title": "Heartland Swim Association",
+        "officialName": "Heartland Swim Association",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-si",
+        "lscId": "usa-lsc-si",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.heartlandswim.org/",
+        "sourceUrl": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs",
+        "summary": "Heartland Swim Association is a swim team/program listed by San Diego-Imperial Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "El Cajon, CA; Santee, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "San Diego-Imperial Swimming",
+            "targetId": "usa-lsc-si"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "kevinchester@heartlandswim.org",
+            "url": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Pat Tope",
+            "email": "hsa@heartlandswim.org",
+            "phone": "16195830495"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Debra Frese",
+            "email": "hsa@heartlandswim.org",
+            "phone": "10000000000"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Debi Frese",
+            "email": "hsa@heartlandswim.org",
+            "phone": "16199178900"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs",
+            "title": "San Diego-Imperial Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.heartlandswim.org/",
+            "title": "Heartland Swimming Association Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/sihsa/page/home"
+          }
+        ],
+        "gaps": [
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-si-imperial-valley-desert-aquatics",
+      "after": {
+        "kind": "team",
+        "title": "Imperial Valley Desert Aquatics",
+        "officialName": "Imperial Valley Desert Aquatics",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-si",
+        "lscId": "usa-lsc-si",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/team/siivda/page/home",
+        "sourceUrl": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs",
+        "summary": "Imperial Valley Desert Aquatics is a swim team/program listed by San Diego-Imperial Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Club-specific coverage not established; listed within San Diego-Imperial Swimming.",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "San Diego-Imperial Swimming",
+            "targetId": "usa-lsc-si"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "760-554-7818",
+            "url": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs",
+            "title": "San Diego-Imperial Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "USA Swimming club code / official abbreviation not established; none inferred.",
+          "Club-specific service area / location not established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-si-inland-coastal-aquatics-club",
+      "after": {
+        "kind": "team",
+        "title": "Inland Coastal Aquatics Club",
+        "officialName": "Inland Coastal Aquatics Club",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-si",
+        "lscId": "usa-lsc-si",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.teamunify.com/Home.jsp?team=sdisicac",
+        "sourceUrl": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs",
+        "summary": "Inland Coastal Aquatics Club is a swim team/program listed by San Diego-Imperial Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Escondido, CA; San Marcos, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "San Diego-Imperial Swimming",
+            "targetId": "usa-lsc-si"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "icacscott@me.com",
+            "url": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Scott Lawson",
+            "email": "icacscott@mac.com",
+            "phone": "17605837797"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs",
+            "title": "San Diego-Imperial Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Name variation: LSC lists Inland Coastal Aquatics Club; USA Swimming lists Inland Coastal Aq Club.",
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-si-jbarracudas-swim-team",
+      "after": {
+        "kind": "team",
+        "title": "JBarracudas Swim Team",
+        "officialName": "JBarracudas Swim Team",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-si",
+        "lscId": "usa-lsc-si",
+        "zoneId": "usa-zone-western",
+        "website": "http://gomotionapp.com/lfjccst",
+        "sourceUrl": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs",
+        "summary": "JBarracudas Swim Team is a swim team/program listed by San Diego-Imperial Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "La Jolla, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "San Diego-Imperial Swimming",
+            "targetId": "usa-lsc-si"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Sergii Kukharskyi",
+            "email": "sergiik@lfjcc.org",
+            "phone": "18584573030"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs",
+            "title": "San Diego-Imperial Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://gomotionapp.com/lfjccst",
+            "title": "JBarracudas Swim Team Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/lfjccst/page/home"
+          }
+        ],
+        "gaps": [
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-si-manta-ray-aquatics",
+      "after": {
+        "kind": "team",
+        "title": "Manta Ray Aquatics",
+        "officialName": "Manta Ray Aquatics",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-si",
+        "lscId": "usa-lsc-si",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.mantarayswim.org/",
+        "sourceUrl": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs",
+        "summary": "Manta Ray Aquatics is a swim team/program listed by San Diego-Imperial Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "El Cajon, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "San Diego-Imperial Swimming",
+            "targetId": "usa-lsc-si"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "mantarayaquatics@gmail.com",
+            "url": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Cathy Elgas",
+            "email": "mantarayaquatics@gmail.com",
+            "phone": "16192442025"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs",
+            "title": "San Diego-Imperial Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.mantarayswim.org/",
+            "title": "Manta Ray Aquatics Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.mraswim.org/page/home"
+          }
+        ],
+        "gaps": [
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-si-misson-valley-ymca",
+      "after": {
+        "kind": "team",
+        "title": "Misson Valley YMCA",
+        "officialName": "Misson Valley YMCA",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-si",
+        "lscId": "usa-lsc-si",
+        "zoneId": "usa-zone-western",
+        "website": "https://mvyseals.swimtopia.com/",
+        "sourceUrl": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs",
+        "summary": "Misson Valley YMCA is a swim team/program listed by San Diego-Imperial Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "San Diego, CA; Santee, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "San Diego-Imperial Swimming",
+            "targetId": "usa-lsc-si"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "jgallardo@ymca.org",
+            "url": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Jose Gallardo",
+            "email": "jgallardo@ymcasd.org",
+            "phone": "16192088468"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs",
+            "title": "San Diego-Imperial Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Name variation: LSC lists Misson Valley YMCA; USA Swimming lists Mission Valley YMCA.",
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-si-north-coast-aquatics",
+      "after": {
+        "kind": "team",
+        "title": "North Coast Aquatics",
+        "officialName": "North Coast Aquatics",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-si",
+        "lscId": "usa-lsc-si",
+        "zoneId": "usa-zone-western",
+        "website": "https://ncaswim.com/",
+        "sourceUrl": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs",
+        "summary": "North Coast Aquatics is a swim team/program listed by San Diego-Imperial Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Carlsbad, CA; Oceanside, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "San Diego-Imperial Swimming",
+            "targetId": "usa-lsc-si"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "coachjeff@ncaswim.com",
+            "url": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Rob Mackle",
+            "email": "adminnca@ncaswim.com",
+            "phone": "17608030424"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Rob Mackle",
+            "email": "coachrob@ncaswim.com",
+            "phone": "17607201494"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs",
+            "title": "San Diego-Imperial Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-si-pacific-swim",
+      "after": {
+        "kind": "team",
+        "title": "Pacific Swim",
+        "officialName": "Pacific Swim",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-si",
+        "lscId": "usa-lsc-si",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/Home.jsp?_tabid_=0&team=sdisps",
+        "sourceUrl": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs",
+        "summary": "Pacific Swim is a swim team/program listed by San Diego-Imperial Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Poway, CA; San Diego, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "San Diego-Imperial Swimming",
+            "targetId": "usa-lsc-si"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "danpeckpacificswim@gmail.com",
+            "url": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Kiersten Schenk",
+            "email": "kiersten@pacificswim.com",
+            "phone": "17602716562"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs",
+            "title": "San Diego-Imperial Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.teamunify.com/Home.jsp?_tabid_=0&team=sdisps",
+            "title": "Pacific Swim Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/sdisps/page/home"
+          }
+        ],
+        "gaps": [
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-si-ramona-swim-team",
+      "after": {
+        "kind": "team",
+        "title": "Ramona Swim Team",
+        "officialName": "Ramona Swim Team",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-si",
+        "lscId": "usa-lsc-si",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.ramonaswimteam.com/",
+        "sourceUrl": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs",
+        "summary": "Ramona Swim Team is a swim team/program listed by San Diego-Imperial Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Ramona, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "San Diego-Imperial Swimming",
+            "targetId": "usa-lsc-si"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "garrett.glaudini@gmail.com",
+            "url": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Becky Holden",
+            "email": "bexmail@cox.net",
+            "phone": "16198883369"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs",
+            "title": "San Diego-Imperial Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.ramonaswimteam.com/",
+            "title": "Ramona Swim Team Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/sirst/page/home"
+          }
+        ],
+        "gaps": [
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-si-rancho-san-dieguito",
+      "after": {
+        "kind": "team",
+        "title": "Rancho San Dieguito",
+        "officialName": "Rancho San Dieguito",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-si",
+        "lscId": "usa-lsc-si",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.rsdswimming.org/",
+        "sourceUrl": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs",
+        "summary": "Rancho San Dieguito is a swim team/program listed by San Diego-Imperial Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Carlsbad, CA; San Diego, CA; Solana Beach, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "San Diego-Imperial Swimming",
+            "targetId": "usa-lsc-si"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "pmazzarelle@bgcsandieguito.org",
+            "url": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Joe Benjamin",
+            "email": "aquatics@positiveplacesd.org",
+            "phone": "18587554904"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs",
+            "title": "San Diego-Imperial Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-si-renegade-aquatics",
+      "after": {
+        "kind": "team",
+        "title": "Renegade Aquatics",
+        "officialName": "Renegade Aquatics",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-si",
+        "lscId": "usa-lsc-si",
+        "zoneId": "usa-zone-western",
+        "website": "http://renegadeaquatics.com/",
+        "sourceUrl": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs",
+        "summary": "Renegade Aquatics is a swim team/program listed by San Diego-Imperial Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Escondido, CA; Valley Center, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "San Diego-Imperial Swimming",
+            "targetId": "usa-lsc-si"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "jpm_vc@hotmail.com",
+            "url": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "John McGlynn",
+            "email": "jpm_vc@hotmail.com",
+            "phone": "17603904173"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs",
+            "title": "San Diego-Imperial Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://renegadeaquatics.com/",
+            "title": "Renegade Aquatics Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/sira/page/home"
+          }
+        ],
+        "gaps": [
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-si-ryan-tidal-waves",
+      "after": {
+        "kind": "team",
+        "title": "RYAN Tidal Waves",
+        "officialName": "RYAN Tidal Waves",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-si",
+        "lscId": "usa-lsc-si",
+        "zoneId": "usa-zone-western",
+        "website": "http://ryantidalwaves.swimtopia.com/",
+        "sourceUrl": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs",
+        "summary": "RYAN Tidal Waves is a swim team/program listed by San Diego-Imperial Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Club-specific coverage not established; listed within San Diego-Imperial Swimming.",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "San Diego-Imperial Swimming",
+            "targetId": "usa-lsc-si"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "skeleher@ymcasd.org",
+            "url": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs",
+            "title": "San Diego-Imperial Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "USA Swimming club code / official abbreviation not established; none inferred.",
+          "Club-specific service area / location not established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-si-san-diego-seaport-aquatics",
+      "after": {
+        "kind": "team",
+        "title": "San Diego Seaport Aquatics",
+        "officialName": "San Diego Seaport Aquatics",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-si",
+        "lscId": "usa-lsc-si",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.sdsaswim.com/",
+        "sourceUrl": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs",
+        "summary": "San Diego Seaport Aquatics is a swim team/program listed by San Diego-Imperial Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Club-specific coverage not established; listed within San Diego-Imperial Swimming.",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "San Diego-Imperial Swimming",
+            "targetId": "usa-lsc-si"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "p.folts34@gmail.com",
+            "url": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs",
+            "title": "San Diego-Imperial Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "http://www.sdsaswim.com/",
+            "title": "San Diego Seaport Aquatics Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/casdss/page/home"
+          }
+        ],
+        "gaps": [
+          "USA Swimming club code / official abbreviation not established; none inferred.",
+          "Club-specific service area / location not established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-si-san-diego-swim-club-formerly-cste",
+      "after": {
+        "kind": "team",
+        "title": "San Diego Swim Club (formerly CSTE)",
+        "officialName": "San Diego Swim Club (formerly CSTE)",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-si",
+        "lscId": "usa-lsc-si",
+        "zoneId": "usa-zone-western",
+        "website": null,
+        "sourceUrl": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs",
+        "summary": "San Diego Swim Club (formerly CSTE) is a swim team/program listed by San Diego-Imperial Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Club-specific coverage not established; listed within San Diego-Imperial Swimming.",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "San Diego-Imperial Swimming",
+            "targetId": "usa-lsc-si"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs",
+            "title": "San Diego-Imperial Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Official team website not established from available sources.",
+          "USA Swimming club code / official abbreviation not established; none inferred.",
+          "Club-specific service area / location not established from available sources.",
+          "No public organizational contact established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-si-sol-swim-team",
+      "after": {
+        "kind": "team",
+        "title": "Sol Swim Team",
+        "officialName": "Sol Swim Team",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-si",
+        "lscId": "usa-lsc-si",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/Home.jsp?team=cahfst",
+        "sourceUrl": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs",
+        "summary": "Sol Swim Team is a swim team/program listed by San Diego-Imperial Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Chula Vista, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "San Diego-Imperial Swimming",
+            "targetId": "usa-lsc-si"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "coachjorgefs@gmail.com",
+            "url": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Jennie Charlesworth",
+            "email": "jcharlesworth@swccd.edu"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs",
+            "title": "San Diego-Imperial Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.teamunify.com/Home.jsp?team=cahfst",
+            "title": "Sol Swim Team Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/cahfst/page/home"
+          }
+        ],
+        "gaps": [
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-si-south-bay-aquatics",
+      "after": {
+        "kind": "team",
+        "title": "South Bay Aquatics",
+        "officialName": "South Bay Aquatics",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-si",
+        "lscId": "usa-lsc-si",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.southbayaquatics.org/",
+        "sourceUrl": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs",
+        "summary": "South Bay Aquatics is a swim team/program listed by San Diego-Imperial Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Chula Vista, CA; Coronado, CA; National City, CA; Spring Valley, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "San Diego-Imperial Swimming",
+            "targetId": "usa-lsc-si"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "admin@southbayaquatics.com",
+            "url": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "SBA Administrator",
+            "email": "admin@southbayaquatics.org",
+            "phone": "16195176180"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs",
+            "title": "San Diego-Imperial Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.southbayaquatics.org/",
+            "title": "South Bay Aquatics Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/sisba/page/home"
+          }
+        ],
+        "gaps": [
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-si-swim-exellence-academy",
+      "after": {
+        "kind": "team",
+        "title": "Swim Exellence Academy",
+        "officialName": "Swim Exellence Academy",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-si",
+        "lscId": "usa-lsc-si",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/sea/page/home",
+        "sourceUrl": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs",
+        "summary": "Swim Exellence Academy is a swim team/program listed by San Diego-Imperial Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "El Cajon, CA; Lakeside, CA; Spring Valley, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "San Diego-Imperial Swimming",
+            "targetId": "usa-lsc-si"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Kevin Eslinger",
+            "email": "swimexcellenceacademysd@gmail.com",
+            "phone": "16199920738"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs",
+            "title": "San Diego-Imperial Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/sea/page/home",
+            "title": "Swim Excellence Academy Home",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-si-trinity-aquatics",
+      "after": {
+        "kind": "team",
+        "title": "Trinity Aquatics",
+        "officialName": "Trinity Aquatics",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-si",
+        "lscId": "usa-lsc-si",
+        "zoneId": "usa-zone-western",
+        "website": "http://trinityaquatics.org/",
+        "sourceUrl": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs",
+        "summary": "Trinity Aquatics is a swim team/program listed by San Diego-Imperial Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "El Cajon, CA; Spring Valley, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "San Diego-Imperial Swimming",
+            "targetId": "usa-lsc-si"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "aquatics21@gmail.com",
+            "url": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "taquatics21@gmail.com",
+            "url": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Krissy Payton",
+            "email": "taquatics21@gmail.com",
+            "phone": "16193957160"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs",
+            "title": "San Diego-Imperial Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-si-wind-n-sea-swim-team",
+      "after": {
+        "kind": "team",
+        "title": "Wind N Sea Swim Team",
+        "officialName": "Wind N Sea Swim Team",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-si",
+        "lscId": "usa-lsc-si",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.windnseaswimteam.com/",
+        "sourceUrl": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs",
+        "summary": "Wind N Sea Swim Team is a swim team/program listed by San Diego-Imperial Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "La Jolla, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "San Diego-Imperial Swimming",
+            "targetId": "usa-lsc-si"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "paton@windnseaswimteam.com",
+            "url": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Paton McClung",
+            "email": "paton@windseaswimteam.com",
+            "phone": "16199976145"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/sandiegoimperial/page/clubs",
+            "title": "San Diego-Imperial Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.windnseaswimteam.com/",
+            "title": "Wind N Sea Swim Team Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.windnseaswimteam.com/page/home"
+          }
+        ],
+        "gaps": [
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    }
+  ]
+}

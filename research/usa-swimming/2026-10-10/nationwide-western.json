@@ -1,0 +1,1384 @@
+{
+  "division": "knowledge",
+  "scope": "USA Swimming — Western Zone: 16 new LSCs; Inland Empire retained. Complete zone LSC enumeration; partial regional, club and detailed contact collection.",
+  "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+  "capturedAt": "2026-10-10T07:35:00Z",
+  "coverage": "partial",
+  "evidence": {
+    "checkedAt": "2026-10-10",
+    "inventoryCoverage": "complete for named zone, against 2026 rulebook Article 605.1",
+    "expectedLSCs": 17,
+    "newLSCs": 16,
+    "retainedLSCs": [
+      "Inland Empire Swimming (IE)"
+    ],
+    "duplicateCheck": "Compared published knowledge_entries by stable ID, LSC code, title and official website; checked pending/held queue. No duplicate LSC additions.",
+    "fieldCoverage": "Every new LSC includes name, code, type, website, geographic coverage, factual description, national and zone relationships, public contact, and checked source links.",
+    "limitations": "No exhaustive collection of regional arrangements, clubs, all officers, or full legal entity names. Gaps and source conflicts are visible per record.",
+    "reviewInstruction": "Stage only. Do not approve or publish."
+  },
+  "writes": [
+    {
+      "path": "knowledge_entries/usa-lsc-ak",
+      "after": {
+        "kind": "lsc",
+        "title": "Alaska Swimming",
+        "officialName": "Alaska Swimming",
+        "abbreviation": "AK",
+        "abbreviationType": "USA Swimming registration code",
+        "organizationType": "Local Swimming Committee",
+        "parentId": "usa-swimming-national-structure",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/wzaslsc/page/home",
+        "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+        "summary": "Alaska Swimming is a USA Swimming Local Swimming Committee in the Western Zone. Its jurisdiction covers Alaska.",
+        "geographicCoverage": "Alaska.",
+        "coverageNote": "Directory identity, registration code, administrative zone, website, geographic coverage and public registration contact collected. Regional/sectional arrangements and member clubs are not exhaustively collected.",
+        "relationships": [
+          {
+            "type": "governed_by",
+            "label": "National governing organization",
+            "targetId": "usa-swimming-national-structure",
+            "name": "USA Swimming"
+          },
+          {
+            "type": "member_of_zone",
+            "label": "Administrative zone",
+            "targetId": "usa-zone-western",
+            "name": "Western Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Registration contact (USA Swimming directory)",
+            "name": "Patrick Garrity",
+            "email": "AKSwimMembership@gmail.com",
+            "phone": "907-854-8740",
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "title": "USA Swimming 2026 Rules & Regulations",
+            "checkedAt": "2026-10-10",
+            "note": "Articles 603.2 (territories and registration codes), 605.1 (zone membership), and 606 (regional competition). Original PDF checked for missing extraction text."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-websites",
+            "title": "USA Swimming LSC & Zone directory",
+            "checkedAt": "2026-10-10",
+            "note": "Directory name and official website link; legacy URLs may redirect."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs",
+            "title": "USA Swimming LSC Registration Chairs",
+            "checkedAt": "2026-10-10",
+            "note": "Public registration-role contact; this is not an assertion that the person is the General Chair."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/wzone/page/wz-lscs1",
+            "title": "Western Zone LSC directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/wzaslsc/page/home",
+            "title": "Alaska Swimming official website",
+            "checkedAt": "2026-10-10",
+            "note": "Official website identity and public organization content checked."
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-lsc-az",
+      "after": {
+        "kind": "lsc",
+        "title": "Arizona Swimming",
+        "officialName": "Arizona Swimming",
+        "abbreviation": "AZ",
+        "abbreviationType": "USA Swimming registration code",
+        "organizationType": "Local Swimming Committee",
+        "parentId": "usa-swimming-national-structure",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.azswimming.org/page/home",
+        "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+        "summary": "Arizona Swimming is a USA Swimming Local Swimming Committee in the Western Zone. Its jurisdiction covers Arizona.",
+        "geographicCoverage": "Arizona.",
+        "coverageNote": "Directory identity, registration code, administrative zone, website, geographic coverage and public registration contact collected. Regional/sectional arrangements and member clubs are not exhaustively collected.",
+        "relationships": [
+          {
+            "type": "governed_by",
+            "label": "National governing organization",
+            "targetId": "usa-swimming-national-structure",
+            "name": "USA Swimming"
+          },
+          {
+            "type": "member_of_zone",
+            "label": "Administrative zone",
+            "targetId": "usa-zone-western",
+            "name": "Western Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Registration contact (USA Swimming directory)",
+            "name": "Tiara Holmes",
+            "email": "registration@azswimming.org",
+            "phone": "602-264-2443",
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "title": "USA Swimming 2026 Rules & Regulations",
+            "checkedAt": "2026-10-10",
+            "note": "Articles 603.2 (territories and registration codes), 605.1 (zone membership), and 606 (regional competition). Original PDF checked for missing extraction text."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-websites",
+            "title": "USA Swimming LSC & Zone directory",
+            "checkedAt": "2026-10-10",
+            "note": "Directory name and official website link; legacy URLs may redirect."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs",
+            "title": "USA Swimming LSC Registration Chairs",
+            "checkedAt": "2026-10-10",
+            "note": "Public registration-role contact; this is not an assertion that the person is the General Chair."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/wzone/page/wz-lscs1",
+            "title": "Western Zone LSC directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.azswimming.org/page/home",
+            "title": "Arizona Swimming official website",
+            "checkedAt": "2026-10-10",
+            "note": "Official website identity and public organization content checked."
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-lsc-cc",
+      "after": {
+        "kind": "lsc",
+        "title": "Central California Swimming",
+        "officialName": "Central California Swimming",
+        "abbreviation": "CC",
+        "abbreviationType": "USA Swimming registration code",
+        "organizationType": "Local Swimming Committee",
+        "parentId": "usa-swimming-national-structure",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/wzccslsc/page/home",
+        "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+        "summary": "Central California Swimming is a USA Swimming Local Swimming Committee in the Western Zone. Its jurisdiction covers Merced, Mariposa, Mono, Madera, Fresno, Kings, Tulare, Kern and Inyo counties, California, excluding Bishop and Mammoth Lakes.",
+        "geographicCoverage": "Merced, Mariposa, Mono, Madera, Fresno, Kings, Tulare, Kern and Inyo counties, California, excluding Bishop and Mammoth Lakes.",
+        "coverageNote": "Directory identity, registration code, administrative zone, website, geographic coverage and public registration contact collected. Regional/sectional arrangements and member clubs are not exhaustively collected.",
+        "relationships": [
+          {
+            "type": "governed_by",
+            "label": "National governing organization",
+            "targetId": "usa-swimming-national-structure",
+            "name": "USA Swimming"
+          },
+          {
+            "type": "member_of_zone",
+            "label": "Administrative zone",
+            "targetId": "usa-zone-western",
+            "name": "Western Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Registration contact (USA Swimming directory)",
+            "name": "Tammy Kudela",
+            "email": "registertoswimCCS@gmail.com",
+            "phone": "559-213-3304",
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "title": "USA Swimming 2026 Rules & Regulations",
+            "checkedAt": "2026-10-10",
+            "note": "Articles 603.2 (territories and registration codes), 605.1 (zone membership), and 606 (regional competition). Original PDF checked for missing extraction text."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-websites",
+            "title": "USA Swimming LSC & Zone directory",
+            "checkedAt": "2026-10-10",
+            "note": "Directory name and official website link; legacy URLs may redirect."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs",
+            "title": "USA Swimming LSC Registration Chairs",
+            "checkedAt": "2026-10-10",
+            "note": "Public registration-role contact; this is not an assertion that the person is the General Chair."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/wzone/page/wz-lscs1",
+            "title": "Western Zone LSC directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/wzccslsc/page/home",
+            "title": "Central California Swimming official website",
+            "checkedAt": "2026-10-10",
+            "note": "Official website identity and public organization content checked."
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-lsc-co",
+      "after": {
+        "kind": "lsc",
+        "title": "Colorado Swimming",
+        "officialName": "Colorado Swimming",
+        "abbreviation": "CO",
+        "abbreviationType": "USA Swimming registration code",
+        "organizationType": "Local Swimming Committee",
+        "parentId": "usa-swimming-national-structure",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/wzcolsc/page/home",
+        "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+        "summary": "Colorado Swimming is a USA Swimming Local Swimming Committee in the Western Zone. Its jurisdiction covers Colorado.",
+        "geographicCoverage": "Colorado.",
+        "coverageNote": "Directory identity, registration code, administrative zone, website, geographic coverage and public registration contact collected. Regional/sectional arrangements and member clubs are not exhaustively collected.",
+        "relationships": [
+          {
+            "type": "governed_by",
+            "label": "National governing organization",
+            "targetId": "usa-swimming-national-structure",
+            "name": "USA Swimming"
+          },
+          {
+            "type": "member_of_zone",
+            "label": "Administrative zone",
+            "targetId": "usa-zone-western",
+            "name": "Western Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Registration contact (USA Swimming directory)",
+            "name": "Jackie Stiff",
+            "email": "csiswimoffice@swimcolorado.org",
+            "phone": "720-310-0420",
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "title": "USA Swimming 2026 Rules & Regulations",
+            "checkedAt": "2026-10-10",
+            "note": "Articles 603.2 (territories and registration codes), 605.1 (zone membership), and 606 (regional competition). Original PDF checked for missing extraction text."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-websites",
+            "title": "USA Swimming LSC & Zone directory",
+            "checkedAt": "2026-10-10",
+            "note": "Directory name and official website link; legacy URLs may redirect."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs",
+            "title": "USA Swimming LSC Registration Chairs",
+            "checkedAt": "2026-10-10",
+            "note": "Public registration-role contact; this is not an assertion that the person is the General Chair."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/wzone/page/wz-lscs1",
+            "title": "Western Zone LSC directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/wzcolsc/page/home",
+            "title": "Colorado Swimming official website",
+            "checkedAt": "2026-10-10",
+            "note": "Official website identity and public organization content checked."
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-lsc-hi",
+      "after": {
+        "kind": "lsc",
+        "title": "Hawaiian Swimming",
+        "officialName": "Hawaiian Swimming",
+        "abbreviation": "HI",
+        "abbreviationType": "USA Swimming registration code",
+        "organizationType": "Local Swimming Committee",
+        "parentId": "usa-swimming-national-structure",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/hslsc/page/home",
+        "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+        "summary": "Hawaiian Swimming is a USA Swimming Local Swimming Committee in the Western Zone. Its jurisdiction covers Hawaii.",
+        "geographicCoverage": "Hawaii.",
+        "coverageNote": "Directory identity, registration code, administrative zone, website, geographic coverage and public registration contact collected. Regional/sectional arrangements and member clubs are not exhaustively collected.",
+        "relationships": [
+          {
+            "type": "governed_by",
+            "label": "National governing organization",
+            "targetId": "usa-swimming-national-structure",
+            "name": "USA Swimming"
+          },
+          {
+            "type": "member_of_zone",
+            "label": "Administrative zone",
+            "targetId": "usa-zone-western",
+            "name": "Western Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Registration contact (USA Swimming directory)",
+            "name": "Gwenn Tomiyoshi",
+            "email": "jackel@hawaiiantel.net",
+            "phone": "808-936-0717",
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "title": "USA Swimming 2026 Rules & Regulations",
+            "checkedAt": "2026-10-10",
+            "note": "Articles 603.2 (territories and registration codes), 605.1 (zone membership), and 606 (regional competition). Original PDF checked for missing extraction text."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-websites",
+            "title": "USA Swimming LSC & Zone directory",
+            "checkedAt": "2026-10-10",
+            "note": "Directory name and official website link; legacy URLs may redirect."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs",
+            "title": "USA Swimming LSC Registration Chairs",
+            "checkedAt": "2026-10-10",
+            "note": "Public registration-role contact; this is not an assertion that the person is the General Chair."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/wzone/page/wz-lscs1",
+            "title": "Western Zone LSC directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/hslsc/page/home",
+            "title": "Hawaiian Swimming official website",
+            "checkedAt": "2026-10-10",
+            "note": "Official indexed page checked; direct fetch blocked."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/hslsc/page/about",
+            "title": "Hawaiian Swimming — About",
+            "checkedAt": "2026-10-10",
+            "note": "Official description of statewide LSC jurisdiction."
+          }
+        ],
+        "gaps": [
+          "Direct homepage retrieval was blocked; the official indexed homepage and About page were available. Website identity and state coverage are corroborated by national and Western Zone directories."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-lsc-mt",
+      "after": {
+        "kind": "lsc",
+        "title": "Montana Swimming",
+        "officialName": "Montana Swimming",
+        "abbreviation": "MT",
+        "abbreviationType": "USA Swimming registration code",
+        "organizationType": "Local Swimming Committee",
+        "parentId": "usa-swimming-national-structure",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/mtms/page/home",
+        "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+        "summary": "Montana Swimming is a USA Swimming Local Swimming Committee in the Western Zone. Its jurisdiction covers Montana except Dawson and Wibaux counties.",
+        "geographicCoverage": "Montana except Dawson and Wibaux counties.",
+        "coverageNote": "Directory identity, registration code, administrative zone, website, geographic coverage and public registration contact collected. Regional/sectional arrangements and member clubs are not exhaustively collected.",
+        "relationships": [
+          {
+            "type": "governed_by",
+            "label": "National governing organization",
+            "targetId": "usa-swimming-national-structure",
+            "name": "USA Swimming"
+          },
+          {
+            "type": "member_of_zone",
+            "label": "Administrative zone",
+            "targetId": "usa-zone-western",
+            "name": "Western Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Registration contact (USA Swimming directory)",
+            "name": "Susan Huckeby",
+            "email": "shuckeby@msn.com",
+            "phone": "406-491-4698",
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "title": "USA Swimming 2026 Rules & Regulations",
+            "checkedAt": "2026-10-10",
+            "note": "Articles 603.2 (territories and registration codes), 605.1 (zone membership), and 606 (regional competition). Original PDF checked for missing extraction text."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-websites",
+            "title": "USA Swimming LSC & Zone directory",
+            "checkedAt": "2026-10-10",
+            "note": "Directory name and official website link; legacy URLs may redirect."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs",
+            "title": "USA Swimming LSC Registration Chairs",
+            "checkedAt": "2026-10-10",
+            "note": "Public registration-role contact; this is not an assertion that the person is the General Chair."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/wzone/page/wz-lscs1",
+            "title": "Western Zone LSC directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/mtms/page/home",
+            "title": "Montana Swimming official website",
+            "checkedAt": "2026-10-10",
+            "note": "Official website identity and public organization content checked."
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-lsc-nm",
+      "after": {
+        "kind": "lsc",
+        "title": "New Mexico Swimming",
+        "officialName": "New Mexico Swimming",
+        "abbreviation": "NM",
+        "abbreviationType": "USA Swimming registration code",
+        "organizationType": "Local Swimming Committee",
+        "parentId": "usa-swimming-national-structure",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/nmlsc/page/home",
+        "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+        "summary": "New Mexico Swimming is a USA Swimming Local Swimming Committee in the Western Zone. Its jurisdiction covers New Mexico.",
+        "geographicCoverage": "New Mexico.",
+        "coverageNote": "Directory identity, registration code, administrative zone, website, geographic coverage and public registration contact collected. Regional/sectional arrangements and member clubs are not exhaustively collected.",
+        "relationships": [
+          {
+            "type": "governed_by",
+            "label": "National governing organization",
+            "targetId": "usa-swimming-national-structure",
+            "name": "USA Swimming"
+          },
+          {
+            "type": "member_of_zone",
+            "label": "Administrative zone",
+            "targetId": "usa-zone-western",
+            "name": "Western Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Registration contact (USA Swimming directory)",
+            "name": "Jeanette Skow",
+            "email": "registrar@nmswimming.org",
+            "phone": "571-345-4925",
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "title": "USA Swimming 2026 Rules & Regulations",
+            "checkedAt": "2026-10-10",
+            "note": "Articles 603.2 (territories and registration codes), 605.1 (zone membership), and 606 (regional competition). Original PDF checked for missing extraction text."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-websites",
+            "title": "USA Swimming LSC & Zone directory",
+            "checkedAt": "2026-10-10",
+            "note": "Directory name and official website link; legacy URLs may redirect."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs",
+            "title": "USA Swimming LSC Registration Chairs",
+            "checkedAt": "2026-10-10",
+            "note": "Public registration-role contact; this is not an assertion that the person is the General Chair."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/wzone/page/wz-lscs1",
+            "title": "Western Zone LSC directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/home",
+            "title": "New Mexico Swimming official website",
+            "checkedAt": "2026-10-10",
+            "note": "Official website identity and public organization content checked."
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-lsc-or",
+      "after": {
+        "kind": "lsc",
+        "title": "Oregon Swimming",
+        "officialName": "Oregon Swimming",
+        "abbreviation": "OR",
+        "abbreviationType": "USA Swimming registration code",
+        "organizationType": "Local Swimming Committee",
+        "parentId": "usa-swimming-national-structure",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.oregonswimming.org/page/home",
+        "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+        "summary": "Oregon Swimming is a USA Swimming Local Swimming Committee in the Western Zone. Its jurisdiction covers Oregon except Umatilla, Union, Wallowa, Baker and Malheur counties, plus Cowlitz, Clark and Skamania counties and the portion of Klickitat west of Highway 97 in Washington, excluding Goldendale.",
+        "geographicCoverage": "Oregon except Umatilla, Union, Wallowa, Baker and Malheur counties, plus Cowlitz, Clark and Skamania counties and the portion of Klickitat west of Highway 97 in Washington, excluding Goldendale.",
+        "coverageNote": "Directory identity, registration code, administrative zone, website, geographic coverage and public registration contact collected. Regional/sectional arrangements and member clubs are not exhaustively collected.",
+        "relationships": [
+          {
+            "type": "governed_by",
+            "label": "National governing organization",
+            "targetId": "usa-swimming-national-structure",
+            "name": "USA Swimming"
+          },
+          {
+            "type": "member_of_zone",
+            "label": "Administrative zone",
+            "targetId": "usa-zone-western",
+            "name": "Western Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Registration contact (USA Swimming directory)",
+            "name": "Debbie Laderoute",
+            "email": "debbie@oregonswimming.org",
+            "phone": "503-576-1328",
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs"
+          },
+          {
+            "role": "Oregon Swimming office",
+            "phone": "503-747-3702",
+            "address": "P.O. Box 449, West Linn, OR 97068",
+            "url": "https://www.oregonswimming.org/page/home"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "title": "USA Swimming 2026 Rules & Regulations",
+            "checkedAt": "2026-10-10",
+            "note": "Articles 603.2 (territories and registration codes), 605.1 (zone membership), and 606 (regional competition). Original PDF checked for missing extraction text."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-websites",
+            "title": "USA Swimming LSC & Zone directory",
+            "checkedAt": "2026-10-10",
+            "note": "Directory name and official website link; legacy URLs may redirect."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs",
+            "title": "USA Swimming LSC Registration Chairs",
+            "checkedAt": "2026-10-10",
+            "note": "Public registration-role contact; this is not an assertion that the person is the General Chair."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/wzone/page/wz-lscs1",
+            "title": "Western Zone LSC directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.oregonswimming.org/page/home",
+            "title": "Oregon Swimming official website",
+            "checkedAt": "2026-10-10",
+            "note": "Official website identity and public organization content checked."
+          }
+        ],
+        "gaps": [
+          "The rulebook spells Malheur as 'Malhuer'; the standard county spelling is used in this geographic summary."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-lsc-pc",
+      "after": {
+        "kind": "lsc",
+        "title": "Pacific Swimming",
+        "officialName": "Pacific Swimming",
+        "abbreviation": "PC",
+        "abbreviationType": "USA Swimming registration code",
+        "organizationType": "Local Swimming Committee",
+        "parentId": "usa-swimming-national-structure",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.pacswim.org/",
+        "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+        "summary": "Pacific Swimming is a USA Swimming Local Swimming Committee in the Western Zone. Its jurisdiction covers California's Bay Area and northern coastal counties, designated Central Valley and Sierra areas, Bishop and Mammoth Lakes, plus designated western Nevada counties. Article 603.2 defines the detailed boundary and pools shared with Sierra Nevada Swimming.",
+        "geographicCoverage": "California's Bay Area and northern coastal counties, designated Central Valley and Sierra areas, Bishop and Mammoth Lakes, plus designated western Nevada counties. Article 603.2 defines the detailed boundary and pools shared with Sierra Nevada Swimming.",
+        "coverageNote": "Directory identity, registration code, administrative zone, website, geographic coverage and public registration contact collected. Regional/sectional arrangements and member clubs are not exhaustively collected.",
+        "relationships": [
+          {
+            "type": "governed_by",
+            "label": "National governing organization",
+            "targetId": "usa-swimming-national-structure",
+            "name": "USA Swimming"
+          },
+          {
+            "type": "member_of_zone",
+            "label": "Administrative zone",
+            "targetId": "usa-zone-western",
+            "name": "Western Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Registration contact (USA Swimming directory)",
+            "name": "Laurie Benton",
+            "email": "laurie@pacswim.org",
+            "phone": "925-822-7913",
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "title": "USA Swimming 2026 Rules & Regulations",
+            "checkedAt": "2026-10-10",
+            "note": "Articles 603.2 (territories and registration codes), 605.1 (zone membership), and 606 (regional competition). Original PDF checked for missing extraction text."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-websites",
+            "title": "USA Swimming LSC & Zone directory",
+            "checkedAt": "2026-10-10",
+            "note": "Directory name and official website link; legacy URLs may redirect."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs",
+            "title": "USA Swimming LSC Registration Chairs",
+            "checkedAt": "2026-10-10",
+            "note": "Public registration-role contact; this is not an assertion that the person is the General Chair."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/wzone/page/wz-lscs1",
+            "title": "Western Zone LSC directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.pacswim.org/",
+            "title": "Pacific Swimming official website",
+            "checkedAt": "2026-10-10",
+            "note": "Official website identity and public organization content checked."
+          }
+        ],
+        "gaps": [
+          "The LSC homepage says USA Swimming has 57 regional associations; the 2026 rulebook enumerates 58 LSCs. Its generic count is not used to remove any rulebook-listed LSC. Pacific also uses internal zones; those are not USA Swimming administrative zones.",
+          "Geographic coverage is summarized; consult Article 603.2 for exact county, road and shared-pool boundaries."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-lsc-pn",
+      "after": {
+        "kind": "lsc",
+        "title": "Pacific Northwest Swimming",
+        "officialName": "Pacific Northwest Swimming",
+        "abbreviation": "PN",
+        "abbreviationType": "USA Swimming registration code",
+        "organizationType": "Local Swimming Committee",
+        "parentId": "usa-swimming-national-structure",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.pns.org/page/home",
+        "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+        "summary": "Pacific Northwest Swimming is a USA Swimming Local Swimming Committee in the Western Zone. Its jurisdiction covers Western Washington: west of Okanogan, Chelan, Kittitas and Yakima counties; north of Skamania County; and north and west of Cowlitz County.",
+        "geographicCoverage": "Western Washington: west of Okanogan, Chelan, Kittitas and Yakima counties; north of Skamania County; and north and west of Cowlitz County.",
+        "coverageNote": "Directory identity, registration code, administrative zone, website, geographic coverage and public registration contact collected. Regional/sectional arrangements and member clubs are not exhaustively collected.",
+        "relationships": [
+          {
+            "type": "governed_by",
+            "label": "National governing organization",
+            "targetId": "usa-swimming-national-structure",
+            "name": "USA Swimming"
+          },
+          {
+            "type": "member_of_zone",
+            "label": "Administrative zone",
+            "targetId": "usa-zone-western",
+            "name": "Western Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Registration contact (USA Swimming directory)",
+            "name": "Melissa Stiner",
+            "email": "office@pns.org",
+            "phone": "253-852-0680",
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "title": "USA Swimming 2026 Rules & Regulations",
+            "checkedAt": "2026-10-10",
+            "note": "Articles 603.2 (territories and registration codes), 605.1 (zone membership), and 606 (regional competition). Original PDF checked for missing extraction text."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-websites",
+            "title": "USA Swimming LSC & Zone directory",
+            "checkedAt": "2026-10-10",
+            "note": "Directory name and official website link; legacy URLs may redirect."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs",
+            "title": "USA Swimming LSC Registration Chairs",
+            "checkedAt": "2026-10-10",
+            "note": "Public registration-role contact; this is not an assertion that the person is the General Chair."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/wzone/page/wz-lscs1",
+            "title": "Western Zone LSC directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.pns.org/page/home",
+            "title": "Pacific Northwest Swimming official website",
+            "checkedAt": "2026-10-10",
+            "note": "Official website identity and public organization content checked."
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-lsc-si",
+      "after": {
+        "kind": "lsc",
+        "title": "San Diego-Imperial Swimming",
+        "officialName": "San Diego-Imperial Swimming",
+        "abbreviation": "SI",
+        "abbreviationType": "USA Swimming registration code",
+        "organizationType": "Local Swimming Committee",
+        "parentId": "usa-swimming-national-structure",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/sandiegoimperial/page/home",
+        "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+        "summary": "San Diego-Imperial Swimming is a USA Swimming Local Swimming Committee in the Western Zone. Its jurisdiction covers San Diego and Imperial counties, California.",
+        "geographicCoverage": "San Diego and Imperial counties, California.",
+        "coverageNote": "Directory identity, registration code, administrative zone, website, geographic coverage and public registration contact collected. Regional/sectional arrangements and member clubs are not exhaustively collected.",
+        "relationships": [
+          {
+            "type": "governed_by",
+            "label": "National governing organization",
+            "targetId": "usa-swimming-national-structure",
+            "name": "USA Swimming"
+          },
+          {
+            "type": "member_of_zone",
+            "label": "Administrative zone",
+            "targetId": "usa-zone-western",
+            "name": "Western Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Registration contact (USA Swimming directory)",
+            "name": "Mary Redmond",
+            "email": "office@si-swimming.com",
+            "phone": "760-525-3748",
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "title": "USA Swimming 2026 Rules & Regulations",
+            "checkedAt": "2026-10-10",
+            "note": "Articles 603.2 (territories and registration codes), 605.1 (zone membership), and 606 (regional competition). Original PDF checked for missing extraction text."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-websites",
+            "title": "USA Swimming LSC & Zone directory",
+            "checkedAt": "2026-10-10",
+            "note": "Directory name and official website link; legacy URLs may redirect."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs",
+            "title": "USA Swimming LSC Registration Chairs",
+            "checkedAt": "2026-10-10",
+            "note": "Public registration-role contact; this is not an assertion that the person is the General Chair."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/wzone/page/wz-lscs1",
+            "title": "Western Zone LSC directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/sandiegoimperial/page/home",
+            "title": "San Diego-Imperial Swimming official website",
+            "checkedAt": "2026-10-10",
+            "note": "Official website identity and public organization content checked."
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-lsc-sn",
+      "after": {
+        "kind": "lsc",
+        "title": "Sierra Nevada Swimming",
+        "officialName": "Sierra Nevada Swimming",
+        "abbreviation": "SN",
+        "abbreviationType": "USA Swimming registration code",
+        "organizationType": "Local Swimming Committee",
+        "parentId": "usa-swimming-national-structure",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/snslsc/page/home",
+        "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+        "summary": "Sierra Nevada Swimming is a USA Swimming Local Swimming Committee in the Western Zone. Its jurisdiction covers Designated northern California and northern Nevada counties and partial counties. Article 603.2 defines the detailed boundary and pools shared with Pacific Swimming.",
+        "geographicCoverage": "Designated northern California and northern Nevada counties and partial counties. Article 603.2 defines the detailed boundary and pools shared with Pacific Swimming.",
+        "coverageNote": "Directory identity, registration code, administrative zone, website, geographic coverage and public registration contact collected. Regional/sectional arrangements and member clubs are not exhaustively collected.",
+        "relationships": [
+          {
+            "type": "governed_by",
+            "label": "National governing organization",
+            "targetId": "usa-swimming-national-structure",
+            "name": "USA Swimming"
+          },
+          {
+            "type": "member_of_zone",
+            "label": "Administrative zone",
+            "targetId": "usa-zone-western",
+            "name": "Western Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Registration contact (USA Swimming directory)",
+            "name": "Mark Brown",
+            "email": "mark.brown.15@gmail.com",
+            "phone": "916-201-1254",
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "title": "USA Swimming 2026 Rules & Regulations",
+            "checkedAt": "2026-10-10",
+            "note": "Articles 603.2 (territories and registration codes), 605.1 (zone membership), and 606 (regional competition). Original PDF checked for missing extraction text."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-websites",
+            "title": "USA Swimming LSC & Zone directory",
+            "checkedAt": "2026-10-10",
+            "note": "Directory name and official website link; legacy URLs may redirect."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs",
+            "title": "USA Swimming LSC Registration Chairs",
+            "checkedAt": "2026-10-10",
+            "note": "Public registration-role contact; this is not an assertion that the person is the General Chair."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/wzone/page/wz-lscs1",
+            "title": "Western Zone LSC directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/snslsc/page/home",
+            "title": "Sierra Nevada Swimming official website",
+            "checkedAt": "2026-10-10",
+            "note": "Official website identity and public organization content checked."
+          }
+        ],
+        "gaps": [
+          "Geographic coverage is summarized; consult Article 603.2 for exact county, road and shared-pool boundaries."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-lsc-sr",
+      "after": {
+        "kind": "lsc",
+        "title": "Snake River Swimming",
+        "officialName": "Snake River Swimming",
+        "abbreviation": "SR",
+        "abbreviationType": "USA Swimming registration code",
+        "organizationType": "Local Swimming Committee",
+        "parentId": "usa-swimming-national-structure",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/wzsrslsc/page/home",
+        "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+        "summary": "Snake River Swimming is a USA Swimming Local Swimming Committee in the Western Zone. Its jurisdiction covers Idaho south of Idaho County; Elko, White Pine and Eureka counties, Nevada; and Malheur County, Oregon.",
+        "geographicCoverage": "Idaho south of Idaho County; Elko, White Pine and Eureka counties, Nevada; and Malheur County, Oregon.",
+        "coverageNote": "Directory identity, registration code, administrative zone, website, geographic coverage and public registration contact collected. Regional/sectional arrangements and member clubs are not exhaustively collected.",
+        "relationships": [
+          {
+            "type": "governed_by",
+            "label": "National governing organization",
+            "targetId": "usa-swimming-national-structure",
+            "name": "USA Swimming"
+          },
+          {
+            "type": "member_of_zone",
+            "label": "Administrative zone",
+            "targetId": "usa-zone-western",
+            "name": "Western Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Registration contact (USA Swimming directory)",
+            "name": "Michelle Smith",
+            "email": "twosmiths@citlink.net",
+            "phone": "775-934-0783",
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "title": "USA Swimming 2026 Rules & Regulations",
+            "checkedAt": "2026-10-10",
+            "note": "Articles 603.2 (territories and registration codes), 605.1 (zone membership), and 606 (regional competition). Original PDF checked for missing extraction text."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-websites",
+            "title": "USA Swimming LSC & Zone directory",
+            "checkedAt": "2026-10-10",
+            "note": "Directory name and official website link; legacy URLs may redirect."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs",
+            "title": "USA Swimming LSC Registration Chairs",
+            "checkedAt": "2026-10-10",
+            "note": "Public registration-role contact; this is not an assertion that the person is the General Chair."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/wzone/page/wz-lscs1",
+            "title": "Western Zone LSC directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/wzsrslsc/page/home",
+            "title": "Snake River Swimming official website",
+            "checkedAt": "2026-10-10",
+            "note": "Official website identity and public organization content checked."
+          }
+        ],
+        "gaps": [
+          "The rulebook spells Malheur as 'Malhuer'; the standard county spelling is used in this geographic summary."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-lsc-ca",
+      "after": {
+        "kind": "lsc",
+        "title": "Southern California Swimming",
+        "officialName": "Southern California Swimming",
+        "abbreviation": "CA",
+        "abbreviationType": "USA Swimming registration code",
+        "organizationType": "Local Swimming Committee",
+        "parentId": "usa-swimming-national-structure",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.socalswim.org/?AspxAutoDetectCookieSupport=1",
+        "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+        "summary": "Southern California Swimming is a USA Swimming Local Swimming Committee in the Western Zone. Its jurisdiction covers San Luis Obispo, Santa Barbara, Ventura, Los Angeles, San Bernardino, Orange and Riverside counties, California; Clark, Lincoln, Nye and Esmeralda counties, Nevada.",
+        "geographicCoverage": "San Luis Obispo, Santa Barbara, Ventura, Los Angeles, San Bernardino, Orange and Riverside counties, California; Clark, Lincoln, Nye and Esmeralda counties, Nevada.",
+        "coverageNote": "Directory identity, registration code, administrative zone, website, geographic coverage and public registration contact collected. Regional/sectional arrangements and member clubs are not exhaustively collected.",
+        "relationships": [
+          {
+            "type": "governed_by",
+            "label": "National governing organization",
+            "targetId": "usa-swimming-national-structure",
+            "name": "USA Swimming"
+          },
+          {
+            "type": "member_of_zone",
+            "label": "Administrative zone",
+            "targetId": "usa-zone-western",
+            "name": "Western Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Registration contact (USA Swimming directory)",
+            "name": "Nicole Hendry",
+            "email": "officemanager@socalswim.org",
+            "phone": "310-684-1151",
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "title": "USA Swimming 2026 Rules & Regulations",
+            "checkedAt": "2026-10-10",
+            "note": "Articles 603.2 (territories and registration codes), 605.1 (zone membership), and 606 (regional competition). Original PDF checked for missing extraction text."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-websites",
+            "title": "USA Swimming LSC & Zone directory",
+            "checkedAt": "2026-10-10",
+            "note": "Directory name and official website link; legacy URLs may redirect."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs",
+            "title": "USA Swimming LSC Registration Chairs",
+            "checkedAt": "2026-10-10",
+            "note": "Public registration-role contact; this is not an assertion that the person is the General Chair."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/wzone/page/wz-lscs1",
+            "title": "Western Zone LSC directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.socalswim.org/?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming official website",
+            "checkedAt": "2026-10-10",
+            "note": "Official website identity and public organization content checked."
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-lsc-ut",
+      "after": {
+        "kind": "lsc",
+        "title": "Utah Swimming",
+        "officialName": "Utah Swimming",
+        "abbreviation": "UT",
+        "abbreviationType": "USA Swimming registration code",
+        "organizationType": "Local Swimming Committee",
+        "parentId": "usa-swimming-national-structure",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/lscuts/page/home",
+        "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+        "summary": "Utah Swimming is a USA Swimming Local Swimming Committee in the Western Zone. Its jurisdiction covers Utah.",
+        "geographicCoverage": "Utah.",
+        "coverageNote": "Directory identity, registration code, administrative zone, website, geographic coverage and public registration contact collected. Regional/sectional arrangements and member clubs are not exhaustively collected.",
+        "relationships": [
+          {
+            "type": "governed_by",
+            "label": "National governing organization",
+            "targetId": "usa-swimming-national-structure",
+            "name": "USA Swimming"
+          },
+          {
+            "type": "member_of_zone",
+            "label": "Administrative zone",
+            "targetId": "usa-zone-western",
+            "name": "Western Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Registration contact (USA Swimming directory)",
+            "name": "Todd Etherington",
+            "email": "registration@utahswimming.org",
+            "phone": "801-943-3190, ext. 117",
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "title": "USA Swimming 2026 Rules & Regulations",
+            "checkedAt": "2026-10-10",
+            "note": "Articles 603.2 (territories and registration codes), 605.1 (zone membership), and 606 (regional competition). Original PDF checked for missing extraction text."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-websites",
+            "title": "USA Swimming LSC & Zone directory",
+            "checkedAt": "2026-10-10",
+            "note": "Directory name and official website link; legacy URLs may redirect."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs",
+            "title": "USA Swimming LSC Registration Chairs",
+            "checkedAt": "2026-10-10",
+            "note": "Public registration-role contact; this is not an assertion that the person is the General Chair."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/wzone/page/wz-lscs1",
+            "title": "Western Zone LSC directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/lscuts/page/home",
+            "title": "Utah Swimming official website",
+            "checkedAt": "2026-10-10",
+            "note": "Official website identity and public organization content checked."
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-lsc-wy",
+      "after": {
+        "kind": "lsc",
+        "title": "Wyoming Swimming",
+        "officialName": "Wyoming Swimming",
+        "abbreviation": "WY",
+        "abbreviationType": "USA Swimming registration code",
+        "organizationType": "Local Swimming Committee",
+        "parentId": "usa-swimming-national-structure",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/wzwyslsc/page/home",
+        "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+        "summary": "Wyoming Swimming is a USA Swimming Local Swimming Committee in the Western Zone. Its jurisdiction covers Wyoming plus 11 western Nebraska counties: Sioux, Scotts Bluff, Banner, Kimball, Dawes, Box Butte, Morrill, Cheyenne, Sheridan, Garden and Deuel.",
+        "geographicCoverage": "Wyoming plus 11 western Nebraska counties: Sioux, Scotts Bluff, Banner, Kimball, Dawes, Box Butte, Morrill, Cheyenne, Sheridan, Garden and Deuel.",
+        "coverageNote": "Directory identity, registration code, administrative zone, website, geographic coverage and public registration contact collected. Regional/sectional arrangements and member clubs are not exhaustively collected.",
+        "relationships": [
+          {
+            "type": "governed_by",
+            "label": "National governing organization",
+            "targetId": "usa-swimming-national-structure",
+            "name": "USA Swimming"
+          },
+          {
+            "type": "member_of_zone",
+            "label": "Administrative zone",
+            "targetId": "usa-zone-western",
+            "name": "Western Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Registration contact (USA Swimming directory)",
+            "name": "Mary Ellen Tynan",
+            "email": "wyoswimregister@gmail.com",
+            "phone": "978-996-9655",
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "title": "USA Swimming 2026 Rules & Regulations",
+            "checkedAt": "2026-10-10",
+            "note": "Articles 603.2 (territories and registration codes), 605.1 (zone membership), and 606 (regional competition). Original PDF checked for missing extraction text."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-websites",
+            "title": "USA Swimming LSC & Zone directory",
+            "checkedAt": "2026-10-10",
+            "note": "Directory name and official website link; legacy URLs may redirect."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs",
+            "title": "USA Swimming LSC Registration Chairs",
+            "checkedAt": "2026-10-10",
+            "note": "Public registration-role contact; this is not an assertion that the person is the General Chair."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/wzone/page/wz-lscs1",
+            "title": "Western Zone LSC directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/home",
+            "title": "Wyoming Swimming official website",
+            "checkedAt": "2026-10-10",
+            "note": "Official website identity and public organization content checked."
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-zone-western",
+      "after": {
+        "gaps": [
+          "Regional sections (including CA/NV, Northwest and Four Corners) remain a separate collection task; no mandatory regional parent is inferred."
+        ],
+        "kind": "zone",
+        "title": "Western Zone",
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "note": "Articles 603 (names, codes, boundaries), 605 (zones), 606 (regional competition).",
+            "title": "USA Swimming 2026 Rules & Regulations",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-websites",
+            "title": "USA Swimming LSC & Zone directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/wzone/page/home",
+            "title": "Western Zone official website",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "note": "Basis for Inland Empire collection coverage update.",
+            "title": "Inland Empire club directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/wzone/page/wz-lscs1",
+            "title": "Western Zone current directory",
+            "checkedAt": "2026-10-10",
+            "note": "Zone membership cross-check and zone abbreviation used in site navigation."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/wzone/page/administration/contacts",
+            "title": "Western Zone contacts",
+            "checkedAt": "2026-10-10",
+            "note": "Contact page checked; individual officers not asserted where terms or current status need follow-up."
+          }
+        ],
+        "summary": "One of USA Swimming’s four administrative zones. It groups LSCs for zone administration and competition under Article 605.",
+        "website": "https://www.gomotionapp.com/team/wzone/page/home",
+        "contacts": [
+          {
+            "role": "Official zone contact directory",
+            "url": "https://www.gomotionapp.com/team/wzone/page/administration/contacts"
+          }
+        ],
+        "parentId": "usa-swimming-national-structure",
+        "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+        "abbreviation": "WZ",
+        "coverageNote": "Complete inventory of 17 rulebook-listed LSCs in this zone. Inland Empire and its 19 previously collected clubs retained; 16 additional LSCs proposed. Region/section and club collection remains partial.",
+        "officialName": "Western Zone",
+        "relationships": [
+          {
+            "name": "USA Swimming",
+            "type": "governed_by",
+            "label": "National governing organization",
+            "targetId": "usa-swimming-national-structure"
+          },
+          {
+            "type": "contains_lsc",
+            "label": "LSC in zone",
+            "targetId": "usa-lsc-ak",
+            "name": "Alaska Swimming"
+          },
+          {
+            "type": "contains_lsc",
+            "label": "LSC in zone",
+            "targetId": "usa-lsc-az",
+            "name": "Arizona Swimming"
+          },
+          {
+            "type": "contains_lsc",
+            "label": "LSC in zone",
+            "targetId": "usa-lsc-cc",
+            "name": "Central California Swimming"
+          },
+          {
+            "type": "contains_lsc",
+            "label": "LSC in zone",
+            "targetId": "usa-lsc-co",
+            "name": "Colorado Swimming"
+          },
+          {
+            "type": "contains_lsc",
+            "label": "LSC in zone",
+            "targetId": "usa-lsc-hi",
+            "name": "Hawaiian Swimming"
+          },
+          {
+            "type": "contains_lsc",
+            "label": "LSC in zone",
+            "targetId": "usa-lsc-ie",
+            "name": "Inland Empire Swimming"
+          },
+          {
+            "type": "contains_lsc",
+            "label": "LSC in zone",
+            "targetId": "usa-lsc-mt",
+            "name": "Montana Swimming"
+          },
+          {
+            "type": "contains_lsc",
+            "label": "LSC in zone",
+            "targetId": "usa-lsc-nm",
+            "name": "New Mexico Swimming"
+          },
+          {
+            "type": "contains_lsc",
+            "label": "LSC in zone",
+            "targetId": "usa-lsc-or",
+            "name": "Oregon Swimming"
+          },
+          {
+            "type": "contains_lsc",
+            "label": "LSC in zone",
+            "targetId": "usa-lsc-pc",
+            "name": "Pacific Swimming"
+          },
+          {
+            "type": "contains_lsc",
+            "label": "LSC in zone",
+            "targetId": "usa-lsc-pn",
+            "name": "Pacific Northwest Swimming"
+          },
+          {
+            "type": "contains_lsc",
+            "label": "LSC in zone",
+            "targetId": "usa-lsc-si",
+            "name": "San Diego-Imperial Swimming"
+          },
+          {
+            "type": "contains_lsc",
+            "label": "LSC in zone",
+            "targetId": "usa-lsc-sn",
+            "name": "Sierra Nevada Swimming"
+          },
+          {
+            "type": "contains_lsc",
+            "label": "LSC in zone",
+            "targetId": "usa-lsc-sr",
+            "name": "Snake River Swimming"
+          },
+          {
+            "type": "contains_lsc",
+            "label": "LSC in zone",
+            "targetId": "usa-lsc-ca",
+            "name": "Southern California Swimming"
+          },
+          {
+            "type": "contains_lsc",
+            "label": "LSC in zone",
+            "targetId": "usa-lsc-ut",
+            "name": "Utah Swimming"
+          },
+          {
+            "type": "contains_lsc",
+            "label": "LSC in zone",
+            "targetId": "usa-lsc-wy",
+            "name": "Wyoming Swimming"
+          }
+        ],
+        "organizationType": "USA Swimming administrative zone",
+        "geographicCoverage": "LSC jurisdictions of: Alaska, Arizona, Central California, Colorado, Hawaiian, Inland Empire, Montana, New Mexico, Oregon, Pacific, Pacific Northwest, San Diego-Imperial, Sierra Nevada, Snake River, Southern California, Utah, Wyoming."
+      }
+    }
+  ]
+}

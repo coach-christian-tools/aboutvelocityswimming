@@ -1,0 +1,2687 @@
+{
+  "division": "knowledge",
+  "scope": "Western Zone swim teams \u2014 Pacific Northwest Swimming",
+  "sourceUrl": "https://www.pns.org/page/links",
+  "capturedAt": "2026-10-10T08:09:39.146520+00:00",
+  "coverage": "partial",
+  "evidence": {
+    "checkedAt": "2026-10-10",
+    "lscCode": "PN",
+    "directoryRowsCollected": 43,
+    "batchRows": 43,
+    "enumeration": "All named rows in the retrieved official directory/roster sources; independent current registration is not guaranteed.",
+    "deduplication": "Compared against 84 published knowledge records and an empty pending queue; facilities combined by organization key; Inland Empire\u2019s 19 existing teams were retained without duplicates.",
+    "remaining": "Missing codes, unreachable websites, registration status, and conflicting sources are visible in each record. Sierra Nevada BBST remains name/code unresolved from official evidence."
+  },
+  "writes": [
+    {
+      "path": "knowledge_entries/usa-team-pn-ast",
+      "after": {
+        "kind": "team",
+        "title": "Aquacise Swim Team",
+        "officialName": "Aquacise Swim Team",
+        "abbreviation": "AST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pn",
+        "lscId": "usa-lsc-pn",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/waaqua/page/home",
+        "sourceUrl": "https://www.pns.org/page/links",
+        "summary": "Aquacise Swim Team is a swim team/program listed by Pacific Northwest Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Bellevue, WA; Mercer Island, WA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Northwest Swimming",
+            "targetId": "usa-lsc-pn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Keith Freeman",
+            "email": "manager@mercerislandpool.com",
+            "phone": "12065881117"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Jim Umbeck",
+            "email": "somersetrecclub@gmail.com",
+            "phone": "12066013492"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pns.org/page/links",
+            "title": "Pacific Northwest Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/waaqua/page/home",
+            "title": "Aquacise Swimming Home",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pn-bisc",
+      "after": {
+        "kind": "team",
+        "title": "Bainbridge Island Swim Club",
+        "officialName": "Bainbridge Island Swim Club",
+        "abbreviation": "BISC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pn",
+        "lscId": "usa-lsc-pn",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.teamunify.com/Home.jsp?team=pnsbisc",
+        "sourceUrl": "https://www.pns.org/page/links",
+        "summary": "Bainbridge Island Swim Club is a swim team/program listed by Pacific Northwest Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Bainbridge Island, WA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Northwest Swimming",
+            "targetId": "usa-lsc-pn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Kyle Harris",
+            "email": "KyleH@biparks.org",
+            "phone": "12065655663"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pns.org/page/links",
+            "title": "Pacific Northwest Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pn-bast",
+      "after": {
+        "kind": "team",
+        "title": "BAYCLUB Aquatic Swim Team",
+        "officialName": "BAYCLUB Aquatic Swim Team",
+        "abbreviation": "BAST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pn",
+        "lscId": "usa-lsc-pn",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.teamunify.com/pnsps",
+        "sourceUrl": "https://www.pns.org/page/links",
+        "summary": "BAYCLUB Aquatic Swim Team is a swim team/program listed by Pacific Northwest Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Bellevue, WA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Northwest Swimming",
+            "targetId": "usa-lsc-pn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Erin Julius",
+            "email": "ejulius@proclub.com",
+            "phone": "14258616270"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pns.org/page/links",
+            "title": "Pacific Northwest Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pn-bc",
+      "after": {
+        "kind": "team",
+        "title": "Bellevue Club Swim Team",
+        "officialName": "Bellevue Club Swim Team",
+        "abbreviation": "BC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pn",
+        "lscId": "usa-lsc-pn",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.bcst.com/",
+        "sourceUrl": "https://www.pns.org/page/links",
+        "summary": "Bellevue Club Swim Team is a swim team/program listed by Pacific Northwest Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Club-specific coverage not established; listed within Pacific Northwest Swimming.",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Northwest Swimming",
+            "targetId": "usa-lsc-pn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [],
+        "sources": [
+          {
+            "url": "https://www.pns.org/page/links",
+            "title": "Pacific Northwest Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "http://www.bcst.com/",
+            "title": "Bellevue Club Swim Team Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/onsbcst/page/home"
+          }
+        ],
+        "gaps": [
+          "Club-specific service area / location not established from available sources.",
+          "No public organizational contact established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pn-bbst",
+      "after": {
+        "kind": "team",
+        "title": "Bellingham Bay Swim Team",
+        "officialName": "Bellingham Bay Swim Team",
+        "abbreviation": "BBST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pn",
+        "lscId": "usa-lsc-pn",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.bellinghambayswimteam.org/",
+        "sourceUrl": "https://www.pns.org/page/links",
+        "summary": "Bellingham Bay Swim Team is a swim team/program listed by Pacific Northwest Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Bellingham, WA; Lynden, WA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Northwest Swimming",
+            "targetId": "usa-lsc-pn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Chris Coghill",
+            "email": "coachchriscoghill@gmail.com",
+            "phone": "13016398453"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pns.org/page/links",
+            "title": "Pacific Northwest Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.bellinghambayswimteam.org/",
+            "title": "Bellingham Bay Swim Team Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/pnsbbst/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pn-bdst",
+      "after": {
+        "kind": "team",
+        "title": "Blue Dolphin Swim Team",
+        "officialName": "Blue Dolphin Swim Team",
+        "abbreviation": "BDST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pn",
+        "lscId": "usa-lsc-pn",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.teamunify.com/Home.jsp?team=pnbdst",
+        "sourceUrl": "https://www.pns.org/page/links",
+        "summary": "Blue Dolphin Swim Team is a swim team/program listed by Pacific Northwest Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Bellevue, WA; Issaquah, WA; Mercer Island, WA; Redmond, WA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Northwest Swimming",
+            "targetId": "usa-lsc-pn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Bailin Cui",
+            "email": "berlinbdst@hotmail.com",
+            "phone": "14253937393"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Bailin Cui",
+            "email": "berliniphones@hotmail.com",
+            "phone": "14253937393"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pns.org/page/links",
+            "title": "Pacific Northwest Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pn-byst",
+      "after": {
+        "kind": "team",
+        "title": "Bremerton YMCA Swim Team",
+        "officialName": "Bremerton YMCA Swim Team",
+        "abbreviation": "BYST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pn",
+        "lscId": "usa-lsc-pn",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/Home.jsp?team=pnbyst",
+        "sourceUrl": "https://www.pns.org/page/links",
+        "summary": "Bremerton YMCA Swim Team is a swim team/program listed by Pacific Northwest Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Bremerton, WA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Northwest Swimming",
+            "targetId": "usa-lsc-pn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Marilyn Grindrod",
+            "email": "coachmarilyng@centurytel.net",
+            "phone": "13602869090"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pns.org/page/links",
+            "title": "Pacific Northwest Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.teamunify.com/Home.jsp?team=pnbyst",
+            "title": "Bremerton YMCA Swim Team Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/pnbyst/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pn-csc",
+      "after": {
+        "kind": "team",
+        "title": "Cascade Swim Club",
+        "officialName": "Cascade Swim Club",
+        "abbreviation": "CSC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pn",
+        "lscId": "usa-lsc-pn",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.cascadeswimclub.org/",
+        "sourceUrl": "https://www.pns.org/page/links",
+        "summary": "Cascade Swim Club is a swim team/program listed by Pacific Northwest Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Edmonds, WA; Seattle, WA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Northwest Swimming",
+            "targetId": "usa-lsc-pn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Nancy Davidson",
+            "email": "nancycsc@comcast.net",
+            "phone": "14257886860"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pns.org/page/links",
+            "title": "Pacific Northwest Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pn-c",
+      "after": {
+        "kind": "team",
+        "title": "Chinook Aquatic Club",
+        "officialName": "Chinook Aquatic Club",
+        "abbreviation": "C",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pn",
+        "lscId": "usa-lsc-pn",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.chinookaquaticclub.org/",
+        "sourceUrl": "https://www.pns.org/page/links",
+        "summary": "Chinook Aquatic Club is a swim team/program listed by Pacific Northwest Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Bellevue, WA; Redmond, WA; Renton, WA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Northwest Swimming",
+            "targetId": "usa-lsc-pn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Chinook Aquatic Club",
+            "email": "chinookswimming@hotmail.com",
+            "phone": "12536317163"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "NA",
+            "email": "NA@na.com",
+            "phone": "19999999999"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pns.org/page/links",
+            "title": "Pacific Northwest Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pn-east",
+      "after": {
+        "kind": "team",
+        "title": "Eastside Aquatic Swim Team",
+        "officialName": "Eastside Aquatic Swim Team",
+        "abbreviation": "EAST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pn",
+        "lscId": "usa-lsc-pn",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/Home.jsp?_tabid=0&team=pneast",
+        "sourceUrl": "https://www.pns.org/page/links",
+        "summary": "Eastside Aquatic Swim Team is a swim team/program listed by Pacific Northwest Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Bellevue, WA; Mercer Island, WA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Northwest Swimming",
+            "targetId": "usa-lsc-pn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Jing Li",
+            "email": "coachjing2008km@gmail.com",
+            "phone": "14257530276"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pns.org/page/links",
+            "title": "Pacific Northwest Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.teamunify.com/Home.jsp?_tabid=0&team=pneast",
+            "title": "Eastside Aquatic Swim Team Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/pneast/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pn-xcel",
+      "after": {
+        "kind": "team",
+        "title": "Excel Swim Club",
+        "officialName": "Excel Swim Club",
+        "abbreviation": "XCEL",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pn",
+        "lscId": "usa-lsc-pn",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/excelsc/page/home",
+        "sourceUrl": "https://www.pns.org/page/links",
+        "summary": "Excel Swim Club is a swim team/program listed by Pacific Northwest Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Kenmore, WA; Seattle, WA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Northwest Swimming",
+            "targetId": "usa-lsc-pn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Chris Stoner",
+            "email": "coaches@excelswimclub.org",
+            "phone": "10000000000"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pns.org/page/links",
+            "title": "Pacific Northwest Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pn-gac",
+      "after": {
+        "kind": "team",
+        "title": "Gold's Aquatics Club",
+        "officialName": "Gold's Aquatics Club",
+        "abbreviation": "GAC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pn",
+        "lscId": "usa-lsc-pn",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.goldsaquaticsclub.com/",
+        "sourceUrl": "https://www.pns.org/page/links",
+        "summary": "Gold's Aquatics Club is a swim team/program listed by Pacific Northwest Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Woodinville, WA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Northwest Swimming",
+            "targetId": "usa-lsc-pn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Ian Carpenter",
+            "email": "aquatics@goldsgym1965.com",
+            "phone": "14254814334"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pns.org/page/links",
+            "title": "Pacific Northwest Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.goldsaquaticsclub.com/",
+            "title": "Gold's Aquatics Club Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/pnsgac/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pn-ghrt",
+      "after": {
+        "kind": "team",
+        "title": "Grays Harbor Riptides",
+        "officialName": "Grays Harbor Riptides",
+        "abbreviation": "GHRT",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pn",
+        "lscId": "usa-lsc-pn",
+        "zoneId": "usa-zone-western",
+        "website": null,
+        "sourceUrl": "https://www.pns.org/page/links",
+        "summary": "Grays Harbor Riptides is a swim team/program listed by Pacific Northwest Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Club-specific coverage not established; listed within Pacific Northwest Swimming.",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Northwest Swimming",
+            "targetId": "usa-lsc-pn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [],
+        "sources": [
+          {
+            "url": "https://www.pns.org/page/links",
+            "title": "Pacific Northwest Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Official team website not established from available sources.",
+          "Club-specific service area / location not established from available sources.",
+          "No public organizational contact established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pn-hac",
+      "after": {
+        "kind": "team",
+        "title": "Harbor Aquatics Club",
+        "officialName": "Harbor Aquatics Club",
+        "abbreviation": "HAC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pn",
+        "lscId": "usa-lsc-pn",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.harboraquaticsclub.com/page/home",
+        "sourceUrl": "https://www.pns.org/page/links",
+        "summary": "Harbor Aquatics Club is a swim team/program listed by Pacific Northwest Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Gig Harbor, WA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Northwest Swimming",
+            "targetId": "usa-lsc-pn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Harbor Aquatics Club",
+            "email": "harboraquaticsclub@gmail.com",
+            "phone": "12535039398"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pns.org/page/links",
+            "title": "Pacific Northwest Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.harboraquaticsclub.com/page/home",
+            "title": "Harbor Aquatics Club Home",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pn-ist",
+      "after": {
+        "kind": "team",
+        "title": "Issaquah Swim Team",
+        "officialName": "Issaquah Swim Team",
+        "abbreviation": "IST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pn",
+        "lscId": "usa-lsc-pn",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.istsockeyes.org/",
+        "sourceUrl": "https://www.pns.org/page/links",
+        "summary": "Issaquah Swim Team is a swim team/program listed by Pacific Northwest Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Club-specific coverage not established; listed within Pacific Northwest Swimming.",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Northwest Swimming",
+            "targetId": "usa-lsc-pn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [],
+        "sources": [
+          {
+            "url": "https://www.pns.org/page/links",
+            "title": "Pacific Northwest Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "http://www.istsockeyes.org/",
+            "title": "Issaquah Swim Team Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/pnsist/page/home"
+          }
+        ],
+        "gaps": [
+          "Club-specific service area / location not established from available sources.",
+          "No public organizational contact established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pn-king",
+      "after": {
+        "kind": "team",
+        "title": "King Aquatic Club",
+        "officialName": "King Aquatic Club",
+        "abbreviation": "KING",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pn",
+        "lscId": "usa-lsc-pn",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.kingaquaticclub.com/",
+        "sourceUrl": "https://www.pns.org/page/links",
+        "summary": "King Aquatic Club is a swim team/program listed by Pacific Northwest Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Auburn, WA; Covington, WA; Federal Way, WA; Tacoma, WA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Northwest Swimming",
+            "targetId": "usa-lsc-pn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Landon Labosky",
+            "email": "llabosky@covingtonwa.gov",
+            "phone": "12534553242"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Elizabeth Yen",
+            "email": "eyen@kingaquaticclub.com",
+            "phone": "17148788363"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pns.org/page/links",
+            "title": "Pacific Northwest Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.kingaquaticclub.com/",
+            "title": "KING Aquatic Club Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/king/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pn-mmsc",
+      "after": {
+        "kind": "team",
+        "title": "Mighty Marlins Swim Club",
+        "officialName": "Mighty Marlins Swim Club",
+        "abbreviation": "MMSC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pn",
+        "lscId": "usa-lsc-pn",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.mightymarlinsswimclub.com/",
+        "sourceUrl": "https://www.pns.org/page/links",
+        "summary": "Mighty Marlins Swim Club is a swim team/program listed by Pacific Northwest Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Marysville, WA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Northwest Swimming",
+            "targetId": "usa-lsc-pn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Scott Lichtenberg",
+            "email": "swlichtenberg@gmail.com",
+            "phone": "14252232853"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pns.org/page/links",
+            "title": "Pacific Northwest Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.mightymarlinsswimclub.com/",
+            "title": "Mighty Marlins Swim Club Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.mightymarlinsswimclub.org/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pn-nwac",
+      "after": {
+        "kind": "team",
+        "title": "North Whidbey Aquatic Club",
+        "officialName": "North Whidbey Aquatic Club",
+        "abbreviation": "NWAC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pn",
+        "lscId": "usa-lsc-pn",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.teamunify.com/pnswznwac",
+        "sourceUrl": "https://www.pns.org/page/links",
+        "summary": "North Whidbey Aquatic Club is a swim team/program listed by Pacific Northwest Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Oak Harbor, WA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Northwest Swimming",
+            "targetId": "usa-lsc-pn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Ty Tyson",
+            "email": "president@blueheronboosterclub.org",
+            "phone": "13609297307"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pns.org/page/links",
+            "title": "Pacific Northwest Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pn-ost",
+      "after": {
+        "kind": "team",
+        "title": "Ohana Swim Team",
+        "officialName": "Ohana Swim Team",
+        "abbreviation": "OST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pn",
+        "lscId": "usa-lsc-pn",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/Home.jsp?_tabid_=0&team=pnost",
+        "sourceUrl": "https://www.pns.org/page/links",
+        "summary": "Ohana Swim Team is a swim team/program listed by Pacific Northwest Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Tacoma, WA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Northwest Swimming",
+            "targetId": "usa-lsc-pn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Chris Camper",
+            "email": "chriscamper@comcast.net",
+            "phone": "12532308724"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "lisa egenes",
+            "email": "Legenes@tacoma.k12.wa.us",
+            "phone": "12535716629"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pns.org/page/links",
+            "title": "Pacific Northwest Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.teamunify.com/Home.jsp?_tabid_=0&team=pnost",
+            "title": "Ohana Swim Team Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/pnost/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pn-oca",
+      "after": {
+        "kind": "team",
+        "title": "Olympic Cascade Aquatics",
+        "officialName": "Olympic Cascade Aquatics",
+        "abbreviation": "OCA",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pn",
+        "lscId": "usa-lsc-pn",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.ocaswim.com/",
+        "sourceUrl": "https://www.pns.org/page/links",
+        "summary": "Olympic Cascade Aquatics is a swim team/program listed by Pacific Northwest Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Bellevue, WA; Federal Way, WA; Mercer Island, WA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Northwest Swimming",
+            "targetId": "usa-lsc-pn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Alice Godfred",
+            "email": "ocaswimming@gmail.com",
+            "phone": "12069209689"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pns.org/page/links",
+            "title": "Pacific Northwest Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.ocaswim.com/",
+            "title": "Olympic Cascade Aquatics Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/pnsoca/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pn-pdst",
+      "after": {
+        "kind": "team",
+        "title": "Pacific Dragons Swim Team",
+        "officialName": "Pacific Dragons Swim Team",
+        "abbreviation": "PDST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pn",
+        "lscId": "usa-lsc-pn",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.pdswimteam.org/",
+        "sourceUrl": "https://www.pns.org/page/links",
+        "summary": "Pacific Dragons Swim Team is a swim team/program listed by Pacific Northwest Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Bellevue, WA; Mercer Island, WA; Renton, WA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Northwest Swimming",
+            "targetId": "usa-lsc-pn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Xin Li",
+            "email": "pdstleon@gmail.com",
+            "phone": "14256919165"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pns.org/page/links",
+            "title": "Pacific Northwest Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.pdswimteam.org/",
+            "title": "Pacific Dragons Swim Team Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/pnpdst/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pn-ppst",
+      "after": {
+        "kind": "team",
+        "title": "Pacific Piranha Swim Team",
+        "officialName": "Pacific Piranha Swim Team",
+        "abbreviation": "PPST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pn",
+        "lscId": "usa-lsc-pn",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/Home.jsp?team=pnspps",
+        "sourceUrl": "https://www.pns.org/page/links",
+        "summary": "Pacific Piranha Swim Team is a swim team/program listed by Pacific Northwest Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Bremerton, WA; Port Orchard, WA; Poulsbo, WA; Silverdale, WA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Northwest Swimming",
+            "targetId": "usa-lsc-pn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Stephanie Simpson",
+            "email": "swimwithppst.membership@gmail.com",
+            "phone": "16023631388"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pns.org/page/links",
+            "title": "Pacific Northwest Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.teamunify.com/Home.jsp?team=pnspps",
+            "title": "Pacific Piranha Swim Team",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/pnspps/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pn-pasc",
+      "after": {
+        "kind": "team",
+        "title": "Port Angeles Swim Club",
+        "officialName": "Port Angeles Swim Club",
+        "abbreviation": "PASC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pn",
+        "lscId": "usa-lsc-pn",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/team/wapasc/page/home",
+        "sourceUrl": "https://www.pns.org/page/links",
+        "summary": "Port Angeles Swim Club is a swim team/program listed by Pacific Northwest Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Port Angeles, WA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Northwest Swimming",
+            "targetId": "usa-lsc-pn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Jessica Johnson",
+            "email": "paswimclub@gmail.com",
+            "phone": "13604610426"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pns.org/page/links",
+            "title": "Pacific Northwest Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.teamunify.com/team/wapasc/page/home",
+            "title": "Port Angeles Swim Club Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/wapasc/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pn-pac",
+      "after": {
+        "kind": "team",
+        "title": "Poseidon Aquatic Club",
+        "officialName": "Poseidon Aquatic Club",
+        "abbreviation": "PAC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pn",
+        "lscId": "usa-lsc-pn",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.poseidonaquatics.org/",
+        "sourceUrl": "https://www.pns.org/page/links",
+        "summary": "Poseidon Aquatic Club is a swim team/program listed by Pacific Northwest Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Centralia, WA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Northwest Swimming",
+            "targetId": "usa-lsc-pn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Audra Messegee-Evans",
+            "email": "audramom3@hotmail.com",
+            "phone": "13603049377"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pns.org/page/links",
+            "title": "Pacific Northwest Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.poseidonaquatics.org/",
+            "title": "Poseidon Aquatic Club Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/pnpac/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pn-psa",
+      "after": {
+        "kind": "team",
+        "title": "Prime Swim Academy",
+        "officialName": "Prime Swim Academy",
+        "abbreviation": "PSA",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pn",
+        "lscId": "usa-lsc-pn",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.primeswimacademy.com/",
+        "sourceUrl": "https://www.pns.org/page/links",
+        "summary": "Prime Swim Academy is a swim team/program listed by Pacific Northwest Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Mercer Island, WA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Northwest Swimming",
+            "targetId": "usa-lsc-pn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Yixin Chen",
+            "email": "prime.swim.us@gmail.com",
+            "phone": "13193336671"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pns.org/page/links",
+            "title": "Pacific Northwest Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.primeswimacademy.com/",
+            "title": "Prime Swim Academy",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pn-pssc",
+      "after": {
+        "kind": "team",
+        "title": "Puget Sound Swim Club",
+        "officialName": "Puget Sound Swim Club",
+        "abbreviation": "PSSC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pn",
+        "lscId": "usa-lsc-pn",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.swimpssc.com/",
+        "sourceUrl": "https://www.pns.org/page/links",
+        "summary": "Puget Sound Swim Club is a swim team/program listed by Pacific Northwest Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Port Orchard, WA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Northwest Swimming",
+            "targetId": "usa-lsc-pn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Heather Olson",
+            "email": "secretaryswimpssc@gmail.com",
+            "phone": "13604718774"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pns.org/page/links",
+            "title": "Pacific Northwest Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.swimpssc.com/",
+            "title": "Puget Sound Swim Club Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.swimpssc.com/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pn-rfst",
+      "after": {
+        "kind": "team",
+        "title": "Rainier Foothills Swim Team",
+        "officialName": "Rainier Foothills Swim Team",
+        "abbreviation": "RFST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pn",
+        "lscId": "usa-lsc-pn",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/pnsrfst/page/home",
+        "sourceUrl": "https://www.pns.org/page/links",
+        "summary": "Rainier Foothills Swim Team is a swim team/program listed by Pacific Northwest Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Enumclaw, WA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Northwest Swimming",
+            "targetId": "usa-lsc-pn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Bryce Van Hoof",
+            "email": "rfst.headcoach@outlook.com",
+            "phone": "14256151182"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pns.org/page/links",
+            "title": "Pacific Northwest Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/pnsrfst/page/home",
+            "title": "Rainier Foothills Swim Team Home",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pn-sam",
+      "after": {
+        "kind": "team",
+        "title": "Samena Club",
+        "officialName": "Samena Club",
+        "abbreviation": "SAM",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pn",
+        "lscId": "usa-lsc-pn",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/recmsstwa/page/home",
+        "sourceUrl": "https://www.pns.org/page/links",
+        "summary": "Samena Club is a swim team/program listed by Pacific Northwest Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Bellevue, WA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Northwest Swimming",
+            "targetId": "usa-lsc-pn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Mark Feeney",
+            "email": "markf@samena.com",
+            "phone": "14257461160"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pns.org/page/links",
+            "title": "Pacific Northwest Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/recmsstwa/page/home",
+            "title": "Samena Swim Club Home",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pn-smac",
+      "after": {
+        "kind": "team",
+        "title": "Seattle Metropolitan Aquatic Club",
+        "officialName": "Seattle Metropolitan Aquatic Club",
+        "abbreviation": "SMAC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pn",
+        "lscId": "usa-lsc-pn",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/team/pnscaat/page/home",
+        "sourceUrl": "https://www.pns.org/page/links",
+        "summary": "Seattle Metropolitan Aquatic Club is a swim team/program listed by Pacific Northwest Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Bellevue, WA; Des Moines, WA; Federal Way, WA; Fife, WA; Kent, WA; Mercer Island, WA; Normandy Park, WA; Seattle, WA; Tukwila, WA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Northwest Swimming",
+            "targetId": "usa-lsc-pn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Laurae Briggs",
+            "email": "office@smac.email",
+            "phone": "12064865486"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Ken Spencer",
+            "email": "coachken@smac.email",
+            "phone": "10000000000"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Laurae Briggs",
+            "email": "office@smac.email",
+            "phone": "11206486548"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pns.org/page/links",
+            "title": "Pacific Northwest Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.teamunify.com/team/pnscaat/page/home",
+            "title": "Seattle Metropolitan Aquatic Club Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/pnscaat/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pn-shad",
+      "after": {
+        "kind": "team",
+        "title": "Shadow Seals",
+        "officialName": "Shadow Seals",
+        "abbreviation": "SHAD",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pn",
+        "lscId": "usa-lsc-pn",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.shadowsealsswimming.org/",
+        "sourceUrl": "https://www.pns.org/page/links",
+        "summary": "Shadow Seals is a swim team/program listed by Pacific Northwest Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Renton, WA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Northwest Swimming",
+            "targetId": "usa-lsc-pn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Kiko Van Zandt",
+            "email": "cvanzan@comcast.net",
+            "phone": "12065242417"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pns.org/page/links",
+            "title": "Pacific Northwest Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.shadowsealsswimming.org/",
+            "title": "Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://shadowsealsswimming.org/"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pn-svyt",
+      "after": {
+        "kind": "team",
+        "title": "Skagit Valley YMCA Tritons",
+        "officialName": "Skagit Valley YMCA Tritons",
+        "abbreviation": "SVYT",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pn",
+        "lscId": "usa-lsc-pn",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/team/recpssvy/page/home",
+        "sourceUrl": "https://www.pns.org/page/links",
+        "summary": "Skagit Valley YMCA Tritons is a swim team/program listed by Pacific Northwest Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Mount Vernon, WA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Northwest Swimming",
+            "targetId": "usa-lsc-pn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Joseph Shelly",
+            "email": "aquatics@skagitymca.org",
+            "phone": "13603369622"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pns.org/page/links",
+            "title": "Pacific Northwest Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.teamunify.com/team/recpssvy/page/home",
+            "title": "Skagit Valley YMCA Aquatics Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/recpssvy/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pn-sscd",
+      "after": {
+        "kind": "team",
+        "title": "South Snohomish County Dolphins",
+        "officialName": "South Snohomish County Dolphins",
+        "abbreviation": "SSCD",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pn",
+        "lscId": "usa-lsc-pn",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.teamunify.com/Home.jsp?team=sscd",
+        "sourceUrl": "https://www.pns.org/page/links",
+        "summary": "South Snohomish County Dolphins is a swim team/program listed by Pacific Northwest Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Everett, WA; Mukilteo, WA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Northwest Swimming",
+            "targetId": "usa-lsc-pn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Lisa Pace",
+            "email": "swimsscd@gmail.com",
+            "phone": "12067997034"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pns.org/page/links",
+            "title": "Pacific Northwest Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pn-srst",
+      "after": {
+        "kind": "team",
+        "title": "StingRay Swim Team",
+        "officialName": "StingRay Swim Team",
+        "abbreviation": "SRST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pn",
+        "lscId": "usa-lsc-pn",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.stingrayswimclub.com/",
+        "sourceUrl": "https://www.pns.org/page/links",
+        "summary": "StingRay Swim Team is a swim team/program listed by Pacific Northwest Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Club-specific coverage not established; listed within Pacific Northwest Swimming.",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Northwest Swimming",
+            "targetId": "usa-lsc-pn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [],
+        "sources": [
+          {
+            "url": "https://www.pns.org/page/links",
+            "title": "Pacific Northwest Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "http://www.stingrayswimclub.com/",
+            "title": "Stingray Swim Team Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.stingrayswimclub.com/page/home"
+          }
+        ],
+        "gaps": [
+          "Similar names in different LSCs prevent a unique national-map match; only the LSC directory is used.",
+          "Club-specific service area / location not established from available sources.",
+          "No public organizational contact established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pn-sa",
+      "after": {
+        "kind": "team",
+        "title": "Storm Aquatics",
+        "officialName": "Storm Aquatics",
+        "abbreviation": "SA",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pn",
+        "lscId": "usa-lsc-pn",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/pnsast/page/home",
+        "sourceUrl": "https://www.pns.org/page/links",
+        "summary": "Storm Aquatics is a swim team/program listed by Pacific Northwest Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Lake Stevens, WA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Northwest Swimming",
+            "targetId": "usa-lsc-pn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Samantha Werner",
+            "email": "president@stormaquatics.net",
+            "phone": "14252392964"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pns.org/page/links",
+            "title": "Pacific Northwest Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/pnsast/page/home",
+            "title": "Storm Aquatics Swim Team Home",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pn-tac",
+      "after": {
+        "kind": "team",
+        "title": "Thunderbird Aquatic Club",
+        "officialName": "Thunderbird Aquatic Club",
+        "abbreviation": "TAC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pn",
+        "lscId": "usa-lsc-pn",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/Home.jsp?_tabid_=0&team=pntac",
+        "sourceUrl": "https://www.pns.org/page/links",
+        "summary": "Thunderbird Aquatic Club is a swim team/program listed by Pacific Northwest Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Anacortes, WA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Northwest Swimming",
+            "targetId": "usa-lsc-pn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "George Minkel",
+            "email": "gminkel@fidalgopool.com",
+            "phone": "13602930673"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pns.org/page/links",
+            "title": "Pacific Northwest Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.teamunify.com/Home.jsp?_tabid_=0&team=pntac",
+            "title": "Thunderbird Aquatic Club Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/pntac/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pn-tosc",
+      "after": {
+        "kind": "team",
+        "title": "Thurston Olympians Swim Club",
+        "officialName": "Thurston Olympians Swim Club",
+        "abbreviation": "TOSC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pn",
+        "lscId": "usa-lsc-pn",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.thurstonolympians.org/",
+        "sourceUrl": "https://www.pns.org/page/links",
+        "summary": "Thurston Olympians Swim Club is a swim team/program listed by Pacific Northwest Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Lacey, WA; Olympia, WA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Northwest Swimming",
+            "targetId": "usa-lsc-pn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Chelsea Petersdorf",
+            "email": "headcoachtosc@gmail.com",
+            "phone": "15038400360"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pns.org/page/links",
+            "title": "Pacific Northwest Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.thurstonolympians.org/",
+            "title": "TOSC Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/pntosc/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pn-upac",
+      "after": {
+        "kind": "team",
+        "title": "University Place Aquatic Club",
+        "officialName": "University Place Aquatic Club",
+        "abbreviation": "UPAC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pn",
+        "lscId": "usa-lsc-pn",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.upacsharks.org/",
+        "sourceUrl": "https://www.pns.org/page/links",
+        "summary": "University Place Aquatic Club is a swim team/program listed by Pacific Northwest Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "University Place, WA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Northwest Swimming",
+            "targetId": "usa-lsc-pn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Aaron Hughes",
+            "email": "membership@swimupac.org",
+            "phone": "12535665725"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pns.org/page/links",
+            "title": "Pacific Northwest Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.upacsharks.org/",
+            "title": "University Place Aquatic Club Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/pnupac/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pn-vast",
+      "after": {
+        "kind": "team",
+        "title": "Valley Aquatics",
+        "officialName": "Valley Aquatics",
+        "abbreviation": "VAST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pn",
+        "lscId": "usa-lsc-pn",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.swimvast.org/",
+        "sourceUrl": "https://www.pns.org/page/links",
+        "summary": "Valley Aquatics is a swim team/program listed by Pacific Northwest Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Federal Way, WA; Sumner, WA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Northwest Swimming",
+            "targetId": "usa-lsc-pn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Derek Frenzel",
+            "email": "coachderek@swimvast.org",
+            "phone": "12083103317"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pns.org/page/links",
+            "title": "Pacific Northwest Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.swimvast.org/",
+            "title": "Valley Aquatics Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/pnsvast/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pn-seal",
+      "after": {
+        "kind": "team",
+        "title": "Vashon Seals Swim Team",
+        "officialName": "Vashon Seals Swim Team",
+        "abbreviation": "SEAL",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pn",
+        "lscId": "usa-lsc-pn",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/team/wavs/page/home",
+        "sourceUrl": "https://www.pns.org/page/links",
+        "summary": "Vashon Seals Swim Team is a swim team/program listed by Pacific Northwest Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Vashon, WA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Northwest Swimming",
+            "targetId": "usa-lsc-pn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Randol Turner",
+            "email": "randy@vashonseals.org",
+            "phone": "12063042676"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pns.org/page/links",
+            "title": "Pacific Northwest Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.teamunify.com/team/wavs/page/home",
+            "title": "Vashon Seals Swim Team Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/wavs/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pn-vsst",
+      "after": {
+        "kind": "team",
+        "title": "Vashon Stingrays Swim Team",
+        "officialName": "Vashon Stingrays Swim Team",
+        "abbreviation": "VSST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pn",
+        "lscId": "usa-lsc-pn",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.vashonathleticclub.com/",
+        "sourceUrl": "https://www.pns.org/page/links",
+        "summary": "Vashon Stingrays Swim Team is a swim team/program listed by Pacific Northwest Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Vashon, WA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Northwest Swimming",
+            "targetId": "usa-lsc-pn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Dayna Jessen-Rogers",
+            "email": "soundwavescuba@gmail.com",
+            "phone": "12063841859"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pns.org/page/links",
+            "title": "Pacific Northwest Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.vashonathleticclub.com/",
+            "title": "Vashon Athletic Club | Vashon's Premier Gym for Personal Training, Swimming, & Fitness",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pn-wave",
+      "after": {
+        "kind": "team",
+        "title": "Wave Aquatics",
+        "officialName": "Wave Aquatics",
+        "abbreviation": "WAVE",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pn",
+        "lscId": "usa-lsc-pn",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.waveaquatics.org/",
+        "sourceUrl": "https://www.pns.org/page/links",
+        "summary": "Wave Aquatics is a swim team/program listed by Pacific Northwest Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Kirkland, WA; Redmond, WA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Northwest Swimming",
+            "targetId": "usa-lsc-pn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Erin Dunn",
+            "email": "erindunn@waveaquatics.org",
+            "phone": "12068834434"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pns.org/page/links",
+            "title": "Pacific Northwest Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.waveaquatics.org/",
+            "title": "Home | Wave Aquatics",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.waveaquatics.org/"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pn-west",
+      "after": {
+        "kind": "team",
+        "title": "West Coast Aquatics",
+        "officialName": "West Coast Aquatics",
+        "abbreviation": "WEST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pn",
+        "lscId": "usa-lsc-pn",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.westswimteam.com/",
+        "sourceUrl": "https://www.pns.org/page/links",
+        "summary": "West Coast Aquatics is a swim team/program listed by Pacific Northwest Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Mill Creek, WA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Northwest Swimming",
+            "targetId": "usa-lsc-pn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Nick Chevalier",
+            "email": "office@westswimteam.com",
+            "phone": "14253798806"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pns.org/page/links",
+            "title": "Pacific Northwest Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.westswimteam.com/",
+            "title": "WEST Coast Aquatics",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pn-yscb",
+      "after": {
+        "kind": "team",
+        "title": "YMCA of Snohomish County Barracudas",
+        "officialName": "YMCA of Snohomish County Barracudas",
+        "abbreviation": "YSCB",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pn",
+        "lscId": "usa-lsc-pn",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/ymca-6835/page/home",
+        "sourceUrl": "https://www.pns.org/page/links",
+        "summary": "YMCA of Snohomish County Barracudas is a swim team/program listed by Pacific Northwest Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Everett, WA; Marysville, WA; Monroe, WA; Mukilteo, WA; Stanwood, WA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Northwest Swimming",
+            "targetId": "usa-lsc-pn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Tom Wunderlich",
+            "email": "twunderlich@ymca-snoco.org",
+            "phone": "14254186016"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pns.org/page/links",
+            "title": "Pacific Northwest Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/ymca-6835/page/home",
+            "title": "Home | YSCB Barracudas",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    }
+  ]
+}

@@ -15,7 +15,7 @@ const divisions: Record<string, string> = {
 };
 function safeUrl(value: string) {
   try {
-    return new URL(value).protocol === "https:" ? value : undefined;
+    return ["https:", "http:"].includes(new URL(value).protocol) ? value : undefined;
   } catch {
     return undefined;
   }
@@ -28,6 +28,36 @@ function RaceDetails({ value, profiles }: { value: Json; profiles: Record<string
     </dl>
     <p className="text-sm">{race.meet}{race.date ? ` · ${race.date}` : ""}</p>
   </>;
+}
+function KnowledgeDetails({ value }: { value: Json }) {
+  const entry = object(value);
+  const text = (key: string) => typeof entry[key] === "string" ? entry[key] as string : "";
+  const relationships = Array.isArray(entry.relationships) ? entry.relationships : [];
+  const contacts = Array.isArray(entry.contacts) ? entry.contacts : [];
+  const sources = Array.isArray(entry.sources) ? entry.sources : [];
+  const gaps = Array.isArray(entry.gaps) ? entry.gaps : [];
+  const website = safeUrl(text("website"));
+  return <div className="space-y-3 break-words">
+    <p className="text-sm">{text("organizationType") || text("kind")}{text("abbreviation") ? ` · ${text("abbreviation")}` : ""}</p>
+    {website && <a className="underline break-all" href={website} target="_blank" rel="noopener noreferrer">{website}</a>}
+    {text("summary") && <p>{text("summary")}</p>}
+    {text("geographicCoverage") && <p><strong>Geographic coverage:</strong> {text("geographicCoverage")}</p>}
+    {text("coverageNote") && <p><strong>Collection coverage:</strong> {text("coverageNote")}</p>}
+    {relationships.length > 0 && <div><h4 className="font-semibold">Relationships</h4><ul className="list-disc pl-5">{relationships.map((value, index) => {
+      const relation = object(value);
+      return <li key={index}>{String(relation.label ?? relation.type ?? "Related organization")}: {String(relation.name ?? relation.targetId ?? "Unresolved")}{typeof relation.note === "string" ? ` — ${relation.note}` : ""}</li>;
+    })}</ul></div>}
+    {contacts.length > 0 && <div><h4 className="font-semibold">Public organizational contacts</h4><ul className="list-disc pl-5">{contacts.map((value, index) => {
+      const contact = object(value);
+      return <li key={index}>{[contact.role, contact.name, contact.email, contact.phone, contact.address].filter(item => typeof item === "string" && item).join(" · ")}{typeof contact.url === "string" && safeUrl(contact.url) && <> · <a className="underline" href={safeUrl(contact.url)} target="_blank" rel="noopener noreferrer">Contact page</a></>}</li>;
+    })}</ul></div>}
+    {gaps.length > 0 && <div className="rounded border border-amber-500 p-3"><h4 className="font-semibold">Gaps and source conflicts</h4><ul className="list-disc pl-5">{gaps.map((gap, index) => <li key={index}>{typeof gap === "string" ? gap : "See source evidence"}</li>)}</ul></div>}
+    {sources.length > 0 && <div><h4 className="font-semibold">Sources checked</h4><ul className="list-disc pl-5">{sources.map((value, index) => {
+      const source = object(value);
+      const url = typeof source.url === "string" ? safeUrl(source.url) : undefined;
+      return <li key={index}>{url ? <a className="underline" href={url} target="_blank" rel="noopener noreferrer">{String(source.title ?? source.url)}</a> : String(source.title ?? "Source")}{typeof source.checkedAt === "string" ? ` · ${source.checkedAt.slice(0, 10)}` : ""}{typeof source.note === "string" ? ` — ${source.note}` : ""}</li>;
+    })}</ul></div>}
+  </div>;
 }
 function Records({ writes, reads }: { writes: Json; reads: Json }) {
   const changes = writes as ReviewWrite[];
@@ -53,18 +83,20 @@ function Records({ writes, reads }: { writes: Json; reads: Json }) {
     {changes.map(change => {
       const previous = before.find(item => item.path === change.path)?.before ?? null;
       const swim = change.path.startsWith("swims/");
+      const knowledge = change.path.startsWith("knowledge_entries/");
       const action = change.after === null ? "Remove" : previous === null ? "Add" : "Update";
-      const name = change.path.startsWith("athletes/") ? athleteName(change.after ?? previous) : object(change.after ?? previous).name;
+      const name = change.path.startsWith("athletes/") ? athleteName(change.after ?? previous) : knowledge ? object(change.after ?? previous).title : object(change.after ?? previous).name;
       return <section key={change.path} className="rounded border p-4 space-y-3" aria-label={`${action} ${swim ? "swim" : change.path}`}>
         <h3 className="font-semibold">{action} {swim ? "swim" : typeof name === "string" && name ? name : change.path}</h3>
         {swim && <RaceDetails value={change.after ?? previous} profiles={change.after === null ? previousProfiles : proposedProfiles} />}
+        {knowledge && <KnowledgeDetails value={change.after ?? previous} />}
         <details>
           <summary className="cursor-pointer text-sm">Compare changes and raw fields</summary>
           <p className="text-sm break-all">{change.path}</p>
           <div className="mt-3 grid gap-4 md:grid-cols-2">
             {[{ label: "Current at collection", value: previous, profiles: previousProfiles }, { label: "Proposed", value: change.after, profiles: proposedProfiles }].map(side => <div key={side.label}>
               <h4>{side.label}</h4>
-              {side.value === null ? <p>{side.label === "Proposed" ? "Record will be removed." : "New record."}</p> : swim ? <RaceDetails value={side.value} profiles={side.profiles} /> : null}
+              {side.value === null ? <p>{side.label === "Proposed" ? "Record will be removed." : "New record."}</p> : swim ? <RaceDetails value={side.value} profiles={side.profiles} /> : knowledge ? <KnowledgeDetails value={side.value} /> : null}
               <pre className="max-h-80 overflow-auto whitespace-pre-wrap break-words text-xs">{JSON.stringify(side.value, null, 2)}</pre>
             </div>)}
           </div>

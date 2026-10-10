@@ -1,0 +1,1290 @@
+{
+  "division": "knowledge",
+  "scope": "USA Swimming — Southern Zone: all 15 LSCs. Complete zone LSC enumeration; partial regional, club and detailed contact collection.",
+  "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+  "capturedAt": "2026-10-10T07:35:00Z",
+  "coverage": "partial",
+  "evidence": {
+    "checkedAt": "2026-10-10",
+    "inventoryCoverage": "complete for named zone, against 2026 rulebook Article 605.1",
+    "expectedLSCs": 15,
+    "newLSCs": 15,
+    "retainedLSCs": [],
+    "duplicateCheck": "Compared published knowledge_entries by stable ID, LSC code, title and official website; checked pending/held queue. No duplicate LSC additions.",
+    "fieldCoverage": "Every new LSC includes name, code, type, website, geographic coverage, factual description, national and zone relationships, public contact, and checked source links.",
+    "limitations": "No exhaustive collection of regional arrangements, clubs, all officers, or full legal entity names. Gaps and source conflicts are visible per record.",
+    "reviewInstruction": "Stage only. Do not approve or publish."
+  },
+  "writes": [
+    {
+      "path": "knowledge_entries/usa-lsc-bd",
+      "after": {
+        "kind": "lsc",
+        "title": "Border Swimming",
+        "officialName": "Border Swimming",
+        "abbreviation": "BD",
+        "abbreviationType": "USA Swimming registration code",
+        "organizationType": "Local Swimming Committee",
+        "parentId": "usa-swimming-national-structure",
+        "zoneId": "usa-zone-southern",
+        "website": "https://www.gomotionapp.com/team/szguslsc/page/home",
+        "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+        "summary": "Border Swimming is a USA Swimming Local Swimming Committee in the Southern Zone. Its jurisdiction covers Eight Texas counties: El Paso, Hudspeth, Culberson, Jeff Davis, Presidio, Brewster, Terrell and Crockett.",
+        "geographicCoverage": "Eight Texas counties: El Paso, Hudspeth, Culberson, Jeff Davis, Presidio, Brewster, Terrell and Crockett.",
+        "coverageNote": "Directory identity, registration code, administrative zone, website, geographic coverage and public registration contact collected. Regional/sectional arrangements and member clubs are not exhaustively collected.",
+        "relationships": [
+          {
+            "type": "governed_by",
+            "label": "National governing organization",
+            "targetId": "usa-swimming-national-structure",
+            "name": "USA Swimming"
+          },
+          {
+            "type": "member_of_zone",
+            "label": "Administrative zone",
+            "targetId": "usa-zone-southern",
+            "name": "Southern Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Registration contact (USA Swimming directory)",
+            "name": "Melissa Untereker",
+            "email": "mbernfeld@gmail.com",
+            "phone": "773-454-2569",
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "title": "USA Swimming 2026 Rules & Regulations",
+            "checkedAt": "2026-10-10",
+            "note": "Articles 603.2 (territories and registration codes), 605.1 (zone membership), and 606 (regional competition). Original PDF checked for missing extraction text."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-websites",
+            "title": "USA Swimming LSC & Zone directory",
+            "checkedAt": "2026-10-10",
+            "note": "Directory name and official website link; legacy URLs may redirect."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs",
+            "title": "USA Swimming LSC Registration Chairs",
+            "checkedAt": "2026-10-10",
+            "note": "Public registration-role contact; this is not an assertion that the person is the General Chair."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/szlsc/page/home",
+            "title": "Southern Zone LSC directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/szguslsc/page/home",
+            "title": "Border Swimming official website",
+            "checkedAt": "2026-10-10",
+            "note": "Official website identity and public organization content checked."
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-lsc-fl",
+      "after": {
+        "kind": "lsc",
+        "title": "Florida Swimming",
+        "officialName": "Florida Swimming",
+        "abbreviation": "FL",
+        "abbreviationType": "USA Swimming registration code",
+        "organizationType": "Local Swimming Committee",
+        "parentId": "usa-swimming-national-structure",
+        "zoneId": "usa-zone-southern",
+        "website": "https://www.floridaswimming.org/page/home",
+        "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+        "summary": "Florida Swimming is a USA Swimming Local Swimming Committee in the Southern Zone. Its jurisdiction covers Florida east of the Apalachicola River, including Gulf County, except Palm Beach, Broward, Miami-Dade, Monroe and the part of Hendry County east of Route 833.",
+        "geographicCoverage": "Florida east of the Apalachicola River, including Gulf County, except Palm Beach, Broward, Miami-Dade, Monroe and the part of Hendry County east of Route 833.",
+        "coverageNote": "Directory identity, registration code, administrative zone, website, geographic coverage and public registration contact collected. Regional/sectional arrangements and member clubs are not exhaustively collected.",
+        "relationships": [
+          {
+            "type": "governed_by",
+            "label": "National governing organization",
+            "targetId": "usa-swimming-national-structure",
+            "name": "USA Swimming"
+          },
+          {
+            "type": "member_of_zone",
+            "label": "Administrative zone",
+            "targetId": "usa-zone-southern",
+            "name": "Southern Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Registration contact (USA Swimming directory)",
+            "name": "Vanessa Brewer",
+            "email": "vanessa.brewer@floridaswimming.org",
+            "phone": "352-242-5145",
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "title": "USA Swimming 2026 Rules & Regulations",
+            "checkedAt": "2026-10-10",
+            "note": "Articles 603.2 (territories and registration codes), 605.1 (zone membership), and 606 (regional competition). Original PDF checked for missing extraction text."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-websites",
+            "title": "USA Swimming LSC & Zone directory",
+            "checkedAt": "2026-10-10",
+            "note": "Directory name and official website link; legacy URLs may redirect."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs",
+            "title": "USA Swimming LSC Registration Chairs",
+            "checkedAt": "2026-10-10",
+            "note": "Public registration-role contact; this is not an assertion that the person is the General Chair."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/szlsc/page/home",
+            "title": "Southern Zone LSC directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.floridaswimming.org/page/home",
+            "title": "Florida Swimming official website",
+            "checkedAt": "2026-10-10",
+            "note": "Official website identity and public organization content checked."
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-lsc-fg",
+      "after": {
+        "kind": "lsc",
+        "title": "Florida Gold Coast Swimming",
+        "officialName": "Florida Gold Coast Swimming",
+        "abbreviation": "FG",
+        "abbreviationType": "USA Swimming registration code",
+        "organizationType": "Local Swimming Committee",
+        "parentId": "usa-swimming-national-structure",
+        "zoneId": "usa-zone-southern",
+        "website": "https://www.fgcswim.org/page/home",
+        "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+        "summary": "Florida Gold Coast Swimming is a USA Swimming Local Swimming Committee in the Southern Zone. Its jurisdiction covers Palm Beach, Broward, Miami-Dade and Monroe counties, Florida, plus the part of Hendry County east of Route 833.",
+        "geographicCoverage": "Palm Beach, Broward, Miami-Dade and Monroe counties, Florida, plus the part of Hendry County east of Route 833.",
+        "coverageNote": "Directory identity, registration code, administrative zone, website, geographic coverage and public registration contact collected. Regional/sectional arrangements and member clubs are not exhaustively collected.",
+        "relationships": [
+          {
+            "type": "governed_by",
+            "label": "National governing organization",
+            "targetId": "usa-swimming-national-structure",
+            "name": "USA Swimming"
+          },
+          {
+            "type": "member_of_zone",
+            "label": "Administrative zone",
+            "targetId": "usa-zone-southern",
+            "name": "Southern Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Registration contact (USA Swimming directory)",
+            "name": "Richard Cavanah",
+            "email": "npbcoach4@aol.com",
+            "phone": "561-691-3426",
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "title": "USA Swimming 2026 Rules & Regulations",
+            "checkedAt": "2026-10-10",
+            "note": "Articles 603.2 (territories and registration codes), 605.1 (zone membership), and 606 (regional competition). Original PDF checked for missing extraction text."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-websites",
+            "title": "USA Swimming LSC & Zone directory",
+            "checkedAt": "2026-10-10",
+            "note": "Directory name and official website link; legacy URLs may redirect."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs",
+            "title": "USA Swimming LSC Registration Chairs",
+            "checkedAt": "2026-10-10",
+            "note": "Public registration-role contact; this is not an assertion that the person is the General Chair."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/szlsc/page/home",
+            "title": "Southern Zone LSC directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.fgcswim.org/page/home",
+            "title": "Florida Gold Coast Swimming official website",
+            "checkedAt": "2026-10-10",
+            "note": "Official website identity and public organization content checked."
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-lsc-ga",
+      "after": {
+        "kind": "lsc",
+        "title": "Georgia Swimming",
+        "officialName": "Georgia Swimming",
+        "abbreviation": "GA",
+        "abbreviationType": "USA Swimming registration code",
+        "organizationType": "Local Swimming Committee",
+        "parentId": "usa-swimming-national-structure",
+        "zoneId": "usa-zone-southern",
+        "website": "https://www.gaswim.org/page/home",
+        "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+        "summary": "Georgia Swimming is a USA Swimming Local Swimming Committee in the Southern Zone. Its jurisdiction covers Georgia and Chambers and Russell counties, Alabama.",
+        "geographicCoverage": "Georgia and Chambers and Russell counties, Alabama.",
+        "coverageNote": "Directory identity, registration code, administrative zone, website, geographic coverage and public registration contact collected. Regional/sectional arrangements and member clubs are not exhaustively collected.",
+        "relationships": [
+          {
+            "type": "governed_by",
+            "label": "National governing organization",
+            "targetId": "usa-swimming-national-structure",
+            "name": "USA Swimming"
+          },
+          {
+            "type": "member_of_zone",
+            "label": "Administrative zone",
+            "targetId": "usa-zone-southern",
+            "name": "Southern Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Registration contact (USA Swimming directory)",
+            "name": "Sammie Burchill",
+            "email": "Sammie@GASwim.org",
+            "phone": "470-485-5623",
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "title": "USA Swimming 2026 Rules & Regulations",
+            "checkedAt": "2026-10-10",
+            "note": "Articles 603.2 (territories and registration codes), 605.1 (zone membership), and 606 (regional competition). Original PDF checked for missing extraction text."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-websites",
+            "title": "USA Swimming LSC & Zone directory",
+            "checkedAt": "2026-10-10",
+            "note": "Directory name and official website link; legacy URLs may redirect."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs",
+            "title": "USA Swimming LSC Registration Chairs",
+            "checkedAt": "2026-10-10",
+            "note": "Public registration-role contact; this is not an assertion that the person is the General Chair."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/szlsc/page/home",
+            "title": "Southern Zone LSC directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.gaswim.org/page/home",
+            "title": "Georgia Swimming official website",
+            "checkedAt": "2026-10-10",
+            "note": "Official website identity and public organization content checked."
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-lsc-gu",
+      "after": {
+        "kind": "lsc",
+        "title": "Gulf Swimming",
+        "officialName": "Gulf Swimming",
+        "abbreviation": "GU",
+        "abbreviationType": "USA Swimming registration code",
+        "organizationType": "Local Swimming Committee",
+        "parentId": "usa-swimming-national-structure",
+        "zoneId": "usa-zone-southern",
+        "website": "https://www.gomotionapp.com/team/gslsc/page/home",
+        "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+        "summary": "Gulf Swimming is a USA Swimming Local Swimming Committee in the Southern Zone. Its jurisdiction covers Southeastern Texas within the county boundaries specified in Article 603.2, including the Houston area.",
+        "geographicCoverage": "Southeastern Texas within the county boundaries specified in Article 603.2, including the Houston area.",
+        "coverageNote": "Directory identity, registration code, administrative zone, website, geographic coverage and public registration contact collected. Regional/sectional arrangements and member clubs are not exhaustively collected.",
+        "relationships": [
+          {
+            "type": "governed_by",
+            "label": "National governing organization",
+            "targetId": "usa-swimming-national-structure",
+            "name": "USA Swimming"
+          },
+          {
+            "type": "member_of_zone",
+            "label": "Administrative zone",
+            "targetId": "usa-zone-southern",
+            "name": "Southern Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Registration contact (USA Swimming directory)",
+            "name": "Loren Fischbach",
+            "email": "loren.fischbach@gulfswimming.org",
+            "phone": "713-300-5168",
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "title": "USA Swimming 2026 Rules & Regulations",
+            "checkedAt": "2026-10-10",
+            "note": "Articles 603.2 (territories and registration codes), 605.1 (zone membership), and 606 (regional competition). Original PDF checked for missing extraction text."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-websites",
+            "title": "USA Swimming LSC & Zone directory",
+            "checkedAt": "2026-10-10",
+            "note": "Directory name and official website link; legacy URLs may redirect."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs",
+            "title": "USA Swimming LSC Registration Chairs",
+            "checkedAt": "2026-10-10",
+            "note": "Public registration-role contact; this is not an assertion that the person is the General Chair."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/szlsc/page/home",
+            "title": "Southern Zone LSC directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/gslsc/page/home",
+            "title": "Gulf Swimming official website",
+            "checkedAt": "2026-10-10",
+            "note": "Official website identity and public organization content checked."
+          }
+        ],
+        "gaps": [
+          "Geographic coverage is summarized; consult Article 603.2 for exact county, road and shared-pool boundaries."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-lsc-ky",
+      "after": {
+        "kind": "lsc",
+        "title": "Kentucky Swimming",
+        "officialName": "Kentucky Swimming",
+        "abbreviation": "KY",
+        "abbreviationType": "USA Swimming registration code",
+        "organizationType": "Local Swimming Committee",
+        "parentId": "usa-swimming-national-structure",
+        "zoneId": "usa-zone-southern",
+        "website": "https://www.kylsc.org/page/home",
+        "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+        "summary": "Kentucky Swimming is a USA Swimming Local Swimming Committee in the Southern Zone. Its jurisdiction covers Kentucky except Campbell and Boone counties, plus Floyd and Clark counties, Indiana.",
+        "geographicCoverage": "Kentucky except Campbell and Boone counties, plus Floyd and Clark counties, Indiana.",
+        "coverageNote": "Directory identity, registration code, administrative zone, website, geographic coverage and public registration contact collected. Regional/sectional arrangements and member clubs are not exhaustively collected.",
+        "relationships": [
+          {
+            "type": "governed_by",
+            "label": "National governing organization",
+            "targetId": "usa-swimming-national-structure",
+            "name": "USA Swimming"
+          },
+          {
+            "type": "member_of_zone",
+            "label": "Administrative zone",
+            "targetId": "usa-zone-southern",
+            "name": "Southern Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Registration contact (USA Swimming directory)",
+            "name": "Maureen McDonald",
+            "email": "kyswim@kylsc.org",
+            "phone": "859-539-9091",
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "title": "USA Swimming 2026 Rules & Regulations",
+            "checkedAt": "2026-10-10",
+            "note": "Articles 603.2 (territories and registration codes), 605.1 (zone membership), and 606 (regional competition). Original PDF checked for missing extraction text."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-websites",
+            "title": "USA Swimming LSC & Zone directory",
+            "checkedAt": "2026-10-10",
+            "note": "Directory name and official website link; legacy URLs may redirect."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs",
+            "title": "USA Swimming LSC Registration Chairs",
+            "checkedAt": "2026-10-10",
+            "note": "Public registration-role contact; this is not an assertion that the person is the General Chair."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/szlsc/page/home",
+            "title": "Southern Zone LSC directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.kylsc.org/page/home",
+            "title": "Kentucky Swimming official website",
+            "checkedAt": "2026-10-10",
+            "note": "Official website identity and public organization content checked."
+          },
+          {
+            "url": "https://www.kylsc.org/szkyslsc/UserFiles/Image/QuickUpload/ky-bylaws-approved-hs-ah-rc-12-30-2020_061516.pdf",
+            "title": "Kentucky Swimming bylaws",
+            "checkedAt": "2026-10-10",
+            "note": "States corporate name Kentucky Swimming, Inc. and internal regional structure."
+          },
+          {
+            "url": "https://www.gomotionapp.com/szkyslsc/UserFiles/Image/QuickUpload/2024-hod-meeting-minutes-9-20-2024_078824.pdf",
+            "title": "Kentucky September 2024 HOD minutes",
+            "checkedAt": "2026-10-10",
+            "note": "County-transfer proposals subject to USA Swimming approval; current geography follows 2026 rulebook."
+          }
+        ],
+        "gaps": [
+          "The 2024 Kentucky HOD minutes proposed further Campbell and Boone county transfers subject to approval. The 2026 rulebook still assigns them to Ohio; no later approval was verified. Internal Kentucky regions are mentioned in its bylaws but have not been collected."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-lsc-la",
+      "after": {
+        "kind": "lsc",
+        "title": "Louisiana Swimming",
+        "officialName": "Louisiana Swimming",
+        "abbreviation": "LA",
+        "abbreviationType": "USA Swimming registration code",
+        "organizationType": "Local Swimming Committee",
+        "parentId": "usa-swimming-national-structure",
+        "zoneId": "usa-zone-southern",
+        "website": "https://www.louisianaswimming.org/page/home",
+        "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+        "summary": "Louisiana Swimming is a USA Swimming Local Swimming Committee in the Southern Zone. Its jurisdiction covers Louisiana.",
+        "geographicCoverage": "Louisiana.",
+        "coverageNote": "Directory identity, registration code, administrative zone, website, geographic coverage and public registration contact collected. Regional/sectional arrangements and member clubs are not exhaustively collected.",
+        "relationships": [
+          {
+            "type": "governed_by",
+            "label": "National governing organization",
+            "targetId": "usa-swimming-national-structure",
+            "name": "USA Swimming"
+          },
+          {
+            "type": "member_of_zone",
+            "label": "Administrative zone",
+            "targetId": "usa-zone-southern",
+            "name": "Southern Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Registration contact (USA Swimming directory)",
+            "name": "Judy Ramirez",
+            "email": "laswimming@att.net",
+            "phone": "504-606-5751",
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "title": "USA Swimming 2026 Rules & Regulations",
+            "checkedAt": "2026-10-10",
+            "note": "Articles 603.2 (territories and registration codes), 605.1 (zone membership), and 606 (regional competition). Original PDF checked for missing extraction text."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-websites",
+            "title": "USA Swimming LSC & Zone directory",
+            "checkedAt": "2026-10-10",
+            "note": "Directory name and official website link; legacy URLs may redirect."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs",
+            "title": "USA Swimming LSC Registration Chairs",
+            "checkedAt": "2026-10-10",
+            "note": "Public registration-role contact; this is not an assertion that the person is the General Chair."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/szlsc/page/home",
+            "title": "Southern Zone LSC directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.louisianaswimming.org/page/home",
+            "title": "Louisiana Swimming official website",
+            "checkedAt": "2026-10-10",
+            "note": "Official website identity and public organization content checked."
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-lsc-ms",
+      "after": {
+        "kind": "lsc",
+        "title": "Mississippi Swimming",
+        "officialName": "Mississippi Swimming",
+        "abbreviation": "MS",
+        "abbreviationType": "USA Swimming registration code",
+        "organizationType": "Local Swimming Committee",
+        "parentId": "usa-swimming-national-structure",
+        "zoneId": "usa-zone-southern",
+        "website": "https://www.gomotionapp.com/team/szmslsc/page/home",
+        "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+        "summary": "Mississippi Swimming is a USA Swimming Local Swimming Committee in the Southern Zone. Its jurisdiction covers Mississippi.",
+        "geographicCoverage": "Mississippi.",
+        "coverageNote": "Directory identity, registration code, administrative zone, website, geographic coverage and public registration contact collected. Regional/sectional arrangements and member clubs are not exhaustively collected.",
+        "relationships": [
+          {
+            "type": "governed_by",
+            "label": "National governing organization",
+            "targetId": "usa-swimming-national-structure",
+            "name": "USA Swimming"
+          },
+          {
+            "type": "member_of_zone",
+            "label": "Administrative zone",
+            "targetId": "usa-zone-southern",
+            "name": "Southern Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Registration contact (USA Swimming directory)",
+            "name": "Alison Goodman",
+            "email": "msi.registrar25@gmail.com",
+            "phone": "601-954-1916",
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "title": "USA Swimming 2026 Rules & Regulations",
+            "checkedAt": "2026-10-10",
+            "note": "Articles 603.2 (territories and registration codes), 605.1 (zone membership), and 606 (regional competition). Original PDF checked for missing extraction text."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-websites",
+            "title": "USA Swimming LSC & Zone directory",
+            "checkedAt": "2026-10-10",
+            "note": "Directory name and official website link; legacy URLs may redirect."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs",
+            "title": "USA Swimming LSC Registration Chairs",
+            "checkedAt": "2026-10-10",
+            "note": "Public registration-role contact; this is not an assertion that the person is the General Chair."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/szlsc/page/home",
+            "title": "Southern Zone LSC directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/szmslsc/page/home",
+            "title": "Mississippi Swimming official website",
+            "checkedAt": "2026-10-10",
+            "note": "Official website identity and public organization content checked."
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-lsc-nc",
+      "after": {
+        "kind": "lsc",
+        "title": "North Carolina Swimming",
+        "officialName": "North Carolina Swimming",
+        "abbreviation": "NC",
+        "abbreviationType": "USA Swimming registration code",
+        "organizationType": "Local Swimming Committee",
+        "parentId": "usa-swimming-national-structure",
+        "zoneId": "usa-zone-southern",
+        "website": "https://www.swimnc.com/",
+        "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+        "summary": "North Carolina Swimming is a USA Swimming Local Swimming Committee in the Southern Zone. Its jurisdiction covers North Carolina except Pasquotank, Camden and Currituck counties.",
+        "geographicCoverage": "North Carolina except Pasquotank, Camden and Currituck counties.",
+        "coverageNote": "Directory identity, registration code, administrative zone, website, geographic coverage and public registration contact collected. Regional/sectional arrangements and member clubs are not exhaustively collected.",
+        "relationships": [
+          {
+            "type": "governed_by",
+            "label": "National governing organization",
+            "targetId": "usa-swimming-national-structure",
+            "name": "USA Swimming"
+          },
+          {
+            "type": "member_of_zone",
+            "label": "Administrative zone",
+            "targetId": "usa-zone-southern",
+            "name": "Southern Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Registration contact (USA Swimming directory)",
+            "name": "Lisa Olack",
+            "email": "registration@ncswim.org",
+            "phone": "704-258-1335",
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "title": "USA Swimming 2026 Rules & Regulations",
+            "checkedAt": "2026-10-10",
+            "note": "Articles 603.2 (territories and registration codes), 605.1 (zone membership), and 606 (regional competition). Original PDF checked for missing extraction text."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-websites",
+            "title": "USA Swimming LSC & Zone directory",
+            "checkedAt": "2026-10-10",
+            "note": "Directory name and official website link; legacy URLs may redirect."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs",
+            "title": "USA Swimming LSC Registration Chairs",
+            "checkedAt": "2026-10-10",
+            "note": "Public registration-role contact; this is not an assertion that the person is the General Chair."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/szlsc/page/home",
+            "title": "Southern Zone LSC directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.swimnc.com/",
+            "title": "North Carolina Swimming official website",
+            "checkedAt": "2026-10-10",
+            "note": "Official website identity and public organization content checked."
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-lsc-nt",
+      "after": {
+        "kind": "lsc",
+        "title": "North Texas Swimming",
+        "officialName": "North Texas Swimming",
+        "abbreviation": "NT",
+        "abbreviationType": "USA Swimming registration code",
+        "organizationType": "Local Swimming Committee",
+        "parentId": "usa-swimming-national-structure",
+        "zoneId": "usa-zone-southern",
+        "website": "https://www.ntswim.org/",
+        "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+        "summary": "North Texas Swimming is a USA Swimming Local Swimming Committee in the Southern Zone. Its jurisdiction covers Northeastern Texas within the county boundaries specified in Article 603.2, excluding Bowie County.",
+        "geographicCoverage": "Northeastern Texas within the county boundaries specified in Article 603.2, excluding Bowie County.",
+        "coverageNote": "Directory identity, registration code, administrative zone, website, geographic coverage and public registration contact collected. Regional/sectional arrangements and member clubs are not exhaustively collected.",
+        "relationships": [
+          {
+            "type": "governed_by",
+            "label": "National governing organization",
+            "targetId": "usa-swimming-national-structure",
+            "name": "USA Swimming"
+          },
+          {
+            "type": "member_of_zone",
+            "label": "Administrative zone",
+            "targetId": "usa-zone-southern",
+            "name": "Southern Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Registration contact (USA Swimming directory)",
+            "name": "Jaime Lewis",
+            "email": "membership@ntswim.org",
+            "phone": "972-677-8420",
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "title": "USA Swimming 2026 Rules & Regulations",
+            "checkedAt": "2026-10-10",
+            "note": "Articles 603.2 (territories and registration codes), 605.1 (zone membership), and 606 (regional competition). Original PDF checked for missing extraction text."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-websites",
+            "title": "USA Swimming LSC & Zone directory",
+            "checkedAt": "2026-10-10",
+            "note": "Directory name and official website link; legacy URLs may redirect."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs",
+            "title": "USA Swimming LSC Registration Chairs",
+            "checkedAt": "2026-10-10",
+            "note": "Public registration-role contact; this is not an assertion that the person is the General Chair."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/szlsc/page/home",
+            "title": "Southern Zone LSC directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.ntswim.org/",
+            "title": "North Texas Swimming official website",
+            "checkedAt": "2026-10-10",
+            "note": "Official website identity and public organization content checked."
+          }
+        ],
+        "gaps": [
+          "Geographic coverage is summarized; consult Article 603.2 for exact county, road and shared-pool boundaries."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-lsc-sc",
+      "after": {
+        "kind": "lsc",
+        "title": "South Carolina Swimming",
+        "officialName": "South Carolina Swimming",
+        "abbreviation": "SC",
+        "abbreviationType": "USA Swimming registration code",
+        "organizationType": "Local Swimming Committee",
+        "parentId": "usa-swimming-national-structure",
+        "zoneId": "usa-zone-southern",
+        "website": "https://www.gomotionapp.com/team/szscslsc/page/home",
+        "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+        "summary": "South Carolina Swimming is a USA Swimming Local Swimming Committee in the Southern Zone. Its jurisdiction covers South Carolina.",
+        "geographicCoverage": "South Carolina.",
+        "coverageNote": "Directory identity, registration code, administrative zone, website, geographic coverage and public registration contact collected. Regional/sectional arrangements and member clubs are not exhaustively collected.",
+        "relationships": [
+          {
+            "type": "governed_by",
+            "label": "National governing organization",
+            "targetId": "usa-swimming-national-structure",
+            "name": "USA Swimming"
+          },
+          {
+            "type": "member_of_zone",
+            "label": "Administrative zone",
+            "targetId": "usa-zone-southern",
+            "name": "Southern Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Registration contact (USA Swimming directory)",
+            "name": "Aimee Onoszko",
+            "email": "office@sc-swimming.org",
+            "phone": "816-665-6080",
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "title": "USA Swimming 2026 Rules & Regulations",
+            "checkedAt": "2026-10-10",
+            "note": "Articles 603.2 (territories and registration codes), 605.1 (zone membership), and 606 (regional competition). Original PDF checked for missing extraction text."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-websites",
+            "title": "USA Swimming LSC & Zone directory",
+            "checkedAt": "2026-10-10",
+            "note": "Directory name and official website link; legacy URLs may redirect."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs",
+            "title": "USA Swimming LSC Registration Chairs",
+            "checkedAt": "2026-10-10",
+            "note": "Public registration-role contact; this is not an assertion that the person is the General Chair."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/szlsc/page/home",
+            "title": "Southern Zone LSC directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/szscslsc/page/home",
+            "title": "South Carolina Swimming official website",
+            "checkedAt": "2026-10-10",
+            "note": "Official website identity and public organization content checked."
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-lsc-st",
+      "after": {
+        "kind": "lsc",
+        "title": "South Texas Swimming",
+        "officialName": "South Texas Swimming",
+        "abbreviation": "ST",
+        "abbreviationType": "USA Swimming registration code",
+        "organizationType": "Local Swimming Committee",
+        "parentId": "usa-swimming-national-structure",
+        "zoneId": "usa-zone-southern",
+        "website": "https://www.stswim.org/page/home",
+        "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+        "summary": "South Texas Swimming is a USA Swimming Local Swimming Committee in the Southern Zone. Its jurisdiction covers South and central Texas within the county boundaries specified in Article 603.2, bounded on the west by Val Verde, Sutton and Schleicher counties.",
+        "geographicCoverage": "South and central Texas within the county boundaries specified in Article 603.2, bounded on the west by Val Verde, Sutton and Schleicher counties.",
+        "coverageNote": "Directory identity, registration code, administrative zone, website, geographic coverage and public registration contact collected. Regional/sectional arrangements and member clubs are not exhaustively collected.",
+        "relationships": [
+          {
+            "type": "governed_by",
+            "label": "National governing organization",
+            "targetId": "usa-swimming-national-structure",
+            "name": "USA Swimming"
+          },
+          {
+            "type": "member_of_zone",
+            "label": "Administrative zone",
+            "targetId": "usa-zone-southern",
+            "name": "Southern Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Registration contact (USA Swimming directory)",
+            "name": "Jessica Evans",
+            "email": "registration@stswim.org",
+            "phone": "210-479-0881",
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "title": "USA Swimming 2026 Rules & Regulations",
+            "checkedAt": "2026-10-10",
+            "note": "Articles 603.2 (territories and registration codes), 605.1 (zone membership), and 606 (regional competition). Original PDF checked for missing extraction text."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-websites",
+            "title": "USA Swimming LSC & Zone directory",
+            "checkedAt": "2026-10-10",
+            "note": "Directory name and official website link; legacy URLs may redirect."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs",
+            "title": "USA Swimming LSC Registration Chairs",
+            "checkedAt": "2026-10-10",
+            "note": "Public registration-role contact; this is not an assertion that the person is the General Chair."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/szlsc/page/home",
+            "title": "Southern Zone LSC directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.stswim.org/page/home",
+            "title": "South Texas Swimming official website",
+            "checkedAt": "2026-10-10",
+            "note": "Official website identity and public organization content checked."
+          }
+        ],
+        "gaps": [
+          "Geographic coverage is summarized; consult Article 603.2 for exact county, road and shared-pool boundaries."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-lsc-se",
+      "after": {
+        "kind": "lsc",
+        "title": "Southeastern Swimming",
+        "officialName": "Southeastern Swimming",
+        "abbreviation": "SE",
+        "abbreviationType": "USA Swimming registration code",
+        "organizationType": "Local Swimming Committee",
+        "parentId": "usa-swimming-national-structure",
+        "zoneId": "usa-zone-southern",
+        "website": "https://www.gomotionapp.com/team/szsslsc/page/home",
+        "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+        "summary": "Southeastern Swimming is a USA Swimming Local Swimming Committee in the Southern Zone. Its jurisdiction covers Tennessee; Alabama except Chambers and Russell counties; and Florida west of the Apalachicola River, excluding Gulf County.",
+        "geographicCoverage": "Tennessee; Alabama except Chambers and Russell counties; and Florida west of the Apalachicola River, excluding Gulf County.",
+        "coverageNote": "Directory identity, registration code, administrative zone, website, geographic coverage and public registration contact collected. Regional/sectional arrangements and member clubs are not exhaustively collected.",
+        "relationships": [
+          {
+            "type": "governed_by",
+            "label": "National governing organization",
+            "targetId": "usa-swimming-national-structure",
+            "name": "USA Swimming"
+          },
+          {
+            "type": "member_of_zone",
+            "label": "Administrative zone",
+            "targetId": "usa-zone-southern",
+            "name": "Southern Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Registration contact (USA Swimming directory)",
+            "name": "Brian Haddad",
+            "email": "southeasternswimming@hotmail.com",
+            "phone": "334-750-7485",
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "title": "USA Swimming 2026 Rules & Regulations",
+            "checkedAt": "2026-10-10",
+            "note": "Articles 603.2 (territories and registration codes), 605.1 (zone membership), and 606 (regional competition). Original PDF checked for missing extraction text."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-websites",
+            "title": "USA Swimming LSC & Zone directory",
+            "checkedAt": "2026-10-10",
+            "note": "Directory name and official website link; legacy URLs may redirect."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs",
+            "title": "USA Swimming LSC Registration Chairs",
+            "checkedAt": "2026-10-10",
+            "note": "Public registration-role contact; this is not an assertion that the person is the General Chair."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/szlsc/page/home",
+            "title": "Southern Zone LSC directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/szsslsc/page/home",
+            "title": "Southeastern Swimming official website",
+            "checkedAt": "2026-10-10",
+            "note": "Official website identity and public organization content checked."
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-lsc-wt",
+      "after": {
+        "kind": "lsc",
+        "title": "West Texas Swimming",
+        "officialName": "West Texas Swimming",
+        "abbreviation": "WT",
+        "abbreviationType": "USA Swimming registration code",
+        "organizationType": "Local Swimming Committee",
+        "parentId": "usa-swimming-national-structure",
+        "zoneId": "usa-zone-southern",
+        "website": "https://www.gomotionapp.com/team/wts/page/home",
+        "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+        "summary": "West Texas Swimming is a USA Swimming Local Swimming Committee in the Southern Zone. Its jurisdiction covers West and northwestern Texas within the county boundaries specified in Article 603.2; separate from Border, North Texas, South Texas and Gulf Swimming territories.",
+        "geographicCoverage": "West and northwestern Texas within the county boundaries specified in Article 603.2; separate from Border, North Texas, South Texas and Gulf Swimming territories.",
+        "coverageNote": "Directory identity, registration code, administrative zone, website, geographic coverage and public registration contact collected. Regional/sectional arrangements and member clubs are not exhaustively collected.",
+        "relationships": [
+          {
+            "type": "governed_by",
+            "label": "National governing organization",
+            "targetId": "usa-swimming-national-structure",
+            "name": "USA Swimming"
+          },
+          {
+            "type": "member_of_zone",
+            "label": "Administrative zone",
+            "targetId": "usa-zone-southern",
+            "name": "Southern Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Registration contact (USA Swimming directory)",
+            "name": "April Hayes",
+            "email": "wtxswimregistrar@gmail.com",
+            "phone": "806-219-0830",
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "title": "USA Swimming 2026 Rules & Regulations",
+            "checkedAt": "2026-10-10",
+            "note": "Articles 603.2 (territories and registration codes), 605.1 (zone membership), and 606 (regional competition). Original PDF checked for missing extraction text."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-websites",
+            "title": "USA Swimming LSC & Zone directory",
+            "checkedAt": "2026-10-10",
+            "note": "Directory name and official website link; legacy URLs may redirect."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs",
+            "title": "USA Swimming LSC Registration Chairs",
+            "checkedAt": "2026-10-10",
+            "note": "Public registration-role contact; this is not an assertion that the person is the General Chair."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/szlsc/page/home",
+            "title": "Southern Zone LSC directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/wts/page/home",
+            "title": "West Texas Swimming official website",
+            "checkedAt": "2026-10-10",
+            "note": "Official website identity and public organization content checked."
+          }
+        ],
+        "gaps": [
+          "Geographic coverage is summarized; consult Article 603.2 for exact county, road and shared-pool boundaries."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-lsc-wv",
+      "after": {
+        "kind": "lsc",
+        "title": "West Virginia Swimming",
+        "officialName": "West Virginia Swimming",
+        "abbreviation": "WV",
+        "abbreviationType": "USA Swimming registration code",
+        "organizationType": "Local Swimming Committee",
+        "parentId": "usa-swimming-national-structure",
+        "zoneId": "usa-zone-southern",
+        "website": "https://www.gomotionapp.com/team/szwvslsc/page/home",
+        "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+        "summary": "West Virginia Swimming is a USA Swimming Local Swimming Committee in the Southern Zone. Its jurisdiction covers West Virginia except Hancock, Brook, Ohio and Marshall counties (the rulebook spells Brooke as 'Brook').",
+        "geographicCoverage": "West Virginia except Hancock, Brook, Ohio and Marshall counties (the rulebook spells Brooke as 'Brook').",
+        "coverageNote": "Directory identity, registration code, administrative zone, website, geographic coverage and public registration contact collected. Regional/sectional arrangements and member clubs are not exhaustively collected.",
+        "relationships": [
+          {
+            "type": "governed_by",
+            "label": "National governing organization",
+            "targetId": "usa-swimming-national-structure",
+            "name": "USA Swimming"
+          },
+          {
+            "type": "member_of_zone",
+            "label": "Administrative zone",
+            "targetId": "usa-zone-southern",
+            "name": "Southern Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Registration contact (USA Swimming directory)",
+            "name": "Constance Ann-Delyse Hopkins",
+            "email": "a_hopkins07@yahoo.com",
+            "phone": "423-723-4107",
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "title": "USA Swimming 2026 Rules & Regulations",
+            "checkedAt": "2026-10-10",
+            "note": "Articles 603.2 (territories and registration codes), 605.1 (zone membership), and 606 (regional competition). Original PDF checked for missing extraction text."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-websites",
+            "title": "USA Swimming LSC & Zone directory",
+            "checkedAt": "2026-10-10",
+            "note": "Directory name and official website link; legacy URLs may redirect."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-governance/lsc-structure/lsc-registration-chairs",
+            "title": "USA Swimming LSC Registration Chairs",
+            "checkedAt": "2026-10-10",
+            "note": "Public registration-role contact; this is not an assertion that the person is the General Chair."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/szlsc/page/home",
+            "title": "Southern Zone LSC directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/szwvslsc/page/home",
+            "title": "West Virginia Swimming official website",
+            "checkedAt": "2026-10-10",
+            "note": "Official website identity and public organization content checked."
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-zone-southern",
+      "after": {
+        "gaps": [
+          "Some terms shown on the zone board page ended September 2026; officer continuity has not been verified."
+        ],
+        "kind": "zone",
+        "title": "Southern Zone",
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "note": "Articles 603 (names, codes, boundaries), 605 (zones), 606 (regional competition).",
+            "title": "USA Swimming 2026 Rules & Regulations",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-websites",
+            "title": "USA Swimming LSC & Zone directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/szlsc/page/home",
+            "title": "Southern Zone official website",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/szlsc/page/home",
+            "title": "Southern Zone current directory",
+            "checkedAt": "2026-10-10",
+            "note": "Zone membership cross-check and zone abbreviation used in site navigation."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/szlsc/page/about/sz-bod",
+            "title": "Southern Zone contacts",
+            "checkedAt": "2026-10-10",
+            "note": "Contact page checked; individual officers not asserted where terms or current status need follow-up."
+          }
+        ],
+        "summary": "One of USA Swimming’s four administrative zones. It groups LSCs for zone administration and competition under Article 605.",
+        "website": "https://www.gomotionapp.com/team/szlsc/page/home",
+        "contacts": [
+          {
+            "role": "Official zone contact directory",
+            "url": "https://www.gomotionapp.com/team/szlsc/page/about/sz-bod"
+          }
+        ],
+        "parentId": "usa-swimming-national-structure",
+        "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+        "abbreviation": "SZ",
+        "coverageNote": "Complete inventory of 15 rulebook-listed LSCs in this zone. All 15 LSC records proposed. Region/section and club collection remains partial.",
+        "officialName": "Southern Zone",
+        "relationships": [
+          {
+            "name": "USA Swimming",
+            "type": "governed_by",
+            "label": "National governing organization",
+            "targetId": "usa-swimming-national-structure"
+          },
+          {
+            "type": "contains_lsc",
+            "label": "LSC in zone",
+            "targetId": "usa-lsc-bd",
+            "name": "Border Swimming"
+          },
+          {
+            "type": "contains_lsc",
+            "label": "LSC in zone",
+            "targetId": "usa-lsc-fl",
+            "name": "Florida Swimming"
+          },
+          {
+            "type": "contains_lsc",
+            "label": "LSC in zone",
+            "targetId": "usa-lsc-fg",
+            "name": "Florida Gold Coast Swimming"
+          },
+          {
+            "type": "contains_lsc",
+            "label": "LSC in zone",
+            "targetId": "usa-lsc-ga",
+            "name": "Georgia Swimming"
+          },
+          {
+            "type": "contains_lsc",
+            "label": "LSC in zone",
+            "targetId": "usa-lsc-gu",
+            "name": "Gulf Swimming"
+          },
+          {
+            "type": "contains_lsc",
+            "label": "LSC in zone",
+            "targetId": "usa-lsc-ky",
+            "name": "Kentucky Swimming"
+          },
+          {
+            "type": "contains_lsc",
+            "label": "LSC in zone",
+            "targetId": "usa-lsc-la",
+            "name": "Louisiana Swimming"
+          },
+          {
+            "type": "contains_lsc",
+            "label": "LSC in zone",
+            "targetId": "usa-lsc-ms",
+            "name": "Mississippi Swimming"
+          },
+          {
+            "type": "contains_lsc",
+            "label": "LSC in zone",
+            "targetId": "usa-lsc-nc",
+            "name": "North Carolina Swimming"
+          },
+          {
+            "type": "contains_lsc",
+            "label": "LSC in zone",
+            "targetId": "usa-lsc-nt",
+            "name": "North Texas Swimming"
+          },
+          {
+            "type": "contains_lsc",
+            "label": "LSC in zone",
+            "targetId": "usa-lsc-sc",
+            "name": "South Carolina Swimming"
+          },
+          {
+            "type": "contains_lsc",
+            "label": "LSC in zone",
+            "targetId": "usa-lsc-st",
+            "name": "South Texas Swimming"
+          },
+          {
+            "type": "contains_lsc",
+            "label": "LSC in zone",
+            "targetId": "usa-lsc-se",
+            "name": "Southeastern Swimming"
+          },
+          {
+            "type": "contains_lsc",
+            "label": "LSC in zone",
+            "targetId": "usa-lsc-wt",
+            "name": "West Texas Swimming"
+          },
+          {
+            "type": "contains_lsc",
+            "label": "LSC in zone",
+            "targetId": "usa-lsc-wv",
+            "name": "West Virginia Swimming"
+          }
+        ],
+        "organizationType": "USA Swimming administrative zone",
+        "geographicCoverage": "LSC jurisdictions of: Border, Florida, Florida Gold Coast, Georgia, Gulf, Kentucky, Louisiana, Mississippi, North Carolina, North Texas, South Carolina, South Texas, Southeastern, West Texas, West Virginia."
+      }
+    }
+  ]
+}

@@ -1,0 +1,1772 @@
+{
+  "division": "knowledge",
+  "scope": "Western Zone swim teams \u2014 Wyoming Swimming",
+  "sourceUrl": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory",
+  "capturedAt": "2026-10-10T08:09:39.228689+00:00",
+  "coverage": "partial",
+  "evidence": {
+    "checkedAt": "2026-10-10",
+    "lscCode": "WY",
+    "directoryRowsCollected": 23,
+    "batchRows": 23,
+    "enumeration": "All named rows in the retrieved official directory/roster sources; independent current registration is not guaranteed.",
+    "deduplication": "Compared against 84 published knowledge records and an empty pending queue; facilities combined by organization key; Inland Empire\u2019s 19 existing teams were retained without duplicates.",
+    "remaining": "Missing codes, unreachable websites, registration status, and conflicting sources are visible in each record. Sierra Nevada BBST remains name/code unresolved from official evidence."
+  },
+  "writes": [
+    {
+      "path": "knowledge_entries/usa-team-wy-bsc",
+      "after": {
+        "kind": "team",
+        "title": "Buffalo Swim Club",
+        "officialName": "Buffalo Swim Club",
+        "abbreviation": "BSC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-wy",
+        "lscId": "usa-lsc-wy",
+        "zoneId": "usa-zone-western",
+        "website": "https://buffaloswim.club/",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory",
+        "summary": "Buffalo Swim Club is a swim team/program listed by Wyoming Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Buffalo, WY",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Wyoming Swimming",
+            "targetId": "usa-lsc-wy"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "coca0902@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "daygripp@mac.com",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "jej13683@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "wybuffaloswimclub@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "307-630-2826",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Caleb Cohoon",
+            "email": "coca0902@gmail.com",
+            "phone": "13072148928"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory",
+            "title": "Wyoming Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-wy-cca",
+      "after": {
+        "kind": "team",
+        "title": "Capital City Athletics",
+        "officialName": "Capital City Athletics",
+        "abbreviation": "CCA",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-wy",
+        "lscId": "usa-lsc-wy",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.ccaswim.com/",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory",
+        "summary": "Capital City Athletics is a swim team/program listed by Wyoming Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Cheyenne, WY",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Wyoming Swimming",
+            "targetId": "usa-lsc-wy"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "ccacutthroats@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "jljesper@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "sydelay@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "307-680-5118",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Margaret James",
+            "email": "magsjames21@gmail.com",
+            "phone": "13076302794"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory",
+            "title": "Wyoming Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-wy-casc",
+      "after": {
+        "kind": "team",
+        "title": "Casper Swim Club",
+        "officialName": "Casper Swim Club",
+        "abbreviation": "CASC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-wy",
+        "lscId": "usa-lsc-wy",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.casperswimclub.org/",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory",
+        "summary": "Casper Swim Club is a swim team/program listed by Wyoming Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Casper, WY",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Wyoming Swimming",
+            "targetId": "usa-lsc-wy"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "coachtori@casperswimclub.org",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "keli1231.ks@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "307-258-2189",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Tori Bailey",
+            "email": "coachtori@casperswimclub.org",
+            "phone": "13072582189"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory",
+            "title": "Wyoming Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.casperswimclub.org/",
+            "title": "Welcome",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/Home.jsp?team=wycsc"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-wy-csst",
+      "after": {
+        "kind": "team",
+        "title": "Chadron Sharks Swim Team",
+        "officialName": "Chadron Sharks Swim Team",
+        "abbreviation": "CSST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-wy",
+        "lscId": "usa-lsc-wy",
+        "zoneId": "usa-zone-western",
+        "website": null,
+        "sourceUrl": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory",
+        "summary": "Chadron Sharks Swim Team is a swim team/program listed by Wyoming Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Chadron, NE",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Wyoming Swimming",
+            "targetId": "usa-lsc-wy"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "swim.mccartney@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "waughb@hotmail.com",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "307-430-2878",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Barb Waugh",
+            "email": "waughb@hotmail.com",
+            "phone": "13084304066"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory",
+            "title": "Wyoming Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Official team website not established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-wy-ckat",
+      "after": {
+        "kind": "team",
+        "title": "Cody Kountry Aquatic Team",
+        "officialName": "Cody Kountry Aquatic Team",
+        "abbreviation": "CKAT",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-wy",
+        "lscId": "usa-lsc-wy",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/wyckats/page/home",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory",
+        "summary": "Cody Kountry Aquatic Team is a swim team/program listed by Wyoming Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Cody, WY",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Wyoming Swimming",
+            "targetId": "usa-lsc-wy"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "codykountryaquaticteam@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "emilyswett@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "mindy_k_h@yahoo.com",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "307-250-3780",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Amber Boysen",
+            "email": "codykountryaquaticteam@gmail.com",
+            "phone": "13072723197"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory",
+            "title": "Wyoming Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/wyckats/page/home",
+            "title": "CKATS Home",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-wy-ccw",
+      "after": {
+        "kind": "team",
+        "title": "Converse County Waves",
+        "officialName": "Converse County Waves",
+        "abbreviation": "CCW",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-wy",
+        "lscId": "usa-lsc-wy",
+        "zoneId": "usa-zone-western",
+        "website": null,
+        "sourceUrl": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory",
+        "summary": "Converse County Waves is a swim team/program listed by Wyoming Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Douglas, WY; Glenrock, WY",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Wyoming Swimming",
+            "targetId": "usa-lsc-wy"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "bjsaquatics@yahoo.com",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "klantz1@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "307-234-4983",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "BJ Harris",
+            "email": "bjsaquatics@yahoo.com",
+            "phone": "13077971261"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory",
+            "title": "Wyoming Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Official team website not established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-wy-gst",
+      "after": {
+        "kind": "team",
+        "title": "Gillette Swim Team",
+        "officialName": "Gillette Swim Team",
+        "abbreviation": "GST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-wy",
+        "lscId": "usa-lsc-wy",
+        "zoneId": "usa-zone-western",
+        "website": "http://gilletteswimteam.org/",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory",
+        "summary": "Gillette Swim Team is a swim team/program listed by Wyoming Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Gillette, WY",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Wyoming Swimming",
+            "targetId": "usa-lsc-wy"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "emmilou23@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "269-377-7894",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Phil Rehard",
+            "email": "gillettegatorswim@gmail.com",
+            "phone": "13076863757"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory",
+            "title": "Wyoming Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-wy-hasc",
+      "after": {
+        "kind": "team",
+        "title": "High Altitude Swim Club",
+        "officialName": "High Altitude Swim Club",
+        "abbreviation": "HASC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-wy",
+        "lscId": "usa-lsc-wy",
+        "zoneId": "usa-zone-western",
+        "website": "http://highaltitudeswimclub.com/",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory",
+        "summary": "High Altitude Swim Club is a swim team/program listed by Wyoming Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Evanston, WY; Lyman, WY",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Wyoming Swimming",
+            "targetId": "usa-lsc-wy"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "aquatics@eparkrec.org",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "highaltitudeswimclub@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "westonr@lymanschools.org",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "801-518-8458",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Kim Larson",
+            "email": "klarson@evanstonparksandrec.org",
+            "phone": "18015188458"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory",
+            "title": "Wyoming Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-wy-jhsr",
+      "after": {
+        "kind": "team",
+        "title": "Jackson Hole Stingrays",
+        "officialName": "Jackson Hole Stingrays",
+        "abbreviation": "JHSR",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-wy",
+        "lscId": "usa-lsc-wy",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.jhstingrays.com/",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory",
+        "summary": "Jackson Hole Stingrays is a swim team/program listed by Wyoming Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Jackson, WY",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Wyoming Swimming",
+            "targetId": "usa-lsc-wy"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "jhstingrayboard@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "jhstingraycoach@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "307-413-2310",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Dessa Reimer",
+            "email": "jhstingrayboard@gmail.com",
+            "phone": "13077341908"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory",
+            "title": "Wyoming Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Name variation: LSC lists Jackson Hole Stingrays; USA Swimming lists Jackson Hole Stingray Swim Tm..",
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-wy-ksc",
+      "after": {
+        "kind": "team",
+        "title": "Kemmerer Swim Club",
+        "officialName": "Kemmerer Swim Club",
+        "abbreviation": "KSC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-wy",
+        "lscId": "usa-lsc-wy",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/team/wyksc/page/home",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory",
+        "summary": "Kemmerer Swim Club is a swim team/program listed by Wyoming Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Diamondville, WY",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Wyoming Swimming",
+            "targetId": "usa-lsc-wy"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "dortnie88@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "royrunnion@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "307-877-3748",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Cortney Bartschi",
+            "email": "kemmererswimclub1@gmail.com",
+            "phone": "13074480438"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory",
+            "title": "Wyoming Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.teamunify.com/team/wyksc/page/home",
+            "title": "Kemmerer Swim Club Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/wyksc/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-wy-lan",
+      "after": {
+        "kind": "team",
+        "title": "Lander Swim Club",
+        "officialName": "Lander Swim Club",
+        "abbreviation": "LAN",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-wy",
+        "lscId": "usa-lsc-wy",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.landerswimclub.org/",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory",
+        "summary": "Lander Swim Club is a swim team/program listed by Wyoming Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Club-specific coverage not established; listed within Wyoming Swimming.",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Wyoming Swimming",
+            "targetId": "usa-lsc-wy"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "ajtitusfamily@hotmail.com",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "jlhschaff@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "landerswimclub@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "307-330-7264",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory",
+            "title": "Wyoming Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "http://www.landerswimclub.org/",
+            "title": "Welcome to Lander Swim Club",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Club-specific service area / location not established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-wy-lsc",
+      "after": {
+        "kind": "team",
+        "title": "Laramie Swim Club",
+        "officialName": "Laramie Swim Club",
+        "abbreviation": "LSC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-wy",
+        "lscId": "usa-lsc-wy",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.laramieswimclub.org/",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory",
+        "summary": "Laramie Swim Club is a swim team/program listed by Wyoming Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Laramie, WY",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Wyoming Swimming",
+            "targetId": "usa-lsc-wy"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "capoots333@aol.com",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "cronkistador@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "307-460-1374",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Scott Cronk",
+            "email": "cronkistador@gmail.com",
+            "phone": "13074601374"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory",
+            "title": "Wyoming Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.laramieswimclub.org/",
+            "title": "Laramie Swim Club Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/wylsc/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-wy-nsst",
+      "after": {
+        "kind": "team",
+        "title": "Newcastle Stingray Swim Team",
+        "officialName": "Newcastle Stingray Swim Team",
+        "abbreviation": "NSST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-wy",
+        "lscId": "usa-lsc-wy",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/wyns",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory",
+        "summary": "Newcastle Stingray Swim Team is a swim team/program listed by Wyoming Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Newcastle, WY",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Wyoming Swimming",
+            "targetId": "usa-lsc-wy"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "hoovers@wcsd1.org",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "smittyandshawn@rtconnect.net",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "307-746-6162",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Teresa Gross",
+            "email": "newcastlestingrays@gmail.com",
+            "phone": "16052141240"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory",
+            "title": "Wyoming Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.teamunify.com/wyns",
+            "title": "Newcastle Stingrays Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/wyns/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-wy-psc",
+      "after": {
+        "kind": "team",
+        "title": "Powell Swim Club",
+        "officialName": "Powell Swim Club",
+        "abbreviation": "PSC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-wy",
+        "lscId": "usa-lsc-wy",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/wypsc/page/home",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory",
+        "summary": "Powell Swim Club is a swim team/program listed by Wyoming Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Powell, WY",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Wyoming Swimming",
+            "targetId": "usa-lsc-wy"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "swimcoachjerry@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "white.charise@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "307-254-0992",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Jerry Rodriguez",
+            "email": "swimcoachjerry@gmail.com",
+            "phone": "13077549250"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory",
+            "title": "Wyoming Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/wypsc/page/home",
+            "title": "Powell Swim Club Home",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-wy-rst",
+      "after": {
+        "kind": "team",
+        "title": "Rawlins Rebels Swim Team",
+        "officialName": "Rawlins Rebels Swim Team",
+        "abbreviation": "RST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-wy",
+        "lscId": "usa-lsc-wy",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/wyrrst/page/home",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory",
+        "summary": "Rawlins Rebels Swim Team is a swim team/program listed by Wyoming Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Club-specific coverage not established; listed within Wyoming Swimming.",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Wyoming Swimming",
+            "targetId": "usa-lsc-wy"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "mgriffith@crb1.net",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "paypay522@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "rawlinsswimteam@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "702-467-7635",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory",
+            "title": "Wyoming Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/wyrrst/page/home",
+            "title": "Rawlins Rebels Swim Team Home",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Club-specific service area / location not established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-wy-rsc",
+      "after": {
+        "kind": "team",
+        "title": "Riverton Swim Club",
+        "officialName": "Riverton Swim Club",
+        "abbreviation": "RSC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-wy",
+        "lscId": "usa-lsc-wy",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.rivertonswimclub.org/",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory",
+        "summary": "Riverton Swim Club is a swim team/program listed by Wyoming Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Riverton, WY",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Wyoming Swimming",
+            "targetId": "usa-lsc-wy"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "rivertonswimclub@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "saraandcory@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "801-828-0239",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Heather Hovander",
+            "email": "rivertonswimclub@gmail.com",
+            "phone": "18018280239"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory",
+            "title": "Wyoming Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-wy-sbsc",
+      "after": {
+        "kind": "team",
+        "title": "Scotts Bluff County Swim Club",
+        "officialName": "Scotts Bluff County Swim Club",
+        "abbreviation": "SBSC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-wy",
+        "lscId": "usa-lsc-wy",
+        "zoneId": "usa-zone-western",
+        "website": "https://user.sportngin.com/users/sign_in",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory",
+        "summary": "Scotts Bluff County Swim Club is a swim team/program listed by Wyoming Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Scottsbluff, NE",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Wyoming Swimming",
+            "targetId": "usa-lsc-wy"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "bonbonwool@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "kmswim75@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "scenicviewlawncare@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "scottsbluffcoswimclub@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "308-436-2394",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Scottsbluff County Swim Club Torpedoes",
+            "email": "amymdavies@yahoo.com",
+            "phone": "13084362394"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory",
+            "title": "Wyoming Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://user.sportngin.com/users/sign_in",
+            "title": "SportsEngine | Sign In Step 1",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Name variation: LSC lists Scotts Bluff County Swim Club; USA Swimming lists Scottsbluff Swim Club."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-wy-sst",
+      "after": {
+        "kind": "team",
+        "title": "Sheridan Swim Team",
+        "officialName": "Sheridan Swim Team",
+        "abbreviation": "SST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-wy",
+        "lscId": "usa-lsc-wy",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.sstwyoming.com/",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory",
+        "summary": "Sheridan Swim Team is a swim team/program listed by Wyoming Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Sheridan, WY",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Wyoming Swimming",
+            "targetId": "usa-lsc-wy"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "brentgmoore@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "buszkiewic@hotmail.com",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "307-763-7998",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Brent Moore",
+            "email": "sstsharks@gmail.com",
+            "phone": "13077637998"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory",
+            "title": "Wyoming Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.sstwyoming.com/",
+            "title": "Sheridan Swim Team Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/wssst/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-wy-scst",
+      "after": {
+        "kind": "team",
+        "title": "Sublette County Swim Team",
+        "officialName": "Sublette County Swim Team",
+        "abbreviation": "SCST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-wy",
+        "lscId": "usa-lsc-wy",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.sublettecountyswimteam.com/",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory",
+        "summary": "Sublette County Swim Team is a swim team/program listed by Wyoming Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Big Piney, WY",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Wyoming Swimming",
+            "targetId": "usa-lsc-wy"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "cgaul3@yahoo.com",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "kerihecht@live.com",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "subletteswimming@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "307-231-3220",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Ambr Seemann",
+            "email": "subletteswimming@gmail.com",
+            "phone": "13072314222"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory",
+            "title": "Wyoming Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.sublettecountyswimteam.com/",
+            "title": "HOME | Sublette County Swim",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.sublettecountyswimteam.com/"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-wy-swat",
+      "after": {
+        "kind": "team",
+        "title": "SWAT Swim Club",
+        "officialName": "SWAT Swim Club",
+        "abbreviation": "SWAT",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-wy",
+        "lscId": "usa-lsc-wy",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.swatswimclub.com/",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory",
+        "summary": "SWAT Swim Club is a swim team/program listed by Wyoming Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Green River, WY",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Wyoming Swimming",
+            "targetId": "usa-lsc-wy"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "swatswimboard@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "swatswimcoach@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "swatswimsafesport@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "307-871-6039",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Chelsea Dees",
+            "email": "swatswimclub@gmail.com",
+            "phone": "13072314297"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory",
+            "title": "Wyoming Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-wy-5150",
+      "after": {
+        "kind": "team",
+        "title": "SWIM 5150",
+        "officialName": "SWIM 5150",
+        "abbreviation": "5150",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-wy",
+        "lscId": "usa-lsc-wy",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.swim5150.com/",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory",
+        "summary": "SWIM 5150 is a swim team/program listed by Wyoming Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Casper, WY",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Wyoming Swimming",
+            "targetId": "usa-lsc-wy"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "admin@swim5150.com",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "307-760-8666",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Bridger Miller",
+            "email": "Bridger.Miller@gmail.com",
+            "phone": "13076607121"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory",
+            "title": "Wyoming Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.swim5150.com/",
+            "title": "Swim 5150 | Swim Club | Casper, WY",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.swim5150.com/"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-wy-wor",
+      "after": {
+        "kind": "team",
+        "title": "Worland Waterjets",
+        "officialName": "Worland Waterjets",
+        "abbreviation": "WOR",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-wy",
+        "lscId": "usa-lsc-wy",
+        "zoneId": "usa-zone-western",
+        "website": null,
+        "sourceUrl": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory",
+        "summary": "Worland Waterjets is a swim team/program listed by Wyoming Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Club-specific coverage not established; listed within Wyoming Swimming.",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Wyoming Swimming",
+            "targetId": "usa-lsc-wy"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "jenniferbellis@hotmail.com",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "lucydawn1001@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "waterjetsswimming@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "307-575-2488",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory",
+            "title": "Wyoming Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Official team website not established from available sources.",
+          "Club-specific service area / location not established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-wy-uwyo",
+      "after": {
+        "kind": "team",
+        "title": "Wyoming Aquatics",
+        "officialName": "Wyoming Aquatics",
+        "abbreviation": "UWYO",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-wy",
+        "lscId": "usa-lsc-wy",
+        "zoneId": "usa-zone-western",
+        "website": null,
+        "sourceUrl": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory",
+        "summary": "Wyoming Aquatics is a swim team/program listed by Wyoming Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Laramie, WY",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Wyoming Swimming",
+            "targetId": "usa-lsc-wy"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "swimpokes@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "David Denniston",
+            "email": "swimpokes@gmail.com",
+            "phone": "13035176450"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzwyslsc/page/clubs/directory",
+            "title": "Wyoming Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Official team website not established from available sources."
+        ]
+      }
+    }
+  ]
+}

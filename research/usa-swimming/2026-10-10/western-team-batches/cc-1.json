@@ -1,0 +1,824 @@
+{
+  "division": "knowledge",
+  "scope": "Western Zone swim teams \u2014 Central California Swimming",
+  "sourceUrl": "https://www.gomotionapp.com/team/wzccslsc/page/about-ccs/clubs",
+  "capturedAt": "2026-10-10T08:09:39.063086+00:00",
+  "coverage": "partial",
+  "evidence": {
+    "checkedAt": "2026-10-10",
+    "lscCode": "CC",
+    "directoryRowsCollected": 11,
+    "batchRows": 11,
+    "enumeration": "All named rows in the retrieved official directory/roster sources; independent current registration is not guaranteed.",
+    "deduplication": "Compared against 84 published knowledge records and an empty pending queue; facilities combined by organization key; Inland Empire\u2019s 19 existing teams were retained without duplicates.",
+    "remaining": "Missing codes, unreachable websites, registration status, and conflicting sources are visible in each record. Sierra Nevada BBST remains name/code unresolved from official evidence."
+  },
+  "writes": [
+    {
+      "path": "knowledge_entries/usa-team-cc-zada",
+      "after": {
+        "kind": "team",
+        "title": "B-Town Brazadas",
+        "officialName": "B-Town Brazadas",
+        "abbreviation": "ZADA",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-cc",
+        "lscId": "usa-lsc-cc",
+        "zoneId": "usa-zone-western",
+        "website": "https://brazadas.org/",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzccslsc/page/about-ccs/clubs",
+        "summary": "B-Town Brazadas is a swim team/program listed by Central California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Bakersfield, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Central California Swimming",
+            "targetId": "usa-lsc-cc"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "craig@brazadas.org",
+            "url": "https://www.gomotionapp.com/team/wzccslsc/page/about-ccs/clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "erin@brazadas.org",
+            "url": "https://www.gomotionapp.com/team/wzccslsc/page/about-ccs/clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "661-456-8401",
+            "url": "https://www.gomotionapp.com/team/wzccslsc/page/about-ccs/clubs"
+          },
+          {
+            "role": "Public team website contact",
+            "email": "swim@brazadas.org",
+            "url": "https://brazadas.org/"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzccslsc/page/about-ccs/clubs",
+            "title": "Central California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://brazadas.org/",
+            "title": "B Town Brazadas Swim Club: Bakersfield Swim Programs",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.brazadas.org/"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-cc-bac",
+      "after": {
+        "kind": "team",
+        "title": "Bakersfield Aquatic Club",
+        "officialName": "Bakersfield Aquatic Club",
+        "abbreviation": "BAC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-cc",
+        "lscId": "usa-lsc-cc",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/ccbac/page/home",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzccslsc/page/about-ccs/clubs",
+        "summary": "Bakersfield Aquatic Club is a swim team/program listed by Central California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Bakersfield, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Central California Swimming",
+            "targetId": "usa-lsc-cc"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "bacswim2021@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzccslsc/page/about-ccs/clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Aiden Pike",
+            "email": "aidenpikeswim@gmail.com",
+            "phone": "16614283768"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzccslsc/page/about-ccs/clubs",
+            "title": "Central California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/ccbac/page/home",
+            "title": "Bakersfield Aquatics Club Home",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Name variation: LSC lists Bakersfield Aquatic Club; USA Swimming lists Bakersfield Aquatics Club, Inc.."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-cc-brc",
+      "after": {
+        "kind": "team",
+        "title": "Bakersfield Race Club",
+        "officialName": "Bakersfield Race Club",
+        "abbreviation": "BRC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-cc",
+        "lscId": "usa-lsc-cc",
+        "zoneId": "usa-zone-western",
+        "website": "https://bakersfieldrace.club/",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzccslsc/page/about-ccs/clubs",
+        "summary": "Bakersfield Race Club is a swim team/program listed by Central California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Bakersfield, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Central California Swimming",
+            "targetId": "usa-lsc-cc"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "stanzi@bakersfieldrace.club",
+            "url": "https://www.gomotionapp.com/team/wzccslsc/page/about-ccs/clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "661-565-3057",
+            "url": "https://www.gomotionapp.com/team/wzccslsc/page/about-ccs/clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Constanze McGowan",
+            "email": "stanzi@bakersfieldrace.club",
+            "phone": "16615653057"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzccslsc/page/about-ccs/clubs",
+            "title": "Central California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://bakersfieldrace.club/",
+            "title": "BRC Home Page | Bakersfield Race Club",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-cc-clov",
+      "after": {
+        "kind": "team",
+        "title": "Clovis Swim Club",
+        "officialName": "Clovis Swim Club",
+        "abbreviation": "CLOV",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-cc",
+        "lscId": "usa-lsc-cc",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/clov/page/home",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzccslsc/page/about-ccs/clubs",
+        "summary": "Clovis Swim Club is a swim team/program listed by Central California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Clovis, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Central California Swimming",
+            "targetId": "usa-lsc-cc"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "coachmark76@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzccslsc/page/about-ccs/clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "559-327-9237",
+            "url": "https://www.gomotionapp.com/team/wzccslsc/page/about-ccs/clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Mark Bennett",
+            "email": "marktbennett@cusd.com",
+            "phone": "15593279232"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzccslsc/page/about-ccs/clubs",
+            "title": "Central California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/clov/page/home",
+            "title": "Clovis Swim Club Home",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-cc-fdst",
+      "after": {
+        "kind": "team",
+        "title": "Fresno Dolphins Swim Team",
+        "officialName": "Fresno Dolphins Swim Team",
+        "abbreviation": "FDST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-cc",
+        "lscId": "usa-lsc-cc",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/ccafdst/page/home",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzccslsc/page/about-ccs/clubs",
+        "summary": "Fresno Dolphins Swim Team is a swim team/program listed by Central California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Fresno, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Central California Swimming",
+            "targetId": "usa-lsc-cc"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "rickklatt@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzccslsc/page/about-ccs/clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(559) 448-7676",
+            "url": "https://www.gomotionapp.com/team/wzccslsc/page/about-ccs/clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Rick Klatt",
+            "email": "rickklatt@gmail.com",
+            "phone": "15594487676"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzccslsc/page/about-ccs/clubs",
+            "title": "Central California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/ccafdst/page/home",
+            "title": "Fresno Dolphins Swim Team Home",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-cc-fres",
+      "after": {
+        "kind": "team",
+        "title": "Fresno State Swimming",
+        "officialName": "Fresno State Swimming",
+        "abbreviation": "FRES",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-cc",
+        "lscId": "usa-lsc-cc",
+        "zoneId": "usa-zone-western",
+        "website": "https://gobulldogs.com/sports/womens-swimming-and-diving",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzccslsc/page/about-ccs/clubs",
+        "summary": "Fresno State Swimming is a swim team/program listed by Central California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Fresno, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Central California Swimming",
+            "targetId": "usa-lsc-cc"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "jfleck@csufresno.edu",
+            "url": "https://www.gomotionapp.com/team/wzccslsc/page/about-ccs/clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "559-278-2006",
+            "url": "https://www.gomotionapp.com/team/wzccslsc/page/about-ccs/clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Jeanne Fleck",
+            "email": "jfleck@csufresno.edu",
+            "phone": "15592782006"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzccslsc/page/about-ccs/clubs",
+            "title": "Central California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://gobulldogs.com/sports/womens-swimming-and-diving",
+            "title": "Swimming & Diving - Fresno State",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-cc-mat",
+      "after": {
+        "kind": "team",
+        "title": "Madera Aquatic Team",
+        "officialName": "Madera Aquatic Team",
+        "abbreviation": "MAT",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-cc",
+        "lscId": "usa-lsc-cc",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/camat/page/home",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzccslsc/page/about-ccs/clubs",
+        "summary": "Madera Aquatic Team is a swim team/program listed by Central California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Madera, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Central California Swimming",
+            "targetId": "usa-lsc-cc"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "timbil02@comcast.net",
+            "url": "https://www.gomotionapp.com/team/wzccslsc/page/about-ccs/clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "ylarregui@juno.com",
+            "url": "https://www.gomotionapp.com/team/wzccslsc/page/about-ccs/clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Cesario Gonzalez",
+            "email": "maderaaquaticteam@yahoo.com",
+            "phone": "15596743845"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzccslsc/page/about-ccs/clubs",
+            "title": "Central California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/camat/page/home",
+            "title": "Madera Aquatic Team Home",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-cc-merc",
+      "after": {
+        "kind": "team",
+        "title": "Merced Skimmers Swim Team",
+        "officialName": "Merced Skimmers Swim Team",
+        "abbreviation": "MERC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-cc",
+        "lscId": "usa-lsc-cc",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/ccmsst/page/home",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzccslsc/page/about-ccs/clubs",
+        "summary": "Merced Skimmers Swim Team is a swim team/program listed by Central California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Merced, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Central California Swimming",
+            "targetId": "usa-lsc-cc"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "coachryanrandall@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzccslsc/page/about-ccs/clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "michael.carpenter@onedigital.com",
+            "url": "https://www.gomotionapp.com/team/wzccslsc/page/about-ccs/clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "209-723-3124",
+            "url": "https://www.gomotionapp.com/team/wzccslsc/page/about-ccs/clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Mike Carpenter",
+            "email": "mcarpenter@lckinsurance.com",
+            "phone": "12093840727"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Doug Dingeldein",
+            "email": "official.doug400@gmail.com",
+            "phone": "12092012534"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzccslsc/page/about-ccs/clubs",
+            "title": "Central California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/ccmsst/page/home",
+            "title": "Merced Skimmers Swim Team Home",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-cc-sova",
+      "after": {
+        "kind": "team",
+        "title": "South Valley Swim Club",
+        "officialName": "South Valley Swim Club",
+        "abbreviation": "SOVA",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-cc",
+        "lscId": "usa-lsc-cc",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.sovaswimclub.com/",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzccslsc/page/about-ccs/clubs",
+        "summary": "South Valley Swim Club is a swim team/program listed by Central California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Visalia, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Central California Swimming",
+            "targetId": "usa-lsc-cc"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "josh128peters02@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzccslsc/page/about-ccs/clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "josh128peters02@gmail.con",
+            "url": "https://www.gomotionapp.com/team/wzccslsc/page/about-ccs/clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "myenigues@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzccslsc/page/about-ccs/clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "559-786-4453",
+            "url": "https://www.gomotionapp.com/team/wzccslsc/page/about-ccs/clubs"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzccslsc/page/about-ccs/clubs",
+            "title": "Central California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.sovaswimclub.com/",
+            "title": "South Valley Aquatics Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.sovaswimclub.com/page/home"
+          }
+        ],
+        "gaps": [
+          "The LSC displays gmail.com but its mailto link uses gmail.con for one contact; both source values are preserved pending confirmation."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-cc-tnt",
+      "after": {
+        "kind": "team",
+        "title": "Tule Nation Tritons",
+        "officialName": "Tule Nation Tritons",
+        "abbreviation": "TNT",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-cc",
+        "lscId": "usa-lsc-cc",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.tritonswim.org/",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzccslsc/page/about-ccs/clubs",
+        "summary": "Tule Nation Tritons is a swim team/program listed by Central California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Tulare, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Central California Swimming",
+            "targetId": "usa-lsc-cc"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "ceo.deochoa@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzccslsc/page/about-ccs/clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "jocthiessen4@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzccslsc/page/about-ccs/clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Miranda Klawitter",
+            "email": "tritonswim.president@gmail.com",
+            "phone": "11559583591"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Miranda Klawitter",
+            "email": "tritonswim.president@gmail.com",
+            "phone": "13607206359"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzccslsc/page/about-ccs/clubs",
+            "title": "Central California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.tritonswim.org/",
+            "title": "Tule Nation Tritons - Home",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-cc-ymsc",
+      "after": {
+        "kind": "team",
+        "title": "Yosemite Marlins Swim Club",
+        "officialName": "Yosemite Marlins Swim Club",
+        "abbreviation": "YMSC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-cc",
+        "lscId": "usa-lsc-cc",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/ccymscca/page/home",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzccslsc/page/about-ccs/clubs",
+        "summary": "Yosemite Marlins Swim Club is a swim team/program listed by Central California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Oakhurst, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Central California Swimming",
+            "targetId": "usa-lsc-cc"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "tmkudela@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzccslsc/page/about-ccs/clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "559-213-3304",
+            "url": "https://www.gomotionapp.com/team/wzccslsc/page/about-ccs/clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Tammy Kudela",
+            "email": "tmkudela@gmail.com",
+            "phone": "15592133304"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzccslsc/page/about-ccs/clubs",
+            "title": "Central California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/ccymscca/page/home",
+            "title": "Yosemite Marlins Swim Club Home",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    }
+  ]
+}

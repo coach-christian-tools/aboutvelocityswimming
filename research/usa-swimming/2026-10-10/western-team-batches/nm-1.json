@@ -1,0 +1,1453 @@
+{
+  "division": "knowledge",
+  "scope": "Western Zone swim teams \u2014 New Mexico Swimming",
+  "sourceUrl": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs",
+  "capturedAt": "2026-10-10T08:09:39.123355+00:00",
+  "coverage": "partial",
+  "evidence": {
+    "checkedAt": "2026-10-10",
+    "lscCode": "NM",
+    "directoryRowsCollected": 20,
+    "batchRows": 20,
+    "enumeration": "All named rows in the retrieved official directory/roster sources; independent current registration is not guaranteed.",
+    "deduplication": "Compared against 84 published knowledge records and an empty pending queue; facilities combined by organization key; Inland Empire\u2019s 19 existing teams were retained without duplicates.",
+    "remaining": "Missing codes, unreachable websites, registration status, and conflicting sources are visible in each record. Sierra Nevada BBST remains name/code unresolved from official evidence."
+  },
+  "writes": [
+    {
+      "path": "knowledge_entries/usa-team-nm-abq",
+      "after": {
+        "kind": "team",
+        "title": "ABQ Dolphins Swim Team",
+        "officialName": "ABQ Dolphins Swim Team",
+        "abbreviation": "ABQ",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-nm",
+        "lscId": "usa-lsc-nm",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.abqdolphins.com/",
+        "sourceUrl": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs",
+        "summary": "ABQ Dolphins Swim Team is a swim team/program listed by New Mexico Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Albuquerque, NM",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "New Mexico Swimming",
+            "targetId": "usa-lsc-nm"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "fujiexia@msn.com",
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "505-239-7017",
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Fujie Xia",
+            "email": "fujiexia@msn.com",
+            "phone": "15052397017"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs",
+            "title": "New Mexico Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.abqdolphins.com/",
+            "title": "Home | ABQ Dolphins Site",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-nm-atac",
+      "after": {
+        "kind": "team",
+        "title": "Albuquerque Triton Aquatic Club",
+        "officialName": "Albuquerque Triton Aquatic Club",
+        "abbreviation": "ATAC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-nm",
+        "lscId": "usa-lsc-nm",
+        "zoneId": "usa-zone-western",
+        "website": null,
+        "sourceUrl": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs",
+        "summary": "Albuquerque Triton Aquatic Club is a swim team/program listed by New Mexico Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Albuquerque, NM",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "New Mexico Swimming",
+            "targetId": "usa-lsc-nm"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "atacabq@gmail.com",
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "719-849-9574",
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Quint Seckler",
+            "email": "qseckler@gmail.com",
+            "phone": "15053507199"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs",
+            "title": "New Mexico Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Official team website not established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-nm-aac",
+      "after": {
+        "kind": "team",
+        "title": "Artesia Aquatic Club",
+        "officialName": "Artesia Aquatic Club",
+        "abbreviation": "AAC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-nm",
+        "lscId": "usa-lsc-nm",
+        "zoneId": "usa-zone-western",
+        "website": null,
+        "sourceUrl": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs",
+        "summary": "Artesia Aquatic Club is a swim team/program listed by New Mexico Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Artesia, NM",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "New Mexico Swimming",
+            "targetId": "usa-lsc-nm"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "aciro70@gmail.com",
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "575-317-5417",
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Andrea Ciro",
+            "email": "aciro70@gmail.com",
+            "phone": "15753175417"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs",
+            "title": "New Mexico Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Official team website not established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-nm-bst",
+      "after": {
+        "kind": "team",
+        "title": "Beast Aquatics",
+        "officialName": "Beast Aquatics",
+        "abbreviation": "BST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-nm",
+        "lscId": "usa-lsc-nm",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/team/nmslfzf/page/home",
+        "sourceUrl": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs",
+        "summary": "Beast Aquatics is a swim team/program listed by New Mexico Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Club-specific coverage not established; listed within New Mexico Swimming.",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "New Mexico Swimming",
+            "targetId": "usa-lsc-nm"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "aapb@gmail.com",
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "brandi@beastswim.com",
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "doug@beastswim.com",
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "oug@beastswim.com",
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs",
+            "title": "New Mexico Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.teamunify.com/team/nmslfzf/page/home",
+            "title": "Beast Aquatics Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/nmslfzf/page/home"
+          }
+        ],
+        "gaps": [
+          "Club-specific service area / location not established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-nm-ccsc",
+      "after": {
+        "kind": "team",
+        "title": "Cavern City Swim Club",
+        "officialName": "Cavern City Swim Club",
+        "abbreviation": "CCSC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-nm",
+        "lscId": "usa-lsc-nm",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.caverncityswimclub.com/",
+        "sourceUrl": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs",
+        "summary": "Cavern City Swim Club is a swim team/program listed by New Mexico Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Carlsbad, NM",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "New Mexico Swimming",
+            "targetId": "usa-lsc-nm"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "coleyburgess@gmail.com",
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Julie Swanson",
+            "email": "jmsswanson@gmail.com",
+            "phone": "15752343326"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs",
+            "title": "New Mexico Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-nm-caq",
+      "after": {
+        "kind": "team",
+        "title": "Charger Aquatics",
+        "officialName": "Charger Aquatics",
+        "abbreviation": "CAQ",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-nm",
+        "lscId": "usa-lsc-nm",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.teamunify.com/team/nmca/page/home",
+        "sourceUrl": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs",
+        "summary": "Charger Aquatics is a swim team/program listed by New Mexico Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Club-specific coverage not established; listed within New Mexico Swimming.",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "New Mexico Swimming",
+            "targetId": "usa-lsc-nm"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "vanatta@aa.edu",
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "505-828-3341",
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs",
+            "title": "New Mexico Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "Club-specific service area / location not established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-nm-csc",
+      "after": {
+        "kind": "team",
+        "title": "Clovis Swim Club",
+        "officialName": "Clovis Swim Club",
+        "abbreviation": "CSC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-nm",
+        "lscId": "usa-lsc-nm",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/nmcsc/page/home",
+        "sourceUrl": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs",
+        "summary": "Clovis Swim Club is a swim team/program listed by New Mexico Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Clovis, NM",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "New Mexico Swimming",
+            "targetId": "usa-lsc-nm"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "demaio.vincent@gmail.com",
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "emaio.vincent@gmail.com",
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "essykidd@gmail.com",
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "jessykidd@gmail.com",
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "natasha@beastswim.com",
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "tomas@beastswim.com",
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Vincent Demaio",
+            "email": "demaio.vincent@gmail.com",
+            "phone": "15756931016"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs",
+            "title": "New Mexico Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/nmcsc/page/home",
+            "title": "Clovis Swim Home",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-nm-cuda",
+      "after": {
+        "kind": "team",
+        "title": "Duke City Barracuda",
+        "officialName": "Duke City Barracuda",
+        "abbreviation": "CUDA",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-nm",
+        "lscId": "usa-lsc-nm",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.facebook.com/DukeCityBarracuda",
+        "sourceUrl": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs",
+        "summary": "Duke City Barracuda is a swim team/program listed by New Mexico Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Club-specific coverage not established; listed within New Mexico Swimming.",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "New Mexico Swimming",
+            "targetId": "usa-lsc-nm"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "coach@swimbarracuda.org",
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "505 504-5545",
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs",
+            "title": "New Mexico Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.facebook.com/DukeCityBarracuda",
+            "title": "Duke City Barracuda Swimming and Water Polo",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Club-specific service area / location not established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-nm-fcat",
+      "after": {
+        "kind": "team",
+        "title": "Four Corners Aquatic Team",
+        "officialName": "Four Corners Aquatic Team",
+        "abbreviation": "FCAT",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-nm",
+        "lscId": "usa-lsc-nm",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/Home.jsp?team=nmsfca",
+        "sourceUrl": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs",
+        "summary": "Four Corners Aquatic Team is a swim team/program listed by New Mexico Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Farmington, NM",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "New Mexico Swimming",
+            "targetId": "usa-lsc-nm"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "reaz111@hotmail.com",
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "registrar.fcat@gmail.com",
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "swim.fcat@gmail.com",
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "505-386-6101",
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Mke Mccluhan",
+            "email": "reaz111@hotmail.com",
+            "phone": "15053866101"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs",
+            "title": "New Mexico Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.teamunify.com/Home.jsp?team=nmsfca",
+            "title": "Four Corners Aquatic Teams of Farmington Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/nmsfca/page/home"
+          }
+        ],
+        "gaps": [
+          "The LSC representative\u2019s displayed email and mailto target differ; preserved as separate source-listed contacts."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-nm-lcat",
+      "after": {
+        "kind": "team",
+        "title": "Las Cruces Aquatic Team",
+        "officialName": "Las Cruces Aquatic Team",
+        "abbreviation": "LCAT",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-nm",
+        "lscId": "usa-lsc-nm",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/About.jsp?team=nmslcat",
+        "sourceUrl": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs",
+        "summary": "Las Cruces Aquatic Team is a swim team/program listed by New Mexico Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Las Cruces, NM",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "New Mexico Swimming",
+            "targetId": "usa-lsc-nm"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "cchavez_53@hotmail.com",
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "575-371-7583",
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Jeanette Skow",
+            "email": "pipperskow@me.com",
+            "phone": "15713454925"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs",
+            "title": "New Mexico Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.teamunify.com/About.jsp?team=nmslcat",
+            "title": "Las Cruces Aquatic Team Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/nmslcat/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-nm-lobo",
+      "after": {
+        "kind": "team",
+        "title": "Lobo Aquatic Club",
+        "officialName": "Lobo Aquatic Club",
+        "abbreviation": "LOBO",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-nm",
+        "lscId": "usa-lsc-nm",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/team/nmlac/page/home",
+        "sourceUrl": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs",
+        "summary": "Lobo Aquatic Club is a swim team/program listed by New Mexico Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Albuquerque, NM",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "New Mexico Swimming",
+            "targetId": "usa-lsc-nm"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "loboaquaticscoach@gmail.com",
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "505-819-0596",
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Luke Philliips",
+            "email": "loboaquaticscoach@gmail.com",
+            "phone": "15058190596"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs",
+            "title": "New Mexico Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.teamunify.com/team/nmlac/page/home",
+            "title": "Lobo Aquatic Club Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/nmlac/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-nm-laa",
+      "after": {
+        "kind": "team",
+        "title": "Los Alamos Aquatomics",
+        "officialName": "Los Alamos Aquatomics",
+        "abbreviation": "LAA",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-nm",
+        "lscId": "usa-lsc-nm",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/Home.jsp?team=nmlaa",
+        "sourceUrl": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs",
+        "summary": "Los Alamos Aquatomics is a swim team/program listed by New Mexico Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Los Alamos, NM",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "New Mexico Swimming",
+            "targetId": "usa-lsc-nm"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "coach@aquatomics.org",
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "505-690-8539",
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Stact McLaughlin",
+            "email": "anastasiamclaughlin505@gmaill.com",
+            "phone": "15054128031"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs",
+            "title": "New Mexico Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.teamunify.com/Home.jsp?team=nmlaa",
+            "title": "Los Alamos Aquatomics Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/nmlaa/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-nm-mako",
+      "after": {
+        "kind": "team",
+        "title": "Mako Aquatics Club",
+        "officialName": "Mako Aquatics Club",
+        "abbreviation": "MAKO",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-nm",
+        "lscId": "usa-lsc-nm",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/team/nmstar/page/home",
+        "sourceUrl": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs",
+        "summary": "Mako Aquatics Club is a swim team/program listed by New Mexico Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Club-specific coverage not established; listed within New Mexico Swimming.",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "New Mexico Swimming",
+            "targetId": "usa-lsc-nm"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "aspenjpoole@gmail.com",
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "jeremiah.stanton1@gmail.com",
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "505-463-9339",
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs",
+            "title": "New Mexico Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.teamunify.com/team/nmstar/page/home",
+            "title": "Swim Team and Lessons",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/nmstar/page/home"
+          }
+        ],
+        "gaps": [
+          "Club-specific service area / location not established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-nm-mc",
+      "after": {
+        "kind": "team",
+        "title": "Mountain Club",
+        "officialName": "Mountain Club",
+        "abbreviation": "MC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-nm",
+        "lscId": "usa-lsc-nm",
+        "zoneId": "usa-zone-western",
+        "website": "https://mountainswimming.com/",
+        "sourceUrl": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs",
+        "summary": "Mountain Club is a swim team/program listed by New Mexico Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Los Alamos, NM; Toas, NM",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "New Mexico Swimming",
+            "targetId": "usa-lsc-nm"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "zhangqanna@gmail.com",
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "505-662-1900",
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Anna Zhang",
+            "email": "zhangqanna@gmail.com",
+            "phone": "15056621900"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Greta Kuehl",
+            "email": "gretakuehl@yahoo.com",
+            "phone": "15757584160"
+          },
+          {
+            "role": "Public team website contact",
+            "email": "mountainswimming@gmail.com",
+            "url": "https://mountainswimming.com/"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs",
+            "title": "New Mexico Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://mountainswimming.com/",
+            "title": "Mountain Club",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-nm-raac",
+      "after": {
+        "kind": "team",
+        "title": "Roadrunners of Albuquerque Aquatic Club",
+        "officialName": "Roadrunners of Albuquerque Aquatic Club",
+        "abbreviation": "RAAC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-nm",
+        "lscId": "usa-lsc-nm",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/Home.jsp?team=nmvast",
+        "sourceUrl": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs",
+        "summary": "Roadrunners of Albuquerque Aquatic Club is a swim team/program listed by New Mexico Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Albuquerque, NM",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "New Mexico Swimming",
+            "targetId": "usa-lsc-nm"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "roadrunnersaquaticclub@gmail.com",
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "505-259-2355",
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Benedict, William Matthew",
+            "email": "wmatthewbebedict@gmail.com",
+            "phone": "15052592355"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Roadrunners of Albuquerque Aquatic Club",
+            "email": "roadrunnersaquaticclub@gmail.com",
+            "phone": "15052592355"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs",
+            "title": "New Mexico Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.teamunify.com/Home.jsp?team=nmvast",
+            "title": "Roadrunners of Albuquerque Aquatic Club Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/nmvast/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-nm-scat",
+      "after": {
+        "kind": "team",
+        "title": "Silver City Swordfish Aquatic Team",
+        "officialName": "Silver City Swordfish Aquatic Team",
+        "abbreviation": "SCAT",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-nm",
+        "lscId": "usa-lsc-nm",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.facebook.com/groups/742487965774065/",
+        "sourceUrl": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs",
+        "summary": "Silver City Swordfish Aquatic Team is a swim team/program listed by New Mexico Swimming, a USA Swimming LSC in the Western Zone. The official directory identifies seasonal participation.",
+        "geographicCoverage": "Club-specific coverage not established; listed within New Mexico Swimming.",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "New Mexico Swimming",
+            "targetId": "usa-lsc-nm"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "megan.ruehmann@gmail.com",
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "575-956-3305",
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs",
+            "title": "New Mexico Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.facebook.com/groups/742487965774065/",
+            "title": "silver city aquatics club",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Club-specific service area / location not established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-nm-star",
+      "after": {
+        "kind": "team",
+        "title": "STAR Aquatics",
+        "officialName": "STAR Aquatics",
+        "abbreviation": "STAR",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-nm",
+        "lscId": "usa-lsc-nm",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.staraquaticsnm.com/",
+        "sourceUrl": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs",
+        "summary": "STAR Aquatics is a swim team/program listed by New Mexico Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Santa Fe, NM",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "New Mexico Swimming",
+            "targetId": "usa-lsc-nm"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "coachmiguel@staraquaticsnm.com",
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "505-930-1007",
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "David Miguel Castillo",
+            "email": "CoachMiguel@StarAquaticsNM.com",
+            "phone": "15059301007"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs",
+            "title": "New Mexico Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-nm-taos",
+      "after": {
+        "kind": "team",
+        "title": "Taos Swim Club",
+        "officialName": "Taos Swim Club",
+        "abbreviation": "TAOS",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-nm",
+        "lscId": "usa-lsc-nm",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/Home.jsp?team=nmtsc",
+        "sourceUrl": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs",
+        "summary": "Taos Swim Club is a swim team/program listed by New Mexico Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Taos, NM",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "New Mexico Swimming",
+            "targetId": "usa-lsc-nm"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "taostigersharks@gmail.com",
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "575-779-3648",
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Greta Brown",
+            "email": "taostigersharks@gmail.com",
+            "phone": "15057793648"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs",
+            "title": "New Mexico Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.teamunify.com/Home.jsp?team=nmtsc",
+            "title": "Taos Swim Club Inc. Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/nmtsc/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-nm-tsu",
+      "after": {
+        "kind": "team",
+        "title": "Tsunami Swim Team",
+        "officialName": "Tsunami Swim Team",
+        "abbreviation": "TSU",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-nm",
+        "lscId": "usa-lsc-nm",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.corehobbs.com/tsunami.html",
+        "sourceUrl": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs",
+        "summary": "Tsunami Swim Team is a swim team/program listed by New Mexico Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Hobbs, NM",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "New Mexico Swimming",
+            "targetId": "usa-lsc-nm"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "ngcalderonjr@hotmail.com",
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "575-390-0974",
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Amanda Byers",
+            "email": "abyers@hobbsnm.org",
+            "phone": "15753916925"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs",
+            "title": "New Mexico Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.corehobbs.com/tsunami.html",
+            "title": "CORE",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-nm-wild",
+      "after": {
+        "kind": "team",
+        "title": "Wild West Aquatic Club",
+        "officialName": "Wild West Aquatic Club",
+        "abbreviation": "WILD",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-nm",
+        "lscId": "usa-lsc-nm",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.wildwestaquaticclub.com/",
+        "sourceUrl": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs",
+        "summary": "Wild West Aquatic Club is a swim team/program listed by New Mexico Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Las Cruces, NM",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "New Mexico Swimming",
+            "targetId": "usa-lsc-nm"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "madiburns12@icloud.com",
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "575-491-7468",
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Stacy Egnaczak",
+            "email": "mmadiburns12@icloud.com",
+            "phone": "15754917468"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/nmlsc/page/nms-clubs",
+            "title": "New Mexico Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    }
+  ]
+}

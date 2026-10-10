@@ -1,0 +1,2221 @@
+{
+  "division": "knowledge",
+  "scope": "Western Zone swim teams \u2014 Utah Swimming",
+  "sourceUrl": "https://www.gomotionapp.com/team/lscuts/page/documents",
+  "capturedAt": "2026-10-10T08:09:39.212997+00:00",
+  "coverage": "partial",
+  "evidence": {
+    "checkedAt": "2026-10-10",
+    "lscCode": "UT",
+    "directoryRowsCollected": 30,
+    "batchRows": 30,
+    "enumeration": "All named rows in the retrieved official directory/roster sources; independent current registration is not guaranteed.",
+    "deduplication": "Compared against 84 published knowledge records and an empty pending queue; facilities combined by organization key; Inland Empire\u2019s 19 existing teams were retained without duplicates.",
+    "remaining": "Missing codes, unreachable websites, registration status, and conflicting sources are visible in each record. Sierra Nevada BBST remains name/code unresolved from official evidence."
+  },
+  "writes": [
+    {
+      "path": "knowledge_entries/usa-team-ut-cuda",
+      "after": {
+        "kind": "team",
+        "title": "Barracuda Aquatic Club",
+        "officialName": "Barracuda Aquatic Club",
+        "abbreviation": "CUDA",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ut",
+        "lscId": "usa-lsc-ut",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.swimbarracuda.com",
+        "sourceUrl": "https://www.gomotionapp.com/team/lscuts/page/documents",
+        "summary": "Barracuda Aquatic Club is a swim team/program listed by Utah Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Brigham City, UT",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Utah Swimming",
+            "targetId": "usa-lsc-ut"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "jerry@swimbarracuda.com",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "435-713-5606",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Jerry Hodgkinson",
+            "email": "jerry@swimbarracuda.com",
+            "phone": "14357135606"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents",
+            "title": "Utah Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.swimbarracuda.com",
+            "title": "Barracuda Aquatic Club",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://swimbarracuda.com/"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ut-bbs",
+      "after": {
+        "kind": "team",
+        "title": "Basin Blast Swimming",
+        "officialName": "Basin Blast Swimming",
+        "abbreviation": "BBS",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ut",
+        "lscId": "usa-lsc-ut",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.uintahrecreation.org",
+        "sourceUrl": "https://www.gomotionapp.com/team/lscuts/page/documents",
+        "summary": "Basin Blast Swimming is a swim team/program listed by Utah Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Vernal, UT",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Utah Swimming",
+            "targetId": "usa-lsc-ut"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "basinblastswimming@outlook.com",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "mimmsyb43@gmail.com",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "435-790-8046",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Mindy Brooksby",
+            "email": "m_brooksby@hotmail.com",
+            "phone": "14357908046"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents",
+            "title": "Utah Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.uintahrecreation.org",
+            "title": "Home | USSD1",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://recreation.uintah.gov/"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ut-cvm",
+      "after": {
+        "kind": "team",
+        "title": "Cache Valley Marlins Swim Team",
+        "officialName": "Cache Valley Marlins Swim Team",
+        "abbreviation": "CVM",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ut",
+        "lscId": "usa-lsc-ut",
+        "zoneId": "usa-zone-western",
+        "website": null,
+        "sourceUrl": "https://www.gomotionapp.com/team/lscuts/page/documents",
+        "summary": "Cache Valley Marlins Swim Team is a swim team/program listed by Utah Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Club-specific coverage not established; listed within Utah Swimming.",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Utah Swimming",
+            "targetId": "usa-lsc-ut"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "nikki.b.walsh@gmail.com",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "801-380-8625",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents",
+            "title": "Utah Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Official team website not established from available sources.",
+          "Club-specific service area / location not established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ut-csc",
+      "after": {
+        "kind": "team",
+        "title": "Cedar Swim Club",
+        "officialName": "Cedar Swim Club",
+        "abbreviation": "CSC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ut",
+        "lscId": "usa-lsc-ut",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.cedarswimclub.com",
+        "sourceUrl": "https://www.gomotionapp.com/team/lscuts/page/documents",
+        "summary": "Cedar Swim Club is a swim team/program listed by Utah Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Cedar City, UT",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Utah Swimming",
+            "targetId": "usa-lsc-ut"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "cedarswimclub@gmail.com",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "coaching@cscsharks.com",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(435-708-5372",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Jarid Gray",
+            "email": "cedarswim@yahoo.com",
+            "phone": "14355903718"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents",
+            "title": "Utah Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "The LSC directory has inconsistent email text and mailto targets; confirmation is needed."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ut-ccat",
+      "after": {
+        "kind": "team",
+        "title": "Clearfield City Aquatic Team",
+        "officialName": "Clearfield City Aquatic Team",
+        "abbreviation": "CCAT",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ut",
+        "lscId": "usa-lsc-ut",
+        "zoneId": "usa-zone-western",
+        "website": "https://teamunify.com/utccat",
+        "sourceUrl": "https://www.gomotionapp.com/team/lscuts/page/documents",
+        "summary": "Clearfield City Aquatic Team is a swim team/program listed by Utah Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Clearfield, UT",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Utah Swimming",
+            "targetId": "usa-lsc-ut"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "ckh36@hotmail.com",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "swimmerfixer@gmail.com",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(435-881-5065",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Megan Brown",
+            "email": "megan.brown@clearfieldcity.org",
+            "phone": "18015252649"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents",
+            "title": "Utah Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://teamunify.com/utccat",
+            "title": "Clearfield City Aquatic Team Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/utccat/page/home"
+          }
+        ],
+        "gaps": [
+          "Name variation: LSC lists Clearfield City Aquatic Team; USA Swimming lists Clearfield City Aquatics Team."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ut-chat",
+      "after": {
+        "kind": "team",
+        "title": "Cottonwood Heights Aquatics",
+        "officialName": "Cottonwood Heights Aquatics",
+        "abbreviation": "CHAT",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ut",
+        "lscId": "usa-lsc-ut",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.chatswimming.com",
+        "sourceUrl": "https://www.gomotionapp.com/team/lscuts/page/documents",
+        "summary": "Cottonwood Heights Aquatics is a swim team/program listed by Utah Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Salt Lake City, UT",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Utah Swimming",
+            "targetId": "usa-lsc-ut"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "jenny@chparksandrecut.gov",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "todd@cottonwoodheights.com",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(385-533-9516",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Julie Kennedy",
+            "email": "julie@cottonwoodheights.com",
+            "phone": "18019433190"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents",
+            "title": "Utah Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.chatswimming.com",
+            "title": "Cottonwood Heights Aquatics Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/utcha/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ut-coug",
+      "after": {
+        "kind": "team",
+        "title": "Cougar Aquatics",
+        "officialName": "Cougar Aquatics",
+        "abbreviation": "COUG",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ut",
+        "lscId": "usa-lsc-ut",
+        "zoneId": "usa-zone-western",
+        "website": "https://byucougars.com/home/m-swimming-diving",
+        "sourceUrl": "https://www.gomotionapp.com/team/lscuts/page/documents",
+        "summary": "Cougar Aquatics is a swim team/program listed by Utah Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Provo, UT",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Utah Swimming",
+            "targetId": "usa-lsc-ut"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "melissa.springer@byu.edu",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "tamber_mcallister@byu.edu",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(248-228-4938",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Shari Skabelund",
+            "email": "shari_skabelund@byu.edu",
+            "phone": "18013677384"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents",
+            "title": "Utah Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://byucougars.com/home/m-swimming-diving",
+            "title": "Home Page - Men's Swimming & Diving - BYU Athletics - Official Athletics Website - BYU Cougars",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://byucougars.com/sports/mens-swimming-and-diving"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ut-goat",
+      "after": {
+        "kind": "team",
+        "title": "Greater Ogden Aquatics Team",
+        "officialName": "Greater Ogden Aquatics Team",
+        "abbreviation": "GOAT",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ut",
+        "lscId": "usa-lsc-ut",
+        "zoneId": "usa-zone-western",
+        "website": "http://pools.ogdensd.org",
+        "sourceUrl": "https://www.gomotionapp.com/team/lscuts/page/documents",
+        "summary": "Greater Ogden Aquatics Team is a swim team/program listed by Utah Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Ogden, UT",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Utah Swimming",
+            "targetId": "usa-lsc-ut"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "draperh@ogdensd.org",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "801-737-7920",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Ezra Silva",
+            "email": "silvae@ogdensd.org",
+            "phone": "18012014281"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents",
+            "title": "Utah Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Name variation: LSC lists Greater Ogden Aquatics Team; USA Swimming lists Greater Ogden Aquatic Team.",
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ut-hast",
+      "after": {
+        "kind": "team",
+        "title": "Hilltop Aquatic Swim Team",
+        "officialName": "Hilltop Aquatic Swim Team",
+        "abbreviation": "HAST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ut",
+        "lscId": "usa-lsc-ut",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.hilltopaquatics.org",
+        "sourceUrl": "https://www.gomotionapp.com/team/lscuts/page/documents",
+        "summary": "Hilltop Aquatic Swim Team is a swim team/program listed by Utah Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "American Fork, UT",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Utah Swimming",
+            "targetId": "usa-lsc-ut"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "coachloose@gmail.com",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "hast@hilltopaquatics.org",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(801-763-3084",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "DaNene Adamson",
+            "email": "hast@hilltopaquatics.org"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents",
+            "title": "Utah Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.hilltopaquatics.org",
+            "title": "Hilltop Aquatic Swim Team Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/ushast/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ut-kyat",
+      "after": {
+        "kind": "team",
+        "title": "Kearns Youth Aquatic Team",
+        "officialName": "Kearns Youth Aquatic Team",
+        "abbreviation": "KYAT",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ut",
+        "lscId": "usa-lsc-ut",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.kyat.org",
+        "sourceUrl": "https://www.gomotionapp.com/team/lscuts/page/documents",
+        "summary": "Kearns Youth Aquatic Team is a swim team/program listed by Utah Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Salt Lake City, UT",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Utah Swimming",
+            "targetId": "usa-lsc-ut"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "asharp@oquirrhrec.org",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "chornepolo@yahoo.com",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(801-808-2617",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Norda Barrowes",
+            "email": "nbarrowes@kopfc.com",
+            "phone": "18015454113"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents",
+            "title": "Utah Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.kyat.org",
+            "title": "Kearns Youth Aquatic Team Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.kyat.org/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ut-lehi",
+      "after": {
+        "kind": "team",
+        "title": "Lehi Aquatics Team",
+        "officialName": "Lehi Aquatics Team",
+        "abbreviation": "LEHI",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ut",
+        "lscId": "usa-lsc-ut",
+        "zoneId": "usa-zone-western",
+        "website": null,
+        "sourceUrl": "https://www.gomotionapp.com/team/lscuts/page/documents",
+        "summary": "Lehi Aquatics Team is a swim team/program listed by Utah Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Club-specific coverage not established; listed within Utah Swimming.",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Utah Swimming",
+            "targetId": "usa-lsc-ut"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "michaelking330@yahoo.com",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "801-227-9409",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents",
+            "title": "Utah Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Official team website not established from available sources.",
+          "Club-specific service area / location not established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ut-life",
+      "after": {
+        "kind": "team",
+        "title": "Life Time",
+        "officialName": "Life Time",
+        "abbreviation": "LIFE",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ut",
+        "lscId": "usa-lsc-ut",
+        "zoneId": "usa-zone-western",
+        "website": null,
+        "sourceUrl": "https://www.gomotionapp.com/team/lscuts/page/documents",
+        "summary": "Life Time is a swim team/program listed by Utah Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Club-specific coverage not established; listed within Utah Swimming.",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Utah Swimming",
+            "targetId": "usa-lsc-ut"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "krohlf@lt.life",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "406-799-2817",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents",
+            "title": "Utah Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Official team website not established from available sources.",
+          "Club-specific service area / location not established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ut-mac",
+      "after": {
+        "kind": "team",
+        "title": "Murray Aquatic Club",
+        "officialName": "Murray Aquatic Club",
+        "abbreviation": "MAC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ut",
+        "lscId": "usa-lsc-ut",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/team/utmac/page/home",
+        "sourceUrl": "https://www.gomotionapp.com/team/lscuts/page/documents",
+        "summary": "Murray Aquatic Club is a swim team/program listed by Utah Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Salt Lake City, UT",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Utah Swimming",
+            "targetId": "usa-lsc-ut"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "uacero@murray.utah.gov",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "323-401-7093",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Ulysses Acero",
+            "email": "uacero@murray.utah.gov",
+            "phone": "18012904183"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents",
+            "title": "Utah Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.teamunify.com/team/utmac/page/home",
+            "title": "Murray Aquatic Club Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/utmac/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ut-oa",
+      "after": {
+        "kind": "team",
+        "title": "Omega Aquatics",
+        "officialName": "Omega Aquatics",
+        "abbreviation": "OA",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ut",
+        "lscId": "usa-lsc-ut",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.SwimOA.com",
+        "sourceUrl": "https://www.gomotionapp.com/team/lscuts/page/documents",
+        "summary": "Omega Aquatics is a swim team/program listed by Utah Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Salt Lake City, UT",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Utah Swimming",
+            "targetId": "usa-lsc-ut"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "thorum.realtor@gmail.com",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "tthorum@gmail.com",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "801-824-1890",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Tom Thorum",
+            "email": "coachthorum@gmail.com",
+            "phone": "18019132786"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents",
+            "title": "Utah Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.SwimOA.com",
+            "title": "Home",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ut-pcs",
+      "after": {
+        "kind": "team",
+        "title": "Park City Swimming",
+        "officialName": "Park City Swimming",
+        "abbreviation": "PCS",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ut",
+        "lscId": "usa-lsc-ut",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.parkcityswiming.net",
+        "sourceUrl": "https://www.gomotionapp.com/team/lscuts/page/documents",
+        "summary": "Park City Swimming is a swim team/program listed by Utah Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Park City, UT",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Utah Swimming",
+            "targetId": "usa-lsc-ut"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "gadishamah@gmail.com",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "415-302-4320",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Gadi Shamah",
+            "email": "pcscoach@pcschools.us",
+            "phone": "14153024320"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents",
+            "title": "Utah Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ut-ps",
+      "after": {
+        "kind": "team",
+        "title": "Piranha Swimming",
+        "officialName": "Piranha Swimming",
+        "abbreviation": "PS",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ut",
+        "lscId": "usa-lsc-ut",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.piranhaswimteam.net",
+        "sourceUrl": "https://www.gomotionapp.com/team/lscuts/page/documents",
+        "summary": "Piranha Swimming is a swim team/program listed by Utah Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Ogden, UT; Riverdale, UT",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Utah Swimming",
+            "targetId": "usa-lsc-ut"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "swimwithpiranha@gmail.com",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "801-394-7935",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Nathan Toll",
+            "email": "swimwithpiranha@gmail.com",
+            "phone": "18013947935"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Nathan Toll",
+            "email": "ntoll@wsd.net",
+            "phone": "18013947935"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Jan Carlsen",
+            "email": "swimwithpiranha@gmail.com",
+            "phone": "18013947935"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents",
+            "title": "Utah Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.piranhaswimteam.net",
+            "title": "Contact Us",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://piranhaswimteam.net/index.html"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ut-psc",
+      "after": {
+        "kind": "team",
+        "title": "Pirate Swim Club",
+        "officialName": "Pirate Swim Club",
+        "abbreviation": "PSC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ut",
+        "lscId": "usa-lsc-ut",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.pirateswimclub.com",
+        "sourceUrl": "https://www.gomotionapp.com/team/lscuts/page/documents",
+        "summary": "Pirate Swim Club is a swim team/program listed by Utah Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Magna, UT",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Utah Swimming",
+            "targetId": "usa-lsc-ut"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "malloryrodriguez.psc@gmail.com",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "turtle2277@hotmail.com",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(801-598-9692",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Sheila Homer",
+            "email": "turtle2277@hotmail.com",
+            "phone": "18015989692"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents",
+            "title": "Utah Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ut-swmi",
+      "after": {
+        "kind": "team",
+        "title": "RACE SWAMI",
+        "officialName": "RACE SWAMI",
+        "abbreviation": "SWMI",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ut",
+        "lscId": "usa-lsc-ut",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.raceswami.org",
+        "sourceUrl": "https://www.gomotionapp.com/team/lscuts/page/documents",
+        "summary": "RACE SWAMI is a swim team/program listed by Utah Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Salt Lake City, UT; West Valley City, UT",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Utah Swimming",
+            "targetId": "usa-lsc-ut"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "emilyruthdixon@gmail.com",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "info@raceswami.org",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "801-970-1187",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Matt Finnigan",
+            "email": "raceswamiswims@gmail.com",
+            "phone": "18012435718"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents",
+            "title": "Utah Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.raceswami.org",
+            "title": "Race Swami - Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://raceswami.org/"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ut-ssc",
+      "after": {
+        "kind": "team",
+        "title": "Skyline Swim Club",
+        "officialName": "Skyline Swim Club",
+        "abbreviation": "SSC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ut",
+        "lscId": "usa-lsc-ut",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.skylineswimclub.com",
+        "sourceUrl": "https://www.gomotionapp.com/team/lscuts/page/documents",
+        "summary": "Skyline Swim Club is a swim team/program listed by Utah Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Salt Lake City, UT",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Utah Swimming",
+            "targetId": "usa-lsc-ut"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "coachkristoff@skylineswimclub.com",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "mailtocoachkristoff@skylineswimclub.com",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "vicepresident@skylineswimclub.com",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Heather Hale",
+            "email": "vicepresident@skylineswimclub.com",
+            "phone": "18016417223"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents",
+            "title": "Utah Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.skylineswimclub.com",
+            "title": "Skyline Swim Club | Join Our Team\u2014Register Today!",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.skylineswimclub.com/"
+          }
+        ],
+        "gaps": [
+          "The LSC directory has inconsistent email text and mailto targets; confirmation is needed."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ut-sdat",
+      "after": {
+        "kind": "team",
+        "title": "South Davis Aquatic Team",
+        "officialName": "South Davis Aquatic Team",
+        "abbreviation": "SDAT",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ut",
+        "lscId": "usa-lsc-ut",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/team/utsdat/page/home",
+        "sourceUrl": "https://www.gomotionapp.com/team/lscuts/page/documents",
+        "summary": "South Davis Aquatic Team is a swim team/program listed by Utah Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Bountiful, UT",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Utah Swimming",
+            "targetId": "usa-lsc-ut"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "chad@southdavisrecreation.com",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "scott@southdavisrecreation.com",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(801-298-6226",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Chad Reimschussel",
+            "email": "Chad@southdavisrecreation.com",
+            "phone": "18012986220"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents",
+            "title": "Utah Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.teamunify.com/team/utsdat/page/home",
+            "title": "South Davis Aquatic Team Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/utsdat/page/home"
+          }
+        ],
+        "gaps": [
+          "Name variation: LSC lists South Davis Aquatic Team; USA Swimming lists South Davis Aquatics Team."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ut-susa",
+      "after": {
+        "kind": "team",
+        "title": "Southern Utah Swimming Association",
+        "officialName": "Southern Utah Swimming Association",
+        "abbreviation": "SUSA",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ut",
+        "lscId": "usa-lsc-ut",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.susastingrays.com",
+        "sourceUrl": "https://www.gomotionapp.com/team/lscuts/page/documents",
+        "summary": "Southern Utah Swimming Association is a swim team/program listed by Utah Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Saint George, UT; Washington, UT",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Utah Swimming",
+            "targetId": "usa-lsc-ut"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "susacoachdani@gmail.com",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "435-669-6093",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Dani Caldwell",
+            "email": "susacoachdani@gmail.com",
+            "phone": "14356696093"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents",
+            "title": "Utah Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ut-surf",
+      "after": {
+        "kind": "team",
+        "title": "Surfers Swim Team",
+        "officialName": "Surfers Swim Team",
+        "abbreviation": "SURF",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ut",
+        "lscId": "usa-lsc-ut",
+        "zoneId": "usa-zone-western",
+        "website": null,
+        "sourceUrl": "https://www.gomotionapp.com/team/lscuts/page/documents",
+        "summary": "Surfers Swim Team is a swim team/program listed by Utah Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Club-specific coverage not established; listed within Utah Swimming.",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Utah Swimming",
+            "targetId": "usa-lsc-ut"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "coachkyle@laytonswimming.com",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "801-583-2787",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents",
+            "title": "Utah Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Official team website not established from available sources.",
+          "Club-specific service area / location not established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ut-slc",
+      "after": {
+        "kind": "team",
+        "title": "Swim Lake City Legends",
+        "officialName": "Swim Lake City Legends",
+        "abbreviation": "SLC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ut",
+        "lscId": "usa-lsc-ut",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.slclegends.com",
+        "sourceUrl": "https://www.gomotionapp.com/team/lscuts/page/documents",
+        "summary": "Swim Lake City Legends is a swim team/program listed by Utah Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Salt Lake City, UT",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Utah Swimming",
+            "targetId": "usa-lsc-ut"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "slclegends@gmail.com",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "801-946-4166",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Mark Shveyd",
+            "email": "slclegends@gmail.com",
+            "phone": "18019464166"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents",
+            "title": "Utah Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ut-tsc",
+      "after": {
+        "kind": "team",
+        "title": "Tooele Sea Serpents",
+        "officialName": "Tooele Sea Serpents",
+        "abbreviation": "TSC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ut",
+        "lscId": "usa-lsc-ut",
+        "zoneId": "usa-zone-western",
+        "website": null,
+        "sourceUrl": "https://www.gomotionapp.com/team/lscuts/page/documents",
+        "summary": "Tooele Sea Serpents is a swim team/program listed by Utah Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Tooele, UT",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Utah Swimming",
+            "targetId": "usa-lsc-ut"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "tooeleseaserpents@gmail.com",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "435-224-1662",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Sam Cox",
+            "email": "scox@tooelecity.org",
+            "phone": "14358823247"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents",
+            "title": "Utah Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Official team website not established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ut-utah",
+      "after": {
+        "kind": "team",
+        "title": "Utah Aquatics",
+        "officialName": "Utah Aquatics",
+        "abbreviation": "UTAH",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ut",
+        "lscId": "usa-lsc-ut",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.utahutes.com",
+        "sourceUrl": "https://www.gomotionapp.com/team/lscuts/page/documents",
+        "summary": "Utah Aquatics is a swim team/program listed by Utah Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Salt Lake City, UT",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Utah Swimming",
+            "targetId": "usa-lsc-ut"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "jpersson@huntsman.utah.edu",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "jsmith@huntsman.utah.edu",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(801-209-5668",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Joseph Dykstra",
+            "email": "jdykstra@huntsman.utah.edu",
+            "phone": "18015815480"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents",
+            "title": "Utah Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.utahutes.com",
+            "title": "University of Utah Athletics - Official Athletics Website",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://utahutes.com/"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ut-uva",
+      "after": {
+        "kind": "team",
+        "title": "Utah Valley Aquatics",
+        "officialName": "Utah Valley Aquatics",
+        "abbreviation": "UVA",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ut",
+        "lscId": "usa-lsc-ut",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.uvrays.org",
+        "sourceUrl": "https://www.gomotionapp.com/team/lscuts/page/documents",
+        "summary": "Utah Valley Aquatics is a swim team/program listed by Utah Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Orem, UT; Provo, UT",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Utah Swimming",
+            "targetId": "usa-lsc-ut"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "ofelia.allen@gmail.com",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "sarahlynnlemmons@gmail.com",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "uvrays.admin@gmail.com",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "801-357-9481",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Ofelia Allen",
+            "email": "uvrays.admin@gmail.com",
+            "phone": "18013608250"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents",
+            "title": "Utah Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "The LSC directory has inconsistent email text and mailto targets; confirmation is needed."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ut-wffm",
+      "after": {
+        "kind": "team",
+        "title": "Wasatch Front Fish Market",
+        "officialName": "Wasatch Front Fish Market",
+        "abbreviation": "WFFM",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ut",
+        "lscId": "usa-lsc-ut",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/utwffm/page/home",
+        "sourceUrl": "https://www.gomotionapp.com/team/lscuts/page/documents",
+        "summary": "Wasatch Front Fish Market is a swim team/program listed by Utah Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Draper, UT; Herriman, UT; Salt Lake City, UT; South Jordan, UT",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Utah Swimming",
+            "targetId": "usa-lsc-ut"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "fishmarketswimming@gmail.com",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "ronlockwood@live.com",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(801-819-6878",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Allen Jones",
+            "email": "fishmarketswimming@gmail.com",
+            "phone": "18018196878"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Allen Jones",
+            "email": "coachallenjones@gmail.com",
+            "phone": "18018196878"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents",
+            "title": "Utah Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/utwffm/page/home",
+            "title": "Wasatch Front Fish Market Home",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ut-wsc",
+      "after": {
+        "kind": "team",
+        "title": "Wasatch Swim Club",
+        "officialName": "Wasatch Swim Club",
+        "abbreviation": "WSC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ut",
+        "lscId": "usa-lsc-ut",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.wasatchswimclub.com",
+        "sourceUrl": "https://www.gomotionapp.com/team/lscuts/page/documents",
+        "summary": "Wasatch Swim Club is a swim team/program listed by Utah Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Heber City, UT",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Utah Swimming",
+            "targetId": "usa-lsc-ut"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "dntesch@gmail.com",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "stmarsing1@gmail.com",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(801-897-6787",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Dennis Tesch",
+            "email": "dennis.tesch@wasatch.edu",
+            "phone": "14356543450"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents",
+            "title": "Utah Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.wasatchswimclub.com",
+            "title": "Wasatch Swim Club Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/utwcst/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ut-wwd",
+      "after": {
+        "kind": "team",
+        "title": "Wasatch Water Dragons",
+        "officialName": "Wasatch Water Dragons",
+        "abbreviation": "WWD",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ut",
+        "lscId": "usa-lsc-ut",
+        "zoneId": "usa-zone-western",
+        "website": "https://wasatchwaterdragons.commitswim.com",
+        "sourceUrl": "https://www.gomotionapp.com/team/lscuts/page/documents",
+        "summary": "Wasatch Water Dragons is a swim team/program listed by Utah Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Sandy, UT",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Utah Swimming",
+            "targetId": "usa-lsc-ut"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "chadstarks@gmail.com",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "waterdragonswimming@gmail.com",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(801-631-5268",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Chad Starks",
+            "email": "waterdragonswimming@gmail.com",
+            "phone": "18019101348"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Chandra Starks",
+            "email": "waterdragonswimming@gmail.com",
+            "phone": "18016315268"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents",
+            "title": "Utah Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ut-wva",
+      "after": {
+        "kind": "team",
+        "title": "West Valley Aquatics",
+        "officialName": "West Valley Aquatics",
+        "abbreviation": "WVA",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ut",
+        "lscId": "usa-lsc-ut",
+        "zoneId": "usa-zone-western",
+        "website": null,
+        "sourceUrl": "https://www.gomotionapp.com/team/lscuts/page/documents",
+        "summary": "West Valley Aquatics is a swim team/program listed by Utah Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Club-specific coverage not established; listed within Utah Swimming.",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Utah Swimming",
+            "targetId": "usa-lsc-ut"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "clint.burnham@wvc-ut.gov",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "mhillman90@gmail.com",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(801-955-4015",
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/lscuts/page/documents",
+            "title": "Utah Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Official team website not established from available sources.",
+          "Club-specific service area / location not established from available sources."
+        ]
+      }
+    }
+  ]
+}

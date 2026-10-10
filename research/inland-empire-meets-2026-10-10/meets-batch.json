@@ -1,0 +1,1893 @@
+{
+  "division": "knowledge",
+  "scope": "Inland Empire Swimming meets: October 10, 2025\u2013October 10, 2026 (30 past meets plus today\u2019s SWAT Fall Challenge)",
+  "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past",
+  "capturedAt": "2026-10-10T08:04:32.122686+00:00",
+  "coverage": "partial",
+  "evidence": {
+    "method": "Official Inland Empire Swimming public event archive and upcoming listings, filtered by date; event descriptions checked for cancellations and corrections. Official attachment lists retain announcement and result links.",
+    "dateWindow": {
+      "from": "2025-10-10",
+      "through": "2026-10-10",
+      "timezone": "America/Los_Angeles"
+    },
+    "coverage": "31 meet records. Excludes governance meetings, three canceled meets, and meets beginning after October 10. Today\u2019s October 10\u201311 meet is retained as a whole event, not marked completed.",
+    "limitations": "Covers the official LSC event listings; not an exhaustive search of separately observed school meets or every club time trial. Results links are attached, not individual swimmer results imported.",
+    "duplicateCheck": "Compared stable IDs and existing published meet records; no published meet records were present.",
+    "sources": [
+      "past-events.json",
+      "upcoming-events.json",
+      "meet-documents.json",
+      "announcement-captures.json"
+    ],
+    "corrections": [
+      "TCCC Winter Invite: Jan 31\u2013Feb 1, not Jan 24\u201325; corroborated by sanctioned announcement.",
+      "Junior Championships: Cougar Aquatics at WSU Gibb Pool after Moses Lake pool failure.",
+      "Pendleton Open: July 4\u20135 in event archive, not July 3\u20135 in master calendar.",
+      "Vandal Invitational Dec 5\u20137, 2025 canceled in event description although cancellation absent from title."
+    ],
+    "excluded": [
+      {
+        "id": 1630930,
+        "title": "2025 EAST Octoberfest",
+        "reason": "Canceled due to facility closure"
+      },
+      {
+        "id": 1630944,
+        "title": "2025 Vandal Invitational",
+        "reason": "Canceled due to low entries"
+      },
+      {
+        "id": 1677357,
+        "title": "2026 Tony St Onge Memorial",
+        "reason": "Canceled due to Moses Lake pool closure"
+      }
+    ]
+  },
+  "writes": [
+    {
+      "path": "knowledge_entries/usa-meet-ie-1630931",
+      "after": {
+        "kind": "meet",
+        "title": "2025 IE SWAT October Challenge",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1630931",
+        "startsOn": "2025-10-18",
+        "endsOn": "2025-10-19",
+        "lscId": "usa-lsc-ie",
+        "zoneId": "usa-zone-western",
+        "hostTeamId": "usa-team-ie-swat",
+        "hostTeamName": "Spokane Waves Aquatic Team",
+        "location": "Whitworth University, Spokane, WA",
+        "summary": "Spokane Waves Aquatic Team meet at Whitworth University, Spokane, WA. Official results files posted.",
+        "status": "past",
+        "resultsStatus": "published",
+        "documents": [
+          {
+            "name": "2025 IE SWAT Fall Challenge.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1445901_372d9439-350b-41e0-a1bc-2a371f786104.pdf",
+            "type": "meet_document"
+          },
+          {
+            "name": "2025 SWAT Fall Challenge Results.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1476577_67387a99-d69c-4559-b13c-c663f94974a3.pdf",
+            "type": "results"
+          },
+          {
+            "name": "Meet Events-2025 SWAT Fall Challenge-18Oct2025-001.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1467040_db6c3ade-6535-4c55-84e5-d3d075009426.zip",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Results-2025 SWAT Fall Challenge-18Oct2025-001.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1476576_428b7db1-c548-4748-92f6-94ea9e1153d0.zip",
+            "type": "results"
+          }
+        ],
+        "checkedAt": "2026-10-10T08:04:32.122686+00:00",
+        "sourceEventId": "1630931",
+        "coverageNote": "Dates, host, location and attachment links verified against the official IES event listing. Individual swimmer results were not imported.",
+        "evidence": {
+          "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1630931",
+          "eventListingTitle": "2025 IE SWAT October Challenge",
+          "startDate": "2025-10-18",
+          "endDate": "2025-10-19",
+          "location": "Whitworth University, Spokane, WA",
+          "eventDescription": "** Zipped results file & PDF copy are posted below ** 10/03/25 -- CORRECTED Meet Entry File Posted Below The sanctioned meet announcement and meet entry files have been posted. Host: SWAT Entry Deadline: October 7, 2025",
+          "attachmentListUrl": "https://www.gomotionapp.com/rest/ondeck/v2/meetfile/1630931/teamEventFile/list?team=wzielsc",
+          "announcementCapture": {
+            "id": 1630931,
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1445901_372d9439-350b-41e0-a1bc-2a371f786104.pdf",
+            "name": "2025 IE SWAT Fall Challenge.pdf",
+            "file": "announcements/1630931.pdf",
+            "bytes": 426011,
+            "sha256": "8347f3fe518ee60a8988ae94652d7179fbc9de0a9be6029c6dc5863729984d0d"
+          }
+        },
+        "discipline": "pool"
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-meet-ie-1630932",
+      "after": {
+        "kind": "meet",
+        "title": "2025 IE LGSC Spooktacular",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1630932",
+        "startsOn": "2025-10-25",
+        "endsOn": "2025-10-26",
+        "lscId": "usa-lsc-ie",
+        "zoneId": "usa-zone-western",
+        "hostTeamId": "usa-team-ie-lgsc",
+        "hostTeamName": "La Grande Swim Club",
+        "location": "La Grande OR",
+        "summary": "La Grande Swim Club meet at La Grande OR. Official results files posted.",
+        "status": "past",
+        "resultsStatus": "published",
+        "documents": [
+          {
+            "name": "2025 IE LGSC Spooktacular Swim Meet.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1442675_64e7b909-1d09-4b15-bb32-103ba0535026.pdf",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Events-2025 Spooktacular Swim Meet-25Oct2025-001.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1449234_ce789113-e363-4299-9c7a-c3a5c86e81a5.zip",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Results-2025 Spooktacular Swim Meet-25Oct2025-001.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1480405_52b53059-b2cb-4de8-a62d-a7cc1f424f6e.zip",
+            "type": "results"
+          },
+          {
+            "name": "meet_results.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1480406_f81e3a42-edfd-4fad-818e-bb929251e1d8.pdf",
+            "type": "results"
+          }
+        ],
+        "checkedAt": "2026-10-10T08:04:32.122686+00:00",
+        "sourceEventId": "1630932",
+        "coverageNote": "Dates, host, location and attachment links verified against the official IES event listing. Individual swimmer results were not imported.",
+        "evidence": {
+          "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1630932",
+          "eventListingTitle": "2025 IE LGSC Spooktacular",
+          "startDate": "2025-10-25",
+          "endDate": "2025-10-26",
+          "location": "La Grande OR",
+          "eventDescription": "** Zipped Results & PDF copy are posted Below ** The sanctioned meet announcement and meet entry files have been posted. Host: LGSC Entry Deadline: October 15, 2025",
+          "attachmentListUrl": "https://www.gomotionapp.com/rest/ondeck/v2/meetfile/1630932/teamEventFile/list?team=wzielsc",
+          "announcementCapture": {
+            "id": 1630932,
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1442675_64e7b909-1d09-4b15-bb32-103ba0535026.pdf",
+            "name": "2025 IE LGSC Spooktacular Swim Meet.pdf",
+            "file": "announcements/1630932.pdf",
+            "bytes": 169097,
+            "sha256": "ee27b62d00ff2228d5468c0db64e6279f8a182470733202ed109e81523b06483"
+          }
+        },
+        "discipline": "pool"
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-meet-ie-1630933",
+      "after": {
+        "kind": "meet",
+        "title": "2025 IE VS Very Scary",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1630933",
+        "startsOn": "2025-10-25",
+        "endsOn": "2025-10-26",
+        "lscId": "usa-lsc-ie",
+        "zoneId": "usa-zone-western",
+        "hostTeamId": "velocity-swimming",
+        "hostTeamName": "Velocity Swimming",
+        "location": "Eastmont Aquatic Center, East Wenatchee, WA",
+        "summary": "Velocity Swimming meet at Eastmont Aquatic Center, East Wenatchee, WA. Official results files posted.",
+        "status": "past",
+        "resultsStatus": "published",
+        "documents": [
+          {
+            "name": "2025 IE VS Very Scary Open.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1455366_8d9e9e48-a6a3-4038-adcd-0324a8af9b8c.pdf",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Events-2025 IE VS Very Scary Open-25Oct2025-002.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1455367_0bb04fd3-402f-4cd9-b61a-ba4c679bf5f8.zip",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Results-2025 IE VS Very Scary Open-25Oct2025-001.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1480408_a5d7a138-2d0a-4a0f-85fe-8b55cc50cdc6.zip",
+            "type": "results"
+          }
+        ],
+        "checkedAt": "2026-10-10T08:04:32.122686+00:00",
+        "sourceEventId": "1630933",
+        "coverageNote": "Dates, host, location and attachment links verified against the official IES event listing. Individual swimmer results were not imported.",
+        "evidence": {
+          "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1630933",
+          "eventListingTitle": "2025 IE VS Very Scary",
+          "startDate": "2025-10-25",
+          "endDate": "2025-10-26",
+          "location": "Eastmont Aquatic Center, East Wenatchee, WA",
+          "eventDescription": "** Zipped results file is posted below ** The sanctioned meet announcement and meet entry files have been posted. Host: Velocity Swimming Entry Deadline: October 15, 2025",
+          "attachmentListUrl": "https://www.gomotionapp.com/rest/ondeck/v2/meetfile/1630933/teamEventFile/list?team=wzielsc",
+          "announcementCapture": {
+            "id": 1630933,
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1455366_8d9e9e48-a6a3-4038-adcd-0324a8af9b8c.pdf",
+            "name": "2025 IE VS Very Scary Open.pdf",
+            "file": "announcements/1630933.pdf",
+            "bytes": 366085,
+            "sha256": "f9729a589115c2c66bd0d211a3f5770707134fe7b377ecf0ae5284a8c343caf6"
+          }
+        },
+        "discipline": "pool"
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-meet-ie-1630935",
+      "after": {
+        "kind": "meet",
+        "title": "2025 IE VAN Trick-or-Treat",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1630935",
+        "startsOn": "2025-10-26",
+        "endsOn": "2025-10-26",
+        "lscId": "usa-lsc-ie",
+        "zoneId": "usa-zone-western",
+        "hostTeamId": "usa-team-ie-van",
+        "hostTeamName": "Vandal Aquatic Club",
+        "location": "U of I, Moscow, ID",
+        "summary": "Vandal Aquatic Club meet at U of I, Moscow, ID. Official results files posted.",
+        "status": "past",
+        "resultsStatus": "published",
+        "documents": [
+          {
+            "name": "high point results top 3-2025 VAN Trick Or Treat.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1480411_8451ec85-9b10-4431-84e5-15e03835f992.pdf",
+            "type": "results"
+          },
+          {
+            "name": "meet results - 2025 van trick or treat.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1480410_a80164fe-916a-4e52-9af4-e1d31a57e442.pdf",
+            "type": "results"
+          },
+          {
+            "name": "Meet Results-2025 IE VAN Trick or Treat Progressive Invita-26Oct2025-001.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1480409_79df2a4f-40e1-4b61-bb5e-f61d465e6853.zip",
+            "type": "results"
+          },
+          {
+            "name": "Sanctioned_2025 IE VAN Trick or Treat Progressive Invitational.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1460535_45aa3184-8c11-4aef-802c-4799c8f9078e.pdf",
+            "type": "meet_document"
+          }
+        ],
+        "checkedAt": "2026-10-10T08:04:32.122686+00:00",
+        "sourceEventId": "1630935",
+        "coverageNote": "Dates, host, location and attachment links verified against the official IES event listing. Individual swimmer results were not imported.",
+        "evidence": {
+          "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1630935",
+          "eventListingTitle": "2025 IE VAN Trick-or-Treat",
+          "startDate": "2025-10-26",
+          "endDate": "2025-10-26",
+          "location": "U of I, Moscow, ID",
+          "eventDescription": "** Zipped results file & PDF copies are posted below ** The sanctioned meet announcement has been posted. Teams interested in attending this meet should contact Meet Director Jody Broyles jodybroyles1@gmail.com to confirm that there is still room available. Host: VAN Entry Deadline: October 15, 2025",
+          "attachmentListUrl": "https://www.gomotionapp.com/rest/ondeck/v2/meetfile/1630935/teamEventFile/list?team=wzielsc",
+          "announcementCapture": {
+            "id": 1630935,
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1460535_45aa3184-8c11-4aef-802c-4799c8f9078e.pdf",
+            "name": "Sanctioned_2025 IE VAN Trick or Treat Progressive Invitational.pdf",
+            "file": "announcements/1630935.pdf",
+            "bytes": 280077,
+            "sha256": "f076d12c9b229393bdad1dd0523f45713d4d1160f3aacd94546c7ba2cc9b5055"
+          }
+        },
+        "discipline": "pool"
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-meet-ie-1630939",
+      "after": {
+        "kind": "meet",
+        "title": "2025 IE MRA Thankswimming",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1630939",
+        "startsOn": "2025-11-15",
+        "endsOn": "2025-11-16",
+        "lscId": "usa-lsc-ie",
+        "zoneId": "usa-zone-western",
+        "hostTeamId": "usa-team-ie-mra",
+        "hostTeamName": "Manta Ray Aquatics",
+        "location": "Moses Lake WA",
+        "summary": "Manta Ray Aquatics meet at Moses Lake WA. Official results files posted.",
+        "status": "past",
+        "resultsStatus": "published",
+        "documents": [
+          {
+            "name": "2025 Thankswimming Open.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1461380_2d0af2d8-dcdc-4a20-9380-964034d81e57.pdf",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Events-2025 Thankswimming Open-15Nov2025-001.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1461379_b919f6ef-d7d7-40ba-b305-e0b5ae59bd37.zip",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Results-2025 Thankswimming Open - copied-15Nov2025-001.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1493990_d85d37e0-a1c1-46c3-b6dc-2abb1624694c.zip",
+            "type": "results"
+          }
+        ],
+        "checkedAt": "2026-10-10T08:04:32.122686+00:00",
+        "sourceEventId": "1630939",
+        "coverageNote": "Dates, host, location and attachment links verified against the official IES event listing. Individual swimmer results were not imported.",
+        "evidence": {
+          "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1630939",
+          "eventListingTitle": "2025 IE MRA Thankswimming",
+          "startDate": "2025-11-15",
+          "endDate": "2025-11-16",
+          "location": "Moses Lake WA",
+          "eventDescription": "** Zipped Meet Results File posted below ** The sanctioned meet announcement and meet entry files have been posted. Host: MRA Entry Deadline: November 5, 2025",
+          "attachmentListUrl": "https://www.gomotionapp.com/rest/ondeck/v2/meetfile/1630939/teamEventFile/list?team=wzielsc",
+          "announcementCapture": {
+            "id": 1630939,
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1461380_2d0af2d8-dcdc-4a20-9380-964034d81e57.pdf",
+            "name": "2025 Thankswimming Open.pdf",
+            "file": "announcements/1630939.pdf",
+            "bytes": 277734,
+            "sha256": "8852eacf9bc1b061ba8a281eb887eaf127d18f52e54879fe649a8b72b08e6c0a"
+          }
+        },
+        "discipline": "pool"
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-meet-ie-1630942",
+      "after": {
+        "kind": "meet",
+        "title": "2025 IE CAST Adam England Memorial Fall Splash",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1630942",
+        "startsOn": "2025-11-21",
+        "endsOn": "2025-11-23",
+        "lscId": "usa-lsc-ie",
+        "zoneId": "usa-zone-western",
+        "hostTeamId": "usa-team-ie-cast",
+        "hostTeamName": "Coeur d\u2019Alene Area Swim Team",
+        "location": "KROC Center, CDA ID",
+        "summary": "Coeur d\u2019Alene Area Swim Team meet at KROC Center, CDA ID. Official results files posted.",
+        "status": "past",
+        "resultsStatus": "published",
+        "documents": [
+          {
+            "name": "2025 AE Fall Splash Sanction (1).pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1467840_2a93a3c3-fa68-4f3c-95e1-f7230599ea3e.pdf",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Events-2025 Adam England Memorial Fall Splash-21Nov2025-001.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1473654_4fd7da58-641b-48df-b69d-338f344d9660.zip",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Results-2025 Adam England Memorial Fall Splash-21Nov2025-001.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1493992_6a79e4b1-d47c-47fa-b104-3bbc6093a3a0.zip",
+            "type": "results"
+          }
+        ],
+        "checkedAt": "2026-10-10T08:04:32.122686+00:00",
+        "sourceEventId": "1630942",
+        "coverageNote": "Dates, host, location and attachment links verified against the official IES event listing. Individual swimmer results were not imported.",
+        "evidence": {
+          "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1630942",
+          "eventListingTitle": "2025 IE CAST Adam England Memorial Fall Splash",
+          "startDate": "2025-11-21",
+          "endDate": "2025-11-23",
+          "location": "KROC Center, CDA ID",
+          "eventDescription": "** Zipped Meet Results File posted below ** The sanctioned meet announcement and meet entry files have been posted. Host: CAST Entry Deadline: November 10, 2025",
+          "attachmentListUrl": "https://www.gomotionapp.com/rest/ondeck/v2/meetfile/1630942/teamEventFile/list?team=wzielsc",
+          "announcementCapture": {
+            "id": 1630942,
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1467840_2a93a3c3-fa68-4f3c-95e1-f7230599ea3e.pdf",
+            "name": "2025 AE Fall Splash Sanction (1).pdf",
+            "file": "announcements/1630942.pdf",
+            "bytes": 237551,
+            "sha256": "05b39c351438f5e17ab08d05a600ccfaeba15e57aae3186f3e15684df9b98f76"
+          }
+        },
+        "discipline": "pool"
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-meet-ie-1630945",
+      "after": {
+        "kind": "meet",
+        "title": "2025 IE SWAT Winter Invite",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1630945",
+        "startsOn": "2025-12-05",
+        "endsOn": "2025-12-07",
+        "lscId": "usa-lsc-ie",
+        "zoneId": "usa-zone-western",
+        "hostTeamId": "usa-team-ie-swat",
+        "hostTeamName": "Spokane Waves Aquatic Team",
+        "location": "Whitworth University - Spokane WA",
+        "summary": "Spokane Waves Aquatic Team meet at Whitworth University - Spokane WA. Official results files posted.",
+        "status": "past",
+        "resultsStatus": "published",
+        "documents": [
+          {
+            "name": "2025 SWATWinter Invite Sanction.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1467799_0778cc9e-9c56-4111-9bb7-83c8811bb6b0.pdf",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Results-2025 SWAT Winter Invite-05Dec2025-001.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1529541_48d6522f-786f-4e65-8f53-029a2106781e.zip",
+            "type": "results"
+          }
+        ],
+        "checkedAt": "2026-10-10T08:04:32.122686+00:00",
+        "sourceEventId": "1630945",
+        "coverageNote": "Dates, host, location and attachment links verified against the official IES event listing. Individual swimmer results were not imported.",
+        "evidence": {
+          "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1630945",
+          "eventListingTitle": "2025 IE SWAT Winter Invite",
+          "startDate": "2025-12-05",
+          "endDate": "2025-12-07",
+          "location": "Whitworth University - Spokane WA",
+          "eventDescription": "** Corrected zipped results file has been posted below ** The sanctioned meet announcment has been posted. Teams interested in attending this meet should contact Admin Official Kathryn Teske. Host: SWAT Entry Deadline: Tuesday, November 25, 2025",
+          "attachmentListUrl": "https://www.gomotionapp.com/rest/ondeck/v2/meetfile/1630945/teamEventFile/list?team=wzielsc",
+          "announcementCapture": {
+            "id": 1630945,
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1467799_0778cc9e-9c56-4111-9bb7-83c8811bb6b0.pdf",
+            "name": "2025 SWATWinter Invite Sanction.pdf",
+            "file": "announcements/1630945.pdf",
+            "bytes": 529885,
+            "sha256": "f20625e4529133b8e5aa86a0fe4839c4122722c99df2f2823a901e9eeb457e74"
+          }
+        },
+        "discipline": "pool"
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-meet-ie-1630943",
+      "after": {
+        "kind": "meet",
+        "title": "2025 IE VS Christmas Open",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1630943",
+        "startsOn": "2025-12-06",
+        "endsOn": "2025-12-07",
+        "lscId": "usa-lsc-ie",
+        "zoneId": "usa-zone-western",
+        "hostTeamId": "velocity-swimming",
+        "hostTeamName": "Velocity Swimming",
+        "location": "Moses Lake High School, Moses Lake WA",
+        "summary": "Velocity Swimming meet at Moses Lake High School, Moses Lake WA. Official results files posted.",
+        "status": "past",
+        "resultsStatus": "published",
+        "documents": [
+          {
+            "name": "2025 IE VS Christmas Open R1.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1486770_a1eced62-6610-43ac-adf3-c3f733fde21d.pdf",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Events-2025 IE VS Christmas Open-06Dec2025-001.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1468351_59450cf9-ea61-4105-85e0-a6732b803a50.zip",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Results-2025 IE VS Christmas Open-06Dec2025-001-NO BDates.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1496448_86f9f51f-bf09-4547-8b4c-350b682e22ed.zip",
+            "type": "results"
+          }
+        ],
+        "checkedAt": "2026-10-10T08:04:32.122686+00:00",
+        "sourceEventId": "1630943",
+        "coverageNote": "Dates, host, location and attachment links verified against the official IES event listing. Individual swimmer results were not imported.",
+        "evidence": {
+          "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1630943",
+          "eventListingTitle": "2025 IE VS Christmas Open",
+          "startDate": "2025-12-06",
+          "endDate": "2025-12-07",
+          "location": "Moses Lake High School, Moses Lake WA",
+          "eventDescription": "** Zipped Results File is posted below ** Update 11/17/25: There was a typo in the meet announcement. Event #23 should be the Mixed 11-12 100 IM. The entry file is correct. The sanctioned meet announcement and meet entry files have been posted. Host: Velocity Swimming Entry Deadline: November 26, 2025",
+          "attachmentListUrl": "https://www.gomotionapp.com/rest/ondeck/v2/meetfile/1630943/teamEventFile/list?team=wzielsc",
+          "announcementCapture": {
+            "id": 1630943,
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1486770_a1eced62-6610-43ac-adf3-c3f733fde21d.pdf",
+            "name": "2025 IE VS Christmas Open R1.pdf",
+            "file": "announcements/1630943.pdf",
+            "bytes": 418680,
+            "sha256": "eac37eb39a584fc0b1caf1a8a934e361b600203eb2a5463aab7e90a4bbf11b9c"
+          }
+        },
+        "discipline": "pool"
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-meet-ie-1677347",
+      "after": {
+        "kind": "meet",
+        "title": "2026 IE WWSC January Storm",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1677347",
+        "startsOn": "2026-01-03",
+        "endsOn": "2026-01-04",
+        "lscId": "usa-lsc-ie",
+        "zoneId": "usa-zone-western",
+        "hostTeamId": "usa-team-ie-wwsc",
+        "hostTeamName": "Walla Walla Swim Club",
+        "location": "Whitman University, Walla Walla, WA",
+        "summary": "Walla Walla Swim Club meet at Whitman University, Walla Walla, WA. Official results files posted.",
+        "status": "past",
+        "resultsStatus": "published",
+        "documents": [
+          {
+            "name": "2026 january storm - final results with splits.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1504354_9ac0fd73-91c9-4ce9-ab51-ebe34cf32309.pdf",
+            "type": "results"
+          },
+          {
+            "name": "2026 january storm - final results without splits.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1504355_14b592d5-8874-4fce-b3ce-3350c3d3c823.pdf",
+            "type": "results"
+          },
+          {
+            "name": "2026 WWSC JANUARY STORM SWIM MEET INFO.pages (1).pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1489560_62d20647-2d11-44a3-9d3d-77a6ac335da3.pdf",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Events-January Storm-03Jan2026-003 (1).zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1488442_69f5bfef-f571-40c6-a548-cb50f52917dc.zip",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Results-January Storm-03Jan2026-001.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1504353_3c28462f-c7d7-4211-9cbd-6ed2ef6b67ea.zip",
+            "type": "results"
+          }
+        ],
+        "checkedAt": "2026-10-10T08:04:32.122686+00:00",
+        "sourceEventId": "1677347",
+        "coverageNote": "Dates, host, location and attachment links verified against the official IES event listing. Individual swimmer results were not imported.",
+        "evidence": {
+          "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1677347",
+          "eventListingTitle": "2026 IE WWSC January Storm",
+          "startDate": "2026-01-03",
+          "endDate": "2026-01-04",
+          "location": "Whitman University, Walla Walla, WA",
+          "eventDescription": "** Zipped Results File & PDF copies are posted below ** The sanctioned meet announcement and meet entry files have been posted. HOST: Walla Walla Swim Club Entry Deadline: December 22, 2025",
+          "attachmentListUrl": "https://www.gomotionapp.com/rest/ondeck/v2/meetfile/1677347/teamEventFile/list?team=wzielsc",
+          "announcementCapture": {
+            "id": 1677347,
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1489560_62d20647-2d11-44a3-9d3d-77a6ac335da3.pdf",
+            "name": "2026 WWSC JANUARY STORM SWIM MEET INFO.pages (1).pdf",
+            "file": "announcements/1677347.pdf",
+            "bytes": 88205,
+            "sha256": "1b7a613f00d86c80097c6c815696e6eadcc61c175af4daba22c9c28dd8805a06"
+          }
+        },
+        "discipline": "pool"
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-meet-ie-1677348",
+      "after": {
+        "kind": "meet",
+        "title": "2026 IE LCN Hells Canyon Winter Invitational",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1677348",
+        "startsOn": "2026-01-16",
+        "endsOn": "2026-01-18",
+        "lscId": "usa-lsc-ie",
+        "zoneId": "usa-zone-western",
+        "hostTeamId": "usa-team-ie-lcn",
+        "hostTeamName": "Lewis Clark Neptune Swimming",
+        "location": "Asotin County Pool, Clarkston, WA",
+        "summary": "Lewis Clark Neptune Swimming meet at Asotin County Pool, Clarkston, WA. Official results files posted.",
+        "status": "past",
+        "resultsStatus": "published",
+        "documents": [
+          {
+            "name": "2026 hells canyon high point.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1513876_6ebd3a67-5475-4e29-bea2-3e3dcf71ab9b.pdf",
+            "type": "meet_document"
+          },
+          {
+            "name": "2026 hells canyon meet results.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1513877_33641f40-7e80-4a78-b3b0-dc9bbbf3631b.pdf",
+            "type": "results"
+          },
+          {
+            "name": "2026 IE LCN Hells Canyon Open.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1504146_b745856e-4a41-4167-923c-ef396c9f00e9.pdf",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Events-2026 Hells Canyon Winter Invitational-16Jan2026-001.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1493013_dca5eed2-5b6e-4579-8d5b-304ce5986b8b.zip",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Results-2026 Hells Canyon Invitational-16Jan2026-001.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1513878_b334d151-ea35-42f8-b298-94747a115f26.zip",
+            "type": "results"
+          }
+        ],
+        "checkedAt": "2026-10-10T08:04:32.122686+00:00",
+        "sourceEventId": "1677348",
+        "coverageNote": "Dates, host, location and attachment links verified against the official IES event listing. Individual swimmer results were not imported.",
+        "evidence": {
+          "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1677348",
+          "eventListingTitle": "2026 IE LCN Hells Canyon Winter Invitational",
+          "startDate": "2026-01-16",
+          "endDate": "2026-01-18",
+          "location": "Asotin County Pool, Clarkston, WA",
+          "eventDescription": "*** Meet Results File & PDF copies are posted below *** 1/5/2026: Updated Sanction: Open events do not count towards daily event limit. The sanctioned meet announcement and meet entry files have been posted. Host: Lewis Clark Neptunes Entry Deadline: January 4, 2026",
+          "attachmentListUrl": "https://www.gomotionapp.com/rest/ondeck/v2/meetfile/1677348/teamEventFile/list?team=wzielsc",
+          "announcementCapture": {
+            "id": 1677348,
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1504146_b745856e-4a41-4167-923c-ef396c9f00e9.pdf",
+            "name": "2026 IE LCN Hells Canyon Open.pdf",
+            "file": "announcements/1677348.pdf",
+            "bytes": 280351,
+            "sha256": "2c799e44fb33313809c8c59d7e0ee8bc7e3cce69fb4f91c29e4767b7e31176e2"
+          }
+        },
+        "discipline": "pool"
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-meet-ie-1677350",
+      "after": {
+        "kind": "meet",
+        "title": "2026 IE COUG Cougar Winter Open",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1677350",
+        "startsOn": "2026-01-31",
+        "endsOn": "2026-02-01",
+        "lscId": "usa-lsc-ie",
+        "zoneId": "usa-zone-western",
+        "hostTeamId": "usa-team-ie-coug",
+        "hostTeamName": "Cougar Aquatics",
+        "location": "WSU Gibb Pool, Pullman, WA",
+        "summary": "Cougar Aquatics meet at WSU Gibb Pool, Pullman, WA. Official results files posted.",
+        "status": "past",
+        "resultsStatus": "published",
+        "documents": [
+          {
+            "name": "2026 IE Coug Winter Open.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1505423_1c2235a4-36e6-4876-8240-8a99577d6967.pdf",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Events-Coug Winter Open-31Jan2026-002.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1504707_ec1ed2bb-f1ed-4c66-92a3-b06be0668b1e.zip",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Results-Coug Winter Open-31Jan2026-001.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1519681_37bfa91a-ba90-4495-abba-63791cf72df0.zip",
+            "type": "results"
+          }
+        ],
+        "checkedAt": "2026-10-10T08:04:32.122686+00:00",
+        "sourceEventId": "1677350",
+        "coverageNote": "Dates, host, location and attachment links verified against the official IES event listing. Individual swimmer results were not imported.",
+        "evidence": {
+          "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1677350",
+          "eventListingTitle": "2026 IE COUG Cougar Winter Open",
+          "startDate": "2026-01-31",
+          "endDate": "2026-02-01",
+          "location": "WSU Gibb Pool, Pullman, WA",
+          "eventDescription": "***Zipped Results File Posted Below*** Update 1/7/26 * CORRECTED Meet Announcement has been posted. Update 01/06/26 * CORRECTED Meet Entry File has been posted below * Meet Entry Deadline: Sunday, January 25th Host: Cougar Aquatics Entry Deadline: Sunday, January 25, 2026",
+          "attachmentListUrl": "https://www.gomotionapp.com/rest/ondeck/v2/meetfile/1677350/teamEventFile/list?team=wzielsc",
+          "announcementCapture": {
+            "id": 1677350,
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1505423_1c2235a4-36e6-4876-8240-8a99577d6967.pdf",
+            "name": "2026 IE Coug Winter Open.pdf",
+            "file": "announcements/1677350.pdf",
+            "bytes": 206760,
+            "sha256": "1512f438d8b037c5ec0b8e733415a2bd32523c5c0d9830f5da734da54e9423b7"
+          }
+        },
+        "discipline": "pool"
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-meet-ie-1677349",
+      "after": {
+        "kind": "meet",
+        "title": "2026 IE TCCC Winter Open",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1677349",
+        "startsOn": "2026-01-31",
+        "endsOn": "2026-02-01",
+        "lscId": "usa-lsc-ie",
+        "zoneId": "usa-zone-western",
+        "hostTeamId": "usa-team-ie-tccc",
+        "hostTeamName": "Tri-City Channel Cats",
+        "location": "Tony St Onge Pool of Dreams, Moses Lake, WA",
+        "summary": "Tri-City Channel Cats meet at Tony St Onge Pool of Dreams, Moses Lake, WA. Official results files posted. The official event listing and sanctioned announcement place this meet on January 31\u2013February 1; the master calendar lists earlier dates.",
+        "status": "past",
+        "resultsStatus": "published",
+        "documents": [
+          {
+            "name": "2026 IE TCCC Winter Open.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1493740_fd6035b2-87e8-4b4b-bb11-4b7d6ed020bc.pdf",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Events-2026 Winter Open-31Jan2026-001.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1493741_b867b4cb-2014-480d-9e24-372ea3751ae5.zip",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Results-2026 Winter Open-31Jan2026-001.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1519682_84fc9709-c486-47e8-85a7-d07b9996d6d4.zip",
+            "type": "results"
+          }
+        ],
+        "checkedAt": "2026-10-10T08:04:32.122686+00:00",
+        "sourceEventId": "1677349",
+        "coverageNote": "Dates, host, location and attachment links verified against the official IES event listing. Individual swimmer results were not imported.",
+        "evidence": {
+          "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1677349",
+          "eventListingTitle": "2026 IE TCCC Winter Invite",
+          "startDate": "2026-01-31",
+          "endDate": "2026-02-01",
+          "location": "Tony St Onge Pool of Dreams, Moses Lake, WA",
+          "eventDescription": "***Zipped Results File posted below*** The sanctioned meet announcement and meet entry files have been posted. HOST: TCCC Entry Deadline: Wednesday, January 21, 2026",
+          "attachmentListUrl": "https://www.gomotionapp.com/rest/ondeck/v2/meetfile/1677349/teamEventFile/list?team=wzielsc",
+          "announcementCapture": {
+            "id": 1677349,
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1493740_fd6035b2-87e8-4b4b-bb11-4b7d6ed020bc.pdf",
+            "name": "2026 IE TCCC Winter Open.pdf",
+            "file": "announcements/1677349.pdf",
+            "bytes": 284817,
+            "sha256": "2140910123cd31fb5b827b5b423a1e4f7c1a949f5f6edbe691f03b0d70778855"
+          }
+        },
+        "sourceCorrection": "The official event listing and sanctioned announcement place this meet on January 31\u2013February 1; the master calendar lists earlier dates.",
+        "discipline": "pool"
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-meet-ie-1677352",
+      "after": {
+        "kind": "meet",
+        "title": "2026 IE VAN Vandal Mile Open",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1677352",
+        "startsOn": "2026-02-07",
+        "endsOn": "2026-02-07",
+        "lscId": "usa-lsc-ie",
+        "zoneId": "usa-zone-western",
+        "hostTeamId": "usa-team-ie-van",
+        "hostTeamName": "Vandal Aquatic Club",
+        "location": "University of Idaho Swim Center, Moscow, ID",
+        "summary": "Vandal Aquatic Club meet at University of Idaho Swim Center, Moscow, ID. Official results files posted.",
+        "status": "past",
+        "resultsStatus": "published",
+        "documents": [
+          {
+            "name": "Meet Events-2026 IE VAN Vandal Mile Open-07Feb2026-001.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1508204_75749f54-de3e-47f6-a220-05f94f3743c4.zip",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Results-2026 IE VAN Vandal Mile Open-07Feb2026-001.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1532077_2ae21ac1-791e-4c7f-9d23-03db503bae01.zip",
+            "type": "results"
+          },
+          {
+            "name": "R-1 SANCTION_2026 IE VAN Vandal Mile .pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1513880_822d9953-1f87-49e1-99c6-9c4776939cb2.pdf",
+            "type": "meet_document"
+          }
+        ],
+        "checkedAt": "2026-10-10T08:04:32.122686+00:00",
+        "sourceEventId": "1677352",
+        "coverageNote": "Dates, host, location and attachment links verified against the official IES event listing. Individual swimmer results were not imported.",
+        "evidence": {
+          "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1677352",
+          "eventListingTitle": "2026 IE VAN Vandal Mile Open",
+          "startDate": "2026-02-07",
+          "endDate": "2026-02-07",
+          "location": "University of Idaho Swim Center, Moscow, ID",
+          "eventDescription": "***Zipped Results File Posted Below*** UPDATE 01/22/26 - Revised Meet Schedule for this event: Facility Opens: 12:15 PM Warm-ups: 12:30 \u2013 1:00 PM Officials Meeting: 12:30 PM Coaches Meeting: 1:00 PM Timed Finals: 1:15 PM Revised Sanction (Meet Announcement) posted below ***************************************************************** This meet has been changed to OPEN -- the sanctioned meet annoucement and meet entry files are posted below. Entry Deadline: Wednesday, January 28, 2026 HOST: Vandal Aquatic Club",
+          "attachmentListUrl": "https://www.gomotionapp.com/rest/ondeck/v2/meetfile/1677352/teamEventFile/list?team=wzielsc",
+          "announcementCapture": {
+            "id": 1677352,
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1513880_822d9953-1f87-49e1-99c6-9c4776939cb2.pdf",
+            "name": "R-1 SANCTION_2026 IE VAN Vandal Mile .pdf",
+            "file": "announcements/1677352.pdf",
+            "bytes": 275823,
+            "sha256": "5be93b685e9378286fc8cd510397224d4acdc49fceae222022806a1c251bacd9"
+          }
+        },
+        "discipline": "pool"
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-meet-ie-1677354",
+      "after": {
+        "kind": "meet",
+        "title": "2026 IE IES Junior Championships",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1677354",
+        "startsOn": "2026-02-13",
+        "endsOn": "2026-02-15",
+        "lscId": "usa-lsc-ie",
+        "zoneId": "usa-zone-western",
+        "hostTeamId": "usa-team-ie-coug",
+        "hostTeamName": "Cougar Aquatics",
+        "location": "Gibb Pool/WSU Campus - Pullman, WA 99164",
+        "summary": "Cougar Aquatics meet at Gibb Pool/WSU Campus - Pullman, WA 99164. Official results files posted. Moved to WSU Gibb Pool with Cougar Aquatics as host after Moses Lake pool mechanical failure, per February 7 update.",
+        "status": "past",
+        "resultsStatus": "published",
+        "documents": [
+          {
+            "name": "(REVISED) 2026 IES Jr Champs \u2014 MEET ANNOUNCEMENT.pages.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1521355_f318129a-8df9-4008-902e-8cd438bfb7d7.pdf",
+            "type": "meet_document"
+          },
+          {
+            "name": "2026 ies jr champs - final results with splits.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1532079_e5c6ad00-efcf-4413-a110-cdf53fe03c15.pdf",
+            "type": "results"
+          },
+          {
+            "name": "2026 ies jr champs - final results without splits.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1532080_9bf13571-768c-4630-992d-59e6384b7343.pdf",
+            "type": "results"
+          },
+          {
+            "name": "2026 ies jr champs - individual high point.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1532081_c7423572-9c63-45d1-8319-4f9aab09b4c7.pdf",
+            "type": "meet_document"
+          },
+          {
+            "name": "2026 ies jr champs - team scores.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1532082_5fc7a8a9-3cc0-4a2a-9365-09a36511b743.pdf",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Events-2026 IES Jr Champs-13Feb2026-001.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1493009_e21421f3-e34e-4d83-803b-a47b7b49ab25.zip",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Results-(Pullman) 2026 IES Jr Champs-13Feb2026-001.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1532078_e3f6633b-f0c2-4cde-8cee-79f06a0ae4ba.zip",
+            "type": "results"
+          }
+        ],
+        "checkedAt": "2026-10-10T08:04:32.122686+00:00",
+        "sourceEventId": "1677354",
+        "coverageNote": "Dates, host, location and attachment links verified against the official IES event listing. Individual swimmer results were not imported.",
+        "evidence": {
+          "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1677354",
+          "eventListingTitle": "2026 IE IES Junior Championships * NEW LOCATION & HOST *",
+          "startDate": "2026-02-13",
+          "endDate": "2026-02-15",
+          "location": "Gibb Pool/WSU Campus - Pullman, WA 99164",
+          "eventDescription": "***Zipped Results File & PDFs are posted below*** UPDATE 02/07/26 Coaches, Due to a sudden mechanical failure, the Moses Lake Pool is no longer available to host the upcoming, Junior Championship Meet . The IES Technical Planning Committee has met and reviewed available options so that we can still offer this meet on February 13th-15th. The request was made of Cougar Aquatics and they have agreed to host the meet at Gibb Pool at WSU , despite extremely short notice. Teams will be allowed to update their entries with no penalty. The deadline for sending in your new Jr Champs entries is Monday, February 9th at 9pm. A revised Meet Announcement is posted below. The Coaches Zoom Meeting will be held Tuesday, February 10th @ 7:30 pm. Please contace me or the IES Office iesoffice@ieswim.org for the meeting link. Thank you for your understanding and flexibility given this very challenging circumstance. If you have any questions, please don't hesitate to contact me. Tia Pollick Championship Coordinator swimofficemom@gmail.com 509-554-3298",
+          "attachmentListUrl": "https://www.gomotionapp.com/rest/ondeck/v2/meetfile/1677354/teamEventFile/list?team=wzielsc",
+          "announcementCapture": {
+            "id": 1677354,
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1521355_f318129a-8df9-4008-902e-8cd438bfb7d7.pdf",
+            "name": "(REVISED) 2026 IES Jr Champs \u2014 MEET ANNOUNCEMENT.pages.pdf",
+            "file": "announcements/1677354.pdf",
+            "bytes": 435007,
+            "sha256": "e028e0f3be18c46e6a9a99bc3747b5fc2ac5e3b032cd33757df4fed044791277"
+          }
+        },
+        "sourceCorrection": "Moved to WSU Gibb Pool with Cougar Aquatics as host after Moses Lake pool mechanical failure, per February 7 update.",
+        "discipline": "pool"
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-meet-ie-1677356",
+      "after": {
+        "kind": "meet",
+        "title": "2026 IE Inland Empire Swimming Short Course Championships",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1677356",
+        "startsOn": "2026-02-27",
+        "endsOn": "2026-03-01",
+        "lscId": "usa-lsc-ie",
+        "zoneId": "usa-zone-western",
+        "hostTeamId": "usa-team-ie-van",
+        "hostTeamName": "Vandal Aquatic Club",
+        "location": "University of Idaho Swim Center, Moscow, ID",
+        "summary": "Vandal Aquatic Club meet at University of Idaho Swim Center, Moscow, ID. Official results files posted.",
+        "status": "past",
+        "resultsStatus": "published",
+        "documents": [
+          {
+            "name": "2026 IES SC Championships \u2014 MEET ANNOUNCEMENT.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1493031_ad07ab4e-423b-4ef3-9864-5a3822e504f3.pdf",
+            "type": "meet_document"
+          },
+          {
+            "name": "2026 ies sc champs - final results with splits.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1532089_513110cc-4008-4e70-baba-2f4370c45c7a.pdf",
+            "type": "results"
+          },
+          {
+            "name": "2026 ies sc champs - final results without splits.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1532090_5e1f9f1a-9f64-4250-a2e4-36115d986e60.pdf",
+            "type": "results"
+          },
+          {
+            "name": "2026 ies sc champs - final team scores.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1532091_0e8099f6-d2cb-4daf-89c3-71d5ca839811.pdf",
+            "type": "meet_document"
+          },
+          {
+            "name": "2026 ies sc champs - individual high point.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1532092_afa238cc-6c7d-4803-b6bf-cba1e6ef4c0a.pdf",
+            "type": "meet_document"
+          },
+          {
+            "name": "2026 ies sc champs - psych sheet.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1529061_ac73ee39-9290-4165-a43a-2d0f93b1aabb.pdf",
+            "type": "meet_document"
+          },
+          {
+            "name": "2026 ies sc champs - timeline.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1528994_ac1713ea-4f00-4917-8592-a4bad3021730.pdf",
+            "type": "meet_document"
+          },
+          {
+            "name": "2026 IES SC Champs Time Standards.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1493029_8e942832-a3c4-41ab-929e-88a3ce1fcb3d.pdf",
+            "type": "meet_document"
+          },
+          {
+            "name": "2026 SC Champs Lane Timing Assignments.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1528997_cebbe158-6649-4e9d-9fe2-b3b5f4bbf05a.pdf",
+            "type": "meet_document"
+          },
+          {
+            "name": "2026 SC Champs Schedule of Events.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1529060_bae1068a-48af-467d-a2f8-fc1e94fed3b0.pdf",
+            "type": "meet_document"
+          },
+          {
+            "name": "2026 SC Champs WarmUp Lanes.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1528996_d1c7fd08-a45e-4cda-869a-de5f052f9791.pdf",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Events-2026 IES Short Course Championships-27Feb2026-001.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1493030_26d50137-eb3b-47f2-be10-4cd267e01058.zip",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Results-2026 IES Short Course Championships-27Feb2026-001.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1532088_9ea81450-b329-4e8f-87cd-0aee7f7ac8fd.zip",
+            "type": "results"
+          }
+        ],
+        "checkedAt": "2026-10-10T08:04:32.122686+00:00",
+        "sourceEventId": "1677356",
+        "coverageNote": "Dates, host, location and attachment links verified against the official IES event listing. Individual swimmer results were not imported.",
+        "evidence": {
+          "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1677356",
+          "eventListingTitle": "2026 IE Inland Empire Swimming Short Course Championships",
+          "startDate": "2026-02-27",
+          "endDate": "2026-03-01",
+          "location": "University of Idaho Swim Center, Moscow, ID",
+          "eventDescription": "***Zipped Results Files & PDF copies are posted below*** UPDATE -- 02/25/2026: Coaches, Due to the AMAZING number of Senior athletes we will be recognizing this year (close to 40), we have made an executive decision to adjust a few things so everyone is not at the pool an extra hour Saturday. We have also decided it best to be consistent throughout all three days, so the following changes have been made. CHANGE #1 \u2014 We will now be presenting the medals to the TOP 3 14&U places, IMMEDIATELY FOLLOWING EACH 14&U CHAMPIONSHIP HEAT . We have done this previous years, and also did it very similarly at this past Jr Championship Meet. CHANGE #2 \u2014 Please fill out the attached Excel Spreadsheet with the following information for each Senior that will be recognized from your team. Once filled out, please return it to me . Our Announcer, Robert Broyles, will do all the talking. He will cover the information gathered from the spreadsheet. Athletes will still be paraded along the outside of the pool, starting at Clerk of Course, and coaches will congratulate and present a rose to each Senior Athlete, at the Start end of the pool. This should help us get through recognizing all 40+ athletes in a timely manner. CHANGE #3 \u2014 The FINALS START TIME ON SATURDAY has been moved to 5:10pm. The end time of competition will now be 7:37pm. CHANGE #4 \u2014 We will present the IES Senior Scholarship Recipients BEFORE starting the Senior Recognition. Please find the attached UPDATED documents -- PLEASE pass these along to your families! UPDATED Heat Sheet ( CLICK HERE ) UPDATED Schedule of Events ( CLICK HERE ) General Meeting Slides ( CLICK HERE) Senior Recognition Excel Spreadsheet ( CLICK HERE ) UPDATES -- 02/23/26: 1. IMPORTANT DOCUMENTS \u2014 The following items are attached below: Timeline by Session Schedule of Events Warmup Lane Assignments Team Lane Timing Assignments Psych Sheet 2. LANE TIMER SIGNUPS LINK \u2014 CLICK HERE 3. MEET APPAREL \u2014 Our apparel vendor would like to invite families to PRE-ORDER Champs shirts & hoodies by shopping at the Online Meet Store (see link below). The deadline for Pre-Orders is FEBRUARY 24th . https://www.twallawalla.com/ ies-2026-sc-championships ********************************************************************************************** The sanctioned meet announcement and meet entry files have been posted. Entry Deadline: Wednesday, February 18, 2026 Zoom Meeting: Tuesday, February 24, 2026 Host: Vandal Aquatics",
+          "attachmentListUrl": "https://www.gomotionapp.com/rest/ondeck/v2/meetfile/1677356/teamEventFile/list?team=wzielsc",
+          "announcementCapture": {
+            "id": 1677356,
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1493031_ad07ab4e-423b-4ef3-9864-5a3822e504f3.pdf",
+            "name": "2026 IES SC Championships \u2014 MEET ANNOUNCEMENT.pdf",
+            "file": "announcements/1677356.pdf",
+            "bytes": 1074221,
+            "sha256": "4cc7e53d63623f72db5ed9adca8456285fe16b3b3267c4552436ad9356d3a51f"
+          }
+        },
+        "discipline": "pool"
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-meet-ie-1677359",
+      "after": {
+        "kind": "meet",
+        "title": "2026 IE SHRK Shark Attack",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1677359",
+        "startsOn": "2026-04-17",
+        "endsOn": "2026-04-19",
+        "lscId": "usa-lsc-ie",
+        "zoneId": "usa-zone-western",
+        "hostTeamId": "usa-team-ie-shrk",
+        "hostTeamName": "Sandpoint Sharks Swim Club",
+        "location": "KROC Center - Coeur d'Alene, ID",
+        "summary": "Sandpoint Sharks Swim Club meet at KROC Center - Coeur d'Alene, ID. Official results files posted.",
+        "status": "past",
+        "resultsStatus": "published",
+        "documents": [
+          {
+            "name": "2026 IE SHRK Shark Attack.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1532482_3ad34639-7dbd-4324-99d6-f51e4d232186.pdf",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Events-2026 Shark Attack-17Apr2026-001.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1538160_dade486a-cdd8-4610-9a77-507a1326606f.zip",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Results-2026 Shark Attack - copied-17Apr2026-001.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1552715_68e38209-0bfd-4338-b612-adc5891a18f8.zip",
+            "type": "results"
+          }
+        ],
+        "checkedAt": "2026-10-10T08:04:32.122686+00:00",
+        "sourceEventId": "1677359",
+        "coverageNote": "Dates, host, location and attachment links verified against the official IES event listing. Individual swimmer results were not imported.",
+        "evidence": {
+          "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1677359",
+          "eventListingTitle": "2026 IE SHRK Shark Attack",
+          "startDate": "2026-04-17",
+          "endDate": "2026-04-19",
+          "location": "KROC Center - Coeur d'Alene, ID",
+          "eventDescription": "*Zipped results file has been posted below* The sanctioned meet announcement and meet entry files have been posted. Host: Sandpoint Sharks Entry Deadline: April 6, 2026",
+          "attachmentListUrl": "https://www.gomotionapp.com/rest/ondeck/v2/meetfile/1677359/teamEventFile/list?team=wzielsc",
+          "announcementCapture": {
+            "id": 1677359,
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1532482_3ad34639-7dbd-4324-99d6-f51e4d232186.pdf",
+            "name": "2026 IE SHRK Shark Attack.pdf",
+            "file": "announcements/1677359.pdf",
+            "bytes": 175956,
+            "sha256": "e5cc924d86991f0aec355ba41154ecf83ebbdfd0bd1d7705dbb3e905384c33b8"
+          }
+        },
+        "discipline": "pool"
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-meet-ie-1677360",
+      "after": {
+        "kind": "meet",
+        "title": "2026 IE SWAT Spring Fling",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1677360",
+        "startsOn": "2026-04-25",
+        "endsOn": "2026-04-26",
+        "lscId": "usa-lsc-ie",
+        "zoneId": "usa-zone-western",
+        "hostTeamId": "usa-team-ie-swat",
+        "hostTeamName": "Spokane Waves Aquatic Team",
+        "location": "Whitworth University, Spokane, WA",
+        "summary": "Spokane Waves Aquatic Team meet at Whitworth University, Spokane, WA. Official results files posted.",
+        "status": "past",
+        "resultsStatus": "published",
+        "documents": [
+          {
+            "name": "2026 IE SWAT Spring Fling.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1487003_36a0e21e-a5d8-498b-9e3b-90bc4a7b454f.pdf",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Events-2026 SWAT Spring Fling-25Apr2026-002.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1539934_55d496ad-bfe6-4e4d-85af-33238d3d25ed.zip",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Results-2026 SWAT Spring Fling-25Apr2026-001.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1558771_71796666-6f65-4e83-9444-31f864674d25.zip",
+            "type": "results"
+          }
+        ],
+        "checkedAt": "2026-10-10T08:04:32.122686+00:00",
+        "sourceEventId": "1677360",
+        "coverageNote": "Dates, host, location and attachment links verified against the official IES event listing. Individual swimmer results were not imported.",
+        "evidence": {
+          "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1677360",
+          "eventListingTitle": "2026 IE SWAT Spring Fling",
+          "startDate": "2026-04-25",
+          "endDate": "2026-04-26",
+          "location": "Whitworth University, Spokane, WA",
+          "eventDescription": "**Zipped Results File Posted Below** 3/23/26: New entry file posted. Plesae use the new file for submitting entries. The sanctioned meet announcement and meet entry files have been posted. Host: SWAT Entry Deadline: April 14, 2026",
+          "attachmentListUrl": "https://www.gomotionapp.com/rest/ondeck/v2/meetfile/1677360/teamEventFile/list?team=wzielsc",
+          "announcementCapture": {
+            "id": 1677360,
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1487003_36a0e21e-a5d8-498b-9e3b-90bc4a7b454f.pdf",
+            "name": "2026 IE SWAT Spring Fling.pdf",
+            "file": "announcements/1677360.pdf",
+            "bytes": 845144,
+            "sha256": "300c59d5c48314e0e7f070b1d74b5205e978dd29abd803e1122c54d107b3598c"
+          }
+        },
+        "discipline": "pool"
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-meet-ie-1677362",
+      "after": {
+        "kind": "meet",
+        "title": "2026 IE VS James Elwyn Memorial",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1677362",
+        "startsOn": "2026-04-25",
+        "endsOn": "2026-04-25",
+        "lscId": "usa-lsc-ie",
+        "zoneId": "usa-zone-western",
+        "hostTeamId": "velocity-swimming",
+        "hostTeamName": "Velocity Swimming",
+        "location": "James Elwyn Aquatics Center, Wenatchee, WA",
+        "summary": "Velocity Swimming meet at James Elwyn Aquatics Center, Wenatchee, WA. Official results files posted.",
+        "status": "past",
+        "resultsStatus": "published",
+        "documents": [
+          {
+            "name": "2026 IE VS James Elwyn Memorial Progressive.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1472966_128f2389-7475-4df2-985a-a4385a82f1b1.pdf",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Events-2026 IE VS James Elwyn Memorial Progressive-25Apr2026-001.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1472967_9766cad2-523d-46ea-892a-fbf1d7fe1664.zip",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Results-2026 IE VS James Elwyn Memorial Progressive-25Apr2026-001.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1558774_b04a80b2-bdaf-452b-8ca1-4627debba621.zip",
+            "type": "results"
+          }
+        ],
+        "checkedAt": "2026-10-10T08:04:32.122686+00:00",
+        "sourceEventId": "1677362",
+        "coverageNote": "Dates, host, location and attachment links verified against the official IES event listing. Individual swimmer results were not imported.",
+        "evidence": {
+          "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1677362",
+          "eventListingTitle": "2026 IE VS James Elwyn Memorial",
+          "startDate": "2026-04-25",
+          "endDate": "2026-04-25",
+          "location": "James Elwyn Aquatics Center, Wenatchee, WA",
+          "eventDescription": "*Zipped Results File Posted Below* The sanctioned meet announcement and meet entry files have been posted. Host: Velocity Swimming Entry Deadline: April 15, 2026",
+          "attachmentListUrl": "https://www.gomotionapp.com/rest/ondeck/v2/meetfile/1677362/teamEventFile/list?team=wzielsc",
+          "announcementCapture": {
+            "id": 1677362,
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1472966_128f2389-7475-4df2-985a-a4385a82f1b1.pdf",
+            "name": "2026 IE VS James Elwyn Memorial Progressive.pdf",
+            "file": "announcements/1677362.pdf",
+            "bytes": 393513,
+            "sha256": "9e5e0fe1466b4a3b06c2c8c01e43083d2b0a746b63bd7e85659e38a704832089"
+          }
+        },
+        "discipline": "pool"
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-meet-ie-1677363",
+      "after": {
+        "kind": "meet",
+        "title": "2026 IE WWSC SCY Sweet Onion",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1677363",
+        "startsOn": "2026-04-25",
+        "endsOn": "2026-04-26",
+        "lscId": "usa-lsc-ie",
+        "zoneId": "usa-zone-western",
+        "hostTeamId": "usa-team-ie-wwsc",
+        "hostTeamName": "Walla Walla Swim Club",
+        "location": "Whitman University, Walla Walla, WA",
+        "summary": "Walla Walla Swim Club meet at Whitman University, Walla Walla, WA. Official results files posted.",
+        "status": "past",
+        "resultsStatus": "published",
+        "documents": [
+          {
+            "name": "2026 WWSC Sweet Onion Swim Meet.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1536737_932e3e23-e8fc-4038-9246-acb80ee628fc.pdf",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Events-2026 WWSC Sweet Onion Meet-25Apr2026-002.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1536736_f46937e4-f7f7-4d23-ba79-dd23d40a1043.zip",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Results-2026 WWSC Sweet Onion Meet - copied-25Apr2026-001.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1558772_4ce15c3e-8359-4421-bf83-82b2770b8212.zip",
+            "type": "results"
+          }
+        ],
+        "checkedAt": "2026-10-10T08:04:32.122686+00:00",
+        "sourceEventId": "1677363",
+        "coverageNote": "Dates, host, location and attachment links verified against the official IES event listing. Individual swimmer results were not imported.",
+        "evidence": {
+          "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1677363",
+          "eventListingTitle": "2026 IE WWSC SCY Sweet Onion",
+          "startDate": "2026-04-25",
+          "endDate": "2026-04-26",
+          "location": "Whitman University, Walla Walla, WA",
+          "eventDescription": "*Zipped Results File Posted Below* The sanctioned meet announcement and meet entry files have been posted. Host: Walla Walla Swim Club Entry Deadline: April 15, 2026",
+          "attachmentListUrl": "https://www.gomotionapp.com/rest/ondeck/v2/meetfile/1677363/teamEventFile/list?team=wzielsc",
+          "announcementCapture": {
+            "id": 1677363,
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1536737_932e3e23-e8fc-4038-9246-acb80ee628fc.pdf",
+            "name": "2026 WWSC Sweet Onion Swim Meet.pdf",
+            "file": "announcements/1677363.pdf",
+            "bytes": 108738,
+            "sha256": "bb1ddce1ee164f034f63c87374888dda499260736a31c2dbec3ed72d95882a05"
+          }
+        },
+        "discipline": "pool"
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-meet-ie-1677364",
+      "after": {
+        "kind": "meet",
+        "title": "2026 IE LCN Chris Engledow Memorial",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1677364",
+        "startsOn": "2026-05-15",
+        "endsOn": "2026-05-17",
+        "lscId": "usa-lsc-ie",
+        "zoneId": "usa-zone-western",
+        "hostTeamId": "usa-team-ie-lcn",
+        "hostTeamName": "Lewis Clark Neptune Swimming",
+        "location": "Orchards Pool, Lewiston, ID",
+        "summary": "Lewis Clark Neptune Swimming meet at Orchards Pool, Lewiston, ID. Official results files posted.",
+        "status": "past",
+        "resultsStatus": "published",
+        "documents": [
+          {
+            "name": "2026 LCN Chris Engledow Memorial Open CAMPING UPDATED.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1543896_b0d979ea-3c23-417b-88ca-c7b0a64ca418.pdf",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Events-2026 Chris Engledow Memorial Meet-15May2026-001 (1).zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1543899_9c3a3d8e-8cba-421c-b3ba-9e3456ff34f8.zip",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Results-2026 Chris Engledow Memorial Meet-15May2026-001.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1558773_a0a97409-7416-41a6-80d4-5082906b80ec.zip",
+            "type": "results"
+          }
+        ],
+        "checkedAt": "2026-10-10T08:04:32.122686+00:00",
+        "sourceEventId": "1677364",
+        "coverageNote": "Dates, host, location and attachment links verified against the official IES event listing. Individual swimmer results were not imported.",
+        "evidence": {
+          "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1677364",
+          "eventListingTitle": "2026 IE LCN Chris Engledow Memorial",
+          "startDate": "2026-05-15",
+          "endDate": "2026-05-17",
+          "location": "Orchards Pool, Lewiston, ID",
+          "eventDescription": "*Zipped Results File Posted Below* NEW Information on Camping Options has been added to the meet announcement -- see updated version of the MA posted below The meet entry file has been posted below. The sanctioned meet announcement has been posted. Host: LCN Entry Deadline: May 3, 2026",
+          "attachmentListUrl": "https://www.gomotionapp.com/rest/ondeck/v2/meetfile/1677364/teamEventFile/list?team=wzielsc",
+          "announcementCapture": {
+            "id": 1677364,
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1543896_b0d979ea-3c23-417b-88ca-c7b0a64ca418.pdf",
+            "name": "2026 LCN Chris Engledow Memorial Open CAMPING UPDATED.pdf",
+            "file": "announcements/1677364.pdf",
+            "bytes": 363131,
+            "sha256": "30206a98852a40d247398194e96239f6a0dd350f210cab4e75d2db4c356d2428"
+          }
+        },
+        "discipline": "pool"
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-meet-ie-1677366",
+      "after": {
+        "kind": "meet",
+        "title": "2026 IE VS Apple Capital Invitational",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1677366",
+        "startsOn": "2026-05-28",
+        "endsOn": "2026-05-31",
+        "lscId": "usa-lsc-ie",
+        "zoneId": "usa-zone-western",
+        "hostTeamId": "velocity-swimming",
+        "hostTeamName": "Velocity Swimming",
+        "location": "Wenatchee City Pool, Wenatchee, WA",
+        "summary": "Velocity Swimming meet at Wenatchee City Pool, Wenatchee, WA. Official results files posted.",
+        "status": "past",
+        "resultsStatus": "published",
+        "documents": [
+          {
+            "name": "2026 IE VS Apple Capital.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1473655_675691de-c6f0-4eab-9eb1-70db9f694191.pdf",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Results-2026 IE VS Apple Capital-28May2026-001.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1564957_9b4c203f-81eb-4e6f-bf9b-f83fd983538e.zip",
+            "type": "results"
+          }
+        ],
+        "checkedAt": "2026-10-10T08:04:32.122686+00:00",
+        "sourceEventId": "1677366",
+        "coverageNote": "Dates, host, location and attachment links verified against the official IES event listing. Individual swimmer results were not imported.",
+        "evidence": {
+          "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1677366",
+          "eventListingTitle": "2026 IE VS Apple Capital Invitational",
+          "startDate": "2026-05-28",
+          "endDate": "2026-05-31",
+          "location": "Wenatchee City Pool, Wenatchee, WA",
+          "eventDescription": "*Zipped Results File Posted Below* The sanctioned meet announcement has been posted. Teams interested in attending this meet should contact Admin Official Noelle Grigsby (meetentries@velocity-swimming.com) Host: Velocity Swimming Entry Deadline: May 13, 2026",
+          "attachmentListUrl": "https://www.gomotionapp.com/rest/ondeck/v2/meetfile/1677366/teamEventFile/list?team=wzielsc",
+          "announcementCapture": {
+            "id": 1677366,
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1473655_675691de-c6f0-4eab-9eb1-70db9f694191.pdf",
+            "name": "2026 IE VS Apple Capital.pdf",
+            "file": "announcements/1677366.pdf",
+            "bytes": 209586,
+            "sha256": "09ccb49acee157e1eeb76e1f13eaaa81e7a0ac6d408fd976384b5c28915fb88e"
+          }
+        },
+        "discipline": "pool"
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-meet-ie-1677367",
+      "after": {
+        "kind": "meet",
+        "title": "2026 IE TCCC Tri-City Invitational",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1677367",
+        "startsOn": "2026-05-29",
+        "endsOn": "2026-05-31",
+        "lscId": "usa-lsc-ie",
+        "zoneId": "usa-zone-western",
+        "hostTeamId": "usa-team-ie-tccc",
+        "hostTeamName": "Tri-City Channel Cats",
+        "location": "Memorial Pool, Pasco, WA",
+        "summary": "Tri-City Channel Cats meet at Memorial Pool, Pasco, WA. Official results files posted.",
+        "status": "past",
+        "resultsStatus": "published",
+        "documents": [
+          {
+            "name": "2026 IE TCCC Tri-City Invitational.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1522592_073fd918-499b-4f35-92b1-5825eadc9985.pdf",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Events-2026 TRI-CITY INVITATIONAL - copied-29May2026-001.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1522861_0d05a76c-b3a0-4c9b-94f9-1a06bd01b735.zip",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Results-2026 TRI-CITY INVITATIONAL-29May2026-001.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1564958_b42a4bd7-a37a-4e69-ae20-7f078f1e533e.zip",
+            "type": "results"
+          }
+        ],
+        "checkedAt": "2026-10-10T08:04:32.122686+00:00",
+        "sourceEventId": "1677367",
+        "coverageNote": "Dates, host, location and attachment links verified against the official IES event listing. Individual swimmer results were not imported.",
+        "evidence": {
+          "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1677367",
+          "eventListingTitle": "2026 IE TCCC Tri-City Invitational",
+          "startDate": "2026-05-29",
+          "endDate": "2026-05-31",
+          "location": "Memorial Pool, Pasco, WA",
+          "eventDescription": "*Zipped Results File Posted Below* The sanctioned meet announcement has been posted. Host: TCCC Entry Deadline: Wednesday, May 20, 2026",
+          "attachmentListUrl": "https://www.gomotionapp.com/rest/ondeck/v2/meetfile/1677367/teamEventFile/list?team=wzielsc",
+          "announcementCapture": {
+            "id": 1677367,
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1522592_073fd918-499b-4f35-92b1-5825eadc9985.pdf",
+            "name": "2026 IE TCCC Tri-City Invitational.pdf",
+            "file": "announcements/1677367.pdf",
+            "bytes": 289928,
+            "sha256": "425e991295c797c74a62acff3b175aae30a88df34ac77394026128d4a33408a5"
+          }
+        },
+        "discipline": "pool"
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-meet-ie-1677369",
+      "after": {
+        "kind": "meet",
+        "title": "2026 IE VS Velocity Distance",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1677369",
+        "startsOn": "2026-06-03",
+        "endsOn": "2026-06-03",
+        "lscId": "usa-lsc-ie",
+        "zoneId": "usa-zone-western",
+        "hostTeamId": "velocity-swimming",
+        "hostTeamName": "Velocity Swimming",
+        "location": "Wenatchee City Pool, Wenatchee, WA",
+        "summary": "Velocity Swimming meet at Wenatchee City Pool, Wenatchee, WA. Official results files posted.",
+        "status": "past",
+        "resultsStatus": "published",
+        "documents": [
+          {
+            "name": "2026 IE VS Velocity Distance Progressive.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1472957_3e93dc64-4d70-4d39-b00f-95af88cb8f53.pdf",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Events-2026 IE VS Velocity Distance Progressive-03Jun2026-001.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1472956_d814b17e-a5c3-4c38-b26e-63e546682291.zip",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Results-2026 IE VS Velocity Distance Progressive-03Jun2026-001.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1564962_e303e306-c10c-49a5-85fc-476f248b1678.zip",
+            "type": "results"
+          }
+        ],
+        "checkedAt": "2026-10-10T08:04:32.122686+00:00",
+        "sourceEventId": "1677369",
+        "coverageNote": "Dates, host, location and attachment links verified against the official IES event listing. Individual swimmer results were not imported.",
+        "evidence": {
+          "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1677369",
+          "eventListingTitle": "2026 IE VS Velocity Distance",
+          "startDate": "2026-06-03",
+          "endDate": "2026-06-03",
+          "location": "Wenatchee City Pool, Wenatchee, WA",
+          "eventDescription": "*Zipped Results File posted below* The sanctioned meet announcement and meet entry files have been posted. Host: Velocity Swimming Entry Deadline: May 27, 2026",
+          "attachmentListUrl": "https://www.gomotionapp.com/rest/ondeck/v2/meetfile/1677369/teamEventFile/list?team=wzielsc",
+          "announcementCapture": {
+            "id": 1677369,
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1472957_3e93dc64-4d70-4d39-b00f-95af88cb8f53.pdf",
+            "name": "2026 IE VS Velocity Distance Progressive.pdf",
+            "file": "announcements/1677369.pdf",
+            "bytes": 394307,
+            "sha256": "66a17e5349642b9bba5a9e37aa4cbdf7b108e4006020b23319240bcc716d3e45"
+          }
+        },
+        "discipline": "pool"
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-meet-ie-1677370",
+      "after": {
+        "kind": "meet",
+        "title": "2026 IE SWAT Summer Solstice",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1677370",
+        "startsOn": "2026-06-19",
+        "endsOn": "2026-06-21",
+        "lscId": "usa-lsc-ie",
+        "zoneId": "usa-zone-western",
+        "hostTeamId": "usa-team-ie-swat",
+        "hostTeamName": "Spokane Waves Aquatic Team",
+        "location": "Witter Pool, Spokane, WA",
+        "summary": "Spokane Waves Aquatic Team meet at Witter Pool, Spokane, WA. Official results files posted.",
+        "status": "past",
+        "resultsStatus": "published",
+        "documents": [
+          {
+            "name": "2026 IE SWAT Summer Solstice.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1547794_dbfac243-8e00-485d-a12f-de95a1839320.pdf",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Events-2026 SWAT Summer Solstice-19Jun2026-001.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1547795_c825b105-896e-4f55-ae6e-19322ab1d1c4.zip",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Results-2026 SWAT Summer Solstice-19Jun2026-001.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1576939_5038c99d-9931-4f50-87f9-08caeb5011bb.zip",
+            "type": "results"
+          }
+        ],
+        "checkedAt": "2026-10-10T08:04:32.122686+00:00",
+        "sourceEventId": "1677370",
+        "coverageNote": "Dates, host, location and attachment links verified against the official IES event listing. Individual swimmer results were not imported.",
+        "evidence": {
+          "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1677370",
+          "eventListingTitle": "2026 IE SWAT Summer Solstice",
+          "startDate": "2026-06-19",
+          "endDate": "2026-06-21",
+          "location": "Witter Pool, Spokane, WA",
+          "eventDescription": "**Zipped Results File Posted Below** The sanctioned meet announcement and meet entry files have been posted. Host: SWAT Entry Deadline: June 9, 2026",
+          "attachmentListUrl": "https://www.gomotionapp.com/rest/ondeck/v2/meetfile/1677370/teamEventFile/list?team=wzielsc",
+          "announcementCapture": {
+            "id": 1677370,
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1547794_dbfac243-8e00-485d-a12f-de95a1839320.pdf",
+            "name": "2026 IE SWAT Summer Solstice.pdf",
+            "file": "announcements/1677370.pdf",
+            "bytes": 809806,
+            "sha256": "5f22529c31648fb24a6d65fd7d7b42adca37dbf880bafb081e091cc01f33c596"
+          }
+        },
+        "discipline": "pool"
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-meet-ie-1677371",
+      "after": {
+        "kind": "meet",
+        "title": "2026 IE VS Starlight Open (Dual Sanctioned with US Masters Swimming)",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1677371",
+        "startsOn": "2026-06-19",
+        "endsOn": "2026-06-21",
+        "lscId": "usa-lsc-ie",
+        "zoneId": "usa-zone-western",
+        "hostTeamId": "velocity-swimming",
+        "hostTeamName": "Velocity Swimming",
+        "location": "Wenatchee City pool, Wenatchee, WA",
+        "summary": "Velocity Swimming meet at Wenatchee City pool, Wenatchee, WA. Official results files posted.",
+        "status": "past",
+        "resultsStatus": "published",
+        "documents": [
+          {
+            "name": "2026 IE VS Starlight Open.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1526295_248e302e-4626-487c-981e-3492992ddd54.pdf",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Events-2026 IE VS Starlight Open-19Jun2026-001.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1526296_050ab0b9-e9e3-4f58-a00e-32833ac8c6f1.zip",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Results-2026 IE VS Starlight Open (USAS)-19Jun2026-002.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1572674_1c62c8ad-2e5e-4c91-ba42-d9b4c83c1154.zip",
+            "type": "results"
+          }
+        ],
+        "checkedAt": "2026-10-10T08:04:32.122686+00:00",
+        "sourceEventId": "1677371",
+        "coverageNote": "Dates, host, location and attachment links verified against the official IES event listing. Individual swimmer results were not imported.",
+        "evidence": {
+          "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1677371",
+          "eventListingTitle": "2026 IE VS Starlight Open (Dual Sanctioned with US Masters Swimming)",
+          "startDate": "2026-06-19",
+          "endDate": "2026-06-21",
+          "location": "Wenatchee City pool, Wenatchee, WA",
+          "eventDescription": "** Zipped Meet Results File Posted Below ** The sanctioned meet announcement and meet entry files have been posted. USMS Entry URL: https://www.clubassistant.com/ club/meet_information.cfm?c= 2681&smid=21795 Host: Velocity Swimming Entry Deadline: June 10, 2026",
+          "attachmentListUrl": "https://www.gomotionapp.com/rest/ondeck/v2/meetfile/1677371/teamEventFile/list?team=wzielsc",
+          "announcementCapture": {
+            "id": 1677371,
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1526295_248e302e-4626-487c-981e-3492992ddd54.pdf",
+            "name": "2026 IE VS Starlight Open.pdf",
+            "file": "announcements/1677371.pdf",
+            "bytes": 336440,
+            "sha256": "6fd5720e049605b6207234a1689275b307318e44f6133ab590272b926bfdc6c3"
+          }
+        },
+        "discipline": "pool"
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-meet-ie-1677372",
+      "after": {
+        "kind": "meet",
+        "title": "2026 IE PSA Pendleton Open",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1677372",
+        "startsOn": "2026-07-04",
+        "endsOn": "2026-07-05",
+        "lscId": "usa-lsc-ie",
+        "zoneId": "usa-zone-western",
+        "hostTeamId": "usa-team-ie-psa",
+        "hostTeamName": "Pendleton Swim Association",
+        "location": "Pendleton City Pool, Pendleton, OR",
+        "summary": "Pendleton Swim Association meet at Pendleton City Pool, Pendleton, OR. Official results files posted. Uses July 4\u20135 from the official event listing; the master calendar begins this meet on July 3.",
+        "status": "past",
+        "resultsStatus": "published",
+        "documents": [
+          {
+            "name": "2026 IE PSA Pendleton Open.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1541510_4eae0047-a2b6-48ce-aebd-62bd985cef29.pdf",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Events-Pendleton Open 2026-04Jul2026-001.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1547792_6f4715ed-23e6-455f-b087-f070d29990b6.zip",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Results-Pendleton Open 2026-04Jul2026-001.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1579202_baa5824b-c6b0-4861-8934-dfca0b8afc4e.zip",
+            "type": "results"
+          }
+        ],
+        "checkedAt": "2026-10-10T08:04:32.122686+00:00",
+        "sourceEventId": "1677372",
+        "coverageNote": "Dates, host, location and attachment links verified against the official IES event listing. Individual swimmer results were not imported.",
+        "evidence": {
+          "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1677372",
+          "eventListingTitle": "2026 IE PSA Pendleton Open",
+          "startDate": "2026-07-04",
+          "endDate": "2026-07-05",
+          "location": "Pendleton City Pool, Pendleton, OR",
+          "eventDescription": "**Zipped Results File Posted Below** 04/20/26 -- Zipped Entry File has been posted. The sanctioned meet announcement has been posted. Host: Pendleton Swim Association Entry Deadline: June 23, 2026",
+          "attachmentListUrl": "https://www.gomotionapp.com/rest/ondeck/v2/meetfile/1677372/teamEventFile/list?team=wzielsc",
+          "announcementCapture": {
+            "id": 1677372,
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1541510_4eae0047-a2b6-48ce-aebd-62bd985cef29.pdf",
+            "name": "2026 IE PSA Pendleton Open.pdf",
+            "file": "announcements/1677372.pdf",
+            "bytes": 242671,
+            "sha256": "f79ab45adb3248b0a534e46078ff6b4492e5f5df3ed7832bd59c7b92dd9a7c21"
+          }
+        },
+        "sourceCorrection": "Uses July 4\u20135 from the official event listing; the master calendar begins this meet on July 3.",
+        "discipline": "pool"
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-meet-ie-1677374",
+      "after": {
+        "kind": "meet",
+        "title": "2026 IE MRA Sizzlin' Summer Splash",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1677374",
+        "startsOn": "2026-07-10",
+        "endsOn": "2026-07-12",
+        "lscId": "usa-lsc-ie",
+        "zoneId": "usa-zone-western",
+        "hostTeamId": "usa-team-ie-mra",
+        "hostTeamName": "Manta Ray Aquatics",
+        "location": "Moses Lake Splash Zone, Moses Lake, WA",
+        "summary": "Manta Ray Aquatics meet at Moses Lake Splash Zone, Moses Lake, WA. Official results files posted.",
+        "status": "past",
+        "resultsStatus": "published",
+        "documents": [
+          {
+            "name": "2026 MRA Sizzlin Summer Splash.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1538162_ec2f3e6f-9c37-42da-985c-679d1be8cb42.pdf",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Events-2026 Sizzlin- Summer Splash - copied-10Jul2026-001.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1538161_ff0fe179-8dad-4e9f-8b80-3edbdf4d774e.zip",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Results-2026 Sizzlin- Summer Splash - copied-10Jul2026-001.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1598333_5619e752-d16d-4f00-95d3-55aadf9eff8b.zip",
+            "type": "results"
+          }
+        ],
+        "checkedAt": "2026-10-10T08:04:32.122686+00:00",
+        "sourceEventId": "1677374",
+        "coverageNote": "Dates, host, location and attachment links verified against the official IES event listing. Individual swimmer results were not imported.",
+        "evidence": {
+          "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1677374",
+          "eventListingTitle": "2026 IE MRA Sizzlin' Summer Splash",
+          "startDate": "2026-07-10",
+          "endDate": "2026-07-12",
+          "location": "Moses Lake Splash Zone, Moses Lake, WA",
+          "eventDescription": "**Zipped Results File HAS BEEN CORRECTED and is posted below for USA Swimming Teams in IE & PN** The sanctioned meet announcement and meet entry files have been posted. Host: Manta Ray Aquatics Entry Deadline: Wednesday, June 24, 2026",
+          "attachmentListUrl": "https://www.gomotionapp.com/rest/ondeck/v2/meetfile/1677374/teamEventFile/list?team=wzielsc",
+          "announcementCapture": {
+            "id": 1677374,
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1538162_ec2f3e6f-9c37-42da-985c-679d1be8cb42.pdf",
+            "name": "2026 MRA Sizzlin Summer Splash.pdf",
+            "file": "announcements/1677374.pdf",
+            "bytes": 283575,
+            "sha256": "5d2f26b548faad0f7851bf053e4920c705a3e3a1e00a300867ed499e775d895e"
+          }
+        },
+        "discipline": "pool"
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-meet-ie-1677376",
+      "after": {
+        "kind": "meet",
+        "title": "2026 IE Inland Empire Swimming Long Course Championships",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1677376",
+        "startsOn": "2026-07-24",
+        "endsOn": "2026-07-26",
+        "lscId": "usa-lsc-ie",
+        "zoneId": "usa-zone-western",
+        "hostTeamId": "usa-team-ie-tccc",
+        "hostTeamName": "Tri-City Channel Cats",
+        "location": "Memorial Pool, Pasco, WA",
+        "summary": "Tri-City Channel Cats meet at Memorial Pool, Pasco, WA. Official results files posted.",
+        "status": "past",
+        "resultsStatus": "published",
+        "documents": [
+          {
+            "name": "2026 IES LC Championships \u2014 MEET ANNOUNCEMENT.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1568636_852d7dfd-8ee5-4c8a-ae1e-67c2b24be133.pdf",
+            "type": "meet_document"
+          },
+          {
+            "name": "2026 ies lc champs - final results with splits.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1585753_57f8d8ee-b1a0-461c-802b-a0a4857e8eb2.pdf",
+            "type": "results"
+          },
+          {
+            "name": "2026 ies lc champs - final results without splits.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1585755_760586c8-5b74-4880-87a0-9092c7f3df39.pdf",
+            "type": "results"
+          },
+          {
+            "name": "2026 ies lc champs - final team scores.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1585756_5ed4cd71-7c57-4bf6-b7e6-dcc310da697f.pdf",
+            "type": "meet_document"
+          },
+          {
+            "name": "2026 ies lc champs - ind high point.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1585757_9efcc992-e3a4-437d-bff5-ef96462681a2.pdf",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Events-2026 IES LC CHAMPIONSHIPS-24Jul2026-002.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1560495_2be7c4b0-283a-4b7e-9c8d-a32055da9d6c.zip",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Results-2026 IES LC CHAMPIONSHIPS-24Jul2026-001.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1585752_a95b82a5-031e-4b7f-91b3-8d7984afd9d7.zip",
+            "type": "results"
+          }
+        ],
+        "checkedAt": "2026-10-10T08:04:32.122686+00:00",
+        "sourceEventId": "1677376",
+        "coverageNote": "Dates, host, location and attachment links verified against the official IES event listing. Individual swimmer results were not imported.",
+        "evidence": {
+          "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1677376",
+          "eventListingTitle": "2026 IE Inland Empire Swimming Long Course Championships",
+          "startDate": "2026-07-24",
+          "endDate": "2026-07-26",
+          "location": "Memorial Pool, Pasco, WA",
+          "eventDescription": "**Zipped Results File & PDF copies are posted below** The sanctioned meet announcement and meet entry files have been posted. Host TCCC Entry Deadline: July 15, 2026 Application to officiate",
+          "attachmentListUrl": "https://www.gomotionapp.com/rest/ondeck/v2/meetfile/1677376/teamEventFile/list?team=wzielsc",
+          "announcementCapture": {
+            "id": 1677376,
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1568636_852d7dfd-8ee5-4c8a-ae1e-67c2b24be133.pdf",
+            "name": "2026 IES LC Championships \u2014 MEET ANNOUNCEMENT.pdf",
+            "file": "announcements/1677376.pdf",
+            "bytes": 2827849,
+            "sha256": "9fbade301fe9c0e5a4f3e0c0e2ff2c6fc35f4453a3217e20d4d2897cf6d8658c"
+          }
+        },
+        "discipline": "pool"
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-meet-ie-1761236",
+      "after": {
+        "kind": "meet",
+        "title": "2026 IE Sea Serpent Open Water Shootout",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1761236",
+        "startsOn": "2026-08-22",
+        "endsOn": "2026-08-22",
+        "lscId": "usa-lsc-ie",
+        "zoneId": "usa-zone-western",
+        "hostTeamId": "usa-team-ie-sss",
+        "hostTeamName": "Spokane Sea Serpents",
+        "location": "Lake Coeur d'Alene",
+        "summary": "Spokane Sea Serpents meet at Lake Coeur d'Alene. Results available from the host on request.",
+        "status": "past",
+        "resultsStatus": "contact_host",
+        "documents": [
+          {
+            "name": "2026 SSS Open Water Shootout Meet Sheet.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1581383_4ce2b58b-ebf4-4c29-a20f-50cc5e59c325.pdf",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Events-Sea Serpent Open Water Challenge - copied-22Aug2026-001.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1578982_a7b17b52-76fc-4863-8f45-07a31f459e2c.zip",
+            "type": "meet_document"
+          }
+        ],
+        "checkedAt": "2026-10-10T08:04:32.122686+00:00",
+        "sourceEventId": "1761236",
+        "coverageNote": "Dates, host, location and attachment links verified against the official IES event listing. Individual swimmer results were not imported.",
+        "evidence": {
+          "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1761236",
+          "eventListingTitle": "2026 IE Sea Serpent Open Water Shootout",
+          "startDate": "2026-08-22",
+          "endDate": "2026-08-22",
+          "location": "Lake Coeur d'Alene",
+          "eventDescription": "**Contact the Meet Host for a PDF copy of results!** The meet information packet and registration files are attached Host: Spokane Sea Serpents Entry Deadline: 8/12/2026",
+          "attachmentListUrl": "https://www.gomotionapp.com/rest/ondeck/v2/meetfile/1761236/teamEventFile/list?team=wzielsc",
+          "announcementCapture": {
+            "id": 1761236,
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1581383_4ce2b58b-ebf4-4c29-a20f-50cc5e59c325.pdf",
+            "name": "2026 SSS Open Water Shootout Meet Sheet.pdf",
+            "file": "announcements/1761236.pdf",
+            "bytes": 5041195,
+            "sha256": "eb61c08b3379341d778606771756b06659a48b2a125b03bc2d7802479c62d604"
+          }
+        },
+        "discipline": "open_water"
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-meet-ie-1761243",
+      "after": {
+        "kind": "meet",
+        "title": "2026 IE MRA Sprint Shootout",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1761243",
+        "startsOn": "2026-09-19",
+        "endsOn": "2026-09-19",
+        "lscId": "usa-lsc-ie",
+        "zoneId": "usa-zone-western",
+        "hostTeamId": "usa-team-ie-mra",
+        "hostTeamName": "Manta Ray Aquatics",
+        "location": "Tony St Onge Pool of Dreams, Moses Lake, WA",
+        "summary": "Manta Ray Aquatics meet at Tony St Onge Pool of Dreams, Moses Lake, WA. Official results files posted.",
+        "status": "past",
+        "resultsStatus": "published",
+        "documents": [
+          {
+            "name": "2026 MRA Sprint Shootout.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1578987_5361fc1d-7265-48eb-994a-dc48e4ec93bb.pdf",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Events-2026 IE MRA Sprint Shootout - copied-19Sep2026-001.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1578988_cc57d2e3-906c-46ad-9b18-c4d759604188.zip",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Results-2026 IE MRA Sprint Shootout - copied-19Sep2026-001.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1598342_ec05b1a6-4a09-42f6-bcbd-2660cd86f15f.zip",
+            "type": "results"
+          }
+        ],
+        "checkedAt": "2026-10-10T08:04:32.122686+00:00",
+        "sourceEventId": "1761243",
+        "coverageNote": "Dates, host, location and attachment links verified against the official IES event listing. Individual swimmer results were not imported.",
+        "evidence": {
+          "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/past/1761243",
+          "eventListingTitle": "2026 IE MRA Sprint Shootout",
+          "startDate": "2026-09-19",
+          "endDate": "2026-09-19",
+          "location": "Tony St Onge Pool of Dreams, Moses Lake, WA",
+          "eventDescription": "**Zipped Results File Posted Below** The sanctioned meet announcement and meet entry files have been posted. Host: MRA Entry Deadline: Wednesday, September 9, 2026",
+          "attachmentListUrl": "https://www.gomotionapp.com/rest/ondeck/v2/meetfile/1761243/teamEventFile/list?team=wzielsc",
+          "announcementCapture": {
+            "id": 1761243,
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1578987_5361fc1d-7265-48eb-994a-dc48e4ec93bb.pdf",
+            "name": "2026 MRA Sprint Shootout.pdf",
+            "file": "announcements/1761243.pdf",
+            "bytes": 193342,
+            "sha256": "39ff823fa730b1892eed4322009e3a1a9bbca4ed8d15faa33d8c6d130cebf460"
+          }
+        },
+        "discipline": "pool"
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-meet-ie-1761245",
+      "after": {
+        "kind": "meet",
+        "title": "2026 IE SWAT Fall Challenge",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/upcoming/1761245",
+        "startsOn": "2026-10-10",
+        "endsOn": "2026-10-11",
+        "lscId": "usa-lsc-ie",
+        "zoneId": "usa-zone-western",
+        "hostTeamId": "usa-team-ie-swat",
+        "hostTeamName": "Spokane Waves Aquatic Team",
+        "location": "Whitworth University, Spokane, WA",
+        "summary": "Spokane Waves Aquatic Team meet at Whitworth University, Spokane, WA. Scheduled for October 10\u201311; results not yet posted.",
+        "status": "scheduled",
+        "resultsStatus": "not_yet_posted",
+        "documents": [
+          {
+            "name": "2026 SWAT Fall Challenge.pdf",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1586921_896e97ae-f649-4c4a-aa98-346b1038e380.pdf",
+            "type": "meet_document"
+          },
+          {
+            "name": "Meet Events-SWAT Fall Challenge 2026-10Oct2026-001.zip",
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1588265_f483973c-eaa9-4e96-922d-51384411f2b1.zip",
+            "type": "meet_document"
+          }
+        ],
+        "checkedAt": "2026-10-10T08:04:32.122686+00:00",
+        "sourceEventId": "1761245",
+        "coverageNote": "Dates, host, location and attachment links verified against the official IES event listing. Individual swimmer results were not imported.",
+        "evidence": {
+          "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/events#/team-events/upcoming/1761245",
+          "eventListingTitle": "2026 IE SWAT Fall Challenge",
+          "startDate": "2026-10-10",
+          "endDate": "2026-10-11",
+          "location": "Whitworth University, Spokane, WA",
+          "eventDescription": "The sanctioned meet announcment and meet entry files have been posted. Host: SWAT Entry Deadline: September 29, 2026",
+          "attachmentListUrl": "https://www.gomotionapp.com/rest/ondeck/v2/meetfile/1761245/teamEventFile/list?team=wzielsc",
+          "announcementCapture": {
+            "id": 1761245,
+            "url": "https://www.gomotionapp.com/wzielsc/__eventform__/1586921_896e97ae-f649-4c4a-aa98-346b1038e380.pdf",
+            "name": "2026 SWAT Fall Challenge.pdf",
+            "file": "announcements/1761245.pdf",
+            "bytes": 828425,
+            "sha256": "ce5fd2c7c89a5dba2f18fd9d2bd3bdcf63346dc8d489c21ad2a7018197d2d679"
+          }
+        },
+        "discipline": "pool"
+      }
+    }
+  ]
+}

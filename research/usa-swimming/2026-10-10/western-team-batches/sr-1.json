@@ -1,0 +1,903 @@
+{
+  "division": "knowledge",
+  "scope": "Western Zone swim teams \u2014 Snake River Swimming",
+  "sourceUrl": "https://www.gomotionapp.com/team/wzsrslsc/page/srs-teams",
+  "capturedAt": "2026-10-10T08:09:39.182065+00:00",
+  "coverage": "partial",
+  "evidence": {
+    "checkedAt": "2026-10-10",
+    "lscCode": "SR",
+    "directoryRowsCollected": 12,
+    "batchRows": 12,
+    "enumeration": "All named rows in the retrieved official directory/roster sources; independent current registration is not guaranteed.",
+    "deduplication": "Compared against 84 published knowledge records and an empty pending queue; facilities combined by organization key; Inland Empire\u2019s 19 existing teams were retained without duplicates.",
+    "remaining": "Missing codes, unreachable websites, registration status, and conflicting sources are visible in each record. Sierra Nevada BBST remains name/code unresolved from official evidence."
+  },
+  "writes": [
+    {
+      "path": "knowledge_entries/usa-team-sr-bsc",
+      "after": {
+        "kind": "team",
+        "title": "Boise Swim Club",
+        "officialName": "Boise Swim Club",
+        "abbreviation": "BSC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sr",
+        "lscId": "usa-lsc-sr",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.teamunify.com/idbsc",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzsrslsc/page/srs-teams",
+        "summary": "Boise Swim Club is a swim team/program listed by Snake River Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Boise, ID",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Snake River Swimming",
+            "targetId": "usa-lsc-sr"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "boiseswimclub@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzsrslsc/page/srs-teams"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "coachsteph.boiseswimclub@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzsrslsc/page/srs-teams"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "debrahill1030@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzsrslsc/page/srs-teams"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "208-890-2610",
+            "url": "https://www.gomotionapp.com/team/wzsrslsc/page/srs-teams"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Debra J Hill",
+            "email": "debrahill1030@gmail.com",
+            "phone": "12088902610"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Boise Swim Club",
+            "email": "boiseswimclub@gmail.com",
+            "phone": "12088902610"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzsrslsc/page/srs-teams",
+            "title": "Snake River Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sr-by",
+      "after": {
+        "kind": "team",
+        "title": "Boise YMCA Swim Team",
+        "officialName": "Boise YMCA Swim Team",
+        "abbreviation": "BY",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sr",
+        "lscId": "usa-lsc-sr",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.boiseyswimteam.org/",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzsrslsc/page/srs-teams",
+        "summary": "Boise YMCA Swim Team is a swim team/program listed by Snake River Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Boise, ID; Caldwell, ID; Meridian, ID",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Snake River Swimming",
+            "targetId": "usa-lsc-sr"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "linda.conger@ymcatvidaho.org",
+            "url": "https://www.gomotionapp.com/team/wzsrslsc/page/srs-teams"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "todd.marsh@ymcatvidaho.org",
+            "url": "https://www.gomotionapp.com/team/wzsrslsc/page/srs-teams"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "vicki.marsh@ymcatvidaho.org",
+            "url": "https://www.gomotionapp.com/team/wzsrslsc/page/srs-teams"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "208-377-4886",
+            "url": "https://www.gomotionapp.com/team/wzsrslsc/page/srs-teams"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Todd Marsh",
+            "email": "todd.marsh@ymcatvidaho.org",
+            "phone": "12084739658"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzsrslsc/page/srs-teams",
+            "title": "Snake River Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.boiseyswimteam.org/",
+            "title": "Boise Y Swim Team Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/srsbyst/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sr-csc",
+      "after": {
+        "kind": "team",
+        "title": "Caldwell Swim Club",
+        "officialName": "Caldwell Swim Club",
+        "abbreviation": "CSC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sr",
+        "lscId": "usa-lsc-sr",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.caldwellswimclub.com/",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzsrslsc/page/srs-teams",
+        "summary": "Caldwell Swim Club is a swim team/program listed by Snake River Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "; Caldwell, Idaho",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Snake River Swimming",
+            "targetId": "usa-lsc-sr"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "caldwellstingrays@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzsrslsc/page/srs-teams"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Betsy Hunsicker",
+            "email": "caldwellstingrays@gmail.com",
+            "phone": "12083693716"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzsrslsc/page/srs-teams",
+            "title": "Snake River Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sr-est",
+      "after": {
+        "kind": "team",
+        "title": "Elko Swim Team",
+        "officialName": "Elko Swim Team",
+        "abbreviation": "EST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sr",
+        "lscId": "usa-lsc-sr",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/Home.jsp?team=srest",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzsrslsc/page/srs-teams",
+        "summary": "Elko Swim Team is a swim team/program listed by Snake River Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Elko, NV",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Snake River Swimming",
+            "targetId": "usa-lsc-sr"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "elkoswimteam@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzsrslsc/page/srs-teams"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "twosmiths@citlink.net",
+            "url": "https://www.gomotionapp.com/team/wzsrslsc/page/srs-teams"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Heather Dahlman",
+            "email": "elkoswimteam@gmail.com",
+            "phone": "17753887703"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Michelle Smith",
+            "email": "elkoswimteam@gmail.com",
+            "phone": "17759345446"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzsrslsc/page/srs-teams",
+            "title": "Snake River Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.teamunify.com/Home.jsp?team=srest",
+            "title": "Elko Swim Team Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/srest/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sr-life",
+      "after": {
+        "kind": "team",
+        "title": "Life Time Swim Idaho",
+        "officialName": "Life Time Swim Idaho",
+        "abbreviation": "LIFE",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sr",
+        "lscId": "usa-lsc-sr",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/idltf/page/home",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzsrslsc/page/srs-teams",
+        "summary": "Life Time Swim Idaho is a swim team/program listed by Snake River Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Eagle, ID",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Snake River Swimming",
+            "targetId": "usa-lsc-sr"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "cramos2@lt.life",
+            "url": "https://www.gomotionapp.com/team/wzsrslsc/page/srs-teams"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "nbarker@lt.life",
+            "url": "https://www.gomotionapp.com/team/wzsrslsc/page/srs-teams"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Clancie Ramos",
+            "email": "CRamos2@lt.life",
+            "phone": "12085639800"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzsrslsc/page/srs-teams",
+            "title": "Snake River Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/idltf/page/home",
+            "title": "Life Time Idaho Home",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Name variation: LSC lists Life Time Swim Idaho; USA Swimming lists Life Time Idaho."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sr-mvm",
+      "after": {
+        "kind": "team",
+        "title": "Magic Valley Marlins",
+        "officialName": "Magic Valley Marlins",
+        "abbreviation": "MVM",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sr",
+        "lscId": "usa-lsc-sr",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/Home.jsp?_tabid_=0&team=srmvm",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzsrslsc/page/srs-teams",
+        "summary": "Magic Valley Marlins is a swim team/program listed by Snake River Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Club-specific coverage not established; listed within Snake River Swimming.",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Snake River Swimming",
+            "targetId": "usa-lsc-sr"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "tfmarlinswimad@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzsrslsc/page/srs-teams"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "tyejess@icloud.com",
+            "url": "https://www.gomotionapp.com/team/wzsrslsc/page/srs-teams"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzsrslsc/page/srs-teams",
+            "title": "Snake River Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.teamunify.com/Home.jsp?_tabid_=0&team=srmvm",
+            "title": "Magic Valley Marlins Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/srmvm/page/home"
+          }
+        ],
+        "gaps": [
+          "Club-specific service area / location not established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sr-nst",
+      "after": {
+        "kind": "team",
+        "title": "Nampa Swim Team",
+        "officialName": "Nampa Swim Team",
+        "abbreviation": "NST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sr",
+        "lscId": "usa-lsc-sr",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/Home.jsp?team=srnst",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzsrslsc/page/srs-teams",
+        "summary": "Nampa Swim Team is a swim team/program listed by Snake River Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Nampa, ID",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Snake River Swimming",
+            "targetId": "usa-lsc-sr"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "austonayres@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzsrslsc/page/srs-teams"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "nst.president@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzsrslsc/page/srs-teams"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Eddie Akbary",
+            "email": "e.akbary@yahoo.com",
+            "phone": "19168789635"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzsrslsc/page/srs-teams",
+            "title": "Snake River Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.teamunify.com/Home.jsp?team=srnst",
+            "title": "Nampa Swim Team Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/srnst/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sr-pvst",
+      "after": {
+        "kind": "team",
+        "title": "Portneuf Valley Swim Team",
+        "officialName": "Portneuf Valley Swim Team",
+        "abbreviation": "PVST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sr",
+        "lscId": "usa-lsc-sr",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/srtac/page/home",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzsrslsc/page/srs-teams",
+        "summary": "Portneuf Valley Swim Team is a swim team/program listed by Snake River Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Pocatello, ID",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Snake River Swimming",
+            "targetId": "usa-lsc-sr"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "jeff@sawtoothaquatics.com",
+            "url": "https://www.gomotionapp.com/team/wzsrslsc/page/srs-teams"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "john.d.twiss@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzsrslsc/page/srs-teams"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "nick@sawtoothaquatics.com",
+            "url": "https://www.gomotionapp.com/team/wzsrslsc/page/srs-teams"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "stephanie.f.major@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzsrslsc/page/srs-teams"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "John Twiss",
+            "email": "john.d.twiss@gmail.com",
+            "phone": "12084209770"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzsrslsc/page/srs-teams",
+            "title": "Snake River Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/srtac/page/home",
+            "title": "Portneuf Valley Swim Team Home",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sr-saw",
+      "after": {
+        "kind": "team",
+        "title": "Sawtooth Aquatic Club",
+        "officialName": "Sawtooth Aquatic Club",
+        "abbreviation": "SAW",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sr",
+        "lscId": "usa-lsc-sr",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.sawtoothaquatics.com/",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzsrslsc/page/srs-teams",
+        "summary": "Sawtooth Aquatic Club is a swim team/program listed by Snake River Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Boise, Idaho",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Snake River Swimming",
+            "targetId": "usa-lsc-sr"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "jeff@sawtoothaquatics.com",
+            "url": "https://www.gomotionapp.com/team/wzsrslsc/page/srs-teams"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "nick@sawtoothaquatics.com",
+            "url": "https://www.gomotionapp.com/team/wzsrslsc/page/srs-teams"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Nick Gaggiano",
+            "email": "nick@gbacswim.com",
+            "phone": "17734056425"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzsrslsc/page/srs-teams",
+            "title": "Snake River Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sr-sa",
+      "after": {
+        "kind": "team",
+        "title": "Streamliner Aquatics",
+        "officialName": "Streamliner Aquatics",
+        "abbreviation": "SA",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sr",
+        "lscId": "usa-lsc-sr",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/team/srsa/page/home",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzsrslsc/page/srs-teams",
+        "summary": "Streamliner Aquatics is a swim team/program listed by Snake River Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Boise, ID; Meridian, ID",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Snake River Swimming",
+            "targetId": "usa-lsc-sr"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "hongschao@yahoo.com",
+            "url": "https://www.gomotionapp.com/team/wzsrslsc/page/srs-teams"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Hong Shao",
+            "email": "hongschao@yahoo.com",
+            "phone": "15103962965"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Nick Gaggiano",
+            "email": "nick@gbafswim.com",
+            "phone": "17734056425"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzsrslsc/page/srs-teams",
+            "title": "Snake River Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.teamunify.com/team/srsa/page/home",
+            "title": "Streamliner Aquatics Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/srsa/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sr-sv5b",
+      "after": {
+        "kind": "team",
+        "title": "Sun Valley 5B",
+        "officialName": "Sun Valley 5B",
+        "abbreviation": "SV5B",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sr",
+        "lscId": "usa-lsc-sr",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.sv5bswimming.org/",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzsrslsc/page/srs-teams",
+        "summary": "Sun Valley 5B is a swim team/program listed by Snake River Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Ketchum, ID",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Snake River Swimming",
+            "targetId": "usa-lsc-sr"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "gallaghersv5b@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzsrslsc/page/srs-teams"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Brian Gallagher",
+            "email": "gallaghersv5b@gmail.com",
+            "phone": "12087209830"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzsrslsc/page/srs-teams",
+            "title": "Snake River Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sr-volt",
+      "after": {
+        "kind": "team",
+        "title": "Voltage Aquatics",
+        "officialName": "Voltage Aquatics",
+        "abbreviation": "VOLT",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sr",
+        "lscId": "usa-lsc-sr",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.voltageaquatics.org/",
+        "sourceUrl": "https://www.gomotionapp.com/team/wzsrslsc/page/srs-teams",
+        "summary": "Voltage Aquatics is a swim team/program listed by Snake River Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Idaho Falls, ID",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Snake River Swimming",
+            "targetId": "usa-lsc-sr"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "christine@merrells.org",
+            "url": "https://www.gomotionapp.com/team/wzsrslsc/page/srs-teams"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "pahiphoe@isu.edu",
+            "url": "https://www.gomotionapp.com/team/wzsrslsc/page/srs-teams"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Christine Dustin",
+            "email": "christine@merrells.org",
+            "phone": "15035394621"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzsrslsc/page/srs-teams",
+            "title": "Snake River Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.voltageaquatics.org/",
+            "title": "Voltage Aquatics Team Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/srifcst/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    }
+  ]
+}

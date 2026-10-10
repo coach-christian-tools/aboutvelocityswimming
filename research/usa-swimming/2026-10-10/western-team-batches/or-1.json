@@ -1,0 +1,3808 @@
+{
+  "division": "knowledge",
+  "scope": "Western Zone swim teams \u2014 Oregon Swimming",
+  "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+  "capturedAt": "2026-10-10T08:09:39.130121+00:00",
+  "coverage": "partial",
+  "evidence": {
+    "checkedAt": "2026-10-10",
+    "lscCode": "OR",
+    "directoryRowsCollected": 58,
+    "batchRows": 58,
+    "enumeration": "All named rows in the retrieved official directory/roster sources; independent current registration is not guaranteed.",
+    "deduplication": "Compared against 84 published knowledge records and an empty pending queue; facilities combined by organization key; Inland Empire\u2019s 19 existing teams were retained without duplicates.",
+    "remaining": "Missing codes, unreachable websites, registration status, and conflicting sources are visible in each record. Sierra Nevada BBST remains name/code unresolved from official evidence."
+  },
+  "writes": [
+    {
+      "path": "knowledge_entries/usa-team-or-aaa",
+      "after": {
+        "kind": "team",
+        "title": "Albany Aquatics Association",
+        "officialName": "Albany Aquatics Association",
+        "abbreviation": "AAA",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.albanyaquaticassoc.com/",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "Albany Aquatics Association is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Albany, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "mackenziesettelmeyer@gmail.com",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Kenzie Settelmeyer",
+            "email": "coachkenzie@albanyaquaticassoc.com",
+            "phone": "15412649033"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.albanyaquaticassoc.com/",
+            "title": "Albany Aquatics Assoc Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.albanyaquaticassoc.com/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-apex",
+      "after": {
+        "kind": "team",
+        "title": "APEX Aquatics",
+        "officialName": "APEX Aquatics",
+        "abbreviation": "APEX",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.apexaquatics.captynsites.com/",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "APEX Aquatics is an Oregon swimming network that brings together Canby Swim Club, Chehalem Swim Team, and Tigard Tualatin Swim Club.",
+        "geographicCoverage": "Portland Metro, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "contains_team",
+            "label": "Network team",
+            "name": "Canby Swim Club",
+            "targetId": "usa-team-or-cb-apex"
+          },
+          {
+            "type": "contains_team",
+            "label": "Network team",
+            "name": "Chehalem Swim Team",
+            "targetId": "usa-team-or-cst-apex"
+          },
+          {
+            "type": "contains_team",
+            "label": "Network team",
+            "name": "Tigard Tualatin Swim Club",
+            "targetId": "usa-team-or-ttsc"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "wetcat95@gmail.com",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.apexaquatics.captynsites.com/",
+            "title": "\n    \n    Apex Aquatics\n  \n  ",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-baac",
+      "after": {
+        "kind": "team",
+        "title": "Beaverton Area Aquatic Club",
+        "officialName": "Beaverton Area Aquatic Club",
+        "abbreviation": "BAAC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.baacswim.com/",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "Beaverton Area Aquatic Club is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Beaverton, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "cyndys@vonweller.com",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-bend",
+      "after": {
+        "kind": "team",
+        "title": "Bend Swim Club",
+        "officialName": "Bend Swim Club",
+        "abbreviation": "BEND",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.bendswimclub.com/",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "Bend Swim Club is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Bend, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "jimnickellswim@gmail.com",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Kerry Carelton",
+            "email": "kerry.carleton@bendswimclub.com",
+            "phone": "13193338030"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.bendswimclub.com/",
+            "title": "Bend Swim Club Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.bendswimclub.com/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-bdst",
+      "after": {
+        "kind": "team",
+        "title": "Blue Dolphins Swim Team",
+        "officialName": "Blue Dolphins Swim Team",
+        "abbreviation": "BDST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/team/orbdst/page/home",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "Blue Dolphins Swim Team is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Dallas, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "pxhegney@gmail.com",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-cb-apex",
+      "after": {
+        "kind": "team",
+        "title": "Canby Swim Club",
+        "officialName": "Canby Swim Club",
+        "abbreviation": "CB(APEX)",
+        "abbreviationType": "Official LSC directory code label",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.canbygators.com/",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "Canby Swim Club is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Canby, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "part_of_network",
+            "label": "Club network",
+            "name": "APEX Aquatics",
+            "targetId": "usa-team-or-apex",
+            "note": "APEX\u2019s official website names Canby, Chehalem and Tigard Tualatin as its three teams."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "nathan@canby.com",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Nathan Templeman",
+            "email": "gator.coach.nathan@gmail.com",
+            "phone": "15035020047"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.canbygators.com/",
+            "title": "Apex Aquatics",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.apexaquatics.captynsites.com/"
+          },
+          {
+            "url": "https://www.apexaquatics.captynsites.com/",
+            "title": "APEX Aquatics \u2014 Three Teams. One Apex.",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "The official directory uses a combined club/network code label. A standalone current USA Swimming registration code is not established."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-cs",
+      "after": {
+        "kind": "team",
+        "title": "Cascadia Swimming",
+        "officialName": "Cascadia Swimming",
+        "abbreviation": "CS",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "http://cascadiaswimming.com/",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "Cascadia Swimming is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Portland, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "swimforfun2002@yahoo.com",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "http://cascadiaswimming.com/",
+            "title": "Cascadia Swimming Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/cascadiaswimming/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-c2sc",
+      "after": {
+        "kind": "team",
+        "title": "Central Coast Swim Club",
+        "officialName": "Central Coast Swim Club",
+        "abbreviation": "C2SC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "https://c2sc.swimtopia.com/",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "Central Coast Swim Club is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Reedsport, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "kurt@markettrue.com",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Kurt Vander Bogart",
+            "email": "kurt@markettrue.com",
+            "phone": "15412229981"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-cst-apex",
+      "after": {
+        "kind": "team",
+        "title": "Chehalem Swim Team",
+        "officialName": "Chehalem Swim Team",
+        "abbreviation": "CST(APEX)",
+        "abbreviationType": "Official LSC directory code label",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.cstsharks.com/",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "Chehalem Swim Team is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Newberg, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "part_of_network",
+            "label": "Club network",
+            "name": "APEX Aquatics",
+            "targetId": "usa-team-or-apex",
+            "note": "APEX\u2019s official website names Canby, Chehalem and Tigard Tualatin as its three teams."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "lfisher1022@gmail.com",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Lalanya Fisher",
+            "email": "lfisher1022@gmail.com",
+            "phone": "15038196321"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.apexaquatics.captynsites.com/",
+            "title": "APEX Aquatics \u2014 Three Teams. One Apex.",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "The official directory uses a combined club/network code label. A standalone current USA Swimming registration code is not established."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-crst",
+      "after": {
+        "kind": "team",
+        "title": "Columbia River Swim Team",
+        "officialName": "Columbia River Swim Team",
+        "abbreviation": "CRST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.crstwaveriders.org/",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "Columbia River Swim Team is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Vancouver, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "crstcoach@aol.com",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Darlene Lumbard",
+            "email": "crstcoach@aol.com",
+            "phone": "13609048100"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.crstwaveriders.org/",
+            "title": "Columbia River Swim Team Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/oscrst/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-cat",
+      "after": {
+        "kind": "team",
+        "title": "Corvallis Aquatic Team",
+        "officialName": "Corvallis Aquatic Team",
+        "abbreviation": "CAT",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.corvallisaquaticteam.org/",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "Corvallis Aquatic Team is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Corvallis, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "surfswimcat@aol.com",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Brandon Shreeve",
+            "email": "brandonshreeve0422@gmail.com",
+            "phone": "15416024057"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Gretchen Noll",
+            "email": "gretchen.noll@dallasor.gov",
+            "phone": "11503623971"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.corvallisaquaticteam.org/",
+            "title": "Corvallis Aquatic Team Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/oscat/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-cgal",
+      "after": {
+        "kind": "team",
+        "title": "Cottage Grove Aqua Lions",
+        "officialName": "Cottage Grove Aqua Lions",
+        "abbreviation": "CGAL",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.teamunify.com/Home.jsp?team=wzoscgal",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "Cottage Grove Aqua Lions is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Cottage Grove, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "seankelty23@gmail.com",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Tyson Pilling",
+            "email": "tyson.pilling@hotmail.com",
+            "phone": "15419425533"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-ea",
+      "after": {
+        "kind": "team",
+        "title": "Emerald Aquatics",
+        "officialName": "Emerald Aquatics",
+        "abbreviation": "EA",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.emeraldaquatics.com/",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "Emerald Aquatics is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Eugene, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "emilypuleio@gmail.com",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "http://www.emeraldaquatics.com/",
+            "title": "Welcome",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/Home.jsp?team=osea"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-ecsc",
+      "after": {
+        "kind": "team",
+        "title": "Eugene City Swim Club",
+        "officialName": "Eugene City Swim Club",
+        "abbreviation": "ECSC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.eugenecityswimclub.org/",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "Eugene City Swim Club is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Eugene, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "swimecsc@yahoo.com",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Scott Kerr",
+            "email": "swimecsc@yahoo.com",
+            "phone": "14582010999"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.eugenecityswimclub.org/",
+            "title": "Home - ECSC",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.eugenecityswimclub.org/"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-fgsc",
+      "after": {
+        "kind": "team",
+        "title": "Forest Grove Swim Club",
+        "officialName": "Forest Grove Swim Club",
+        "abbreviation": "FGSC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.fgdragons.com/",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "Forest Grove Swim Club is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Forest Grove, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "fgsc.headcoach@gmail.com",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Summir Case",
+            "email": "sumswimcoach@gmail.com",
+            "phone": "15035505915"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-gcst",
+      "after": {
+        "kind": "team",
+        "title": "Gold Coast Swim Team",
+        "officialName": "Gold Coast Swim Team",
+        "abbreviation": "GCST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/orgcst/page/home",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "Gold Coast Swim Team is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Coos Bay, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "kmcnutt@outlook.com",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Kathe McNutt",
+            "email": "kmcnutt@outlook.com",
+            "phone": "15412973093"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/orgcst/page/home",
+            "title": "Gold Coast Swim Team Home",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "The LSC directory\u2019s former website now serves unrelated content; replaced with a verified official team/parent page."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-gacc",
+      "after": {
+        "kind": "team",
+        "title": "Gold's Gym Athletic Club Camas",
+        "officialName": "Gold's Gym Athletic Club Camas",
+        "abbreviation": "GACC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.gomotionapp.com/team/walwst/page/home",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "Gold's Gym Athletic Club Camas is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Camas, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "nicholasb@goldsgym1965.com",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "http://www.gomotionapp.com/team/walwst/page/home",
+            "title": "Gold's Aquatics Club (Camas) Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/walwst/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-gps",
+      "after": {
+        "kind": "team",
+        "title": "Grants Pass Swimming YMCA",
+        "officialName": "Grants Pass Swimming YMCA",
+        "abbreviation": "GPS",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/Home.jsp?team=orygps",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "Grants Pass Swimming YMCA is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Grants Pass, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "mckshaw@grantspassymca.net",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.teamunify.com/Home.jsp?team=orygps",
+            "title": "Welcome",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/Home.jsp?team=orygps"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-hdst",
+      "after": {
+        "kind": "team",
+        "title": "Hi-Desert Swim Team",
+        "officialName": "Hi-Desert Swim Team",
+        "abbreviation": "HDST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.highdesertaquatics.com/",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "Hi-Desert Swim Team is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Burns/Hines, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "cricketly@gmail.com",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Jodie Reiss",
+            "email": "hi.desert.swim.team@gmail.com",
+            "phone": "15415893105"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-heat",
+      "after": {
+        "kind": "team",
+        "title": "Hillsboro Swim Team",
+        "officialName": "Hillsboro Swim Team",
+        "abbreviation": "HEAT",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.hillsboroheat.org/",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "Hillsboro Swim Team is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Hillsboro, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "james@hillsboroheat.org",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Elaine Heasley",
+            "email": "teamadmin@hillsboroheat.org",
+            "phone": "15038588830"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.hillsboroheat.org/",
+            "title": "Hillsboro HEAT Swim Team Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.hillsboroheat.org/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-hrst",
+      "after": {
+        "kind": "team",
+        "title": "Hood River Valley Swim Team",
+        "officialName": "Hood River Valley Swim Team",
+        "abbreviation": "HRST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.hrvst.org/",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "Hood River Valley Swim Team is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Hood River, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "hrvstcoach@gmail.com",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Shelly Rawding",
+            "email": "hrvst.coach@gmail.com",
+            "phone": "15094934679"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.hrvst.org/",
+            "title": "Hood River Valley Swim Team Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/oshrvst/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-kwsc",
+      "after": {
+        "kind": "team",
+        "title": "Killer Whales Swim Club",
+        "officialName": "Killer Whales Swim Club",
+        "abbreviation": "KWSC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/Home.jsp?_tabid_=0&team=orkwsc",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "Killer Whales Swim Club is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Kelso/Longview, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "dutchgirl640@yahoo.com",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Dane Wirtz",
+            "email": "kwswimclub@gmail.com",
+            "phone": "13605621455"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.teamunify.com/Home.jsp?_tabid_=0&team=orkwsc",
+            "title": "Killer Whales Swim Club Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/orkwsc/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-basn",
+      "after": {
+        "kind": "team",
+        "title": "Klamath Basin Aquatic Sports",
+        "officialName": "Klamath Basin Aquatic Sports",
+        "abbreviation": "BASN",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": null,
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "Klamath Basin Aquatic Sports is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Klamath Falls, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "bobortanya@yahoo.com",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Dan Zimmer",
+            "email": "dzim2007@msn.com",
+            "phone": "15418916292"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Official team website not established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-losc",
+      "after": {
+        "kind": "team",
+        "title": "Lake Oswego Swim Club",
+        "officialName": "Lake Oswego Swim Club",
+        "abbreviation": "LOSC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.lakeoswegoswimclub.org/",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "Lake Oswego Swim Club is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Lake Oswego, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "emily.melina7@gmail.com",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Emily Melina",
+            "email": "emily.melina7@gmail.com",
+            "phone": "12088743017"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.lakeoswegoswimclub.org/",
+            "title": "Lake Oswego Swim Club Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/orlosc/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-lst",
+      "after": {
+        "kind": "team",
+        "title": "Lakeview Swim Team",
+        "officialName": "Lakeview Swim Team",
+        "abbreviation": "LST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": null,
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "Lakeview Swim Team is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Lakeview, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "hamrickliv@gmail.com",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Annette Shulanberger",
+            "email": "abshullan01@yahoo.com",
+            "phone": "15419474625"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Official team website not established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-lsc",
+      "after": {
+        "kind": "team",
+        "title": "Lebanon Community Swim Club",
+        "officialName": "Lebanon Community Swim Club",
+        "abbreviation": "LSC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/oslcsc/page/home",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "Lebanon Community Swim Club is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Lebanon, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "amberswimcoach@gmail.com",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Jim Knaup",
+            "email": "knaup36@gmail.com",
+            "phone": "15418712768"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/oslcsc/page/home",
+            "title": "Lebanon Community Swim Club Home",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-la",
+      "after": {
+        "kind": "team",
+        "title": "Legacy Aquatics",
+        "officialName": "Legacy Aquatics",
+        "abbreviation": "LA",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": null,
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "Legacy Aquatics is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Portland, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "coachbobbyddac@gmail.com",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Bobby DeRoest",
+            "email": "coachbobbyddac@gmail.com",
+            "phone": "19712073339"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Official team website not established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-life",
+      "after": {
+        "kind": "team",
+        "title": "Lifetime Swim Team",
+        "officialName": "Lifetime Swim Team",
+        "abbreviation": "LIFE",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/orlto/page/home",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "Lifetime Swim Team is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Beaverton, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "dweinberg@lt.life",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Danny Weinberg",
+            "email": "dweinberg@lt.life",
+            "phone": "18472243123"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/orlto/page/home",
+            "title": "Lifetime Oregon Home",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-lcsc",
+      "after": {
+        "kind": "team",
+        "title": "Lincoln City Swim Club",
+        "officialName": "Lincoln City Swim Club",
+        "abbreviation": "LCSC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "http://lcscswim.org/",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "Lincoln City Swim Club is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Lincoln City, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "lippyb@hotmail.com",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Lissa Parker",
+            "email": "lippyb@hotmail.com",
+            "phone": "15419922941"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://lcscswim.org/",
+            "title": "Lincoln City Swim Club",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://sites.google.com/lcscswim.org/lincolncityswimclub/home?authuser=0"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-mst",
+      "after": {
+        "kind": "team",
+        "title": "Madras Swim Team",
+        "officialName": "Madras Swim Team",
+        "abbreviation": "MST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/madrasst/page/home",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "Madras Swim Team is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Madras, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "jasonluecker@gmail.com",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Marissa Wilson",
+            "email": "mstboosters@gmail.com",
+            "phone": "15419772898"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/madrasst/page/home",
+            "title": "Madras Swim Team Home",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-msc-apex",
+      "after": {
+        "kind": "team",
+        "title": "McMinnville Swim Club",
+        "officialName": "McMinnville Swim Club",
+        "abbreviation": "MSC(APEX)",
+        "abbreviationType": "Official LSC directory code label",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.mcminnvilleswimming.com/",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "McMinnville Swim Club is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "McMinnville, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "coachmartins@gmail.com",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Murilo Martins",
+            "email": "coachmmartins@gmail.com",
+            "phone": "15038588772"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.mcminnvilleswimming.com/",
+            "title": "McMinnville Swim Club Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/ormsc/page/home"
+          }
+        ],
+        "gaps": [
+          "The official directory uses a combined club/network code label. A standalone current USA Swimming registration code is not established."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-mha",
+      "after": {
+        "kind": "team",
+        "title": "Mount Hood Aquatics",
+        "officialName": "Mount Hood Aquatics",
+        "abbreviation": "MHA",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.teamunify.com/team/dcd/page/home",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "Mount Hood Aquatics is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Gresham, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "bakeswim@yahoo.com",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Christine Logue",
+            "email": "christinelogue01@gmail.com",
+            "phone": "15037027845"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Erin Bradley",
+            "email": "erinbradleymha@gmail.com",
+            "phone": "15037802268"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-mac",
+      "after": {
+        "kind": "team",
+        "title": "Multnomah Athletic Club",
+        "officialName": "Multnomah Athletic Club",
+        "abbreviation": "MAC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/team/ormac/page/home",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "Multnomah Athletic Club is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Portland, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "tlarkin@themac.com",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Tim Larkin",
+            "email": "tlarkin@themac.com",
+            "phone": "15035177502"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.teamunify.com/team/ormac/page/home",
+            "title": "Multnomah Athletic Club Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/ormac/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-nst",
+      "after": {
+        "kind": "team",
+        "title": "Newport Swim Team",
+        "officialName": "Newport Swim Team",
+        "abbreviation": "NST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.newportswimteam.net/",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "Newport Swim Team is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Newport, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "coach.gavinsantiago@gmail.com",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Kasey Postlewait",
+            "email": "kaseyreneep@gmail.com",
+            "phone": "15412723112"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-pac",
+      "after": {
+        "kind": "team",
+        "title": "Portland Aquatic Club",
+        "officialName": "Portland Aquatic Club",
+        "abbreviation": "PAC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.swimpac.org/",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "Portland Aquatic Club is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Portland, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "coachchelseakrisanda@gmail.com",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Scott Miyako",
+            "email": "portlandaquatic@gmail.com",
+            "phone": "16617135029"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-pst",
+      "after": {
+        "kind": "team",
+        "title": "Prineville Swim Team",
+        "officialName": "Prineville Swim Team",
+        "abbreviation": "PST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.prinevilleswimteam.org/",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "Prineville Swim Team is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Prineville, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "halleyestes23@gmail.com",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Halley Estes",
+            "email": "halleyestes23@gmail.com",
+            "phone": "15417286581"
+          },
+          {
+            "role": "Public team website contact",
+            "email": "prinevilleswimteam@gmail.com",
+            "url": "http://www.prinevilleswimteam.org/"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.prinevilleswimteam.org/",
+            "title": "Prineville Swim Team | LIFE IS BETTER WHEN YOU ARE SWIMMING!",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.prinevilleswimteam.org/"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-race",
+      "after": {
+        "kind": "team",
+        "title": "Redmond Aquatic Club",
+        "officialName": "Redmond Aquatic Club",
+        "abbreviation": "RACE",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/Home.jsp?team=orrace",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "Redmond Aquatic Club is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Redmond, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "shane.bennett@raprd.org",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Heather Thomas",
+            "email": "heather.thomas@raprd.org",
+            "phone": "15418699585"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.teamunify.com/Home.jsp?team=orrace",
+            "title": "Redmond Aquatic Club Eels Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/orrace/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-rrst",
+      "after": {
+        "kind": "team",
+        "title": "River Road Swim Team",
+        "officialName": "River Road Swim Team",
+        "abbreviation": "RRST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/riverroadst/page/home",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "River Road Swim Team is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Eugene, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "leiamatern@gmail.com",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Leia Matern",
+            "email": "leiam@rrpark.org",
+            "phone": "15414617777"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/riverroadst/page/home",
+            "title": "River Road Swim Team Home",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-rr",
+      "after": {
+        "kind": "team",
+        "title": "Rogue Rapid Swim Team",
+        "officialName": "Rogue Rapid Swim Team",
+        "abbreviation": "RR",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/riverroadst/page/home",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "Rogue Rapid Swim Team is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Medford, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "roguerapidsswimming@gmail.com",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/riverroadst/page/home",
+            "title": "River Road Swim Team Home",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Oregon\u2019s Rogue Rapid listing links to River Road Swim Team\u2019s page. The website assignment is conflicting and must be confirmed."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-ryst",
+      "after": {
+        "kind": "team",
+        "title": "Roseburg YMCA Swim Team",
+        "officialName": "Roseburg YMCA Swim Team",
+        "abbreviation": "RYST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.teamunify.com/Home.jsp?team=orryst",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "Roseburg YMCA Swim Team is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Roseburg, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "momof5todds@yahoo.com",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Todd, Christy Ann",
+            "email": "momof5todds@yahoo.com"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-ssc",
+      "after": {
+        "kind": "team",
+        "title": "Salem Swim Club",
+        "officialName": "Salem Swim Club",
+        "abbreviation": "SSC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/team/usaorca/page/home",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "Salem Swim Club is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Salem, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "coachvictor@salemswimclub.org",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Victor Brasil",
+            "email": "coachvictor@salemswimclub.org",
+            "phone": "19712810719"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "VIctor Brasil",
+            "email": "coachvictor@salemswimclub.org",
+            "phone": "19712810719"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.teamunify.com/team/usaorca/page/home",
+            "title": "Salem Swim Club",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/usaorca/page/home"
+          }
+        ],
+        "gaps": [
+          "Name variation: LSC lists Salem Swim Club; USA Swimming lists Salem Swim Club - YMCA."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-slst",
+      "after": {
+        "kind": "team",
+        "title": "Sea Lions Swim Team",
+        "officialName": "Sea Lions Swim Team",
+        "abbreviation": "SLST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.slst.biz/",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "Sea Lions Swim Team is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "St. Helens, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "millerk1988@gmail.com",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Katie Miller",
+            "email": "millerk1988@gmail.com",
+            "phone": "15033966853"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.slst.biz/",
+            "title": "Sea Lions Swim Team Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/orslst/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-sfr",
+      "after": {
+        "kind": "team",
+        "title": "Silver Falls Rapids",
+        "officialName": "Silver Falls Rapids",
+        "abbreviation": "SFR",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/orsfr/page/home",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "Silver Falls Rapids is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Silverton, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "mcolgan@theyonline.org",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/orsfr/page/home",
+            "title": "Silver Falls Rapids Home",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-scat",
+      "after": {
+        "kind": "team",
+        "title": "South Coast Aquatic Team",
+        "officialName": "South Coast Aquatic Team",
+        "abbreviation": "SCAT",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/Home.jsp?team=orscat",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "South Coast Aquatic Team is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "North Bend, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "headcoachscat@gmail.com",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "SCAT Board",
+            "email": "SCATBOARD@gmail.com",
+            "phone": "15412946728"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.teamunify.com/Home.jsp?team=orscat",
+            "title": "South Coast Aquatic Team Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/orscat/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-smr",
+      "after": {
+        "kind": "team",
+        "title": "Stayton Manta Rays",
+        "officialName": "Stayton Manta Rays",
+        "abbreviation": "SMR",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.teamunify.com/Home.jsp?team=orsmr",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "Stayton Manta Rays is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Stayton, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "big.red.ford@juno.com",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-stry",
+      "after": {
+        "kind": "team",
+        "title": "Stingrays Swim Team",
+        "officialName": "Stingrays Swim Team",
+        "abbreviation": "STRY",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.oregonjcc.org/fitness-wellness/stingrays-swim-team",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "Stingrays Swim Team is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Portland, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "jcondon@oregonjcc.org",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "Similar names in different LSCs prevent a unique national-map match; only the LSC directory is used."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-sa",
+      "after": {
+        "kind": "team",
+        "title": "Superior Aquatics",
+        "officialName": "Superior Aquatics",
+        "abbreviation": "SA",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/OSSSS/page/home",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "Superior Aquatics is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Medford, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "siouxha@yahoo.com",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Siouxha Tokman",
+            "email": "siouxha@yahoo.com",
+            "phone": "15412279007"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/OSSSS/page/home",
+            "title": "Superior Aquatics Home",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-shsc",
+      "after": {
+        "kind": "team",
+        "title": "Sweet Home Swim Club",
+        "officialName": "Sweet Home Swim Club",
+        "abbreviation": "SHSC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.teamunify.com/Home.jsp?team=orshsc",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "Sweet Home Swim Club is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Sweet Home, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "jess.m.rice22@gmail.com",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-team",
+      "after": {
+        "kind": "team",
+        "title": "Team Eugene Aquatics",
+        "officialName": "Team Eugene Aquatics",
+        "abbreviation": "TEAM",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.teameugene.org/",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "Team Eugene Aquatics is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Eugene, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "britta@teameugene.org",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Britta Wyatt",
+            "email": "join@teameugene.org",
+            "phone": "15415153840"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.teameugene.org/",
+            "title": "Team Eugene Aquatics Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.teameugene.org/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-tdst",
+      "after": {
+        "kind": "team",
+        "title": "The Dalles Swim Team",
+        "officialName": "The Dalles Swim Team",
+        "abbreviation": "TDST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.tdswimteam.org/",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "The Dalles Swim Team is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "The Dalles, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "edannthedalles@gmail.com",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Derek Shortt",
+            "email": "tdswimteam@gmail.com",
+            "phone": "15419937085"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.tdswimteam.org/",
+            "title": "The Dalles Swim Team Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/ortdst/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-tdps",
+      "after": {
+        "kind": "team",
+        "title": "The Dolphins Portland",
+        "officialName": "The Dolphins Portland",
+        "abbreviation": "TDPS",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.dolphinswimteam.org/",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "The Dolphins Portland is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Portland, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "nazfly74@gmail.com",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Becky Dobler",
+            "email": "dolphinswimmingpdx@gmail.com",
+            "phone": "15034498779"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.dolphinswimteam.org/",
+            "title": "The Dolphins Swim Team Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.dolphinswimteam.org/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-ttsc",
+      "after": {
+        "kind": "team",
+        "title": "Tigard Tualatin Swim Club",
+        "officialName": "Tigard Tualatin Swim Club",
+        "abbreviation": "TTSC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.ttsc.org/",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "Tigard Tualatin Swim Club is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Tigard/Tualatin, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "part_of_network",
+            "label": "Club network",
+            "name": "APEX Aquatics",
+            "targetId": "usa-team-or-apex",
+            "note": "APEX\u2019s official website names Canby, Chehalem and Tigard Tualatin as its three teams."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "quentin.rieniets@ttsc.org",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Quentin A Rieniets",
+            "email": "quentin.rieniets@ttsc.org",
+            "phone": "15032061814"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.ttsc.org/",
+            "title": "Welcome",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/Home.jsp?team=osttsc"
+          },
+          {
+            "url": "https://www.apexaquatics.captynsites.com/",
+            "title": "APEX Aquatics \u2014 Three Teams. One Apex.",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-ty",
+      "after": {
+        "kind": "team",
+        "title": "Tillamook YMCA Sharks",
+        "officialName": "Tillamook YMCA Sharks",
+        "abbreviation": "TY",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": null,
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "Tillamook YMCA Sharks is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Tillamook, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "cradley@tillamookymca.org",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Shawna Wiedenmann",
+            "email": "swiedenmann@tillamookymca.org",
+            "phone": "15038429622"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Official team website not established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-tide",
+      "after": {
+        "kind": "team",
+        "title": "Toledo Tidal Waves",
+        "officialName": "Toledo Tidal Waves",
+        "abbreviation": "TIDE",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "Toledo Tidal Waves is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Toledo, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "coachdoyle.tide.gtp@gmail.com",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Toledo Tidal Waves",
+            "email": "programs@greatertoledopool.org",
+            "phone": "15413363181"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming - Find a Club",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-tor",
+      "after": {
+        "kind": "team",
+        "title": "Tornadoes Swim Team",
+        "officialName": "Tornadoes Swim Team",
+        "abbreviation": "TOR",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.tornadoesswim.org/",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "Tornadoes Swim Team is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Vancouver, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "sophianerissa@gmail.com",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Sophia Stone-Holmbeck",
+            "email": "sophianerissa@gmail.com",
+            "phone": "13606091030"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-thsc",
+      "after": {
+        "kind": "team",
+        "title": "Tualatin Hills Swim Club",
+        "officialName": "Tualatin Hills Swim Club",
+        "abbreviation": "THSC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.thunderboltswimming.org/",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "Tualatin Hills Swim Club is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Beaverton, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "franz@thunderboltswimming.org",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Kevin Ferreira",
+            "email": "kevin@thunderboltswimming.org",
+            "phone": "15036295568"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Franz Resseguie",
+            "email": "franz@thunderboltswimming.org",
+            "phone": "15036295568"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Dennis Baker",
+            "email": "bakeswim@yahoo.com",
+            "phone": "15035761328"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.thunderboltswimming.org/",
+            "title": "Tualatin Hills Swim Club Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.thunderboltswimming.org/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-vsc",
+      "after": {
+        "kind": "team",
+        "title": "Vancouver Swim Club",
+        "officialName": "Vancouver Swim Club",
+        "abbreviation": "VSC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.vancouverswimclub.com/",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "Vancouver Swim Club is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Vancouver, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "befree07.15.17@gmail.com",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Cindy Manlow",
+            "email": "actghouse@comcast.net",
+            "phone": "13609441484"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.vancouverswimclub.com/",
+            "title": "Vancouver Swim Club, Inc. Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/vsc/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-or-vsst",
+      "after": {
+        "kind": "team",
+        "title": "VillaSport Swim Team",
+        "officialName": "VillaSport Swim Team",
+        "abbreviation": "VSST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-or",
+        "lscId": "usa-lsc-or",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.teamunify.com/Home.jsp?team=orvsb",
+        "sourceUrl": "https://www.oregonswimming.org/page/clubs/find-a-club",
+        "summary": "VillaSport Swim Team is a swim team/program listed by Oregon Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Beaverton, Oregon / southwest Washington",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Oregon Swimming",
+            "targetId": "usa-lsc-or"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "mittemeyer.andrew@gmail.com",
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oregonswimming.org/page/clubs/find-a-club",
+            "title": "Oregon Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    }
+  ]
+}

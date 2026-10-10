@@ -1,0 +1,1505 @@
+{
+  "division": "knowledge",
+  "scope": "Format-review pilot — national structure + Eastern Zone: 4 zones, 12 LSCs, 2 sectional competition regions, 1 national reference. All additions pending. Eastern LSC enumeration complete; nationwide and regional collection partial. Conflicts: Maine omitted by zone directory; Lake Erie differs across national sources.",
+  "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+  "capturedAt": "2026-10-10T07:07:46Z",
+  "coverage": "partial",
+  "evidence": {
+    "checkedAt": "2026-10-10",
+    "nationalStructure": "2026 Rules Articles 603, 605, 606",
+    "deduplication": {
+      "publishedKnowledgeEntries": 0,
+      "pendingOrHeldKnowledgeBatches": 0,
+      "checkedAt": "2026-10-10",
+      "method": "Read all published knowledge entries and staff-only pending/held knowledge batches from configured project; both empty. Stable organization IDs and website normalization used within this proposal."
+    },
+    "coverage": {
+      "zones": 4,
+      "easternLSCs": 12,
+      "regions": 2,
+      "otherZonesDetailed": false,
+      "nationwideComplete": false
+    },
+    "sourceConflicts": [
+      "Maine absent from Eastern Zone directory but present in national directory and rulebook.",
+      "Lake Erie present in USA Swimming website directory but absent from 2026 rulebook zone list and Central Zone homepage."
+    ],
+    "sources": [
+      {
+        "url": "https://www.usaswimming.org/rulebook",
+        "title": "2026 Rulebook Article 606",
+        "checkedAt": "2026-10-10"
+      },
+      {
+        "url": "https://www.usaswimming.org/about/lsc-websites",
+        "title": "USA Swimming LSC & Zone directory",
+        "checkedAt": "2026-10-10"
+      },
+      {
+        "url": "https://www.usaswimming.org/about-usas/organization/contact-us",
+        "title": "USA Swimming contact information",
+        "checkedAt": "2026-10-10"
+      },
+      {
+        "url": "https://www.gomotionapp.com/team/cenzone/page/home",
+        "title": "Central Zone official website",
+        "checkedAt": "2026-10-10"
+      },
+      {
+        "url": "https://www.easternzoneswimming.org/",
+        "title": "Eastern Zone official website",
+        "checkedAt": "2026-10-10"
+      },
+      {
+        "url": "https://www.easternzoneswimming.org/page/about/facilities",
+        "title": "Eastern Zone LSC directory",
+        "checkedAt": "2026-10-10",
+        "note": "Maine omitted."
+      },
+      {
+        "url": "https://www.easternzoneswimming.org/page/about/coaches-and-instructors",
+        "title": "Eastern Zone contact directory",
+        "checkedAt": "2026-10-10"
+      },
+      {
+        "url": "https://www.gomotionapp.com/team/szlsc/page/home",
+        "title": "Southern Zone official website",
+        "checkedAt": "2026-10-10"
+      },
+      {
+        "url": "https://www.gomotionapp.com/team/wzone/page/home",
+        "title": "Western Zone official website",
+        "checkedAt": "2026-10-10"
+      },
+      {
+        "url": "https://www.adirondackswimming.org/",
+        "title": "Adirondack Swimming official website",
+        "checkedAt": "2026-10-10"
+      },
+      {
+        "url": "https://www.gomotionapp.com/team/ezamslsc/page/home",
+        "title": "Allegheny Mountain Swimming official website",
+        "checkedAt": "2026-10-10"
+      },
+      {
+        "url": "https://www.gomotionapp.com/team/ezamslsc/page/business/ams-contacts",
+        "title": "Allegheny Mountain Swimming organizational contacts",
+        "checkedAt": "2026-10-10"
+      },
+      {
+        "url": "https://www.easternzoneswimming.org/easternzone/UserFiles/Image/QuickUpload/2026-ez-south-region-sectional-meet-announcement_011037.pdf",
+        "title": "2026 South Region sectional announcement",
+        "checkedAt": "2026-10-10"
+      },
+      {
+        "url": "https://www.ctswim.org/",
+        "title": "Connecticut Swimming official website",
+        "checkedAt": "2026-10-10"
+      },
+      {
+        "url": "https://www.ctswim.org/contact-us/",
+        "title": "Connecticut Swimming organizational contacts",
+        "checkedAt": "2026-10-10"
+      },
+      {
+        "url": "http://www.maineswimming.org/",
+        "title": "Maine Swimming official website",
+        "checkedAt": "2026-10-10",
+        "note": "Redirect verified to https://www.gomotionapp.com/team/mams/page/home"
+      },
+      {
+        "url": "https://www.gomotionapp.com/team/md/page/home",
+        "title": "Maryland Swimming official website",
+        "checkedAt": "2026-10-10"
+      },
+      {
+        "url": "https://www.gomotionapp.com/team/mrlsc/page/home",
+        "title": "Metropolitan Swimming official website",
+        "checkedAt": "2026-10-10"
+      },
+      {
+        "url": "https://www.gomotionapp.com/team/ezmaslsc/page/home",
+        "title": "Middle Atlantic Swimming official website",
+        "checkedAt": "2026-10-10"
+      },
+      {
+        "url": "https://www.gomotionapp.com/team/ezmaslsc/page/about-us/contact-staff",
+        "title": "Middle Atlantic Swimming organizational contacts",
+        "checkedAt": "2026-10-10"
+      },
+      {
+        "url": "https://www.neswim.com/",
+        "title": "New England Swimming official website",
+        "checkedAt": "2026-10-10",
+        "note": "Redirect verified to https://www.gomotionapp.com/team/lscnes/page/home"
+      },
+      {
+        "url": "https://www.njswim.org/",
+        "title": "New Jersey Swimming official website",
+        "checkedAt": "2026-10-10"
+      },
+      {
+        "url": "https://www.niagaraswim.org/",
+        "title": "Niagara Swimming official website",
+        "checkedAt": "2026-10-10"
+      },
+      {
+        "url": "https://www.niagaraswim.org/page/new-about/leadership--staff",
+        "title": "Niagara Swimming organizational contacts",
+        "checkedAt": "2026-10-10"
+      },
+      {
+        "url": "https://www.pvswim.org/",
+        "title": "Potomac Valley Swimming official website",
+        "checkedAt": "2026-10-10"
+      },
+      {
+        "url": "https://www.pvswim.org/contacts",
+        "title": "Potomac Valley Swimming organizational contacts",
+        "checkedAt": "2026-10-10"
+      },
+      {
+        "url": "https://www.gomotionapp.com/team/va/page/home",
+        "title": "Virginia Swimming official website",
+        "checkedAt": "2026-10-10"
+      },
+      {
+        "url": "https://www.easternzoneswimming.org/page/meets",
+        "title": "Eastern Zone meet calendar",
+        "checkedAt": "2026-10-10",
+        "note": "North/South terminology in 2026 and 2027."
+      },
+      {
+        "url": "https://www.easternzoneswimming.org/easternzone/UserFiles/Image/QuickUpload/2026-ez-north-region-sectional-meet-announcement_024298.pdf",
+        "title": "2026 North Region sectional announcement",
+        "checkedAt": "2026-10-10"
+      }
+    ]
+  },
+  "writes": [
+    {
+      "path": "knowledge_entries/usa-swimming-national-structure",
+      "after": {
+        "kind": "document",
+        "title": "USA Swimming — national organization and directory structure",
+        "officialName": "USA Swimming",
+        "organizationType": "National governing body (documented in a national structure reference)",
+        "abbreviation": null,
+        "website": "https://www.usaswimming.org/",
+        "sourceUrl": "https://www.usaswimming.org/rulebook",
+        "parentId": null,
+        "summary": "USA Swimming groups LSCs into four administrative zones. Article 606 permits regional competition arrangements between LSCs; it does not establish a mandatory zone → region → LSC hierarchy. Region entries in this batch describe competition groupings, not an additional governing tier.",
+        "geographicCoverage": "United States; LSC jurisdiction follows Article 603 rather than state borders alone.",
+        "coverageNote": "Complete inventory of the four zone names; detailed first-zone collection covers Eastern Zone. Nationwide LSC and region collection remains partial.",
+        "relationships": [
+          {
+            "type": "administrative_zone",
+            "label": "Administrative zone",
+            "targetId": "usa-zone-central",
+            "name": "Central Zone"
+          },
+          {
+            "type": "administrative_zone",
+            "label": "Administrative zone",
+            "targetId": "usa-zone-eastern",
+            "name": "Eastern Zone"
+          },
+          {
+            "type": "administrative_zone",
+            "label": "Administrative zone",
+            "targetId": "usa-zone-southern",
+            "name": "Southern Zone"
+          },
+          {
+            "type": "administrative_zone",
+            "label": "Administrative zone",
+            "targetId": "usa-zone-western",
+            "name": "Western Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "National contact",
+            "phone": "719-866-3602",
+            "url": "https://www.usaswimming.org/about-usas/organization/contact-us"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "title": "USA Swimming 2026 Rules & Regulations",
+            "checkedAt": "2026-10-10",
+            "note": "Articles 603 (names, codes, boundaries), 605 (zones), 606 (regional competition)."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-websites",
+            "title": "USA Swimming LSC & Zone directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/about-usas/organization/contact-us",
+            "title": "USA Swimming contact information",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "USA Swimming’s website lists 59 LSCs, including Lake Erie; 2026 rulebook Article 605 and Central Zone’s current homepage list 58 nationwide / 14 Central LSCs without Lake Erie. Resolve during Central Zone collection; do not assert a single reconciled nationwide total.",
+          "National organization is stored as a reference document because the existing Knowledge Base supports document, zone, region and LSC types but has no national-organization type.",
+          "No verified national abbreviation is asserted. Corporate suffixes for LSC names are not inferred from naming conventions."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-zone-central",
+      "after": {
+        "kind": "zone",
+        "title": "Central Zone",
+        "officialName": "Central Zone",
+        "organizationType": "USA Swimming administrative zone",
+        "abbreviation": null,
+        "website": "https://www.gomotionapp.com/team/cenzone/page/home",
+        "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+        "parentId": "usa-swimming-national-structure",
+        "summary": "One of USA Swimming’s four administrative zones. It groups LSCs for zone administration and competition under Article 605.",
+        "geographicCoverage": "LSC jurisdictions of: Arkansas, Illinois, Indiana, Iowa, Michigan, Midwestern, Minnesota, Missouri Valley, North Dakota, Ohio, Oklahoma, Ozark, South Dakota, Wisconsin.",
+        "coverageNote": "National structure record only; detailed zone, region and LSC collection deferred.",
+        "relationships": [
+          {
+            "type": "governed_by",
+            "label": "National governing organization",
+            "targetId": "usa-swimming-national-structure",
+            "name": "USA Swimming"
+          }
+        ],
+        "contacts": [],
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "title": "USA Swimming 2026 Rules & Regulations",
+            "checkedAt": "2026-10-10",
+            "note": "Articles 603 (names, codes, boundaries), 605 (zones), 606 (regional competition)."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-websites",
+            "title": "USA Swimming LSC & Zone directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/cenzone/page/home",
+            "title": "Central Zone official website",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "National directory includes Lake Erie; current rulebook and Central Zone homepage omit it. Membership reconciliation deferred.",
+          "Direct zone contact and official abbreviation not yet collected."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-zone-eastern",
+      "after": {
+        "kind": "zone",
+        "title": "Eastern Zone",
+        "officialName": "Eastern Zone",
+        "organizationType": "USA Swimming administrative zone",
+        "abbreviation": "EZ",
+        "website": "https://www.easternzoneswimming.org/",
+        "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+        "parentId": "usa-swimming-national-structure",
+        "summary": "One of USA Swimming’s four administrative zones. It groups LSCs for zone administration and competition under Article 605.",
+        "geographicCoverage": "LSC jurisdictions of: Adirondack, Allegheny Mountain, Connecticut, Maine, Maryland, Metropolitan, Middle Atlantic, New England, New Jersey, Niagara, Potomac Valley, Virginia.",
+        "coverageNote": "All 12 nationally listed Eastern LSCs collected; regional competition coverage is partial.",
+        "relationships": [
+          {
+            "type": "governed_by",
+            "label": "National governing organization",
+            "targetId": "usa-swimming-national-structure",
+            "name": "USA Swimming"
+          },
+          {
+            "type": "contains_lsc",
+            "label": "LSC in zone",
+            "targetId": "usa-lsc-ad",
+            "name": "Adirondack Swimming"
+          },
+          {
+            "type": "contains_lsc",
+            "label": "LSC in zone",
+            "targetId": "usa-lsc-am",
+            "name": "Allegheny Mountain Swimming"
+          },
+          {
+            "type": "contains_lsc",
+            "label": "LSC in zone",
+            "targetId": "usa-lsc-ct",
+            "name": "Connecticut Swimming"
+          },
+          {
+            "type": "contains_lsc",
+            "label": "LSC in zone",
+            "targetId": "usa-lsc-me",
+            "name": "Maine Swimming"
+          },
+          {
+            "type": "contains_lsc",
+            "label": "LSC in zone",
+            "targetId": "usa-lsc-md",
+            "name": "Maryland Swimming"
+          },
+          {
+            "type": "contains_lsc",
+            "label": "LSC in zone",
+            "targetId": "usa-lsc-mr",
+            "name": "Metropolitan Swimming"
+          },
+          {
+            "type": "contains_lsc",
+            "label": "LSC in zone",
+            "targetId": "usa-lsc-ma",
+            "name": "Middle Atlantic Swimming"
+          },
+          {
+            "type": "contains_lsc",
+            "label": "LSC in zone",
+            "targetId": "usa-lsc-ne",
+            "name": "New England Swimming"
+          },
+          {
+            "type": "contains_lsc",
+            "label": "LSC in zone",
+            "targetId": "usa-lsc-nj",
+            "name": "New Jersey Swimming"
+          },
+          {
+            "type": "contains_lsc",
+            "label": "LSC in zone",
+            "targetId": "usa-lsc-ni",
+            "name": "Niagara Swimming"
+          },
+          {
+            "type": "contains_lsc",
+            "label": "LSC in zone",
+            "targetId": "usa-lsc-pv",
+            "name": "Potomac Valley Swimming"
+          },
+          {
+            "type": "contains_lsc",
+            "label": "LSC in zone",
+            "targetId": "usa-lsc-va",
+            "name": "Virginia Swimming"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Non-Coach Director",
+            "email": "platt@maswim.org",
+            "url": "https://www.easternzoneswimming.org/page/about/coaches-and-instructors"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "title": "USA Swimming 2026 Rules & Regulations",
+            "checkedAt": "2026-10-10",
+            "note": "Articles 603 (names, codes, boundaries), 605 (zones), 606 (regional competition)."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-websites",
+            "title": "USA Swimming LSC & Zone directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.easternzoneswimming.org/",
+            "title": "Eastern Zone official website",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.easternzoneswimming.org/page/about/facilities",
+            "title": "Eastern Zone LSC directory",
+            "checkedAt": "2026-10-10",
+            "note": "Lists 11; omits Maine."
+          },
+          {
+            "url": "https://www.easternzoneswimming.org/page/about/coaches-and-instructors",
+            "title": "Eastern Zone contacts",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Eastern Zone’s LSC web directory omits Maine; national directory and 2026 rulebook include Maine. All 12 are retained with this conflict flagged."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-zone-southern",
+      "after": {
+        "kind": "zone",
+        "title": "Southern Zone",
+        "officialName": "Southern Zone",
+        "organizationType": "USA Swimming administrative zone",
+        "abbreviation": null,
+        "website": "https://www.gomotionapp.com/team/szlsc/page/home",
+        "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+        "parentId": "usa-swimming-national-structure",
+        "summary": "One of USA Swimming’s four administrative zones. It groups LSCs for zone administration and competition under Article 605.",
+        "geographicCoverage": "LSC jurisdictions of: Border, Florida, Florida Gold Coast, Georgia, Gulf, Kentucky, Louisiana, Mississippi, North Carolina, North Texas, South Carolina, South Texas, Southeastern, West Texas, West Virginia.",
+        "coverageNote": "National structure record only; detailed zone, region and LSC collection deferred.",
+        "relationships": [
+          {
+            "type": "governed_by",
+            "label": "National governing organization",
+            "targetId": "usa-swimming-national-structure",
+            "name": "USA Swimming"
+          }
+        ],
+        "contacts": [],
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "title": "USA Swimming 2026 Rules & Regulations",
+            "checkedAt": "2026-10-10",
+            "note": "Articles 603 (names, codes, boundaries), 605 (zones), 606 (regional competition)."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-websites",
+            "title": "USA Swimming LSC & Zone directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/szlsc/page/home",
+            "title": "Southern Zone official website",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Direct zone contact and official abbreviation not yet collected."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-zone-western",
+      "after": {
+        "kind": "zone",
+        "title": "Western Zone",
+        "officialName": "Western Zone",
+        "organizationType": "USA Swimming administrative zone",
+        "abbreviation": null,
+        "website": "https://www.gomotionapp.com/team/wzone/page/home",
+        "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+        "parentId": "usa-swimming-national-structure",
+        "summary": "One of USA Swimming’s four administrative zones. It groups LSCs for zone administration and competition under Article 605.",
+        "geographicCoverage": "LSC jurisdictions of: Alaska, Arizona, Central California, Colorado, Hawaiian, Inland Empire, Montana, New Mexico, Oregon, Pacific, Pacific Northwest, San Diego-Imperial, Sierra Nevada, Snake River, Southern California, Utah, Wyoming.",
+        "coverageNote": "National structure record only; detailed zone, region and LSC collection deferred.",
+        "relationships": [
+          {
+            "type": "governed_by",
+            "label": "National governing organization",
+            "targetId": "usa-swimming-national-structure",
+            "name": "USA Swimming"
+          }
+        ],
+        "contacts": [],
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "title": "USA Swimming 2026 Rules & Regulations",
+            "checkedAt": "2026-10-10",
+            "note": "Articles 603 (names, codes, boundaries), 605 (zones), 606 (regional competition)."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-websites",
+            "title": "USA Swimming LSC & Zone directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/wzone/page/home",
+            "title": "Western Zone official website",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Direct zone contact and official abbreviation not yet collected."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-lsc-ad",
+      "after": {
+        "kind": "lsc",
+        "title": "Adirondack Swimming",
+        "officialName": "Adirondack Swimming",
+        "organizationType": "Local Swimming Committee",
+        "abbreviation": "AD",
+        "abbreviationType": "USA Swimming registration code",
+        "parentId": "usa-swimming-national-structure",
+        "zoneId": "usa-zone-eastern",
+        "website": "https://www.adirondackswimming.org/",
+        "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+        "summary": "USA Swimming’s Local Swimming Committee for Eastern and northeastern New York; bounded as specified in Article 603.2. It belongs to the Eastern Zone.",
+        "geographicCoverage": "Eastern and northeastern New York; bounded as specified in Article 603.2.",
+        "coverageNote": "Directory identity, code, zone, website, geographic summary and at least one public organizational contact collected. No claim of exhaustive regional arrangements.",
+        "relationships": [
+          {
+            "type": "governed_by",
+            "label": "National governing organization",
+            "targetId": "usa-swimming-national-structure",
+            "name": "USA Swimming"
+          },
+          {
+            "type": "member_of_zone",
+            "label": "Administrative zone",
+            "targetId": "usa-zone-eastern",
+            "name": "Eastern Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "LSC office",
+            "email": "office@adirondackswimming.org",
+            "url": "https://www.adirondackswimming.org/"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "title": "USA Swimming 2026 Rules & Regulations",
+            "checkedAt": "2026-10-10",
+            "note": "Articles 603 (names, codes, boundaries), 605 (zones), 606 (regional competition)."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-websites",
+            "title": "USA Swimming LSC & Zone directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.adirondackswimming.org/",
+            "title": "Adirondack Swimming official website",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-lsc-am",
+      "after": {
+        "kind": "lsc",
+        "title": "Allegheny Mountain Swimming",
+        "officialName": "Allegheny Mountain Swimming",
+        "organizationType": "Local Swimming Committee",
+        "abbreviation": "AM",
+        "abbreviationType": "USA Swimming registration code",
+        "parentId": "usa-swimming-national-structure",
+        "zoneId": "usa-zone-eastern",
+        "website": "https://www.gomotionapp.com/team/ezamslsc/page/home",
+        "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+        "summary": "USA Swimming’s Local Swimming Committee for Western Pennsylvania and Hancock, Brook, Ohio and Marshall counties in West Virginia (rulebook spelling: Brook). It belongs to the Eastern Zone.",
+        "geographicCoverage": "Western Pennsylvania and Hancock, Brook, Ohio and Marshall counties in West Virginia (rulebook spelling: Brook).",
+        "coverageNote": "Directory identity, code, zone, website, geographic summary and at least one public organizational contact collected. No claim of exhaustive regional arrangements.",
+        "relationships": [
+          {
+            "type": "governed_by",
+            "label": "National governing organization",
+            "targetId": "usa-swimming-national-structure",
+            "name": "USA Swimming"
+          },
+          {
+            "type": "member_of_zone",
+            "label": "Administrative zone",
+            "targetId": "usa-zone-eastern",
+            "name": "Eastern Zone"
+          },
+          {
+            "type": "competition_region",
+            "label": "2026 sectional competition grouping",
+            "targetId": "usa-region-eastern-south",
+            "name": "Eastern Zone South Region / Region 2",
+            "note": "2026 South sectional eligibility list; not an intervening governing parent."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Director of Operations",
+            "email": "tom.grassadonia@amswim.org",
+            "phone": "814-937-9019",
+            "url": "https://www.gomotionapp.com/team/ezamslsc/page/business/ams-contacts",
+            "address": "608 Penn Street, Hollidaysburg, PA 16648"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "title": "USA Swimming 2026 Rules & Regulations",
+            "checkedAt": "2026-10-10",
+            "note": "Articles 603 (names, codes, boundaries), 605 (zones), 606 (regional competition)."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-websites",
+            "title": "USA Swimming LSC & Zone directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/ezamslsc/page/home",
+            "title": "Allegheny Mountain Swimming official website",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/ezamslsc/page/business/ams-contacts",
+            "title": "Allegheny Mountain Swimming organizational contacts",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.easternzoneswimming.org/easternzone/UserFiles/Image/QuickUpload/2026-ez-south-region-sectional-meet-announcement_011037.pdf",
+            "title": "2026 South Region sectional announcement",
+            "checkedAt": "2026-10-10",
+            "note": "Eligibility names AM, MA, MD, PV and VA as Region 2."
+          }
+        ],
+        "gaps": [
+          "Legacy custom-domain retrieval failed or timed out; official GoMotion page used. Legacy links retained in USA Swimming/zone source directories.",
+          "Article 603.2 spells the West Virginia county 'Brook'; spelling retained from source pending correction."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-lsc-ct",
+      "after": {
+        "kind": "lsc",
+        "title": "Connecticut Swimming",
+        "officialName": "Connecticut Swimming",
+        "organizationType": "Local Swimming Committee",
+        "abbreviation": "CT",
+        "abbreviationType": "USA Swimming registration code",
+        "parentId": "usa-swimming-national-structure",
+        "zoneId": "usa-zone-eastern",
+        "website": "https://www.ctswim.org/",
+        "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+        "summary": "USA Swimming’s Local Swimming Committee for Connecticut. It belongs to the Eastern Zone.",
+        "geographicCoverage": "Connecticut.",
+        "coverageNote": "Directory identity, code, zone, website, geographic summary and at least one public organizational contact collected. No claim of exhaustive regional arrangements.",
+        "relationships": [
+          {
+            "type": "governed_by",
+            "label": "National governing organization",
+            "targetId": "usa-swimming-national-structure",
+            "name": "USA Swimming"
+          },
+          {
+            "type": "member_of_zone",
+            "label": "Administrative zone",
+            "targetId": "usa-zone-eastern",
+            "name": "Eastern Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Central office",
+            "email": "office@ctswim.org",
+            "phone": "203-671-4201",
+            "url": "https://www.ctswim.org/contact-us/",
+            "address": "68 Nichols Ave, Shelton, CT 06484"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "title": "USA Swimming 2026 Rules & Regulations",
+            "checkedAt": "2026-10-10",
+            "note": "Articles 603 (names, codes, boundaries), 605 (zones), 606 (regional competition)."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-websites",
+            "title": "USA Swimming LSC & Zone directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.ctswim.org/",
+            "title": "Connecticut Swimming official website",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.ctswim.org/contact-us/",
+            "title": "Connecticut Swimming organizational contacts",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-lsc-me",
+      "after": {
+        "kind": "lsc",
+        "title": "Maine Swimming",
+        "officialName": "Maine Swimming",
+        "organizationType": "Local Swimming Committee",
+        "abbreviation": "ME",
+        "abbreviationType": "USA Swimming registration code",
+        "parentId": "usa-swimming-national-structure",
+        "zoneId": "usa-zone-eastern",
+        "website": "https://www.gomotionapp.com/team/mams/page/home",
+        "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+        "summary": "USA Swimming’s Local Swimming Committee for Part of Maine, with county and town boundaries in Article 603.2; New England Swimming covers the other listed Maine areas. It belongs to the Eastern Zone.",
+        "geographicCoverage": "Part of Maine, with county and town boundaries in Article 603.2; New England Swimming covers the other listed Maine areas.",
+        "coverageNote": "Directory identity, code, zone, website, geographic summary and at least one public organizational contact collected. No claim of exhaustive regional arrangements.",
+        "relationships": [
+          {
+            "type": "governed_by",
+            "label": "National governing organization",
+            "targetId": "usa-swimming-national-structure",
+            "name": "USA Swimming"
+          },
+          {
+            "type": "member_of_zone",
+            "label": "Administrative zone",
+            "targetId": "usa-zone-eastern",
+            "name": "Eastern Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Swimming office",
+            "email": "mesiswimoffice@gmail.com",
+            "phone": "732-233-8813",
+            "url": "https://www.gomotionapp.com/team/mams/page/home"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "title": "USA Swimming 2026 Rules & Regulations",
+            "checkedAt": "2026-10-10",
+            "note": "Articles 603 (names, codes, boundaries), 605 (zones), 606 (regional competition)."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-websites",
+            "title": "USA Swimming LSC & Zone directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "http://www.maineswimming.org/",
+            "title": "Maine Swimming official website",
+            "checkedAt": "2026-10-10",
+            "note": "Redirect verified to https://www.gomotionapp.com/team/mams/page/home"
+          },
+          {
+            "url": "https://www.easternzoneswimming.org/page/about/facilities",
+            "title": "Eastern Zone LSC directory",
+            "checkedAt": "2026-10-10",
+            "note": "Maine omitted."
+          }
+        ],
+        "gaps": [
+          "Eastern Zone’s own LSC directory omits Maine; USA Swimming directory and 2026 rulebook include it.",
+          "Legacy custom-domain retrieval failed or timed out; official GoMotion page used. Legacy links retained in USA Swimming/zone source directories.",
+          "Coverage is summarized; consult Article 603.2 for exact Maine town-level jurisdiction."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-lsc-md",
+      "after": {
+        "kind": "lsc",
+        "title": "Maryland Swimming",
+        "officialName": "Maryland Swimming",
+        "organizationType": "Local Swimming Committee",
+        "abbreviation": "MD",
+        "abbreviationType": "USA Swimming registration code",
+        "parentId": "usa-swimming-national-structure",
+        "zoneId": "usa-zone-eastern",
+        "website": "https://www.gomotionapp.com/team/md/page/home",
+        "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+        "summary": "USA Swimming’s Local Swimming Committee for Maryland, excluding Montgomery and Prince George’s counties. It belongs to the Eastern Zone.",
+        "geographicCoverage": "Maryland, excluding Montgomery and Prince George’s counties.",
+        "coverageNote": "Directory identity, code, zone, website, geographic summary and at least one public organizational contact collected. No claim of exhaustive regional arrangements.",
+        "relationships": [
+          {
+            "type": "governed_by",
+            "label": "National governing organization",
+            "targetId": "usa-swimming-national-structure",
+            "name": "USA Swimming"
+          },
+          {
+            "type": "member_of_zone",
+            "label": "Administrative zone",
+            "targetId": "usa-zone-eastern",
+            "name": "Eastern Zone"
+          },
+          {
+            "type": "competition_region",
+            "label": "2026 sectional competition grouping",
+            "targetId": "usa-region-eastern-south",
+            "name": "Eastern Zone South Region / Region 2",
+            "note": "2026 South sectional eligibility list; not an intervening governing parent."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Swimming office",
+            "email": "smcdonald.mdswimoffice@gmail.com",
+            "phone": "410-952-2447",
+            "url": "https://www.gomotionapp.com/team/md/page/home",
+            "address": "9603 Deereco Road #4623, Timonium, MD 21094"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "title": "USA Swimming 2026 Rules & Regulations",
+            "checkedAt": "2026-10-10",
+            "note": "Articles 603 (names, codes, boundaries), 605 (zones), 606 (regional competition)."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-websites",
+            "title": "USA Swimming LSC & Zone directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/md/page/home",
+            "title": "Maryland Swimming official website",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.easternzoneswimming.org/easternzone/UserFiles/Image/QuickUpload/2026-ez-south-region-sectional-meet-announcement_011037.pdf",
+            "title": "2026 South Region sectional announcement",
+            "checkedAt": "2026-10-10",
+            "note": "Eligibility names AM, MA, MD, PV and VA as Region 2."
+          }
+        ],
+        "gaps": [
+          "Legacy custom-domain retrieval failed or timed out; official GoMotion page used. Legacy links retained in USA Swimming/zone source directories."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-lsc-mr",
+      "after": {
+        "kind": "lsc",
+        "title": "Metropolitan Swimming",
+        "officialName": "Metropolitan Swimming",
+        "organizationType": "Local Swimming Committee",
+        "abbreviation": "MR",
+        "abbreviationType": "USA Swimming registration code",
+        "parentId": "usa-swimming-national-structure",
+        "zoneId": "usa-zone-eastern",
+        "website": "https://www.gomotionapp.com/team/mrlsc/page/home",
+        "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+        "summary": "USA Swimming’s Local Swimming Committee for New York south of and including Sullivan, Orange and Dutchess counties, including New York City and Long Island. It belongs to the Eastern Zone.",
+        "geographicCoverage": "New York south of and including Sullivan, Orange and Dutchess counties, including New York City and Long Island.",
+        "coverageNote": "Directory identity, code, zone, website, geographic summary and at least one public organizational contact collected. No claim of exhaustive regional arrangements.",
+        "relationships": [
+          {
+            "type": "governed_by",
+            "label": "National governing organization",
+            "targetId": "usa-swimming-national-structure",
+            "name": "USA Swimming"
+          },
+          {
+            "type": "member_of_zone",
+            "label": "Administrative zone",
+            "targetId": "usa-zone-eastern",
+            "name": "Eastern Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Metro office",
+            "email": "metro.office@metroswimming.org",
+            "phone": "631-585-1346",
+            "url": "https://www.gomotionapp.com/team/mrlsc/page/home",
+            "address": "P.O. Box 2350, Selden, NY 11784"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "title": "USA Swimming 2026 Rules & Regulations",
+            "checkedAt": "2026-10-10",
+            "note": "Articles 603 (names, codes, boundaries), 605 (zones), 606 (regional competition)."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-websites",
+            "title": "USA Swimming LSC & Zone directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/mrlsc/page/home",
+            "title": "Metropolitan Swimming official website",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Legacy custom-domain retrieval failed or timed out; official GoMotion page used. Legacy links retained in USA Swimming/zone source directories."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-lsc-ma",
+      "after": {
+        "kind": "lsc",
+        "title": "Middle Atlantic Swimming",
+        "officialName": "Middle Atlantic Swimming",
+        "organizationType": "Local Swimming Committee",
+        "abbreviation": "MA",
+        "abbreviationType": "USA Swimming registration code",
+        "parentId": "usa-swimming-national-structure",
+        "zoneId": "usa-zone-eastern",
+        "website": "https://www.gomotionapp.com/team/ezmaslsc/page/home",
+        "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+        "summary": "USA Swimming’s Local Swimming Committee for Delaware; New Jersey south of Mercer and Monmouth counties; Pennsylvania east of and including Potter, Clinton, Centre, Huntingdon and Bedford counties. It belongs to the Eastern Zone.",
+        "geographicCoverage": "Delaware; New Jersey south of Mercer and Monmouth counties; Pennsylvania east of and including Potter, Clinton, Centre, Huntingdon and Bedford counties.",
+        "coverageNote": "Directory identity, code, zone, website, geographic summary and at least one public organizational contact collected. No claim of exhaustive regional arrangements.",
+        "relationships": [
+          {
+            "type": "governed_by",
+            "label": "National governing organization",
+            "targetId": "usa-swimming-national-structure",
+            "name": "USA Swimming"
+          },
+          {
+            "type": "member_of_zone",
+            "label": "Administrative zone",
+            "targetId": "usa-zone-eastern",
+            "name": "Eastern Zone"
+          },
+          {
+            "type": "competition_region",
+            "label": "2026 sectional competition grouping",
+            "targetId": "usa-region-eastern-south",
+            "name": "Eastern Zone South Region / Region 2",
+            "note": "2026 South sectional eligibility list; not an intervening governing parent."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Registration",
+            "email": "registration@maswim.org",
+            "phone": "484-246-9595",
+            "url": "https://www.gomotionapp.com/team/ezmaslsc/page/about-us/contact-staff",
+            "address": "482 Norristown Road, Suite 110, Blue Bell, PA 19422"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "title": "USA Swimming 2026 Rules & Regulations",
+            "checkedAt": "2026-10-10",
+            "note": "Articles 603 (names, codes, boundaries), 605 (zones), 606 (regional competition)."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-websites",
+            "title": "USA Swimming LSC & Zone directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/ezmaslsc/page/home",
+            "title": "Middle Atlantic Swimming official website",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/ezmaslsc/page/about-us/contact-staff",
+            "title": "Middle Atlantic Swimming organizational contacts",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.easternzoneswimming.org/easternzone/UserFiles/Image/QuickUpload/2026-ez-south-region-sectional-meet-announcement_011037.pdf",
+            "title": "2026 South Region sectional announcement",
+            "checkedAt": "2026-10-10",
+            "note": "Eligibility names AM, MA, MD, PV and VA as Region 2."
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-lsc-ne",
+      "after": {
+        "kind": "lsc",
+        "title": "New England Swimming",
+        "officialName": "New England Swimming",
+        "organizationType": "Local Swimming Committee",
+        "abbreviation": "NE",
+        "abbreviationType": "USA Swimming registration code",
+        "parentId": "usa-swimming-national-structure",
+        "zoneId": "usa-zone-eastern",
+        "website": "https://www.gomotionapp.com/team/lscnes/page/home",
+        "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+        "summary": "USA Swimming’s Local Swimming Committee for New Hampshire, Vermont, Massachusetts, Rhode Island and designated parts of Maine. Maine town-level exceptions are specified in Article 603.2. It belongs to the Eastern Zone.",
+        "geographicCoverage": "New Hampshire, Vermont, Massachusetts, Rhode Island and designated parts of Maine. Maine town-level exceptions are specified in Article 603.2.",
+        "coverageNote": "Directory identity, code, zone, website, geographic summary and at least one public organizational contact collected. No claim of exhaustive regional arrangements.",
+        "relationships": [
+          {
+            "type": "governed_by",
+            "label": "National governing organization",
+            "targetId": "usa-swimming-national-structure",
+            "name": "USA Swimming"
+          },
+          {
+            "type": "member_of_zone",
+            "label": "Administrative zone",
+            "targetId": "usa-zone-eastern",
+            "name": "Eastern Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Swimming office",
+            "email": "office@neswim.com",
+            "phone": "781-449-0270",
+            "url": "https://www.neswim.com/"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "title": "USA Swimming 2026 Rules & Regulations",
+            "checkedAt": "2026-10-10",
+            "note": "Articles 603 (names, codes, boundaries), 605 (zones), 606 (regional competition)."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-websites",
+            "title": "USA Swimming LSC & Zone directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.neswim.com/",
+            "title": "New England Swimming official website",
+            "checkedAt": "2026-10-10",
+            "note": "Redirect verified to https://www.gomotionapp.com/team/lscnes/page/home"
+          }
+        ],
+        "gaps": [
+          "Coverage is summarized; consult Article 603.2 for exact Maine town-level jurisdiction."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-lsc-nj",
+      "after": {
+        "kind": "lsc",
+        "title": "New Jersey Swimming",
+        "officialName": "New Jersey Swimming",
+        "organizationType": "Local Swimming Committee",
+        "abbreviation": "NJ",
+        "abbreviationType": "USA Swimming registration code",
+        "parentId": "usa-swimming-national-structure",
+        "zoneId": "usa-zone-eastern",
+        "website": "https://www.njswim.org/",
+        "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+        "summary": "USA Swimming’s Local Swimming Committee for New Jersey north of and including Mercer and Monmouth counties. It belongs to the Eastern Zone.",
+        "geographicCoverage": "New Jersey north of and including Mercer and Monmouth counties.",
+        "coverageNote": "Directory identity, code, zone, website, geographic summary and at least one public organizational contact collected. No claim of exhaustive regional arrangements.",
+        "relationships": [
+          {
+            "type": "governed_by",
+            "label": "National governing organization",
+            "targetId": "usa-swimming-national-structure",
+            "name": "USA Swimming"
+          },
+          {
+            "type": "member_of_zone",
+            "label": "Administrative zone",
+            "targetId": "usa-zone-eastern",
+            "name": "Eastern Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Board contact",
+            "email": "njswimboard@gmail.com",
+            "url": "https://www.njswim.org/",
+            "address": "155 Willowbrook Blvd, Suite 110, Wayne, NJ 07470"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "title": "USA Swimming 2026 Rules & Regulations",
+            "checkedAt": "2026-10-10",
+            "note": "Articles 603 (names, codes, boundaries), 605 (zones), 606 (regional competition)."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-websites",
+            "title": "USA Swimming LSC & Zone directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.njswim.org/",
+            "title": "New Jersey Swimming official website",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-lsc-ni",
+      "after": {
+        "kind": "lsc",
+        "title": "Niagara Swimming",
+        "officialName": "Niagara Swimming",
+        "organizationType": "Local Swimming Committee",
+        "abbreviation": "NI",
+        "abbreviationType": "USA Swimming registration code",
+        "parentId": "usa-swimming-national-structure",
+        "zoneId": "usa-zone-eastern",
+        "website": "https://www.niagaraswim.org/",
+        "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+        "summary": "USA Swimming’s Local Swimming Committee for New York west of and including Oswego, Onondaga, Cortland and Broome counties. It belongs to the Eastern Zone.",
+        "geographicCoverage": "New York west of and including Oswego, Onondaga, Cortland and Broome counties.",
+        "coverageNote": "Directory identity, code, zone, website, geographic summary and at least one public organizational contact collected. No claim of exhaustive regional arrangements.",
+        "relationships": [
+          {
+            "type": "governed_by",
+            "label": "National governing organization",
+            "targetId": "usa-swimming-national-structure",
+            "name": "USA Swimming"
+          },
+          {
+            "type": "member_of_zone",
+            "label": "Administrative zone",
+            "targetId": "usa-zone-eastern",
+            "name": "Eastern Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "General Chair",
+            "email": "generalchair@niagaraswim.org",
+            "url": "https://www.niagaraswim.org/page/new-about/leadership--staff"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "title": "USA Swimming 2026 Rules & Regulations",
+            "checkedAt": "2026-10-10",
+            "note": "Articles 603 (names, codes, boundaries), 605 (zones), 606 (regional competition)."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-websites",
+            "title": "USA Swimming LSC & Zone directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.niagaraswim.org/",
+            "title": "Niagara Swimming official website",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.niagaraswim.org/page/new-about/leadership--staff",
+            "title": "Niagara Swimming organizational contacts",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-lsc-pv",
+      "after": {
+        "kind": "lsc",
+        "title": "Potomac Valley Swimming",
+        "officialName": "Potomac Valley Swimming",
+        "organizationType": "Local Swimming Committee",
+        "abbreviation": "PV",
+        "abbreviationType": "USA Swimming registration code",
+        "parentId": "usa-swimming-national-structure",
+        "zoneId": "usa-zone-eastern",
+        "website": "https://www.pvswim.org/",
+        "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+        "summary": "USA Swimming’s Local Swimming Committee for District of Columbia; Montgomery and Prince George’s counties, Maryland; Arlington and Fairfax counties and Alexandria, Fairfax and Falls Church cities, Virginia. It belongs to the Eastern Zone.",
+        "geographicCoverage": "District of Columbia; Montgomery and Prince George’s counties, Maryland; Arlington and Fairfax counties and Alexandria, Fairfax and Falls Church cities, Virginia.",
+        "coverageNote": "Directory identity, code, zone, website, geographic summary and at least one public organizational contact collected. No claim of exhaustive regional arrangements.",
+        "relationships": [
+          {
+            "type": "governed_by",
+            "label": "National governing organization",
+            "targetId": "usa-swimming-national-structure",
+            "name": "USA Swimming"
+          },
+          {
+            "type": "member_of_zone",
+            "label": "Administrative zone",
+            "targetId": "usa-zone-eastern",
+            "name": "Eastern Zone"
+          },
+          {
+            "type": "competition_region",
+            "label": "2026 sectional competition grouping",
+            "targetId": "usa-region-eastern-south",
+            "name": "Eastern Zone South Region / Region 2",
+            "note": "2026 South sectional eligibility list; not an intervening governing parent."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Sanctions and approvals office",
+            "email": "office@pvswim.org",
+            "phone": "571-334-0871",
+            "url": "https://www.pvswim.org/contacts"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "title": "USA Swimming 2026 Rules & Regulations",
+            "checkedAt": "2026-10-10",
+            "note": "Articles 603 (names, codes, boundaries), 605 (zones), 606 (regional competition)."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-websites",
+            "title": "USA Swimming LSC & Zone directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.pvswim.org/",
+            "title": "Potomac Valley Swimming official website",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.pvswim.org/contacts",
+            "title": "Potomac Valley Swimming organizational contacts",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.easternzoneswimming.org/easternzone/UserFiles/Image/QuickUpload/2026-ez-south-region-sectional-meet-announcement_011037.pdf",
+            "title": "2026 South Region sectional announcement",
+            "checkedAt": "2026-10-10",
+            "note": "Eligibility names AM, MA, MD, PV and VA as Region 2."
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-lsc-va",
+      "after": {
+        "kind": "lsc",
+        "title": "Virginia Swimming",
+        "officialName": "Virginia Swimming",
+        "organizationType": "Local Swimming Committee",
+        "abbreviation": "VA",
+        "abbreviationType": "USA Swimming registration code",
+        "parentId": "usa-swimming-national-structure",
+        "zoneId": "usa-zone-eastern",
+        "website": "https://www.gomotionapp.com/team/va/page/home",
+        "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+        "summary": "USA Swimming’s Local Swimming Committee for Virginia excluding Potomac Valley’s Virginia jurisdiction; plus Pasquotank, Camden and Currituck counties, North Carolina. It belongs to the Eastern Zone.",
+        "geographicCoverage": "Virginia excluding Potomac Valley’s Virginia jurisdiction; plus Pasquotank, Camden and Currituck counties, North Carolina.",
+        "coverageNote": "Directory identity, code, zone, website, geographic summary and at least one public organizational contact collected. No claim of exhaustive regional arrangements.",
+        "relationships": [
+          {
+            "type": "governed_by",
+            "label": "National governing organization",
+            "targetId": "usa-swimming-national-structure",
+            "name": "USA Swimming"
+          },
+          {
+            "type": "member_of_zone",
+            "label": "Administrative zone",
+            "targetId": "usa-zone-eastern",
+            "name": "Eastern Zone"
+          },
+          {
+            "type": "competition_region",
+            "label": "2026 sectional competition grouping",
+            "targetId": "usa-region-eastern-south",
+            "name": "Eastern Zone South Region / Region 2",
+            "note": "2026 South sectional eligibility list; not an intervening governing parent."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Business office",
+            "email": "businessoffice@virginiaswimming.org",
+            "phone": "434-352-5451",
+            "url": "https://www.gomotionapp.com/team/va/page/home",
+            "address": "PO Box 1059, Appomattox, VA 24522"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "title": "USA Swimming 2026 Rules & Regulations",
+            "checkedAt": "2026-10-10",
+            "note": "Articles 603 (names, codes, boundaries), 605 (zones), 606 (regional competition)."
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-websites",
+            "title": "USA Swimming LSC & Zone directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/va/page/home",
+            "title": "Virginia Swimming official website",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.easternzoneswimming.org/easternzone/UserFiles/Image/QuickUpload/2026-ez-south-region-sectional-meet-announcement_011037.pdf",
+            "title": "2026 South Region sectional announcement",
+            "checkedAt": "2026-10-10",
+            "note": "Eligibility names AM, MA, MD, PV and VA as Region 2."
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-region-eastern-north",
+      "after": {
+        "kind": "region",
+        "title": "Eastern Zone North Region (sectional competition)",
+        "officialName": "North Region",
+        "organizationType": "Sectional competition grouping; separate governing organization not established",
+        "abbreviation": null,
+        "aliases": [],
+        "parentId": "usa-zone-eastern",
+        "website": "https://www.easternzoneswimming.org/page/meets",
+        "websiteType": "Official zone-hosted competition information",
+        "sourceUrl": "https://www.easternzoneswimming.org/page/meets",
+        "summary": "Eastern Zone uses “North Region” for its 2026 and 2027 short-course sectional meets. The 2026 announcement admits qualified USA Swimming athletes except those from AM, MA, MD, PV and VA. This is a competition relationship, not a required governance tier.",
+        "geographicCoverage": "No exclusive jurisdiction established. The 2026 meet’s eligibility excludes AM, MA, MD, PV and VA; remaining Eastern LSCs are not asserted to form an exclusive region membership.",
+        "coverageNote": "Region usage verified in 2026 and 2027 calendar; detailed eligibility verified only for the 2026 meet.",
+        "relationships": [
+          {
+            "type": "competition_grouping_of",
+            "label": "Zone competition grouping",
+            "targetId": "usa-zone-eastern",
+            "name": "Eastern Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Zone contact directory (no separate regional office verified)",
+            "url": "https://www.easternzoneswimming.org/page/about/coaches-and-instructors"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "title": "2026 Rulebook Article 606",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.easternzoneswimming.org/page/meets",
+            "title": "Eastern Zone meet calendar",
+            "checkedAt": "2026-10-10",
+            "note": "North/South terminology in 2026 and 2027."
+          },
+          {
+            "url": "https://www.easternzoneswimming.org/easternzone/UserFiles/Image/QuickUpload/2026-ez-north-region-sectional-meet-announcement_024298.pdf",
+            "title": "2026 North Region sectional announcement",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.easternzoneswimming.org/page/about/coaches-and-instructors",
+            "title": "Eastern Zone contact directory",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "No separate region website, official abbreviation, legal entity or permanent regional office established by reviewed sources.",
+          "2027 eligibility and any changes to regional membership remain to be checked."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-region-eastern-south",
+      "after": {
+        "kind": "region",
+        "title": "Eastern Zone South Region (sectional competition)",
+        "officialName": "South Region",
+        "organizationType": "Sectional competition grouping; separate governing organization not established",
+        "abbreviation": null,
+        "aliases": [
+          "Region 2"
+        ],
+        "parentId": "usa-zone-eastern",
+        "website": "https://www.easternzoneswimming.org/page/meets",
+        "websiteType": "Official zone-hosted competition information",
+        "sourceUrl": "https://www.easternzoneswimming.org/page/meets",
+        "summary": "Eastern Zone uses “South Region” for its 2026 and 2027 short-course sectional meets. The 2026 announcement calls it Region 2 and lists AM, MA, MD, PV and VA. This is a competition relationship, not a required governance tier.",
+        "geographicCoverage": "2026 Region 2 LSC list: Allegheny Mountain, Middle Atlantic, Maryland, Potomac Valley and Virginia. Outside-zone entry exceptions apply.",
+        "coverageNote": "Region usage verified in 2026 and 2027 calendar; detailed eligibility verified only for the 2026 meet.",
+        "relationships": [
+          {
+            "type": "competition_grouping_of",
+            "label": "Zone competition grouping",
+            "targetId": "usa-zone-eastern",
+            "name": "Eastern Zone"
+          },
+          {
+            "type": "competition_lsc",
+            "label": "LSC named in 2026 eligibility",
+            "targetId": "usa-lsc-am",
+            "name": "Allegheny Mountain Swimming",
+            "note": "Meet eligibility, not governance."
+          },
+          {
+            "type": "competition_lsc",
+            "label": "LSC named in 2026 eligibility",
+            "targetId": "usa-lsc-md",
+            "name": "Maryland Swimming",
+            "note": "Meet eligibility, not governance."
+          },
+          {
+            "type": "competition_lsc",
+            "label": "LSC named in 2026 eligibility",
+            "targetId": "usa-lsc-ma",
+            "name": "Middle Atlantic Swimming",
+            "note": "Meet eligibility, not governance."
+          },
+          {
+            "type": "competition_lsc",
+            "label": "LSC named in 2026 eligibility",
+            "targetId": "usa-lsc-pv",
+            "name": "Potomac Valley Swimming",
+            "note": "Meet eligibility, not governance."
+          },
+          {
+            "type": "competition_lsc",
+            "label": "LSC named in 2026 eligibility",
+            "targetId": "usa-lsc-va",
+            "name": "Virginia Swimming",
+            "note": "Meet eligibility, not governance."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Zone contact directory (no separate regional office verified)",
+            "url": "https://www.easternzoneswimming.org/page/about/coaches-and-instructors"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "title": "2026 Rulebook Article 606",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.easternzoneswimming.org/page/meets",
+            "title": "Eastern Zone meet calendar",
+            "checkedAt": "2026-10-10",
+            "note": "North/South terminology in 2026 and 2027."
+          },
+          {
+            "url": "https://www.easternzoneswimming.org/easternzone/UserFiles/Image/QuickUpload/2026-ez-south-region-sectional-meet-announcement_011037.pdf",
+            "title": "2026 South Region sectional announcement",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.easternzoneswimming.org/page/about/coaches-and-instructors",
+            "title": "Eastern Zone contact directory",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "No separate region website, official abbreviation, legal entity or permanent regional office established by reviewed sources.",
+          "2027 eligibility and any changes to regional membership remain to be checked."
+        ]
+      }
+    }
+  ]
+}

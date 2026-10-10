@@ -8,10 +8,13 @@ import styles from "./KnowledgeBase.module.css";
 const MapExplorer = dynamic(() => import("./map/MapExplorer"), { loading: () => <p role="status">Loading map explorer…</p> });
 const tabs = [{ id: "map", label: "Map" }, { id: "team", label: "Teams" }, { id: "meet", label: "Meets" }, { id: "document", label: "Documents" }, { id: "organization", label: "Organizations" }] as const;
 type Tab = typeof tabs[number]["id"];
-function Chips({ label, entries, selected, onChange }: { label: string; entries: WikiEntry[]; selected: string[]; onChange: (value: string[]) => void }) {
+function Chips({ label, entries, selected, onChange, initialLimit }: { label: string; entries: WikiEntry[]; selected: string[]; onChange: (value: string[]) => void; initialLimit?: number }) {
+  const [expanded, setExpanded] = useState(false);
+  const visibleEntries = initialLimit && !expanded ? entries.slice(0, initialLimit) : entries;
   return <fieldset className={styles.chips}><legend>{label}</legend>
     <button type="button" aria-pressed={!selected.length} onClick={() => onChange([])}>All</button>
-    {entries.map(entry => <button type="button" key={entry.id} aria-pressed={selected.includes(entry.id)} onClick={() => onChange(selected.includes(entry.id) ? selected.filter(id => id !== entry.id) : [...selected, entry.id])}>{entry.title}</button>)}
+    {visibleEntries.map(entry => <button type="button" key={entry.id} aria-pressed={selected.includes(entry.id)} onClick={() => onChange(selected.includes(entry.id) ? selected.filter(id => id !== entry.id) : [...selected, entry.id])}>{entry.title}</button>)}
+    {initialLimit && entries.length > initialLimit ? <button type="button" className={styles.chipToggle} aria-expanded={expanded} onClick={() => setExpanded(value => !value)}>{expanded ? "Show less" : "Show all"}</button> : null}
     {!entries.length && <span className={styles.hint}>No approved {label.toLowerCase()} yet.</span>}
   </fieldset>;
 }
@@ -96,7 +99,7 @@ export default function KnowledgeBase() {
         <label className={styles.search}><Search size={18} aria-hidden="true" /><span className="sr-only">Search {tab === "organization" ? "organizations" : `${tab}s`}</span><input type="search" placeholder={`Search ${tab === "organization" ? "organizations" : `${tab}s`}…`} value={search} onChange={event => setSearch(event.target.value)} /></label>
         {(tab === "team" || tab === "meet") && <>
           <Chips label="Zones" entries={facets.filter(entry => entry.kind === "zone")} selected={zones} onChange={value => { setZones(value); setLscs([]); resetPage(); }} />
-          <Chips label="LSCs" entries={availableLscs} selected={lscs} onChange={value => { setLscs(value); resetPage(); }} />
+          <Chips label="LSCs" entries={availableLscs} selected={lscs} initialLimit={3} onChange={value => { setLscs(value); resetPage(); }} />
         </>}
         {tab === "meet" && <div className={styles.selects}>
           <label>From<input type="date" value={from} onChange={event => { setFrom(event.target.value); resetPage(); }} /></label>

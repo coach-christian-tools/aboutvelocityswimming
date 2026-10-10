@@ -1,0 +1,1037 @@
+{
+  "division": "knowledge",
+  "scope": "Western Zone swim teams \u2014 Montana Swimming",
+  "sourceUrl": "https://www.gomotionapp.com/team/mtms/page/mt-clubs",
+  "capturedAt": "2026-10-10T08:09:39.122582+00:00",
+  "coverage": "partial",
+  "evidence": {
+    "checkedAt": "2026-10-10",
+    "lscCode": "MT",
+    "directoryRowsCollected": 14,
+    "batchRows": 14,
+    "enumeration": "All named rows in the retrieved official directory/roster sources; independent current registration is not guaranteed.",
+    "deduplication": "Compared against 84 published knowledge records and an empty pending queue; facilities combined by organization key; Inland Empire\u2019s 19 existing teams were retained without duplicates.",
+    "remaining": "Missing codes, unreachable websites, registration status, and conflicting sources are visible in each record. Sierra Nevada BBST remains name/code unresolved from official evidence."
+  },
+  "writes": [
+    {
+      "path": "knowledge_entries/usa-team-mt-bac",
+      "after": {
+        "kind": "team",
+        "title": "Billings Aquatic Club",
+        "officialName": "Billings Aquatic Club",
+        "abbreviation": "BAC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-mt",
+        "lscId": "usa-lsc-mt",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/Home.jsp?team=mtbac",
+        "sourceUrl": "https://www.gomotionapp.com/team/mtms/page/mt-clubs",
+        "summary": "Billings Aquatic Club is a swim team/program listed by Montana Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Billings, Montana",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Montana Swimming",
+            "targetId": "usa-lsc-mt"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "bacstingrays@gmail.com",
+            "url": "https://www.gomotionapp.com/team/mtms/page/mt-clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Sean Marshall",
+            "email": "BACstingrays@gmail.com",
+            "phone": "14068609499"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Jessica Marshall",
+            "email": "coachjessicamarshall@gmail.com",
+            "phone": "14068604512"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/mtms/page/mt-clubs",
+            "title": "Montana Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.teamunify.com/Home.jsp?team=mtbac",
+            "title": "Billings Aquatic Club Stingrays Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/mtbac/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-mt-by",
+      "after": {
+        "kind": "team",
+        "title": "Billings YMCA Seahawks",
+        "officialName": "Billings YMCA Seahawks",
+        "abbreviation": "BY",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-mt",
+        "lscId": "usa-lsc-mt",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.billingsymca.org/",
+        "sourceUrl": "https://www.gomotionapp.com/team/mtms/page/mt-clubs",
+        "summary": "Billings YMCA Seahawks is a swim team/program listed by Montana Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Billings, Montana",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Montana Swimming",
+            "targetId": "usa-lsc-mt"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "kwyatt@billingsymca.org",
+            "url": "https://www.gomotionapp.com/team/mtms/page/mt-clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Kristen Wyatt",
+            "email": "kwyatt@billingsymca.org",
+            "phone": "14062941616"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/mtms/page/mt-clubs",
+            "title": "Montana Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.billingsymca.org/",
+            "title": "Family YMCA in Billings, MT | Gym, Fitness & Memberships",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://billingsymca.org/"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-mt-boz",
+      "after": {
+        "kind": "team",
+        "title": "Bozeman Barracudas Swim Team",
+        "officialName": "Bozeman Barracudas Swim Team",
+        "abbreviation": "BOZ",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-mt",
+        "lscId": "usa-lsc-mt",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.bozemanbarracudas.org/",
+        "sourceUrl": "https://www.gomotionapp.com/team/mtms/page/mt-clubs",
+        "summary": "Bozeman Barracudas Swim Team is a swim team/program listed by Montana Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Bozeman, Montana",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Montana Swimming",
+            "targetId": "usa-lsc-mt"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "boardofdirectors@bozemanbarracudas.org",
+            "url": "https://www.gomotionapp.com/team/mtms/page/mt-clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "coachlisa@bozemanbarracudas.org",
+            "url": "https://www.gomotionapp.com/team/mtms/page/mt-clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "kyle@bozemanbarracudas.org",
+            "url": "https://www.gomotionapp.com/team/mtms/page/mt-clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "president@bozemanbarracudas.org",
+            "url": "https://www.gomotionapp.com/team/mtms/page/mt-clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "secretary@bozemanbarracudas.org",
+            "url": "https://www.gomotionapp.com/team/mtms/page/mt-clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Hans Dersch",
+            "email": "coachhans@bozemanbarracudas.org",
+            "phone": "15123632200"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Hans Dersch",
+            "email": "coachhans@bozemanbarracudas.org",
+            "phone": "18303088593"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/mtms/page/mt-clubs",
+            "title": "Montana Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.bozemanbarracudas.org/",
+            "title": "Bozeman Barracudas Swim Club Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/mtbbst/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-mt-btst",
+      "after": {
+        "kind": "team",
+        "title": "Butte Tarpon Swim Team",
+        "officialName": "Butte Tarpon Swim Team",
+        "abbreviation": "BTST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-mt",
+        "lscId": "usa-lsc-mt",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.buttetarpons.com/",
+        "sourceUrl": "https://www.gomotionapp.com/team/mtms/page/mt-clubs",
+        "summary": "Butte Tarpon Swim Team is a swim team/program listed by Montana Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Butte, Montana",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Montana Swimming",
+            "targetId": "usa-lsc-mt"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "shuckeby@msn.com",
+            "url": "https://www.gomotionapp.com/team/mtms/page/mt-clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Susan Huckeby",
+            "email": "shuckeby@msn.com",
+            "phone": "14067234800"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/mtms/page/mt-clubs",
+            "title": "Montana Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.buttetarpons.com/",
+            "title": "Butte Tarpons Swim Team Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/mtbtst/page/home"
+          }
+        ],
+        "gaps": [
+          "Name variation: LSC lists Butte Tarpon Swim Team; USA Swimming lists Butte Tarpons Swim Team."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-mt-bysc",
+      "after": {
+        "kind": "team",
+        "title": "Butte YMCA Swim Club",
+        "officialName": "Butte YMCA Swim Club",
+        "abbreviation": "BYSC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-mt",
+        "lscId": "usa-lsc-mt",
+        "zoneId": "usa-zone-western",
+        "website": "http://butteymca.org",
+        "sourceUrl": "https://www.gomotionapp.com/team/mtms/page/mt-clubs",
+        "summary": "Butte YMCA Swim Club is a swim team/program listed by Montana Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Butte, Montana",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Montana Swimming",
+            "targetId": "usa-lsc-mt"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "triciazig2@gmail.com",
+            "url": "https://www.gomotionapp.com/team/mtms/page/mt-clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Angie Harrison",
+            "email": "angie.harrison@butteymca.org",
+            "phone": "14067821266"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/mtms/page/mt-clubs",
+            "title": "Montana Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://butteymca.org",
+            "title": "Butte Family YMCA |",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.butteymca.org/"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-mt-gvyb",
+      "after": {
+        "kind": "team",
+        "title": "Gallatin Valley YMCA Brookies",
+        "officialName": "Gallatin Valley YMCA Brookies",
+        "abbreviation": "GVYB",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-mt",
+        "lscId": "usa-lsc-mt",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/mtbma/page/home",
+        "sourceUrl": "https://www.gomotionapp.com/team/mtms/page/mt-clubs",
+        "summary": "Gallatin Valley YMCA Brookies is a swim team/program listed by Montana Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Bozeman, Montana",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Montana Swimming",
+            "targetId": "usa-lsc-mt"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "coachamymullen@gmail.com",
+            "url": "https://www.gomotionapp.com/team/mtms/page/mt-clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Zak Trimble",
+            "email": "ztrim5447@gmail.com",
+            "phone": "16513540735"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/mtms/page/mt-clubs",
+            "title": "Montana Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/mtbma/page/home",
+            "title": "Gallatin Valley YMCA Brookies Home",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-mt-gac",
+      "after": {
+        "kind": "team",
+        "title": "Glacier Aquatic Club",
+        "officialName": "Glacier Aquatic Club",
+        "abbreviation": "GAC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-mt",
+        "lscId": "usa-lsc-mt",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/team/mtkats/page/home",
+        "sourceUrl": "https://www.gomotionapp.com/team/mtms/page/mt-clubs",
+        "summary": "Glacier Aquatic Club is a swim team/program listed by Montana Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Kalispell/ Whitefish, Montana",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Montana Swimming",
+            "targetId": "usa-lsc-mt"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "dorak1988@gmail.com",
+            "url": "https://www.gomotionapp.com/team/mtms/page/mt-clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "hummers79@gmail.com",
+            "url": "https://www.gomotionapp.com/team/mtms/page/mt-clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Price Richardson",
+            "email": "pricerichardson@gmail.com",
+            "phone": "16063445133"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Ken Gibbons",
+            "email": "katsboard@gmail.com",
+            "phone": "14062509902"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/mtms/page/mt-clubs",
+            "title": "Montana Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.teamunify.com/team/mtkats/page/home",
+            "title": "Glacier Aquatic Club Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.glacieraquaticclub.com/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-mt-gfst",
+      "after": {
+        "kind": "team",
+        "title": "Great Falls Swim Team",
+        "officialName": "Great Falls Swim Team",
+        "abbreviation": "GFST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-mt",
+        "lscId": "usa-lsc-mt",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/team/gfst/page/home",
+        "sourceUrl": "https://www.gomotionapp.com/team/mtms/page/mt-clubs",
+        "summary": "Great Falls Swim Team is a swim team/program listed by Montana Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Great Falls, Montana",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Montana Swimming",
+            "targetId": "usa-lsc-mt"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "coach.mike.turner7@gmail.com",
+            "url": "https://www.gomotionapp.com/team/mtms/page/mt-clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Patrick King",
+            "email": "coachpatking@gmail.com",
+            "phone": "13038774783"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/mtms/page/mt-clubs",
+            "title": "Montana Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.teamunify.com/team/gfst/page/home",
+            "title": "Great Falls Swim Team Rapids Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/gfst/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-mt-hot",
+      "after": {
+        "kind": "team",
+        "title": "Hardin Otter Swim Team",
+        "officialName": "Hardin Otter Swim Team",
+        "abbreviation": "HOT",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-mt",
+        "lscId": "usa-lsc-mt",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.hardinotters.org/",
+        "sourceUrl": "https://www.gomotionapp.com/team/mtms/page/mt-clubs",
+        "summary": "Hardin Otter Swim Team is a swim team/program listed by Montana Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Hardin, Montana",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Montana Swimming",
+            "targetId": "usa-lsc-mt"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "hardinotters@gmail.com",
+            "url": "https://www.gomotionapp.com/team/mtms/page/mt-clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "jlrenshaw@msn.com",
+            "url": "https://www.gomotionapp.com/team/mtms/page/mt-clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "kristengmark@gmail.com",
+            "url": "https://www.gomotionapp.com/team/mtms/page/mt-clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Kristen Mark",
+            "email": "hardinotters@gmail.com",
+            "phone": "10000000000"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/mtms/page/mt-clubs",
+            "title": "Montana Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.hardinotters.org/",
+            "title": "Hardin Otter Swim Team Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/mthost/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-mt-hav",
+      "after": {
+        "kind": "team",
+        "title": "Havre Lions Swim Team",
+        "officialName": "Havre Lions Swim Team",
+        "abbreviation": "HAV",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-mt",
+        "lscId": "usa-lsc-mt",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/Home.jsp?team=mthav",
+        "sourceUrl": "https://www.gomotionapp.com/team/mtms/page/mt-clubs",
+        "summary": "Havre Lions Swim Team is a swim team/program listed by Montana Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Havre, Montana",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Montana Swimming",
+            "targetId": "usa-lsc-mt"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "havreswim@gmail.com",
+            "url": "https://www.gomotionapp.com/team/mtms/page/mt-clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "ventek15@gmail.com",
+            "url": "https://www.gomotionapp.com/team/mtms/page/mt-clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Hayley Coursey",
+            "email": "coachhrcoursey@gmail.com",
+            "phone": "14068855125"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/mtms/page/mt-clubs",
+            "title": "Montana Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.teamunify.com/Home.jsp?team=mthav",
+            "title": "Havre Lions Swim Team Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.havreswim.org/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-mt-hlst",
+      "after": {
+        "kind": "team",
+        "title": "Helena Lions Swim Team",
+        "officialName": "Helena Lions Swim Team",
+        "abbreviation": "HLST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-mt",
+        "lscId": "usa-lsc-mt",
+        "zoneId": "usa-zone-western",
+        "website": "http://hlst.org/",
+        "sourceUrl": "https://www.gomotionapp.com/team/mtms/page/mt-clubs",
+        "summary": "Helena Lions Swim Team is a swim team/program listed by Montana Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Helena, Montana",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Montana Swimming",
+            "targetId": "usa-lsc-mt"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "hlstbilling@gmail.com",
+            "url": "https://www.gomotionapp.com/team/mtms/page/mt-clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "hlstboard@gmail.com",
+            "url": "https://www.gomotionapp.com/team/mtms/page/mt-clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "email": "hlstswimcoach1@gmail.com",
+            "url": "https://www.gomotionapp.com/team/mtms/page/mt-clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Jennifer Krattiger",
+            "email": "hlstboard@gmail.com",
+            "phone": "14064390376"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/mtms/page/mt-clubs",
+            "title": "Montana Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-mt-lake",
+      "after": {
+        "kind": "team",
+        "title": "Lake Monsters",
+        "officialName": "Lake Monsters",
+        "abbreviation": "LAKE",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-mt",
+        "lscId": "usa-lsc-mt",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/Home.jsp?team=mtlm",
+        "sourceUrl": "https://www.gomotionapp.com/team/mtms/page/mt-clubs",
+        "summary": "Lake Monsters is a swim team/program listed by Montana Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Polson, Montana",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Montana Swimming",
+            "targetId": "usa-lsc-mt"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "universalgilmartin@gmail.com",
+            "url": "https://www.gomotionapp.com/team/mtms/page/mt-clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Neil Romney",
+            "email": "coach@mvaquatics.org",
+            "phone": "14053157060"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/mtms/page/mt-clubs",
+            "title": "Montana Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.teamunify.com/Home.jsp?team=mtlm",
+            "title": "Lake Monsters Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/mtlm/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-mt-mac",
+      "after": {
+        "kind": "team",
+        "title": "Missoula Aquatic Club",
+        "officialName": "Missoula Aquatic Club",
+        "abbreviation": "MAC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-mt",
+        "lscId": "usa-lsc-mt",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/Home.jsp?team=mtmac",
+        "sourceUrl": "https://www.gomotionapp.com/team/mtms/page/mt-clubs",
+        "summary": "Missoula Aquatic Club is a swim team/program listed by Montana Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Missoula, Montana",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Montana Swimming",
+            "targetId": "usa-lsc-mt"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Robyn Lewis",
+            "email": "reblewis76@yahoo.com",
+            "phone": "14063709637"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/mtms/page/mt-clubs",
+            "title": "Montana Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.teamunify.com/Home.jsp?team=mtmac",
+            "title": "Missoula Aquatic Club Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/mtmac/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-mt-myst",
+      "after": {
+        "kind": "team",
+        "title": "Missoula YMCA Swim Team",
+        "officialName": "Missoula YMCA Swim Team",
+        "abbreviation": "MYST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-mt",
+        "lscId": "usa-lsc-mt",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.ymcamissoula.org/programs/swim-team",
+        "sourceUrl": "https://www.gomotionapp.com/team/mtms/page/mt-clubs",
+        "summary": "Missoula YMCA Swim Team is a swim team/program listed by Montana Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Missoula, Montana",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Montana Swimming",
+            "targetId": "usa-lsc-mt"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "kbeierle@ymcamissoula.org",
+            "url": "https://www.gomotionapp.com/team/mtms/page/mt-clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Kirby Beierle",
+            "email": "kbeierle@ymcamissoula.org",
+            "phone": "14067219622"
+          },
+          {
+            "role": "Public team website contact",
+            "email": "ymca@ymcamissoula.org",
+            "url": "https://www.ymcamissoula.org/programs/swim-team"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/mtms/page/mt-clubs",
+            "title": "Montana Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.ymcamissoula.org/programs/swim-team",
+            "title": "Missoula YMCA Swim Team - MYST Competitive Youth Swimming Montana | Missoula Family YMCA",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    }
+  ]
+}

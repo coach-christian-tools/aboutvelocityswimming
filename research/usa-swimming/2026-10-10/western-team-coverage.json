@@ -1,0 +1,114 @@
+{
+  "checkedAt": "2026-10-10",
+  "newTeams": 694,
+  "existingInlandEmpireTeams": 19,
+  "totalRepresented": 713,
+  "lscs": [
+    {
+      "code": "AK",
+      "name": "Alaska Swimming",
+      "collected": 22
+    },
+    {
+      "code": "AZ",
+      "name": "Arizona Swimming",
+      "collected": 43
+    },
+    {
+      "code": "CA",
+      "name": "Southern California Swimming",
+      "collected": 147
+    },
+    {
+      "code": "CC",
+      "name": "Central California Swimming",
+      "collected": 11
+    },
+    {
+      "code": "CO",
+      "name": "Colorado Swimming",
+      "collected": 69
+    },
+    {
+      "code": "HI",
+      "name": "Hawaiian Swimming",
+      "collected": 26
+    },
+    {
+      "code": "MT",
+      "name": "Montana Swimming",
+      "collected": 14
+    },
+    {
+      "code": "NM",
+      "name": "New Mexico Swimming",
+      "collected": 20
+    },
+    {
+      "code": "OR",
+      "name": "Oregon Swimming",
+      "collected": 58
+    },
+    {
+      "code": "PC",
+      "name": "Pacific Swimming",
+      "collected": 107
+    },
+    {
+      "code": "PN",
+      "name": "Pacific Northwest Swimming",
+      "collected": 43
+    },
+    {
+      "code": "SI",
+      "name": "San Diego-Imperial Swimming",
+      "collected": 23
+    },
+    {
+      "code": "SN",
+      "name": "Sierra Nevada Swimming",
+      "collected": 46
+    },
+    {
+      "code": "SR",
+      "name": "Snake River Swimming",
+      "collected": 12
+    },
+    {
+      "code": "UT",
+      "name": "Utah Swimming",
+      "collected": 30
+    },
+    {
+      "code": "WY",
+      "name": "Wyoming Swimming",
+      "collected": 23
+    }
+  ],
+  "batchCount": 18,
+  "missingWebsites": 60,
+  "missingCodes": 172,
+  "missingContacts": 47,
+  "sourceCoverage": "Partial current coverage; complete enumeration of retrieved named directory rows.",
+  "remaining": [
+    "Sierra Nevada: BBST appears in the official membership table, but its expanded name/code association is not established by official sources.",
+    "National-map-only candidates: Tucson Country Club, Race Pace Club AZ, American Renaissance Academy and MA Swim Academy need direct LSC affiliation verification.",
+    "Pacific says more than 120 clubs; its five published internal-zone lists contain 107 unique named clubs. Difference remains unresolved.",
+    "Alaska Northern Area lists Delta Greely Tide and Galena White Cap without current registration/contact evidence; not included as current registered clubs.",
+    "Sierra Nevada historical roll call does not prove current status. Northern Sierra Swimming\u2019s site now identifies Roseville CCA.",
+    "Hawaiian Swimming labels Schofield Sharks no renewal; it remains flagged rather than active."
+  ],
+  "decisions": [
+    "Decide whether to include expressly inactive or historical-only clubs in the directory. Montana\u2019s eight inactive clubs and Alaska Central Area\u2019s eight past member teams were excluded.",
+    "Review whether Northern Sierra Swimming should remain a separate record after confirming its relationship to Roseville CCA."
+  ],
+  "queueVerification": {
+    "checkedAt": "2026-10-10T08:13:51.579716+00:00",
+    "pendingBatches": 17,
+    "pendingRecords": 672,
+    "approvedInAppDuringCollectionBatches": 1,
+    "approvedInAppDuringCollectionRecords": 22,
+    "collectorApprovedOrPublished": false,
+    "duplicatePendingPaths": 0
+  }
+}

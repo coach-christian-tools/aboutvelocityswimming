@@ -1,0 +1,1530 @@
+{
+  "division": "knowledge",
+  "scope": "Western Zone swim teams \u2014 Hawaiian Swimming",
+  "sourceUrl": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+  "capturedAt": "2026-10-10T08:09:39.122199+00:00",
+  "coverage": "partial",
+  "evidence": {
+    "checkedAt": "2026-10-10",
+    "lscCode": "HI",
+    "directoryRowsCollected": 26,
+    "batchRows": 26,
+    "enumeration": "All named rows in the retrieved official directory/roster sources; independent current registration is not guaranteed.",
+    "deduplication": "Compared against 84 published knowledge records and an empty pending queue; facilities combined by organization key; Inland Empire\u2019s 19 existing teams were retained without duplicates.",
+    "remaining": "Missing codes, unreachable websites, registration status, and conflicting sources are visible in each record. Sierra Nevada BBST remains name/code unresolved from official evidence."
+  },
+  "writes": [
+    {
+      "path": "knowledge_entries/usa-team-hi-asc",
+      "after": {
+        "kind": "team",
+        "title": "Academy Swim Club",
+        "officialName": "Academy Swim Club",
+        "abbreviation": "ASC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-hi",
+        "lscId": "usa-lsc-hi",
+        "zoneId": "usa-zone-western",
+        "website": "http://academyswimhawaii.org/",
+        "sourceUrl": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+        "summary": "Academy Swim Club is a swim team/program listed by Hawaiian Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Big Island, Hawaii",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Hawaiian Swimming",
+            "targetId": "usa-lsc-hi"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Mark Noetzel",
+            "email": "mnoetzel.swim@gmail.com",
+            "phone": "18086406236"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+            "title": "Hawaiian Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://academyswimhawaii.org/",
+            "title": "Academy Swim Club - Hawaii Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.academyswimhawaii.org/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-hi-aaa",
+      "after": {
+        "kind": "team",
+        "title": "Aloha Aquatics Association",
+        "officialName": "Aloha Aquatics Association",
+        "abbreviation": "AAA",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-hi",
+        "lscId": "usa-lsc-hi",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.alohaaquatics.org/",
+        "sourceUrl": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+        "summary": "Aloha Aquatics Association is a swim team/program listed by Hawaiian Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Oahu, Hawaii",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Hawaiian Swimming",
+            "targetId": "usa-lsc-hi"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+            "title": "Hawaiian Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "http://www.alohaaquatics.org/",
+            "title": "ALOHA AQUATICS ASSOCIATION",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.alohaaquatics.org/"
+          }
+        ],
+        "gaps": [
+          "No public organizational contact established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-hi-aul",
+      "after": {
+        "kind": "team",
+        "title": "Aulea Swim Club",
+        "officialName": "Aulea Swim Club",
+        "abbreviation": "AUL",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-hi",
+        "lscId": "usa-lsc-hi",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/hiasc/page/club-info",
+        "sourceUrl": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+        "summary": "Aulea Swim Club is a USA Swimming club based in Kailua, on Oahu\u2019s Windward side. It offers introductory and competitive groups.",
+        "geographicCoverage": "Oahu, Hawaii",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Hawaiian Swimming",
+            "targetId": "usa-lsc-hi"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public team website contact",
+            "email": "auleaswimclubkailua@gmail.com",
+            "url": "https://www.gomotionapp.com/team/hiasc/page/club-info"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+            "title": "Hawaiian Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/hiasc/page/club-info",
+            "title": "Aulea Swim Club - Club Info",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "The LSC directory\u2019s former website now serves unrelated content; replaced with a verified official team/parent page."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-hi-blue",
+      "after": {
+        "kind": "team",
+        "title": "Big Blue Swim Club",
+        "officialName": "Big Blue Swim Club",
+        "abbreviation": "BLUE",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-hi",
+        "lscId": "usa-lsc-hi",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/TabGeneric.jsp?_tabid_=104958&team=zzbbs",
+        "sourceUrl": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+        "summary": "Big Blue Swim Club is a swim team/program listed by Hawaiian Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Big Island, Hawaii",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Hawaiian Swimming",
+            "targetId": "usa-lsc-hi"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+            "title": "Hawaiian Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.teamunify.com/TabGeneric.jsp?_tabid_=104958&team=zzbbs",
+            "title": "Meet Sanctions",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/TabGeneric.jsp?_tabid_=104958&team=zzbbs"
+          }
+        ],
+        "gaps": [
+          "No public organizational contact established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-hi-hsc",
+      "after": {
+        "kind": "team",
+        "title": "Hawaii Swimming Club",
+        "officialName": "Hawaii Swimming Club",
+        "abbreviation": "HSC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-hi",
+        "lscId": "usa-lsc-hi",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.hawaiiswim.org/",
+        "sourceUrl": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+        "summary": "Hawaii Swimming Club is a swim team/program listed by Hawaiian Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Oahu, Hawaii; Maui, Hawaii",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Hawaiian Swimming",
+            "targetId": "usa-lsc-hi"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Marcelle Arakaki",
+            "email": "marcelle808@gmail.com",
+            "phone": "18083824343"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Lanakila Barrow",
+            "email": "duke.sevilla@co.maui.hi.us",
+            "phone": "18082706155"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Hawaii Swimming Club",
+            "email": "marcelle808@gmail.com",
+            "phone": "18083824343"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Reid Yamamoto",
+            "email": "speedoswim808@gmail.com",
+            "phone": "18083570883"
+          },
+          {
+            "role": "Public team website contact",
+            "email": "%20808swim@gmail.com",
+            "url": "http://www.hawaiiswim.org/"
+          },
+          {
+            "role": "Public team website contact",
+            "email": "808swim@gmail.com",
+            "url": "http://www.hawaiiswim.org/"
+          },
+          {
+            "role": "Public team website contact",
+            "email": "hsc@flex.com",
+            "url": "http://www.hawaiiswim.org/"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+            "title": "Hawaiian Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.hawaiiswim.org/",
+            "title": "Aloha, Swimming In Hawaii !",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://hawaiiswim.org/"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-hi-hick",
+      "after": {
+        "kind": "team",
+        "title": "Hickam Swim Team",
+        "officialName": "Hickam Swim Team",
+        "abbreviation": "HICK",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-hi",
+        "lscId": "usa-lsc-hi",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.hickamhurricanes.com/",
+        "sourceUrl": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+        "summary": "Hickam Swim Team is a swim team/program listed by Hawaiian Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Oahu, Hawaii",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Hawaiian Swimming",
+            "targetId": "usa-lsc-hi"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+            "title": "Hawaiian Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "No public organizational contact established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-hi-haq",
+      "after": {
+        "kind": "team",
+        "title": "Hilo Aquatics",
+        "officialName": "Hilo Aquatics",
+        "abbreviation": "HAQ",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-hi",
+        "lscId": "usa-lsc-hi",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.hiloaquaticclub.org/",
+        "sourceUrl": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+        "summary": "Hilo Aquatics is a swim team/program listed by Hawaiian Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Big Island, Hawaii",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Hawaiian Swimming",
+            "targetId": "usa-lsc-hi"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+            "title": "Hawaiian Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "No public organizational contact established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-hi-iol",
+      "after": {
+        "kind": "team",
+        "title": "Iolani Swim Club",
+        "officialName": "Iolani Swim Club",
+        "abbreviation": "IOL",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-hi",
+        "lscId": "usa-lsc-hi",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.iolaniswimclub.com/",
+        "sourceUrl": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+        "summary": "Iolani Swim Club is a swim team/program listed by Hawaiian Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Oahu, Hawaii",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Hawaiian Swimming",
+            "targetId": "usa-lsc-hi"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Brian Lee",
+            "email": "leeswim@iolani.org",
+            "phone": "18089432289"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+            "title": "Hawaiian Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.iolaniswimclub.com/",
+            "title": "Iolani Swim Club :",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/Home.jsp?team=hiisc"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-hi-ia",
+      "after": {
+        "kind": "team",
+        "title": "Island Aquatics",
+        "officialName": "Island Aquatics",
+        "abbreviation": "IA",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-hi",
+        "lscId": "usa-lsc-hi",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.islandaquaticsmaui.com/Home.jsp?team=hisms",
+        "sourceUrl": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+        "summary": "Island Aquatics is a swim team/program listed by Hawaiian Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Maui, Hawaii",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Hawaiian Swimming",
+            "targetId": "usa-lsc-hi"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Catherine Donohue",
+            "email": "mahalo4maui@yahoo.com",
+            "phone": "18083855332"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+            "title": "Hawaiian Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.islandaquaticsmaui.com/Home.jsp?team=hisms",
+            "title": "Island Aquatics Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.islandaquaticsmaui.com/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-hi-ksc",
+      "after": {
+        "kind": "team",
+        "title": "Kamehameha Swim Club",
+        "officialName": "Kamehameha Swim Club",
+        "abbreviation": "KSC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-hi",
+        "lscId": "usa-lsc-hi",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/Home.jsp?team=hiksc",
+        "sourceUrl": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+        "summary": "Kamehameha Swim Club is a swim team/program listed by Hawaiian Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Oahu, Hawaii",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Hawaiian Swimming",
+            "targetId": "usa-lsc-hi"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Oahu Club",
+            "email": "honu17@aol.com",
+            "phone": "18083953300"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Kevin Flanagan",
+            "email": "noheaflan@yahoo.com",
+            "phone": "11808395330"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "John Flanagan",
+            "email": "honu17@aol.com",
+            "phone": "18084780060"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+            "title": "Hawaiian Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.teamunify.com/Home.jsp?team=hiksc",
+            "title": "Welcome",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/Home.jsp?team=hiksc"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-hi-kona",
+      "after": {
+        "kind": "team",
+        "title": "Kona Aquatics",
+        "officialName": "Kona Aquatics",
+        "abbreviation": "KONA",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-hi",
+        "lscId": "usa-lsc-hi",
+        "zoneId": "usa-zone-western",
+        "website": "http://kona-aquatics.com/#about",
+        "sourceUrl": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+        "summary": "Kona Aquatics is a swim team/program listed by Hawaiian Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Big Island, Hawaii",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Hawaiian Swimming",
+            "targetId": "usa-lsc-hi"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+            "title": "Hawaiian Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "No public organizational contact established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-hi-phin",
+      "after": {
+        "kind": "team",
+        "title": "Kona Dolphin Swim Team",
+        "officialName": "Kona Dolphin Swim Team",
+        "abbreviation": "PHIN",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-hi",
+        "lscId": "usa-lsc-hi",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.konadolphins.com/",
+        "sourceUrl": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+        "summary": "Kona Dolphin Swim Team is a swim team/program listed by Hawaiian Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Big Island, Hawaii",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Hawaiian Swimming",
+            "targetId": "usa-lsc-hi"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Kona Dolphin Swim Club",
+            "email": "joycefollis@gmail.com",
+            "phone": "18082123486"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+            "title": "Hawaiian Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.konadolphins.com/",
+            "title": "Kona Dolphin Swim Club Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/hskdsc/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-hi-lah",
+      "after": {
+        "kind": "team",
+        "title": "Lahaina Swim Club",
+        "officialName": "Lahaina Swim Club",
+        "abbreviation": "LAH",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-hi",
+        "lscId": "usa-lsc-hi",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.lahainaswimclub.com/",
+        "sourceUrl": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+        "summary": "Lahaina Swim Club is a swim team/program listed by Hawaiian Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Maui, Hawaii",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Hawaiian Swimming",
+            "targetId": "usa-lsc-hi"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Lahaina Swim Club Secretary",
+            "email": "Lahainaswimclub@gmail.com",
+            "phone": "18087271893"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+            "title": "Hawaiian Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-hi-man",
+      "after": {
+        "kind": "team",
+        "title": "Manoa Aquatics",
+        "officialName": "Manoa Aquatics",
+        "abbreviation": "MAN",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-hi",
+        "lscId": "usa-lsc-hi",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.manoaswim.com/",
+        "sourceUrl": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+        "summary": "Manoa Aquatics is a swim team/program listed by Hawaiian Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Oahu, Hawaii",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Hawaiian Swimming",
+            "targetId": "usa-lsc-hi"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Larry Oshiro",
+            "email": "manoaswim@gmail.com",
+            "phone": "18082280337"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+            "title": "Hawaiian Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-hi-mdsc",
+      "after": {
+        "kind": "team",
+        "title": "Maui Dolphin Swim Club",
+        "officialName": "Maui Dolphin Swim Club",
+        "abbreviation": "MDSC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-hi",
+        "lscId": "usa-lsc-hi",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.mauidolphins.org/",
+        "sourceUrl": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+        "summary": "Maui Dolphin Swim Club is a swim team/program listed by Hawaiian Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Maui, Hawaii",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Hawaiian Swimming",
+            "targetId": "usa-lsc-hi"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+            "title": "Hawaiian Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "No public organizational contact established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-hi-maui",
+      "after": {
+        "kind": "team",
+        "title": "Maui Swim Club",
+        "officialName": "Maui Swim Club",
+        "abbreviation": "MAUI",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-hi",
+        "lscId": "usa-lsc-hi",
+        "zoneId": "usa-zone-western",
+        "website": null,
+        "sourceUrl": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+        "summary": "Maui Swim Club is a swim team/program listed by Hawaiian Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Maui, Hawaii",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Hawaiian Swimming",
+            "targetId": "usa-lsc-hi"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Linda Matsumoto",
+            "email": "mauiswimclubcoach@gmail.com",
+            "phone": "18083443770"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+            "title": "Hawaiian Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Official team website not established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-hi-pca",
+      "after": {
+        "kind": "team",
+        "title": "Pearl City Aquatics",
+        "officialName": "Pearl City Aquatics",
+        "abbreviation": "PCA",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-hi",
+        "lscId": "usa-lsc-hi",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.pearlcityswimming.org/",
+        "sourceUrl": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+        "summary": "Pearl City Aquatics is a swim team/program listed by Hawaiian Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Oahu, Hawaii",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Hawaiian Swimming",
+            "targetId": "usa-lsc-hi"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Ron Iwamoto",
+            "email": "roniwamoto@gmail.com",
+            "phone": "18085542631"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+            "title": "Hawaiian Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.pearlcityswimming.org/",
+            "title": "Pearl City Aquatics Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/hipca/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-hi-paq",
+      "after": {
+        "kind": "team",
+        "title": "Punahou Aquatics",
+        "officialName": "Punahou Aquatics",
+        "abbreviation": "PAQ",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-hi",
+        "lscId": "usa-lsc-hi",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.punahouaquatics.org/",
+        "sourceUrl": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+        "summary": "Punahou Aquatics is a swim team/program listed by Hawaiian Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Oahu, Hawaii",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Hawaiian Swimming",
+            "targetId": "usa-lsc-hi"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+            "title": "Hawaiian Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "No public organizational contact established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-hi-bows",
+      "after": {
+        "kind": "team",
+        "title": "Rainbow Aquatics",
+        "officialName": "Rainbow Aquatics",
+        "abbreviation": "BOWS",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-hi",
+        "lscId": "usa-lsc-hi",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.rainbowaquatics.org/",
+        "sourceUrl": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+        "summary": "Rainbow Aquatics is a swim team/program listed by Hawaiian Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Oahu, Hawaii",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Hawaiian Swimming",
+            "targetId": "usa-lsc-hi"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Marri Wada Tanji",
+            "email": "swiminfo@rainbowaquatics.org",
+            "phone": "18082651687"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Rainbow Aquatics Swim Team Inc",
+            "email": "headcoach.rainbowaquatics@gmail.com",
+            "phone": "16192270797"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+            "title": "Hawaiian Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.rainbowaquatics.org/",
+            "title": "Rainbow Aquatics Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/hira/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-hi-sssc",
+      "after": {
+        "kind": "team",
+        "title": "Schofield Sharks Swim Club",
+        "officialName": "Schofield Sharks Swim Club",
+        "abbreviation": "SSSC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-hi",
+        "lscId": "usa-lsc-hi",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.schofieldsharksswimclub.weebly.com/",
+        "sourceUrl": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+        "summary": "Schofield Sharks Swim Club is a swim team/program listed by Hawaiian Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Oahu, Hawaii",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Hawaiian Swimming",
+            "targetId": "usa-lsc-hi"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+            "title": "Hawaiian Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "http://www.schofieldsharksswimclub.weebly.com/",
+            "title": "Schofield Sharks Swim Club - Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to http://schofieldsharksswimclub.weebly.com/"
+          }
+        ],
+        "gaps": [
+          "No public organizational contact established from available sources.",
+          "Hawaiian Swimming marks this club \u201cno renewal\u201d; current active status is unconfirmed."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-hi-spl",
+      "after": {
+        "kind": "team",
+        "title": "Splash Aquatics",
+        "officialName": "Splash Aquatics",
+        "abbreviation": "SPL",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-hi",
+        "lscId": "usa-lsc-hi",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.splashaquatics.org/",
+        "sourceUrl": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+        "summary": "Splash Aquatics is a swim team/program listed by Hawaiian Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Oahu, Hawaii",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Hawaiian Swimming",
+            "targetId": "usa-lsc-hi"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Ryan Muraoka",
+            "email": "rkmuraoka@gmail.com",
+            "phone": "18082588015"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Michael Claus",
+            "email": "mclas@palamasettlement.org",
+            "phone": "18088482523"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Coach Ryan Muraoka",
+            "email": "rkmuraoka@gmail.com",
+            "phone": "18082588015"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+            "title": "Hawaiian Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.splashaquatics.org/",
+            "title": "Splash Aquatics Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.splashaquatics.org/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-hi-suna",
+      "after": {
+        "kind": "team",
+        "title": "Sun-shine Aquatics",
+        "officialName": "Sun-shine Aquatics",
+        "abbreviation": "SUNA",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-hi",
+        "lscId": "usa-lsc-hi",
+        "zoneId": "usa-zone-western",
+        "website": "http://sunshinesportshawaii.com/",
+        "sourceUrl": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+        "summary": "Sun-shine Aquatics is a swim team/program listed by Hawaiian Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Oahu, Hawaii",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Hawaiian Swimming",
+            "targetId": "usa-lsc-hi"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+            "title": "Hawaiian Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "No public organizational contact established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-hi-ska",
+      "after": {
+        "kind": "team",
+        "title": "Swim Kauai Aquatics",
+        "officialName": "Swim Kauai Aquatics",
+        "abbreviation": "SKA",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-hi",
+        "lscId": "usa-lsc-hi",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.swimkauai.com/",
+        "sourceUrl": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+        "summary": "Swim Kauai Aquatics is a swim team/program listed by Hawaiian Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Kauai, Hawaii",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Hawaiian Swimming",
+            "targetId": "usa-lsc-hi"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Anna Maria Borondi",
+            "email": "Amborondi@msn.com",
+            "phone": "18082787487"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+            "title": "Hawaiian Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-hi-uh",
+      "after": {
+        "kind": "team",
+        "title": "University of Hawaii",
+        "officialName": "University of Hawaii",
+        "abbreviation": "UH",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-hi",
+        "lscId": "usa-lsc-hi",
+        "zoneId": "usa-zone-western",
+        "website": "http://uhathletics.hawaii.edu/",
+        "sourceUrl": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+        "summary": "University of Hawaii is a swim team/program listed by Hawaiian Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Oahu, Hawaii",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Hawaiian Swimming",
+            "targetId": "usa-lsc-hi"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+            "title": "Hawaiian Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "No public organizational contact established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-hi-waikoloa-swim-club",
+      "after": {
+        "kind": "team",
+        "title": "Waikoloa Swim Club",
+        "officialName": "Waikoloa Swim Club",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-hi",
+        "lscId": "usa-lsc-hi",
+        "zoneId": "usa-zone-western",
+        "website": null,
+        "sourceUrl": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+        "summary": "Waikoloa Swim Club is a swim team/program listed by Hawaiian Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Big Island, Hawaii",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Hawaiian Swimming",
+            "targetId": "usa-lsc-hi"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+            "title": "Hawaiian Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Official team website not established from available sources.",
+          "USA Swimming club code / official abbreviation not established; none inferred.",
+          "No public organizational contact established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-hi-wac",
+      "after": {
+        "kind": "team",
+        "title": "Warrior Aquatic Club",
+        "officialName": "Warrior Aquatic Club",
+        "abbreviation": "WAC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-hi",
+        "lscId": "usa-lsc-hi",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.teamunify.com/Home.jsp?team=hiwac",
+        "sourceUrl": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+        "summary": "Warrior Aquatic Club is a swim team/program listed by Hawaiian Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Big Island, Hawaii",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Hawaiian Swimming",
+            "targetId": "usa-lsc-hi"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Willem Sakovich",
+            "email": "swimsak@yahoo.com",
+            "phone": "18088957311"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/hslsc/page/clubs/team-directory2",
+            "title": "Hawaiian Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    }
+  ]
+}

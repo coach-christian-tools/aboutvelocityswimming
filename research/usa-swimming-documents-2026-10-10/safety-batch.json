@@ -1,0 +1,249 @@
+{
+  "division": "knowledge",
+  "scope": "USA Swimming documents \u2014 athlete protection and club forms",
+  "sourceUrl": "https://www.usaswimming.org/safe-sport/minor-athlete-abuse-prevention-policy",
+  "capturedAt": "2026-10-10T07:55:21.934155+00:00",
+  "coverage": "partial",
+  "evidence": {
+    "method": "Curated official USA Swimming hub links. Completed local downloads have SHA-256 hashes and valid file signatures. Any unsuccessful download is explicitly marked; partial files are excluded.",
+    "hubUrl": "https://www.usaswimming.org/safe-sport/minor-athlete-abuse-prevention-policy",
+    "limitations": "Curated important documents, not an exhaustive archive. Edition dates do not imply all provisions are currently effective. No numeric standards imported. Collector stages proposals only; staff approval is required for public collection publication. Collector stages proposals only; staff approval is required for public collection publication.",
+    "documents": [
+      {
+        "id": "usas-2025-minor-athlete-abuse-prevention-policy-maapp",
+        "group": "safety",
+        "title": "USA Swimming \u2014 2025 Minor Athlete Abuse Prevention Policy (MAAPP)",
+        "url": "https://websiteprodcoresa.blob.core.windows.net/sitefinity/docs/default-source/safe-sportdocuments/maapp/maapp-new.pdf?sfvrsn=2ca00732_1",
+        "summary": "2025 Minor Athlete Abuse Prevention Policy, linked by the current official policy hub. Covers interactions, communication, travel, changing areas and related athlete safeguards.",
+        "file": "files/usas-2025-minor-athlete-abuse-prevention-policy-maapp.pdf",
+        "sha256": "51d11dda38bd151584e9d6f9f6184f40fa602adf92c077b2f967770e87c69cd2",
+        "bytes": 258495,
+        "retrieval": "200|application/pdf|https://websiteprodcoresa.blob.core.windows.net/sitefinity/docs/default-source/safe-sportdocuments/maapp/maapp-new.pdf?sfvrsn=2ca00732_1",
+        "downloadStatus": "Complete local capture"
+      },
+      {
+        "id": "usas-maapp-maapp-customizable",
+        "group": "safety",
+        "title": "USA Swimming \u2014 MAAPP \u2014 MAAPP Customizable",
+        "url": "https://websiteprodcoresa.blob.core.windows.net/sitefinity/docs/default-source/safe-sportdocuments/maapp/maapp_customizable_swimming_2025.docx?sfvrsn=32a00732_1",
+        "summary": "Editable 2025 MAAPP template for club adoption and administration.",
+        "file": "files/usas-maapp-maapp-customizable.docx",
+        "sha256": "742646c99f7daa32d3ec79b10ce5820792f657dff64922d150e09520a7565927",
+        "bytes": 103028,
+        "retrieval": "200|application/vnd.openxmlformats-officedocument.wordprocessingml.document|https://websiteprodcoresa.blob.core.windows.net/sitefinity/docs/default-source/safe-sportdocuments/maapp/maapp_customizable_swimming_2025.docx?sfvrsn=32a00732_1",
+        "downloadStatus": "Complete local capture"
+      },
+      {
+        "id": "usas-maapp-personal-assistant-policy",
+        "group": "safety",
+        "title": "USA Swimming \u2014 MAAPP \u2014 Personal Assistant Policy",
+        "url": "https://websiteprodcoresa.blob.core.windows.net/sitefinity/docs/default-source/safe-sportdocuments/maapp/personal-assistant-policy.pdf?sfvrsn=eca00732_1",
+        "summary": "Official personal-assistant policy linked from the MAAPP hub.",
+        "file": "files/usas-maapp-personal-assistant-policy.pdf",
+        "sha256": "27cdb64678678abb430e5db3ae0d5af2dca1c324bb36936ea38448bff3c9352a",
+        "bytes": 97069,
+        "retrieval": "200|application/pdf|https://websiteprodcoresa.blob.core.windows.net/sitefinity/docs/default-source/safe-sportdocuments/maapp/personal-assistant-policy.pdf?sfvrsn=eca00732_1",
+        "downloadStatus": "Complete local capture"
+      },
+      {
+        "id": "usas-maapp-sample-acknowledgement-of-policy",
+        "group": "safety",
+        "title": "USA Swimming \u2014 MAAPP \u2014 Sample Acknowledgement of Policy",
+        "url": "https://www.usaswimming.org/docs/default-source/safe-sportdocuments/maapp/maapp-sample-written-acknowledgement-of-policy.docx",
+        "summary": "Editable MAAPP policy acknowledgement form.",
+        "file": "files/usas-maapp-sample-acknowledgement-of-policy.docx",
+        "sha256": "5e7c4ead933386cc7950a7938c5f6ff2454168baa23b443584d36f46a43aca0c",
+        "bytes": 15946,
+        "retrieval": "200|application/vnd.openxmlformats-officedocument.wordprocessingml.document|https://www.usaswimming.org/docs/default-source/safe-sportdocuments/maapp/maapp-sample-written-acknowledgement-of-policy.docx",
+        "downloadStatus": "Complete local capture"
+      },
+      {
+        "id": "usas-maapp-required-language-components-for-sanctioned-events",
+        "group": "safety",
+        "title": "USA Swimming \u2014 MAAPP \u2014 Required Language Components for Sanctioned Events",
+        "url": "https://www.usaswimming.org/docs/default-source/safe-sportdocuments/club-toolkit/2.-safe-sport-and-parents/required-qcs-components.pdf",
+        "summary": "Required Safe Sport language for sanctioned events.",
+        "file": "files/usas-maapp-required-language-components-for-sanctioned-events.pdf",
+        "sha256": "1a8d086a602452102c257f7869e3b105230eac433cd518964f01819e9fbbabde",
+        "bytes": 88006,
+        "retrieval": "200|application/pdf|https://www.usaswimming.org/docs/default-source/safe-sportdocuments/club-toolkit/2.-safe-sport-and-parents/required-qcs-components.pdf",
+        "downloadStatus": "Complete local capture"
+      },
+      {
+        "id": "usas-maapp-lsc-sanctioned-meet-360",
+        "group": "safety",
+        "title": "USA Swimming \u2014 MAAPP \u2014 LSC Sanctioned Meet 360",
+        "url": "https://www.usaswimming.org/docs/default-source/safe-sportdocuments/club-toolkit/2.-safe-sport-and-parents/lsc-sanctioned-meet-360.pdf",
+        "summary": "Safe Sport reference for planning and reviewing sanctioned meets.",
+        "file": "files/usas-maapp-lsc-sanctioned-meet-360.pdf",
+        "sha256": "218742ffcb101d3b6085c8abb763f3eb71aa7ea63231bdaba57e77cc06584e97",
+        "bytes": 208698,
+        "retrieval": "200|application/pdf|https://www.usaswimming.org/docs/default-source/safe-sportdocuments/club-toolkit/2.-safe-sport-and-parents/lsc-sanctioned-meet-360.pdf",
+        "downloadStatus": "Complete local capture"
+      },
+      {
+        "id": "usas-maapp-webinar-slides",
+        "group": "safety",
+        "title": "USA Swimming \u2014 MAAPP \u2014 Webinar Slides",
+        "url": "https://websiteprodcoresa.blob.core.windows.net/sitefinity/docs/default-source/safe-sportdocuments/maapp/2025_maapp-powerpoint_training-slides.pdf?sfvrsn=84a10732_1",
+        "summary": "USA Swimming\u2019s 2025 MAAPP training webinar slides.",
+        "file": "files/usas-maapp-webinar-slides.pdf",
+        "sha256": "44c0f35175bc3b9f23a72c83f1ccde9e37b905a8771167cffaf77bb086546fd0",
+        "bytes": 1565504,
+        "retrieval": "HTTP 200 from https://websiteprodcoresa.blob.core.windows.net/sitefinity/docs/default-source/safe-sportdocuments/maapp/2025_maapp-powerpoint_training-slides.pdf?sfvrsn=84a10732_1",
+        "downloadStatus": "Complete local capture"
+      },
+      {
+        "id": "usas-maapp-highlighted-changes-in-new-2025-maapp",
+        "group": "safety",
+        "title": "USA Swimming \u2014 MAAPP \u2014 Highlighted Changes in new 2025 MAAPP",
+        "url": "https://websiteprodcoresa.blob.core.windows.net/sitefinity/docs/default-source/safe-sportdocuments/maapp/maapp_highlighted-changes.pdf?sfvrsn=f3a10732_3",
+        "summary": "Companion document identifying changes in the 2025 MAAPP.",
+        "file": "files/usas-maapp-highlighted-changes-in-new-2025-maapp.pdf",
+        "sha256": "f27aba1dfb9162813ca09d572dc44590e7e8b74968729e6e4da18fa2a0408085",
+        "bytes": 260692,
+        "retrieval": "200|application/pdf|https://websiteprodcoresa.blob.core.windows.net/sitefinity/docs/default-source/safe-sportdocuments/maapp/maapp_highlighted-changes.pdf?sfvrsn=f3a10732_3",
+        "downloadStatus": "Complete local capture"
+      }
+    ],
+    "duplicateCheck": "No matching IDs or source URLs among the existing published document records."
+  },
+  "writes": [
+    {
+      "path": "knowledge_entries/usas-2025-minor-athlete-abuse-prevention-policy-maapp",
+      "after": {
+        "kind": "document",
+        "title": "USA Swimming \u2014 2025 Minor Athlete Abuse Prevention Policy (MAAPP)",
+        "sourceUrl": "https://websiteprodcoresa.blob.core.windows.net/sitefinity/docs/default-source/safe-sportdocuments/maapp/maapp-new.pdf?sfvrsn=2ca00732_1",
+        "summary": "2025 Minor Athlete Abuse Prevention Policy, linked by the current official policy hub. Covers interactions, communication, travel, changing areas and related athlete safeguards.",
+        "publisher": "USA Swimming",
+        "category": "safety",
+        "resourcePage": "https://www.usaswimming.org/safe-sport/minor-athlete-abuse-prevention-policy",
+        "format": "PDF",
+        "checkedAt": "2026-10-10T07:55:21.934155+00:00",
+        "coverageNote": "Complete local capture",
+        "sha256": "51d11dda38bd151584e9d6f9f6184f40fa602adf92c077b2f967770e87c69cd2",
+        "fileSizeBytes": 258495
+      }
+    },
+    {
+      "path": "knowledge_entries/usas-maapp-maapp-customizable",
+      "after": {
+        "kind": "document",
+        "title": "USA Swimming \u2014 MAAPP \u2014 MAAPP Customizable",
+        "sourceUrl": "https://websiteprodcoresa.blob.core.windows.net/sitefinity/docs/default-source/safe-sportdocuments/maapp/maapp_customizable_swimming_2025.docx?sfvrsn=32a00732_1",
+        "summary": "Editable 2025 MAAPP template for club adoption and administration.",
+        "publisher": "USA Swimming",
+        "category": "safety",
+        "resourcePage": "https://www.usaswimming.org/safe-sport/minor-athlete-abuse-prevention-policy",
+        "format": "DOCX",
+        "checkedAt": "2026-10-10T07:55:21.934155+00:00",
+        "coverageNote": "Complete local capture",
+        "sha256": "742646c99f7daa32d3ec79b10ce5820792f657dff64922d150e09520a7565927",
+        "fileSizeBytes": 103028
+      }
+    },
+    {
+      "path": "knowledge_entries/usas-maapp-personal-assistant-policy",
+      "after": {
+        "kind": "document",
+        "title": "USA Swimming \u2014 MAAPP \u2014 Personal Assistant Policy",
+        "sourceUrl": "https://websiteprodcoresa.blob.core.windows.net/sitefinity/docs/default-source/safe-sportdocuments/maapp/personal-assistant-policy.pdf?sfvrsn=eca00732_1",
+        "summary": "Official personal-assistant policy linked from the MAAPP hub.",
+        "publisher": "USA Swimming",
+        "category": "safety",
+        "resourcePage": "https://www.usaswimming.org/safe-sport/minor-athlete-abuse-prevention-policy",
+        "format": "PDF",
+        "checkedAt": "2026-10-10T07:55:21.934155+00:00",
+        "coverageNote": "Complete local capture",
+        "sha256": "27cdb64678678abb430e5db3ae0d5af2dca1c324bb36936ea38448bff3c9352a",
+        "fileSizeBytes": 97069
+      }
+    },
+    {
+      "path": "knowledge_entries/usas-maapp-sample-acknowledgement-of-policy",
+      "after": {
+        "kind": "document",
+        "title": "USA Swimming \u2014 MAAPP \u2014 Sample Acknowledgement of Policy",
+        "sourceUrl": "https://www.usaswimming.org/docs/default-source/safe-sportdocuments/maapp/maapp-sample-written-acknowledgement-of-policy.docx",
+        "summary": "Editable MAAPP policy acknowledgement form.",
+        "publisher": "USA Swimming",
+        "category": "safety",
+        "resourcePage": "https://www.usaswimming.org/safe-sport/minor-athlete-abuse-prevention-policy",
+        "format": "DOCX",
+        "checkedAt": "2026-10-10T07:55:21.934155+00:00",
+        "coverageNote": "Complete local capture",
+        "sha256": "5e7c4ead933386cc7950a7938c5f6ff2454168baa23b443584d36f46a43aca0c",
+        "fileSizeBytes": 15946
+      }
+    },
+    {
+      "path": "knowledge_entries/usas-maapp-required-language-components-for-sanctioned-events",
+      "after": {
+        "kind": "document",
+        "title": "USA Swimming \u2014 MAAPP \u2014 Required Language Components for Sanctioned Events",
+        "sourceUrl": "https://www.usaswimming.org/docs/default-source/safe-sportdocuments/club-toolkit/2.-safe-sport-and-parents/required-qcs-components.pdf",
+        "summary": "Required Safe Sport language for sanctioned events.",
+        "publisher": "USA Swimming",
+        "category": "safety",
+        "resourcePage": "https://www.usaswimming.org/safe-sport/minor-athlete-abuse-prevention-policy",
+        "format": "PDF",
+        "checkedAt": "2026-10-10T07:55:21.934155+00:00",
+        "coverageNote": "Complete local capture",
+        "sha256": "1a8d086a602452102c257f7869e3b105230eac433cd518964f01819e9fbbabde",
+        "fileSizeBytes": 88006
+      }
+    },
+    {
+      "path": "knowledge_entries/usas-maapp-lsc-sanctioned-meet-360",
+      "after": {
+        "kind": "document",
+        "title": "USA Swimming \u2014 MAAPP \u2014 LSC Sanctioned Meet 360",
+        "sourceUrl": "https://www.usaswimming.org/docs/default-source/safe-sportdocuments/club-toolkit/2.-safe-sport-and-parents/lsc-sanctioned-meet-360.pdf",
+        "summary": "Safe Sport reference for planning and reviewing sanctioned meets.",
+        "publisher": "USA Swimming",
+        "category": "safety",
+        "resourcePage": "https://www.usaswimming.org/safe-sport/minor-athlete-abuse-prevention-policy",
+        "format": "PDF",
+        "checkedAt": "2026-10-10T07:55:21.934155+00:00",
+        "coverageNote": "Complete local capture",
+        "sha256": "218742ffcb101d3b6085c8abb763f3eb71aa7ea63231bdaba57e77cc06584e97",
+        "fileSizeBytes": 208698
+      }
+    },
+    {
+      "path": "knowledge_entries/usas-maapp-webinar-slides",
+      "after": {
+        "kind": "document",
+        "title": "USA Swimming \u2014 MAAPP \u2014 Webinar Slides",
+        "sourceUrl": "https://websiteprodcoresa.blob.core.windows.net/sitefinity/docs/default-source/safe-sportdocuments/maapp/2025_maapp-powerpoint_training-slides.pdf?sfvrsn=84a10732_1",
+        "summary": "USA Swimming\u2019s 2025 MAAPP training webinar slides.",
+        "publisher": "USA Swimming",
+        "category": "safety",
+        "resourcePage": "https://www.usaswimming.org/safe-sport/minor-athlete-abuse-prevention-policy",
+        "format": "PDF",
+        "checkedAt": "2026-10-10T07:55:21.934155+00:00",
+        "coverageNote": "Complete local capture",
+        "sha256": "44c0f35175bc3b9f23a72c83f1ccde9e37b905a8771167cffaf77bb086546fd0",
+        "fileSizeBytes": 1565504
+      }
+    },
+    {
+      "path": "knowledge_entries/usas-maapp-highlighted-changes-in-new-2025-maapp",
+      "after": {
+        "kind": "document",
+        "title": "USA Swimming \u2014 MAAPP \u2014 Highlighted Changes in new 2025 MAAPP",
+        "sourceUrl": "https://websiteprodcoresa.blob.core.windows.net/sitefinity/docs/default-source/safe-sportdocuments/maapp/maapp_highlighted-changes.pdf?sfvrsn=f3a10732_3",
+        "summary": "Companion document identifying changes in the 2025 MAAPP.",
+        "publisher": "USA Swimming",
+        "category": "safety",
+        "resourcePage": "https://www.usaswimming.org/safe-sport/minor-athlete-abuse-prevention-policy",
+        "format": "PDF",
+        "checkedAt": "2026-10-10T07:55:21.934155+00:00",
+        "coverageNote": "Complete local capture",
+        "sha256": "f27aba1dfb9162813ca09d572dc44590e7e8b74968729e6e4da18fa2a0408085",
+        "fileSizeBytes": 260692
+      }
+    }
+  ]
+}

@@ -1,0 +1,1932 @@
+{
+  "division": "knowledge",
+  "scope": "Inland Empire Swimming + all 19 directory-listed clubs: 20 additions and 1 Western Zone relationship/coverage update. Complete public-directory enumeration; partial registration/program verification. Existing Velocity operational identity reused. Nothing approved or published.",
+  "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+  "capturedAt": "2026-10-10T07:21:00Z",
+  "coverage": "partial",
+  "evidence": {
+    "checkedAt": "2026-10-10",
+    "directoryRowCount": 19,
+    "clubsCollected": 19,
+    "deduplication": {
+      "existingKnowledgeEntries": 19,
+      "pendingKnowledgeBatches": 0,
+      "existingOperationalTeams": [
+        {
+          "id": "velocity-swimming",
+          "name": "Velocity Swimming"
+        }
+      ],
+      "method": "Compared all published names/websites/IDs and pending proposals. No IE LSC/club entries exist. Linked existing Velocity team; Western Zone updated in place."
+    },
+    "remaining": [
+      "Confirm preferred La Grande coach email.",
+      "Verify Yakima Riverforge current program details.",
+      "Independently verify current SWIMS registration if required.",
+      "Internal LSC region boundaries not assigned."
+    ],
+    "directoryRows": [
+      "| ATOM | **Atomic Swim Club**<br>[Website](http://atomicswimclub.com/) | Pasco, WA | Jesse Grow<br>[Email](mailto:atomicswimcoach@gmail.com) | [Club Email](mailto:atomicswimcoach@gmail.com) |",
+      "| BST | **Baker YMCA Swim Team**<br>[Website](https://www.bakerymca.org/aquatics)<br>[Facebook](https://www.facebook.com/Baker-YMCA-Swim-Team-160892230653267/?hc_ref=SEARCH) | Baker City, OR | Paula Moe<br>[Email](mailto:paula.moe@bakerymca.org) | PO Box 452<br>Baker City, OR 97814 <br>[Email](mailto:bakerswimteam@gmail.com) |",
+      "| CAST | **Coeur d' Alene Area Swim Team**<br>[Website](https://www.teamunify.com/Home.jsp?_tabid_=0&team=iecast)<br>[Facebook](https://www.facebook.com/SwimCAST.net/) | Coeur D' Alene, ID | Brian Marker<br>[Email](mailto:Headcoach@swimcast.org) | PO Box 846<br>Post Falls, ID 83877<br>[Email](mailto:chair@swimcast.org) |",
+      "| COUG | **Cougar Aquatics**<br>[Website](https://www.gomotionapp.com/team/waca/page/home)<br>[Facebook](https://www.facebook.com/PullmanCougarAquatics) | Pullman, WA | Taylor McCoy<br>[Email](mailto:cougar.aquatics.coach@gmail.com) | Taylor McCoy<br>[Email](mailto:cougar.aquatics.coach@gmail.com) |",
+      "| EAST | **Ellensburg Area Swim Team**<br>[Website](https://www.gomotionapp.com/team/ieeast/page/home)<br>[Facebook](https://www.facebook.com/SWIMEAST/) | Ellensburg, WA | Candi Eslinger<br>[Email](mailto:EastHeadCoach@gmail.com) | PO Box 622<br>Ellensburg, WA 98926<br>[Email](mailto:EastHeadCoach@gmail.com) |",
+      "| LGSC | **La Grande Swim Club**<br>[Website](https://www.teamunify.com/Home.jsp?team=orlgsc) | La Grande, OR | Kennedy Alldredge<br>[Email](mailto:bkruse508@gmail.com) | PO Box 306<br>La Grande, OR 97850<br>[Email](mailto:bkoza71@gmail.com) |",
+      "| LCN | **Lewis Clark Neptunes**<br>[Website](http://www.lcneptunes.com/)<br>[Facebook](https://www.facebook.com/Lewis-Clark-Neptune-Swimming-155278147855233/?fref=ts) | Lewiston, ID<br> Clarkston, WA | Adam Leonard<br>[Email](mailto:pioneer136@yahoo.com) | PO Box 1032<br>Asotin, WA 99402<br>[Email](mailto:nmcraft@aol.com) |",
+      "| MRA | **Manta Ray Aquatics**<br>[Website](http://www.mlmr.org/)<br>[Facebook](https://www.facebook.com/MLMantaRays/?fref=ts) | Moses Lake, WA | Bonnie Washburn<br>[Email](mailto:mominml@yahoo.com) | PO Box 452<br>Moses Lake WA 98837<br>[Email](mailto:mantaraysinfo@gmail.com) |",
+      "| PSA | **Pendleton Swim Association**<br>[Website](https://www.teamunify.com/Home.jsp?team=iepsa)<br>[Facebook](https://www.facebook.com/PendletonSwimAssociation/?fref=ts) | Pendleton, OR | Jack Bonzani<br>[Email](mailto:bonzanijack@icloud.com) | PO Box 431<br>Pendleton, OR 97801<br>[Email](mailto:kyndranelson07@gmail.com) |",
+      "| SHRK | **Sandpoint Sharks**<br>[Website](https://sandpointsharks1.wixsite.com/website)<br>[Facebook](https://www.facebook.com/SandpointSharksSwim) | Sandpoint, ID | Emily Renzini<br>[Email](mailto:headcoach@sandpointsharks.com) | PO Box 192<br>Ponderay, ID 83852 |",
+      "| SC | **Spokane Club Aquatics Team**<br>[Website](https://spokaneclub.org/) | Spokane, WA | Madden Henry<br>[Email](mailto:mhenry@spokaneclub.org) |  |",
+      "| SSS | **Spokane Sea Serpents**<br>[Website](https://www.gomotionapp.com/team/iesss/page/home)<br>[Facebook](https://www.facebook.com/SpokaneSeaSerpents) | Spokane, WA | Ian Carpenter<br>[Email](mailto:ssscoachian@gmail.com) | Ian Carpenter<br>[Email](mailto:ssscoachian@gmail.com) |",
+      "| SWAT | **Spokane Waves Aquatic Team**<br>[Website](https://www.teamunify.com/Home.jsp?team=ieswat)<br>[Facebook](https://www.facebook.com/spokanewaves/) | Spokane, WA<br> Cheney, WA | Ben Olszewski<br>[Email](mailto:coachben@spokanewaves.org) | PO Box 28066<br>Spokane, WA 99228<br>[Email](mailto:swatboard@spokanewaves.org) |",
+      "| TCCC | **Tri Cities Channel Cats**<br>[Website](https://www.teamunify.com/Home.jsp?team=ietccc)<br>[Facebook](https://www.facebook.com/Tri-City-Channel-Cats-52876489452/) | Richland, WA<br> Kennewick, WA<br> Pasco, WA | Todd Stafek<br>[Email](mailto:toddstafek@charter.net) | PO Box 1668<br>Richland, WA 99352<br>[Email](mailto:toddstafek@charter.net) |",
+      "| VAN | **Vandal Aquatic Club**<br>[Website](https://www.teamunify.com/Home.jsp?_tabid_=0&team=ievac) | Moscow, ID | Mark Sowa<br>[Email](mailto:msowa@uidaho.edu) | PO Box 442302<br>Moscow, ID 83844<br>(208) 885-0265 |",
+      "| VS | **Velocity Swimming**<br>[Website](https://www.teamunify.com/Home.jsp?team=ievs)<br>[Facebook](https://www.facebook.com/VelocitySwimming/) | Wenatchee, WA | Christian Cutter<br>[Email](mailto:coachchristian@velocity-swimming.com)<br> Audrey Hyde<br>[Email](mailto:coachaudrey@velocity-swimming.com) | PO Box 2791<br>Wenatchee, WA 98807<br>[Email](mailto:coachaudrey@velocity-swimming.com) |",
+      "| WWSC | **Walla Walla Swim Club**<br>[Website](https://www.teamunify.com/Home.jsp?team=iewwsc)<br>[Facebook](https://www.facebook.com/Walla-Walla-Swim-Club-219704854801964/) | Walla Walla, WA | Kevin Ewing<br>[Email](mailto:coachkevin@wwswim.org) | PO Box 351<br>Walla Walla, WA 99362<br>[Email](mailto:coachkevin@wwswim.org)<br>(508) 375-7946 |",
+      "| YRA | **Yakima Riverforge Aquatics**<br>[Website](http://yakimaathletic.com/) | Yakima, WA | Zack Schab<br>[email](mailto:zacklovesswimming@yahoo.com) | [email](mailto:zacklovesswimming@yahoo.com) |",
+      "| YYST | **Yakima YMCA Swim Team**<br>[Website](https://www.teamunify.com/team/ymca-6961/page/home) | Yakima, WA | Diana Brown<br>[Email](mailto:YYST@yakimaymca.org) | Diana Brown<br>[Email](mailto:YYST@yakimaymca.org) |"
+    ],
+    "sources": [
+      {
+        "url": "https://www.usaswimming.org/about/lsc-websites",
+        "title": "USA Swimming LSC & Zone directory",
+        "checkedAt": "2026-10-10"
+      },
+      {
+        "url": "https://www.usaswimming.org/docs/default-source/governance/lsc-maps/lsc-zone-map.pdf",
+        "title": "USA Swimming LSC & Zone map",
+        "checkedAt": "2026-10-10",
+        "note": "Page 18: code, Western Zone membership and territory; revision date not established."
+      },
+      {
+        "url": "https://www.gomotionapp.com/wzielsc/UserFiles/Image/QuickUpload/article-1-ie-bylaws-approved-hs-11-21-2024-1_040324.pdf",
+        "title": "IES bylaws Article 1",
+        "checkedAt": "2026-10-10",
+        "note": "Corporate name and jurisdiction; approved November 21, 2024."
+      },
+      {
+        "url": "http://www.ieswim.org/",
+        "title": "IES official website",
+        "checkedAt": "2026-10-10",
+        "note": "Redirect verified to GoMotion; HTTPS custom domain returned 503."
+      },
+      {
+        "url": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+        "title": "Inland Empire club directory",
+        "checkedAt": "2026-10-10",
+        "note": "Basis for Inland Empire collection coverage update."
+      },
+      {
+        "url": "https://www.gomotionapp.com/team/wzielsc/page/ies-info/ies-office-information",
+        "title": "IES Office Information",
+        "checkedAt": "2026-10-10"
+      },
+      {
+        "url": "https://www.gomotionapp.com/team/wzone/page/sections/region-12",
+        "title": "Western Zone Northwest section",
+        "checkedAt": "2026-10-10",
+        "note": "Explicitly lists Inland Empire."
+      },
+      {
+        "url": "https://www.gomotionapp.com/team/wzielsc/page/ies-info/policies-and-procedures",
+        "title": "IES policies page",
+        "checkedAt": "2026-10-10",
+        "note": "Links approved March 2018 policy; 2026 updates labeled draft."
+      },
+      {
+        "url": "https://www.gomotionapp.com/wzielsc/UserFiles/Image/QuickUpload/ies-policy-procedure---approved-march-2018_014506.pdf",
+        "title": "IES approved 2018 policies",
+        "checkedAt": "2026-10-10",
+        "note": "Section 1.1 uses Region 12; dated terminology preserved."
+      },
+      {
+        "url": "https://www.atomicswimclub.com/",
+        "title": "Atomic Swim Club official website",
+        "checkedAt": "2026-10-10",
+        "note": "Website checked; recorded current destination."
+      },
+      {
+        "url": "http://atomicswimclub.com/",
+        "title": "Website linked by LSC directory",
+        "checkedAt": "2026-10-10",
+        "note": "Original link preserved; current site verified."
+      },
+      {
+        "url": "https://www.bakerymca.org/aquatics",
+        "title": "Baker YMCA Swim Team official website",
+        "checkedAt": "2026-10-10",
+        "note": "Website checked; recorded current destination."
+      },
+      {
+        "url": "https://www.gomotionapp.com/team/iecast/page/home",
+        "title": "Coeur d’Alene Area Swim Team official website",
+        "checkedAt": "2026-10-10",
+        "note": "Website checked; recorded current destination."
+      },
+      {
+        "url": "https://www.teamunify.com/Home.jsp?_tabid_=0&team=iecast",
+        "title": "Website linked by LSC directory",
+        "checkedAt": "2026-10-10",
+        "note": "Original link preserved; current site verified."
+      },
+      {
+        "url": "https://www.gomotionapp.com/team/waca/page/home",
+        "title": "Cougar Aquatics official website",
+        "checkedAt": "2026-10-10",
+        "note": "Website checked; recorded current destination."
+      },
+      {
+        "url": "https://www.gomotionapp.com/team/ieeast/page/home",
+        "title": "Ellensburg Area Swim Team official website",
+        "checkedAt": "2026-10-10",
+        "note": "Website checked; recorded current destination."
+      },
+      {
+        "url": "https://www.gomotionapp.com/team/orlgsc/page/home",
+        "title": "La Grande Swim Club official website",
+        "checkedAt": "2026-10-10",
+        "note": "Website checked; recorded current destination."
+      },
+      {
+        "url": "https://www.teamunify.com/Home.jsp?team=orlgsc",
+        "title": "Website linked by LSC directory",
+        "checkedAt": "2026-10-10",
+        "note": "Original link preserved; current site verified."
+      },
+      {
+        "url": "https://www.gomotionapp.com/team/ielcn/page/home",
+        "title": "Lewis Clark Neptune Swimming official website",
+        "checkedAt": "2026-10-10",
+        "note": "Website checked; recorded current destination."
+      },
+      {
+        "url": "http://www.lcneptunes.com/",
+        "title": "Website linked by LSC directory",
+        "checkedAt": "2026-10-10",
+        "note": "Original link preserved; current site verified."
+      },
+      {
+        "url": "https://www.gomotionapp.com/team/iesmlmr/page/home",
+        "title": "Manta Ray Aquatics official website",
+        "checkedAt": "2026-10-10",
+        "note": "Website checked; recorded current destination."
+      },
+      {
+        "url": "http://www.mlmr.org/",
+        "title": "Website linked by LSC directory",
+        "checkedAt": "2026-10-10",
+        "note": "Original link preserved; current site verified."
+      },
+      {
+        "url": "https://www.gomotionapp.com/team/iepsa/page/home",
+        "title": "Pendleton Swim Association official website",
+        "checkedAt": "2026-10-10",
+        "note": "Website checked; recorded current destination."
+      },
+      {
+        "url": "https://www.teamunify.com/Home.jsp?team=iepsa",
+        "title": "Website linked by LSC directory",
+        "checkedAt": "2026-10-10",
+        "note": "Original link preserved; current site verified."
+      },
+      {
+        "url": "https://www.sandpointsharks.com/page/home",
+        "title": "Sandpoint Sharks Swim Club official website",
+        "checkedAt": "2026-10-10",
+        "note": "Website checked; recorded current destination."
+      },
+      {
+        "url": "https://sandpointsharks1.wixsite.com/website",
+        "title": "Website linked by LSC directory",
+        "checkedAt": "2026-10-10",
+        "note": "404; current site independently verified."
+      },
+      {
+        "url": "https://spokaneclub.org/swimming-indoor-pool/",
+        "title": "Spokane Club Aquatics Team official website",
+        "checkedAt": "2026-10-10",
+        "note": "Website checked; recorded current destination."
+      },
+      {
+        "url": "https://spokaneclub.org/",
+        "title": "Website linked by LSC directory",
+        "checkedAt": "2026-10-10",
+        "note": "Original link preserved; current site verified."
+      },
+      {
+        "url": "https://www.gomotionapp.com/team/iesss/page/home",
+        "title": "Spokane Sea Serpents official website",
+        "checkedAt": "2026-10-10",
+        "note": "Website checked; recorded current destination."
+      },
+      {
+        "url": "https://www.gomotionapp.com/team/ieswat/page/home",
+        "title": "Spokane Waves Aquatic Team official website",
+        "checkedAt": "2026-10-10",
+        "note": "Website checked; recorded current destination."
+      },
+      {
+        "url": "https://www.teamunify.com/Home.jsp?team=ieswat",
+        "title": "Website linked by LSC directory",
+        "checkedAt": "2026-10-10",
+        "note": "Original link preserved; current site verified."
+      },
+      {
+        "url": "https://www.gomotionapp.com/team/ietccc/page/home",
+        "title": "Tri-City Channel Cats official website",
+        "checkedAt": "2026-10-10",
+        "note": "Website checked; recorded current destination."
+      },
+      {
+        "url": "https://www.teamunify.com/Home.jsp?team=ietccc",
+        "title": "Website linked by LSC directory",
+        "checkedAt": "2026-10-10",
+        "note": "Original link preserved; current site verified."
+      },
+      {
+        "url": "https://www.gomotionapp.com/team/ievac/page/home",
+        "title": "Vandal Aquatic Club official website",
+        "checkedAt": "2026-10-10",
+        "note": "Website checked; recorded current destination."
+      },
+      {
+        "url": "https://www.teamunify.com/Home.jsp?_tabid_=0&team=ievac",
+        "title": "Website linked by LSC directory",
+        "checkedAt": "2026-10-10",
+        "note": "Original link preserved; current site verified."
+      },
+      {
+        "url": "https://www.gomotionapp.com/team/ievs/page/home",
+        "title": "Velocity Swimming official website",
+        "checkedAt": "2026-10-10",
+        "note": "Website checked; recorded current destination."
+      },
+      {
+        "url": "https://www.teamunify.com/Home.jsp?team=ievs",
+        "title": "Website linked by LSC directory",
+        "checkedAt": "2026-10-10",
+        "note": "Original link preserved; current site verified."
+      },
+      {
+        "url": "https://www.gomotionapp.com/team/iewwsc/page/home",
+        "title": "Walla Walla Swim Club official website",
+        "checkedAt": "2026-10-10",
+        "note": "Website checked; recorded current destination."
+      },
+      {
+        "url": "https://www.teamunify.com/Home.jsp?team=iewwsc",
+        "title": "Website linked by LSC directory",
+        "checkedAt": "2026-10-10",
+        "note": "Original link preserved; current site verified."
+      },
+      {
+        "url": "https://yakimaathletic.com/",
+        "title": "Yakima Riverforge Aquatics official website",
+        "checkedAt": "2026-10-10",
+        "note": "Page reached; meaningful program text not retrieved."
+      },
+      {
+        "url": "http://yakimaathletic.com/",
+        "title": "Website linked by LSC directory",
+        "checkedAt": "2026-10-10",
+        "note": "Original link preserved; current site verified."
+      },
+      {
+        "url": "https://www.gomotionapp.com/team/ymca-6961/page/home",
+        "title": "Yakima YMCA Swim Team official website",
+        "checkedAt": "2026-10-10",
+        "note": "Website checked; recorded current destination."
+      },
+      {
+        "url": "https://www.teamunify.com/team/ymca-6961/page/home",
+        "title": "Website linked by LSC directory",
+        "checkedAt": "2026-10-10",
+        "note": "Original link preserved; current site verified."
+      },
+      {
+        "url": "https://www.usaswimming.org/rulebook",
+        "note": "Articles 603 (names, codes, boundaries), 605 (zones), 606 (regional competition).",
+        "title": "USA Swimming 2026 Rules & Regulations",
+        "checkedAt": "2026-10-10"
+      },
+      {
+        "url": "https://www.gomotionapp.com/team/wzone/page/home",
+        "title": "Western Zone official website",
+        "checkedAt": "2026-10-10"
+      }
+    ]
+  },
+  "writes": [
+    {
+      "path": "knowledge_entries/usa-lsc-ie",
+      "after": {
+        "kind": "lsc",
+        "title": "Inland Empire Swimming",
+        "officialName": "Inland Empire Swimming, Inc.",
+        "abbreviation": "IE",
+        "aliases": [
+          "IES"
+        ],
+        "abbreviationType": "IE is the national LSC code; IES is used in the bylaws.",
+        "organizationType": "Local Swimming Committee",
+        "parentId": "usa-swimming-national-structure",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/wzielsc/page/home",
+        "websiteAliases": [
+          "http://www.ieswim.org/",
+          "https://www.ieswim.org/"
+        ],
+        "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+        "summary": "USA Swimming’s Inland Empire Local Swimming Committee administers swimming in its designated parts of Washington, Idaho and Oregon. It belongs to the Western Zone. Its official club directory lists 19 clubs, all included in this proposal.",
+        "geographicCoverage": "Idaho from Idaho County northward; Oregon’s Umatilla, Union, Wallowa and Baker counties; Washington east of and including Okanogan, Chelan, Kittitas and Yakima counties, plus Klickitat east of Highway 97 including Goldendale (USA Swimming LSC map, page 18).",
+        "coverageNote": "All 19 clubs in the public LSC directory collected. Current SWIMS registration and all program details are not independently audited. Internal LSC region boundaries are not assigned.",
+        "relationships": [
+          {
+            "type": "governed_by",
+            "label": "National governing organization",
+            "targetId": "usa-swimming-national-structure",
+            "name": "USA Swimming"
+          },
+          {
+            "type": "member_of_zone",
+            "label": "Administrative zone",
+            "targetId": "usa-zone-western",
+            "name": "Western Zone"
+          },
+          {
+            "type": "sectional_grouping",
+            "label": "Sectional competition grouping",
+            "name": "Northwest (NW)",
+            "note": "Western Zone’s Northwest page lists Inland Empire. No intervening governing parent inferred; 2018 IES policy uses Region 12."
+          },
+          {
+            "type": "listed_club",
+            "label": "Club in official directory",
+            "targetId": "usa-team-ie-atom",
+            "name": "Atomic Swim Club"
+          },
+          {
+            "type": "listed_club",
+            "label": "Club in official directory",
+            "targetId": "usa-team-ie-bst",
+            "name": "Baker YMCA Swim Team"
+          },
+          {
+            "type": "listed_club",
+            "label": "Club in official directory",
+            "targetId": "usa-team-ie-cast",
+            "name": "Coeur d’Alene Area Swim Team"
+          },
+          {
+            "type": "listed_club",
+            "label": "Club in official directory",
+            "targetId": "usa-team-ie-coug",
+            "name": "Cougar Aquatics"
+          },
+          {
+            "type": "listed_club",
+            "label": "Club in official directory",
+            "targetId": "usa-team-ie-east",
+            "name": "Ellensburg Area Swim Team"
+          },
+          {
+            "type": "listed_club",
+            "label": "Club in official directory",
+            "targetId": "usa-team-ie-lgsc",
+            "name": "La Grande Swim Club"
+          },
+          {
+            "type": "listed_club",
+            "label": "Club in official directory",
+            "targetId": "usa-team-ie-lcn",
+            "name": "Lewis Clark Neptune Swimming"
+          },
+          {
+            "type": "listed_club",
+            "label": "Club in official directory",
+            "targetId": "usa-team-ie-mra",
+            "name": "Manta Ray Aquatics"
+          },
+          {
+            "type": "listed_club",
+            "label": "Club in official directory",
+            "targetId": "usa-team-ie-psa",
+            "name": "Pendleton Swim Association"
+          },
+          {
+            "type": "listed_club",
+            "label": "Club in official directory",
+            "targetId": "usa-team-ie-shrk",
+            "name": "Sandpoint Sharks Swim Club"
+          },
+          {
+            "type": "listed_club",
+            "label": "Club in official directory",
+            "targetId": "usa-team-ie-sc",
+            "name": "Spokane Club Aquatics Team"
+          },
+          {
+            "type": "listed_club",
+            "label": "Club in official directory",
+            "targetId": "usa-team-ie-sss",
+            "name": "Spokane Sea Serpents"
+          },
+          {
+            "type": "listed_club",
+            "label": "Club in official directory",
+            "targetId": "usa-team-ie-swat",
+            "name": "Spokane Waves Aquatic Team"
+          },
+          {
+            "type": "listed_club",
+            "label": "Club in official directory",
+            "targetId": "usa-team-ie-tccc",
+            "name": "Tri-City Channel Cats"
+          },
+          {
+            "type": "listed_club",
+            "label": "Club in official directory",
+            "targetId": "usa-team-ie-van",
+            "name": "Vandal Aquatic Club"
+          },
+          {
+            "type": "listed_club",
+            "label": "Club in official directory",
+            "targetId": "velocity-swimming",
+            "name": "Velocity Swimming"
+          },
+          {
+            "type": "listed_club",
+            "label": "Club in official directory",
+            "targetId": "usa-team-ie-wwsc",
+            "name": "Walla Walla Swim Club"
+          },
+          {
+            "type": "listed_club",
+            "label": "Club in official directory",
+            "targetId": "usa-team-ie-yra",
+            "name": "Yakima Riverforge Aquatics"
+          },
+          {
+            "type": "listed_club",
+            "label": "Club in official directory",
+            "targetId": "usa-team-ie-yyst",
+            "name": "Yakima YMCA Swim Team"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "IES Office",
+            "email": "iesoffice@ieswim.org",
+            "phone": "208-874-8010",
+            "address": "PO Box 8085, Moscow, ID 83843",
+            "url": "https://www.gomotionapp.com/team/wzielsc/page/ies-info/ies-office-information"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/about/lsc-websites",
+            "title": "USA Swimming LSC directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/docs/default-source/governance/lsc-maps/lsc-zone-map.pdf",
+            "title": "USA Swimming LSC & Zone map",
+            "checkedAt": "2026-10-10",
+            "note": "Page 18: code, Western Zone membership and territory; revision date not established."
+          },
+          {
+            "url": "https://www.gomotionapp.com/wzielsc/UserFiles/Image/QuickUpload/article-1-ie-bylaws-approved-hs-11-21-2024-1_040324.pdf",
+            "title": "IES bylaws Article 1",
+            "checkedAt": "2026-10-10",
+            "note": "Corporate name and jurisdiction; approved November 21, 2024."
+          },
+          {
+            "url": "http://www.ieswim.org/",
+            "title": "IES official website",
+            "checkedAt": "2026-10-10",
+            "note": "Redirect verified to GoMotion; HTTPS custom domain returned 503."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "title": "IES club directory",
+            "checkedAt": "2026-10-10",
+            "note": "19 club rows, all collected."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/wzielsc/page/ies-info/ies-office-information",
+            "title": "IES Office Information",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/wzone/page/sections/region-12",
+            "title": "Western Zone Northwest section",
+            "checkedAt": "2026-10-10",
+            "note": "Explicitly lists Inland Empire."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/wzielsc/page/ies-info/policies-and-procedures",
+            "title": "IES policies page",
+            "checkedAt": "2026-10-10",
+            "note": "Links approved March 2018 policy; 2026 updates labeled draft."
+          },
+          {
+            "url": "https://www.gomotionapp.com/wzielsc/UserFiles/Image/QuickUpload/ies-policy-procedure---approved-march-2018_014506.pdf",
+            "title": "IES approved 2018 policies",
+            "checkedAt": "2026-10-10",
+            "note": "Section 1.1 uses Region 12; dated terminology preserved."
+          }
+        ],
+        "gaps": [
+          "Territory follows USA Swimming’s currently linked map; map revision date not established.",
+          "Bylaws refer to internal IES regions; no club-to-internal-region assignment inferred without verified current boundaries.",
+          "HTTPS ieswim.org returned 503; official HTTP link redirects to the working GoMotion site.",
+          "The public directory is undated. Complete coverage means all listed clubs, not an independently audited active SWIMS roster."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ie-atom",
+      "after": {
+        "kind": "team",
+        "title": "Atomic Swim Club",
+        "officialName": "Atomic Swim Club",
+        "aliases": [],
+        "abbreviation": "ATOM",
+        "abbreviationType": "Club code in Inland Empire directory",
+        "organizationType": "Swimming club / team",
+        "parentId": "usa-lsc-ie",
+        "lscId": "usa-lsc-ie",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.atomicswimclub.com/",
+        "websiteAliases": [
+          "http://atomicswimclub.com/"
+        ],
+        "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+        "summary": "Swimming club listed by Inland Empire Swimming in Pasco, WA. Its website describes a competitive program focused on developing motivated athletes.",
+        "geographicCoverage": "Pasco, WA",
+        "coverageNote": "Official LSC directory listing checked October 10, 2026; club website checked. This is not independent verification of current SWIMS registration. Contacts are dated public-source claims.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "targetId": "usa-lsc-ie",
+            "name": "Inland Empire Swimming"
+          },
+          {
+            "type": "zone_via_lsc",
+            "label": "Zone through Inland Empire LSC",
+            "targetId": "usa-zone-western",
+            "name": "Western Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Club contact (LSC directory)",
+            "email": "atomicswimcoach@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "role": "General inquiries (team website)",
+            "email": "atomicswimclub@gmail.com",
+            "url": "https://www.atomicswimclub.com/",
+            "sourceUrl": "https://www.atomicswimclub.com/",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "title": "Inland Empire official club directory",
+            "checkedAt": "2026-10-10",
+            "note": "Name, club code, location, affiliation and directory contact."
+          },
+          {
+            "url": "https://www.atomicswimclub.com/",
+            "title": "Atomic Swim Club official website",
+            "checkedAt": "2026-10-10",
+            "note": "Website checked; recorded current destination."
+          },
+          {
+            "url": "http://atomicswimclub.com/",
+            "title": "Website linked by LSC directory",
+            "checkedAt": "2026-10-10",
+            "note": "Original link preserved; current site verified."
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ie-bst",
+      "after": {
+        "kind": "team",
+        "title": "Baker YMCA Swim Team",
+        "officialName": "Baker YMCA Swim Team",
+        "aliases": [],
+        "abbreviation": "BST",
+        "abbreviationType": "Club code in Inland Empire directory",
+        "organizationType": "Swimming club / team",
+        "parentId": "usa-lsc-ie",
+        "lscId": "usa-lsc-ie",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.bakerymca.org/aquatics",
+        "websiteAliases": [],
+        "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+        "summary": "Swimming club listed by Inland Empire Swimming in Baker City, OR. The YMCA aquatics page also calls the competitive team the Barracudas.",
+        "geographicCoverage": "Baker City, OR",
+        "coverageNote": "Official LSC directory listing checked October 10, 2026; club website checked. This is not independent verification of current SWIMS registration. Contacts are dated public-source claims.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "targetId": "usa-lsc-ie",
+            "name": "Inland Empire Swimming"
+          },
+          {
+            "type": "zone_via_lsc",
+            "label": "Zone through Inland Empire LSC",
+            "targetId": "usa-zone-western",
+            "name": "Western Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Club contact (LSC directory)",
+            "email": "bakerswimteam@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "checkedAt": "2026-10-10",
+            "address": "PO Box 452, Baker City, OR 97814"
+          },
+          {
+            "role": "Aquatics director (team website)",
+            "email": "aquatics@bakerymca.org",
+            "url": "https://www.bakerymca.org/aquatics",
+            "sourceUrl": "https://www.bakerymca.org/aquatics",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "title": "Inland Empire official club directory",
+            "checkedAt": "2026-10-10",
+            "note": "Name, club code, location, affiliation and directory contact."
+          },
+          {
+            "url": "https://www.bakerymca.org/aquatics",
+            "title": "Baker YMCA Swim Team official website",
+            "checkedAt": "2026-10-10",
+            "note": "Website checked; recorded current destination."
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ie-cast",
+      "after": {
+        "kind": "team",
+        "title": "Coeur d’Alene Area Swim Team",
+        "officialName": "Coeur d’Alene Area Swim Team",
+        "aliases": [
+          "Coeur d' Alene Area Swim Team"
+        ],
+        "abbreviation": "CAST",
+        "abbreviationType": "Club code in Inland Empire directory",
+        "organizationType": "Swimming club / team",
+        "parentId": "usa-lsc-ie",
+        "lscId": "usa-lsc-ie",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/iecast/page/home",
+        "websiteAliases": [
+          "https://www.teamunify.com/Home.jsp?_tabid_=0&team=iecast"
+        ],
+        "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+        "summary": "Swimming club listed by Inland Empire Swimming in Coeur D' Alene, ID. The official website provides club and swimming information.",
+        "geographicCoverage": "Coeur D' Alene, ID",
+        "coverageNote": "Official LSC directory listing checked October 10, 2026; club website checked. This is not independent verification of current SWIMS registration. Contacts are dated public-source claims.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "targetId": "usa-lsc-ie",
+            "name": "Inland Empire Swimming"
+          },
+          {
+            "type": "zone_via_lsc",
+            "label": "Zone through Inland Empire LSC",
+            "targetId": "usa-zone-western",
+            "name": "Western Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Club contact (LSC directory)",
+            "email": "chair@swimcast.org",
+            "url": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "checkedAt": "2026-10-10",
+            "address": "PO Box 846, Post Falls, ID 83877"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "title": "Inland Empire official club directory",
+            "checkedAt": "2026-10-10",
+            "note": "Name, club code, location, affiliation and directory contact."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/iecast/page/home",
+            "title": "Coeur d’Alene Area Swim Team official website",
+            "checkedAt": "2026-10-10",
+            "note": "Website checked; recorded current destination."
+          },
+          {
+            "url": "https://www.teamunify.com/Home.jsp?_tabid_=0&team=iecast",
+            "title": "Website linked by LSC directory",
+            "checkedAt": "2026-10-10",
+            "note": "Original link preserved; current site verified."
+          }
+        ],
+        "gaps": [
+          "LSC directory name “Coeur d' Alene Area Swim Team” and team-site name “Coeur d’Alene Area Swim Team” retained as aliases of one club."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ie-coug",
+      "after": {
+        "kind": "team",
+        "title": "Cougar Aquatics",
+        "officialName": "Cougar Aquatics",
+        "aliases": [],
+        "abbreviation": "COUG",
+        "abbreviationType": "Club code in Inland Empire directory",
+        "organizationType": "Swimming club / team",
+        "parentId": "usa-lsc-ie",
+        "lscId": "usa-lsc-ie",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/waca/page/home",
+        "websiteAliases": [],
+        "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+        "summary": "Swimming club listed by Inland Empire Swimming in Pullman, WA. Its website describes a year-round USA Swimming and Inland Empire member club run by an elected board.",
+        "geographicCoverage": "Pullman, WA",
+        "coverageNote": "Official LSC directory listing checked October 10, 2026; club website checked. This is not independent verification of current SWIMS registration. Contacts are dated public-source claims.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "targetId": "usa-lsc-ie",
+            "name": "Inland Empire Swimming"
+          },
+          {
+            "type": "zone_via_lsc",
+            "label": "Zone through Inland Empire LSC",
+            "targetId": "usa-zone-western",
+            "name": "Western Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Club contact (LSC directory)",
+            "email": "cougar.aquatics.coach@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "title": "Inland Empire official club directory",
+            "checkedAt": "2026-10-10",
+            "note": "Name, club code, location, affiliation and directory contact."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/waca/page/home",
+            "title": "Cougar Aquatics official website",
+            "checkedAt": "2026-10-10",
+            "note": "Website checked; recorded current destination."
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ie-east",
+      "after": {
+        "kind": "team",
+        "title": "Ellensburg Area Swim Team",
+        "officialName": "Ellensburg Area Swim Team",
+        "aliases": [],
+        "abbreviation": "EAST",
+        "abbreviationType": "Club code in Inland Empire directory",
+        "organizationType": "Swimming club / team",
+        "parentId": "usa-lsc-ie",
+        "lscId": "usa-lsc-ie",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/ieeast/page/home",
+        "websiteAliases": [],
+        "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+        "summary": "Swimming club listed by Inland Empire Swimming in Ellensburg, WA. Its mission includes developing swimming skills at all levels in a community-centered program.",
+        "geographicCoverage": "Ellensburg, WA",
+        "coverageNote": "Official LSC directory listing checked October 10, 2026; club website checked. This is not independent verification of current SWIMS registration. Contacts are dated public-source claims.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "targetId": "usa-lsc-ie",
+            "name": "Inland Empire Swimming"
+          },
+          {
+            "type": "zone_via_lsc",
+            "label": "Zone through Inland Empire LSC",
+            "targetId": "usa-zone-western",
+            "name": "Western Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Club contact (LSC directory)",
+            "email": "EastHeadCoach@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "checkedAt": "2026-10-10",
+            "address": "PO Box 622, Ellensburg, WA 98926"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "title": "Inland Empire official club directory",
+            "checkedAt": "2026-10-10",
+            "note": "Name, club code, location, affiliation and directory contact."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/ieeast/page/home",
+            "title": "Ellensburg Area Swim Team official website",
+            "checkedAt": "2026-10-10",
+            "note": "Website checked; recorded current destination."
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ie-lgsc",
+      "after": {
+        "kind": "team",
+        "title": "La Grande Swim Club",
+        "officialName": "La Grande Swim Club",
+        "aliases": [],
+        "abbreviation": "LGSC",
+        "abbreviationType": "Club code in Inland Empire directory",
+        "organizationType": "Swimming club / team",
+        "parentId": "usa-lsc-ie",
+        "lscId": "usa-lsc-ie",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/orlgsc/page/home",
+        "websiteAliases": [
+          "https://www.teamunify.com/Home.jsp?team=orlgsc"
+        ],
+        "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+        "summary": "Swimming club listed by Inland Empire Swimming in La Grande, OR. The official site provides coaching, registration, swim groups and meet information.",
+        "geographicCoverage": "La Grande, OR",
+        "coverageNote": "Official LSC directory listing checked October 10, 2026; club website checked. This is not independent verification of current SWIMS registration. Contacts are dated public-source claims.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "targetId": "usa-lsc-ie",
+            "name": "Inland Empire Swimming"
+          },
+          {
+            "type": "zone_via_lsc",
+            "label": "Zone through Inland Empire LSC",
+            "targetId": "usa-zone-western",
+            "name": "Western Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Club contact (LSC directory)",
+            "email": "bkoza71@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "checkedAt": "2026-10-10",
+            "address": "PO Box 306, La Grande, OR 97850"
+          },
+          {
+            "role": "Coach email on team homepage (team website)",
+            "email": "coach.kennedy.lgsc@gmail.com",
+            "url": "https://www.gomotionapp.com/team/orlgsc/page/home",
+            "sourceUrl": "https://www.gomotionapp.com/team/orlgsc/page/home",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "title": "Inland Empire official club directory",
+            "checkedAt": "2026-10-10",
+            "note": "Name, club code, location, affiliation and directory contact."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/orlgsc/page/home",
+            "title": "La Grande Swim Club official website",
+            "checkedAt": "2026-10-10",
+            "note": "Website checked; recorded current destination."
+          },
+          {
+            "url": "https://www.teamunify.com/Home.jsp?team=orlgsc",
+            "title": "Website linked by LSC directory",
+            "checkedAt": "2026-10-10",
+            "note": "Original link preserved; current site verified."
+          }
+        ],
+        "gaps": [
+          "LSC directory names Kennedy Alldredge but gives bkruse508@gmail.com as coach email. Team homepage publishes coach.kennedy.lgsc@gmail.com. Preferred coach email needs confirmation."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ie-lcn",
+      "after": {
+        "kind": "team",
+        "title": "Lewis Clark Neptune Swimming",
+        "officialName": "Lewis Clark Neptune Swimming",
+        "aliases": [
+          "Lewis Clark Neptunes"
+        ],
+        "abbreviation": "LCN",
+        "abbreviationType": "Club code in Inland Empire directory",
+        "organizationType": "Swimming club / team",
+        "parentId": "usa-lsc-ie",
+        "lscId": "usa-lsc-ie",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/ielcn/page/home",
+        "websiteAliases": [
+          "http://www.lcneptunes.com/"
+        ],
+        "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+        "summary": "Swimming club listed by Inland Empire Swimming in Lewiston, ID; Clarkston, WA. Its website offers pre-team, age-group and adult Masters programs.",
+        "geographicCoverage": "Lewiston, ID; Clarkston, WA",
+        "coverageNote": "Official LSC directory listing checked October 10, 2026; club website checked. This is not independent verification of current SWIMS registration. Contacts are dated public-source claims.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "targetId": "usa-lsc-ie",
+            "name": "Inland Empire Swimming"
+          },
+          {
+            "type": "zone_via_lsc",
+            "label": "Zone through Inland Empire LSC",
+            "targetId": "usa-zone-western",
+            "name": "Western Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Club contact (LSC directory)",
+            "email": "nmcraft@aol.com",
+            "url": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "checkedAt": "2026-10-10",
+            "address": "PO Box 1032, Asotin, WA 99402"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "title": "Inland Empire official club directory",
+            "checkedAt": "2026-10-10",
+            "note": "Name, club code, location, affiliation and directory contact."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/ielcn/page/home",
+            "title": "Lewis Clark Neptune Swimming official website",
+            "checkedAt": "2026-10-10",
+            "note": "Website checked; recorded current destination."
+          },
+          {
+            "url": "http://www.lcneptunes.com/",
+            "title": "Website linked by LSC directory",
+            "checkedAt": "2026-10-10",
+            "note": "Original link preserved; current site verified."
+          }
+        ],
+        "gaps": [
+          "LSC directory name “Lewis Clark Neptunes” and team-site name “Lewis Clark Neptune Swimming” retained as aliases of one club."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ie-mra",
+      "after": {
+        "kind": "team",
+        "title": "Manta Ray Aquatics",
+        "officialName": "Manta Ray Aquatics",
+        "aliases": [],
+        "abbreviation": "MRA",
+        "abbreviationType": "Club code in Inland Empire directory",
+        "organizationType": "Swimming club / team",
+        "parentId": "usa-lsc-ie",
+        "lscId": "usa-lsc-ie",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/iesmlmr/page/home",
+        "websiteAliases": [
+          "http://www.mlmr.org/"
+        ],
+        "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+        "summary": "Swimming club listed by Inland Empire Swimming in Moses Lake, WA. The official website provides club and swimming information.",
+        "geographicCoverage": "Moses Lake, WA",
+        "coverageNote": "Official LSC directory listing checked October 10, 2026; club website checked. This is not independent verification of current SWIMS registration. Contacts are dated public-source claims.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "targetId": "usa-lsc-ie",
+            "name": "Inland Empire Swimming"
+          },
+          {
+            "type": "zone_via_lsc",
+            "label": "Zone through Inland Empire LSC",
+            "targetId": "usa-zone-western",
+            "name": "Western Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Club contact (LSC directory)",
+            "email": "mantaraysinfo@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "checkedAt": "2026-10-10",
+            "address": "PO Box 452, Moses Lake WA 98837"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "title": "Inland Empire official club directory",
+            "checkedAt": "2026-10-10",
+            "note": "Name, club code, location, affiliation and directory contact."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/iesmlmr/page/home",
+            "title": "Manta Ray Aquatics official website",
+            "checkedAt": "2026-10-10",
+            "note": "Website checked; recorded current destination."
+          },
+          {
+            "url": "http://www.mlmr.org/",
+            "title": "Website linked by LSC directory",
+            "checkedAt": "2026-10-10",
+            "note": "Original link preserved; current site verified."
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ie-psa",
+      "after": {
+        "kind": "team",
+        "title": "Pendleton Swim Association",
+        "officialName": "Pendleton Swim Association",
+        "aliases": [],
+        "abbreviation": "PSA",
+        "abbreviationType": "Club code in Inland Empire directory",
+        "organizationType": "Swimming club / team",
+        "parentId": "usa-lsc-ie",
+        "lscId": "usa-lsc-ie",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/iepsa/page/home",
+        "websiteAliases": [
+          "https://www.teamunify.com/Home.jsp?team=iepsa"
+        ],
+        "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+        "summary": "Swimming club listed by Inland Empire Swimming in Pendleton, OR. The team website describes a summer-only competitive program.",
+        "geographicCoverage": "Pendleton, OR",
+        "coverageNote": "Official LSC directory listing checked October 10, 2026; club website checked. This is not independent verification of current SWIMS registration. Contacts are dated public-source claims.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "targetId": "usa-lsc-ie",
+            "name": "Inland Empire Swimming"
+          },
+          {
+            "type": "zone_via_lsc",
+            "label": "Zone through Inland Empire LSC",
+            "targetId": "usa-zone-western",
+            "name": "Western Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Club contact (LSC directory)",
+            "email": "kyndranelson07@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "checkedAt": "2026-10-10",
+            "address": "PO Box 431, Pendleton, OR 97801"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "title": "Inland Empire official club directory",
+            "checkedAt": "2026-10-10",
+            "note": "Name, club code, location, affiliation and directory contact."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/iepsa/page/home",
+            "title": "Pendleton Swim Association official website",
+            "checkedAt": "2026-10-10",
+            "note": "Website checked; recorded current destination."
+          },
+          {
+            "url": "https://www.teamunify.com/Home.jsp?team=iepsa",
+            "title": "Website linked by LSC directory",
+            "checkedAt": "2026-10-10",
+            "note": "Original link preserved; current site verified."
+          }
+        ],
+        "gaps": [
+          "Summer-only program according to its website; off-season collection does not imply inactivity."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ie-shrk",
+      "after": {
+        "kind": "team",
+        "title": "Sandpoint Sharks Swim Club",
+        "officialName": "Sandpoint Sharks Swim Club",
+        "aliases": [
+          "Sandpoint Sharks"
+        ],
+        "abbreviation": "SHRK",
+        "abbreviationType": "Club code in Inland Empire directory",
+        "organizationType": "Swimming club / team",
+        "parentId": "usa-lsc-ie",
+        "lscId": "usa-lsc-ie",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.sandpointsharks.com/page/home",
+        "websiteAliases": [
+          "https://sandpointsharks1.wixsite.com/website"
+        ],
+        "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+        "summary": "Swimming club listed by Inland Empire Swimming in Sandpoint, ID. Its current website lists Litehouse YMCA as its location.",
+        "geographicCoverage": "Sandpoint, ID",
+        "coverageNote": "Official LSC directory listing checked October 10, 2026; club website checked. This is not independent verification of current SWIMS registration. Contacts are dated public-source claims.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "targetId": "usa-lsc-ie",
+            "name": "Inland Empire Swimming"
+          },
+          {
+            "type": "zone_via_lsc",
+            "label": "Zone through Inland Empire LSC",
+            "targetId": "usa-zone-western",
+            "name": "Western Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Coach contact (LSC directory)",
+            "email": "headcoach@sandpointsharks.com",
+            "url": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "checkedAt": "2026-10-10",
+            "address": "PO Box 192, Ponderay, ID 83852"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "title": "Inland Empire official club directory",
+            "checkedAt": "2026-10-10",
+            "note": "Name, club code, location, affiliation and directory contact."
+          },
+          {
+            "url": "https://www.sandpointsharks.com/page/home",
+            "title": "Sandpoint Sharks Swim Club official website",
+            "checkedAt": "2026-10-10",
+            "note": "Website checked; recorded current destination."
+          },
+          {
+            "url": "https://sandpointsharks1.wixsite.com/website",
+            "title": "Website linked by LSC directory",
+            "checkedAt": "2026-10-10",
+            "note": "404; current site independently verified."
+          }
+        ],
+        "gaps": [
+          "LSC directory name “Sandpoint Sharks” and team-site name “Sandpoint Sharks Swim Club” retained as aliases of one club.",
+          "The LSC directory’s Wix link returns 404. Current sandpointsharks.com website verified; old link retained as an alias."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ie-sc",
+      "after": {
+        "kind": "team",
+        "title": "Spokane Club Aquatics Team",
+        "officialName": "Spokane Club Aquatics Team",
+        "aliases": [],
+        "abbreviation": "SC",
+        "abbreviationType": "Club code in Inland Empire directory",
+        "organizationType": "Swimming club / team",
+        "parentId": "usa-lsc-ie",
+        "lscId": "usa-lsc-ie",
+        "zoneId": "usa-zone-western",
+        "website": "https://spokaneclub.org/swimming-indoor-pool/",
+        "websiteAliases": [
+          "https://spokaneclub.org/"
+        ],
+        "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+        "summary": "Swimming club listed by Inland Empire Swimming in Spokane, WA. Spokane Club distinguishes this USA Swimming-registered competitive Aquatics Team from its introductory Penguin Swim Team.",
+        "geographicCoverage": "Spokane, WA",
+        "coverageNote": "Official LSC directory listing checked October 10, 2026; club website checked. This is not independent verification of current SWIMS registration. Contacts are dated public-source claims.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "targetId": "usa-lsc-ie",
+            "name": "Inland Empire Swimming"
+          },
+          {
+            "type": "zone_via_lsc",
+            "label": "Zone through Inland Empire LSC",
+            "targetId": "usa-zone-western",
+            "name": "Western Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Coach contact (LSC directory)",
+            "email": "mhenry@spokaneclub.org",
+            "url": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "role": "Aquatics team inquiries (team website)",
+            "email": "aquatics@spokaneclub.org",
+            "url": "https://spokaneclub.org/swimming-indoor-pool/",
+            "sourceUrl": "https://spokaneclub.org/swimming-indoor-pool/",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "title": "Inland Empire official club directory",
+            "checkedAt": "2026-10-10",
+            "note": "Name, club code, location, affiliation and directory contact."
+          },
+          {
+            "url": "https://spokaneclub.org/swimming-indoor-pool/",
+            "title": "Spokane Club Aquatics Team official website",
+            "checkedAt": "2026-10-10",
+            "note": "Website checked; recorded current destination."
+          },
+          {
+            "url": "https://spokaneclub.org/",
+            "title": "Website linked by LSC directory",
+            "checkedAt": "2026-10-10",
+            "note": "Original link preserved; current site verified."
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ie-sss",
+      "after": {
+        "kind": "team",
+        "title": "Spokane Sea Serpents",
+        "officialName": "Spokane Sea Serpents",
+        "aliases": [],
+        "abbreviation": "SSS",
+        "abbreviationType": "Club code in Inland Empire directory",
+        "organizationType": "Swimming club / team",
+        "parentId": "usa-lsc-ie",
+        "lscId": "usa-lsc-ie",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/iesss/page/home",
+        "websiteAliases": [],
+        "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+        "summary": "Swimming club listed by Inland Empire Swimming in Spokane, WA. Its official site provides swimmer registration and coach information.",
+        "geographicCoverage": "Spokane, WA",
+        "coverageNote": "Official LSC directory listing checked October 10, 2026; club website checked. This is not independent verification of current SWIMS registration. Contacts are dated public-source claims.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "targetId": "usa-lsc-ie",
+            "name": "Inland Empire Swimming"
+          },
+          {
+            "type": "zone_via_lsc",
+            "label": "Zone through Inland Empire LSC",
+            "targetId": "usa-zone-western",
+            "name": "Western Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Club contact (LSC directory)",
+            "email": "ssscoachian@gmail.com",
+            "url": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "title": "Inland Empire official club directory",
+            "checkedAt": "2026-10-10",
+            "note": "Name, club code, location, affiliation and directory contact."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/iesss/page/home",
+            "title": "Spokane Sea Serpents official website",
+            "checkedAt": "2026-10-10",
+            "note": "Website checked; recorded current destination."
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ie-swat",
+      "after": {
+        "kind": "team",
+        "title": "Spokane Waves Aquatic Team",
+        "officialName": "Spokane Waves Aquatic Team",
+        "aliases": [],
+        "abbreviation": "SWAT",
+        "abbreviationType": "Club code in Inland Empire directory",
+        "organizationType": "Swimming club / team",
+        "parentId": "usa-lsc-ie",
+        "lscId": "usa-lsc-ie",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/ieswat/page/home",
+        "websiteAliases": [
+          "https://www.teamunify.com/Home.jsp?team=ieswat"
+        ],
+        "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+        "summary": "Swimming club listed by Inland Empire Swimming in Spokane, WA; Cheney, WA. Its website includes team registration, coaching and swim lesson information.",
+        "geographicCoverage": "Spokane, WA; Cheney, WA",
+        "coverageNote": "Official LSC directory listing checked October 10, 2026; club website checked. This is not independent verification of current SWIMS registration. Contacts are dated public-source claims.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "targetId": "usa-lsc-ie",
+            "name": "Inland Empire Swimming"
+          },
+          {
+            "type": "zone_via_lsc",
+            "label": "Zone through Inland Empire LSC",
+            "targetId": "usa-zone-western",
+            "name": "Western Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Club contact (LSC directory)",
+            "email": "swatboard@spokanewaves.org",
+            "url": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "checkedAt": "2026-10-10",
+            "address": "PO Box 28066, Spokane, WA 99228"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "title": "Inland Empire official club directory",
+            "checkedAt": "2026-10-10",
+            "note": "Name, club code, location, affiliation and directory contact."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/ieswat/page/home",
+            "title": "Spokane Waves Aquatic Team official website",
+            "checkedAt": "2026-10-10",
+            "note": "Website checked; recorded current destination."
+          },
+          {
+            "url": "https://www.teamunify.com/Home.jsp?team=ieswat",
+            "title": "Website linked by LSC directory",
+            "checkedAt": "2026-10-10",
+            "note": "Original link preserved; current site verified."
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ie-tccc",
+      "after": {
+        "kind": "team",
+        "title": "Tri-City Channel Cats",
+        "officialName": "Tri-City Channel Cats",
+        "aliases": [
+          "Tri Cities Channel Cats"
+        ],
+        "abbreviation": "TCCC",
+        "abbreviationType": "Club code in Inland Empire directory",
+        "organizationType": "Swimming club / team",
+        "parentId": "usa-lsc-ie",
+        "lscId": "usa-lsc-ie",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/ietccc/page/home",
+        "websiteAliases": [
+          "https://www.teamunify.com/Home.jsp?team=ietccc"
+        ],
+        "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+        "summary": "Swimming club listed by Inland Empire Swimming in Richland, WA; Kennewick, WA; Pasco, WA. The official team website uses the name Tri-City Channel Cats.",
+        "geographicCoverage": "Richland, WA; Kennewick, WA; Pasco, WA",
+        "coverageNote": "Official LSC directory listing checked October 10, 2026; club website checked. This is not independent verification of current SWIMS registration. Contacts are dated public-source claims.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "targetId": "usa-lsc-ie",
+            "name": "Inland Empire Swimming"
+          },
+          {
+            "type": "zone_via_lsc",
+            "label": "Zone through Inland Empire LSC",
+            "targetId": "usa-zone-western",
+            "name": "Western Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Club contact (LSC directory)",
+            "email": "toddstafek@charter.net",
+            "url": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "checkedAt": "2026-10-10",
+            "address": "PO Box 1668, Richland, WA 99352"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "title": "Inland Empire official club directory",
+            "checkedAt": "2026-10-10",
+            "note": "Name, club code, location, affiliation and directory contact."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/ietccc/page/home",
+            "title": "Tri-City Channel Cats official website",
+            "checkedAt": "2026-10-10",
+            "note": "Website checked; recorded current destination."
+          },
+          {
+            "url": "https://www.teamunify.com/Home.jsp?team=ietccc",
+            "title": "Website linked by LSC directory",
+            "checkedAt": "2026-10-10",
+            "note": "Original link preserved; current site verified."
+          }
+        ],
+        "gaps": [
+          "LSC directory name “Tri Cities Channel Cats” and team-site name “Tri-City Channel Cats” retained as aliases of one club."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ie-van",
+      "after": {
+        "kind": "team",
+        "title": "Vandal Aquatic Club",
+        "officialName": "Vandal Aquatic Club",
+        "aliases": [],
+        "abbreviation": "VAN",
+        "abbreviationType": "Club code in Inland Empire directory",
+        "organizationType": "Swimming club / team",
+        "parentId": "usa-lsc-ie",
+        "lscId": "usa-lsc-ie",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/ievac/page/home",
+        "websiteAliases": [
+          "https://www.teamunify.com/Home.jsp?_tabid_=0&team=ievac"
+        ],
+        "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+        "summary": "Swimming club listed by Inland Empire Swimming in Moscow, ID. Its website describes a year-round USA Swimming team serving Moscow and Spokane and nearby communities.",
+        "geographicCoverage": "Moscow, ID; Spokane, WA; surrounding communities",
+        "coverageNote": "Official LSC directory listing checked October 10, 2026; club website checked. This is not independent verification of current SWIMS registration. Contacts are dated public-source claims.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "targetId": "usa-lsc-ie",
+            "name": "Inland Empire Swimming"
+          },
+          {
+            "type": "zone_via_lsc",
+            "label": "Zone through Inland Empire LSC",
+            "targetId": "usa-zone-western",
+            "name": "Western Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Coach contact (LSC directory)",
+            "email": "msowa@uidaho.edu",
+            "url": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "checkedAt": "2026-10-10",
+            "address": "PO Box 442302, Moscow, ID 83844",
+            "phone": "(208) 885-0265"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "title": "Inland Empire official club directory",
+            "checkedAt": "2026-10-10",
+            "note": "Name, club code, location, affiliation and directory contact."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/ievac/page/home",
+            "title": "Vandal Aquatic Club official website",
+            "checkedAt": "2026-10-10",
+            "note": "Website checked; recorded current destination."
+          },
+          {
+            "url": "https://www.teamunify.com/Home.jsp?_tabid_=0&team=ievac",
+            "title": "Website linked by LSC directory",
+            "checkedAt": "2026-10-10",
+            "note": "Original link preserved; current site verified."
+          }
+        ],
+        "gaps": [
+          "LSC directory lists Moscow only; team website explicitly lists both Moscow and Spokane. Team coverage uses the broader statement."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/velocity-swimming",
+      "after": {
+        "kind": "team",
+        "title": "Velocity Swimming",
+        "officialName": "Velocity Swimming",
+        "aliases": [],
+        "abbreviation": "VS",
+        "abbreviationType": "Club code in Inland Empire directory",
+        "organizationType": "Swimming club / team",
+        "parentId": "usa-lsc-ie",
+        "lscId": "usa-lsc-ie",
+        "zoneId": "usa-zone-western",
+        "teamId": "velocity-swimming",
+        "canonicalRecordPath": "teams/velocity-swimming",
+        "website": "https://www.gomotionapp.com/team/ievs/page/home",
+        "websiteAliases": [
+          "https://www.teamunify.com/Home.jsp?team=ievs"
+        ],
+        "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+        "summary": "Swimming club listed by Inland Empire Swimming in Wenatchee, WA. Its Knowledge Base entry links to the existing Velocity Swimming operational team record.",
+        "geographicCoverage": "Wenatchee, WA",
+        "coverageNote": "Official LSC directory listing checked October 10, 2026; club website checked. This is not independent verification of current SWIMS registration. Contacts are dated public-source claims.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "targetId": "usa-lsc-ie",
+            "name": "Inland Empire Swimming"
+          },
+          {
+            "type": "zone_via_lsc",
+            "label": "Zone through Inland Empire LSC",
+            "targetId": "usa-zone-western",
+            "name": "Western Zone"
+          },
+          {
+            "type": "canonical_team_record",
+            "label": "Existing operational team record",
+            "targetId": "teams/velocity-swimming",
+            "name": "Velocity Swimming",
+            "note": "Same team; no new operational team record."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Club contact (LSC directory)",
+            "email": "coachaudrey@velocity-swimming.com",
+            "url": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "checkedAt": "2026-10-10",
+            "address": "PO Box 2791, Wenatchee, WA 98807"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "title": "Inland Empire official club directory",
+            "checkedAt": "2026-10-10",
+            "note": "Name, club code, location, affiliation and directory contact."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/ievs/page/home",
+            "title": "Velocity Swimming official website",
+            "checkedAt": "2026-10-10",
+            "note": "Website checked; recorded current destination."
+          },
+          {
+            "url": "https://www.teamunify.com/Home.jsp?team=ievs",
+            "title": "Website linked by LSC directory",
+            "checkedAt": "2026-10-10",
+            "note": "Original link preserved; current site verified."
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ie-wwsc",
+      "after": {
+        "kind": "team",
+        "title": "Walla Walla Swim Club",
+        "officialName": "Walla Walla Swim Club",
+        "aliases": [],
+        "abbreviation": "WWSC",
+        "abbreviationType": "Club code in Inland Empire directory",
+        "organizationType": "Swimming club / team",
+        "parentId": "usa-lsc-ie",
+        "lscId": "usa-lsc-ie",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/iewwsc/page/home",
+        "websiteAliases": [
+          "https://www.teamunify.com/Home.jsp?team=iewwsc"
+        ],
+        "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+        "summary": "Swimming club listed by Inland Empire Swimming in Walla Walla, WA. Its website describes a competitive program focused on swimming development and life skills.",
+        "geographicCoverage": "Walla Walla, WA",
+        "coverageNote": "Official LSC directory listing checked October 10, 2026; club website checked. This is not independent verification of current SWIMS registration. Contacts are dated public-source claims.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "targetId": "usa-lsc-ie",
+            "name": "Inland Empire Swimming"
+          },
+          {
+            "type": "zone_via_lsc",
+            "label": "Zone through Inland Empire LSC",
+            "targetId": "usa-zone-western",
+            "name": "Western Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Club contact (LSC directory)",
+            "email": "coachkevin@wwswim.org",
+            "url": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "checkedAt": "2026-10-10",
+            "address": "PO Box 351, Walla Walla, WA 99362",
+            "phone": "(508) 375-7946"
+          },
+          {
+            "role": "Club communications (team website)",
+            "email": "communications@wwswim.org",
+            "url": "https://www.gomotionapp.com/team/iewwsc/page/home",
+            "sourceUrl": "https://www.gomotionapp.com/team/iewwsc/page/home",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "title": "Inland Empire official club directory",
+            "checkedAt": "2026-10-10",
+            "note": "Name, club code, location, affiliation and directory contact."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/iewwsc/page/home",
+            "title": "Walla Walla Swim Club official website",
+            "checkedAt": "2026-10-10",
+            "note": "Website checked; recorded current destination."
+          },
+          {
+            "url": "https://www.teamunify.com/Home.jsp?team=iewwsc",
+            "title": "Website linked by LSC directory",
+            "checkedAt": "2026-10-10",
+            "note": "Original link preserved; current site verified."
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ie-yra",
+      "after": {
+        "kind": "team",
+        "title": "Yakima Riverforge Aquatics",
+        "officialName": "Yakima Riverforge Aquatics",
+        "aliases": [],
+        "abbreviation": "YRA",
+        "abbreviationType": "Club code in Inland Empire directory",
+        "organizationType": "Swimming club / team",
+        "parentId": "usa-lsc-ie",
+        "lscId": "usa-lsc-ie",
+        "zoneId": "usa-zone-western",
+        "website": "https://yakimaathletic.com/",
+        "websiteAliases": [
+          "http://yakimaathletic.com/"
+        ],
+        "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+        "summary": "Swimming club listed by Inland Empire Swimming in Yakima, WA. The directory links to Yakima Athletic Club; retrieved pages did not expose enough text to verify program details.",
+        "geographicCoverage": "Yakima, WA",
+        "coverageNote": "Official LSC directory listing checked October 10, 2026; club website checked. This is not independent verification of current SWIMS registration. Contacts are dated public-source claims.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "targetId": "usa-lsc-ie",
+            "name": "Inland Empire Swimming"
+          },
+          {
+            "type": "zone_via_lsc",
+            "label": "Zone through Inland Empire LSC",
+            "targetId": "usa-zone-western",
+            "name": "Western Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Club contact (LSC directory)",
+            "email": "zacklovesswimming@yahoo.com",
+            "url": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "title": "Inland Empire official club directory",
+            "checkedAt": "2026-10-10",
+            "note": "Name, club code, location, affiliation and directory contact."
+          },
+          {
+            "url": "https://yakimaathletic.com/",
+            "title": "Yakima Riverforge Aquatics official website",
+            "checkedAt": "2026-10-10",
+            "note": "Page reached; meaningful program text not retrieved."
+          },
+          {
+            "url": "http://yakimaathletic.com/",
+            "title": "Website linked by LSC directory",
+            "checkedAt": "2026-10-10",
+            "note": "Original link preserved; current site verified."
+          }
+        ],
+        "gaps": [
+          "Club listing and contact verified in LSC directory. Yakima Athletic Club pages yielded insufficient team text; current program details and a dedicated team page remain unverified."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ie-yyst",
+      "after": {
+        "kind": "team",
+        "title": "Yakima YMCA Swim Team",
+        "officialName": "Yakima YMCA Swim Team",
+        "aliases": [],
+        "abbreviation": "YYST",
+        "abbreviationType": "Club code in Inland Empire directory",
+        "organizationType": "Swimming club / team",
+        "parentId": "usa-lsc-ie",
+        "lscId": "usa-lsc-ie",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/ymca-6961/page/home",
+        "websiteAliases": [
+          "https://www.teamunify.com/team/ymca-6961/page/home"
+        ],
+        "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+        "summary": "Swimming club listed by Inland Empire Swimming in Yakima, WA. The YMCA team describes USA Swimming affiliation and instruction in starts, turns and the four competitive strokes.",
+        "geographicCoverage": "Yakima, WA",
+        "coverageNote": "Official LSC directory listing checked October 10, 2026; club website checked. This is not independent verification of current SWIMS registration. Contacts are dated public-source claims.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "targetId": "usa-lsc-ie",
+            "name": "Inland Empire Swimming"
+          },
+          {
+            "type": "zone_via_lsc",
+            "label": "Zone through Inland Empire LSC",
+            "targetId": "usa-zone-western",
+            "name": "Western Zone"
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Club contact (LSC directory)",
+            "email": "YYST@yakimaymca.org",
+            "url": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "title": "Inland Empire official club directory",
+            "checkedAt": "2026-10-10",
+            "note": "Name, club code, location, affiliation and directory contact."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/ymca-6961/page/home",
+            "title": "Yakima YMCA Swim Team official website",
+            "checkedAt": "2026-10-10",
+            "note": "Website checked; recorded current destination."
+          },
+          {
+            "url": "https://www.teamunify.com/team/ymca-6961/page/home",
+            "title": "Website linked by LSC directory",
+            "checkedAt": "2026-10-10",
+            "note": "Original link preserved; current site verified."
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-zone-western",
+      "after": {
+        "gaps": [
+          "Direct zone contact and official abbreviation not yet collected."
+        ],
+        "kind": "zone",
+        "title": "Western Zone",
+        "sources": [
+          {
+            "url": "https://www.usaswimming.org/rulebook",
+            "note": "Articles 603 (names, codes, boundaries), 605 (zones), 606 (regional competition).",
+            "title": "USA Swimming 2026 Rules & Regulations",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/about/lsc-websites",
+            "title": "USA Swimming LSC & Zone directory",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/wzone/page/home",
+            "title": "Western Zone official website",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/wzielsc/page/clubs/club-directory",
+            "title": "Inland Empire club directory",
+            "checkedAt": "2026-10-10",
+            "note": "Basis for Inland Empire collection coverage update."
+          }
+        ],
+        "summary": "One of USA Swimming’s four administrative zones. It groups LSCs for zone administration and competition under Article 605.",
+        "website": "https://www.gomotionapp.com/team/wzone/page/home",
+        "contacts": [],
+        "parentId": "usa-swimming-national-structure",
+        "sourceUrl": "https://www.usaswimming.org/about/lsc-websites",
+        "abbreviation": null,
+        "coverageNote": "National structure recorded; Inland Empire LSC and its 19 directory-listed clubs collected. Other Western Zone LSCs and detailed section coverage remain deferred.",
+        "officialName": "Western Zone",
+        "relationships": [
+          {
+            "name": "USA Swimming",
+            "type": "governed_by",
+            "label": "National governing organization",
+            "targetId": "usa-swimming-national-structure"
+          },
+          {
+            "type": "contains_lsc",
+            "label": "LSC in zone",
+            "targetId": "usa-lsc-ie",
+            "name": "Inland Empire Swimming"
+          }
+        ],
+        "organizationType": "USA Swimming administrative zone",
+        "geographicCoverage": "LSC jurisdictions of: Alaska, Arizona, Central California, Colorado, Hawaiian, Inland Empire, Montana, New Mexico, Oregon, Pacific, Pacific Northwest, San Diego-Imperial, Sierra Nevada, Snake River, Southern California, Utah, Wyoming."
+      }
+    }
+  ]
+}

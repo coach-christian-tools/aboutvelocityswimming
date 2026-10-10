@@ -1,0 +1,481 @@
+{
+  "division": "knowledge",
+  "scope": "USA Swimming documents \u2014 time standards and competition planning",
+  "sourceUrl": "https://www.usaswimming.org/Times/time-standards",
+  "capturedAt": "2026-10-10T07:55:21.934155+00:00",
+  "coverage": "partial",
+  "evidence": {
+    "method": "Curated official USA Swimming hub links. Completed local downloads have SHA-256 hashes and valid file signatures. Any unsuccessful download is explicitly marked; partial files are excluded.",
+    "hubUrl": "https://www.usaswimming.org/Times/time-standards",
+    "limitations": "Curated important documents, not an exhaustive archive. Edition dates do not imply all provisions are currently effective. No numeric standards imported. Collector stages proposals only; staff approval is required for public collection publication. Collector stages proposals only; staff approval is required for public collection publication.",
+    "documents": [
+      {
+        "id": "usas-2027-tyr-pro-swim-series-nashville-westmont-time-standards",
+        "group": "times",
+        "title": "USA Swimming \u2014 2027 TYR Pro Swim Series - Nashville & Westmont \u2014 Time Standards",
+        "url": "https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2027/2027-tyr-pro-swim-series-time-standards-nashville-and-westmont-2.pdf",
+        "summary": "Official USA Swimming qualifying-time reference for the named event and edition. Refer to the document for eligibility and qualifying periods.",
+        "file": "files/usas-2027-tyr-pro-swim-series-nashville-westmont-time-standards.pdf",
+        "sha256": "89d16b4a2258425fde8c489a60bbdc7688de0df4f5fc1cbf84ae404c67cb1b99",
+        "bytes": 121846,
+        "retrieval": "200|application/pdf|https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2027/2027-tyr-pro-swim-series-time-standards-nashville-and-westmont-2.pdf",
+        "downloadStatus": "Complete local capture"
+      },
+      {
+        "id": "usas-2027-tyr-pro-swim-series-fort-lauderdale-time-standards",
+        "group": "times",
+        "title": "USA Swimming \u2014 2027 TYR Pro Swim Series - Fort Lauderdale \u2014 Time Standards",
+        "url": "https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2027/2027-tyr-pro-swim-series-time-standards-fort-lauderdale-2.pdf",
+        "summary": "Official USA Swimming qualifying-time reference for the named event and edition. Refer to the document for eligibility and qualifying periods.",
+        "file": "files/usas-2027-tyr-pro-swim-series-fort-lauderdale-time-standards.pdf",
+        "sha256": "8c28f4bad10d8650c93fea8e10908abac1f34da3cf0616fbc6a0907b0e930281",
+        "bytes": 121718,
+        "retrieval": "200|application/pdf|https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2027/2027-tyr-pro-swim-series-time-standards-fort-lauderdale-2.pdf",
+        "downloadStatus": "Complete local capture"
+      },
+      {
+        "id": "usas-2027-open-water-national-and-junior-national-championships-time-standards",
+        "group": "times",
+        "title": "USA Swimming \u2014 2027 Open Water National and Junior National Championships \u2014 Time Standards",
+        "url": "https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2027/2027_events_openwater_timestandards.pdf",
+        "summary": "Official USA Swimming qualifying-time reference for the named event and edition. Refer to the document for eligibility and qualifying periods.",
+        "file": "files/usas-2027-open-water-national-and-junior-national-championships-time-standards.pdf",
+        "sha256": "24fb3bf3e6400e757f1b008a919fc817f0cda7a2f4944b50e108dc8f6c064dff",
+        "bytes": 456323,
+        "retrieval": "200|application/pdf|https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2027/2027_events_openwater_timestandards.pdf",
+        "downloadStatus": "Complete local capture"
+      },
+      {
+        "id": "usas-2026-toyota-national-championships-time-standards",
+        "group": "times",
+        "title": "USA Swimming \u2014 2026 Toyota National Championships \u2014 Time Standards",
+        "url": "https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2026/18077640025_events_2026_toyotanationalchampionships_timestandards.pdf",
+        "summary": "Official USA Swimming qualifying-time reference for the named event and edition. Refer to the document for eligibility and qualifying periods.",
+        "file": "files/usas-2026-toyota-national-championships-time-standards.pdf",
+        "sha256": "b5f3f63587ef79f8dcdd58773d5350ce01e95ed9027173f3b81262441e65cfce",
+        "bytes": 472461,
+        "retrieval": "200|application/pdf|https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2026/18077640025_events_2026_toyotanationalchampionships_timestandards.pdf",
+        "downloadStatus": "Complete local capture"
+      },
+      {
+        "id": "usas-2026-toyota-u-s-open-championships-time-standards",
+        "group": "times",
+        "title": "USA Swimming \u2014 2026 Toyota U.S. Open Championships \u2014 Time Standards",
+        "url": "https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2026/timestandards_2026_toyotausopen082826.pdf",
+        "summary": "Official USA Swimming qualifying-time reference for the named event and edition. Refer to the document for eligibility and qualifying periods.",
+        "file": "files/usas-2026-toyota-u-s-open-championships-time-standards.pdf",
+        "sha256": "97cf6a5d2408644a52faca2744b3db6eba570b560674bfa2bb93d878fdc170e3",
+        "bytes": 775498,
+        "retrieval": "200|application/pdf|https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2026/timestandards_2026_toyotausopen082826.pdf",
+        "downloadStatus": "Complete local capture"
+      },
+      {
+        "id": "usas-2026-tyr-pro-swim-series-time-standards",
+        "group": "times",
+        "title": "USA Swimming \u2014 2026 TYR Pro Swim Series \u2014 Time Standards",
+        "url": "https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2026/2026_tyrproswimseries_timestandards-2.pdf",
+        "summary": "Official USA Swimming qualifying-time reference for the named event and edition. Refer to the document for eligibility and qualifying periods.",
+        "file": "files/usas-2026-tyr-pro-swim-series-time-standards.pdf",
+        "sha256": "e41fc63993d8051d3e14a77f46d832edc6a811b7ddd1eb86c897ea1f8b0db4c4",
+        "bytes": 925502,
+        "retrieval": "200|application/pdf|https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2026/2026_tyrproswimseries_timestandards-2.pdf",
+        "downloadStatus": "Complete local capture"
+      },
+      {
+        "id": "usas-2026-speedo-junior-national-championships-time-standards",
+        "group": "times",
+        "title": "USA Swimming \u2014 2026 Speedo Junior National Championships \u2014 Time Standards",
+        "url": "https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2026/2026_speedojuniornationalchampionships_timestandards.pdf",
+        "summary": "Official USA Swimming qualifying-time reference for the named event and edition. Refer to the document for eligibility and qualifying periods.",
+        "file": "files/usas-2026-speedo-junior-national-championships-time-standards.pdf",
+        "sha256": "3f5f4dec1213721f405047369b9f6be672ee46ee3b08ef9b566c069b54ada516",
+        "bytes": 503794,
+        "retrieval": "200|application/pdf|https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2026/2026_speedojuniornationalchampionships_timestandards.pdf",
+        "downloadStatus": "Complete local capture"
+      },
+      {
+        "id": "usas-2026-speedo-winter-junior-championships-time-standards",
+        "group": "times",
+        "title": "USA Swimming \u2014 2026 Speedo Winter Junior Championships \u2014 Time Standards",
+        "url": "https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2026/11320828118_events_timestandards_2026_speedowinterjrs.pdf",
+        "summary": "Official USA Swimming qualifying-time reference for the named event and edition. Refer to the document for eligibility and qualifying periods.",
+        "file": "files/usas-2026-speedo-winter-junior-championships-time-standards.pdf",
+        "sha256": "5b41979fc5171e144dbf9aa632de1a43b824e7d86c05a7a0125fa30f2b63a120",
+        "bytes": 792047,
+        "retrieval": "200|application/pdf|https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2026/11320828118_events_timestandards_2026_speedowinterjrs.pdf",
+        "downloadStatus": "Complete local capture"
+      },
+      {
+        "id": "usas-2026-tyr-futures-championships-time-standards",
+        "group": "times",
+        "title": "USA Swimming \u2014 2026 TYR Futures Championships \u2014 Time Standards",
+        "url": "https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2026/2026_tyrfutureschampionships_timestandards-2.pdf",
+        "summary": "Official USA Swimming qualifying-time reference for the named event and edition. Refer to the document for eligibility and qualifying periods.",
+        "file": "files/usas-2026-tyr-futures-championships-time-standards.pdf",
+        "sha256": "5196ed592a6081a4c17f21e9a7d3f9148eed09784d7ab2dd4abb6628f7e64091",
+        "bytes": 474328,
+        "retrieval": "200|application/pdf|https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2026/2026_tyrfutureschampionships_timestandards-2.pdf",
+        "downloadStatus": "Complete local capture"
+      },
+      {
+        "id": "usas-2026-speedo-sectionals-time-standards",
+        "group": "times",
+        "title": "USA Swimming \u2014 2026 Speedo Sectionals \u2014 Time Standards",
+        "url": "https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2026/2026_speedosectionals_timestandards_max.pdf",
+        "summary": "Official USA Swimming qualifying-time reference for the named event and edition. Refer to the document for eligibility and qualifying periods.",
+        "file": "files/usas-2026-speedo-sectionals-time-standards.pdf",
+        "sha256": "a149268746166196a579afca38f69df9f30c91c6fce7e46478ae506efebac7a5",
+        "bytes": 418574,
+        "retrieval": "200|application/pdf|https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2026/2026_speedosectionals_timestandards_max.pdf",
+        "downloadStatus": "Complete local capture"
+      },
+      {
+        "id": "usas-2025-2028-domestic-event-competition-calendar",
+        "group": "times",
+        "title": "USA Swimming \u2014 2025 - 2028 Domestic Event Competition Calendar",
+        "url": "https://www.usaswimming.org/docs/default-source/eventsdocuments/events-posting/2025-2028-domestic-event-competition-calendar-v2.pdf",
+        "summary": "USA Swimming\u2019s published domestic event planning calendar for 2025\u20132028.",
+        "file": "files/usas-2025-2028-domestic-event-competition-calendar.pdf",
+        "sha256": "62b44ebea473a2e19ae07b92704e01311dd55d9e4157cc59f6552b36ddbefd1f",
+        "bytes": 174654,
+        "retrieval": "200|application/pdf|https://www.usaswimming.org/docs/default-source/eventsdocuments/events-posting/2025-2028-domestic-event-competition-calendar-v2.pdf",
+        "downloadStatus": "Complete local capture"
+      },
+      {
+        "id": "usas-2028-motivational-standards-single-age",
+        "group": "times",
+        "title": "USA Swimming \u2014 2028 Motivational Standards Single Age",
+        "url": "https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2025/2028-motivational-standards-single-age.pdf",
+        "summary": "National motivational benchmarks for swimmer goal setting through 2028; this is a benchmark table, not an event qualification guarantee.",
+        "file": "files/usas-2028-motivational-standards-single-age.pdf",
+        "sha256": "ee406fcf50ed8dcd47a612cdbc6c673fa6110c4ec67bc3b9a9424481de150dd0",
+        "bytes": 289794,
+        "retrieval": "200|application/pdf|https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2025/2028-motivational-standards-single-age.pdf",
+        "downloadStatus": "Complete local capture"
+      },
+      {
+        "id": "usas-2028-motivational-standards",
+        "group": "times",
+        "title": "USA Swimming \u2014 2028 Motivational Standards",
+        "url": "https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2025/2028-motivational-standards-age-group.pdf",
+        "summary": "National motivational benchmarks for swimmer goal setting through 2028; this is a benchmark table, not an event qualification guarantee.",
+        "file": "files/usas-2028-motivational-standards.pdf",
+        "sha256": "9eb877a4a0d23f55401b5f87bc22e92cf46b3af391ac5f22d30917325514ab49",
+        "bytes": 274302,
+        "retrieval": "200|application/pdf|https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2025/2028-motivational-standards-age-group.pdf",
+        "downloadStatus": "Complete local capture"
+      },
+      {
+        "id": "usas-2024-2028-swimmers-with-disabilities-parallel-time-standards-p1",
+        "group": "times",
+        "title": "USA Swimming \u2014 2024-2028 Swimmers with Disabilities Parallel Time Standards (P1)",
+        "url": "https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2025/2024-2028-swimmers-with-disabilities-parallel-time-standards-p1.pdf",
+        "summary": "Official disability parallel time standards for the stated 2024\u20132028 category.",
+        "file": "files/usas-2024-2028-swimmers-with-disabilities-parallel-time-standards-p1.pdf",
+        "sha256": "04157570408397bf3710d8717807c8a1bac8b45d07f18b1672bbe4a384b1b7e4",
+        "bytes": 807647,
+        "retrieval": "200|application/pdf|https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2025/2024-2028-swimmers-with-disabilities-parallel-time-standards-p1.pdf",
+        "downloadStatus": "Complete local capture"
+      },
+      {
+        "id": "usas-2024-2028-swimmers-with-disabilities-parallel-time-standards-p2",
+        "group": "times",
+        "title": "USA Swimming \u2014 2024-2028 Swimmers with Disabilities Parallel Time Standards (P2)",
+        "url": "https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2025/2024-2028-swimmers-with-disabilities-parallel-time-standards-p2.pdf",
+        "summary": "Official disability parallel time standards for the stated 2024\u20132028 category.",
+        "file": "files/usas-2024-2028-swimmers-with-disabilities-parallel-time-standards-p2.pdf",
+        "sha256": "b27ab44542caf7cffff64413870f51e87a482aa3980f7a6d96a9aaadd3075fc2",
+        "bytes": 868671,
+        "retrieval": "200|application/pdf|https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2025/2024-2028-swimmers-with-disabilities-parallel-time-standards-p2.pdf",
+        "downloadStatus": "Complete local capture"
+      },
+      {
+        "id": "usas-2024-2028-swimmers-with-disabilities-parallel-time-standards-p3",
+        "group": "times",
+        "title": "USA Swimming \u2014 2024-2028 Swimmers with Disabilities Parallel Time Standards (P3)",
+        "url": "https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2025/2024-2028-swimmers-with-disabilities-parallel-time-standards-p3.pdf",
+        "summary": "Official disability parallel time standards for the stated 2024\u20132028 category.",
+        "file": "files/usas-2024-2028-swimmers-with-disabilities-parallel-time-standards-p3.pdf",
+        "sha256": "1b5dc66e899e385a627789e15bafa66db2674c0b4846c40ea844f5fe89a13400",
+        "bytes": 782376,
+        "retrieval": "200|application/pdf|https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2025/2024-2028-swimmers-with-disabilities-parallel-time-standards-p3.pdf",
+        "downloadStatus": "Complete local capture"
+      }
+    ],
+    "duplicateCheck": "No matching IDs or source URLs among the existing published document records."
+  },
+  "writes": [
+    {
+      "path": "knowledge_entries/usas-2027-tyr-pro-swim-series-nashville-westmont-time-standards",
+      "after": {
+        "kind": "document",
+        "title": "USA Swimming \u2014 2027 TYR Pro Swim Series - Nashville & Westmont \u2014 Time Standards",
+        "sourceUrl": "https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2027/2027-tyr-pro-swim-series-time-standards-nashville-and-westmont-2.pdf",
+        "summary": "Official USA Swimming qualifying-time reference for the named event and edition. Refer to the document for eligibility and qualifying periods.",
+        "publisher": "USA Swimming",
+        "category": "times",
+        "resourcePage": "https://www.usaswimming.org/Times/time-standards",
+        "format": "PDF",
+        "checkedAt": "2026-10-10T07:55:21.934155+00:00",
+        "coverageNote": "Complete local capture",
+        "sha256": "89d16b4a2258425fde8c489a60bbdc7688de0df4f5fc1cbf84ae404c67cb1b99",
+        "fileSizeBytes": 121846
+      }
+    },
+    {
+      "path": "knowledge_entries/usas-2027-tyr-pro-swim-series-fort-lauderdale-time-standards",
+      "after": {
+        "kind": "document",
+        "title": "USA Swimming \u2014 2027 TYR Pro Swim Series - Fort Lauderdale \u2014 Time Standards",
+        "sourceUrl": "https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2027/2027-tyr-pro-swim-series-time-standards-fort-lauderdale-2.pdf",
+        "summary": "Official USA Swimming qualifying-time reference for the named event and edition. Refer to the document for eligibility and qualifying periods.",
+        "publisher": "USA Swimming",
+        "category": "times",
+        "resourcePage": "https://www.usaswimming.org/Times/time-standards",
+        "format": "PDF",
+        "checkedAt": "2026-10-10T07:55:21.934155+00:00",
+        "coverageNote": "Complete local capture",
+        "sha256": "8c28f4bad10d8650c93fea8e10908abac1f34da3cf0616fbc6a0907b0e930281",
+        "fileSizeBytes": 121718
+      }
+    },
+    {
+      "path": "knowledge_entries/usas-2027-open-water-national-and-junior-national-championships-time-standards",
+      "after": {
+        "kind": "document",
+        "title": "USA Swimming \u2014 2027 Open Water National and Junior National Championships \u2014 Time Standards",
+        "sourceUrl": "https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2027/2027_events_openwater_timestandards.pdf",
+        "summary": "Official USA Swimming qualifying-time reference for the named event and edition. Refer to the document for eligibility and qualifying periods.",
+        "publisher": "USA Swimming",
+        "category": "times",
+        "resourcePage": "https://www.usaswimming.org/Times/time-standards",
+        "format": "PDF",
+        "checkedAt": "2026-10-10T07:55:21.934155+00:00",
+        "coverageNote": "Complete local capture",
+        "sha256": "24fb3bf3e6400e757f1b008a919fc817f0cda7a2f4944b50e108dc8f6c064dff",
+        "fileSizeBytes": 456323
+      }
+    },
+    {
+      "path": "knowledge_entries/usas-2026-toyota-national-championships-time-standards",
+      "after": {
+        "kind": "document",
+        "title": "USA Swimming \u2014 2026 Toyota National Championships \u2014 Time Standards",
+        "sourceUrl": "https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2026/18077640025_events_2026_toyotanationalchampionships_timestandards.pdf",
+        "summary": "Official USA Swimming qualifying-time reference for the named event and edition. Refer to the document for eligibility and qualifying periods.",
+        "publisher": "USA Swimming",
+        "category": "times",
+        "resourcePage": "https://www.usaswimming.org/Times/time-standards",
+        "format": "PDF",
+        "checkedAt": "2026-10-10T07:55:21.934155+00:00",
+        "coverageNote": "Complete local capture",
+        "sha256": "b5f3f63587ef79f8dcdd58773d5350ce01e95ed9027173f3b81262441e65cfce",
+        "fileSizeBytes": 472461
+      }
+    },
+    {
+      "path": "knowledge_entries/usas-2026-toyota-u-s-open-championships-time-standards",
+      "after": {
+        "kind": "document",
+        "title": "USA Swimming \u2014 2026 Toyota U.S. Open Championships \u2014 Time Standards",
+        "sourceUrl": "https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2026/timestandards_2026_toyotausopen082826.pdf",
+        "summary": "Official USA Swimming qualifying-time reference for the named event and edition. Refer to the document for eligibility and qualifying periods.",
+        "publisher": "USA Swimming",
+        "category": "times",
+        "resourcePage": "https://www.usaswimming.org/Times/time-standards",
+        "format": "PDF",
+        "checkedAt": "2026-10-10T07:55:21.934155+00:00",
+        "coverageNote": "Complete local capture",
+        "sha256": "97cf6a5d2408644a52faca2744b3db6eba570b560674bfa2bb93d878fdc170e3",
+        "fileSizeBytes": 775498
+      }
+    },
+    {
+      "path": "knowledge_entries/usas-2026-tyr-pro-swim-series-time-standards",
+      "after": {
+        "kind": "document",
+        "title": "USA Swimming \u2014 2026 TYR Pro Swim Series \u2014 Time Standards",
+        "sourceUrl": "https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2026/2026_tyrproswimseries_timestandards-2.pdf",
+        "summary": "Official USA Swimming qualifying-time reference for the named event and edition. Refer to the document for eligibility and qualifying periods.",
+        "publisher": "USA Swimming",
+        "category": "times",
+        "resourcePage": "https://www.usaswimming.org/Times/time-standards",
+        "format": "PDF",
+        "checkedAt": "2026-10-10T07:55:21.934155+00:00",
+        "coverageNote": "Complete local capture",
+        "sha256": "e41fc63993d8051d3e14a77f46d832edc6a811b7ddd1eb86c897ea1f8b0db4c4",
+        "fileSizeBytes": 925502
+      }
+    },
+    {
+      "path": "knowledge_entries/usas-2026-speedo-junior-national-championships-time-standards",
+      "after": {
+        "kind": "document",
+        "title": "USA Swimming \u2014 2026 Speedo Junior National Championships \u2014 Time Standards",
+        "sourceUrl": "https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2026/2026_speedojuniornationalchampionships_timestandards.pdf",
+        "summary": "Official USA Swimming qualifying-time reference for the named event and edition. Refer to the document for eligibility and qualifying periods.",
+        "publisher": "USA Swimming",
+        "category": "times",
+        "resourcePage": "https://www.usaswimming.org/Times/time-standards",
+        "format": "PDF",
+        "checkedAt": "2026-10-10T07:55:21.934155+00:00",
+        "coverageNote": "Complete local capture",
+        "sha256": "3f5f4dec1213721f405047369b9f6be672ee46ee3b08ef9b566c069b54ada516",
+        "fileSizeBytes": 503794
+      }
+    },
+    {
+      "path": "knowledge_entries/usas-2026-speedo-winter-junior-championships-time-standards",
+      "after": {
+        "kind": "document",
+        "title": "USA Swimming \u2014 2026 Speedo Winter Junior Championships \u2014 Time Standards",
+        "sourceUrl": "https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2026/11320828118_events_timestandards_2026_speedowinterjrs.pdf",
+        "summary": "Official USA Swimming qualifying-time reference for the named event and edition. Refer to the document for eligibility and qualifying periods.",
+        "publisher": "USA Swimming",
+        "category": "times",
+        "resourcePage": "https://www.usaswimming.org/Times/time-standards",
+        "format": "PDF",
+        "checkedAt": "2026-10-10T07:55:21.934155+00:00",
+        "coverageNote": "Complete local capture",
+        "sha256": "5b41979fc5171e144dbf9aa632de1a43b824e7d86c05a7a0125fa30f2b63a120",
+        "fileSizeBytes": 792047
+      }
+    },
+    {
+      "path": "knowledge_entries/usas-2026-tyr-futures-championships-time-standards",
+      "after": {
+        "kind": "document",
+        "title": "USA Swimming \u2014 2026 TYR Futures Championships \u2014 Time Standards",
+        "sourceUrl": "https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2026/2026_tyrfutureschampionships_timestandards-2.pdf",
+        "summary": "Official USA Swimming qualifying-time reference for the named event and edition. Refer to the document for eligibility and qualifying periods.",
+        "publisher": "USA Swimming",
+        "category": "times",
+        "resourcePage": "https://www.usaswimming.org/Times/time-standards",
+        "format": "PDF",
+        "checkedAt": "2026-10-10T07:55:21.934155+00:00",
+        "coverageNote": "Complete local capture",
+        "sha256": "5196ed592a6081a4c17f21e9a7d3f9148eed09784d7ab2dd4abb6628f7e64091",
+        "fileSizeBytes": 474328
+      }
+    },
+    {
+      "path": "knowledge_entries/usas-2026-speedo-sectionals-time-standards",
+      "after": {
+        "kind": "document",
+        "title": "USA Swimming \u2014 2026 Speedo Sectionals \u2014 Time Standards",
+        "sourceUrl": "https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2026/2026_speedosectionals_timestandards_max.pdf",
+        "summary": "Official USA Swimming qualifying-time reference for the named event and edition. Refer to the document for eligibility and qualifying periods.",
+        "publisher": "USA Swimming",
+        "category": "times",
+        "resourcePage": "https://www.usaswimming.org/Times/time-standards",
+        "format": "PDF",
+        "checkedAt": "2026-10-10T07:55:21.934155+00:00",
+        "coverageNote": "Complete local capture",
+        "sha256": "a149268746166196a579afca38f69df9f30c91c6fce7e46478ae506efebac7a5",
+        "fileSizeBytes": 418574
+      }
+    },
+    {
+      "path": "knowledge_entries/usas-2025-2028-domestic-event-competition-calendar",
+      "after": {
+        "kind": "document",
+        "title": "USA Swimming \u2014 2025 - 2028 Domestic Event Competition Calendar",
+        "sourceUrl": "https://www.usaswimming.org/docs/default-source/eventsdocuments/events-posting/2025-2028-domestic-event-competition-calendar-v2.pdf",
+        "summary": "USA Swimming\u2019s published domestic event planning calendar for 2025\u20132028.",
+        "publisher": "USA Swimming",
+        "category": "times",
+        "resourcePage": "https://www.usaswimming.org/Times/time-standards",
+        "format": "PDF",
+        "checkedAt": "2026-10-10T07:55:21.934155+00:00",
+        "coverageNote": "Complete local capture",
+        "sha256": "62b44ebea473a2e19ae07b92704e01311dd55d9e4157cc59f6552b36ddbefd1f",
+        "fileSizeBytes": 174654
+      }
+    },
+    {
+      "path": "knowledge_entries/usas-2028-motivational-standards-single-age",
+      "after": {
+        "kind": "document",
+        "title": "USA Swimming \u2014 2028 Motivational Standards Single Age",
+        "sourceUrl": "https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2025/2028-motivational-standards-single-age.pdf",
+        "summary": "National motivational benchmarks for swimmer goal setting through 2028; this is a benchmark table, not an event qualification guarantee.",
+        "publisher": "USA Swimming",
+        "category": "times",
+        "resourcePage": "https://www.usaswimming.org/Times/time-standards",
+        "format": "PDF",
+        "checkedAt": "2026-10-10T07:55:21.934155+00:00",
+        "coverageNote": "Complete local capture",
+        "sha256": "ee406fcf50ed8dcd47a612cdbc6c673fa6110c4ec67bc3b9a9424481de150dd0",
+        "fileSizeBytes": 289794
+      }
+    },
+    {
+      "path": "knowledge_entries/usas-2028-motivational-standards",
+      "after": {
+        "kind": "document",
+        "title": "USA Swimming \u2014 2028 Motivational Standards",
+        "sourceUrl": "https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2025/2028-motivational-standards-age-group.pdf",
+        "summary": "National motivational benchmarks for swimmer goal setting through 2028; this is a benchmark table, not an event qualification guarantee.",
+        "publisher": "USA Swimming",
+        "category": "times",
+        "resourcePage": "https://www.usaswimming.org/Times/time-standards",
+        "format": "PDF",
+        "checkedAt": "2026-10-10T07:55:21.934155+00:00",
+        "coverageNote": "Complete local capture",
+        "sha256": "9eb877a4a0d23f55401b5f87bc22e92cf46b3af391ac5f22d30917325514ab49",
+        "fileSizeBytes": 274302
+      }
+    },
+    {
+      "path": "knowledge_entries/usas-2024-2028-swimmers-with-disabilities-parallel-time-standards-p1",
+      "after": {
+        "kind": "document",
+        "title": "USA Swimming \u2014 2024-2028 Swimmers with Disabilities Parallel Time Standards (P1)",
+        "sourceUrl": "https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2025/2024-2028-swimmers-with-disabilities-parallel-time-standards-p1.pdf",
+        "summary": "Official disability parallel time standards for the stated 2024\u20132028 category.",
+        "publisher": "USA Swimming",
+        "category": "times",
+        "resourcePage": "https://www.usaswimming.org/Times/time-standards",
+        "format": "PDF",
+        "checkedAt": "2026-10-10T07:55:21.934155+00:00",
+        "coverageNote": "Complete local capture",
+        "sha256": "04157570408397bf3710d8717807c8a1bac8b45d07f18b1672bbe4a384b1b7e4",
+        "fileSizeBytes": 807647
+      }
+    },
+    {
+      "path": "knowledge_entries/usas-2024-2028-swimmers-with-disabilities-parallel-time-standards-p2",
+      "after": {
+        "kind": "document",
+        "title": "USA Swimming \u2014 2024-2028 Swimmers with Disabilities Parallel Time Standards (P2)",
+        "sourceUrl": "https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2025/2024-2028-swimmers-with-disabilities-parallel-time-standards-p2.pdf",
+        "summary": "Official disability parallel time standards for the stated 2024\u20132028 category.",
+        "publisher": "USA Swimming",
+        "category": "times",
+        "resourcePage": "https://www.usaswimming.org/Times/time-standards",
+        "format": "PDF",
+        "checkedAt": "2026-10-10T07:55:21.934155+00:00",
+        "coverageNote": "Complete local capture",
+        "sha256": "b27ab44542caf7cffff64413870f51e87a482aa3980f7a6d96a9aaadd3075fc2",
+        "fileSizeBytes": 868671
+      }
+    },
+    {
+      "path": "knowledge_entries/usas-2024-2028-swimmers-with-disabilities-parallel-time-standards-p3",
+      "after": {
+        "kind": "document",
+        "title": "USA Swimming \u2014 2024-2028 Swimmers with Disabilities Parallel Time Standards (P3)",
+        "sourceUrl": "https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2025/2024-2028-swimmers-with-disabilities-parallel-time-standards-p3.pdf",
+        "summary": "Official disability parallel time standards for the stated 2024\u20132028 category.",
+        "publisher": "USA Swimming",
+        "category": "times",
+        "resourcePage": "https://www.usaswimming.org/Times/time-standards",
+        "format": "PDF",
+        "checkedAt": "2026-10-10T07:55:21.934155+00:00",
+        "coverageNote": "Complete local capture",
+        "sha256": "1b5dc66e899e385a627789e15bafa66db2674c0b4846c40ea844f5fe89a13400",
+        "fileSizeBytes": 782376
+      }
+    }
+  ]
+}

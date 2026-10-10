@@ -11,6 +11,7 @@
 .chips legend { font-size: .8rem; font-weight: 600; color: var(--text-muted); margin-bottom: .6rem; }
 .chips button { border: 1px solid var(--wiki-line); background: var(--surface); color: var(--text-main); border-radius: 999px; padding: .45rem .85rem; font-size: .82rem; text-align: left; }
 .chips button[aria-pressed="true"] { color: var(--primary-ink); background: var(--accent); border-color: var(--accent); }
+.chips .chipToggle { border: 0; border-radius: 0; background: transparent; color: var(--accent); text-decoration: underline; }
 .hint { font-size: .8rem; color: var(--text-muted); align-self: center; }
 .selects { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
 .selects label, .organization { display: grid; gap: .4rem; min-width: 0; font-size: .85rem; color: var(--text-muted); }

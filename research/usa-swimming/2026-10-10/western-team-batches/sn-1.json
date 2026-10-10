@@ -1,0 +1,2955 @@
+{
+  "division": "knowledge",
+  "scope": "Western Zone swim teams \u2014 Sierra Nevada Swimming",
+  "sourceUrl": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+  "capturedAt": "2026-10-10T08:09:39.155039+00:00",
+  "coverage": "partial",
+  "evidence": {
+    "checkedAt": "2026-10-10",
+    "lscCode": "SN",
+    "directoryRowsCollected": 46,
+    "batchRows": 46,
+    "enumeration": "All named rows in the retrieved official directory/roster sources; independent current registration is not guaranteed.",
+    "deduplication": "Compared against 84 published knowledge records and an empty pending queue; facilities combined by organization key; Inland Empire\u2019s 19 existing teams were retained without duplicates.",
+    "remaining": "Missing codes, unreachable websites, registration status, and conflicting sources are visible in each record. Sierra Nevada BBST remains name/code unresolved from official evidence."
+  },
+  "writes": [
+    {
+      "path": "knowledge_entries/usa-team-sn-aqua",
+      "after": {
+        "kind": "team",
+        "title": "AquaSol",
+        "officialName": "AquaSol",
+        "abbreviation": "AQUA",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sn",
+        "lscId": "usa-lsc-sn",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.aquasolswimteam.com",
+        "sourceUrl": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+        "summary": "AquaSol is a swim team/program listed by Sierra Nevada Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Cameron Park, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. Historical membership evidence is explicitly flagged.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Sierra Nevada Swimming",
+            "targetId": "usa-lsc-sn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Darin Mai",
+            "email": "coachdarin@aquasolswimteam.com",
+            "phone": "19167927858"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+            "title": "Sierra Nevada Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.aquasolswimteam.com",
+            "title": "AquaSol Swim Team Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.aquasolswimteam.com/page/home"
+          }
+        ],
+        "gaps": [
+          "The 2026 HOD page includes 2025 membership data and a historical roll call. Listing alone does not confirm current registration."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sn-cca",
+      "after": {
+        "kind": "team",
+        "title": "California Capital Aquatics",
+        "officialName": "California Capital Aquatics",
+        "abbreviation": "CCA",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sn",
+        "lscId": "usa-lsc-sn",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.ccaswimming.org",
+        "sourceUrl": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+        "summary": "California Capital Aquatics is a swim team/program listed by Sierra Nevada Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Roseville, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. Historical membership evidence is explicitly flagged.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Sierra Nevada Swimming",
+            "targetId": "usa-lsc-sn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Justin Brosseau",
+            "email": "info@ccaswimming.org",
+            "phone": "12086312561"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+            "title": "Sierra Nevada Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.ccaswimming.org",
+            "title": "California Capital Aquatics Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.ccaswimming.org/page/home"
+          }
+        ],
+        "gaps": [
+          "The 2026 HOD page includes 2025 membership data and a historical roll call. Listing alone does not confirm current registration."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sn-gold",
+      "after": {
+        "kind": "team",
+        "title": "California Gold",
+        "officialName": "California Gold",
+        "abbreviation": "GOLD",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sn",
+        "lscId": "usa-lsc-sn",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.lodiswimclub.com",
+        "sourceUrl": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+        "summary": "California Gold is a swim team/program listed by Sierra Nevada Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Lodi, CA; Oakdale, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. Historical membership evidence is explicitly flagged.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Sierra Nevada Swimming",
+            "targetId": "usa-lsc-sn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "John Griffin",
+            "email": "johnlodiaquatics@sbcglobal.net",
+            "phone": "12097124382"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Ron Thompson",
+            "email": "oakdaleaquatics1@gmail.com",
+            "phone": "12093800115"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+            "title": "Sierra Nevada Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "The 2026 HOD page includes 2025 membership data and a historical roll call. Listing alone does not confirm current registration."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sn-caj",
+      "after": {
+        "kind": "team",
+        "title": "Chico Aqua-Jets",
+        "officialName": "Chico Aqua-Jets",
+        "abbreviation": "CAJ",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sn",
+        "lscId": "usa-lsc-sn",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.chicoaquajets.org",
+        "sourceUrl": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+        "summary": "Chico Aqua-Jets is a swim team/program listed by Sierra Nevada Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Chico, CA; Durham, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. Historical membership evidence is explicitly flagged.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Sierra Nevada Swimming",
+            "targetId": "usa-lsc-sn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Andrew Hasek",
+            "email": "coachandrew@chicoaquajets.org",
+            "phone": "15309665295"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "on file",
+            "email": "onfile@gmail.com",
+            "phone": "11234567890"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+            "title": "Sierra Nevada Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "The 2026 HOD page includes 2025 membership data and a historical roll call. Listing alone does not confirm current registration."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sn-colu",
+      "after": {
+        "kind": "team",
+        "title": "Colusa Swim Team",
+        "officialName": "Colusa Swim Team",
+        "abbreviation": "COLU",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sn",
+        "lscId": "usa-lsc-sn",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.colusaswimteam.com",
+        "sourceUrl": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+        "summary": "Colusa Swim Team is a swim team/program listed by Sierra Nevada Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Colusa, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. Historical membership evidence is explicitly flagged.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Sierra Nevada Swimming",
+            "targetId": "usa-lsc-sn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Antonio Ortiz",
+            "email": "antonio@ortizclan.com",
+            "phone": "15305745092"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+            "title": "Sierra Nevada Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "The 2026 HOD page includes 2025 membership data and a historical roll call. Listing alone does not confirm current registration."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sn-cor",
+      "after": {
+        "kind": "team",
+        "title": "Corning Manta Rays",
+        "officialName": "Corning Manta Rays",
+        "abbreviation": "COR",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sn",
+        "lscId": "usa-lsc-sn",
+        "zoneId": "usa-zone-western",
+        "website": "https://corningmantarays.swimtopia.com/",
+        "sourceUrl": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+        "summary": "Corning Manta Rays is a swim team/program listed by Sierra Nevada Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Corning, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. Historical membership evidence is explicitly flagged.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Sierra Nevada Swimming",
+            "targetId": "usa-lsc-sn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Aurora Barriga",
+            "email": "corning.mantarays@yahoo.com",
+            "phone": "15305917991"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+            "title": "Sierra Nevada Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "The 2026 HOD page includes 2025 membership data and a historical roll call. Listing alone does not confirm current registration."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sn-dart",
+      "after": {
+        "kind": "team",
+        "title": "DART Swimming",
+        "officialName": "DART Swimming",
+        "abbreviation": "DART",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sn",
+        "lscId": "usa-lsc-sn",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.dartswimming.com",
+        "sourceUrl": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+        "summary": "DART Swimming is a swim team/program listed by Sierra Nevada Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "American Canyon, CA; Davis, CA; Fairfield, CA; Sacramento, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. Historical membership evidence is explicitly flagged.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Sierra Nevada Swimming",
+            "targetId": "usa-lsc-sn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Ricky Silva",
+            "email": "rickysilvascsc@gmail.com",
+            "phone": "16503939634"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Carolee Gregg",
+            "email": "caroleebgregg@gmail.com",
+            "phone": "15307583278"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Ricky Silva",
+            "email": "rickysilva@sasoswimming.org",
+            "phone": "16503939634"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Scott Weltz",
+            "email": "scott.w.weltz@gmail.com",
+            "phone": "14089811344"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Brian nabeta",
+            "email": "brian.nabeta@dartswimming.com",
+            "phone": "19165725290"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+            "title": "Sierra Nevada Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.dartswimming.com",
+            "title": "DART Swimming",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.dartswimming.com/"
+          }
+        ],
+        "gaps": [
+          "The 2026 HOD page includes 2025 membership data and a historical roll call. Listing alone does not confirm current registration."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sn-dna",
+      "after": {
+        "kind": "team",
+        "title": "Del Norte Aquatics",
+        "officialName": "Del Norte Aquatics",
+        "abbreviation": "DNA",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sn",
+        "lscId": "usa-lsc-sn",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.delnortedolphins.com",
+        "sourceUrl": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+        "summary": "Del Norte Aquatics is a swim team/program listed by Sierra Nevada Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Sacramento, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. Historical membership evidence is explicitly flagged.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Sierra Nevada Swimming",
+            "targetId": "usa-lsc-sn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Janine Brown",
+            "email": "JanineB@delnorteclub.com",
+            "phone": "19164835111"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+            "title": "Sierra Nevada Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "The 2026 HOD page includes 2025 membership data and a historical roll call. Listing alone does not confirm current registration."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sn-dpcc",
+      "after": {
+        "kind": "team",
+        "title": "Del Paso Country Club",
+        "officialName": "Del Paso Country Club",
+        "abbreviation": "DPCC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sn",
+        "lscId": "usa-lsc-sn",
+        "zoneId": "usa-zone-western",
+        "website": null,
+        "sourceUrl": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+        "summary": "Del Paso Country Club is a swim team/program listed by Sierra Nevada Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Club-specific coverage not established; listed within Sierra Nevada Swimming.",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. Historical membership evidence is explicitly flagged.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Sierra Nevada Swimming",
+            "targetId": "usa-lsc-sn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+            "title": "Sierra Nevada Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Official team website not established from available sources.",
+          "Club-specific service area / location not established from available sources.",
+          "No public organizational contact established from available sources.",
+          "The 2026 HOD page includes 2025 membership data and a historical roll call. Listing alone does not confirm current registration."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sn-ddur",
+      "after": {
+        "kind": "team",
+        "title": "Durham Dolphins",
+        "officialName": "Durham Dolphins",
+        "abbreviation": "DDUR",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sn",
+        "lscId": "usa-lsc-sn",
+        "zoneId": "usa-zone-western",
+        "website": "https://durhamdolphins.swimtopia.com/",
+        "sourceUrl": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+        "summary": "Durham Dolphins is a swim team/program listed by Sierra Nevada Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Durham, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. Historical membership evidence is explicitly flagged.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Sierra Nevada Swimming",
+            "targetId": "usa-lsc-sn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Tami Thomas",
+            "email": "durhamdolphins1@gmail.com",
+            "phone": "15303215543"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+            "title": "Sierra Nevada Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "The 2026 HOD page includes 2025 membership data and a historical roll call. Listing alone does not confirm current registration."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sn-egac",
+      "after": {
+        "kind": "team",
+        "title": "Elk Grove Aquatics Club",
+        "officialName": "Elk Grove Aquatics Club",
+        "abbreviation": "EGAC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sn",
+        "lscId": "usa-lsc-sn",
+        "zoneId": "usa-zone-western",
+        "website": "https://egacgators.com",
+        "sourceUrl": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+        "summary": "Elk Grove Aquatics Club is a swim team/program listed by Sierra Nevada Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Elk Grove, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. Historical membership evidence is explicitly flagged.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Sierra Nevada Swimming",
+            "targetId": "usa-lsc-sn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Chris Oshiro",
+            "email": "coachchris@egacgators.com",
+            "phone": "19167941530"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+            "title": "Sierra Nevada Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://egacgators.com",
+            "title": "Elk Grove Aquatics Club",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.egacgators.com/"
+          }
+        ],
+        "gaps": [
+          "The 2026 HOD page includes 2025 membership data and a historical roll call. Listing alone does not confirm current registration."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sn-fbst",
+      "after": {
+        "kind": "team",
+        "title": "Fallon Barracuda Swim Team",
+        "officialName": "Fallon Barracuda Swim Team",
+        "abbreviation": "FBST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sn",
+        "lscId": "usa-lsc-sn",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/team/snfbst/page/home",
+        "sourceUrl": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+        "summary": "Fallon Barracuda Swim Team is a swim team/program listed by Sierra Nevada Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Fallon, NV",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. Historical membership evidence is explicitly flagged.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Sierra Nevada Swimming",
+            "targetId": "usa-lsc-sn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Bree  O'Neill",
+            "email": "fallonbarracudaswim@gmail.com",
+            "phone": "17752171159"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+            "title": "Sierra Nevada Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.teamunify.com/team/snfbst/page/home",
+            "title": "Fallon Barracuda Swim Team Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/snfbst/page/home"
+          }
+        ],
+        "gaps": [
+          "The 2026 HOD page includes 2025 membership data and a historical roll call. Listing alone does not confirm current registration."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sn-gosl",
+      "after": {
+        "kind": "team",
+        "title": "Glen Oaks Sea Lions",
+        "officialName": "Glen Oaks Sea Lions",
+        "abbreviation": "GOSL",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sn",
+        "lscId": "usa-lsc-sn",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.swimglenoaks.com",
+        "sourceUrl": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+        "summary": "Glen Oaks Sea Lions is a swim team/program listed by Sierra Nevada Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Carmichael, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. Historical membership evidence is explicitly flagged.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Sierra Nevada Swimming",
+            "targetId": "usa-lsc-sn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Laura McHugh",
+            "email": "lgmchugh@comcast.net",
+            "phone": "19164259511"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+            "title": "Sierra Nevada Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "The 2026 HOD page includes 2025 membership data and a historical roll call. Listing alone does not confirm current registration."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sn-grid",
+      "after": {
+        "kind": "team",
+        "title": "Gridley Gators Swim Team",
+        "officialName": "Gridley Gators Swim Team",
+        "abbreviation": "GRID",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sn",
+        "lscId": "usa-lsc-sn",
+        "zoneId": "usa-zone-western",
+        "website": null,
+        "sourceUrl": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+        "summary": "Gridley Gators Swim Team is a swim team/program listed by Sierra Nevada Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Gridley, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. Historical membership evidence is explicitly flagged.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Sierra Nevada Swimming",
+            "targetId": "usa-lsc-sn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Misha Rogers",
+            "email": "misham2225@me.com",
+            "phone": "15307134975"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+            "title": "Sierra Nevada Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Official team website not established from available sources.",
+          "The 2026 HOD page includes 2025 membership data and a historical roll call. Listing alone does not confirm current registration."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sn-lass",
+      "after": {
+        "kind": "team",
+        "title": "Lassen Aquatics",
+        "officialName": "Lassen Aquatics",
+        "abbreviation": "LASS",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sn",
+        "lscId": "usa-lsc-sn",
+        "zoneId": "usa-zone-western",
+        "website": null,
+        "sourceUrl": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+        "summary": "Lassen Aquatics is a swim team/program listed by Sierra Nevada Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Club-specific coverage not established; listed within Sierra Nevada Swimming.",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. Historical membership evidence is explicitly flagged.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Sierra Nevada Swimming",
+            "targetId": "usa-lsc-sn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+            "title": "Sierra Nevada Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Official team website not established from available sources.",
+          "Club-specific service area / location not established from available sources.",
+          "No public organizational contact established from available sources.",
+          "The 2026 HOD page includes 2025 membership data and a historical roll call. Listing alone does not confirm current registration."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sn-life",
+      "after": {
+        "kind": "team",
+        "title": "Life Time Northern California",
+        "officialName": "Life Time Northern California",
+        "abbreviation": "LIFE",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sn",
+        "lscId": "usa-lsc-sn",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/snlftnc/page/home",
+        "sourceUrl": "https://www.gomotionapp.com/team/snslsc/page/safe-sport/sns-safe-sport-recognized-teams",
+        "summary": "Life Time Northern California is a swim team/program listed by Sierra Nevada Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Folsom, CA; Roseville, CA; Sacramento, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. Historical membership evidence is explicitly flagged.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Sierra Nevada Swimming",
+            "targetId": "usa-lsc-sn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Stacey Magdaleno",
+            "email": "smagdaleno@lt.life",
+            "phone": "19164722023"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Sarah Vandervolgen",
+            "email": "svandervolgen@lt.life",
+            "phone": "19165979023"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Adric Jope",
+            "email": "ajope@lt.life",
+            "phone": "19166045050"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/snslsc/page/safe-sport/sns-safe-sport-recognized-teams",
+            "title": "Sierra Nevada Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/snlftnc/page/home",
+            "title": "Life Time Northern California Home",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "The 2026 HOD page includes 2025 membership data and a historical roll call. Listing alone does not confirm current registration."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sn-mega",
+      "after": {
+        "kind": "team",
+        "title": "Megalodon Swimming",
+        "officialName": "Megalodon Swimming",
+        "abbreviation": "MEGA",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sn",
+        "lscId": "usa-lsc-sn",
+        "zoneId": "usa-zone-western",
+        "website": "https://sites.google.com/view/megalodonswimming",
+        "sourceUrl": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+        "summary": "Megalodon Swimming is a swim team/program listed by Sierra Nevada Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Dunsmuir, CA; Weed, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. Historical membership evidence is explicitly flagged.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Sierra Nevada Swimming",
+            "targetId": "usa-lsc-sn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Richard Viturino",
+            "email": "MegalodonSwimmingca@gmail.com",
+            "phone": "15309252949"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Richard Viturino",
+            "email": "siskiyoucoachrv@gmail.com",
+            "phone": "15309252949"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+            "title": "Sierra Nevada Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://sites.google.com/view/megalodonswimming",
+            "title": "Megalodon Swimming",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "The 2026 HOD page includes 2025 membership data and a historical roll call. Listing alone does not confirm current registration."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sn-nrwl",
+      "after": {
+        "kind": "team",
+        "title": "North State Narwhals",
+        "officialName": "North State Narwhals",
+        "abbreviation": "NRWL",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sn",
+        "lscId": "usa-lsc-sn",
+        "zoneId": "usa-zone-western",
+        "website": null,
+        "sourceUrl": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+        "summary": "North State Narwhals is a swim team/program listed by Sierra Nevada Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Chico, CA; Los Molinos, CA; Red Bluff, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. Historical membership evidence is explicitly flagged.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Sierra Nevada Swimming",
+            "targetId": "usa-lsc-sn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Julia Brandt",
+            "email": "Jujuflyer14@gmail.com",
+            "phone": "15302002629"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Betsylee Aird",
+            "email": "betsyaird@sbcglobal.net",
+            "phone": "15305187946"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Julia Brandt",
+            "email": "betsyaird@sbcglobal.net",
+            "phone": "15305187946"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+            "title": "Sierra Nevada Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Official team website not established from available sources.",
+          "The 2026 HOD page includes 2025 membership data and a historical roll call. Listing alone does not confirm current registration."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sn-nss",
+      "after": {
+        "kind": "team",
+        "title": "Northern Sierra Swimming",
+        "officialName": "Northern Sierra Swimming",
+        "abbreviation": "NSS",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sn",
+        "lscId": "usa-lsc-sn",
+        "zoneId": "usa-zone-western",
+        "website": "http://northernsierraswimming.org",
+        "sourceUrl": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+        "summary": "Northern Sierra Swimming is a swim team/program listed by Sierra Nevada Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Grass Valley, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. Historical membership evidence is explicitly flagged.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Sierra Nevada Swimming",
+            "targetId": "usa-lsc-sn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Daryn Glasgow",
+            "email": "coachglasgow@gmail.com",
+            "phone": "15302681209"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+            "title": "Sierra Nevada Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "The 2026 HOD page includes 2025 membership data and a historical roll call. Listing alone does not confirm current registration.",
+          "Northern Sierra Swimming\u2019s linked website now identifies Roseville CCA. Its relationship to California Capital Aquatics and current standalone status need confirmation."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sn-orln",
+      "after": {
+        "kind": "team",
+        "title": "Orland Otters",
+        "officialName": "Orland Otters",
+        "abbreviation": "ORLN",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sn",
+        "lscId": "usa-lsc-sn",
+        "zoneId": "usa-zone-western",
+        "website": null,
+        "sourceUrl": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+        "summary": "Orland Otters is a swim team/program listed by Sierra Nevada Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Orland, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. Historical membership evidence is explicitly flagged.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Sierra Nevada Swimming",
+            "targetId": "usa-lsc-sn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Amy Raymondo",
+            "email": "orlandotters@gmail.com",
+            "phone": "15308651630"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+            "title": "Sierra Nevada Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Official team website not established from available sources.",
+          "Directory website value is malformed or points only to a platform homepage; it was not used as the official website.",
+          "The 2026 HOD page includes 2025 membership data and a historical roll call. Listing alone does not confirm current registration."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sn-orca",
+      "after": {
+        "kind": "team",
+        "title": "Oroville Orcas",
+        "officialName": "Oroville Orcas",
+        "abbreviation": "ORCA",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sn",
+        "lscId": "usa-lsc-sn",
+        "zoneId": "usa-zone-western",
+        "website": "https://orovilleorcas.swimtopia.com/",
+        "sourceUrl": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+        "summary": "Oroville Orcas is a swim team/program listed by Sierra Nevada Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Oroville, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. Historical membership evidence is explicitly flagged.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Sierra Nevada Swimming",
+            "targetId": "usa-lsc-sn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Sarah Pierce",
+            "email": "spierce@ymcasuperiorcal.org",
+            "phone": "15306352347"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+            "title": "Sierra Nevada Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "The 2026 HOD page includes 2025 membership data and a historical roll call. Listing alone does not confirm current registration."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sn-para",
+      "after": {
+        "kind": "team",
+        "title": "Paradise Piranhas Swim Team",
+        "officialName": "Paradise Piranhas Swim Team",
+        "abbreviation": "PARA",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sn",
+        "lscId": "usa-lsc-sn",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.paradiseswimteam.com",
+        "sourceUrl": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+        "summary": "Paradise Piranhas Swim Team is a swim team/program listed by Sierra Nevada Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Paradise, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. Historical membership evidence is explicitly flagged.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Sierra Nevada Swimming",
+            "targetId": "usa-lsc-sn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Arlinda Black",
+            "email": "Paradiseparanhas@gmail.com",
+            "phone": "15305198560"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+            "title": "Sierra Nevada Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "The 2026 HOD page includes 2025 membership data and a historical roll call. Listing alone does not confirm current registration."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sn-pac",
+      "after": {
+        "kind": "team",
+        "title": "Piranhas Aquatic Club",
+        "officialName": "Piranhas Aquatic Club",
+        "abbreviation": "PAC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sn",
+        "lscId": "usa-lsc-sn",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/team/capacs/page/home",
+        "sourceUrl": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+        "summary": "Piranhas Aquatic Club is a swim team/program listed by Sierra Nevada Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Elk Grove, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. Historical membership evidence is explicitly flagged.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Sierra Nevada Swimming",
+            "targetId": "usa-lsc-sn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Amanda Olekszulin",
+            "email": "president@elkgrovepiranhas.com",
+            "phone": "19164792945"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+            "title": "Sierra Nevada Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.teamunify.com/team/capacs/page/home",
+            "title": "Piranhas Aquatic Club Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/capacs/page/home"
+          }
+        ],
+        "gaps": [
+          "The 2026 HOD page includes 2025 membership data and a historical roll call. Listing alone does not confirm current registration."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sn-prst",
+      "after": {
+        "kind": "team",
+        "title": "Plumas Rapids Swim Team",
+        "officialName": "Plumas Rapids Swim Team",
+        "abbreviation": "PRST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sn",
+        "lscId": "usa-lsc-sn",
+        "zoneId": "usa-zone-western",
+        "website": "https://plumasrapids.swimtopia.com/",
+        "sourceUrl": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+        "summary": "Plumas Rapids Swim Team is a swim team/program listed by Sierra Nevada Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Quincy, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. Historical membership evidence is explicitly flagged.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Sierra Nevada Swimming",
+            "targetId": "usa-lsc-sn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Paul Vaughn",
+            "email": "paul@plumasrapids.org",
+            "phone": "15309416249"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+            "title": "Sierra Nevada Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "The 2026 HOD page includes 2025 membership data and a historical roll call. Listing alone does not confirm current registration."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sn-ppst",
+      "after": {
+        "kind": "team",
+        "title": "Portola Penguin Swim Team",
+        "officialName": "Portola Penguin Swim Team",
+        "abbreviation": "PPST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sn",
+        "lscId": "usa-lsc-sn",
+        "zoneId": "usa-zone-western",
+        "website": null,
+        "sourceUrl": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+        "summary": "Portola Penguin Swim Team is a swim team/program listed by Sierra Nevada Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Portola, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. Historical membership evidence is explicitly flagged.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Sierra Nevada Swimming",
+            "targetId": "usa-lsc-sn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Jennifer Condliff",
+            "email": "jcondliffe@sbcglobal.net",
+            "phone": "15302493338"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+            "title": "Sierra Nevada Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Official team website not established from available sources.",
+          "The 2026 HOD page includes 2025 membership data and a historical roll call. Listing alone does not confirm current registration."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sn-rad",
+      "after": {
+        "kind": "team",
+        "title": "Redding Swim Team",
+        "officialName": "Redding Swim Team",
+        "abbreviation": "RAD",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sn",
+        "lscId": "usa-lsc-sn",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.reddingswimteam.org",
+        "sourceUrl": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+        "summary": "Redding Swim Team is a swim team/program listed by Sierra Nevada Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Redding, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. Historical membership evidence is explicitly flagged.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Sierra Nevada Swimming",
+            "targetId": "usa-lsc-sn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Mark Wagner",
+            "email": "reddingswimteam@yahoo.com",
+            "phone": "15302462666"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+            "title": "Sierra Nevada Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.reddingswimteam.org",
+            "title": "Redding Aqua Ducks Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.reddingswimteam.org/page/home"
+          }
+        ],
+        "gaps": [
+          "The 2026 HOD page includes 2025 membership data and a historical roll call. Listing alone does not confirm current registration."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sn-roc",
+      "after": {
+        "kind": "team",
+        "title": "Rocklin Swim Team",
+        "officialName": "Rocklin Swim Team",
+        "abbreviation": "ROC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sn",
+        "lscId": "usa-lsc-sn",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/Home.jsp?team=recncslrw",
+        "sourceUrl": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+        "summary": "Rocklin Swim Team is a swim team/program listed by Sierra Nevada Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Rocklin, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. Historical membership evidence is explicitly flagged.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Sierra Nevada Swimming",
+            "targetId": "usa-lsc-sn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Chris Stehula",
+            "email": "RSTDirector@rocklinswimteam.org",
+            "phone": "19169755130"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+            "title": "Sierra Nevada Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.teamunify.com/Home.jsp?team=recncslrw",
+            "title": "Rocklin Swim Team Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/recncslrw/page/home"
+          }
+        ],
+        "gaps": [
+          "The 2026 HOD page includes 2025 membership data and a historical roll call. Listing alone does not confirm current registration."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sn-sacc",
+      "after": {
+        "kind": "team",
+        "title": "Sacramento Aquatics Club",
+        "officialName": "Sacramento Aquatics Club",
+        "abbreviation": "SACC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sn",
+        "lscId": "usa-lsc-sn",
+        "zoneId": "usa-zone-western",
+        "website": "https://sacramentoaquatics.com",
+        "sourceUrl": "https://sacramentoaquatics.com/resources-links/usa-swimming-registration/",
+        "summary": "Sacramento Aquatics Club is a swim team/program listed by Sierra Nevada Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Sacramento, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. Historical membership evidence is explicitly flagged.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Sierra Nevada Swimming",
+            "targetId": "usa-lsc-sn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Bill Lonsdale",
+            "email": "sacramentoaquatics@gmail.com",
+            "phone": "19165011581"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://sacramentoaquatics.com/resources-links/usa-swimming-registration/",
+            "title": "Sierra Nevada Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://sacramentoaquatics.com",
+            "title": "Sacramento Aquatics club \u2013 Year-round USA swim team in Sacramento",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "The 2026 HOD page includes 2025 membership data and a historical roll call. Listing alone does not confirm current registration."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sn-svst",
+      "after": {
+        "kind": "team",
+        "title": "Scott Valley Swim Team",
+        "officialName": "Scott Valley Swim Team",
+        "abbreviation": "SVST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sn",
+        "lscId": "usa-lsc-sn",
+        "zoneId": "usa-zone-western",
+        "website": "https://etnapal.com/swim-team",
+        "sourceUrl": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+        "summary": "Scott Valley Swim Team is a swim team/program listed by Sierra Nevada Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Etna, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. Historical membership evidence is explicitly flagged.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Sierra Nevada Swimming",
+            "targetId": "usa-lsc-sn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Alicia Pindell",
+            "email": "etnapdpal@gmail.com",
+            "phone": "15305989833"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+            "title": "Sierra Nevada Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://etnapal.com/swim-team",
+            "title": "Swim Team",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "The 2026 HOD page includes 2025 membership data and a historical roll call. Listing alone does not confirm current registration."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sn-sys",
+      "after": {
+        "kind": "team",
+        "title": "Shasta YMCA Sharks",
+        "officialName": "Shasta YMCA Sharks",
+        "abbreviation": "SYS",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sn",
+        "lscId": "usa-lsc-sn",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/team/ymca-0560/page/home",
+        "sourceUrl": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+        "summary": "Shasta YMCA Sharks is a swim team/program listed by Sierra Nevada Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Redding, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. Historical membership evidence is explicitly flagged.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Sierra Nevada Swimming",
+            "targetId": "usa-lsc-sn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Steven Lazaraton",
+            "email": "Sharksswimteam@sfymca.org",
+            "phone": "19048601553"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+            "title": "Sierra Nevada Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.teamunify.com/team/ymca-0560/page/home",
+            "title": "Shasta Family YMCA Sharks Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/ymca-0560/page/home"
+          }
+        ],
+        "gaps": [
+          "The 2026 HOD page includes 2025 membership data and a historical roll call. Listing alone does not confirm current registration."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sn-smst",
+      "after": {
+        "kind": "team",
+        "title": "Sierra Marlins Swim Team",
+        "officialName": "Sierra Marlins Swim Team",
+        "abbreviation": "SMST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sn",
+        "lscId": "usa-lsc-sn",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/team/smst/page/home",
+        "sourceUrl": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+        "summary": "Sierra Marlins Swim Team is a swim team/program listed by Sierra Nevada Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Folsom, CA; Truckee, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. Historical membership evidence is explicitly flagged.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Sierra Nevada Swimming",
+            "targetId": "usa-lsc-sn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Timothy McCormick",
+            "email": "tmccormick@sierramarlins.net",
+            "phone": "19168444165"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Cyrus Crews",
+            "email": "cyrus@truckeeswim.org",
+            "phone": "18082768658"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+            "title": "Sierra Nevada Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.teamunify.com/team/smst/page/home",
+            "title": "Sierra Marlins Swim Team Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/smst/page/home"
+          }
+        ],
+        "gaps": [
+          "The 2026 HOD page includes 2025 membership data and a historical roll call. Listing alone does not confirm current registration."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sn-ssst",
+      "after": {
+        "kind": "team",
+        "title": "South Siskiyou Swim Team",
+        "officialName": "South Siskiyou Swim Team",
+        "abbreviation": "SSST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sn",
+        "lscId": "usa-lsc-sn",
+        "zoneId": "usa-zone-western",
+        "website": "http://southsiskiyouswim.swimtopia.com",
+        "sourceUrl": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+        "summary": "South Siskiyou Swim Team is a swim team/program listed by Sierra Nevada Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Weed, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. Historical membership evidence is explicitly flagged.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Sierra Nevada Swimming",
+            "targetId": "usa-lsc-sn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Jenn Carr",
+            "email": "registrarssst@gmail.com",
+            "phone": "15308590517"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+            "title": "Sierra Nevada Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "The 2026 HOD page includes 2025 membership data and a historical roll call. Listing alone does not confirm current registration."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sn-star",
+      "after": {
+        "kind": "team",
+        "title": "Spare Time Aquatics Rio",
+        "officialName": "Spare Time Aquatics Rio",
+        "abbreviation": "STAR",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sn",
+        "lscId": "usa-lsc-sn",
+        "zoneId": "usa-zone-western",
+        "website": null,
+        "sourceUrl": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+        "summary": "Spare Time Aquatics Rio is a swim team/program listed by Sierra Nevada Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Club-specific coverage not established; listed within Sierra Nevada Swimming.",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. Historical membership evidence is explicitly flagged.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Sierra Nevada Swimming",
+            "targetId": "usa-lsc-sn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+            "title": "Sierra Nevada Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Official team website not established from available sources.",
+          "Club-specific service area / location not established from available sources.",
+          "No public organizational contact established from available sources.",
+          "The 2026 HOD page includes 2025 membership data and a historical roll call. Listing alone does not confirm current registration."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sn-spks",
+      "after": {
+        "kind": "team",
+        "title": "Sparks Piranhas Swim Team",
+        "officialName": "Sparks Piranhas Swim Team",
+        "abbreviation": "SPKS",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sn",
+        "lscId": "usa-lsc-sn",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.sparkspiranhasaquatics.com",
+        "sourceUrl": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+        "summary": "Sparks Piranhas Swim Team is a swim team/program listed by Sierra Nevada Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Sparks, NV",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. Historical membership evidence is explicitly flagged.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Sierra Nevada Swimming",
+            "targetId": "usa-lsc-sn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Michael Richmond",
+            "email": "mike.richmond@mail.com",
+            "phone": "17753428484"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+            "title": "Sierra Nevada Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "The 2026 HOD page includes 2025 membership data and a historical roll call. Listing alone does not confirm current registration."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sn-sost",
+      "after": {
+        "kind": "team",
+        "title": "Sun Oaks Swim Team",
+        "officialName": "Sun Oaks Swim Team",
+        "abbreviation": "SOST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sn",
+        "lscId": "usa-lsc-sn",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.sunoaks.com",
+        "sourceUrl": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+        "summary": "Sun Oaks Swim Team is a swim team/program listed by Sierra Nevada Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Redding, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. Historical membership evidence is explicitly flagged.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Sierra Nevada Swimming",
+            "targetId": "usa-lsc-sn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Angie Baker",
+            "email": "angie@sunoaks.com",
+            "phone": "15302214405"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+            "title": "Sierra Nevada Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "The 2026 HOD page includes 2025 membership data and a historical roll call. Listing alone does not confirm current registration."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sn-sbs",
+      "after": {
+        "kind": "team",
+        "title": "Sutter Buttes Swimming",
+        "officialName": "Sutter Buttes Swimming",
+        "abbreviation": "SBS",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sn",
+        "lscId": "usa-lsc-sn",
+        "zoneId": "usa-zone-western",
+        "website": null,
+        "sourceUrl": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+        "summary": "Sutter Buttes Swimming is a swim team/program listed by Sierra Nevada Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Yuba City, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. Historical membership evidence is explicitly flagged.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Sierra Nevada Swimming",
+            "targetId": "usa-lsc-sn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Erin Guzman",
+            "email": "sutterbuttesswimming530@gmail.com",
+            "phone": "15309212057"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+            "title": "Sierra Nevada Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Official team website not established from available sources.",
+          "The 2026 HOD page includes 2025 membership data and a historical roll call. Listing alone does not confirm current registration."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sn-usa1",
+      "after": {
+        "kind": "team",
+        "title": "TEAMGOLDUSA",
+        "officialName": "TEAMGOLDUSA",
+        "abbreviation": "USA1",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sn",
+        "lscId": "usa-lsc-sn",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamgoldusa.com",
+        "sourceUrl": "https://www.gomotionapp.com/team/snslsc/page/safe-sport/sns-safe-sport-recognized-teams",
+        "summary": "TEAMGOLDUSA is a swim team/program listed by Sierra Nevada Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Roseville, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. Historical membership evidence is explicitly flagged.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Sierra Nevada Swimming",
+            "targetId": "usa-lsc-sn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Marc Stanley",
+            "email": "marc@teamgoldusa.com",
+            "phone": "12025250094"
+          },
+          {
+            "role": "Public team website contact",
+            "email": "swimfast@teamgoldusa.com",
+            "url": "https://www.teamgoldusa.com"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/team/snslsc/page/safe-sport/sns-safe-sport-recognized-teams",
+            "title": "Sierra Nevada Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.teamgoldusa.com",
+            "title": "TEAMGOLDUSA Swim Team in Auburn, CA | Athlete Development",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://teamgoldusa.com/"
+          }
+        ],
+        "gaps": [
+          "The 2026 HOD page includes 2025 membership data and a historical roll call. Listing alone does not confirm current registration."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sn-ttst",
+      "after": {
+        "kind": "team",
+        "title": "Truckee Tahoe Swim Team",
+        "officialName": "Truckee Tahoe Swim Team",
+        "abbreviation": "TTST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sn",
+        "lscId": "usa-lsc-sn",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.truckeeswim.com/",
+        "sourceUrl": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/2026-delegate-numbers_086269.pdf",
+        "summary": "Truckee Tahoe Swim Team is a swim team/program listed by Sierra Nevada Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Truckee, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. Historical membership evidence is explicitly flagged.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Sierra Nevada Swimming",
+            "targetId": "usa-lsc-sn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Cyrus Crews",
+            "email": "cyrus@truckeeswim.org",
+            "phone": "18082768658"
+          },
+          {
+            "role": "Public team website contact",
+            "email": "ttstbod@truckeeswim.org",
+            "url": "https://www.truckeeswim.com/"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/2026-delegate-numbers_086269.pdf",
+            "title": "Sierra Nevada Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.truckeeswim.com/",
+            "title": "Home",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "The 2026 HOD page includes 2025 membership data and a historical roll call. Listing alone does not confirm current registration."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sn-tac",
+      "after": {
+        "kind": "team",
+        "title": "Turlock Aquatic Club",
+        "officialName": "Turlock Aquatic Club",
+        "abbreviation": "TAC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sn",
+        "lscId": "usa-lsc-sn",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/Home.jsp?team=sntac",
+        "sourceUrl": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+        "summary": "Turlock Aquatic Club is a swim team/program listed by Sierra Nevada Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Turlock, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. Historical membership evidence is explicitly flagged.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Sierra Nevada Swimming",
+            "targetId": "usa-lsc-sn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Zachary Glidden",
+            "email": "zachglidden88@gmail.com",
+            "phone": "12092325189"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+            "title": "Sierra Nevada Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.teamunify.com/Home.jsp?team=sntac",
+            "title": "Turlock Aquatic Club Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/sntac/page/home"
+          }
+        ],
+        "gaps": [
+          "The 2026 HOD page includes 2025 membership data and a historical roll call. Listing alone does not confirm current registration."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sn-ucd",
+      "after": {
+        "kind": "team",
+        "title": "UCD Aquamonsters",
+        "officialName": "UCD Aquamonsters",
+        "abbreviation": "UCD",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sn",
+        "lscId": "usa-lsc-sn",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.davisaquamonsters.org",
+        "sourceUrl": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+        "summary": "UCD Aquamonsters is a swim team/program listed by Sierra Nevada Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Davis, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. Historical membership evidence is explicitly flagged.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Sierra Nevada Swimming",
+            "targetId": "usa-lsc-sn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Peter Motekaitis",
+            "email": "pjmotekaitis@ucdavis.edu",
+            "phone": "15307549467"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Peter Motekaitis",
+            "email": "pjmotekaitis@gmail.com",
+            "phone": "15302208312"
+          },
+          {
+            "role": "Public team website contact",
+            "email": "directors@davisaquamonsters.org",
+            "url": "https://www.davisaquamonsters.org"
+          },
+          {
+            "role": "Public team website contact",
+            "email": "registrar@davisaquamonsters.org",
+            "url": "https://www.davisaquamonsters.org"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+            "title": "Sierra Nevada Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.davisaquamonsters.org",
+            "title": "Davis Swim Team | USA & Summer Recreation | Aquamonsters",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "The 2026 HOD page includes 2025 membership data and a historical roll call. Listing alone does not confirm current registration."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sn-vaca",
+      "after": {
+        "kind": "team",
+        "title": "Vacaville Swim Club",
+        "officialName": "Vacaville Swim Club",
+        "abbreviation": "VACA",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sn",
+        "lscId": "usa-lsc-sn",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.vacaswim.com",
+        "sourceUrl": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+        "summary": "Vacaville Swim Club is a swim team/program listed by Sierra Nevada Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Vacaville, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. Historical membership evidence is explicitly flagged.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Sierra Nevada Swimming",
+            "targetId": "usa-lsc-sn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Matthew Rankin",
+            "email": "beckycraig89@gmail.com",
+            "phone": "17072901737"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+            "title": "Sierra Nevada Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.vacaswim.com",
+            "title": "Vacaville Swim Club Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/snsvsc/page/home"
+          }
+        ],
+        "gaps": [
+          "The 2026 HOD page includes 2025 membership data and a historical roll call. Listing alone does not confirm current registration."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sn-wst",
+      "after": {
+        "kind": "team",
+        "title": "Weaverville Swim Team",
+        "officialName": "Weaverville Swim Team",
+        "abbreviation": "WST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sn",
+        "lscId": "usa-lsc-sn",
+        "zoneId": "usa-zone-western",
+        "website": "https://weavervillewaves.swimtopia.com",
+        "sourceUrl": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+        "summary": "Weaverville Swim Team is a swim team/program listed by Sierra Nevada Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Weaverville, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. Historical membership evidence is explicitly flagged.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Sierra Nevada Swimming",
+            "targetId": "usa-lsc-sn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Veronica Kelley-Albiez",
+            "email": "weavervillewavesinfo@gmail.com",
+            "phone": "12543387055"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+            "title": "Sierra Nevada Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "The 2026 HOD page includes 2025 membership data and a historical roll call. Listing alone does not confirm current registration."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sn-whj",
+      "after": {
+        "kind": "team",
+        "title": "Willows Hydro Jets",
+        "officialName": "Willows Hydro Jets",
+        "abbreviation": "WHJ",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sn",
+        "lscId": "usa-lsc-sn",
+        "zoneId": "usa-zone-western",
+        "website": null,
+        "sourceUrl": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+        "summary": "Willows Hydro Jets is a swim team/program listed by Sierra Nevada Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Willows, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. Historical membership evidence is explicitly flagged.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Sierra Nevada Swimming",
+            "targetId": "usa-lsc-sn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Jennifer Flowerdew",
+            "email": "willowshydrojets@yahoo.com",
+            "phone": "15305171718"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+            "title": "Sierra Nevada Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Official team website not established from available sources.",
+          "The 2026 HOD page includes 2025 membership data and a historical roll call. Listing alone does not confirm current registration."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sn-winn",
+      "after": {
+        "kind": "team",
+        "title": "Winnemucca Whitewater Swim Team",
+        "officialName": "Winnemucca Whitewater Swim Team",
+        "abbreviation": "WINN",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sn",
+        "lscId": "usa-lsc-sn",
+        "zoneId": "usa-zone-western",
+        "website": null,
+        "sourceUrl": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+        "summary": "Winnemucca Whitewater Swim Team is a swim team/program listed by Sierra Nevada Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Winnemucca, NV",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. Historical membership evidence is explicitly flagged.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Sierra Nevada Swimming",
+            "targetId": "usa-lsc-sn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Amber Toland",
+            "email": "ambertoland87@gmail.com",
+            "phone": "17753046778"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+            "title": "Sierra Nevada Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Name variation: LSC lists Winnemucca Whitewater Swim Team; USA Swimming lists Winnemucca  Whitewater Swim Team.",
+          "Official team website not established from available sources.",
+          "The 2026 HOD page includes 2025 membership data and a historical roll call. Listing alone does not confirm current registration."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sn-wac",
+      "after": {
+        "kind": "team",
+        "title": "Wolverine Aquatics",
+        "officialName": "Wolverine Aquatics",
+        "abbreviation": "WAC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sn",
+        "lscId": "usa-lsc-sn",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.wolverineaquaticsclub.com",
+        "sourceUrl": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+        "summary": "Wolverine Aquatics is a swim team/program listed by Sierra Nevada Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Citrus Heights, CA; Rocklin, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. Historical membership evidence is explicitly flagged.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Sierra Nevada Swimming",
+            "targetId": "usa-lsc-sn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Chris or Amy Breitbart",
+            "email": "wolvervineaquatics@yahoo.com",
+            "phone": "19167807946"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+            "title": "Sierra Nevada Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.wolverineaquaticsclub.com",
+            "title": "Wolverine Aquatics Club Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.wolverineaquaticsclub.com/page/home"
+          }
+        ],
+        "gaps": [
+          "The 2026 HOD page includes 2025 membership data and a historical roll call. Listing alone does not confirm current registration."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-sn-wood",
+      "after": {
+        "kind": "team",
+        "title": "Woodland Swim Team",
+        "officialName": "Woodland Swim Team",
+        "abbreviation": "WOOD",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-sn",
+        "lscId": "usa-lsc-sn",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/team/snwst/page/home",
+        "sourceUrl": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+        "summary": "Woodland Swim Team is a swim team/program listed by Sierra Nevada Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Woodland, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. Historical membership evidence is explicitly flagged.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Sierra Nevada Swimming",
+            "targetId": "usa-lsc-sn"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "David Karacozoff",
+            "email": "coachdave.wst@gmail.com",
+            "phone": "19162843590"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.gomotionapp.com/snslsc/UserFiles/Image/QuickUpload/6-30-26-sns-hod-packet-_026397.pdf",
+            "title": "Sierra Nevada Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.teamunify.com/team/snwst/page/home",
+            "title": "Woodland Swim Team Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.woodlandswimteam.org/page/home"
+          }
+        ],
+        "gaps": [
+          "The 2026 HOD page includes 2025 membership data and a historical roll call. Listing alone does not confirm current registration."
+        ]
+      }
+    }
+  ]
+}

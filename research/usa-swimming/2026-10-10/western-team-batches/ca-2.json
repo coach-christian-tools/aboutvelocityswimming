@@ -1,0 +1,4356 @@
+{
+  "division": "knowledge",
+  "scope": "Western Zone swim teams \u2014 Southern California Swimming \u2014 part 2",
+  "sourceUrl": "https://www.socalswim.org/contact/teams-coastal?AspxAutoDetectCookieSupport=1",
+  "capturedAt": "2026-10-10T08:09:39.061196+00:00",
+  "coverage": "partial",
+  "evidence": {
+    "checkedAt": "2026-10-10",
+    "lscCode": "CA",
+    "directoryRowsCollected": 147,
+    "batchRows": 57,
+    "enumeration": "All named rows in the retrieved official directory/roster sources; independent current registration is not guaranteed.",
+    "deduplication": "Compared against 84 published knowledge records and an empty pending queue; facilities combined by organization key; Inland Empire\u2019s 19 existing teams were retained without duplicates.",
+    "remaining": "Missing codes, unreachable websites, registration status, and conflicting sources are visible in each record. Sierra Nevada BBST remains name/code unresolved from official evidence."
+  },
+  "writes": [
+    {
+      "path": "knowledge_entries/usa-team-ca-phoenix-rising-aquatics",
+      "after": {
+        "kind": "team",
+        "title": "Phoenix Rising Aquatics",
+        "officialName": "Phoenix Rising Aquatics",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": null,
+        "sourceUrl": "https://www.socalswim.org/contact/teams-coastal?AspxAutoDetectCookieSupport=1",
+        "summary": "Phoenix Rising Aquatics is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Club-specific coverage not established; listed within Southern California Swimming.",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Coastal Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "phoenixrisingaquatics@gmail.com",
+            "url": "https://www.socalswim.org/contact/teams-coastal?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "661-878-1698",
+            "url": "https://www.socalswim.org/contact/teams-coastal?AspxAutoDetectCookieSupport=1"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-coastal?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Official team website not established from available sources.",
+          "USA Swimming club code / official abbreviation not established; none inferred.",
+          "Club-specific service area / location not established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-pleasant-valley-swim-team",
+      "after": {
+        "kind": "team",
+        "title": "Pleasant Valley Swim Team",
+        "officialName": "Pleasant Valley Swim Team",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": "http://pvst.org/",
+        "sourceUrl": "https://www.socalswim.org/contact/teams-coastal?AspxAutoDetectCookieSupport=1",
+        "summary": "Pleasant Valley Swim Team is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Camarillo, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Coastal Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "markhontas@yahoo.com",
+            "url": "https://www.socalswim.org/contact/teams-coastal?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "818-515-0469",
+            "url": "https://www.socalswim.org/contact/teams-coastal?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Amy Patterson",
+            "email": "pvstpresident@gmail.com",
+            "phone": "18056268796"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-coastal?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-porter-valley-polar-bears",
+      "after": {
+        "kind": "team",
+        "title": "Porter Valley Polar Bears",
+        "officialName": "Porter Valley Polar Bears",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/team/capvcc/page/home",
+        "sourceUrl": "https://www.socalswim.org/contact/teams-coastal?AspxAutoDetectCookieSupport=1",
+        "summary": "Porter Valley Polar Bears is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Chatsworth, CA; Porter Ranch, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Coastal Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "courtland@pvpbswim.org",
+            "url": "https://www.socalswim.org/contact/teams-coastal?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Courtland Day",
+            "email": "courland@pvpbswim.org",
+            "phone": "18183601071"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-coastal?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.teamunify.com/team/capvcc/page/home",
+            "title": "Porter Valley Polar Bears Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/capvcc/page/home"
+          }
+        ],
+        "gaps": [
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-puma-aquatic-team",
+      "after": {
+        "kind": "team",
+        "title": "Puma Aquatic Team",
+        "officialName": "Puma Aquatic Team",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": "http://pumaswim.org/",
+        "sourceUrl": "https://www.socalswim.org/contact/teams-coastal?AspxAutoDetectCookieSupport=1",
+        "summary": "Puma Aquatic Team is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Arroyo Grande, CA; Atascadero, CA; Avila Beach, CA; San Luis Obispo, CA; Templeton, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Coastal Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "pumaswim@yahoo.com",
+            "url": "https://www.socalswim.org/contact/teams-coastal?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "805-709-7946",
+            "url": "https://www.socalswim.org/contact/teams-coastal?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Jud Clark",
+            "email": "pumaswim@yahoo.com",
+            "phone": "18057097946"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Jud Clark",
+            "email": "judclark@yahoo.com",
+            "phone": "18057097946"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-coastal?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-quantum-waves",
+      "after": {
+        "kind": "team",
+        "title": "Quantum Waves",
+        "officialName": "Quantum Waves",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.quantumwavesaquatics.org/",
+        "sourceUrl": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1",
+        "summary": "Quantum Waves is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Burbank, CA; Pasadena, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Pacific Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "quantumwavesteam@gmail.com",
+            "url": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Wilma Wong",
+            "email": "swimuphillteam@gmail.com",
+            "phone": "13107737594"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.quantumwavesaquatics.org/",
+            "title": "Quantum Waves Aquatics",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-rattler-swim-club",
+      "after": {
+        "kind": "team",
+        "title": "Rattler Swim Club",
+        "officialName": "Rattler Swim Club",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": "http://rattlerswimming.org/",
+        "sourceUrl": "https://www.socalswim.org/contact/teams-coastal?AspxAutoDetectCookieSupport=1",
+        "summary": "Rattler Swim Club is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "San Fernando, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Coastal Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "forest@rattlerswimming.org",
+            "url": "https://www.socalswim.org/contact/teams-coastal?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "805-279-0195",
+            "url": "https://www.socalswim.org/contact/teams-coastal?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Forest Riek",
+            "email": "forest@rattlerswimming.org",
+            "phone": "18052790195"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-coastal?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://rattlerswimming.org/",
+            "title": "Rattler Swim Club Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.rattlerswimming.org/page/home"
+          }
+        ],
+        "gaps": [
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-redlands-swim-team",
+      "after": {
+        "kind": "team",
+        "title": "Redlands Swim Team",
+        "officialName": "Redlands Swim Team",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/team/carst/page/home",
+        "sourceUrl": "https://www.socalswim.org/contact/teams-eastern?AspxAutoDetectCookieSupport=1",
+        "summary": "Redlands Swim Team is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Redlands, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Eastern Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "swimnolan93@gmail.com",
+            "url": "https://www.socalswim.org/contact/teams-eastern?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Terri Brown",
+            "email": "teamadmin@redlandsswimteam.org",
+            "phone": "19095575599"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-eastern?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.teamunify.com/team/carst/page/home",
+            "title": "Redlands Swim Team Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/carst/page/home"
+          }
+        ],
+        "gaps": [
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-renegade-swim-club",
+      "after": {
+        "kind": "team",
+        "title": "Renegade Swim Club",
+        "officialName": "Renegade Swim Club",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": "http://renegadeswim.com/",
+        "sourceUrl": "https://www.socalswim.org/contact/teams-coastal?AspxAutoDetectCookieSupport=1",
+        "summary": "Renegade Swim Club is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Club-specific coverage not established; listed within Southern California Swimming.",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Coastal Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "renegadeswimclub@gmail.com",
+            "url": "https://www.socalswim.org/contact/teams-coastal?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "661-993-8913",
+            "url": "https://www.socalswim.org/contact/teams-coastal?AspxAutoDetectCookieSupport=1"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-coastal?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "http://renegadeswim.com/",
+            "title": "Welcome",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/Home.jsp?team=carenegade"
+          }
+        ],
+        "gaps": [
+          "USA Swimming club code / official abbreviation not established; none inferred.",
+          "Club-specific service area / location not established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-revolution-aquatics",
+      "after": {
+        "kind": "team",
+        "title": "Revolution Aquatics",
+        "officialName": "Revolution Aquatics",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.revaquatics.org",
+        "sourceUrl": "https://www.socalswim.org/contact/teams-metro?AspxAutoDetectCookieSupport=1",
+        "summary": "Revolution Aquatics is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Compton, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Metro Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "louispecot404@gmail.com",
+            "url": "https://www.socalswim.org/contact/teams-metro?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Louis Pecot",
+            "email": "coachlouis@pacbell.net",
+            "phone": "13105696474"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-metro?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.revaquatics.org",
+            "title": "Swimming | Revolution Aquatics",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.revaquatics.org/"
+          }
+        ],
+        "gaps": [
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-riverside-aquatics-association",
+      "after": {
+        "kind": "team",
+        "title": "Riverside Aquatics Association",
+        "officialName": "Riverside Aquatics Association",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": "http://raaswim.org/",
+        "sourceUrl": "https://www.socalswim.org/contact/teams-eastern?AspxAutoDetectCookieSupport=1",
+        "summary": "Riverside Aquatics Association is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Riverside, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Eastern Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "coachrodney@raaswim.org",
+            "url": "https://www.socalswim.org/contact/teams-eastern?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "425-478-2746",
+            "url": "https://www.socalswim.org/contact/teams-eastern?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Bryan Haile",
+            "email": "raageneralmanager@gmail.com",
+            "phone": "12099688035"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-eastern?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-rocket-fish",
+      "after": {
+        "kind": "team",
+        "title": "Rocket Fish",
+        "officialName": "Rocket Fish",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": "http://rocketfishswimming.com/",
+        "sourceUrl": "https://www.socalswim.org/contact/teams-metro?AspxAutoDetectCookieSupport=1",
+        "summary": "Rocket Fish is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Club-specific coverage not established; listed within Southern California Swimming.",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Metro Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "hankwise@gmail.com",
+            "url": "https://www.socalswim.org/contact/teams-metro?AspxAutoDetectCookieSupport=1"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-metro?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "USA Swimming club code / official abbreviation not established; none inferred.",
+          "Club-specific service area / location not established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-rose-bowl-aquatics",
+      "after": {
+        "kind": "team",
+        "title": "Rose Bowl Aquatics",
+        "officialName": "Rose Bowl Aquatics",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.rosebowlaquatics.org/",
+        "sourceUrl": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1",
+        "summary": "Rose Bowl Aquatics is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Los Angeles, CA; Pasadena, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Pacific Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "anguyen@rosebowlaquatics.org",
+            "url": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Aleli Cervantes",
+            "email": "acervantes@rosebowlaquatics.org",
+            "phone": "16265640330"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Aleli Cervantes",
+            "email": "acervantes@rosebowlaquatics.org"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.rosebowlaquatics.org/",
+            "title": "Rose Bowl Aquatics Center",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://rosebowlaquatics.org/"
+          }
+        ],
+        "gaps": [
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-rosemead-rapids",
+      "after": {
+        "kind": "team",
+        "title": "Rosemead Rapids",
+        "officialName": "Rosemead Rapids",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": null,
+        "sourceUrl": "https://www.socalswim.org/contact/teams-metro?AspxAutoDetectCookieSupport=1",
+        "summary": "Rosemead Rapids is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Club-specific coverage not established; listed within Southern California Swimming.",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Metro Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "coachscott@rosemeadrapids.org",
+            "url": "https://www.socalswim.org/contact/teams-metro?AspxAutoDetectCookieSupport=1"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-metro?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Official team website not established from available sources.",
+          "USA Swimming club code / official abbreviation not established; none inferred.",
+          "Club-specific service area / location not established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-royal-swim-team",
+      "after": {
+        "kind": "team",
+        "title": "Royal Swim Team",
+        "officialName": "Royal Swim Team",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": "http://royalswimteam.com/",
+        "sourceUrl": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1",
+        "summary": "Royal Swim Team is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Culver City, CA; Sherman Oaks, CA; Van Nuys, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Pacific Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "info@royalswimteam.com",
+            "url": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "818-625-5507",
+            "url": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Royal Swim Team",
+            "email": "info@royalswimteam.com",
+            "phone": "18186255507"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-san-clemente-aquatics",
+      "after": {
+        "kind": "team",
+        "title": "San Clemente Aquatics",
+        "officialName": "San Clemente Aquatics",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": "http://scatswim.org/",
+        "sourceUrl": "https://www.socalswim.org/contact/teams-orange?AspxAutoDetectCookieSupport=1",
+        "summary": "San Clemente Aquatics is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "San Clemente, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Orange Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "jyork@scatswim.org",
+            "url": "https://www.socalswim.org/contact/teams-orange?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "408-821-5600",
+            "url": "https://www.socalswim.org/contact/teams-orange?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Josephine Monge",
+            "email": "JLMONGE@capousd.org",
+            "phone": "19492349544"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Kymberly Sabins",
+            "email": "sanclementeswim@scatswim.org",
+            "phone": "19499222574"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-orange?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://scatswim.org/",
+            "title": "San Clemente Aquatic Team Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/scsscat/page/home"
+          }
+        ],
+        "gaps": [
+          "Name variation: LSC lists San Clemente Aquatics; USA Swimming lists San Clemente Aquatic Team.",
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-san-dimas-aquatics",
+      "after": {
+        "kind": "team",
+        "title": "San Dimas Aquatics",
+        "officialName": "San Dimas Aquatics",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": "http://sandimasaquatics.org/",
+        "sourceUrl": "https://www.socalswim.org/contact/teams-eastern?AspxAutoDetectCookieSupport=1",
+        "summary": "San Dimas Aquatics is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "San Dimas, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Eastern Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "courtney@sandimasaquatics.org",
+            "url": "https://www.socalswim.org/contact/teams-eastern?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "909-560-3918",
+            "url": "https://www.socalswim.org/contact/teams-eastern?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Jennifer Altree",
+            "email": "jennifer@sandimasaquatics.org",
+            "phone": "19512044240"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-eastern?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-san-gabriel-sea-gulls",
+      "after": {
+        "kind": "team",
+        "title": "San Gabriel Sea Gulls",
+        "officialName": "San Gabriel Sea Gulls",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": "http://%20sgsg.org/",
+        "sourceUrl": "https://www.socalswim.org/contact/teams-metro?AspxAutoDetectCookieSupport=1",
+        "summary": "San Gabriel Sea Gulls is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "San Gabriel, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Metro Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "gyinstitute@hotmail.com",
+            "url": "https://www.socalswim.org/contact/teams-metro?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "818-599-9014",
+            "url": "https://www.socalswim.org/contact/teams-metro?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "George Young",
+            "email": "gyinstitute@hotmail.com",
+            "phone": "18185999014"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-metro?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-sandpipers-of-nevada",
+      "after": {
+        "kind": "team",
+        "title": "Sandpipers of Nevada",
+        "officialName": "Sandpipers of Nevada",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": "http://sandpipersofnevada.com/",
+        "sourceUrl": "https://www.socalswim.org/contact/teams-desert?AspxAutoDetectCookieSupport=1",
+        "summary": "Sandpipers of Nevada is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Las Vegas, NV; North Las Vegas, NV",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Desert Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "usaswimcoach@gmail.com",
+            "url": "https://www.socalswim.org/contact/teams-desert?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "702-810-3679",
+            "url": "https://www.socalswim.org/contact/teams-desert?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Brianna Barber",
+            "email": "bbarber@lasvegasymca.org",
+            "phone": "17022409622"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Debbie Miller",
+            "email": "swimsandpipers@gmail.com",
+            "phone": "17027377799"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Kelly King",
+            "email": "kking@lasvegasnevada.gov",
+            "phone": "11702229630"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-desert?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://sandpipersofnevada.com/",
+            "title": "Sandpipers of Nevada Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/scsccsnv/page/home"
+          }
+        ],
+        "gaps": [
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-santa-barbara-swim-club",
+      "after": {
+        "kind": "team",
+        "title": "Santa Barbara Swim Club",
+        "officialName": "Santa Barbara Swim Club",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": "http://sbswim.net",
+        "sourceUrl": "https://www.socalswim.org/contact/teams-coastal?AspxAutoDetectCookieSupport=1",
+        "summary": "Santa Barbara Swim Club is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Santa Barbara, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Coastal Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "markstori01@gmail.com",
+            "url": "https://www.socalswim.org/contact/teams-coastal?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Jennifer Hall",
+            "email": "swimoffice@sbswim.net",
+            "phone": "18056803139"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-coastal?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://sbswim.net",
+            "title": "Santa Barbara Swim Club Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.sbswim.net/page/home"
+          }
+        ],
+        "gaps": [
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-santa-maria-swim-club",
+      "after": {
+        "kind": "team",
+        "title": "Santa Maria Swim Club",
+        "officialName": "Santa Maria Swim Club",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": "http://santamariaswim.com/",
+        "sourceUrl": "https://www.socalswim.org/contact/teams-coastal?AspxAutoDetectCookieSupport=1",
+        "summary": "Santa Maria Swim Club is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Santa Maria, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Coastal Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "santamariaswim@gmail.com",
+            "url": "https://www.socalswim.org/contact/teams-coastal?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "805-714-8210",
+            "url": "https://www.socalswim.org/contact/teams-coastal?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Mike Ashmore",
+            "email": "santamariaswim@gmail.com",
+            "phone": "18059289655"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-coastal?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://santamariaswim.com/",
+            "title": "Santa Maria Swim Club Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.santamariaswim.com/page/home"
+          }
+        ],
+        "gaps": [
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-seal-beach-swim-club",
+      "after": {
+        "kind": "team",
+        "title": "Seal Beach Swim Club",
+        "officialName": "Seal Beach Swim Club",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": "http://sealbeachswimclub.org/",
+        "sourceUrl": "https://www.socalswim.org/contact/teams-orange?AspxAutoDetectCookieSupport=1",
+        "summary": "Seal Beach Swim Club is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Los Alamitos, CA; Seal Beach, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Orange Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "pjhaney@aol.com",
+            "url": "https://www.socalswim.org/contact/teams-orange?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "562-889-4679",
+            "url": "https://www.socalswim.org/contact/teams-orange?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Maria Fattal",
+            "email": "mariafattal@sealbeachswimclub.org",
+            "phone": "15624301092"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-orange?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-slo-swim-club-inc",
+      "after": {
+        "kind": "team",
+        "title": "SLO Swim Club, Inc.",
+        "officialName": "SLO Swim Club, Inc.",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": "http://sloseahawks.org/",
+        "sourceUrl": "https://www.socalswim.org/contact/teams-coastal?AspxAutoDetectCookieSupport=1",
+        "summary": "SLO Swim Club, Inc. is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "San Luis Obispo, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Coastal Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "swim@sloseahawks.org",
+            "url": "https://www.socalswim.org/contact/teams-coastal?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "805-543-9515",
+            "url": "https://www.socalswim.org/contact/teams-coastal?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Alan Peterson",
+            "email": "swim@sloseahawks.org",
+            "phone": "18055439515"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-coastal?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-socal-aquatics-association",
+      "after": {
+        "kind": "team",
+        "title": "SoCal Aquatics Association",
+        "officialName": "SoCal Aquatics Association",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.socalaquatics.com",
+        "sourceUrl": "https://www.socalswim.org/contact/teams-orange?AspxAutoDetectCookieSupport=1",
+        "summary": "SoCal Aquatics Association is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Anaheim, CA; Tustin, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Orange Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "coachsteve@socalaquatics.com",
+            "url": "https://www.socalswim.org/contact/teams-orange?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Steve Pickell",
+            "email": "sjpickell@gmail.com",
+            "phone": "15629437174"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-orange?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.socalaquatics.com",
+            "title": "SOCAL Aquatics Association Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/scsscaa/page/home"
+          }
+        ],
+        "gaps": [
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-south-bay-swim-team",
+      "after": {
+        "kind": "team",
+        "title": "South Bay Swim Team",
+        "officialName": "South Bay Swim Team",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": "http://southbayswimteam.org",
+        "sourceUrl": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1",
+        "summary": "South Bay Swim Team is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Hawthorne, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Pacific Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "sobaswimteam1@gmail.com",
+            "url": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Kathy Gore",
+            "email": "southbayswimteam@socal.rr.com",
+            "phone": "13106436523"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://southbayswimteam.org",
+            "title": "South Bay Swim Team Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.southbayswimteam.org/page/home"
+          }
+        ],
+        "gaps": [
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-south-gate-aqua-coalition",
+      "after": {
+        "kind": "team",
+        "title": "South Gate Aqua Coalition",
+        "officialName": "South Gate Aqua Coalition",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": null,
+        "sourceUrl": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1",
+        "summary": "South Gate Aqua Coalition is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "South Gate, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Pacific Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "ozziepolo@aim.com",
+            "url": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "323-787-6221",
+            "url": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Daniel Ruiz",
+            "email": "pack13polo@gmai.com",
+            "phone": "13234000783"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Official team website not established from available sources.",
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-south-orange-county-aquatics",
+      "after": {
+        "kind": "team",
+        "title": "South Orange County Aquatics",
+        "officialName": "South Orange County Aquatics",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": "http://southocaquatics.com/",
+        "sourceUrl": "https://www.socalswim.org/contact/teams-orange?AspxAutoDetectCookieSupport=1",
+        "summary": "South Orange County Aquatics is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "San Juan Capistrano, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Orange Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "coachkevin@southocaquatics.com",
+            "url": "https://www.socalswim.org/contact/teams-orange?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "949-312-1242",
+            "url": "https://www.socalswim.org/contact/teams-orange?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Kevin Clements",
+            "email": "southocaquatics@gmail.com",
+            "phone": "19493121242"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-orange?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://southocaquatics.com/",
+            "title": "South Orange County Aquatics Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.southocaquatics.com/page/home"
+          }
+        ],
+        "gaps": [
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-south-pasadena-sea-tigers",
+      "after": {
+        "kind": "team",
+        "title": "South Pasadena Sea Tigers",
+        "officialName": "South Pasadena Sea Tigers",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": "http://Seatigers.org",
+        "sourceUrl": "https://www.socalswim.org/contact/teams-metro?AspxAutoDetectCookieSupport=1",
+        "summary": "South Pasadena Sea Tigers is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "South Pasadena, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Metro Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "mark.barr22@gmail.com",
+            "url": "https://www.socalswim.org/contact/teams-metro?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Patrick Armstrong",
+            "email": "board@seatigers.org",
+            "phone": "16268640862"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-metro?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-speed-aquatics",
+      "after": {
+        "kind": "team",
+        "title": "Speed Aquatics",
+        "officialName": "Speed Aquatics",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.speedaquatics.org",
+        "sourceUrl": "https://www.socalswim.org/contact/teams-orange?AspxAutoDetectCookieSupport=1",
+        "summary": "Speed Aquatics is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Irvine , CA; Irvine, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Orange Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "speedaquatics@gmail.com",
+            "url": "https://www.socalswim.org/contact/teams-orange?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Edwin M Carrera",
+            "email": "ed3carrera@gmail.com",
+            "phone": "19493072141"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Ed Carrera",
+            "email": "speedaquatics@gmail.com",
+            "phone": "19498259901"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-orange?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.speedaquatics.org",
+            "title": "Speed Aquatics",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-splash-aquatics",
+      "after": {
+        "kind": "team",
+        "title": "Splash Aquatics",
+        "officialName": "Splash Aquatics",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": "http://splashaquatics.com/",
+        "sourceUrl": "https://www.socalswim.org/contact/teams-orange?AspxAutoDetectCookieSupport=1",
+        "summary": "Splash Aquatics is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Costa Mesa, CA; Fountain Valley, CA; Huntington Beach, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Orange Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "coachcynthia@splashaquatics.com",
+            "url": "https://www.socalswim.org/contact/teams-orange?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "714-775-0212",
+            "url": "https://www.socalswim.org/contact/teams-orange?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Robert Bandaruk",
+            "email": "coachbob@splashaquatics.com",
+            "phone": "17147750212"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Cynthia Bandaruk",
+            "email": "coachcynthia@splashaquatics.com",
+            "phone": "17144961762"
+          },
+          {
+            "role": "Public team website contact",
+            "email": "swim@splashaquatics.net",
+            "url": "http://splashaquatics.com/"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-orange?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://splashaquatics.com/",
+            "title": "Home | Splash Aquatics",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.splashaquatics.com/"
+          }
+        ],
+        "gaps": [
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-star-aquatics",
+      "after": {
+        "kind": "team",
+        "title": "STAR Aquatics",
+        "officialName": "STAR Aquatics",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": "http://staraquaticsclub.com/",
+        "sourceUrl": "https://www.socalswim.org/contact/teams-eastern?AspxAutoDetectCookieSupport=1",
+        "summary": "STAR Aquatics is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Hemet, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Eastern Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "eabihider@aol.com",
+            "url": "https://www.socalswim.org/contact/teams-eastern?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "951-768-8671",
+            "url": "https://www.socalswim.org/contact/teams-eastern?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Ellie Abihider",
+            "email": "eabihider@aol.com",
+            "phone": "19517688671"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-eastern?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-surfside-swim-team",
+      "after": {
+        "kind": "team",
+        "title": "Surfside Swim Team",
+        "officialName": "Surfside Swim Team",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.surfsideswimteam.com",
+        "sourceUrl": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1",
+        "summary": "Surfside Swim Team is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Manhattan Beach, CA; Redondo Beach, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Pacific Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "jbyork@verizon.net",
+            "url": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Kayo Libiano",
+            "email": "surfsidemembership@yahoo.com",
+            "phone": "13108978085"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-swim-team-of-placentia",
+      "after": {
+        "kind": "team",
+        "title": "Swim Team of Placentia",
+        "officialName": "Swim Team of Placentia",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": "http://swimplacentia.org/",
+        "sourceUrl": "https://www.socalswim.org/contact/teams-orange?AspxAutoDetectCookieSupport=1",
+        "summary": "Swim Team of Placentia is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Placentia, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Orange Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "swimcoachdevon@yahoo.com",
+            "url": "https://www.socalswim.org/contact/teams-orange?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "714-578-3184",
+            "url": "https://www.socalswim.org/contact/teams-orange?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Devon Ames",
+            "email": "swimcoachdevon@yahoo.com",
+            "phone": "17143082263"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-orange?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-swim-torrance",
+      "after": {
+        "kind": "team",
+        "title": "Swim Torrance",
+        "officialName": "Swim Torrance",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.swimtorrance.com",
+        "sourceUrl": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1",
+        "summary": "Swim Torrance is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Torrance, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Pacific Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "swimtorranceemail@gmail.com",
+            "url": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Chantal Woodard",
+            "email": "coachchamwood@gmail.com",
+            "phone": "17049417374"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Kimi Davidson",
+            "email": "coachkimi@gmail.com",
+            "phone": "18434256448"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.swimtorrance.com",
+            "title": "Swim Torrance Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/scsst/page/home"
+          }
+        ],
+        "gaps": [
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-swimnation-aquatics-programs",
+      "after": {
+        "kind": "team",
+        "title": "SwimNation Aquatics Programs",
+        "officialName": "SwimNation Aquatics Programs",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.swimnation.org",
+        "sourceUrl": "https://www.socalswim.org/contact/teams-orange?AspxAutoDetectCookieSupport=1",
+        "summary": "SwimNation Aquatics Programs is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Irvine, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Orange Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "stevenriches@swimnation.org",
+            "url": "https://www.socalswim.org/contact/teams-orange?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Steven Riches",
+            "email": "stevenriches@swimnation.org",
+            "phone": "19492781656"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-orange?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.swimnation.org",
+            "title": "SwimNation Aquatics Programs Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.swimnation.org/page/home"
+          }
+        ],
+        "gaps": [
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-tc-falcons-swim-club",
+      "after": {
+        "kind": "team",
+        "title": "TC Falcons Swim Club",
+        "officialName": "TC Falcons Swim Club",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": "http://falconswim.com/",
+        "sourceUrl": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1",
+        "summary": "TC Falcons Swim Club is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Club-specific coverage not established; listed within Southern California Swimming.",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Pacific Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "tcfalconswim@gmail.com",
+            "url": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "818-648-4337",
+            "url": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "http://falconswim.com/",
+            "title": "TC Falcon Swim Club | Welcome",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://falconswim.com/"
+          }
+        ],
+        "gaps": [
+          "USA Swimming club code / official abbreviation not established; none inferred.",
+          "Club-specific service area / location not established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-team-rebel-aquatics",
+      "after": {
+        "kind": "team",
+        "title": "Team Rebel Aquatics",
+        "officialName": "Team Rebel Aquatics",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": "http://teamrebelaquatics.org",
+        "sourceUrl": "https://www.socalswim.org/contact/teams-desert?AspxAutoDetectCookieSupport=1",
+        "summary": "Team Rebel Aquatics is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Las Vegas, NV",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Desert Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "lorenaswim@hotmail.com",
+            "url": "https://www.socalswim.org/contact/teams-desert?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Lorena Diaconescu",
+            "email": "lorenaswim@hotmail.com",
+            "phone": "17026302393"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-desert?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://teamrebelaquatics.org",
+            "title": "Team Rebel Aquatics Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.traswim.com/page/home"
+          }
+        ],
+        "gaps": [
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-team-swim-los-angeles-playla",
+      "after": {
+        "kind": "team",
+        "title": "Team Swim Los Angeles - PLAYLA",
+        "officialName": "Team Swim Los Angeles - PLAYLA",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": null,
+        "sourceUrl": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1",
+        "summary": "Team Swim Los Angeles - PLAYLA is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Club-specific coverage not established; listed within Southern California Swimming.",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Pacific Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "steve.steward@lacity.org",
+            "url": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Official team website not established from available sources.",
+          "USA Swimming club code / official abbreviation not established; none inferred.",
+          "Club-specific service area / location not established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-temecula-swim-club",
+      "after": {
+        "kind": "team",
+        "title": "Temecula Swim Club",
+        "officialName": "Temecula Swim Club",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.temeculaswimclub.com",
+        "sourceUrl": "https://www.socalswim.org/contact/teams-eastern?AspxAutoDetectCookieSupport=1",
+        "summary": "Temecula Swim Club is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Murrieta, CA; Temecula, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Eastern Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "coachjenn@tmecswim.org",
+            "url": "https://www.socalswim.org/contact/teams-eastern?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Jenn Beech",
+            "email": "coachjennbeech@yahoo.com",
+            "phone": "19516995526"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-eastern?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-the-claremont-club",
+      "after": {
+        "kind": "team",
+        "title": "The Claremont Club",
+        "officialName": "The Claremont Club",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": "http://tccswim.org/",
+        "sourceUrl": "https://www.socalswim.org/contact/teams-eastern?AspxAutoDetectCookieSupport=1",
+        "summary": "The Claremont Club is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Claremont, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Eastern Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "cwatts@claremontclub.com",
+            "url": "https://www.socalswim.org/contact/teams-eastern?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "559-920-5299",
+            "url": "https://www.socalswim.org/contact/teams-eastern?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Christian Watts",
+            "email": "cwatts@claremontclub.com",
+            "phone": "19096256791"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-eastern?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-the-spartans-of-la-canada",
+      "after": {
+        "kind": "team",
+        "title": "The Spartans of La Canada",
+        "officialName": "The Spartans of La Canada",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": "http://spartanswim.com/",
+        "sourceUrl": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1",
+        "summary": "The Spartans of La Canada is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "La Canada Flintridge, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Pacific Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "firecrackerjohny@gmail.com",
+            "url": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "310-383-8744",
+            "url": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Margaret O'Rourke",
+            "email": "margaret@pearl360partners.com",
+            "phone": "13102668907"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://spartanswim.com/",
+            "title": "The Spartans of La Ca\u00f1ada Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/spartansla/page/home"
+          }
+        ],
+        "gaps": [
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-the-swim-team",
+      "after": {
+        "kind": "team",
+        "title": "The Swim Team",
+        "officialName": "The Swim Team",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": "http://theswimteam.com/",
+        "sourceUrl": "https://www.socalswim.org/contact/teams-orange?AspxAutoDetectCookieSupport=1",
+        "summary": "The Swim Team is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Laguna Hills, CA; Lake Forest, CA; Mission Viejo, CA; Rancho Santa Margarita, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Orange Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "coachteeter@gmail.com",
+            "url": "https://www.socalswim.org/contact/teams-orange?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "949-923-7981",
+            "url": "https://www.socalswim.org/contact/teams-orange?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Tim R Teeter",
+            "email": "coachteeter@gmail.com",
+            "phone": "19499237981"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Tim Teeter",
+            "email": "coachteeter@gmail.com",
+            "phone": "19492073375"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-orange?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://theswimteam.com/",
+            "title": "The Swim Team Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/scsset/page/home"
+          }
+        ],
+        "gaps": [
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-trident-swim-club",
+      "after": {
+        "kind": "team",
+        "title": "Trident Swim Club",
+        "officialName": "Trident Swim Club",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": "http://swimtrident.com/",
+        "sourceUrl": "https://www.socalswim.org/contact/teams-metro?AspxAutoDetectCookieSupport=1",
+        "summary": "Trident Swim Club is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Rowland Heights, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Metro Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "tridentswimclub@gmail.com",
+            "url": "https://www.socalswim.org/contact/teams-metro?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "626-498-0070",
+            "url": "https://www.socalswim.org/contact/teams-metro?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Michael Cody",
+            "email": "tridentswimclub@gmail.com",
+            "phone": "16264980070"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-metro?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-trojan-swim-club",
+      "after": {
+        "kind": "team",
+        "title": "Trojan Swim Club",
+        "officialName": "Trojan Swim Club",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": null,
+        "sourceUrl": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1",
+        "summary": "Trojan Swim Club is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Los Angeles, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Pacific Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "leamaure@usc.edu",
+            "url": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Kevin Rapien",
+            "email": "rapien@usc.edu",
+            "phone": "12134799310"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Official team website not established from available sources.",
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-tsm-aquatics",
+      "after": {
+        "kind": "team",
+        "title": "TSM Aquatics",
+        "officialName": "TSM Aquatics",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": "http://tsmaquatics.org/",
+        "sourceUrl": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1",
+        "summary": "TSM Aquatics is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Culver City, CA; Santa Monica, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Pacific Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "info@teamsantamonica.org",
+            "url": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "310-400-0639",
+            "url": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Iman Khadembashi",
+            "email": "iman@teamsantamonica.org",
+            "phone": "14242726876"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Mohammad Khadembashi",
+            "email": "mak@teamsantamonica.org",
+            "phone": "13104000639"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://tsmaquatics.org/",
+            "title": "TSM Aquatics - Swim Lessons, Swim Team & Water Polo - Santa Monica",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://tsmaquatics.org/"
+          }
+        ],
+        "gaps": [
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-tustin-dolphins",
+      "after": {
+        "kind": "team",
+        "title": "Tustin Dolphins",
+        "officialName": "Tustin Dolphins",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": null,
+        "sourceUrl": "https://www.socalswim.org/contact/teams-orange?AspxAutoDetectCookieSupport=1",
+        "summary": "Tustin Dolphins is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Club-specific coverage not established; listed within Southern California Swimming.",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Orange Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-orange?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Official team website not established from available sources.",
+          "USA Swimming club code / official abbreviation not established; none inferred.",
+          "Club-specific service area / location not established from available sources.",
+          "No public organizational contact established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-university-of-california-los-angeles",
+      "after": {
+        "kind": "team",
+        "title": "University of California, Los Angeles",
+        "officialName": "University of California, Los Angeles",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": null,
+        "sourceUrl": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1",
+        "summary": "University of California, Los Angeles is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Club-specific coverage not established; listed within Southern California Swimming.",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Pacific Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Official team website not established from available sources.",
+          "USA Swimming club code / official abbreviation not established; none inferred.",
+          "Club-specific service area / location not established from available sources.",
+          "No public organizational contact established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-victory-aquatics",
+      "after": {
+        "kind": "team",
+        "title": "Victory Aquatics",
+        "officialName": "Victory Aquatics",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": "http://victoryaquatics.org/",
+        "sourceUrl": "https://www.socalswim.org/contact/teams-eastern?AspxAutoDetectCookieSupport=1",
+        "summary": "Victory Aquatics is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "San Bernardino, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Eastern Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "victory.swim.assist@gmail.com",
+            "url": "https://www.socalswim.org/contact/teams-eastern?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "909-735-0403",
+            "url": "https://www.socalswim.org/contact/teams-eastern?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Loren McCoy",
+            "email": "admin@victoryaquatics.org",
+            "phone": "19513176933"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-eastern?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-viking-aquatics",
+      "after": {
+        "kind": "team",
+        "title": "Viking Aquatics",
+        "officialName": "Viking Aquatics",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.vikingaquatics.org",
+        "sourceUrl": "https://www.socalswim.org/contact/teams-metro?AspxAutoDetectCookieSupport=1",
+        "summary": "Viking Aquatics is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Long Beach, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Metro Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "bradley@vikingaquatics.org",
+            "url": "https://www.socalswim.org/contact/teams-metro?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Chris Oeding",
+            "email": "chris@vikingaquatics.org",
+            "phone": "17144783909"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-metro?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.vikingaquatics.org",
+            "title": "Viking Aquatics Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/cava/page/home"
+          }
+        ],
+        "gaps": [
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-vision-swim",
+      "after": {
+        "kind": "team",
+        "title": "Vision Swim",
+        "officialName": "Vision Swim",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": "http://visionswim.com/",
+        "sourceUrl": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1",
+        "summary": "Vision Swim is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Glendale, CA; Los Angeles, CA; Sherman Oaks, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Pacific Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "coachfrancois@live.com",
+            "url": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "424-200-9977",
+            "url": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "FRANCOIS HARRIS",
+            "email": "CoachFrancois@live.com",
+            "phone": "14242009977"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Francois Harris",
+            "email": "coachfrancois@visionswim.com",
+            "phone": "14242009977"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-waterworks-aquatics-swim-club",
+      "after": {
+        "kind": "team",
+        "title": "Waterworks Aquatics Swim Club",
+        "officialName": "Waterworks Aquatics Swim Club",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": "http://waterworksswim.com/",
+        "sourceUrl": "https://www.socalswim.org/contact/teams-orange?AspxAutoDetectCookieSupport=1",
+        "summary": "Waterworks Aquatics Swim Club is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Irvine, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Orange Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "paulinetao07@gmail.com",
+            "url": "https://www.socalswim.org/contact/teams-orange?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "949-419-4452",
+            "url": "https://www.socalswim.org/contact/teams-orange?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Calvin Cai",
+            "email": "calvin_kai@hotmail.com",
+            "phone": "15182998666"
+          },
+          {
+            "role": "Public team website contact",
+            "email": "info@waterworksswim.com",
+            "url": "http://waterworksswim.com/"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-orange?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://waterworksswim.com/",
+            "title": "Home | Waterworks Swim School",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.waterworksswim.com/"
+          }
+        ],
+        "gaps": [
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-waverunners-aquatics",
+      "after": {
+        "kind": "team",
+        "title": "WaveRunners Aquatics",
+        "officialName": "WaveRunners Aquatics",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": null,
+        "sourceUrl": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1",
+        "summary": "WaveRunners Aquatics is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Club-specific coverage not established; listed within Southern California Swimming.",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Pacific Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "tshima@xrds.org",
+            "url": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "Official team website not established from available sources.",
+          "USA Swimming club code / official abbreviation not established; none inferred.",
+          "Club-specific service area / location not established from available sources."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-west-valley-sea-dragons",
+      "after": {
+        "kind": "team",
+        "title": "West Valley Sea Dragons",
+        "officialName": "West Valley Sea Dragons",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": "http://westvalleyseadragons.com/",
+        "sourceUrl": "https://www.socalswim.org/contact/teams-coastal?AspxAutoDetectCookieSupport=1",
+        "summary": "West Valley Sea Dragons is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Calabasas, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Coastal Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "chris@westvalleyseadragons.com",
+            "url": "https://www.socalswim.org/contact/teams-coastal?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "818-601-3147",
+            "url": "https://www.socalswim.org/contact/teams-coastal?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Christohper Lee Burke",
+            "email": "chris@westvalleyseadragons.com",
+            "phone": "18186013147"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-coastal?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-westside-aquatics",
+      "after": {
+        "kind": "team",
+        "title": "Westside Aquatics",
+        "officialName": "Westside Aquatics",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": "http://westsideaquatics.com/",
+        "sourceUrl": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1",
+        "summary": "Westside Aquatics is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Pacific Palisades, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Pacific Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "valry84@gmail.com",
+            "url": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "818-259-6575",
+            "url": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Adam Blakis",
+            "email": "adamblakis@gmail.com",
+            "phone": "13109855308"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-pacific?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://westsideaquatics.com/",
+            "title": "Westside Aquatics Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.westsideaquatics.com/page/home"
+          }
+        ],
+        "gaps": [
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-whittier-aquatic-club",
+      "after": {
+        "kind": "team",
+        "title": "Whittier Aquatic Club",
+        "officialName": "Whittier Aquatic Club",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": "http://whittieraquaticclub.org/",
+        "sourceUrl": "https://www.socalswim.org/contact/teams-metro?AspxAutoDetectCookieSupport=1",
+        "summary": "Whittier Aquatic Club is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Whittier, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Metro Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "tonydual@gmail.com",
+            "url": "https://www.socalswim.org/contact/teams-metro?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "562-822-6851",
+            "url": "https://www.socalswim.org/contact/teams-metro?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Hazel Torrez",
+            "email": "whittieraquaticclub@hotmail.com",
+            "phone": "15625771813"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-metro?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10.",
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-woodbridge-wahoos",
+      "after": {
+        "kind": "team",
+        "title": "Woodbridge Wahoos",
+        "officialName": "Woodbridge Wahoos",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/woodbridgest/page/home",
+        "sourceUrl": "https://www.socalswim.org/contact/teams-orange?AspxAutoDetectCookieSupport=1",
+        "summary": "Woodbridge Wahoos is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Irvine, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Orange Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "hicksontri@gmail.com",
+            "url": "https://www.socalswim.org/contact/teams-orange?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Kristin Mackenzie",
+            "email": "bkmackenzie11@msn.com",
+            "phone": "17143194101"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-orange?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/woodbridgest/page/home",
+            "title": "Woodbridge Swim Team Home",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-ymca-of-orange-county",
+      "after": {
+        "kind": "team",
+        "title": "YMCA of Orange County",
+        "officialName": "YMCA of Orange County",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/ymca-0478/page/home",
+        "sourceUrl": "https://www.socalswim.org/contact/teams-orange?AspxAutoDetectCookieSupport=1",
+        "summary": "YMCA of Orange County is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Fullerton, CA; Mission Viejo, CA; Newport Beach, CA; Rowland Heights, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Orange Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "psturzen@sbcglobal.net",
+            "url": "https://www.socalswim.org/contact/teams-orange?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Southern California Swimming",
+            "email": "officemanager@socalswim.org",
+            "phone": "13106841151"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "YMCA of Orange County",
+            "email": "psturzenacker@ymcaoc.org",
+            "phone": "17148799622"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Salvador Jimenez",
+            "email": "sjimenez@ymcaoc.org",
+            "phone": "17149256601"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "ymca of orange county  yoc",
+            "email": "jandreini@ymcaoc.org",
+            "phone": "19498599622"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-orange?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/ymca-0478/page/home",
+            "title": "Fullerton Family YMCA Home",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-ca-yucaipa-swim-team",
+      "after": {
+        "kind": "team",
+        "title": "Yucaipa Swim Team",
+        "officialName": "Yucaipa Swim Team",
+        "abbreviation": null,
+        "abbreviationType": null,
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-ca",
+        "lscId": "usa-lsc-ca",
+        "zoneId": "usa-zone-western",
+        "website": "http://yucaipaswim.org/",
+        "sourceUrl": "https://www.socalswim.org/contact/teams-eastern?AspxAutoDetectCookieSupport=1",
+        "summary": "Yucaipa Swim Team is a swim team/program listed by Southern California Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Yucaipa, CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Southern California Swimming",
+            "targetId": "usa-lsc-ca"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "LSC committee",
+            "name": "Southern California Swimming Eastern Committee",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "ystcoachshelby@gmail.com",
+            "url": "https://www.socalswim.org/contact/teams-eastern?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "909-747-9834",
+            "url": "https://www.socalswim.org/contact/teams-eastern?AspxAutoDetectCookieSupport=1"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Shelby Hernandez",
+            "email": "ystadmn@gmail.com",
+            "phone": "19097479834"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.socalswim.org/contact/teams-eastern?AspxAutoDetectCookieSupport=1",
+            "title": "Southern California Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://yucaipaswim.org/",
+            "title": "Yucaipa Aquatics Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.yucaipaswim.org/page/home"
+          }
+        ],
+        "gaps": [
+          "USA Swimming club code / official abbreviation not established; none inferred."
+        ]
+      }
+    }
+  ]
+}

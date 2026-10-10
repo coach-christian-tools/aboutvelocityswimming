@@ -1,0 +1,1288 @@
+{
+  "division": "knowledge",
+  "scope": "Western Zone swim teams \u2014 Pacific Swimming \u2014 part 2",
+  "sourceUrl": "https://www.pacswim.org/members/zones/zone-3/clubs-2",
+  "capturedAt": "2026-10-10T08:09:39.146142+00:00",
+  "coverage": "partial",
+  "evidence": {
+    "checkedAt": "2026-10-10",
+    "lscCode": "PC",
+    "directoryRowsCollected": 107,
+    "batchRows": 17,
+    "enumeration": "All named rows in the retrieved official directory/roster sources; independent current registration is not guaranteed.",
+    "deduplication": "Compared against 84 published knowledge records and an empty pending queue; facilities combined by organization key; Inland Empire\u2019s 19 existing teams were retained without duplicates.",
+    "remaining": "Missing codes, unreachable websites, registration status, and conflicting sources are visible in each record. Sierra Nevada BBST remains name/code unresolved from official evidence."
+  },
+  "writes": [
+    {
+      "path": "knowledge_entries/usa-team-pc-tca",
+      "after": {
+        "kind": "team",
+        "title": "Thunder Coast Aquatics",
+        "officialName": "Thunder Coast Aquatics",
+        "abbreviation": "TCA",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pc",
+        "lscId": "usa-lsc-pc",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.thundercoastaquatics.com/",
+        "sourceUrl": "https://www.pacswim.org/members/zones/zone-3/clubs-2",
+        "summary": "Thunder Coast Aquatics is a swim team/program listed by Pacific Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "4 Harris Hill Dr. Novato CA 94947",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. LSC-listed cities can be mailing addresses rather than pool locations.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Swimming",
+            "targetId": "usa-lsc-pc"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "Internal Pacific Swimming zone",
+            "name": "Pacific Swimming Zone 3",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "tevers4@me.com",
+            "url": "https://www.pacswim.org/members/zones/zone-3/clubs-2"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(415) 892-2269",
+            "url": "https://www.pacswim.org/members/zones/zone-3/clubs-2"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Tom Evers",
+            "email": "tevers4@me.com",
+            "phone": "14159020064"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pacswim.org/members/zones/zone-3/clubs-2",
+            "title": "Pacific Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pc-tigr",
+      "after": {
+        "kind": "team",
+        "title": "Tiger Aquatics",
+        "officialName": "Tiger Aquatics",
+        "abbreviation": "TIGR",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pc",
+        "lscId": "usa-lsc-pc",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.tigeraquatics.com/",
+        "sourceUrl": "https://www.pacswim.org/members/zones/zone-2/zone-2-teams-directory",
+        "summary": "Tiger Aquatics is a swim team/program listed by Pacific Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Stockton, CA 95204",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. LSC-listed cities can be mailing addresses rather than pool locations.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Swimming",
+            "targetId": "usa-lsc-pc"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "Internal Pacific Swimming zone",
+            "name": "Pacific Swimming Zone 2",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "tigeraquatics@gmail.com",
+            "url": "https://www.pacswim.org/members/zones/zone-2/zone-2-teams-directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(209) 888-4532",
+            "url": "https://www.pacswim.org/members/zones/zone-2/zone-2-teams-directory"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Adriana Hernandez",
+            "email": "tigeraquatics@gmail.com",
+            "phone": "12098884532"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pacswim.org/members/zones/zone-2/zone-2-teams-directory",
+            "title": "Pacific Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.tigeraquatics.com/",
+            "title": "Tiger Aquatics Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/psta/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pc-triv",
+      "after": {
+        "kind": "team",
+        "title": "Tri Valley Aquatics",
+        "officialName": "Tri Valley Aquatics",
+        "abbreviation": "TRIV",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pc",
+        "lscId": "usa-lsc-pc",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/pctva/page/home",
+        "sourceUrl": "https://www.pacswim.org/members/zones/zone-2/zone-2-teams-directory",
+        "summary": "Tri Valley Aquatics is a swim team/program listed by Pacific Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Livermore, CA 94550",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. LSC-listed cities can be mailing addresses rather than pool locations.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Swimming",
+            "targetId": "usa-lsc-pc"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "Internal Pacific Swimming zone",
+            "name": "Pacific Swimming Zone 2",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "trivalleyaquatics@gmail.com",
+            "url": "https://www.pacswim.org/members/zones/zone-2/zone-2-teams-directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(925) 321-6925",
+            "url": "https://www.pacswim.org/members/zones/zone-2/zone-2-teams-directory"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Daniel Ridosko",
+            "email": "trivalleyaquatics@gmail.com",
+            "phone": "19253216925"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pacswim.org/members/zones/zone-2/zone-2-teams-directory",
+            "title": "Pacific Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/pctva/page/home",
+            "title": "Tri Valley Aquatics Home",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pc-tvac",
+      "after": {
+        "kind": "team",
+        "title": "Triton Aquatic Club",
+        "officialName": "Triton Aquatic Club",
+        "abbreviation": "TVAC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pc",
+        "lscId": "usa-lsc-pc",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.tritonaquatics.org/",
+        "sourceUrl": "https://www.pacswim.org/members/zones/zone-2/zone-2-teams-directory",
+        "summary": "Triton Aquatic Club is a swim team/program listed by Pacific Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Pleasanton, CA 94566",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. LSC-listed cities can be mailing addresses rather than pool locations.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Swimming",
+            "targetId": "usa-lsc-pc"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "Internal Pacific Swimming zone",
+            "name": "Pacific Swimming Zone 2",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "wilfredrgarcia@gmail.com",
+            "url": "https://www.pacswim.org/members/zones/zone-2/zone-2-teams-directory"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pacswim.org/members/zones/zone-2/zone-2-teams-directory",
+            "title": "Pacific Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.tritonaquatics.org/",
+            "title": "Tri-Valley Triton Aquatics | Water Polo & Swimming",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pc-ud",
+      "after": {
+        "kind": "team",
+        "title": "Ukiah Dolphins",
+        "officialName": "Ukiah Dolphins",
+        "abbreviation": "UD",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pc",
+        "lscId": "usa-lsc-pc",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/ud/page/home",
+        "sourceUrl": "https://www.pacswim.org/members/zones/zone-3/clubs-2",
+        "summary": "Ukiah Dolphins is a swim team/program listed by Pacific Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "PO Box 635 Ukiah CA 95482",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. LSC-listed cities can be mailing addresses rather than pool locations.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Swimming",
+            "targetId": "usa-lsc-pc"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "Internal Pacific Swimming zone",
+            "name": "Pacific Swimming Zone 3",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "coachbarrett1687@gmail.com",
+            "url": "https://www.pacswim.org/members/zones/zone-3/clubs-2"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Kristine Gonzalez",
+            "email": "ukiahdolphinsswimteam@gmail.com",
+            "phone": "17078411319"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pacswim.org/members/zones/zone-3/clubs-2",
+            "title": "Pacific Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/ud/page/home",
+            "title": "Ukiah Dolphins Home",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pc-ukac",
+      "after": {
+        "kind": "team",
+        "title": "Ukiah Krakens Aquatic Club",
+        "officialName": "Ukiah Krakens Aquatic Club",
+        "abbreviation": "UKAC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pc",
+        "lscId": "usa-lsc-pc",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.ukiahkrakens.com/",
+        "sourceUrl": "https://www.pacswim.org/members/zones/zone-3/clubs-2",
+        "summary": "Ukiah Krakens Aquatic Club is a swim team/program listed by Pacific Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Ukiah CA 95482",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. LSC-listed cities can be mailing addresses rather than pool locations.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Swimming",
+            "targetId": "usa-lsc-pc"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "Internal Pacific Swimming zone",
+            "name": "Pacific Swimming Zone 3",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "joeselzer@gmail.com",
+            "url": "https://www.pacswim.org/members/zones/zone-3/clubs-2"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Joe Selzer",
+            "email": "joeselzer@gmail.com",
+            "phone": "17079722352"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pacswim.org/members/zones/zone-3/clubs-2",
+            "title": "Pacific Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.ukiahkrakens.com/",
+            "title": "Ukiah Krakens Aquatic Club",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pc-ucpa",
+      "after": {
+        "kind": "team",
+        "title": "University Club Swimming",
+        "officialName": "University Club Swimming",
+        "abbreviation": "UCPA",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pc",
+        "lscId": "usa-lsc-pc",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.ucpaloalto.com/Default.aspx?p=DynamicModule&pageid=373458&ssid=287907&vnf=1",
+        "sourceUrl": "https://www.pacswim.org/members/zones/zone-1-north/clubs",
+        "summary": "University Club Swimming is a swim team/program listed by Pacific Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Palo Alto CA 94304",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. LSC-listed cities can be mailing addresses rather than pool locations.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Swimming",
+            "targetId": "usa-lsc-pc"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "Internal Pacific Swimming zone",
+            "name": "Pacific Swimming Zone 1N",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "msheppard@ucpaloalto.com",
+            "url": "https://www.pacswim.org/members/zones/zone-1-north/clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(901) 857-0338",
+            "url": "https://www.pacswim.org/members/zones/zone-1-north/clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Vivian Hurney",
+            "email": "ucpaaquatics@gmail.com",
+            "phone": "16693507810"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pacswim.org/members/zones/zone-1-north/clubs",
+            "title": "Pacific Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          }
+        ],
+        "gaps": [
+          "Website is linked by an official directory, but readable team content could not be independently verified on 2026-10-10."
+        ]
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pc-unev",
+      "after": {
+        "kind": "team",
+        "title": "University of Nevada",
+        "officialName": "University of Nevada",
+        "abbreviation": "UNEV",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pc",
+        "lscId": "usa-lsc-pc",
+        "zoneId": "usa-zone-western",
+        "website": "https://nevadawolfpack.com/sports/womens-swimming-and-diving",
+        "sourceUrl": "https://www.pacswim.org/members/zones/zone-4/z4-clubs",
+        "summary": "University of Nevada is a swim team/program listed by Pacific Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Reno NV 89557",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. LSC-listed cities can be mailing addresses rather than pool locations.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Swimming",
+            "targetId": "usa-lsc-pc"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "Internal Pacific Swimming zone",
+            "name": "Pacific Swimming Zone 4",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(775) 682-6915",
+            "url": "https://www.pacswim.org/members/zones/zone-4/z4-clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Brendan Bray",
+            "email": "brendanb@unr.edu",
+            "phone": "17756826915"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pacswim.org/members/zones/zone-4/z4-clubs",
+            "title": "Pacific Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://nevadawolfpack.com/sports/womens-swimming-and-diving",
+            "title": "Women's Swimming & Diving - University of Nevada Athletics",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pc-usf",
+      "after": {
+        "kind": "team",
+        "title": "USF Youth Swimming",
+        "officialName": "USF Youth Swimming",
+        "abbreviation": "USF",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pc",
+        "lscId": "usa-lsc-pc",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.usfca.edu/koret/facilities/indoor-swimming#chapter=chapter-1362-Youth-Swim-Teams",
+        "sourceUrl": "https://www.pacswim.org/members/zones/zone-3/clubs-2",
+        "summary": "USF Youth Swimming is a swim team/program listed by Pacific Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "San Francisco CA 94117",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. LSC-listed cities can be mailing addresses rather than pool locations.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Swimming",
+            "targetId": "usa-lsc-pc"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "Internal Pacific Swimming zone",
+            "name": "Pacific Swimming Zone 3",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "ckrudd@usfca.edu",
+            "url": "https://www.pacswim.org/members/zones/zone-3/clubs-2"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(415) 422-6247",
+            "url": "https://www.pacswim.org/members/zones/zone-3/clubs-2"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Sky Berry-Weiss",
+            "email": "usfaquatics@usfca.edu",
+            "phone": "14154226247"
+          },
+          {
+            "role": "Public team website contact",
+            "email": "aquatics@usfca.edu",
+            "url": "https://www.usfca.edu/koret/facilities/indoor-swimming#chapter=chapter-1362-Youth-Swim-Teams"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pacswim.org/members/zones/zone-3/clubs-2",
+            "title": "Pacific Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.usfca.edu/koret/facilities/indoor-swimming#chapter=chapter-1362-Youth-Swim-Teams",
+            "title": "Indoor Swimming Pool | University of San Francisco",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pc-vjo",
+      "after": {
+        "kind": "team",
+        "title": "Vallejo Aquatic Club",
+        "officialName": "Vallejo Aquatic Club",
+        "abbreviation": "VJO",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pc",
+        "lscId": "usa-lsc-pc",
+        "zoneId": "usa-zone-western",
+        "website": "http://www.vallejoaquatics.org/",
+        "sourceUrl": "https://www.pacswim.org/members/zones/zone-3/clubs-2",
+        "summary": "Vallejo Aquatic Club is a swim team/program listed by Pacific Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "PO Box 5846 Vallejo CA 94591",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. LSC-listed cities can be mailing addresses rather than pool locations.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Swimming",
+            "targetId": "usa-lsc-pc"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "Internal Pacific Swimming zone",
+            "name": "Pacific Swimming Zone 3",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "dmata@vallejoaquatics.org",
+            "url": "https://www.pacswim.org/members/zones/zone-3/clubs-2"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Aaron Jon Toch",
+            "email": "aaronjon@vallejoaquatics.org",
+            "phone": "17075537946"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pacswim.org/members/zones/zone-3/clubs-2",
+            "title": "Pacific Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "http://www.vallejoaquatics.org/",
+            "title": "Vallejo Aquatic Club Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.vallejoaquatics.org/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pc-vs",
+      "after": {
+        "kind": "team",
+        "title": "Valley Splash",
+        "officialName": "Valley Splash",
+        "abbreviation": "VS",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pc",
+        "lscId": "usa-lsc-pc",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.valleysplash.com/page/home",
+        "sourceUrl": "https://www.pacswim.org/members/zones/zone-1-south/z1s-clubs",
+        "summary": "Valley Splash is a swim team/program listed by Pacific Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "San Jose CA",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. LSC-listed cities can be mailing addresses rather than pool locations.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Swimming",
+            "targetId": "usa-lsc-pc"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "Internal Pacific Swimming zone",
+            "name": "Pacific Swimming Zone 1S",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "kparizi@ymail.com",
+            "url": "https://www.pacswim.org/members/zones/zone-1-south/z1s-clubs"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(408) 513-2450",
+            "url": "https://www.pacswim.org/members/zones/zone-1-south/z1s-clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Kevin Parizi",
+            "email": "swimvalleysplash@gmail.com",
+            "phone": "14085132450"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pacswim.org/members/zones/zone-1-south/z1s-clubs",
+            "title": "Pacific Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.valleysplash.com/page/home",
+            "title": "Valley Splash Home",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pc-vvst",
+      "after": {
+        "kind": "team",
+        "title": "Valley Vista Swim Team",
+        "officialName": "Valley Vista Swim Team",
+        "abbreviation": "VVST",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pc",
+        "lscId": "usa-lsc-pc",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/Home.jsp?team=reccvvvst",
+        "sourceUrl": "https://www.pacswim.org/members/zones/zone-2/zone-2-teams-directory",
+        "summary": "Valley Vista Swim Team is a swim team/program listed by Pacific Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Walnut Creek, CA 94598",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. LSC-listed cities can be mailing addresses rather than pool locations.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Swimming",
+            "targetId": "usa-lsc-pc"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "Internal Pacific Swimming zone",
+            "name": "Pacific Swimming Zone 2",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "t_n_johnson@hotmail.com",
+            "url": "https://www.pacswim.org/members/zones/zone-2/zone-2-teams-directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(925) 817-7700",
+            "url": "https://www.pacswim.org/members/zones/zone-2/zone-2-teams-directory"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Tom Johnson",
+            "email": "t_n_johnson@hotmail.com",
+            "phone": "19258177700"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pacswim.org/members/zones/zone-2/zone-2-teams-directory",
+            "title": "Pacific Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.teamunify.com/Home.jsp?team=reccvvvst",
+            "title": "Valley Vista Swim Team Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/reccvvvst/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pc-wcab",
+      "after": {
+        "kind": "team",
+        "title": "Walnut Creek Aquabears",
+        "officialName": "Walnut Creek Aquabears",
+        "abbreviation": "WCAB",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pc",
+        "lscId": "usa-lsc-pc",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.gomotionapp.com/team/wcab/page/home",
+        "sourceUrl": "https://www.pacswim.org/members/zones/zone-2/zone-2-teams-directory",
+        "summary": "Walnut Creek Aquabears is a swim team/program listed by Pacific Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Walnut Creek, CA 94598",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. LSC-listed cities can be mailing addresses rather than pool locations.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Swimming",
+            "targetId": "usa-lsc-pc"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "Internal Pacific Swimming zone",
+            "name": "Pacific Swimming Zone 2",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "mikeheaney01@gmail.com",
+            "url": "https://www.pacswim.org/members/zones/zone-2/zone-2-teams-directory"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(925) 323-7579",
+            "url": "https://www.pacswim.org/members/zones/zone-2/zone-2-teams-directory"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Mike Heaney",
+            "email": "mikeheaney01@gmail.com",
+            "phone": "19253237579"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pacswim.org/members/zones/zone-2/zone-2-teams-directory",
+            "title": "Pacific Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.gomotionapp.com/team/wcab/page/home",
+            "title": "Walnut Creek Aquabears Home",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pc-wanv",
+      "after": {
+        "kind": "team",
+        "title": "Waves Aquatics Napa Valley",
+        "officialName": "Waves Aquatics Napa Valley",
+        "abbreviation": "WANV",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pc",
+        "lscId": "usa-lsc-pc",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.teamunify.com/Home.jsp?team=pcshsc",
+        "sourceUrl": "https://www.pacswim.org/members/zones/zone-3/clubs-2",
+        "summary": "Waves Aquatics Napa Valley is a swim team/program listed by Pacific Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "PO Box 303 Napa CA 94559",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. LSC-listed cities can be mailing addresses rather than pool locations.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Swimming",
+            "targetId": "usa-lsc-pc"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "Internal Pacific Swimming zone",
+            "name": "Pacific Swimming Zone 3",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "kevin@wavesaquatics.com",
+            "url": "https://www.pacswim.org/members/zones/zone-3/clubs-2"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(707) 363-6221",
+            "url": "https://www.pacswim.org/members/zones/zone-3/clubs-2"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Kevin Twohey",
+            "email": "kevin@wavesaquatics.com",
+            "phone": "17073636221"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pacswim.org/members/zones/zone-3/clubs-2",
+            "title": "Pacific Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.teamunify.com/Home.jsp?team=pcshsc",
+            "title": "Waves Aquatics Napa Valley Home",
+            "checkedAt": "2026-10-10",
+            "note": "Redirects to https://www.gomotionapp.com/team/pcshsc/page/home"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pc-wsc",
+      "after": {
+        "kind": "team",
+        "title": "Westside Chargers",
+        "officialName": "Westside Chargers",
+        "abbreviation": "WSC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pc",
+        "lscId": "usa-lsc-pc",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.westsidechargers.com/",
+        "sourceUrl": "https://www.pacswim.org/members/zones/zone-1-south/z1s-clubs",
+        "summary": "Westside Chargers is a swim team/program listed by Pacific Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Santa Cruz CA 95060",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. LSC-listed cities can be mailing addresses rather than pool locations.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Swimming",
+            "targetId": "usa-lsc-pc"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "Internal Pacific Swimming zone",
+            "name": "Pacific Swimming Zone 1S",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "shilling.brandon@yahoo.com",
+            "url": "https://www.pacswim.org/members/zones/zone-1-south/z1s-clubs"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Brandon Shilling",
+            "email": "shilling.brandon@yahoo.com",
+            "phone": "14086560605"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pacswim.org/members/zones/zone-1-south/z1s-clubs",
+            "title": "Pacific Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://www.westsidechargers.com/",
+            "title": "Westside Chargers",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pc-will",
+      "after": {
+        "kind": "team",
+        "title": "Willits Otters",
+        "officialName": "Willits Otters",
+        "abbreviation": "WILL",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pc",
+        "lscId": "usa-lsc-pc",
+        "zoneId": "usa-zone-western",
+        "website": "https://willitsotters.weebly.com/",
+        "sourceUrl": "https://www.pacswim.org/members/zones/zone-3/clubs-2",
+        "summary": "Willits Otters is a swim team/program listed by Pacific Swimming, a USA Swimming LSC in the Western Zone.",
+        "geographicCoverage": "Willits CA 95490",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. LSC-listed cities can be mailing addresses rather than pool locations.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Swimming",
+            "targetId": "usa-lsc-pc"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "Internal Pacific Swimming zone",
+            "name": "Pacific Swimming Zone 3",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "maa167@mail.harvard.edu",
+            "url": "https://www.pacswim.org/members/zones/zone-3/clubs-2"
+          },
+          {
+            "role": "Public USA Swimming directory contact",
+            "url": "https://www.usaswimming.org/find-a-team",
+            "name": "Robert Chavez",
+            "email": "robertchavez3L30@gmail.com",
+            "phone": "15594174157"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pacswim.org/members/zones/zone-3/clubs-2",
+            "title": "Pacific Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.usaswimming.org/find-a-team",
+            "title": "USA Swimming \u2014 Find a Team",
+            "checkedAt": "2026-10-10",
+            "note": "Public club-map data; facilities consolidated by USA Swimming organization key. The map does not expose LSC or club code. LSC relationship comes from the LSC/team source."
+          },
+          {
+            "url": "https://willitsotters.weebly.com/",
+            "title": "WILLITS OTTERS SWIM TEAM - Home",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "path": "knowledge_entries/usa-team-pc-ypac",
+      "after": {
+        "kind": "team",
+        "title": "YMCA Pacific Aquatic Club",
+        "officialName": "YMCA Pacific Aquatic Club",
+        "abbreviation": "YPAC",
+        "abbreviationType": "USA Swimming club code",
+        "organizationType": "LSC-listed swim team/program",
+        "parentId": "usa-lsc-pc",
+        "lscId": "usa-lsc-pc",
+        "zoneId": "usa-zone-western",
+        "website": "https://www.ymcasf.org/program/swim-team/",
+        "sourceUrl": "https://www.pacswim.org/members/zones/zone-3/clubs-2",
+        "summary": "YMCA Pacific Aquatic Club is a year-round USA Swimming youth team at the Presidio YMCA in San Francisco, serving swimmers ages 6\u201318.",
+        "geographicCoverage": "San Francisco CA 94129",
+        "coverageNote": "Collected from official LSC/team sources checked 2026-10-10. Public directory enumeration is distinct from confirmation of current registration. LSC-listed cities can be mailing addresses rather than pool locations.",
+        "relationships": [
+          {
+            "type": "member_of_lsc",
+            "label": "Local Swimming Committee",
+            "name": "Pacific Swimming",
+            "targetId": "usa-lsc-pc"
+          },
+          {
+            "type": "within_zone",
+            "label": "National zone through the LSC",
+            "name": "Western Zone",
+            "targetId": "usa-zone-western",
+            "note": "LSC membership in the Western Zone is established by USA Swimming\u2019s national structure."
+          },
+          {
+            "type": "internal_lsc_area",
+            "label": "Internal Pacific Swimming zone",
+            "name": "Pacific Swimming Zone 3",
+            "note": "An internal LSC subdivision; not an additional national zone or an assumed region."
+          }
+        ],
+        "contacts": [
+          {
+            "role": "Public LSC-directory contact",
+            "email": "dmoretz@ymcasf.org",
+            "url": "https://www.pacswim.org/members/zones/zone-3/clubs-2"
+          },
+          {
+            "role": "Public LSC-directory contact",
+            "phone": "(415) 218-4072",
+            "url": "https://www.pacswim.org/members/zones/zone-3/clubs-2"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.pacswim.org/members/zones/zone-3/clubs-2",
+            "title": "Pacific Swimming \u2014 official club directory / roster",
+            "checkedAt": "2026-10-10"
+          },
+          {
+            "url": "https://www.ymcasf.org/program/swim-team/",
+            "title": "Swim Team",
+            "checkedAt": "2026-10-10"
+          }
+        ],
+        "gaps": [
+          "The LSC directory\u2019s former website now serves unrelated content; replaced with a verified official team/parent page."
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,336 @@
+{
+  "division": "knowledge",
+  "scope": "USA Swimming documents \u2014 rules, governance and equipment",
+  "sourceUrl": "https://www.usaswimming.org/about-usas/governance/rules-policies",
+  "capturedAt": "2026-10-10T07:55:21.934155+00:00",
+  "coverage": "partial",
+  "evidence": {
+    "method": "Curated official USA Swimming hub links. Completed local downloads have SHA-256 hashes and valid file signatures. Any unsuccessful download is explicitly marked; partial files are excluded.",
+    "hubUrl": "https://www.usaswimming.org/about-usas/governance/rules-policies",
+    "limitations": "Curated important documents, not an exhaustive archive. Edition dates do not imply all provisions are currently effective. No numeric standards imported. Collector stages proposals only; staff approval is required for public collection publication. Collector stages proposals only; staff approval is required for public collection publication.",
+    "documents": [
+      {
+        "id": "usas-2026-actions-taken-by-the-house-of-delegates-summary",
+        "group": "rules",
+        "title": "USA Swimming \u2014 2026 Actions Taken by the House of Delegates \u2013 Summary",
+        "url": "https://www.usaswimming.org/docs/default-source/about/rules-and-policies/legislation/2026-house-of-delegates-summary.pdf",
+        "summary": "Summary of 2026 adopted legislative actions. Check each action\u2019s effective date before applying it.",
+        "file": "files/usas-2026-actions-taken-by-the-house-of-delegates-summary.pdf",
+        "sha256": "42902bceb9aa5d642cc3eb6edf430616e62b261fe4e98a8edebaa458d00d6309",
+        "bytes": 70892,
+        "retrieval": "200|application/pdf|https://www.usaswimming.org/docs/default-source/about/rules-and-policies/legislation/2026-house-of-delegates-summary.pdf",
+        "downloadStatus": "Complete local capture"
+      },
+      {
+        "id": "usas-2026-actions-taken-by-the-house-of-delegates",
+        "group": "rules",
+        "title": "USA Swimming \u2014 2026 Actions Taken by the House of Delegates",
+        "url": "https://www.usaswimming.org/docs/default-source/about/rules-and-policies/legislation/2026-house-of-delegates-legislative-actions.pdf",
+        "summary": "Detailed 2026 legislative actions; individual effective dates govern application.",
+        "file": "files/usas-2026-actions-taken-by-the-house-of-delegates.pdf",
+        "sha256": "07023b504c4dcc75639b3ee7568e463a752ecb7d1f8639535fb843927484f76d",
+        "bytes": 141028,
+        "retrieval": "200|application/pdf|https://www.usaswimming.org/docs/default-source/about/rules-and-policies/legislation/2026-house-of-delegates-legislative-actions.pdf",
+        "downloadStatus": "Complete local capture"
+      },
+      {
+        "id": "usas-2026-rulebook",
+        "group": "rules",
+        "title": "USA Swimming \u2014 2026 Rulebook",
+        "url": "https://www.usaswimming.org/docs/default-source/governance/governance-lsc-website/rules_policies/rulebooks/2026-rulebook.pdf",
+        "summary": "Full national rules and regulations. Read together with the online amendments, which supersede corresponding text in this PDF.",
+        "file": "files/usas-2026-rulebook.pdf",
+        "sha256": "4c95410b2f3f7ac39913a1d9bf752be9a623f6152e3ecc2baba9695f6e8ca5c1",
+        "bytes": 13000783,
+        "retrieval": "Official USA Swimming Azure file host; HTTP 200",
+        "downloadStatus": "Complete local capture"
+      },
+      {
+        "id": "usas-2026-mini-rulebook",
+        "group": "rules",
+        "title": "USA Swimming \u2014 2026 Mini Rulebook",
+        "url": "https://www.usaswimming.org/docs/default-source/governance/governance-lsc-website/rules_policies/rulebooks/2026-mini-rulebook.pdf",
+        "summary": "Compact poolside rules reference; consult the full rulebook and online amendments for updates.",
+        "file": "files/usas-2026-mini-rulebook.pdf",
+        "sha256": "a3fa094d5bb6d07d3337569333622d1fd23f89fd87cbe12f064f3c6392c2f86a",
+        "bytes": 3380066,
+        "retrieval": "HTTP 200 from https://websiteprodcoresa.blob.core.windows.net/sitefinity/docs/default-source/governance/governance-lsc-website/rules_policies/rulebooks/2026-mini-rulebook.pdf",
+        "downloadStatus": "Complete local capture"
+      },
+      {
+        "id": "usas-board-governing-policies-manual",
+        "group": "rules",
+        "title": "USA Swimming \u2014 Board Governing Policies Manual",
+        "url": "https://www.usaswimming.org/docs/default-source/governance/governance-lsc-website/rules_policies/board-of-directors-governing-policies-manual.pdf",
+        "summary": "National board governance policies, including ethics and whistleblower provisions.",
+        "file": "files/usas-board-governing-policies-manual.pdf",
+        "sha256": "3dd2bc06e1ed6be589bd621b309f1b194393da7a3401fa4106a56583bb47ad6b",
+        "bytes": 665573,
+        "retrieval": "HTTP 200 from https://websiteprodcoresa.blob.core.windows.net/sitefinity/docs/default-source/governance/governance-lsc-website/rules_policies/board-of-directors-governing-policies-manual.pdf",
+        "downloadStatus": "Complete local capture"
+      },
+      {
+        "id": "usas-operating-policy-manual",
+        "group": "rules",
+        "title": "USA Swimming \u2014 Operating Policy Manual",
+        "url": "https://www.usaswimming.org/docs/default-source/governance/governance-lsc-website/rules_policies/operating-policy-manual.pdf",
+        "summary": "National operating policies reference for club and LSC administrators.",
+        "file": "files/usas-operating-policy-manual.pdf",
+        "sha256": "42783e61787fcd5513c7561b3f704623512ade876e7fee47d61a9f863a4cbb26",
+        "bytes": 1247818,
+        "retrieval": "HTTP 200 from https://websiteprodcoresa.blob.core.windows.net/sitefinity/docs/default-source/governance/governance-lsc-website/rules_policies/operating-policy-manual.pdf",
+        "downloadStatus": "Complete local capture"
+      },
+      {
+        "id": "usas-sanction-appeal-process-handbook",
+        "group": "rules",
+        "title": "USA Swimming \u2014 Sanction Appeal Process Handbook",
+        "url": "https://www.usaswimming.org/docs/default-source/policy-manual-public/sanction-appeal-process-handbook.pdf",
+        "summary": "Reference for the sanction appeal process.",
+        "file": "files/usas-sanction-appeal-process-handbook.pdf",
+        "sha256": "c1e0a8dc2c33d4b491a22b6b737284dd7aaf6c4630c50a9fcccd05377b93e79b",
+        "bytes": 446616,
+        "retrieval": "200|application/pdf|https://www.usaswimming.org/docs/default-source/policy-manual-public/sanction-appeal-process-handbook.pdf",
+        "downloadStatus": "Complete local capture"
+      },
+      {
+        "id": "usas-procedures-for-applying-for-suit-exemptions",
+        "group": "rules",
+        "title": "USA Swimming \u2014 Procedures For Applying For Suit Exemptions",
+        "url": "https://www.usaswimming.org/docs/default-source/governance/lsc-managementdocuments/interpretations-legislation-bylaws/procedures-for-suit-exemption.pdf",
+        "summary": "Application procedures for swimsuit exemptions.",
+        "file": "files/usas-procedures-for-applying-for-suit-exemptions.pdf",
+        "sha256": "78c6e162360be8cf4cb80667923b98ee7e45760035774a107d45521818575ad2",
+        "bytes": 71462,
+        "retrieval": "200|application/pdf|https://www.usaswimming.org/docs/default-source/governance/lsc-managementdocuments/interpretations-legislation-bylaws/procedures-for-suit-exemption.pdf",
+        "downloadStatus": "Complete local capture"
+      },
+      {
+        "id": "usas-tech-suit-information",
+        "group": "rules",
+        "title": "USA Swimming \u2014 Tech Suit Information",
+        "url": "https://www.usaswimming.org/docs/default-source/officialsdocuments/misc-officials/tech-suit-for-officials.pdf",
+        "summary": "Technical-suit reference for officials and coaches.",
+        "file": "files/usas-tech-suit-information.pdf",
+        "sha256": "bb6f1d32e236720727c15332e474073ce71b5368658e67b1f1dbd34fa2deb9c9",
+        "bytes": 749331,
+        "retrieval": "200|application/pdf|https://www.usaswimming.org/docs/default-source/officialsdocuments/misc-officials/tech-suit-for-officials.pdf",
+        "downloadStatus": "Complete local capture"
+      },
+      {
+        "id": "usas-12-under-approved-suits",
+        "group": "rules",
+        "title": "USA Swimming \u2014 12 & Under Approved Suits",
+        "url": "https://www.usaswimming.org/docs/default-source/governance/governance-lsc-website/rules_policies/12-under-approved-suits.pdf",
+        "summary": "Official approved-suit reference for younger swimmers.",
+        "file": "files/usas-12-under-approved-suits.pdf",
+        "sha256": "5dc1ece5f1166ddfc6a33d60fe87f3c192aae72ef15ea6c7f418939787dc23dd",
+        "bytes": 447756,
+        "retrieval": "200|application/pdf|https://www.usaswimming.org/docs/default-source/governance/governance-lsc-website/rules_policies/12-under-approved-suits.pdf",
+        "downloadStatus": "Complete local capture"
+      },
+      {
+        "id": "usas-2026-rulebook-online-amendments",
+        "group": "rules",
+        "title": "USA Swimming \u2014 2026 Rulebook Online Amendments",
+        "url": "https://www.usaswimming.org/about-usas/governance/rules-policies",
+        "summary": "Official online amendments supersede corresponding sections of the printed and PDF 2026 rulebook. Consult alongside the rulebook.",
+        "file": "rules.html",
+        "sha256": "86985c5c620c58a9582671deb3788152bc88b723c95fd1668b28c8c19e806df1",
+        "bytes": 182244,
+        "retrieval": "200|text/html|https://www.usaswimming.org/about-usas/governance/rules-policies",
+        "downloadStatus": "Complete local capture"
+      }
+    ],
+    "duplicateCheck": "No matching IDs or source URLs among the existing published document records."
+  },
+  "writes": [
+    {
+      "path": "knowledge_entries/usas-2026-actions-taken-by-the-house-of-delegates-summary",
+      "after": {
+        "kind": "document",
+        "title": "USA Swimming \u2014 2026 Actions Taken by the House of Delegates \u2013 Summary",
+        "sourceUrl": "https://www.usaswimming.org/docs/default-source/about/rules-and-policies/legislation/2026-house-of-delegates-summary.pdf",
+        "summary": "Summary of 2026 adopted legislative actions. Check each action\u2019s effective date before applying it.",
+        "publisher": "USA Swimming",
+        "category": "rules",
+        "resourcePage": "https://www.usaswimming.org/about-usas/governance/rules-policies",
+        "format": "PDF",
+        "checkedAt": "2026-10-10T07:55:21.934155+00:00",
+        "coverageNote": "Complete local capture",
+        "sha256": "42902bceb9aa5d642cc3eb6edf430616e62b261fe4e98a8edebaa458d00d6309",
+        "fileSizeBytes": 70892
+      }
+    },
+    {
+      "path": "knowledge_entries/usas-2026-actions-taken-by-the-house-of-delegates",
+      "after": {
+        "kind": "document",
+        "title": "USA Swimming \u2014 2026 Actions Taken by the House of Delegates",
+        "sourceUrl": "https://www.usaswimming.org/docs/default-source/about/rules-and-policies/legislation/2026-house-of-delegates-legislative-actions.pdf",
+        "summary": "Detailed 2026 legislative actions; individual effective dates govern application.",
+        "publisher": "USA Swimming",
+        "category": "rules",
+        "resourcePage": "https://www.usaswimming.org/about-usas/governance/rules-policies",
+        "format": "PDF",
+        "checkedAt": "2026-10-10T07:55:21.934155+00:00",
+        "coverageNote": "Complete local capture",
+        "sha256": "07023b504c4dcc75639b3ee7568e463a752ecb7d1f8639535fb843927484f76d",
+        "fileSizeBytes": 141028
+      }
+    },
+    {
+      "path": "knowledge_entries/usas-2026-rulebook",
+      "after": {
+        "kind": "document",
+        "title": "USA Swimming \u2014 2026 Rulebook",
+        "sourceUrl": "https://www.usaswimming.org/docs/default-source/governance/governance-lsc-website/rules_policies/rulebooks/2026-rulebook.pdf",
+        "summary": "Full national rules and regulations. Read together with the online amendments, which supersede corresponding text in this PDF.",
+        "publisher": "USA Swimming",
+        "category": "rules",
+        "resourcePage": "https://www.usaswimming.org/about-usas/governance/rules-policies",
+        "format": "PDF",
+        "checkedAt": "2026-10-10T07:55:21.934155+00:00",
+        "coverageNote": "Complete local capture",
+        "sha256": "4c95410b2f3f7ac39913a1d9bf752be9a623f6152e3ecc2baba9695f6e8ca5c1",
+        "fileSizeBytes": 13000783
+      }
+    },
+    {
+      "path": "knowledge_entries/usas-2026-mini-rulebook",
+      "after": {
+        "kind": "document",
+        "title": "USA Swimming \u2014 2026 Mini Rulebook",
+        "sourceUrl": "https://www.usaswimming.org/docs/default-source/governance/governance-lsc-website/rules_policies/rulebooks/2026-mini-rulebook.pdf",
+        "summary": "Compact poolside rules reference; consult the full rulebook and online amendments for updates.",
+        "publisher": "USA Swimming",
+        "category": "rules",
+        "resourcePage": "https://www.usaswimming.org/about-usas/governance/rules-policies",
+        "format": "PDF",
+        "checkedAt": "2026-10-10T07:55:21.934155+00:00",
+        "coverageNote": "Complete local capture",
+        "sha256": "a3fa094d5bb6d07d3337569333622d1fd23f89fd87cbe12f064f3c6392c2f86a",
+        "fileSizeBytes": 3380066
+      }
+    },
+    {
+      "path": "knowledge_entries/usas-board-governing-policies-manual",
+      "after": {
+        "kind": "document",
+        "title": "USA Swimming \u2014 Board Governing Policies Manual",
+        "sourceUrl": "https://www.usaswimming.org/docs/default-source/governance/governance-lsc-website/rules_policies/board-of-directors-governing-policies-manual.pdf",
+        "summary": "National board governance policies, including ethics and whistleblower provisions.",
+        "publisher": "USA Swimming",
+        "category": "rules",
+        "resourcePage": "https://www.usaswimming.org/about-usas/governance/rules-policies",
+        "format": "PDF",
+        "checkedAt": "2026-10-10T07:55:21.934155+00:00",
+        "coverageNote": "Complete local capture",
+        "sha256": "3dd2bc06e1ed6be589bd621b309f1b194393da7a3401fa4106a56583bb47ad6b",
+        "fileSizeBytes": 665573
+      }
+    },
+    {
+      "path": "knowledge_entries/usas-operating-policy-manual",
+      "after": {
+        "kind": "document",
+        "title": "USA Swimming \u2014 Operating Policy Manual",
+        "sourceUrl": "https://www.usaswimming.org/docs/default-source/governance/governance-lsc-website/rules_policies/operating-policy-manual.pdf",
+        "summary": "National operating policies reference for club and LSC administrators.",
+        "publisher": "USA Swimming",
+        "category": "rules",
+        "resourcePage": "https://www.usaswimming.org/about-usas/governance/rules-policies",
+        "format": "PDF",
+        "checkedAt": "2026-10-10T07:55:21.934155+00:00",
+        "coverageNote": "Complete local capture",
+        "sha256": "42783e61787fcd5513c7561b3f704623512ade876e7fee47d61a9f863a4cbb26",
+        "fileSizeBytes": 1247818
+      }
+    },
+    {
+      "path": "knowledge_entries/usas-sanction-appeal-process-handbook",
+      "after": {
+        "kind": "document",
+        "title": "USA Swimming \u2014 Sanction Appeal Process Handbook",
+        "sourceUrl": "https://www.usaswimming.org/docs/default-source/policy-manual-public/sanction-appeal-process-handbook.pdf",
+        "summary": "Reference for the sanction appeal process.",
+        "publisher": "USA Swimming",
+        "category": "rules",
+        "resourcePage": "https://www.usaswimming.org/about-usas/governance/rules-policies",
+        "format": "PDF",
+        "checkedAt": "2026-10-10T07:55:21.934155+00:00",
+        "coverageNote": "Complete local capture",
+        "sha256": "c1e0a8dc2c33d4b491a22b6b737284dd7aaf6c4630c50a9fcccd05377b93e79b",
+        "fileSizeBytes": 446616
+      }
+    },
+    {
+      "path": "knowledge_entries/usas-procedures-for-applying-for-suit-exemptions",
+      "after": {
+        "kind": "document",
+        "title": "USA Swimming \u2014 Procedures For Applying For Suit Exemptions",
+        "sourceUrl": "https://www.usaswimming.org/docs/default-source/governance/lsc-managementdocuments/interpretations-legislation-bylaws/procedures-for-suit-exemption.pdf",
+        "summary": "Application procedures for swimsuit exemptions.",
+        "publisher": "USA Swimming",
+        "category": "rules",
+        "resourcePage": "https://www.usaswimming.org/about-usas/governance/rules-policies",
+        "format": "PDF",
+        "checkedAt": "2026-10-10T07:55:21.934155+00:00",
+        "coverageNote": "Complete local capture",
+        "sha256": "78c6e162360be8cf4cb80667923b98ee7e45760035774a107d45521818575ad2",
+        "fileSizeBytes": 71462
+      }
+    },
+    {
+      "path": "knowledge_entries/usas-tech-suit-information",
+      "after": {
+        "kind": "document",
+        "title": "USA Swimming \u2014 Tech Suit Information",
+        "sourceUrl": "https://www.usaswimming.org/docs/default-source/officialsdocuments/misc-officials/tech-suit-for-officials.pdf",
+        "summary": "Technical-suit reference for officials and coaches.",
+        "publisher": "USA Swimming",
+        "category": "rules",
+        "resourcePage": "https://www.usaswimming.org/about-usas/governance/rules-policies",
+        "format": "PDF",
+        "checkedAt": "2026-10-10T07:55:21.934155+00:00",
+        "coverageNote": "Complete local capture",
+        "sha256": "bb6f1d32e236720727c15332e474073ce71b5368658e67b1f1dbd34fa2deb9c9",
+        "fileSizeBytes": 749331
+      }
+    },
+    {
+      "path": "knowledge_entries/usas-12-under-approved-suits",
+      "after": {
+        "kind": "document",
+        "title": "USA Swimming \u2014 12 & Under Approved Suits",
+        "sourceUrl": "https://www.usaswimming.org/docs/default-source/governance/governance-lsc-website/rules_policies/12-under-approved-suits.pdf",
+        "summary": "Official approved-suit reference for younger swimmers.",
+        "publisher": "USA Swimming",
+        "category": "rules",
+        "resourcePage": "https://www.usaswimming.org/about-usas/governance/rules-policies",
+        "format": "PDF",
+        "checkedAt": "2026-10-10T07:55:21.934155+00:00",
+        "coverageNote": "Complete local capture",
+        "sha256": "5dc1ece5f1166ddfc6a33d60fe87f3c192aae72ef15ea6c7f418939787dc23dd",
+        "fileSizeBytes": 447756
+      }
+    },
+    {
+      "path": "knowledge_entries/usas-2026-rulebook-online-amendments",
+      "after": {
+        "kind": "document",
+        "title": "USA Swimming \u2014 2026 Rulebook Online Amendments",
+        "sourceUrl": "https://www.usaswimming.org/about-usas/governance/rules-policies",
+        "summary": "Official online amendments supersede corresponding sections of the printed and PDF 2026 rulebook. Consult alongside the rulebook.",
+        "publisher": "USA Swimming",
+        "category": "rules",
+        "resourcePage": "https://www.usaswimming.org/about-usas/governance/rules-policies",
+        "format": "HTML",
+        "checkedAt": "2026-10-10T07:55:21.934155+00:00",
+        "coverageNote": "Complete local capture",
+        "sha256": "86985c5c620c58a9582671deb3788152bc88b723c95fd1668b28c8c19e806df1",
+        "fileSizeBytes": 182244
+      }
+    }
+  ]
+}
