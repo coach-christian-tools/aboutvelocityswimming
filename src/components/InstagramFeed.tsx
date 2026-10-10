@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import Script from "next/script";
 import styles from "./InstagramFeed.module.css";
 import { scopedClasses } from "@/lib/styles";
 
@@ -11,32 +11,17 @@ const POST_URLS = [
 ];
 
 export default function InstagramFeed() {
-  useEffect(() => {
-    // Check if script is already present
-    const existingScript = document.getElementById("instagram-embed-script");
-
-    const processEmbeds = () => {
-      const embeds=(window as Window & {instgrm?:{Embeds?:{process():void}}}).instgrm?.Embeds;
-      embeds?.process();
-    };
-
-    if (!existingScript) {
-      const script = document.createElement("script");
-      script.id = "instagram-embed-script";
-      script.async = true;
-      script.defer = true;
-      script.src = "https://www.instagram.com/embed.js";
-      script.onload = () => {
-        processEmbeds();
-      };
-      document.body.appendChild(script);
-    } else {
-      processEmbeds();
-    }
-  }, []);
 
   return (
     <section id="social" className={scopedClasses(styles, 'section insta-feed-section')}>
+      <Script
+        id="instagram-embed-script"
+        src="https://www.instagram.com/embed.js"
+        onReady={() => {
+          (window as Window & { instgrm?: { Embeds?: { process(): void } } })
+            .instgrm?.Embeds?.process();
+        }}
+      />
       <div className={scopedClasses(styles, 'container')}>
         <div className={scopedClasses(styles, 'text-center mb-12')}>
           <span className={scopedClasses(styles, 'section-badge')}>Social Highlights</span>
@@ -54,11 +39,12 @@ export default function InstagramFeed() {
           </p>
         </div>
 
+        <p className={styles['embed-note']}>If a preview is unavailable, open the post directly on Instagram.</p>
         <div className={scopedClasses(styles, 'insta-embeds-grid')}>
           {POST_URLS.map((url, index) => (
             <div key={index} className={scopedClasses(styles, 'insta-embed-card')}>
               <blockquote
-                className={scopedClasses(styles, 'instagram-media')}
+                className="instagram-media"
                 data-instgrm-captioned
                 data-instgrm-permalink={url}
                 data-instgrm-version="14"
@@ -129,6 +115,9 @@ export default function InstagramFeed() {
                   </a>
                 </div>
               </blockquote>
+              <a href={url} target="_blank" rel="noopener noreferrer" className={styles['post-link']}>
+                Open post {index + 1} on Instagram ↗
+              </a>
             </div>
           ))}
         </div>

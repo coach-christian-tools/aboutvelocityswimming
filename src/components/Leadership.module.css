@@ -1,14 +1,15 @@
 .leadership {
+  --accent: #53c9ad;
   background-color: var(--primary);
   background-image: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
   position: relative;
 }
 
-.text-light {
+.leadership .leadership-header .text-light {
   color: white;
 }
 
-.text-light-muted {
+.leadership .leadership-header .text-light-muted {
   color: rgba(255, 255, 255, 0.8);
 }
 

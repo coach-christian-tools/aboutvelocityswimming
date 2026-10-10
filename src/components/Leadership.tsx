@@ -22,7 +22,7 @@ export default function Leadership() {
         </div>
 
         {/* C.A.R.E. Charter Section */}
-        <div className={scopedClasses(styles, 'care-section glass-panel dark-glass')}>
+        <div className={scopedClasses(styles, 'care-section dark-glass')}>
           <div className={scopedClasses(styles, 'care-intro')}>
             <h3>Our C.A.R.E. Charter</h3>
             <p>
@@ -63,7 +63,7 @@ export default function Leadership() {
         </div>
 
         <div className={scopedClasses(styles, 'coaches-grid')}>
-          <div className={scopedClasses(styles, 'coach-card glass-panel dark-glass')}>
+          <div className={scopedClasses(styles, 'coach-card dark-glass')}>
 
             <div className={scopedClasses(styles, 'coach-carousel-wrapper')}>
               <Carousel images={audreyImages} altPrefix="Coach Audrey" className={scopedClasses(styles, 'coach-carousel')} />
@@ -90,7 +90,7 @@ export default function Leadership() {
             </div>
           </div>
 
-          <div className={scopedClasses(styles, 'coach-card glass-panel dark-glass')}>
+          <div className={scopedClasses(styles, 'coach-card dark-glass')}>
 
             <div className={scopedClasses(styles, 'coach-carousel-wrapper')}>
               <Carousel images={christianImages} altPrefix="Coach Christian" className={scopedClasses(styles, 'coach-carousel')} />
