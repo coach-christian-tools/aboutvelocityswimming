@@ -156,7 +156,7 @@ export default function Programs() {
 
 
         {/* Registration Process & CTA */}
-        <div id="join" className={scopedClasses(styles, 'registration-flow-card glass-panel')}>
+        <div id="join" className={scopedClasses(styles, 'registration-flow-card')}>
           <div className={scopedClasses(styles, 'flow-header text-center')}>
             <span className={scopedClasses(styles, 'flow-badge')}>Get Started</span>
             <h3>How to Join Velocity Swimming</h3>

@@ -93,7 +93,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`${inter.variable} ${outfit.variable} ${bebas.variable}`}
+      suppressHydrationWarning
+    >
       <head>
         <script
           dangerouslySetInnerHTML={{
@@ -128,9 +132,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body
-        className={`${inter.variable} ${outfit.variable} ${bebas.variable}`}
-      >
+      <body>
         <NavigationScroll />
         <AuthProvider>
           <Header />
