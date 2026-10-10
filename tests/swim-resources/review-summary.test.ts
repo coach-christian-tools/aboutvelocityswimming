@@ -14,6 +14,11 @@ describe("import review summaries", () => {
     expect(raceSummary(race, athleteProfiles(writes, reads, current, false)).swimmer).toBe("Original name");
     expect(raceSummary(race, athleteProfiles(writes, reads, current, true)).swimmer).toBe("Corrected name");
   });
+  it("expands the stored stroke codes into readable events", () => {
+    for (const [stroke, name] of [["FR", "Freestyle"], ["BK", "Backstroke"], ["BR", "Breaststroke"], ["FL", "Butterfly"]]) {
+      expect(raceSummary({ ...race, stroke }, {}).event).toBe(`100 ${name}`);
+    }
+  });
   it("uses an existing profile and formats minute boundaries", () => {
     expect(raceSummary({ ...race, timeMs: 61230 }, { a: { name: "Existing swimmer" } })).toMatchObject({ swimmer: "Existing swimmer", time: "1:01.23" });
   });

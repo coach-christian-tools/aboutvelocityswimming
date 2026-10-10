@@ -21,7 +21,7 @@ export function athleteProfiles(writes: ReviewWrite[], reads: ReviewRead[], curr
 export function raceSummary(value: Json, profiles: Record<string, Json>) {
   const race = object(value);
   const id = typeof race.athleteId === "string" ? race.athleteId : "";
-  const strokes: Record<string, string> = { FREE: "Freestyle", BACK: "Backstroke", BREAST: "Breaststroke", FLY: "Butterfly", IM: "IM" };
+  const strokes: Record<string, string> = { FR: "Freestyle", FREE: "Freestyle", BK: "Backstroke", BACK: "Backstroke", BR: "Breaststroke", BREAST: "Breaststroke", FL: "Butterfly", FLY: "Butterfly", IM: "IM" };
   const stroke = typeof race.stroke === "string" ? strokes[race.stroke] ?? race.stroke : "Unknown stroke";
   const status = typeof race.status === "string" ? race.status : "Unknown status";
   const meet = object(race.meet);
