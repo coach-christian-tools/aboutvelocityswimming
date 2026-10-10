@@ -72,3 +72,7 @@
   .toolTop { margin-bottom: 1.75rem; }
   .sectionHeading { margin-top: 2.5rem; }
 }
+
+.toolLink { text-decoration: none; min-height: 190px; justify-content: center; transition: border-color 150ms ease, background-color 150ms ease; }
+.toolLink:hover { border-color: var(--accent); background: var(--surface); }
+.toolLink:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }

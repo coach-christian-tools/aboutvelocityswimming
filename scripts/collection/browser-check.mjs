@@ -44,7 +44,7 @@ const batch = {
   writes: [
     {
       path: "knowledge_entries/" + id,
-      after: { kind: "meet", title, sourceUrl: "https://example.test/meet" },
+      after: { kind: "meet", title, sourceUrl: "https://example.test/meet", startsOn: "2026-10-01", endsOn: "2026-10-05" },
     },
   ],
 };
@@ -63,8 +63,10 @@ try {
   page.on("pageerror", (e) => errors.push(e.message));
   await page.goto("http://127.0.0.1:3001/tools/knowledge");
   await page
-    .getByRole("heading", { name: "USA Swimming Knowledge Base", exact: true })
+    .getByRole("heading", { name: "USA Swim Wiki", exact: true })
     .waitFor();
+  await page.getByRole("tab", { name: "Meets", exact: true }).click();
+  await page.getByText("Loading…", { exact: true }).waitFor({state:"hidden"});
   assert.equal(
     await page.getByRole("heading", { name: title, exact: true }).count(),
     0,
@@ -88,6 +90,17 @@ try {
     .click();
   await article.waitFor({ state: "detached" });
   await page.goto("http://127.0.0.1:3001/tools/knowledge");
+  await page.getByRole("tab", { name: "Meets", exact: true }).click();
+  await page.getByRole("heading", { name: title, exact: true }).waitFor();
+  await page.getByRole("searchbox", { name: "Search meets" }).fill(title);
+  await page.getByLabel("From", { exact: true }).fill("2026-10-03");
+  await page.getByLabel("Through", { exact: true }).fill("2026-10-04");
+  await page.getByText("Loading…", { exact: true }).waitFor({ state: "hidden" });
+  await page.getByRole("heading", { name: title, exact: true }).waitFor();
+  await page.getByLabel("Through", { exact: true }).fill("2026-10-10");
+  await page.getByLabel("From", { exact: true }).fill("2026-10-06");
+  await page.getByText("No entries match these filters.", { exact: true }).waitFor();
+  await page.getByRole("button", { name: "Clear filters", exact: true }).click();
   await page.getByRole("heading", { name: title, exact: true }).waitFor();
   await page.goto("http://127.0.0.1:3001/tools/times");
   await page
