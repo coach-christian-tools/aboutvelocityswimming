@@ -1,6 +1,5 @@
 import { chromium } from "playwright";
 import assert from "node:assert/strict";
-import {readFileSync} from "node:fs";
 const base = process.env.VELOCITY_TEST_URL ?? "http://127.0.0.1:3001";
 if (!["127.0.0.1", "localhost"].includes(new URL(base).hostname))
   throw new Error("Browser checks use local synthetic data only.");
@@ -46,18 +45,11 @@ try {
   await page.getByText("test-swimmer-a", { exact: false }).first().waitFor();
   console.log("Shared staff session across tools verified");
   await page.goto(base+'/tools/swim-resources/admin/import');
-  const batch=JSON.parse(readFileSync('backups/browser/import.json','utf8'));
-  await page.getByRole('button',{name:'Structured batch',exact:true}).click();
-  await page.getByLabel('Import batch JSON',{exact:true}).fill(JSON.stringify(batch));
-  await page.getByRole('button',{name:'Preview changes',exact:true}).click();
-  await page.getByRole('checkbox',{name:'Select Velocity Swimming Browser Test',exact:true}).check();
-  await page.getByRole('button',{name:'Apply 1 selected changes',exact:true}).click();
-  await page.getByText(/1 changes applied/).waitFor();
-  await page.getByRole('checkbox',{name:'Reverse velocity-swimming',exact:true}).check();
-  await page.getByLabel('Restore previous values for these 1 records').check();
-  await page.getByRole('button',{name:'Reverse selected changes',exact:true}).click();
-  await page.getByText(/1 changes reversed/).waitFor();
-  console.log('Reviewed import, private evidence, receipt, and guarded reversal verified');
+  await page.getByRole('heading',{name:'Import review',exact:true}).waitFor();
+  await page.getByRole('combobox',{name:'Status',exact:true}).waitFor();
+  assert.equal(await page.getByRole('button',{name:'Inspect HTML',exact:true}).count(),0);
+  assert.equal(await page.getByRole('button',{name:'Structured batch',exact:true}).count(),0);
+  console.log('Unified import review is available to verified staff');
   await page.goto(base+'/tools/workshare/jobs');
   await page.getByRole('button',{name:/Create Shift|Post.*Shift|Add.*Shift/}).first().click();
   await page.getByRole('dialog').waitFor();await page.keyboard.press('Escape');assert.equal(await page.getByRole('dialog').count(),0);

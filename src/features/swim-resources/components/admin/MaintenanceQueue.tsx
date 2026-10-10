@@ -12,7 +12,7 @@ import { maintenanceRecord, maintenanceSource, maintenanceSelection, visibleMain
 import { readViewerPage, type ViewerPage } from '@/features/swim-resources/lib/services/data-viewer';
 
 function failureText(error: unknown) {
-  return (error as { code?: string })?.code === 'permission-denied' ? 'Firestore denied access. A verified Velocity coaching account is required.' : error instanceof Error ? error.message : 'Maintenance data could not be loaded. Refresh to try again.';
+  return (error as { code?: string })?.code === 'permission-denied' ? 'Access denied. A verified Velocity coaching account is required.' : error instanceof Error ? error.message : 'Maintenance data could not be loaded. Refresh to try again.';
 }
 type Selection = ReturnType<typeof maintenanceSelection>;
 function CheckDate({ value, empty }: { value: string | null; empty: string }) {
@@ -77,7 +77,8 @@ export default function MaintenanceQueue() {
   }
   return <>
     <h1>Maintenance</h1>
-    <p>Read-only review of private evidence. Verification dates and fact-change dates are separate.</p>
+    <p>Check which saved sources and records need another look: overdue checks, failed sources, missing evidence, or conflicting facts. Open an item to inspect its evidence and history, then request a fresh collection if needed.</p>
+    <p>This page is read-only. Refresh reloads saved evidence; it does not check external websites. Agent-collected batches currently keep their evidence in Import review and do not automatically populate this queue.</p>
     <p>Attention and search apply only to the loaded page. Use Next to review more documents. Refresh reloads the current page and recalculates due dates.</p>
     <div className="admin-filters">
       <label>View <select value={selected.view} onChange={event => select('view', event.target.value)}><option value="records">Record evidence</option><option value="sources">Sources</option></select></label>

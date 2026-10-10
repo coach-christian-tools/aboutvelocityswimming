@@ -1,9 +1,11 @@
 "use client";
 import Link from "next/link";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState, useMemo } from "react";
 import { browserClient, hasBackendConfiguration } from "@/lib/supabase/client";
 import type { Database, Json } from "@/lib/supabase/database.types";
 import { useAuth } from "@/features/workshare/contexts/auth";
+
+import { athleteName, athleteProfiles, object, raceSummary, type ReviewWrite, type ReviewRead } from "./review-summary";
 
 type Batch = Database["public"]["Tables"]["collection_batches"]["Row"];
 const divisions: Record<string, string> = {
@@ -18,39 +20,58 @@ function safeUrl(value: string) {
     return undefined;
   }
 }
+function RaceDetails({ value, profiles }: { value: Json; profiles: Record<string, Json> }) {
+  const race = raceSummary(value, profiles);
+  return <>
+    <dl className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+      {[["Swimmer", race.swimmer], ["Event", race.event], ["Time", race.time], ["Course", race.course]].map(([label, text]) => <div key={label}><dt className="text-sm text-text-secondary">{label}</dt><dd className="font-semibold">{text}</dd></div>)}
+    </dl>
+    <p className="text-sm">{race.meet}{race.date ? ` · ${race.date}` : ""}</p>
+  </>;
+}
 function Records({ writes, reads }: { writes: Json; reads: Json }) {
-  const changes = writes as { path: string; after: Json }[];
-  const before = reads as { path: string; before: Json }[];
-  return (
-    <div className="space-y-3">
-      {changes.map((change) => (
-        <details key={change.path} className="rounded border p-3">
-          <summary className="cursor-pointer font-medium">
-            {change.path}
-          </summary>
-          <div className="mt-3 grid gap-3 md:grid-cols-2">
-            <div>
-              <h4>Current at collection</h4>
-              <pre className="max-h-80 overflow-auto whitespace-pre-wrap break-words text-xs">
-                {JSON.stringify(
-                  before.find((item) => item.path === change.path)?.before ??
-                    null,
-                  null,
-                  2,
-                )}
-              </pre>
-            </div>
-            <div>
-              <h4>Proposed</h4>
-              <pre className="max-h-80 overflow-auto whitespace-pre-wrap break-words text-xs">
-                {JSON.stringify(change.after, null, 2)}
-              </pre>
-            </div>
+  const changes = writes as ReviewWrite[];
+  const before = reads as ReviewRead[];
+  const [current, setCurrent] = useState<Record<string, Json>>({});
+  const [lookupError, setLookupError] = useState("");
+  const athleteIds = useMemo(() => [...new Set([...changes.map(item => item.after), ...before.map(item => item.before)]
+    .map(value => object(value).athleteId).filter((id): id is string => typeof id === "string"))], [changes, before]);
+  useEffect(() => {
+    let active = true;
+    if (!athleteIds.length) return;
+    void browserClient().from("athletes").select("id,data").in("id", athleteIds).then(({ data, error }) => {
+      if (!active) return;
+      setLookupError(error ? "Some athlete names could not be loaded. Batch profiles are still shown; unresolved swimmers are labeled by ID." : "");
+      setCurrent(Object.fromEntries((data ?? []).map(row => [row.id, row.data])));
+    });
+    return () => { active = false; };
+  }, [athleteIds]);
+  const proposedProfiles = athleteProfiles(changes, before, current, true);
+  const previousProfiles = athleteProfiles(changes, before, current, false);
+  return <div className="space-y-3">
+    {lookupError && <p role="alert">{lookupError}</p>}
+    {changes.map(change => {
+      const previous = before.find(item => item.path === change.path)?.before ?? null;
+      const swim = change.path.startsWith("swims/");
+      const action = change.after === null ? "Remove" : previous === null ? "Add" : "Update";
+      const name = change.path.startsWith("athletes/") ? athleteName(change.after ?? previous) : object(change.after ?? previous).name;
+      return <section key={change.path} className="rounded border p-4 space-y-3" aria-label={`${action} ${swim ? "swim" : change.path}`}>
+        <h3 className="font-semibold">{action} {swim ? "swim" : typeof name === "string" && name ? name : change.path}</h3>
+        {swim && <RaceDetails value={change.after ?? previous} profiles={change.after === null ? previousProfiles : proposedProfiles} />}
+        <details>
+          <summary className="cursor-pointer text-sm">Compare changes and raw fields</summary>
+          <p className="text-sm break-all">{change.path}</p>
+          <div className="mt-3 grid gap-4 md:grid-cols-2">
+            {[{ label: "Current at collection", value: previous, profiles: previousProfiles }, { label: "Proposed", value: change.after, profiles: proposedProfiles }].map(side => <div key={side.label}>
+              <h4>{side.label}</h4>
+              {side.value === null ? <p>{side.label === "Proposed" ? "Record will be removed." : "New record."}</p> : swim ? <RaceDetails value={side.value} profiles={side.profiles} /> : null}
+              <pre className="max-h-80 overflow-auto whitespace-pre-wrap break-words text-xs">{JSON.stringify(side.value, null, 2)}</pre>
+            </div>)}
           </div>
         </details>
-      ))}
-    </div>
-  );
+      </section>;
+    })}
+  </div>;
 }
 export default function ReviewQueue() {
   const { isAdmin, loading: authLoading } = useAuth();
