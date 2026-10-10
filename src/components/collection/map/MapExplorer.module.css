@@ -113,6 +113,7 @@
   align-items: start;
 }
 .regionMap {
+  overflow: hidden;
   width: 100%;
   height: 440px;
 }
@@ -343,6 +344,7 @@
     gap: 1rem;
   }
   .regionMap {
+    overflow: hidden;
     height: 380px;
   }
   .localCanvas svg {

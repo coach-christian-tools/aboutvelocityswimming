@@ -167,42 +167,58 @@ export default function MapExplorer({ facets }: { facets: WikiEntry[] }) {
             : "USA Swimming zones map"
         }
       >
-        {national.zones.map((item) => (
-          <g
-            key={item.id}
-            role={regional ? undefined : "button"}
-            tabIndex={regional ? undefined : 0}
-            aria-label={regional ? undefined : `Explore ${item.name}`}
-            aria-pressed={regional ? undefined : zoneId === item.id}
-            onClick={regional ? undefined : () => chooseZone(item.id)}
-            onKeyDown={
-              regional
-                ? undefined
-                : (event) => {
-                    if (["Enter", " "].includes(event.key)) {
-                      event.preventDefault();
-                      chooseZone(item.id);
-                    }
-                  }
-            }
-            className={regional ? undefined : styles.zone}
-            opacity={regional && item.id !== zoneId ? 0.12 : 1}
-          >
-            {item.paths.map((path, index) => (
-              <path
-                key={index}
-                d={path}
-                fill={color(item.id)}
-                stroke="var(--surface)"
-                strokeWidth="1.5"
-                vectorEffect="non-scaling-stroke"
-              />
-            ))}
-            <title>{item.name}</title>
-          </g>
-        ))}
         {regional && (
-          <g className={styles.boundaries}>
+          <defs>
+            <clipPath id={`zone-boundary-${zoneId}`}>
+              {national.zones
+                .find((item) => item.id === zoneId)
+                ?.paths.map((path, index) => (
+                  <path key={index} d={path} />
+                ))}
+            </clipPath>
+          </defs>
+        )}
+        {national.zones
+          .filter((item) => !regional || item.id === zoneId)
+          .map((item) => (
+            <g
+              key={item.id}
+              role={regional ? undefined : "button"}
+              tabIndex={regional ? undefined : 0}
+              aria-label={regional ? undefined : `Explore ${item.name}`}
+              aria-pressed={regional ? undefined : zoneId === item.id}
+              onClick={regional ? undefined : () => chooseZone(item.id)}
+              onKeyDown={
+                regional
+                  ? undefined
+                  : (event) => {
+                      if (["Enter", " "].includes(event.key)) {
+                        event.preventDefault();
+                        chooseZone(item.id);
+                      }
+                    }
+              }
+              className={regional ? undefined : styles.zone}
+              opacity={regional && item.id !== zoneId ? 0.12 : 1}
+            >
+              {item.paths.map((path, index) => (
+                <path
+                  key={index}
+                  d={path}
+                  fill={color(item.id)}
+                  stroke="var(--surface)"
+                  strokeWidth="1.5"
+                  vectorEffect="non-scaling-stroke"
+                />
+              ))}
+              <title>{item.name}</title>
+            </g>
+          ))}
+        {regional && (
+          <g
+            className={styles.boundaries}
+            clipPath={`url(#zone-boundary-${zoneId})`}
+          >
             {national.lines.map((path, index) => (
               <path key={index} d={path} />
             ))}
