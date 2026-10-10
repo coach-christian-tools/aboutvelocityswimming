@@ -64,7 +64,7 @@ export function Login() {
       if(error)throw error;
       setStep("code")
       setCountdown(60)
-      setSuccessMessage(`We sent a 6-digit code to ${email.trim()}`)
+      setSuccessMessage(`We sent a 8-digit code to ${email.trim()}`)
     } catch (err: unknown) {
       console.error("OTP send error:", err)
       if (errorCode(err) === "functions/not-found" || errorCode(err) === "not-found") {
@@ -80,8 +80,8 @@ export function Login() {
   const handleVerifyCode = async (e: React.FormEvent) => {
     e.preventDefault()
     const cleanCode = otpCode.replace(/\D/g, "")
-    if (cleanCode.length !== 6) {
-      setError("Please enter all 6 digits of your verification code.")
+    if (cleanCode.length !== 8) {
+      setError("Please enter all 8 digits of your verification code.")
       return
     }
 
@@ -137,7 +137,7 @@ export function Login() {
   }
 
   const handleOtpChange = (val: string) => {
-    const cleaned = val.replace(/\D/g, "").slice(0, 6)
+    const cleaned = val.replace(/\D/g, "").slice(0, 8)
     setOtpCode(cleaned)
     setError("")
   }
@@ -156,7 +156,7 @@ export function Login() {
             {step === "code" ? "Enter Verification Code" : "Sign In to Portal"}
           </h2>
           <p className="text-xs text-slate-500 text-center mb-6">
-            {step === "code" ? "Check your email for the 6-digit code" : "Instant passwordless sign-in with your email"}
+            {step === "code" ? "Check your email for the 8-digit code" : "Instant passwordless sign-in with your email"}
           </p>
 
           {error && (
@@ -202,15 +202,15 @@ export function Login() {
                     className="w-full mt-2" 
                     disabled={loading || googleLoading || !email.trim()}
                   >
-                    {loading ? "Sending Code..." : "Send 6-Digit Code"}
+                    {loading ? "Sending Code..." : "Send 8-Digit Code"}
                   </Button>
                 </form>
               ) : (
                 <form onSubmit={handleVerifyCode} className="space-y-5">
                   <div>
                     <div className="flex items-center justify-between mb-2">
-                      <label className="block text-xs font-semibold uppercase tracking-wider text-slate-600">
-                        6-Digit Code
+                      <label htmlFor="login-code" className="block text-xs font-semibold uppercase tracking-wider text-slate-600">
+                        8-Digit Code
                       </label>
                       <button
                         type="button"
@@ -222,15 +222,16 @@ export function Login() {
                     </div>
 
                     <Input 
+                      id="login-code"
                       ref={otpInputRef}
                       type="text" 
                       inputMode="numeric"
                       pattern="[0-9]*"
-                      maxLength={6}
+                      maxLength={8}
                       required 
                       value={otpCode}
                       onChange={(e) => handleOtpChange(e.target.value)}
-                      placeholder="• • • • • •"
+                      placeholder="12345678"
                       className="text-center font-mono text-2xl tracking-[0.4em] h-14 bg-bg font-bold"
                       autoComplete="one-time-code"
                     />
@@ -241,7 +242,7 @@ export function Login() {
                     variant="primary" 
                     size="lg" 
                     className="w-full" 
-                    disabled={loading || otpCode.length !== 6}
+                    disabled={loading || otpCode.length !== 8}
                   >
                     {loading ? "Verifying..." : "Verify & Sign In"}
                   </Button>
@@ -310,7 +311,7 @@ export function Login() {
               className="text-xs text-slate-400 hover:text-slate-600 transition-colors inline-flex items-center gap-1"
             >
               <KeyRound className="w-3 h-3" />
-              {usePasswordFallback ? "Use 6-digit email code instead" : "Sign in with password instead"}
+              {usePasswordFallback ? "Use 8-digit email code instead" : "Sign in with password instead"}
             </button>
           </div>
 

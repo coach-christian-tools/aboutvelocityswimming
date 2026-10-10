@@ -366,9 +366,15 @@ await test("expired and revoked invitations cannot create registrations", async 
 await test("reminder queue claims once across workers and preserves delivery receipts", async () => {
   const base = await record(staff, "postings/test-shift"),
     id = "reminder-" + Date.now();
-  const at = new Date();
-  at.setDate(at.getDate() + 2);
-  at.setUTCHours(18, 0, 0, 0);
+  // The reminder query uses Pacific calendar days, including on UTC CI runners.
+  const pacificToday = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "America/Los_Angeles",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).format(new Date());
+  const at = new Date(`${pacificToday}T18:00:00Z`);
+  at.setUTCDate(at.getUTCDate() + 2);
   await collect("postings/" + id, {
     ...base,
     id,

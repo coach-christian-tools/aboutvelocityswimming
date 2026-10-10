@@ -19,7 +19,7 @@ No recurring crawler or email reminder schedule is enabled by this setup. Collec
 
 Production deployment `74bb260` passed Vercel and GitHub CI on October 9, 2026. The hosted tools, public empty states, and staff sign-in gate were checked. One Times pilot batch is pending administrator review; it has not been published.
 
-Email setup: Resend domain `mail.aboutvelocityswimming.com` (ID `8f907898-471f-4482-b9da-2ee1d2d9b807`) has its DKIM TXT and both sending CNAME records installed in Squarespace and confirmed through public DNS. Resend verification is pending. After verification, create a sending-only key scoped to that domain and configure Supabase SMTP (`smtp.resend.com`, port 465, username `resend`, sender `Velocity Swimming <noreply@mail.aboutvelocityswimming.com>`). Use `supabase/templates/code.html` for confirmation and magic-link templates, confirm the email OTP length matches the six-digit UI, and test delivery and administrator sign-in before opening family access. Never commit the SMTP password.
+Email setup: Resend domain `mail.aboutvelocityswimming.com` (ID `8f907898-471f-4482-b9da-2ee1d2d9b807`) is verified. Supabase SMTP uses a sending-only key restricted to that domain (`smtp.resend.com`, port 465, username `resend`, sender `Velocity Swimming <noreply@mail.aboutvelocityswimming.com>`). Confirmation and magic-link templates use `supabase/templates/code.html` to send a code without a sign-in link. The login UI and local email configuration match the hosted eight-digit OTP setting. Complete a real delivery and administrator sign-in check before opening family access. Never commit the SMTP password.
 
 ---
 
