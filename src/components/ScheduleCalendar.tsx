@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { CALENDAR_FEED, CALENDAR_TIME_ZONE, CALENDAR_URL, eventsOnDay, monthDays, type CalendarEvent } from "@/lib/calendar-shared";
+import { CALENDAR_TIME_ZONE, CALENDAR_URL, eventsOnDay, monthDays, type CalendarEvent } from "@/lib/calendar-shared";
 import styles from "./ScheduleCalendar.module.css";
 
 const timeFormatter = new Intl.DateTimeFormat("en-US", { timeZone: CALENDAR_TIME_ZONE, hour: "numeric", minute: "2-digit" });
@@ -17,6 +17,17 @@ function eventKind(title: string) {
   if (/\bno practice\b|\bcancel(?:led|ed)\b/i.test(title)) return "notice";
   if (/\bmeet\b|\binvitational\b|\bchampionship\b|\bchallenge\b/i.test(title)) return "meet";
   return "practice";
+}
+
+function groupByStart(events: CalendarEvent[]): CalendarEvent[][] {
+  const groups = new Map<string, CalendarEvent[]>();
+  for (const event of events) {
+    const key = event.allDay ? "all-day" : event.start;
+    const group = groups.get(key) ?? [];
+    group.push(event);
+    groups.set(key, group);
+  }
+  return [...groups.values()];
 }
 
 export default function ScheduleCalendar({ initialMonth, today }: { initialMonth: string; today: string }) {
@@ -74,7 +85,7 @@ export default function ScheduleCalendar({ initialMonth, today }: { initialMonth
   return (
     <section className={styles.calendar} aria-label="Team calendar">
       <div className={styles.filters}>
-        <label>Search<input type="search" placeholder="Find a practice or meet…" value={search} onChange={event => setSearch(event.target.value)} /></label>
+        <label><span className="sr-only">Search</span><input type="search" placeholder="Find a practice or meet…" value={search} onChange={event => setSearch(event.target.value)} /></label>
         {hasFilters ? <button type="button" className={styles.clear} onClick={clearFilters}>Clear search</button> : null}
         <a className={styles.subscribe} href={CALENDAR_URL} target="_blank" rel="noopener noreferrer">Add to my calendar <span aria-hidden="true">↗</span></a>
       </div>
@@ -115,7 +126,7 @@ export default function ScheduleCalendar({ initialMonth, today }: { initialMonth
             {weekdays.map(day => <div className={styles.weekday} key={day}>{day}</div>)}
             {days.map(day => <div key={day} className={`${styles.day} ${day.startsWith(month) ? "" : styles.outside}`}>
               <time dateTime={day} className={day === today ? styles.currentDay : styles.dayNumber} aria-label={dayFormatter.format(new Date(`${day}T12:00:00Z`))} aria-current={day === today ? "date" : undefined}>{Number(day.slice(-2))}</time>
-              {eventsOnDay(filtered, day).map(event => <button type="button" key={event.id} className={`${styles.event} ${styles[eventKind(event.title)]}`} onClick={() => setSelected(event)}><span className={styles.eventTime}>{event.allDay ? "All day" : timeFormatter.format(new Date(event.start))}</span><span>{event.title}</span></button>)}
+              {groupByStart(eventsOnDay(filtered, day)).map(group => <div className={styles.eventRow} key={group[0].id}>{group.map(event => <button type="button" key={event.id} className={`${styles.event} ${styles[eventKind(event.title)]}`} onClick={() => setSelected(event)}><span className={styles.eventTime}>{event.allDay ? "All day" : timeFormatter.format(new Date(event.start))}</span><span>{event.title}</span></button>)}</div>)}
             </div>)}
           </div> : null}
           <div id="mobile-day-schedule" className={view === "month" ? styles.mobileAgenda : styles.agenda} aria-live={view === "month" ? "polite" : undefined}>
@@ -131,7 +142,6 @@ export default function ScheduleCalendar({ initialMonth, today }: { initialMonth
       )}
 
       <div className={styles.footer}><div className={styles.legend}><span><i className={styles.practiceDot} />Practice &amp; team events</span><span><i className={styles.meetDot} />Meets</span><span><i className={styles.noticeDot} />Schedule notices</span></div><p>Updated from the team’s Google Calendar.</p></div>
-      <div className={styles.help}><p>Keep your schedule close. <a href={CALENDAR_FEED}>Subscribe with Apple Calendar or Outlook ↗</a></p><p>Need a hand? <a href="mailto:webadmin@velocity-swimming.com">Contact Coach Christian</a></p></div>
       <noscript><p className={styles.message}>Enable JavaScript to browse and filter events, or <a href={CALENDAR_URL}>view the team calendar in Google Calendar</a>.</p></noscript>
 
       <dialog ref={dialog} className={styles.dialog} onClose={() => setSelected(null)} aria-labelledby="event-title">

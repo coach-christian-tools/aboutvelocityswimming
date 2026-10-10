@@ -26,7 +26,7 @@
 .views button { padding: .6rem 1rem; border-radius: 7px; background: transparent; color: var(--text-muted); font-size: .8rem; }
 .views button[aria-pressed="true"] { background: var(--background); color: var(--green); box-shadow: var(--shadow-sm); }
 .summary { display: flex; justify-content: space-between; gap: 1rem; padding: 0 2rem 1.25rem; color: var(--text-muted); font-size: .75rem; }
-.monthGrid { flex: 1; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); border-top: 1px solid var(--line); }
+.monthGrid { flex: 1; display: grid; grid-template-columns: minmax(0, .65fr) repeat(5, minmax(0, 1fr)) minmax(0, .65fr); border-top: 1px solid var(--line); }
 .weekday { padding: .85rem .8rem; text-transform: uppercase; letter-spacing: .09em; font-size: .65rem; font-weight: 600; color: var(--text-muted); background: var(--background-alt); border-bottom: 1px solid var(--line); }
 .day { min-height: 145px; padding: .65rem; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .day:nth-child(7n) { border-right: 0; }
@@ -121,3 +121,6 @@
   .footer, .help, .filterNote { padding: 1.25rem; }
   .dialog { padding: 1.5rem; }
 }
+
+.eventRow { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 5rem), 1fr)); gap: .3rem; align-items: stretch; }
+.eventRow .event { min-width: 0; }

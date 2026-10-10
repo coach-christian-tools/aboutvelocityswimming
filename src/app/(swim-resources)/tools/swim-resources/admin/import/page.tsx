@@ -1,5 +1,6 @@
 'use client';
 
+import ReviewQueue from "@/components/collection/ReviewQueue";
 import { useMemo, useState } from 'react';
 import { DATASET_ID } from '@/features/swim-resources/lib/backend';
 import BatchImportPanel from '@/features/swim-resources/components/admin/BatchImportPanel';
@@ -25,13 +26,14 @@ function HtmlObservations() {
 }
 
 export default function ImportPage() {
-  const [mode, setMode] = useState<'batch' | 'html'>('batch');
+  const [mode, setMode] = useState<'collected' | 'batch' | 'html'>('collected');
   return <div className="admin-import">
     <h1 >Import</h1>
     <div className="admin-controls" role="group" aria-label="Import options">
+      <button aria-pressed={mode === 'collected'} onClick={() => setMode('collected')}>Collected changes</button>
       <button aria-pressed={mode === 'batch'}  onClick={() => setMode('batch')}>Structured batch</button>
       <button aria-pressed={mode === 'html'}  onClick={() => setMode('html')}>Inspect HTML</button>
     </div>
-    {mode === 'batch' ? DATASET_ID === 'velocity-v2' ? <BatchImportPanel /> : <p>Fresh imports require velocity-v2. Switch only after the archive and new dataset pass release verification.</p> : <HtmlObservations />}
+    {mode === 'collected' ? <ReviewQueue /> : mode === 'batch' ? DATASET_ID === 'velocity-v2' ? <BatchImportPanel /> : <p>Fresh imports require velocity-v2. Switch only after the archive and new dataset pass release verification.</p> : <HtmlObservations />}
   </div>;
 }

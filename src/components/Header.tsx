@@ -4,6 +4,7 @@ import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { isStaffRoute } from "@/lib/staff-routes";
 import styles from "./Header.module.css";
 import { scopedClasses } from "@/lib/styles";
 
@@ -228,6 +229,7 @@ function Navigation({ pathname }: { pathname: string }) {
 
 export default function Header() {
   const pathname = usePathname();
+  if (isStaffRoute(pathname)) return null;
   // A route change resets disclosures without an effect or a flash of stale state.
   return <Navigation key={pathname} pathname={pathname} />;
 }

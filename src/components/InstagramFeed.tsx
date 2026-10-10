@@ -39,7 +39,6 @@ export default function InstagramFeed() {
           </p>
         </div>
 
-        <p className={styles['embed-note']}>If a preview is unavailable, open the post directly on Instagram.</p>
         <div className={scopedClasses(styles, 'insta-embeds-grid')}>
           {POST_URLS.map((url, index) => (
             <div key={index} className={scopedClasses(styles, 'insta-embed-card')}>
@@ -115,9 +114,6 @@ export default function InstagramFeed() {
                   </a>
                 </div>
               </blockquote>
-              <a href={url} target="_blank" rel="noopener noreferrer" className={styles['post-link']}>
-                Open post {index + 1} on Instagram ↗
-              </a>
             </div>
           ))}
         </div>

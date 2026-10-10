@@ -47,6 +47,7 @@ try {
   console.log("Shared staff session across tools verified");
   await page.goto(base+'/tools/swim-resources/admin/import');
   const batch=JSON.parse(readFileSync('backups/browser/import.json','utf8'));
+  await page.getByRole('button',{name:'Structured batch',exact:true}).click();
   await page.getByLabel('Import batch JSON',{exact:true}).fill(JSON.stringify(batch));
   await page.getByRole('button',{name:'Preview changes',exact:true}).click();
   await page.getByRole('checkbox',{name:'Select Velocity Swimming Browser Test',exact:true}).check();
@@ -65,7 +66,7 @@ try {
     await page.setViewportSize({ width, height: 900 });
     await page.goto(base + "/tools");
     await page
-      .getByRole("link", { name: "Staff tools", exact: true })
+      .getByRole("link", { name: "Staff Tools", exact: true })
       .waitFor();
     await page.screenshot({
       path: "/tmp/velocity-tools-" + width + ".png",

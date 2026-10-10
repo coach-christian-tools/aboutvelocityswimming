@@ -376,3 +376,6 @@
   display: inline-block;
   margin-right: 8px;
 }
+
+.portal-shell:has(.admin-simple) { padding-top: 0; }
+.admin-simple { padding-bottom: 5rem; }
