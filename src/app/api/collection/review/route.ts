@@ -38,7 +38,7 @@ export async function POST(request: Request) {
   if (error)
     return Response.json(
       { error: error.message },
-      { status: error.code === "40001" ? 409 : 403 },
+      { status: ["40001", "23503"].includes(error.code) ? 409 : 403 },
     );
   return Response.json({ success: true });
 }

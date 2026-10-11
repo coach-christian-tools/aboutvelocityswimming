@@ -1,7 +1,8 @@
 "use client";
 import Link from "next/link";
-import { useCallback, useEffect, useState, useMemo } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { browserClient, hasBackendConfiguration } from "@/lib/supabase/client";
+import { loadReviewBatches } from "./load-review-batches";
 import type { Database, Json } from "@/lib/supabase/database.types";
 import { useAuth } from "@/features/workshare/contexts/auth";
 
@@ -219,6 +220,7 @@ function Records({ writes, reads }: { writes: Json; reads: Json }) {
           : "No records match."}{" "}
         · Expand a record to inspect its fields.
       </p>
+      {filtered.length > 25 && <PageButtons page={currentPage} pages={Math.ceil(filtered.length / 25)} label="Record pages" onChange={setPage} />}
       {lookupError && <p role="alert">{lookupError}</p>}
       {filtered
         .slice(currentPage * 25, (currentPage + 1) * 25)
@@ -319,40 +321,52 @@ export default function ReviewQueue() {
   const [batches, setBatches] = useState<Batch[]>([]);
   const [status, setStatus] = useState("pending");
   const [offset, setOffset] = useState(0);
-  const [total, setTotal] = useState(0);
+  const [query, setQuery] = useState("");
+  const [blockers, setBlockers] = useState<Record<string, string[]>>({});
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(true);
   const [busy, setBusy] = useState<string | null>(null);
   const [notes, setNotes] = useState<Record<string, string>>({});
   const [refresh, setRefresh] = useState(0);
-  const load = useCallback(
-    () =>
-      browserClient()
-        .from("collection_batches")
-        .select("*", { count: "exact" })
-        .eq("status", status)
-        .order("received_at", { ascending: false })
-        .range(offset, offset + 19),
-    [status, offset],
-  );
   useEffect(() => {
-    let active = true;
+    const controller = new AbortController();
     if (!isAdmin || !hasBackendConfiguration) return;
-    void load().then((result) => {
-      if (!active) return;
-      setError(result.error?.message ?? "");
-      if (!result.error) {
-        setBatches(result.data ?? []);
-        setTotal(result.count ?? 0);
-        const lastOffset = Math.max(0, Math.ceil((result.count ?? 0) / 20) - 1) * 20;
-        if (offset > lastOffset) { setOffset(lastOffset); return; }
-      }
+    void loadReviewBatches(status, controller.signal).then(result => {
+      if (controller.signal.aborted) return;
+      setBatches(result.batches);
+      setBlockers(result.blockers);
+      setError("");
+      setLoading(false);
+    }).catch(cause => {
+      if (controller.signal.aborted) return;
+      setError(cause instanceof Error ? cause.message : typeof cause?.message === "string" ? cause.message : "Unable to load review batches.");
+      setBatches([]);
       setLoading(false);
     });
-    return () => {
-      active = false;
-    };
-  }, [load, isAdmin, refresh, offset]);
+    return () => controller.abort();
+  }, [status, isAdmin, refresh]);
+  useEffect(() => {
+    const refreshOnReturn = () => setRefresh(value => value + 1);
+    window.addEventListener("focus", refreshOnReturn);
+    return () => window.removeEventListener("focus", refreshOnReturn);
+  }, []);
+  const searchableBatches = useMemo(() => batches.map(batch => ({
+    batch,
+    text: `${divisions[batch.division]} ${batch.scope} ${batch.source_url} ${JSON.stringify(batch.writes)}`.toLowerCase(),
+  })), [batches]);
+  const filteredBatches = useMemo(() => {
+    const search = query.trim().toLowerCase();
+    return searchableBatches.filter(item => !search || item.text.includes(search)).map(item => item.batch);
+  }, [searchableBatches, query]);
+  const total = filteredBatches.length;
+  const currentOffset = Math.min(offset, Math.max(0, Math.ceil(total / 20) - 1) * 20);
+  const pageControls = <PageButtons
+    page={currentOffset / 20}
+    pages={Math.max(1, Math.ceil(total / 20))}
+    disabled={loading}
+    label="Proposal pages"
+    onChange={page => setOffset(page * 20)}
+  />;
   async function decide(batch: Batch, decision: string) {
     setBusy(batch.id);
     setError("");
@@ -369,6 +383,7 @@ export default function ReviewQueue() {
       const result = await response.json();
       if (!response.ok)
         throw new Error(result.error || "Unable to save decision.");
+      setLoading(true);
       setRefresh((value) => value + 1);
     } catch (cause) {
       setError(
@@ -391,7 +406,11 @@ export default function ReviewQueue() {
         Collected changes stay private until approved. A batch is applied
         together; changed records require a fresh collection.
       </p>
-      <div className="flex gap-4">
+      <label className="block text-sm font-medium">
+        Search batches
+        <input type="search" className="mt-1 block w-full rounded border p-2" placeholder="Search batch, meet, swimmer, source or record…" value={query} onChange={event => { setQuery(event.target.value); setOffset(0); }} />
+      </label>
+      <div className="flex flex-wrap gap-4">
         <label>
           Status{" "}
           <select
@@ -419,6 +438,8 @@ export default function ReviewQueue() {
           Refresh
         </button>
       </div>
+      <p className="text-sm text-text-secondary">{total} matching batches · {status === "pending" || status === "held" ? "Prerequisites first; oldest ready batches first." : "Oldest batches first."}</p>
+      {pageControls}
       {error && (
         <p role="alert" className="text-red-700">
           {error}
@@ -426,10 +447,10 @@ export default function ReviewQueue() {
       )}
       {loading ? (
         <p>Loading proposals…</p>
-      ) : batches.length === 0 ? (
-        <p>No {status} proposals.</p>
+      ) : total === 0 ? (
+        <p>{query.trim() ? "No batches match your search." : `No ${status} proposals.`}</p>
       ) : (
-        batches.map((batch) => {
+        filteredBatches.slice(currentOffset, currentOffset + 20).map((batch) => {
           const stats = reviewStats(
             batch.writes as ReviewWrite[],
             batch.reads as ReviewRead[],
@@ -447,6 +468,10 @@ export default function ReviewQueue() {
                 Captured {new Date(batch.captured_at).toLocaleString()} ·{" "}
                 {batch.coverage} coverage · {batch.status}
               </p>
+              {(blockers[batch.id]?.length ?? 0) > 0 && <details className="rounded bg-amber-100 p-2 text-sm text-amber-900">
+                <summary className="cursor-pointer font-medium">Waiting for {blockers[batch.id].length} prerequisite {blockers[batch.id].length === 1 ? "record" : "records"} · expand for approval order</summary>
+                <ul className="mt-1 list-disc pl-5 break-words">{blockers[batch.id].map(message => <li key={message}>{message}</li>)}</ul>
+              </details>}
               {["pending", "held"].includes(batch.status) ? (
                 <>
                   <div className="flex flex-wrap gap-2">
@@ -458,7 +483,7 @@ export default function ReviewQueue() {
                       <button
                         className={`rounded border px-3 py-2 text-sm disabled:opacity-50 ${decision === "approved" ? "border-primary-blue bg-primary-blue font-semibold text-primary-ink" : ""}`}
                         key={decision}
-                        disabled={busy !== null}
+                        disabled={busy !== null || (decision === "approved" && (loading || (blockers[batch.id]?.length ?? 0) > 0))}
                         onClick={() => void decide(batch, decision)}
                       >
                         {busy === batch.id ? "Saving…" : label}
@@ -527,13 +552,7 @@ export default function ReviewQueue() {
           );
         })
       )}
-      <PageButtons
-        page={offset / 20}
-        pages={Math.max(1, Math.ceil(total / 20))}
-        disabled={loading}
-        label="Proposal pages"
-        onChange={page => { if (page * 20 !== offset) { setLoading(true); setOffset(page * 20); } }}
-      />
+      {pageControls}
     </section>
   );
 }

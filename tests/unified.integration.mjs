@@ -455,6 +455,41 @@ await test("collection is staging-only, isolated, deduplicated and atomically re
   assert.equal(await record(staff, "teams/stale-" + suffix), null);
   await collect("teams/velocity-swimming", before);
 
+  // A collector may supply writes in arbitrary order. Approval must insert
+  // parents first, and a missing parent must leave the whole batch pending.
+  const dependencyRace = await record(staff, "swims/test-race-1");
+  const dependencyId = "dependency-" + suffix;
+  const reversed = await stage({ ...base, division: "times", writes: [
+    { path: "swims/" + dependencyId, after: { ...dependencyRace, id: dependencyId, athleteId: dependencyId, meet: { ...dependencyRace.meet, id: dependencyId } } },
+    { path: "meets/" + dependencyId, after: { name: "Dependency meet", teamId: dependencyId, venueId: dependencyId } },
+    { path: "athletes/" + dependencyId, after: { name: { first: "Dependency", last: "Swimmer" }, teamId: dependencyId } },
+    { path: "venues/" + dependencyId, after: { name: "Dependency pool", teamId: dependencyId } },
+    { path: "teams/" + dependencyId, after: { name: "Dependency team" } },
+  ] }); assert.ifError(reversed.error);
+  assert.ifError((await staff.rpc("review_collection", { batch_id: reversed.data, decision: "approved", note: "Reversed writes verified" })).error);
+  assert.equal((await record(staff, "swims/" + dependencyId)).meet.id, dependencyId);
+
+  const missingId = "missing-meet-" + suffix;
+  const missing = await stage({ ...base, division: "times", writes: [
+    { path: "teams/atomic-" + suffix, after: { name: "Must roll back" } },
+    { path: "swims/" + missingId, after: { ...dependencyRace, id: missingId, athleteId: dependencyId, meet: { ...dependencyRace.meet, id: missingId } } },
+  ] }); assert.ifError(missing.error);
+  const missingApproval = await staff.rpc("review_collection", { batch_id: missing.data, decision: "approved", note: "" });
+  assert.equal(missingApproval.error?.code, "23503");
+  assert.match(missingApproval.error.message, /Approve the meet batch/);
+  assert.equal(await record(staff, "teams/atomic-" + suffix), null);
+  assert.equal((await staff.from("collection_batches").select("status").eq("id", missing.data).single()).data.status, "pending");
+  const parent = await stage({ ...base, division: "times", writes: [{ path: "meets/" + missingId, after: { name: "Parent meet" } }] }); assert.ifError(parent.error);
+  assert.ifError((await staff.rpc("review_collection", { batch_id: parent.data, decision: "approved", note: "Parent first" })).error);
+  assert.ifError((await staff.rpc("review_collection", { batch_id: missing.data, decision: "approved", note: "Parent now exists" })).error);
+  for (const path of [
+    "swims/" + missingId, "swims/" + dependencyId,
+    "athletes/" + dependencyId, "public_athletes/" + dependencyId, "people/person_" + dependencyId,
+    "meets/" + missingId, "meets/" + dependencyId, "venues/" + dependencyId,
+    "teams/atomic-" + suffix, "teams/" + dependencyId,
+  ]) await collect(path, null);
+
+
   const family = await record(staff, "families/family-a");
   assert.ok((await stage({ ...base, division: "workshare", writes: [{ path: "families/family-a", after: { ...family, children: [] } }] })).error);
   assert.ok((await stage({ ...base, division: "workshare", writes: [{ path: "families/family-a", after: { ...family, authorizedEmails: [] } }] })).error);
