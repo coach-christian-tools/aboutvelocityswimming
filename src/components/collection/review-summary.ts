@@ -34,3 +34,31 @@ export function raceSummary(value: Json, profiles: Record<string, Json>) {
     date: typeof meet.date === "string" ? meet.date : "",
   };
 }
+
+export function reviewIssues(value: Json): string[] {
+  const gaps = object(value).gaps;
+  return Array.isArray(gaps)
+    ? gaps.map((gap) => (typeof gap === "string" ? gap : "See source evidence"))
+    : [];
+}
+export function reviewStats(writes: ReviewWrite[], reads: ReviewRead[]) {
+  const before = new Map(reads.map((read) => [read.path, read.before]));
+  const stats = {
+    total: writes.length,
+    added: 0,
+    updated: 0,
+    removed: 0,
+    issues: 0,
+    attention: 0,
+  };
+  for (const write of writes) {
+    const previous = before.get(write.path) ?? null;
+    if (write.after === null) stats.removed++;
+    else if (previous === null) stats.added++;
+    else stats.updated++;
+    const hasIssues = reviewIssues(write.after ?? previous).length > 0;
+    if (hasIssues) stats.issues++;
+    if (hasIssues || write.after === null) stats.attention++;
+  }
+  return stats;
+}

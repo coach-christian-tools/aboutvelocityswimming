@@ -1,0 +1,221 @@
+.records {
+  min-width: 0;
+}
+.controls {
+  scroll-margin-top: 110px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 12px 12px 0 0;
+  background: var(--surface);
+}
+.selector {
+  flex: 0 0 300px;
+  min-width: 0;
+}
+.controls h2 {
+  font-size: 21px;
+}
+.controls p {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 5px;
+}
+.jumpLinks {
+  padding: 12px 20px;
+  border: 1px solid var(--border);
+  border-top: 0;
+  border-radius: 0 0 12px 12px;
+  background: var(--background-alt);
+  margin-bottom: 24px;
+}
+.jumpLinks > div {
+  display: flex;
+  align-items: center;
+  gap: 8px 18px;
+  flex-wrap: wrap;
+  padding: 6px 0;
+}
+.jumpLinks a {
+  font-size: 12px;
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  padding-block: 6px;
+}
+.courseLink {
+  font-weight: 750;
+  min-width: 35px;
+}
+.course,
+.ageSection,
+.topAnchor {
+  scroll-margin-top: 110px;
+}
+.course {
+  margin-bottom: 36px;
+}
+.courseHeading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 2px solid var(--primary-dark);
+  margin-bottom: 16px;
+}
+.courseHeading h2 {
+  font-size: 22px;
+}
+.courseHeading h2 span {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-left: 8px;
+}
+.courseHeading a {
+  font-size: 12px;
+  color: var(--accent);
+  white-space: nowrap;
+}
+.ageSection {
+  margin-bottom: 20px;
+}
+.ageSection h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+.tableWrap {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  white-space: nowrap;
+  text-align: left;
+}
+.table thead {
+  background: var(--primary-dark);
+  color: white;
+}
+.table thead th {
+  font-weight: 650;
+}
+.table th,
+.table td {
+  padding: 5px 8px;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.table tr:last-child td,
+.table tr:last-child th {
+  border-bottom: 0;
+}
+.table tr > :last-child {
+  border-right: 0;
+}
+.table tbody tr:nth-child(even) {
+  background: var(--background-alt);
+}
+.table tbody tr:hover {
+  background: color-mix(in srgb, var(--accent) 8%, var(--surface));
+}
+.table button {
+  display: block;
+  background: none;
+  color: var(--accent);
+  font: inherit;
+  text-align: left;
+  padding: 0;
+}
+.table button:hover {
+  text-decoration: underline;
+}
+.event {
+  font-weight: 750;
+  color: var(--text-main);
+  background: var(--background-alt);
+}
+.holder {
+  width: 28%;
+}
+.holder button {
+  max-width: 260px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.time {
+  font-weight: 750;
+  font-variant-numeric: tabular-nums;
+}
+.recordDate {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+.missing {
+  color: var(--text-muted);
+}
+.empty {
+  padding: 16px;
+  background: var(--background-alt);
+  border-radius: 8px;
+  font-size: 13px;
+}
+@media (max-width: 600px) {
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding: 16px;
+  }
+  .selector {
+    flex-basis: auto;
+  }
+  .jumpLinks {
+    padding: 12px 16px;
+  }
+  .jumpLinks > div {
+    gap: 4px 14px;
+  }
+  .jumpLinks a {
+    min-height: 36px;
+    display: inline-flex;
+    align-items: center;
+  }
+  .courseHeading {
+    flex-wrap: wrap;
+  }
+  .courseHeading h2 {
+    font-size: 20px;
+  }
+  .table th,
+  .table td {
+    padding: 7px 8px;
+  }
+  .holder button {
+    max-width: 130px;
+  }
+  .recordDate,
+  .table thead th:nth-child(2),
+  .table thead th:nth-child(6),
+  .table thead th:nth-child(9) {
+    display: none;
+  }
+  .event {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+  }
+}
+
+.relayRow > td,
+.relayRow > th {
+  border-top: 2px solid var(--border);
+}

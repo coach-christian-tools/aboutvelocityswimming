@@ -5,7 +5,16 @@ import { browserClient, hasBackendConfiguration } from "@/lib/supabase/client";
 import type { Database, Json } from "@/lib/supabase/database.types";
 import { useAuth } from "@/features/workshare/contexts/auth";
 
-import { athleteName, athleteProfiles, object, raceSummary, type ReviewWrite, type ReviewRead } from "./review-summary";
+import {
+  athleteName,
+  athleteProfiles,
+  object,
+  raceSummary,
+  type ReviewWrite,
+  type ReviewRead,
+  reviewStats,
+  reviewIssues,
+} from "./review-summary";
 
 type Batch = Database["public"]["Tables"]["collection_batches"]["Row"];
 const divisions: Record<string, string> = {
@@ -59,57 +68,258 @@ function KnowledgeDetails({ value }: { value: Json }) {
     })}</ul></div>}
   </div>;
 }
+function PageButtons({ page, pages, disabled = false, label, onChange }: {
+  page: number;
+  pages: number;
+  disabled?: boolean;
+  label: string;
+  onChange: (page: number) => void;
+}) {
+  return <nav className="flex flex-wrap items-center gap-2 text-sm" aria-label={label}>
+    <button className="rounded border px-3 py-2 disabled:opacity-50" disabled={disabled || page === 0} onClick={() => onChange(page - 1)}>Previous</button>
+    {Array.from({ length: pages }, (_, index) => <button
+      key={index}
+      aria-label={`Go to page ${index + 1}`}
+      aria-current={index === page ? "page" : undefined}
+      disabled={disabled}
+      className={`min-w-9 rounded border px-3 py-2 disabled:opacity-50 ${index === page ? "border-primary-blue bg-primary-blue font-semibold text-primary-ink" : ""}`}
+      onClick={() => onChange(index)}
+    >{index + 1}</button>)}
+    <button className="rounded border px-3 py-2 disabled:opacity-50" disabled={disabled || page + 1 >= pages} onClick={() => onChange(page + 1)}>Next</button>
+  </nav>;
+}
 function Records({ writes, reads }: { writes: Json; reads: Json }) {
   const changes = writes as ReviewWrite[];
   const before = reads as ReviewRead[];
   const [current, setCurrent] = useState<Record<string, Json>>({});
   const [lookupError, setLookupError] = useState("");
-  const athleteIds = useMemo(() => [...new Set([...changes.map(item => item.after), ...before.map(item => item.before)]
-    .map(value => object(value).athleteId).filter((id): id is string => typeof id === "string"))], [changes, before]);
+  const [query, setQuery] = useState("");
+  const [filter, setFilter] = useState("all");
+  const [page, setPage] = useState(0);
+  const athleteIds = useMemo(
+    () => [
+      ...new Set(
+        [
+          ...changes.map((item) => item.after),
+          ...before.map((item) => item.before),
+        ]
+          .map((value) => object(value).athleteId)
+          .filter((id): id is string => typeof id === "string"),
+      ),
+    ],
+    [changes, before],
+  );
   useEffect(() => {
     let active = true;
     if (!athleteIds.length) return;
-    void browserClient().from("athletes").select("id,data").in("id", athleteIds).then(({ data, error }) => {
-      if (!active) return;
-      setLookupError(error ? "Some athlete names could not be loaded. Batch profiles are still shown; unresolved swimmers are labeled by ID." : "");
-      setCurrent(Object.fromEntries((data ?? []).map(row => [row.id, row.data])));
-    });
-    return () => { active = false; };
+    void browserClient()
+      .from("athletes")
+      .select("id,data")
+      .in("id", athleteIds)
+      .then(({ data, error }) => {
+        if (!active) return;
+        setLookupError(
+          error
+            ? "Some athlete names could not be loaded. Batch profiles are still shown; unresolved swimmers are labeled by ID."
+            : "",
+        );
+        setCurrent(
+          Object.fromEntries((data ?? []).map((row) => [row.id, row.data])),
+        );
+      });
+    return () => {
+      active = false;
+    };
   }, [athleteIds]);
   const proposedProfiles = athleteProfiles(changes, before, current, true);
   const previousProfiles = athleteProfiles(changes, before, current, false);
-  return <div className="space-y-3">
-    {lookupError && <p role="alert">{lookupError}</p>}
-    {changes.map(change => {
-      const previous = before.find(item => item.path === change.path)?.before ?? null;
-      const swim = change.path.startsWith("swims/");
-      const knowledge = change.path.startsWith("knowledge_entries/");
-      const action = change.after === null ? "Remove" : previous === null ? "Add" : "Update";
-      const name = change.path.startsWith("athletes/") ? athleteName(change.after ?? previous) : knowledge ? object(change.after ?? previous).title : object(change.after ?? previous).name;
-      return <section key={change.path} className="rounded border p-4 space-y-3" aria-label={`${action} ${swim ? "swim" : change.path}`}>
-        <h3 className="font-semibold">{action} {swim ? "swim" : typeof name === "string" && name ? name : change.path}</h3>
-        {swim && <RaceDetails value={change.after ?? previous} profiles={change.after === null ? previousProfiles : proposedProfiles} />}
-        {knowledge && <KnowledgeDetails value={change.after ?? previous} />}
-        <details>
-          <summary className="cursor-pointer text-sm">Compare changes and raw fields</summary>
-          <p className="text-sm break-all">{change.path}</p>
-          <div className="mt-3 grid gap-4 md:grid-cols-2">
-            {[{ label: "Current at collection", value: previous, profiles: previousProfiles }, { label: "Proposed", value: change.after, profiles: proposedProfiles }].map(side => <div key={side.label}>
-              <h4>{side.label}</h4>
-              {side.value === null ? <p>{side.label === "Proposed" ? "Record will be removed." : "New record."}</p> : swim ? <RaceDetails value={side.value} profiles={side.profiles} /> : knowledge ? <KnowledgeDetails value={side.value} /> : null}
-              <pre className="max-h-80 overflow-auto whitespace-pre-wrap break-words text-xs">{JSON.stringify(side.value, null, 2)}</pre>
-            </div>)}
-          </div>
-        </details>
-      </section>;
-    })}
-  </div>;
+  const previousByPath = new Map(
+    before.map((item) => [item.path, item.before]),
+  );
+  const rows = changes.map((change) => {
+    const previous = previousByPath.get(change.path) ?? null;
+    const value = change.after ?? previous;
+    const swim = change.path.startsWith("swims/");
+    const knowledge = change.path.startsWith("knowledge_entries/");
+    const action =
+      change.after === null ? "Remove" : previous === null ? "Add" : "Update";
+    const name = change.path.startsWith("athletes/")
+      ? athleteName(value)
+      : knowledge
+        ? object(value).title
+        : object(value).name;
+    const race = swim
+      ? raceSummary(
+          value,
+          change.after === null ? previousProfiles : proposedProfiles,
+        )
+      : null;
+    const label = race
+      ? `${race.swimmer} · ${race.event} · ${race.time} · ${race.course}`
+      : typeof name === "string" && name
+        ? name
+        : change.path;
+    const issues = reviewIssues(value);
+    return { change, previous, swim, knowledge, action, label, issues };
+  });
+  const filtered = rows.filter(
+    (row) =>
+      (filter === "all" ||
+        (filter === "attention"
+          ? row.issues.length > 0 || row.action === "Remove"
+          : row.action.toLowerCase() === filter)) &&
+      `${row.label} ${row.change.path} ${row.issues.join(" ")}`
+        .toLowerCase()
+        .includes(query.toLowerCase()),
+  );
+  const currentPage = Math.min(
+    page,
+    Math.max(0, Math.ceil(filtered.length / 25) - 1),
+  );
+  return (
+    <div className="space-y-2">
+      <div className="flex flex-wrap items-center gap-2">
+        <input
+          type="search"
+          aria-label="Search records"
+          placeholder="Search records or conflicts…"
+          className="min-w-0 flex-1 rounded border p-2 text-sm"
+          value={query}
+          onChange={(event) => {
+            setQuery(event.target.value);
+            setPage(0);
+          }}
+        />
+        <select
+          aria-label="Filter records"
+          className="rounded border p-2 text-sm"
+          value={filter}
+          onChange={(event) => {
+            setFilter(event.target.value);
+            setPage(0);
+          }}
+        >
+          <option value="all">All records ({rows.length})</option>
+          <option value="attention">
+            Needs attention (
+            {
+              rows.filter((row) => row.issues.length || row.action === "Remove")
+                .length
+            }
+            )
+          </option>
+          <option value="add">Additions</option>
+          <option value="update">Updates</option>
+          <option value="remove">Removals</option>
+        </select>
+      </div>
+      <p className="text-xs text-text-secondary">
+        {filtered.length
+          ? `${currentPage * 25 + 1}–${Math.min((currentPage + 1) * 25, filtered.length)} of ${filtered.length} records`
+          : "No records match."}{" "}
+        · Expand a record to inspect its fields.
+      </p>
+      {lookupError && <p role="alert">{lookupError}</p>}
+      {filtered
+        .slice(currentPage * 25, (currentPage + 1) * 25)
+        .map(({ change, previous, swim, knowledge, action, label, issues }) => {
+          return (
+            <details
+              key={change.path}
+              className="rounded border px-3 py-2"
+              aria-label={`${action} ${label}`}
+            >
+              <summary className="cursor-pointer text-sm break-words">
+                <span
+                  className={`mr-2 inline-block rounded px-2 py-0.5 text-xs font-semibold ${action === "Remove" ? "bg-red-100 text-red-800" : action === "Update" ? "bg-blue-100 text-blue-800" : "bg-emerald-100 text-emerald-800"}`}
+                >
+                  {action}
+                </span>
+                <span className="font-medium">{label}</span>
+                {issues.length > 0 && (
+                  <span className="ml-2 inline-block rounded bg-amber-100 px-2 py-0.5 text-xs font-semibold text-amber-900">
+                    {issues.length} gaps / source conflicts
+                  </span>
+                )}
+              </summary>
+              {issues.length > 0 && (
+                <ul className="my-2 list-disc pl-5 text-sm text-amber-900">
+                  {issues.map((issue, index) => (
+                    <li key={index}>{issue}</li>
+                  ))}
+                </ul>
+              )}
+              <div className="mt-3 space-y-3">
+                {swim && (
+                  <RaceDetails
+                    value={change.after ?? previous}
+                    profiles={
+                      change.after === null
+                        ? previousProfiles
+                        : proposedProfiles
+                    }
+                  />
+                )}
+                {knowledge && (
+                  <KnowledgeDetails value={change.after ?? previous} />
+                )}
+                <details>
+                  <summary className="cursor-pointer text-sm">
+                    Compare changes and raw fields
+                  </summary>
+                  <p className="text-sm break-all">{change.path}</p>
+                  <div className="mt-3 grid gap-4 md:grid-cols-2">
+                    {[
+                      {
+                        label: "Current at collection",
+                        value: previous,
+                        profiles: previousProfiles,
+                      },
+                      {
+                        label: "Proposed",
+                        value: change.after,
+                        profiles: proposedProfiles,
+                      },
+                    ].map((side) => (
+                      <div key={side.label}>
+                        <h4>{side.label}</h4>
+                        {side.value === null ? (
+                          <p>
+                            {side.label === "Proposed"
+                              ? "Record will be removed."
+                              : "New record."}
+                          </p>
+                        ) : swim ? (
+                          <RaceDetails
+                            value={side.value}
+                            profiles={side.profiles}
+                          />
+                        ) : knowledge ? (
+                          <KnowledgeDetails value={side.value} />
+                        ) : null}
+                        <pre className="max-h-80 overflow-auto whitespace-pre-wrap break-words text-xs">
+                          {JSON.stringify(side.value, null, 2)}
+                        </pre>
+                      </div>
+                    ))}
+                  </div>
+                </details>
+              </div>
+            </details>
+          );
+        })}
+      {filtered.length > 25 && (
+        <PageButtons page={currentPage} pages={Math.ceil(filtered.length / 25)} label="Record pages" onChange={setPage} />
+      )}
+    </div>
+  );
 }
 export default function ReviewQueue() {
   const { isAdmin, loading: authLoading } = useAuth();
   const [batches, setBatches] = useState<Batch[]>([]);
   const [status, setStatus] = useState("pending");
   const [offset, setOffset] = useState(0);
+  const [total, setTotal] = useState(0);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(true);
   const [busy, setBusy] = useState<string | null>(null);
@@ -119,7 +329,7 @@ export default function ReviewQueue() {
     () =>
       browserClient()
         .from("collection_batches")
-        .select("*")
+        .select("*", { count: "exact" })
         .eq("status", status)
         .order("received_at", { ascending: false })
         .range(offset, offset + 19),
@@ -131,13 +341,18 @@ export default function ReviewQueue() {
     void load().then((result) => {
       if (!active) return;
       setError(result.error?.message ?? "");
-      if (!result.error) setBatches(result.data ?? []);
+      if (!result.error) {
+        setBatches(result.data ?? []);
+        setTotal(result.count ?? 0);
+        const lastOffset = Math.max(0, Math.ceil((result.count ?? 0) / 20) - 1) * 20;
+        if (offset > lastOffset) { setOffset(lastOffset); return; }
+      }
       setLoading(false);
     });
     return () => {
       active = false;
     };
-  }, [load, isAdmin, refresh]);
+  }, [load, isAdmin, refresh, offset]);
   async function decide(batch: Batch, decision: string) {
     setBusy(batch.id);
     setError("");
@@ -171,7 +386,7 @@ export default function ReviewQueue() {
       </p>
     );
   return (
-    <section className="space-y-6">
+    <section className="space-y-3">
       <p>
         Collected changes stay private until approved. A batch is applied
         together; changed records require a fresh collection.
@@ -214,85 +429,111 @@ export default function ReviewQueue() {
       ) : batches.length === 0 ? (
         <p>No {status} proposals.</p>
       ) : (
-        batches.map((batch) => (
-          <article key={batch.id} className="space-y-4 rounded-xl border p-5">
-            <h2 className="text-xl font-semibold">
-              {divisions[batch.division]}
-            </h2>
-            <p>{batch.scope}</p>
-            <p className="text-sm">
-              Captured {new Date(batch.captured_at).toLocaleString()} ·{" "}
-              {batch.coverage} coverage · {batch.status}
-            </p>
-            <a
-              href={safeUrl(batch.source_url)}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline break-all"
+        batches.map((batch) => {
+          const stats = reviewStats(
+            batch.writes as ReviewWrite[],
+            batch.reads as ReviewRead[],
+          );
+          return (
+            <article
+              key={batch.id}
+              className="min-w-0 space-y-2 rounded-xl border p-3"
             >
-              {batch.source_url}
-            </a>
-            <Records writes={batch.writes} reads={batch.reads} />
-            <details>
-              <summary className="cursor-pointer">Source evidence</summary>
-              <pre className="max-h-96 overflow-auto whitespace-pre-wrap break-words text-xs">
-                {JSON.stringify(batch.evidence, null, 2)}
-              </pre>
-            </details>
-            {["pending", "held"].includes(batch.status) ? (
-              <>
-                <label className="block">
-                  Review note
-                  <textarea
-                    maxLength={4000}
-                    className="mt-1 block w-full rounded border p-2"
-                    value={notes[batch.id] ?? ""}
-                    onChange={(event) =>
-                      setNotes({ ...notes, [batch.id]: event.target.value })
-                    }
-                  />
-                </label>
-                <div className="flex flex-wrap gap-3">
-                  {[
-                    ["approved", "Approve all changes"],
-                    ["held", "Hold"],
-                    ["declined", "Decline"],
-                  ].map(([decision, label]) => (
-                    <button
-                      className="rounded border px-4 py-2 disabled:opacity-50"
-                      key={decision}
-                      disabled={busy !== null}
-                      onClick={() => void decide(batch, decision)}
-                    >
-                      {busy === batch.id ? "Saving…" : label}
-                    </button>
-                  ))}
-                </div>
-              </>
-            ) : (
-              <p>
-                Decision: {batch.review_note || "No note"} ·{" "}
-                {batch.reviewed_at &&
-                  new Date(batch.reviewed_at).toLocaleString()}
+              <h2 className="text-base font-semibold">
+                {divisions[batch.division]}
+              </h2>
+              <p className="break-words text-sm font-medium">{batch.scope}</p>
+              <p className="text-sm">
+                Captured {new Date(batch.captured_at).toLocaleString()} ·{" "}
+                {batch.coverage} coverage · {batch.status}
               </p>
-            )}
-          </article>
-        ))
+              {["pending", "held"].includes(batch.status) ? (
+                <>
+                  <div className="flex flex-wrap gap-2">
+                    {[
+                      ["approved", "Approve all changes"],
+                      ["held", "Hold"],
+                      ["declined", "Decline"],
+                    ].map(([decision, label]) => (
+                      <button
+                        className={`rounded border px-3 py-2 text-sm disabled:opacity-50 ${decision === "approved" ? "border-primary-blue bg-primary-blue font-semibold text-primary-ink" : ""}`}
+                        key={decision}
+                        disabled={busy !== null}
+                        onClick={() => void decide(batch, decision)}
+                      >
+                        {busy === batch.id ? "Saving…" : label}
+                      </button>
+                    ))}
+                  </div>
+                  <details>
+                    <summary className="cursor-pointer text-sm">
+                      Review note{notes[batch.id] ? " · added" : " (optional)"}
+                    </summary>
+                    <label className="block">
+                      Review note
+                      <textarea
+                        maxLength={4000}
+                        className="mt-1 block w-full rounded border p-2"
+                        value={notes[batch.id] ?? ""}
+                        onChange={(event) =>
+                          setNotes({ ...notes, [batch.id]: event.target.value })
+                        }
+                      />
+                    </label>
+                  </details>
+                </>
+              ) : (
+                <p>
+                  Decision: {batch.review_note || "No note"} ·{" "}
+                  {batch.reviewed_at &&
+                    new Date(batch.reviewed_at).toLocaleString()}
+                </p>
+              )}
+              <p className="text-sm font-medium">
+                {stats.total} records · {stats.added} additions ·{" "}
+                {stats.updated} updates · {stats.removed} removals
+              </p>
+              {stats.attention > 0 && (
+                <p className="rounded bg-amber-100 px-2 py-1 text-sm text-amber-900">
+                  Needs attention: {stats.issues} {stats.issues === 1 ? "record" : "records"} with gaps / source
+                  conflicts · {stats.removed} {stats.removed === 1 ? "removal" : "removals"}
+                </p>
+              )}
+              <details>
+                <summary className="cursor-pointer py-1 text-sm font-semibold">
+                  Review records, conflicts and source evidence
+                </summary>
+                <div className="mt-2 space-y-3">
+                  <a
+                    href={safeUrl(batch.source_url)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline break-all"
+                  >
+                    {batch.source_url}
+                  </a>
+                  <Records writes={batch.writes} reads={batch.reads} />
+                  <details>
+                    <summary className="cursor-pointer">
+                      Source evidence
+                    </summary>
+                    <pre className="max-h-96 overflow-auto whitespace-pre-wrap break-words text-xs">
+                      {JSON.stringify(batch.evidence, null, 2)}
+                    </pre>
+                  </details>
+                </div>
+              </details>
+            </article>
+          );
+        })
       )}
-      <nav className="flex gap-5" aria-label="Proposal pages">
-        <button
-          disabled={loading || offset === 0}
-          onClick={() => setOffset(Math.max(0, offset - 20))}
-        >
-          Previous
-        </button>
-        <button
-          disabled={loading || batches.length < 20}
-          onClick={() => setOffset(offset + 20)}
-        >
-          Next
-        </button>
-      </nav>
+      <PageButtons
+        page={offset / 20}
+        pages={Math.max(1, Math.ceil(total / 20))}
+        disabled={loading}
+        label="Proposal pages"
+        onChange={page => { if (page * 20 !== offset) { setLoading(true); setOffset(page * 20); } }}
+      />
     </section>
   );
 }

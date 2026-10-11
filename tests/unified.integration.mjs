@@ -477,10 +477,12 @@ await test("Workshare-only children never become public athletes", async () => {
 });
 await test("public race history never exposes private source fields", async () => {
   const before = await record(staff, "swims/test-race-1");
-  await collect("swims/test-race-1", { ...before, dob: "2012-02-15", notes: "private", swimsId: "private-id" });
+  await collect("swims/test-race-1", { ...before, gender: "F", ageAtSwim: 12, dob: "2012-02-15", notes: "private", swimsId: "private-id" });
   const publicRace = await anon.from("public_swims").select("*").eq("id", "test-race-1").single();
   assert.ifError(publicRace.error);
   assert.equal(publicRace.data.data.timeMs, 64000);
+  assert.equal(publicRace.data.data.gender, "F");
+  assert.equal(publicRace.data.data.ageAtSwim, 12);
   assert.equal(publicRace.data.data.dob, undefined);
   assert.equal(publicRace.data.data.notes, undefined);
   assert.equal(publicRace.data.data.swimsId, undefined);

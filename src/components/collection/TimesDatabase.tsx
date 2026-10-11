@@ -1,22 +1,30 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import {
   ArrowUpRight,
   BarChart3,
   CalendarDays,
+  ChevronDown,
+  X,
   ChevronLeft,
   ChevronRight,
   Search,
   Timer,
+  Trophy,
   Users,
 } from "lucide-react";
 import { browserClient, hasBackendConfiguration } from "@/lib/supabase/client";
 import { formatSwimTime } from "@/features/swim-resources/lib/domain/swim-time";
 import {
   athleteName,
+  ageGroups,
+  recordAgeGroups,
+  recordEvents,
+  resultName,
+  validPerformance,
   bestTimes,
+  dailyBestTimes,
   eventLabel,
   initialFilters,
   matches,
@@ -30,8 +38,12 @@ import {
   type Race,
 } from "./times-data";
 import s from "./TimesDatabase.module.css";
+import AthleteBrowser from "./AthleteBrowser";
+import { currentStandard } from "@/features/swim-resources/lib/domain/standards";
+import type { StandardSet } from "@/features/swim-resources/types/schema";
+import TeamRecords, { type RecordSelection } from "./TeamRecords";
 
-type View = "rankings" | "meets" | "athletes";
+type View = "rankings" | "meets" | "athletes" | "records";
 const pageSize = 25;
 const number = (n: number) => n.toLocaleString("en-US");
 function date(value: string) {
@@ -83,6 +95,190 @@ function Select({
     </div>
   );
 }
+function PopupPicker({
+  label,
+  value,
+  onChange,
+  options,
+  all,
+}: {
+  label: string;
+  value: string;
+  onChange: (value: string) => void;
+  options: [string, string][];
+  all?: string;
+}) {
+  const id = useId();
+  const dialog = useRef<HTMLDialogElement>(null);
+  return (
+    <div className={s.field}>
+      <label htmlFor={id}>{label}</label>
+      <button
+        id={id}
+        className={s.eventTrigger}
+        aria-haspopup="dialog"
+        onClick={() => {
+          dialog.current?.showModal();
+          dialog.current
+            ?.querySelector<HTMLButtonElement>('[aria-pressed="true"]')
+            ?.focus();
+        }}
+      >
+        <span>
+          {options.find(([key]) => key === value)?.[1] ??
+            all ??
+            `Select ${label.toLowerCase()}`}
+        </span>
+        <ChevronDown size={16} />
+      </button>
+      <dialog
+        ref={dialog}
+        className={s.eventDialog}
+        aria-labelledby={`${id}-title`}
+        onClick={(e) => {
+          if (e.target === e.currentTarget) {
+            const bounds = e.currentTarget.getBoundingClientRect();
+            if (
+              e.clientX < bounds.left ||
+              e.clientX > bounds.right ||
+              e.clientY < bounds.top ||
+              e.clientY > bounds.bottom
+            )
+              dialog.current?.close();
+          }
+        }}
+      >
+        <div className={s.popupHead}>
+          <h2 id={`${id}-title`}>{label}</h2>
+          <button
+            className={s.button}
+            aria-label={`Close ${label.toLowerCase()} picker`}
+            onClick={() => dialog.current?.close()}
+          >
+            <X size={18} />
+          </button>
+        </div>
+        <div className={s.eventGrid}>
+          {(all ? [["", all] as [string, string], ...options] : options).map(
+            ([key, text]) => (
+              <button
+                key={key}
+                aria-pressed={value === key}
+                onClick={() => {
+                  onChange(key);
+                  dialog.current?.close();
+                }}
+              >
+                {text}
+              </button>
+            ),
+          )}
+        </div>
+      </dialog>
+    </div>
+  );
+}
+function FilterChips({
+  label,
+  value,
+  onChange,
+  options,
+}: {
+  label: string;
+  value: string;
+  onChange: (value: string) => void;
+  options: [string, string][];
+}) {
+  return (
+    <fieldset className={s.courseField}>
+      <legend>{label}</legend>
+      <div className={s.chips}>
+        {options.map(([key, text]) => (
+          <button
+            key={key}
+            aria-pressed={value === key}
+            onClick={() => onChange(key)}
+          >
+            {text}
+          </button>
+        ))}
+      </div>
+    </fieldset>
+  );
+}
+function AgeGroupPicker({
+  value,
+  onChange,
+  options = ageGroups.map(([key, label]): [string, string] => [key, label]),
+}: {
+  value: string[];
+  onChange: (value: string[]) => void;
+  options?: [string, string][];
+}) {
+  const id = useId();
+  const dialog = useRef<HTMLDialogElement>(null);
+  return (
+    <div className={s.field}>
+      <label htmlFor={id}>Age group</label>
+      <button
+        id={id}
+        className={s.eventTrigger}
+        aria-haspopup="dialog"
+        onClick={() => dialog.current?.showModal()}
+      >
+        <span>
+          {value.length
+            ? options
+                .filter(([key]) => value.includes(key))
+                .map(([, text]) => text)
+                .join(", ")
+            : "All ages"}
+        </span>
+        <ChevronDown size={16} />
+      </button>
+      <dialog
+        ref={dialog}
+        className={s.eventDialog}
+        aria-labelledby={`${id}-title`}
+      >
+        <div className={s.popupHead}>
+          <h2 id={`${id}-title`}>Age group</h2>
+          <button
+            className={s.button}
+            aria-label="Close age group picker"
+            onClick={() => dialog.current?.close()}
+          >
+            <X size={18} />
+          </button>
+        </div>
+        <p className={s.muted}>Select one or more recorded age groups.</p>
+        <div className={s.eventGrid}>
+          <button aria-pressed={!value.length} onClick={() => onChange([])}>
+            All ages
+          </button>
+          {options.map(([key, text]) => (
+            <button
+              key={key}
+              aria-pressed={value.includes(key)}
+              onClick={() =>
+                onChange(
+                  value.includes(key)
+                    ? value.filter((age) => age !== key)
+                    : [...value, key],
+                )
+              }
+            >
+              {text}
+            </button>
+          ))}
+        </div>
+        <button className={s.button} onClick={() => dialog.current?.close()}>
+          Done
+        </button>
+      </dialog>
+    </div>
+  );
+}
 function Pager({
   page,
   total,
@@ -118,14 +314,12 @@ function Pager({
   );
 }
 function ProgressChart({ races }: { races: Race[] }) {
-  const points = races
-    .filter(validTime)
-    .toSorted((a, b) => a.date.localeCompare(b.date));
+  const points = dailyBestTimes(races);
   if (points.length < 2)
     return (
       <p className={s.empty}>
-        Two timed swims are needed to show progress. Every available result is
-        listed below.
+        Timed swims on two different days are needed to show progress. Every
+        available result is listed below.
       </p>
     );
   const times = points.map((r) => r.time),
@@ -139,7 +333,9 @@ function ProgressChart({ races }: { races: Race[] }) {
   ]);
   return (
     <div className={s.chart}>
-      <p className={s.muted}>Time by meet date · lower time appears higher</p>
+      <p className={s.muted}>
+        Fastest swim per day · lower time appears higher
+      </p>
       <svg
         viewBox="0 0 620 190"
         role="img"
@@ -202,11 +398,18 @@ function Performance({
     const eligible = races.filter(
       (r) =>
         matches(r, { ...filters, course: race.course, event: race.event }) &&
-        validTime(r),
+        (race.relay ? validPerformance(r) : validTime(r)),
     );
-    return basis === "bests" ? bestTimes(eligible) : eligible;
+    return race.relay
+      ? eligible
+      : basis === "bests"
+        ? bestTimes(eligible)
+        : eligible;
   }, [races, filters, race, basis]);
-  const stats = race && validTime(race) ? percentile(race.time, cohort) : null;
+  const stats =
+    race && !race.relay && validTime(race)
+      ? percentile(race.time, cohort)
+      : null;
   return (
     <aside className={s.side} aria-label="Performance analysis">
       <div className={s.panel}>
@@ -242,28 +445,44 @@ function Performance({
               <div className={s.bigTime}>
                 {race.status === "OK" ? formatSwimTime(race.time) : race.status}
               </div>
-              <button
-                className={s.link}
-                onClick={() => onAthlete(race.athleteId)}
-              >
-                {names.get(race.athleteId) ?? race.athleteId}
-                <ArrowUpRight size={14} />
-              </button>
+              {race.relay ? (
+                <p>
+                  {resultName(race, names)} ·{" "}
+                  {race.relayAgeGroup || "Age group unreported"}
+                </p>
+              ) : (
+                <button
+                  className={s.link}
+                  onClick={() => onAthlete(race.athleteId)}
+                >
+                  {names.get(race.athleteId) ?? race.athleteId}
+                  <ArrowUpRight size={14} />
+                </button>
+              )}
               <p className={s.muted}>
                 {race.meet}
                 <br />
                 {date(race.date)}
+                <br />
+                {race.teamName || "Team name unavailable"} ·{" "}
+                {race.official === true
+                  ? "Official"
+                  : race.official === false
+                    ? "Unofficial"
+                    : "Status unreported"}
               </p>
               <div className={s.percentile}>
-                <Select
-                  label="Compare against"
-                  value={basis}
-                  onChange={setBasis}
-                  options={[
-                    ["bests", "One best time per athlete"],
-                    ["swims", "Every eligible swim"],
-                  ]}
-                />
+                {!race.relay && (
+                  <Select
+                    label="Compare against"
+                    value={basis}
+                    onChange={setBasis}
+                    options={[
+                      ["bests", "One best time per athlete"],
+                      ["swims", "Every eligible swim"],
+                    ]}
+                  />
+                )}
                 {stats ? (
                   <>
                     <strong>
@@ -280,8 +499,9 @@ function Performance({
                   </>
                 ) : (
                   <p className={s.note}>
-                    No percentile available. A valid individual time and an
-                    eligible comparison group are required.
+                    {race.relay
+                      ? `${cohort.length} eligible relay performances in this comparison group. Relay times are ranked in the table.`
+                      : "No percentile available. A valid individual time and an eligible comparison group are required."}
                   </p>
                 )}
               </div>
@@ -311,18 +531,22 @@ function Performance({
               <details className={s.note} open>
                 <summary>Understand this comparison</summary>
                 <p>
-                  Same event and course, using the selected team, year, round,
-                  and official-status filters across all meets.{" "}
-                  {basis === "bests"
-                    ? "Each athlete contributes only their fastest eligible swim."
-                    : "Athletes may contribute multiple swims."}{" "}
+                  Same event and course, using the selected team, year, gender,
+                  and age groups across all meets, rounds, and result statuses.{" "}
+                  {race.relay
+                    ? "Every eligible complete relay contributes one team performance."
+                    : basis === "bests"
+                      ? "Each athlete contributes only their fastest eligible swim."
+                      : "Athletes may contribute multiple swims."}{" "}
                   The selected swim is included when eligible.
                 </p>
                 <p>
-                  Percentile = (slower times + half of equal times) ÷ comparison
-                  size × 100. Age and gender are not available in this public
-                  dataset, so all ages and genders are combined. This is dataset
-                  coverage, not an official IES ranking.
+                  {!race.relay &&
+                    "Percentile = (slower times + half of equal times) ÷ comparison size × 100. "}{" "}
+                  Individual age groups use age at the swim; relay groups use
+                  the reported event age group. Results without a reported age
+                  or gender are included only when that filter is set to all.
+                  This is dataset coverage, not an official IES ranking.
                 </p>
                 {stats && stats.count < 10 && (
                   <p>
@@ -351,15 +575,25 @@ export default function TimesDatabase() {
     athletes: Athlete[];
     races: Race[];
   } | null>(null);
+  const [standards, setStandards] = useState<StandardSet[]>([]);
+  const [standardsLoading, setStandardsLoading] = useState(
+    hasBackendConfiguration,
+  );
+  const [standardsError, setStandardsError] = useState("");
+  const [standardsAttempt, setStandardsAttempt] = useState(0);
+  const athleteScroll = useRef<number | null>(null);
   const [error, setError] = useState("");
   const [attempt, setAttempt] = useState(0);
   const [view, setView] = useState<View>("rankings");
   const [filters, setFilters] = useState<Filters>(initialFilters);
+  const [recordTeam, setRecordTeam] = useState("");
+  const [fromRecords, setFromRecords] = useState(false);
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(0);
   const [listPage, setListPage] = useState(0);
   const [meetId, setMeetId] = useState("");
   const [athleteId, setAthleteId] = useState("");
+  const [athleteSearchOpen, setAthleteSearchOpen] = useState(true);
   const [athleteEvent, setAthleteEvent] = useState("");
   const [selected, setSelected] = useState<Race | null>(null);
   const detailRef = useRef<HTMLDivElement>(null);
@@ -416,6 +650,56 @@ export default function TimesDatabase() {
     void load();
     return () => controller.abort();
   }, [attempt]);
+  useEffect(() => {
+    if (!hasBackendConfiguration) return;
+    const controller = new AbortController();
+    async function loadStandards() {
+      setStandardsLoading(true);
+      setStandardsError("");
+      try {
+        const rows: StandardSet[] = [];
+        for (;;) {
+          const { data, error } = await browserClient()
+            .from("standards")
+            .select("data")
+            .order("id")
+            .range(rows.length, rows.length + 499)
+            .abortSignal(controller.signal);
+          if (error) throw error;
+          rows.push(...data.map((row) => row.data as unknown as StandardSet));
+          if (data.length < 500) break;
+        }
+        if (!controller.signal.aborted)
+          setStandards(
+            rows.filter((set) => set.governingBody === "USA_Swimming"),
+          );
+      } catch {
+        if (!controller.signal.aborted) {
+          setStandards([]);
+          setStandardsError(
+            "We couldn’t load scoring standards. Athlete profiles are still available.",
+          );
+        }
+      } finally {
+        if (!controller.signal.aborted) setStandardsLoading(false);
+      }
+    }
+    void loadStandards();
+    return () => controller.abort();
+  }, [standardsAttempt]);
+  const standard = currentStandard(
+    standards,
+    "motivational",
+    new Date().toLocaleDateString("en-CA", { timeZone: "America/Los_Angeles" }),
+  );
+  function returnToAthletes() {
+    setAthleteSearchOpen(true);
+    requestAnimationFrame(() => {
+      document.getElementById("athlete-search")?.focus({ preventScroll: true });
+      if (athleteScroll.current != null)
+        window.scrollTo({ top: athleteScroll.current, behavior: "instant" });
+    });
+  }
   const athletes = useMemo(() => data?.athletes ?? [], [data]);
   const races = useMemo(() => data?.races ?? [], [data]);
   const names = useMemo(
@@ -438,10 +722,21 @@ export default function TimesDatabase() {
         ),
     [races],
   );
-  const teams = useMemo(
-    () => [...new Set(races.map((r) => r.team).filter(Boolean))].sort(),
-    [races],
-  );
+  const teams = useMemo(() => {
+    const names = new Map<string, string>();
+    for (const race of races) {
+      if (race.team && (!names.has(race.team) || race.teamName))
+        names.set(race.team, race.teamName || "Team name unavailable");
+    }
+    return [...names.entries()].sort((a, b) => a[1].localeCompare(b[1]));
+  }, [races]);
+  const activeRecordTeam =
+    recordTeam ||
+    teams.find(([, name]) => name.toLowerCase().includes("velocity"))?.[0] ||
+    teams[0]?.[0] ||
+    "";
+  const recordTeamName =
+    teams.find(([id]) => id === activeRecordTeam)?.[1] ?? "";
   const years = useMemo(
     () => [...new Set(races.map((r) => r.date.slice(0, 4)))].sort().reverse(),
     [races],
@@ -480,15 +775,39 @@ export default function TimesDatabase() {
     () => races.filter((r) => matches(r, filters)),
     [races, filters],
   );
-  const rankings = useMemo(() => rankedTimes(filtered), [filtered]);
+  const rankings = useMemo(
+    () =>
+      rankedTimes(
+        filtered,
+        filters.relay ? "performances" : filters.mode,
+        filters.relay,
+      ),
+    [filtered, filters.mode, filters.relay],
+  );
+  const ageOptions = useMemo(() => recordAgeGroups(races), [races]);
+  const rankingEvents = useMemo(
+    () =>
+      [
+        ...new Set([
+          ...(filters.relay
+            ? recordEvents(filters.course || "SCY", []).filter((event) =>
+                event.endsWith("-R"),
+              )
+            : []),
+          ...races
+            .filter(
+              (r) =>
+                r.relay === (filters.relay ?? false) &&
+                (!r.relay || r.relayLeg == null),
+            )
+            .map((r) => r.event),
+        ]),
+      ].sort((a, b) => a.localeCompare(b, undefined, { numeric: true })),
+    [races, filters.relay, filters.course],
+  );
   const searchTerm = search.trim().toLowerCase();
   const foundMeets = meets.filter((m) =>
     m.name.toLowerCase().includes(searchTerm),
-  );
-  const foundAthletes = athletes.filter((a) =>
-    `${athleteName(a)} ${JSON.stringify(a.data)}`
-      .toLowerCase()
-      .includes(searchTerm),
   );
   const athleteRaces = useMemo(
     () => races.filter((r) => r.athleteId === athleteId && !r.relay),
@@ -511,9 +830,7 @@ export default function TimesDatabase() {
   const displayed =
     view === "rankings"
       ? rankings.filter(({ race }) =>
-          (names.get(race.athleteId) ?? race.athleteId)
-            .toLowerCase()
-            .includes(searchTerm),
+          resultName(race, names).toLowerCase().includes(searchTerm),
         )
       : (view === "meets"
           ? filtered
@@ -528,13 +845,15 @@ export default function TimesDatabase() {
         ).map((race) => ({ race, rank: undefined }));
   const chosenMeet = meets.find((m) => m.id === meetId);
   const loading = hasBackendConfiguration && !data && !error;
-  function updateFilter(key: keyof Filters, value: string) {
+  function updateFilter<K extends keyof Filters>(key: K, value: Filters[K]) {
     setFilters((f) => ({ ...f, [key]: value }));
     setPage(0);
     setSelected(null);
   }
   function changeView(next: View) {
     setView(next);
+    setFromRecords(false);
+    setAthleteSearchOpen(!athleteId);
     setListPage(0);
     setSearch("");
     setPage(0);
@@ -545,9 +864,30 @@ export default function TimesDatabase() {
         : { ...initialFilters, course: "", event: "" },
     );
   }
+  function openRecord(selection: RecordSelection) {
+    changeView("rankings");
+    setFilters({
+      ...initialFilters,
+      team: activeRecordTeam,
+      course: selection.course,
+      event: selection.event,
+      gender: selection.gender,
+      ageGroups: [selection.ageGroup],
+      mode: "performances",
+      relay: selection.relay ?? false,
+    });
+    setFromRecords(true);
+    requestAnimationFrame(() =>
+      document
+        .getElementById("times-rankings")
+        ?.scrollIntoView({ behavior: "smooth", block: "start" }),
+    );
+  }
   function openAthlete(id: string) {
-    changeView("athletes");
+    if (view === "athletes") athleteScroll.current = window.scrollY;
+    else changeView("athletes");
     setAthleteId(id);
+    setAthleteSearchOpen(false);
     setAthleteEvent("");
     showProfile();
   }
@@ -576,20 +916,24 @@ export default function TimesDatabase() {
         <table className={s.table}>
           <caption className="sr-only">
             {view === "rankings"
-              ? "Event rankings, one best swim per athlete"
+              ? filters.mode === "bests"
+                ? "Event rankings, one best swim per athlete in the selected age groups"
+                : "Event rankings, every matching performance"
               : "Individual swim results"}
           </caption>
           <thead>
             <tr>
               {view === "rankings" && <th scope="col">Rank</th>}
               <th scope="col">
-                {view === "athletes" ? "Date / meet" : "Athlete / team"}
+                {view === "athletes"
+                  ? "Meet"
+                  : filters.relay
+                    ? "Relay team"
+                    : "Athlete"}
               </th>
               <th scope="col">Event</th>
               <th scope="col">Time</th>
-              <th scope="col">
-                {view === "rankings" ? "Meet / date" : "Round"}
-              </th>
+              <th scope="col">{view === "rankings" ? "Meet" : "Round"}</th>
             </tr>
           </thead>
           <tbody>
@@ -599,29 +943,38 @@ export default function TimesDatabase() {
                 <tr
                   key={race.id}
                   className={selected?.id === race.id ? s.selected : undefined}
+                  onClick={() => selectRace(race)}
                 >
                   {view === "rankings" && <td className={s.rank}>{rank}</td>}
                   <td>
                     {view === "athletes" ? (
-                      <>
-                        {date(race.date)}
-                        <small>{race.meet}</small>
-                      </>
+                      race.meet
+                    ) : race.relay ? (
+                      <button
+                        className={s.link}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          selectRace(race);
+                        }}
+                      >
+                        {resultName(race, names)}
+                      </button>
                     ) : (
                       <>
                         <button
                           className={s.link}
-                          onClick={() => openAthlete(race.athleteId)}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            openAthlete(race.athleteId);
+                          }}
                         >
                           {names.get(race.athleteId) ?? race.athleteId}
                         </button>
-                        <small>{race.team || "Team unavailable"}</small>
                       </>
                     )}
                   </td>
                   <td>
-                    {eventLabel(race.event)}
-                    <small>{race.course}</small>
+                    {race.course} {race.event.split("_").slice(0, 2).join(" ")}
                   </td>
                   <td>
                     <button
@@ -633,20 +986,14 @@ export default function TimesDatabase() {
                         ? formatSwimTime(race.time)
                         : race.status || "—"}
                     </button>
-                    <small>
-                      {race.official === true
-                        ? "Official"
-                        : race.official === false
-                          ? "Unofficial"
-                          : "Status unreported"}
-                    </small>
                   </td>
                   <td>
                     {view === "rankings" ? (
                       <>
                         <button
                           className={s.link}
-                          onClick={() => {
+                          onClick={(e) => {
+                            e.stopPropagation();
                             changeView("meets");
                             setMeetId(race.meetId);
                             showProfile();
@@ -654,7 +1001,6 @@ export default function TimesDatabase() {
                         >
                           {race.meet}
                         </button>
-                        <small>{date(race.date)}</small>
                       </>
                     ) : (
                       (rounds[race.round] ?? race.round)
@@ -677,37 +1023,11 @@ export default function TimesDatabase() {
   );
   return (
     <main className={s.page}>
-      <header className={s.hero}>
-        <div>
-          <div className={s.eyebrow}>Velocity Swimming / Athlete tools</div>
-          <h1>
-            IES Times<span style={{ color: "var(--accent)" }}>.</span>
-          </h1>
-          <p>
-            Find your race. Know your progress. Explore results and personal
-            bests from Inland Empire athletes, wherever they compete.
-          </p>
-        </div>
-        <Link href="/tools/swim-resources/standards/usa">
-          Explore time standards ↗
-        </Link>
-      </header>
-      <div className={s.stats}>
-        {[
-          [data ? number(races.length) : "—", "Approved results"],
-          [data ? number(athletes.length) : "—", "Athlete profiles"],
-          [data ? number(meets.length) : "—", "Meets in the dataset"],
-        ].map(([value, label]) => (
-          <div className={s.stat} key={label}>
-            <strong>{value}</strong>
-            <span>{label}</span>
-          </div>
-        ))}
-      </div>
       <nav className={s.tabs} aria-label="Explore times">
         {(
           [
             ["rankings", "Event rankings", BarChart3],
+            ["records", "Team Records", Trophy],
             ["meets", "Meet results", CalendarDays],
             ["athletes", "Athletes", Users],
           ] as const
@@ -748,315 +1068,406 @@ export default function TimesDatabase() {
           Loading approved results and complete comparison groups…
         </div>
       )}
-      <div className={s.workspace}>
+      <div
+        className={`${s.workspace} ${view === "records" || (view === "athletes" && athleteSearchOpen) ? s.recordsWorkspace : ""}`}
+      >
         <div className={s.main}>
-          <section
-            className={s.panel}
-            aria-label={
-              view === "rankings"
-                ? "Event rankings"
-                : view === "meets"
-                  ? "Meet browser"
-                  : "Athlete browser"
-            }
-          >
-            <div className={s.panelHead}>
-              <div>
-                <h2>
-                  {view === "rankings"
-                    ? "The field, at a glance"
+          {view === "records" ? (
+            <TeamRecords
+              races={races}
+              team={activeRecordTeam}
+              teamName={recordTeamName}
+              names={names}
+              onRecord={openRecord}
+              selector={
+                <PopupPicker
+                  label="Record team"
+                  value={activeRecordTeam}
+                  onChange={setRecordTeam}
+                  options={teams}
+                />
+              }
+            />
+          ) : (
+            <>
+              <section
+                id="times-rankings"
+                className={s.panel}
+                aria-label={
+                  view === "rankings"
+                    ? "Event rankings"
                     : view === "meets"
-                      ? "Find a meet"
-                      : "Find an athlete"}
-                </h2>
-                <p>
-                  {view === "rankings"
-                    ? "One best time per athlete in your selected comparison group."
-                    : view === "meets"
-                      ? "Browse approved results, then select a meet to explore each swim."
-                      : "Personal bests and a closer look at every event."}
-                </p>
-              </div>
-            </div>
-            {view === "rankings" && (
-              <div className={s.filters}>
-                <Select
-                  label="Course"
-                  value={filters.course}
-                  onChange={(v) => updateFilter("course", v)}
-                  options={[
-                    ["SCY", "Short course yards"],
-                    ["LCM", "Long course meters"],
-                    ["SCM", "Short course meters"],
-                  ]}
-                />
-                <Select
-                  label="Event"
-                  value={filters.event}
-                  onChange={(v) => updateFilter("event", v)}
-                  options={events.map((e) => [e, eventLabel(e)])}
-                />
-                <Select
-                  label="Team"
-                  value={filters.team}
-                  onChange={(v) => updateFilter("team", v)}
-                  all="All teams"
-                  options={teams.map((t) => [t, t])}
-                />
-                <Select
-                  label="Year"
-                  value={filters.year}
-                  onChange={(v) => updateFilter("year", v)}
-                  all="All years"
-                  options={years.map((y) => [y, y])}
-                />
-                <Select
-                  label="Round"
-                  value={filters.round}
-                  onChange={(v) => updateFilter("round", v)}
-                  all="All rounds"
-                  options={Object.entries(rounds)}
-                />
-                <Select
-                  label="Result status"
-                  value={filters.official}
-                  onChange={(v) => updateFilter("official", v)}
-                  all="All statuses"
-                  options={[
-                    ["official", "Official only"],
-                    ["unofficial", "Unofficial only"],
-                  ]}
-                />
-              </div>
-            )}
-            <div className={s.toolbar}>
-              <label className={s.field}>
-                <span className="sr-only">
-                  {view === "meets" ? "Search meets" : "Search athletes"}
-                </span>
-                <input
-                  type="search"
-                  placeholder={
-                    view === "meets"
-                      ? "Search meet name…"
-                      : "Search athlete name…"
-                  }
-                  value={search}
-                  onChange={(e) => {
-                    setSearch(e.target.value);
-                    setListPage(0);
-                    setPage(0);
-                  }}
-                />
-              </label>
-              {view === "rankings" && (
-                <button
-                  className={s.link}
-                  onClick={() => {
-                    setFilters(startingFilters(races));
-                    setSearch("");
-                    setPage(0);
-                    setSelected(null);
-                  }}
-                >
-                  Reset filters
-                </button>
-              )}
-            </div>
-            {view === "rankings" ? (
-              data && table
-            ) : (
-              <>
-                {data && (
-                  <>
-                    <div className={s.cards}>
-                      {view === "meets"
-                        ? foundMeets
-                            .slice(
-                              listPage * pageSize,
-                              (listPage + 1) * pageSize,
-                            )
-                            .map((m) => (
-                              <button
-                                key={m.id}
-                                className={s.card}
-                                aria-pressed={meetId === m.id}
-                                onClick={() => {
-                                  setMeetId(m.id);
-                                  showProfile();
-                                  setPage(0);
-                                  setSelected(null);
-                                }}
-                              >
-                                <span>
-                                  {date(m.date)} · {[...m.courses].join(" / ")}
-                                </span>
-                                <strong>{m.name}</strong>
-                                <span>
-                                  {number(m.count)} approved results ↗
-                                </span>
-                              </button>
-                            ))
-                        : foundAthletes
-                            .slice(
-                              listPage * pageSize,
-                              (listPage + 1) * pageSize,
-                            )
-                            .map((a) => (
-                              <button
-                                key={a.id}
-                                className={s.card}
-                                aria-pressed={athleteId === a.id}
-                                onClick={() => openAthlete(a.id)}
-                              >
-                                <Users size={18} />
-                                <strong>{athleteName(a)}</strong>
-                                <span>Personal bests & race history ↗</span>
-                              </button>
-                            ))}
-                    </div>
-                    {!(view === "meets" ? foundMeets : foundAthletes)
-                      .length && (
-                      <p className={s.empty}>
-                        No matching {view === "meets" ? "meets" : "athletes"}.
-                        Try a different name.
+                      ? "Meet browser"
+                      : "Athlete browser"
+                }
+              >
+                {view !== "rankings" && (
+                  <div className={s.panelHead}>
+                    <div>
+                      <h2>
+                        {view === "meets" ? "Find a meet" : "Team athletes"}
+                      </h2>
+                      <p>
+                        {view === "meets"
+                          ? "Browse approved results, then select a meet to explore each swim."
+                          : "Choose a team to compare athletes across their strongest events."}
                       </p>
+                    </div>
+                    {view === "athletes" && athleteId && (
+                      <button
+                        className={s.button}
+                        aria-expanded={athleteSearchOpen}
+                        aria-controls="athlete-search"
+                        onClick={() =>
+                          athleteSearchOpen
+                            ? setAthleteSearchOpen(false)
+                            : returnToAthletes()
+                        }
+                      >
+                        {athleteSearchOpen
+                          ? "Hide team list"
+                          : "← Back to team athletes"}
+                      </button>
                     )}
-                    <Pager
-                      page={listPage}
-                      total={
-                        view === "meets"
-                          ? foundMeets.length
-                          : foundAthletes.length
-                      }
-                      onChange={setListPage}
-                    />
-                  </>
+                  </div>
                 )}
-              </>
-            )}
-          </section>
-          {view === "meets" && chosenMeet && data && (
-            <section className={s.panel} ref={profileRef} tabIndex={-1}>
-              <div className={s.panelHead}>
-                <div>
-                  <span className={s.badge}>Meet results</span>
-                  <h2>{chosenMeet.name}</h2>
-                  <p>
-                    {date(chosenMeet.date)} · {number(chosenMeet.count)}{" "}
-                    approved results · individual swims below
-                  </p>
+                <div
+                  id={view === "athletes" ? "athlete-search" : undefined}
+                  tabIndex={view === "athletes" ? -1 : undefined}
+                  hidden={view === "athletes" && !athleteSearchOpen}
+                >
+                  {view === "rankings" && fromRecords && (
+                    <div className={s.recordBreadcrumb}>
+                      <button
+                        className={s.link}
+                        onClick={() => changeView("records")}
+                      >
+                        ← Team records
+                      </button>
+                      <span>
+                        {teams.find(([id]) => id === filters.team)?.[1]} ·{" "}
+                        {filters.course} {filters.event.replace("_", " ")} ·{" "}
+                        {filters.gender === "F"
+                          ? "Girls"
+                          : filters.gender === "M"
+                            ? "Boys"
+                            : "Mixed"}{" "}
+                        ·{" "}
+                        {ageOptions
+                          .filter(([key]) => filters.ageGroups.includes(key))
+                          .map(([, label]) => label)
+                          .join(", ") || "All ages"}
+                      </span>
+                    </div>
+                  )}
+                  {view === "rankings" && (
+                    <div className={s.filters}>
+                      <FilterChips
+                        label="Course"
+                        value={filters.course}
+                        onChange={(v) => updateFilter("course", v)}
+                        options={["SCY", "LCM", "SCM"].map((course) => [
+                          course,
+                          course,
+                        ])}
+                      />
+                      <PopupPicker
+                        label="Event"
+                        value={filters.event}
+                        onChange={(v) => updateFilter("event", v)}
+                        options={(filters.relay ? rankingEvents : events).map(
+                          (e) => [e, eventLabel(e)],
+                        )}
+                      />
+                      <FilterChips
+                        label="Gender"
+                        value={filters.gender}
+                        onChange={(v) => updateFilter("gender", v)}
+                        options={[
+                          ["", "All"],
+                          ["F", "Female"],
+                          ["M", "Male"],
+                          ["X", "Mixed"],
+                        ]}
+                      />
+                      <AgeGroupPicker
+                        options={ageOptions}
+                        value={filters.ageGroups}
+                        onChange={(v) => updateFilter("ageGroups", v)}
+                      />
+                      {!filters.relay && (
+                        <FilterChips
+                          label="Results"
+                          value={filters.mode}
+                          onChange={(v) =>
+                            updateFilter("mode", v as Filters["mode"])
+                          }
+                          options={[
+                            ["bests", "Bests"],
+                            ["performances", "Performances"],
+                          ]}
+                        />
+                      )}
+                      <PopupPicker
+                        label="Team"
+                        value={filters.team}
+                        onChange={(v) => updateFilter("team", v)}
+                        all="All IES Teams"
+                        options={teams}
+                      />
+                      <PopupPicker
+                        label="Year"
+                        value={filters.year}
+                        onChange={(v) => updateFilter("year", v)}
+                        all="All years"
+                        options={years.map((y) => [y, y])}
+                      />
+                    </div>
+                  )}
+                  {view !== "athletes" && (
+                    <div className={s.toolbar}>
+                      <label className={s.field}>
+                        <span className="sr-only">
+                          {view === "meets"
+                            ? "Search meets"
+                            : filters.relay
+                              ? "Search relay teams"
+                              : "Search athletes"}
+                        </span>
+                        <input
+                          type="search"
+                          placeholder={
+                            view === "meets"
+                              ? "Search meet name…"
+                              : filters.relay
+                                ? "Search relay team…"
+                                : "Search athlete name…"
+                          }
+                          value={search}
+                          onChange={(e) => {
+                            setSearch(e.target.value);
+                            setListPage(0);
+                            setPage(0);
+                          }}
+                        />
+                      </label>
+                      {view === "rankings" && (
+                        <button
+                          className={s.link}
+                          onClick={() => {
+                            setFilters(startingFilters(races));
+                            setSearch("");
+                            setPage(0);
+                            setSelected(null);
+                          }}
+                        >
+                          Reset filters
+                        </button>
+                      )}
+                    </div>
+                  )}
+                  {view === "athletes" ? (
+                    data && (
+                      <AthleteBrowser
+                        races={races}
+                        names={names}
+                        teams={teams}
+                        standard={standard}
+                        standardsLoading={standardsLoading}
+                        standardsError={standardsError}
+                        onRetry={() => setStandardsAttempt((n) => n + 1)}
+                        onAthlete={openAthlete}
+                      />
+                    )
+                  ) : view === "rankings" ? (
+                    data && table
+                  ) : (
+                    <>
+                      {data && (
+                        <>
+                          <div className={s.cards}>
+                            {view === "meets"
+                              ? foundMeets
+                                  .slice(
+                                    listPage * pageSize,
+                                    (listPage + 1) * pageSize,
+                                  )
+                                  .map((m) => (
+                                    <button
+                                      key={m.id}
+                                      className={s.card}
+                                      aria-pressed={meetId === m.id}
+                                      onClick={() => {
+                                        setMeetId(m.id);
+                                        showProfile();
+                                        setPage(0);
+                                        setSelected(null);
+                                      }}
+                                    >
+                                      <span>
+                                        {date(m.date)} ·{" "}
+                                        {[...m.courses].join(" / ")}
+                                      </span>
+                                      <strong>{m.name}</strong>
+                                      <span>
+                                        {number(m.count)} approved results ↗
+                                      </span>
+                                    </button>
+                                  ))
+                              : null}
+                          </div>
+                          {!foundMeets.length && (
+                            <p className={s.empty}>
+                              No matching{" "}
+                              {view === "meets" ? "meets" : "athletes"}. Try a
+                              different name.
+                            </p>
+                          )}
+                          <Pager
+                            page={listPage}
+                            total={foundMeets.length}
+                            onChange={setListPage}
+                          />
+                        </>
+                      )}
+                    </>
+                  )}
                 </div>
-              </div>
-              <div className={s.filters}>
-                <Select
-                  label="Meet event"
-                  value={filters.event}
-                  onChange={(v) => updateFilter("event", v)}
-                  all="All events"
-                  options={events.map((e) => [e, eventLabel(e)])}
-                />
-                <Select
-                  label="Meet course"
-                  value={filters.course}
-                  onChange={(v) => updateFilter("course", v)}
-                  all="All courses"
-                  options={["SCY", "LCM", "SCM"].map((c) => [c, c])}
-                />
-                <Select
-                  label="Meet team"
-                  value={filters.team}
-                  onChange={(v) => updateFilter("team", v)}
-                  all="All teams"
-                  options={teams.map((t) => [t, t])}
-                />
-                <Select
-                  label="Meet round"
-                  value={filters.round}
-                  onChange={(v) => updateFilter("round", v)}
-                  all="All rounds"
-                  options={Object.entries(rounds)}
-                />
-              </div>
-              {table}
-            </section>
-          )}
-          {view === "athletes" && athleteId && data && (
-            <section className={s.panel} ref={profileRef} tabIndex={-1}>
-              <div className={s.panelHead}>
-                <div>
-                  <span className={s.badge}>Athlete profile</span>
-                  <h2>{names.get(athleteId) ?? athleteId}</h2>
-                  <p>
-                    {pbs.length} personal bests · {number(athleteRaces.length)}{" "}
-                    individual results
-                  </p>
-                </div>
-              </div>
-              <div className={s.toolbar}>
-                <h3>Personal bests</h3>
-                <span className={s.muted}>
-                  All available dates · courses kept separate
-                </span>
-              </div>
-              <div className={s.pbs}>
-                {pbs.map((r) => (
-                  <button
-                    key={r.id}
-                    className={s.pb}
-                    aria-pressed={activeEvent === `${r.event}_${r.course}`}
-                    onClick={() => {
-                      setAthleteEvent(`${r.event}_${r.course}`);
-                      setPage(0);
-                      setSelected(null);
-                    }}
-                  >
-                    <span>{eventLabel(r.event)}</span>
-                    <strong>{formatSwimTime(r.time)}</strong>
-                    <span>
-                      {r.course} · {date(r.date)}
-                    </span>
-                  </button>
-                ))}
-              </div>
-              {!pbs.length && (
-                <p className={s.empty}>
-                  No valid individual personal bests are available.
-                </p>
+              </section>
+              {view === "meets" && chosenMeet && data && (
+                <section className={s.panel} ref={profileRef} tabIndex={-1}>
+                  <div className={s.panelHead}>
+                    <div>
+                      <span className={s.badge}>Meet results</span>
+                      <h2>{chosenMeet.name}</h2>
+                      <p>
+                        {date(chosenMeet.date)} · {number(chosenMeet.count)}{" "}
+                        approved results · individual swims below
+                      </p>
+                    </div>
+                  </div>
+                  <div className={s.filters}>
+                    <PopupPicker
+                      label="Meet event"
+                      value={filters.event}
+                      onChange={(v) => updateFilter("event", v)}
+                      all="All events"
+                      options={events.map((e) => [e, eventLabel(e)])}
+                    />
+                    <FilterChips
+                      label="Meet course"
+                      value={filters.course}
+                      onChange={(v) => updateFilter("course", v)}
+                      options={[
+                        ["", "All"],
+                        ...["SCY", "LCM", "SCM"].map(
+                          (course): [string, string] => [course, course],
+                        ),
+                      ]}
+                    />
+                    <PopupPicker
+                      label="Meet team"
+                      value={filters.team}
+                      onChange={(v) => updateFilter("team", v)}
+                      all="All IES Teams"
+                      options={teams}
+                    />
+                  </div>
+                  {table}
+                </section>
               )}
-              <div className={s.toolbar}>
-                <Select
-                  label="Event history"
-                  value={activeEvent}
-                  onChange={(v) => {
-                    setAthleteEvent(v);
-                    setPage(0);
-                    setSelected(null);
-                  }}
-                  options={[
-                    ...new Set(
-                      athleteRaces.map((r) => `${r.event}_${r.course}`),
-                    ),
-                  ]
-                    .sort()
-                    .map((e) => [
-                      e,
-                      `${eventLabel(e)} · ${e.split("_").at(-1)}`,
-                    ])}
-                />
-              </div>
-              <ProgressChart races={history} />
-              {table}
-            </section>
+              {view === "athletes" && athleteId && data && (
+                <section
+                  className={s.panel}
+                  ref={profileRef}
+                  tabIndex={-1}
+                  hidden={athleteSearchOpen}
+                >
+                  <div className={s.panelHead}>
+                    <div>
+                      <span className={s.badge}>Athlete profile</span>
+                      <h2>{names.get(athleteId) ?? athleteId}</h2>
+                      <p>
+                        {pbs.length} personal bests ·{" "}
+                        {number(athleteRaces.length)} individual results
+                      </p>
+                    </div>
+                  </div>
+                  <div className={s.toolbar}>
+                    <h3>Personal bests</h3>
+                    <span className={s.muted}>
+                      All available dates · courses kept separate
+                    </span>
+                  </div>
+                  <div className={s.pbs}>
+                    {pbs.map((r) => (
+                      <button
+                        key={r.id}
+                        className={s.pb}
+                        aria-pressed={activeEvent === `${r.event}_${r.course}`}
+                        onClick={() => {
+                          setAthleteEvent(`${r.event}_${r.course}`);
+                          setPage(0);
+                          setSelected(null);
+                        }}
+                      >
+                        <span>{eventLabel(r.event)}</span>
+                        <strong>{formatSwimTime(r.time)}</strong>
+                        <span>
+                          {r.course} · {date(r.date)}
+                        </span>
+                      </button>
+                    ))}
+                  </div>
+                  {!pbs.length && (
+                    <p className={s.empty}>
+                      No valid individual personal bests are available.
+                    </p>
+                  )}
+                  <div className={s.toolbar}>
+                    <PopupPicker
+                      label="Event history"
+                      value={activeEvent}
+                      onChange={(v) => {
+                        setAthleteEvent(v);
+                        setPage(0);
+                        setSelected(null);
+                      }}
+                      options={[
+                        ...new Set(
+                          athleteRaces.map((r) => `${r.event}_${r.course}`),
+                        ),
+                      ]
+                        .sort()
+                        .map((e) => [
+                          e,
+                          `${eventLabel(e)} · ${e.split("_").at(-1)}`,
+                        ])}
+                    />
+                  </div>
+                  <ProgressChart races={history} />
+                  {table}
+                </section>
+              )}
+              <p className={s.footer}>
+                Approved IES dataset only; coverage may be incomplete. Rankings
+                exclude disqualifications, scratches, and missing times.
+                Individual personal bests exclude relays; relay rankings use
+                complete team results. Equal times share a rank. Individual age
+                groups use age at the swim; relay groups use the reported event
+                age group. Results without a reported age group or gender are
+                included only when that filter is set to all.
+              </p>
+            </>
           )}
-          <p className={s.footer}>
-            Approved IES dataset only; coverage may be incomplete. Rankings and
-            personal bests exclude relays, disqualifications, scratches, and
-            missing times. Equal times share a rank. Age and gender filters are
-            unavailable in the public data.
-          </p>
         </div>
-        <div ref={detailRef} tabIndex={-1}>
+        <div
+          ref={detailRef}
+          tabIndex={-1}
+          hidden={
+            view === "records" || (view === "athletes" && athleteSearchOpen)
+          }
+        >
           <Performance
             race={selected}
             races={races}

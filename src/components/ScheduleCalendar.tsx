@@ -84,23 +84,21 @@ export default function ScheduleCalendar({ initialMonth, today }: { initialMonth
 
   return (
     <section className={styles.calendar} aria-label="Team calendar">
-      <div className={styles.filters}>
-        <label><span className="sr-only">Search</span><input type="search" placeholder="Find a practice or meet…" value={search} onChange={event => setSearch(event.target.value)} /></label>
-        {hasFilters ? <button type="button" className={styles.clear} onClick={clearFilters}>Clear search</button> : null}
-        <a className={styles.subscribe} href={CALENDAR_URL} target="_blank" rel="noopener noreferrer">Add to my calendar <span aria-hidden="true">↗</span></a>
-      </div>
-      {hasFilters ? <p className={styles.filterNote}>Showing matching events only. <button type="button" onClick={clearFilters}>Show all events</button> to check team notices and schedule changes.</p> : null}
-
       <div className={styles.toolbar}>
         <div className={styles.navigation}>
           <div className={styles.arrows}><button type="button" aria-label="Previous month" disabled={month === "1900-01"} onClick={() => moveMonth(-1)}>‹</button><button type="button" aria-label="Next month" disabled={month === "2099-12"} onClick={() => moveMonth(1)}>›</button></div>
           <h3>{monthLabel}</h3>
           <button type="button" className={styles.today} onClick={() => { setMonth(initialMonth); setSelectedDay(today); }}>Today</button>
         </div>
-        <div className={styles.views} role="group" aria-label="Calendar view"><button type="button" aria-pressed={view === "month"} onClick={() => setView("month")}>Month</button><button type="button" aria-pressed={view === "agenda"} onClick={() => setView("agenda")}>Agenda</button></div>
+        <div className={styles.toolbarControls}>
+          <div className={styles.filters}>
+            <label><span className="sr-only">Search</span><input type="search" placeholder="Find a practice or meet…" value={search} onChange={event => setSearch(event.target.value)} /></label>
+            {hasFilters ? <button type="button" className={styles.clear} onClick={clearFilters}>Clear search</button> : null}
+          </div>
+          <div className={styles.views} role="group" aria-label="Calendar view"><button type="button" aria-pressed={view === "month"} onClick={() => setView("month")}>Month</button><button type="button" aria-pressed={view === "agenda"} onClick={() => setView("agenda")}>Agenda</button></div>
+        </div>
       </div>
-
-      <div className={styles.summary}><p role="status" aria-live="polite">{loading ? "Loading calendar…" : result?.error ? "Calendar unavailable" : `${visibleEvents.length} ${visibleEvents.length === 1 ? "event" : "events"}${hasFilters ? " matching your search" : " this month"}`}</p><span>All times Pacific</span></div>
+      {hasFilters ? <p className={styles.filterNote}>Showing matching events only. <button type="button" onClick={clearFilters}>Show all events</button> to check team notices and schedule changes.</p> : null}
 
       {view === "month" ? <div className={styles.mobilePicker}>
         <p className={styles.pickerHint}>Select a day to see its schedule.</p>
@@ -126,7 +124,10 @@ export default function ScheduleCalendar({ initialMonth, today }: { initialMonth
             {weekdays.map(day => <div className={styles.weekday} key={day}>{day}</div>)}
             {days.map(day => <div key={day} className={`${styles.day} ${day.startsWith(month) ? "" : styles.outside}`}>
               <time dateTime={day} className={day === today ? styles.currentDay : styles.dayNumber} aria-label={dayFormatter.format(new Date(`${day}T12:00:00Z`))} aria-current={day === today ? "date" : undefined}>{Number(day.slice(-2))}</time>
-              {groupByStart(eventsOnDay(filtered, day)).map(group => <div className={styles.eventRow} key={group[0].id}>{group.map(event => <button type="button" key={event.id} className={`${styles.event} ${styles[eventKind(event.title)]}`} onClick={() => setSelected(event)}><span className={styles.eventTime}>{event.allDay ? "All day" : timeFormatter.format(new Date(event.start))}</span><span>{event.title}</span></button>)}</div>)}
+              {groupByStart(eventsOnDay(filtered, day)).map(group => <div className={`${styles.eventRow} ${styles[eventKind(group[0].title)]}`} key={group[0].id}>
+                <span className={styles.eventTime}>{group[0].allDay ? "All day" : timeFormatter.format(new Date(group[0].start))}</span>
+                {group.map(event => <button type="button" key={event.id} className={`${styles.event} ${styles[eventKind(event.title)]}`} aria-label={`${event.title}, ${timeLabel(event)}`} onClick={() => setSelected(event)}><span>{event.title}</span></button>)}
+              </div>)}
             </div>)}
           </div> : null}
           <div id="mobile-day-schedule" className={view === "month" ? styles.mobileAgenda : styles.agenda} aria-live={view === "month" ? "polite" : undefined}>
@@ -134,7 +135,7 @@ export default function ScheduleCalendar({ initialMonth, today }: { initialMonth
             {view === "month" && selectedDay && !selectedDayEvents.length ? <p className={styles.dayEmpty}>{hasFilters ? "No events match your search on this day." : "No events scheduled for this day."}</p> : null}
             {displayedAgenda.length ? displayedAgenda.map(({ day, events: dayEvents }) => <section className={styles.agendaDay} key={day} aria-label={dayFormatter.format(new Date(`${day}T12:00:00Z`))}>
               <div className={styles.agendaDate}><span>{weekdays[new Date(`${day}T12:00:00Z`).getUTCDay()]}</span><time dateTime={day} className={day === today ? styles.currentDay : ""}>{Number(day.slice(-2))}</time></div>
-              <div className={styles.agendaEvents}>{dayEvents.map(event => <button type="button" className={`${styles.agendaEvent} ${styles[eventKind(event.title)]}`} key={event.id} onClick={() => setSelected(event)}><span className={styles.agendaTime}>{timeLabel(event)}</span><span className={styles.agendaDetails}><strong>{event.title}</strong>{event.location ? <span>{event.location}</span> : null}</span><span className={styles.detailArrow} aria-hidden="true">↗</span></button>)}</div>
+              <div className={styles.agendaEvents}>{groupByStart(dayEvents).map(group => <div className={`${styles.agendaGroup} ${styles[eventKind(group[0].title)]}`} key={group[0].id}>{group.map(event => <button type="button" className={`${styles.agendaEvent} ${styles[eventKind(event.title)]}`} key={event.id} onClick={() => setSelected(event)}><span className={styles.agendaTime}>{timeLabel(event)}</span><span className={styles.agendaDetails}><strong>{event.title}</strong>{event.location ? <span>{event.location}</span> : null}</span><span className={styles.detailArrow} aria-hidden="true">↗</span></button>)}</div>)}</div>
             </section>) : null}
           </div>
           {!visibleEvents.length ? <div className={styles.message}><h3>{hasFilters ? "No events match your search." : "No events scheduled this month."}</h3><p>{hasFilters ? "Try another search." : "Check another month or come back for schedule updates."}</p>{hasFilters ? <button type="button" onClick={clearFilters}>Clear search</button> : null}</div> : null}

@@ -82,6 +82,7 @@ try {
   await article.getByRole("button", { name: "Hold", exact: true }).click();
   await article.waitFor({ state: "detached" });
   await page.getByLabel("Status", { exact: true }).selectOption("held");
+  await article.getByText("Review note (optional)", { exact: true }).click();
   await article
     .getByLabel("Review note")
     .fill("Verified synthetic source in browser");
