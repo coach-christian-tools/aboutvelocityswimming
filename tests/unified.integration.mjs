@@ -425,6 +425,14 @@ await test("collection is staging-only, isolated, deduplicated and atomically re
   const stage = (value, worker_token = token) => anon.rpc("stage_collection", { worker_token, batch: value });
   assert.ok((await stage(batch, "wrong-token")).error);
   const staged = await stage(batch); assert.ifError(staged.error);
+  const queue = await staff.from("collection_batch_queue").select("*").eq("id", staged.data).single();
+  assert.ifError(queue.error);
+  assert.equal(queue.data.writes[0].after.title, "Synthetic meet");
+  assert.equal(queue.data.writes[0].after.sourceUrl, undefined);
+  assert.equal(queue.data.evidence, undefined);
+  assert.equal((await familyA.from("collection_batch_queue").select("id")).data.length, 0);
+  assert.ok((await anon.from("collection_batch_queue").select("id")).error);
+
   assert.equal((await anon.from("knowledge_entries").select("id").eq("id", id)).data.length, 0);
   assert.equal((await familyA.from("collection_batches").select("id")).data.length, 0);
   assert.equal((await anon.from("collection_batches").select("id")).data?.length ?? 0, 0);

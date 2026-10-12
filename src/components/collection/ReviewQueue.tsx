@@ -1,8 +1,8 @@
 "use client";
 import Link from "next/link";
-import { useEffect, useState, useMemo } from "react";
+import { useEffect, useState, useMemo, useRef } from "react";
 import { browserClient, hasBackendConfiguration } from "@/lib/supabase/client";
-import { loadReviewBatches } from "./load-review-batches";
+import { loadReviewBatches, applyReviewDecision, type QueueBatch, type ReviewQueueSnapshot } from "./load-review-batches";
 import type { Database, Json } from "@/lib/supabase/database.types";
 import { useAuth } from "@/features/workshare/contexts/auth";
 
@@ -316,44 +316,74 @@ function Records({ writes, reads }: { writes: Json; reads: Json }) {
     </div>
   );
 }
+function BatchDetails({ id }: { id: string }) {
+  const [expanded, setExpanded] = useState(false);
+  const [batch, setBatch] = useState<Batch | null>(null);
+  const [error, setError] = useState("");
+  const [revision, setRevision] = useState(0);
+  useEffect(() => {
+    if (!expanded) return;
+    const controller = new AbortController();
+    void browserClient().from("collection_batches").select("*").eq("id", id).abortSignal(controller.signal).single()
+      .then(({ data, error }) => {
+        if (controller.signal.aborted) return;
+        setError(error?.message ?? "");
+        setBatch(error ? null : data);
+      });
+    return () => controller.abort();
+  }, [id, expanded, revision]);
+  return <details onToggle={event => setExpanded(event.currentTarget.open)}>
+    <summary className="cursor-pointer py-1 text-sm font-semibold">Review records, conflicts and source evidence</summary>
+    {error ? <div role="alert"><p>{error}</p><button onClick={() => { setError(""); setRevision(value => value + 1); }}>Retry loading records</button></div> : !batch ? <p role="status">Loading batch records…</p> : <div className="mt-2 space-y-3">
+      <a href={safeUrl(batch.source_url)} target="_blank" rel="noopener noreferrer" className="underline break-all">{batch.source_url}</a>
+      <Records writes={batch.writes} reads={batch.reads} />
+      <details><summary className="cursor-pointer">Source evidence</summary><pre className="max-h-96 overflow-auto whitespace-pre-wrap break-words text-xs">{JSON.stringify(batch.evidence, null, 2)}</pre></details>
+    </div>}
+  </details>;
+}
 export default function ReviewQueue() {
   const { isAdmin, loading: authLoading } = useAuth();
-  const [batches, setBatches] = useState<Batch[]>([]);
+  const [snapshot, setSnapshot] = useState<ReviewQueueSnapshot | null>(null);
+  const blockers = snapshot?.blockers ?? {};
+  const loadController = useRef<AbortController | null>(null);
   const [status, setStatus] = useState("pending");
   const [offset, setOffset] = useState(0);
   const [query, setQuery] = useState("");
-  const [blockers, setBlockers] = useState<Record<string, string[]>>({});
+
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(true);
+  const [refreshing, setRefreshing] = useState(false);
   const [busy, setBusy] = useState<string | null>(null);
   const [notes, setNotes] = useState<Record<string, string>>({});
   const [refresh, setRefresh] = useState(0);
   useEffect(() => {
     const controller = new AbortController();
     if (!isAdmin || !hasBackendConfiguration) return;
+    loadController.current = controller;
     void loadReviewBatches(status, controller.signal).then(result => {
       if (controller.signal.aborted) return;
-      setBatches(result.batches);
-      setBlockers(result.blockers);
+      setSnapshot(result);
       setError("");
       setLoading(false);
+      setRefreshing(false);
     }).catch(cause => {
       if (controller.signal.aborted) return;
       setError(cause instanceof Error ? cause.message : typeof cause?.message === "string" ? cause.message : "Unable to load review batches.");
-      setBatches([]);
+
       setLoading(false);
+      setRefreshing(false);
     });
     return () => controller.abort();
   }, [status, isAdmin, refresh]);
   useEffect(() => {
-    const refreshOnReturn = () => setRefresh(value => value + 1);
+    const refreshOnReturn = () => { setRefreshing(true); setRefresh(value => value + 1); };
     window.addEventListener("focus", refreshOnReturn);
     return () => window.removeEventListener("focus", refreshOnReturn);
   }, []);
-  const searchableBatches = useMemo(() => batches.map(batch => ({
+  const searchableBatches = useMemo(() => (snapshot?.batches ?? []).map(batch => ({
     batch,
     text: `${divisions[batch.division]} ${batch.scope} ${batch.source_url} ${JSON.stringify(batch.writes)}`.toLowerCase(),
-  })), [batches]);
+  })), [snapshot]);
   const filteredBatches = useMemo(() => {
     const search = query.trim().toLowerCase();
     return searchableBatches.filter(item => !search || item.text.includes(search)).map(item => item.batch);
@@ -367,7 +397,7 @@ export default function ReviewQueue() {
     label="Proposal pages"
     onChange={page => setOffset(page * 20)}
   />;
-  async function decide(batch: Batch, decision: string) {
+  async function decide(batch: QueueBatch, decision: string) {
     setBusy(batch.id);
     setError("");
     try {
@@ -383,8 +413,11 @@ export default function ReviewQueue() {
       const result = await response.json();
       if (!response.ok)
         throw new Error(result.error || "Unable to save decision.");
-      setLoading(true);
-      setRefresh((value) => value + 1);
+      // Cancel a background read that began before this successful decision.
+      // Its stale response must not put the batch back into the queue.
+      loadController.current?.abort();
+      setRefreshing(false);
+      setSnapshot(current => current ? applyReviewDecision(current, batch.id, decision, status, notes[batch.id] ?? "") : current);
     } catch (cause) {
       setError(
         cause instanceof Error ? cause.message : "Unable to save decision.",
@@ -414,10 +447,12 @@ export default function ReviewQueue() {
         <label>
           Status{" "}
           <select
+            disabled={busy !== null}
             aria-label="Status"
             className="rounded border p-2"
             value={status}
             onChange={(event) => {
+              setSnapshot(null);
               setStatus(event.target.value);
               setOffset(0);
               setLoading(true);
@@ -430,16 +465,17 @@ export default function ReviewQueue() {
         </label>
         <button
           onClick={() => {
-            setLoading(true);
+            setRefreshing(true);
             setRefresh((value) => value + 1);
           }}
-          disabled={loading}
+          disabled={loading || refreshing}
         >
-          Refresh
+          {refreshing ? "Refreshing…" : "Refresh"}
         </button>
       </div>
       <p className="text-sm text-text-secondary">{total} matching batches · {status === "pending" || status === "held" ? "Prerequisites first; oldest ready batches first." : "Oldest batches first."}</p>
       {pageControls}
+      {refreshing && !loading && <p role="status" className="text-sm text-text-secondary">Checking for changes…</p>}
       {error && (
         <p role="alert" className="text-red-700">
           {error}
@@ -524,30 +560,7 @@ export default function ReviewQueue() {
                   conflicts · {stats.removed} {stats.removed === 1 ? "removal" : "removals"}
                 </p>
               )}
-              <details>
-                <summary className="cursor-pointer py-1 text-sm font-semibold">
-                  Review records, conflicts and source evidence
-                </summary>
-                <div className="mt-2 space-y-3">
-                  <a
-                    href={safeUrl(batch.source_url)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline break-all"
-                  >
-                    {batch.source_url}
-                  </a>
-                  <Records writes={batch.writes} reads={batch.reads} />
-                  <details>
-                    <summary className="cursor-pointer">
-                      Source evidence
-                    </summary>
-                    <pre className="max-h-96 overflow-auto whitespace-pre-wrap break-words text-xs">
-                      {JSON.stringify(batch.evidence, null, 2)}
-                    </pre>
-                  </details>
-                </div>
-              </details>
+              <BatchDetails id={batch.id} />
             </article>
           );
         })

@@ -59,8 +59,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
           setFamilyId(foundFamilyId);
         } catch (error) {
           if (currentGeneration !== generation) return;
-          console.error("Error fetching user roles:", error);
-          setIsAdmin(false);
+          console.error("Error fetching family membership:", error);
+          setIsAdmin(accountUser.staff);
           setFamilyId(null);
         }
       } else {

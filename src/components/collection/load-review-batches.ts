@@ -7,26 +7,33 @@ import {
 } from "./review-order";
 import type { ReviewWrite } from "./review-summary";
 
-type Batch = Database["public"]["Tables"]["collection_batches"]["Row"];
+export type QueueBatch =
+  Database["public"]["Views"]["collection_batch_queue"]["Row"];
 export async function loadReviewBatches(status: string, signal: AbortSignal) {
   const client = browserClient();
   const active = ["pending", "held"].includes(status);
-  const batches: Batch[] = [];
+  const batches: QueueBatch[] = [];
   // Sort and search across the entire queue, not just the current screen.
-  for (let offset = 0; ; offset += 500) {
+  for (let offset = 0; ; offset += 100) {
     const { data, error } = await client
-      .from("collection_batches")
+      .from("collection_batch_queue")
       .select("*")
       .in("status", active ? ["pending", "held"] : [status])
       .order("received_at", { ascending: true })
       .order("id")
-      .range(offset, offset + 499)
+      .range(offset, offset + 99)
       .abortSignal(signal);
     if (error) throw error;
     batches.push(...(data ?? []));
-    if (!data || data.length < 500) break;
+    if (!data || data.length < 100) break;
   }
-  if (!active) return { batches, blockers: {} as Record<string, string[]> };
+  if (!active)
+    return {
+      batches,
+      blockers: {} as Record<string, string[]>,
+      sourceBatches: batches,
+      existing: new Set<string>(),
+    };
   const refs = new Set(
     batches.flatMap((batch) =>
       (batch.writes as ReviewWrite[]).flatMap(recordDependencies),
@@ -51,6 +58,49 @@ export async function loadReviewBatches(status: string, signal: AbortSignal) {
   );
   const ordered = orderReviewBatches(batches, existing);
   return {
+    sourceBatches: batches,
+    existing,
+    batches: ordered.batches.filter((batch) => batch.status === status),
+    blockers: ordered.blockers,
+  };
+}
+
+export type ReviewQueueSnapshot = Awaited<ReturnType<typeof loadReviewBatches>>;
+
+// The server has committed the entire batch before this is called. Reuse the
+// loaded queue instead of downloading every proposal after each decision.
+export function applyReviewDecision(
+  snapshot: ReviewQueueSnapshot,
+  batchId: string,
+  decision: string,
+  status: string,
+  note: string,
+): ReviewQueueSnapshot {
+  const decided = snapshot.sourceBatches.find((batch) => batch.id === batchId);
+  if (!decided) return snapshot;
+  const existing = new Set(snapshot.existing);
+  if (decision === "approved") {
+    for (const write of decided.writes as ReviewWrite[]) {
+      if (write.after === null) existing.delete(write.path);
+      else existing.add(write.path);
+    }
+  }
+  const sourceBatches = snapshot.sourceBatches
+    .map((batch) =>
+      batch.id === batchId
+        ? {
+            ...batch,
+            status: decision,
+            review_note: note,
+            reviewed_at: new Date().toISOString(),
+          }
+        : batch,
+    )
+    .filter((batch) => ["pending", "held"].includes(batch.status));
+  const ordered = orderReviewBatches(sourceBatches, existing);
+  return {
+    sourceBatches,
+    existing,
     batches: ordered.batches.filter((batch) => batch.status === status),
     blockers: ordered.blockers,
   };

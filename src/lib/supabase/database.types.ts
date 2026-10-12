@@ -929,6 +929,15 @@ export type Database = {
       };
     };
     Views: {
+      collection_batch_queue: {
+        Row: {
+          id: string; division: string; scope: string; source_url: string;
+          captured_at: string; received_at: string; coverage: string;
+          status: string; review_note: string | null; reviewed_at: string | null;
+          writes: Json; reads: Json;
+        };
+        Relationships: [];
+      };
       app_records: {
         Row: {
           data: Json | null;
