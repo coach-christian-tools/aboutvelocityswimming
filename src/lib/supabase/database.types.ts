@@ -164,6 +164,7 @@ export type Database = {
           id: string;
           reads: NonNullable<Json>;
           received_at: string;
+          review_priority: number;
           review_note: string | null;
           reviewed_at: string | null;
           reviewed_by: string | null;
@@ -182,6 +183,7 @@ export type Database = {
           id?: string;
           reads: NonNullable<Json>;
           received_at?: string;
+          review_priority?: never;
           review_note?: string | null;
           reviewed_at?: string | null;
           reviewed_by?: string | null;
@@ -200,6 +202,7 @@ export type Database = {
           id?: string;
           reads?: NonNullable<Json>;
           received_at?: string;
+          review_priority?: never;
           review_note?: string | null;
           reviewed_at?: string | null;
           reviewed_by?: string | null;

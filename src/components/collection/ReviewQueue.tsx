@@ -438,6 +438,7 @@ export default function ReviewQueue() {
       <p>
         Collected changes stay private until approved. A batch is applied
         together; changed records require a fresh collection.
+        {status === "pending" || status === "held" ? " Teams, venues, and meets appear first, then swimmer profiles, then results. Within each group, oldest batches appear first." : ""}
       </p>
       <label className="block text-sm font-medium">
         Search batches

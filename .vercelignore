@@ -7,6 +7,7 @@
 node_modules/
 .next/
 backups/
+research/
 coverage/
 db_*.json
 export.csv
@@ -27,3 +28,4 @@ firebase/workshare/functions/node_modules/
 firebase/workshare/functions/lib/
 firebase/workshare/.firebase/
 .next-workshare-test/
+.next-velocity-test/

@@ -24,6 +24,9 @@ export default function PreparedImportList({ busy, onReview }: { busy: boolean; 
   const [skipped, setSkipped] = useState(0);
   const [opening, setOpening] = useState<string | null>(null);
   const [revision, setRevision] = useState(0);
+  const [search, setSearch] = useState('');
+  const term = search.trim().toLowerCase();
+  const matching = batches.filter(batch => [batch.label, batch.id, batch.file].some(value => value.toLowerCase().includes(term)));
 
   useEffect(() => {
     let active = true;
@@ -50,14 +53,17 @@ export default function PreparedImportList({ busy, onReview }: { busy: boolean; 
   if (!available) return null;
   return <section className="admin-section" aria-label="Prepared imports">
     <h3>Prepared imports</h3><p>Choose a batch to preview. You decide which changes to apply.</p>
+    <label className="block mb-3">Search imports<input type="search" className="mt-1 block w-full rounded border p-2" value={search} onChange={event => setSearch(event.target.value)} placeholder="Search batch names or files" /></label>
+    {search && <button type="button" onClick={() => setSearch('')}>Clear search</button>}
     <button type="button" disabled={busy || loading || !!opening} onClick={() => setRevision(value => value + 1)}>Refresh prepared imports</button>
     {loading && <p role="status">Loading prepared imports…</p>}
     {error && <p role="alert">{error}</p>}
     {!loading && !error && batches.length === 0 && <p>No prepared batches yet. You can also open a saved file below.</p>}
     {skipped > 0 && <p>{skipped} saved {skipped === 1 ? 'file needs' : 'files need'} correction before review.</p>}
-    {batches.length > 0 && <div className="admin-table-scroll"><table><thead><tr><th>Batch</th><th>Observations</th><th>Held</th><th>Collected</th><th>Action</th></tr></thead><tbody>
-      {batches.map(batch => <tr key={batch.file}>
-        <th scope="row">{batch.label}</th><td>{batch.observations}</td><td>{batch.held}</td><td>{new Date(batch.collectedAt).toLocaleString()}</td>
+    {!loading && !error && batches.length > 0 && matching.length === 0 && <p>No imports match “{search.trim()}”.</p>}
+    {matching.length > 0 && <div className="admin-table-scroll"><table><thead><tr><th>Batch</th><th>Observations</th><th>Held</th><th>Collected</th><th>Action</th></tr></thead><tbody>
+      {matching.map(batch => <tr key={batch.file}>
+        <th scope="row">{batch.label}<span className="block text-xs font-normal break-all">{batch.id}</span></th><td>{batch.observations}</td><td>{batch.held}</td><td>{new Date(batch.collectedAt).toLocaleString()}</td>
         <td><button type="button" disabled={busy || !!opening} onClick={async () => {
           setOpening(batch.file); setError(null);
           try {

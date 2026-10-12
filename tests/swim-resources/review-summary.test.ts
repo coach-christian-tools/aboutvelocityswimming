@@ -14,6 +14,11 @@ describe("import review summaries", () => {
     expect(raceSummary(race, athleteProfiles(writes, reads, current, false)).swimmer).toBe("Original name");
     expect(raceSummary(race, athleteProfiles(writes, reads, current, true)).swimmer).toBe("Corrected name");
   });
+  it("shows the source name when the profile is pending in a different batch", () => {
+    const proposed = { ...race, athleteName: { first: "Claire", last: "Semler" } };
+    expect(raceSummary(proposed, {}).swimmer).toBe("Claire Semler");
+    expect(raceSummary(proposed, { a: { name: "Reviewed profile name" } }).swimmer).toBe("Reviewed profile name");
+  });
   it("expands the stored stroke codes into readable events", () => {
     for (const [stroke, name] of [["FR", "Freestyle"], ["BK", "Backstroke"], ["BR", "Breaststroke"], ["FL", "Butterfly"]]) {
       expect(raceSummary({ ...race, stroke }, {}).event).toBe(`100 ${name}`);

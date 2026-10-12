@@ -26,7 +26,7 @@ export function raceSummary(value: Json, profiles: Record<string, Json>) {
   const status = typeof race.status === "string" ? race.status : "Unknown status";
   const meet = object(race.meet);
   return {
-    swimmer: athleteName(profiles[id]) || (id ? `Name unavailable (${id})` : "Missing athlete link"),
+    swimmer: athleteName(profiles[id]) || athleteName({ name: race.athleteName ?? null }) || (id ? `Name unavailable (${id})` : "Missing athlete link"),
     event: `${typeof race.distance === "number" ? race.distance : "?"} ${stroke}${race.isRelay === true ? " relay" : ""}`,
     time: status !== "OK" ? status : formatSwimTime(typeof race.timeMs === "number" ? race.timeMs : null, "No time"),
     course: typeof race.course === "string" ? race.course : "Unknown course",
