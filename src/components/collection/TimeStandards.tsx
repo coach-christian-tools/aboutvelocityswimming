@@ -1,7 +1,8 @@
 "use client";
-import { useEffect, useId, useState } from "react";
-import { browserClient, hasBackendConfiguration } from "@/lib/supabase/client";
-import type { StandardSet } from "@/features/swim-resources/types/schema";
+import { useId } from "react";
+import { hasBackendConfiguration } from "@/lib/supabase/client";
+import { useTimesSelection } from "./use-times-selection";
+import type { useStandards } from "./use-standards";
 import { formatSwimTime } from "@/features/swim-resources/lib/domain/swim-time";
 import { strokeColumns, eventColumn } from "./event-layout";
 import {
@@ -12,52 +13,18 @@ import {
   type StandardSelection,
 } from "./standards-data";
 import s from "./TimeStandards.module.css";
-export default function TimeStandards() {
+export default function TimeStandards({
+  query,
+}: {
+  query: ReturnType<typeof useStandards>;
+}) {
   const id = useId();
-  const [sets, setSets] = useState<StandardSet[]>([]);
-  const [selected, setSelected] = useState("");
-  const [selection, setSelection] = useState<Partial<StandardSelection>>({});
-  const [loading, setLoading] = useState(hasBackendConfiguration);
-  const [error, setError] = useState("");
-  const [revision, setRevision] = useState(0);
-  useEffect(() => {
-    if (!hasBackendConfiguration) return;
-    let alive = true;
-    async function load() {
-      setLoading(true);
-      setError("");
-      try {
-        const { data, error } = await browserClient()
-          .from("standards")
-          .select("id,data")
-          .order("id");
-        if (error) throw error;
-        if (alive)
-          setSets(
-            (data ?? []).map((row) => ({
-              ...(row.data as unknown as StandardSet),
-              id: row.id,
-            })),
-          );
-      } catch {
-        if (alive)
-          setError("Could not load approved standards. Please try again.");
-      } finally {
-        if (alive) setLoading(false);
-      }
-    }
-    void load();
-    const refresh = () => {
-      void load();
-    };
-    window.addEventListener("ies-times-changed", refresh);
-    window.addEventListener("focus", refresh);
-    return () => {
-      alive = false;
-      window.removeEventListener("ies-times-changed", refresh);
-      window.removeEventListener("focus", refresh);
-    };
-  }, [revision]);
+  const { sets, loading, error, retry } = query;
+  const [selected, setSelected] = useTimesSelection("standard", "");
+  const [selection, setSelection] = useTimesSelection<StandardSelection>(
+    "standardFilters",
+    { course: "", gender: "", age: "", tier: "" },
+  );
   const day = new Date().toLocaleDateString("en-CA", {
     timeZone: "America/Los_Angeles",
   });
@@ -72,8 +39,7 @@ export default function TimeStandards() {
       {loading && <p role="status">Loading approved standards…</p>}
       {error && (
         <p role="alert">
-          {error}{" "}
-          <button onClick={() => setRevision((n) => n + 1)}>Try again</button>
+          {error} <button onClick={retry}>Try again</button>
         </p>
       )}
       {!hasBackendConfiguration && (

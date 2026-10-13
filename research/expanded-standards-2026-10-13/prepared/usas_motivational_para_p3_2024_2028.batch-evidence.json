@@ -1,0 +1,131 @@
+{
+  "sourceSha256": "1b5dc66e899e385a627789e15bafa66db2674c0b4846c40ea844f5fe89a13400",
+  "capturedAt": "2026-10-13",
+  "sourceUrl": "https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2025/2024-2028-swimmers-with-disabilities-parallel-time-standards-p3.pdf",
+  "method": "Source-specific row extraction with course/gender headers checked against PDF rendering; no time conversions.",
+  "notes": [
+    "Official PDF page 5 leaves boys 11–12 LCM 100 freestyle B blank. No cut is inferred; that selection displays —."
+  ],
+  "datePolicy": "Library availability starts at the published qualifying start where supplied, otherwise the verification date; ends on final meet day (not the entry deadline). Multi-year editions use the stated edition period. Actual entry rules and qualifying windows remain in the source.",
+  "cutCount": 2963,
+  "coverage": {
+    "cuts": 2963,
+    "courses": [
+      "SCY",
+      "SCM",
+      "LCM"
+    ],
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ]
+  },
+  "rowEvidenceFile": "research/expanded-standards-2026-10-13/prepared/usas_motivational_para_p3_2024_2028.evidence.json",
+  "rowEvidenceSha256": "53f1df1366a3482d223e3f0216d94ab800a433ee65065321f993afdea30c1546",
+  "sampleRows": [
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "F",
+      "ageGroup": "10&U",
+      "eventCode": "50_FR_SCY",
+      "tier": "B",
+      "sourceTime": "00:49.69",
+      "timeMs": 49690
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "M",
+      "ageGroup": "13-14",
+      "eventCode": "50_FR_SCY",
+      "tier": "BB",
+      "sourceTime": "00:34.69",
+      "timeMs": 34690
+    },
+    {
+      "page": 2,
+      "course": "SCY",
+      "gender": "M",
+      "ageGroup": "15-16",
+      "eventCode": "100_FL_SCY",
+      "tier": "AA",
+      "sourceTime": "01:08.89",
+      "timeMs": 68890
+    },
+    {
+      "page": 2,
+      "course": "SCM",
+      "gender": "M",
+      "ageGroup": "10&U",
+      "eventCode": "50_FL_SCM",
+      "tier": "AAAA",
+      "sourceTime": "00:42.29",
+      "timeMs": 42290
+    },
+    {
+      "page": 3,
+      "course": "SCM",
+      "gender": "F",
+      "ageGroup": "13-14",
+      "eventCode": "50_BR_SCM",
+      "tier": "AAA",
+      "sourceTime": "00:50.09",
+      "timeMs": 50090
+    },
+    {
+      "page": 4,
+      "course": "SCM",
+      "gender": "F",
+      "ageGroup": "17-18",
+      "eventCode": "800_FR_SCM",
+      "tier": "A",
+      "sourceTime": "15:18.99",
+      "timeMs": 918990
+    },
+    {
+      "page": 5,
+      "course": "LCM",
+      "gender": "F",
+      "ageGroup": "11-12",
+      "eventCode": "50_BK_LCM",
+      "tier": "BB",
+      "sourceTime": "00:57.89",
+      "timeMs": 57890
+    },
+    {
+      "page": 6,
+      "course": "LCM",
+      "gender": "M",
+      "ageGroup": "15-16",
+      "eventCode": "200_FR_LCM",
+      "tier": "B",
+      "sourceTime": "03:21.59",
+      "timeMs": 201590
+    },
+    {
+      "page": 6,
+      "course": "LCM",
+      "gender": "M",
+      "ageGroup": "17-18",
+      "eventCode": "400_IM_LCM",
+      "tier": "A",
+      "sourceTime": "07:22.29",
+      "timeMs": 442290
+    },
+    {
+      "page": 6,
+      "course": "LCM",
+      "gender": "M",
+      "ageGroup": "17-18",
+      "eventCode": "400_IM_LCM",
+      "tier": "B",
+      "sourceTime": "08:35.89",
+      "timeMs": 515890
+    }
+  ]
+}

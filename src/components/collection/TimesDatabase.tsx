@@ -1,6 +1,6 @@
 "use client";
 
-import { useId, useRef, useState } from "react";
+import { Suspense, useId, useRef, useState } from "react";
 import Link from "next/link";
 import {
   ArrowUpRight,
@@ -43,6 +43,12 @@ import { timesUrl } from "./times-api";
 import { useTimes, useDebouncedSearch } from "./use-times";
 import MeetEventNavigation, { meetEventLabel } from "./MeetEventNavigation";
 import TeamRecords, { type RecordSelection } from "./TeamRecords";
+
+import { useTimesSelection } from "./use-times-selection";
+
+import CutChips from "./CutChips";
+import { useStandards } from "./use-standards";
+import type { StandardSet } from "@/features/swim-resources/types/schema";
 
 type View = "rankings" | "meets" | "athletes" | "records" | "standards";
 const pageSize = 25;
@@ -433,6 +439,7 @@ function ProgressChart({ races }: { races: Race[] }) {
 }
 function Performance({
   race: selectedRace,
+  standards,
   names,
   filters,
   onAthlete,
@@ -440,13 +447,14 @@ function Performance({
   onClose,
 }: {
   race: Race | null;
+  standards: StandardSet[];
   names: Map<string, string>;
   filters: Filters;
   onAthlete: (id: string) => void;
   onRace: (race: Race) => void;
   onClose: () => void;
 }) {
-  const [basis, setBasis] = useState("bests");
+  const [basis, setBasis] = useTimesSelection("comparison", "bests");
   const selectedQuery = useTimes(
     selectedRace ? timesUrl("race", { raceId: selectedRace.id }) : null,
   );
@@ -498,6 +506,7 @@ function Performance({
               <div className={s.bigTime}>
                 {race.status === "OK" ? formatSwimTime(race.time) : race.status}
               </div>
+              <CutChips race={race} sets={standards} />
               {race.relay ? (
                 <p>
                   {resultName(race, names)} ·{" "}
@@ -628,26 +637,49 @@ function Performance({
 }
 
 export default function TimesDatabase() {
+  return (
+    <Suspense fallback={<p role="status">Loading Velocity Times…</p>}>
+      <TimesDatabaseContent />
+    </Suspense>
+  );
+}
+
+function TimesDatabaseContent() {
+  const standards = useStandards();
   const athleteScroll = useRef<number | null>(null);
-  const [view, setView] = useState<View>("rankings");
-  const [filters, setFilters] = useState<Filters>(initialFilters);
-  const [recordTeam, setRecordTeam] = useState("");
+  const [requestedView, setView] = useTimesSelection<View>("view", "rankings");
+  const view = (
+    ["rankings", "meets", "athletes", "records", "standards"] as const
+  ).includes(requestedView)
+    ? requestedView
+    : "rankings";
+  const [filters, setFilters] = useTimesSelection<Filters>(
+    "filters",
+    initialFilters,
+  );
+  const [recordTeam, setRecordTeam] = useTimesSelection("recordTeam", "");
   const [fromRecords, setFromRecords] = useState(false);
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useTimesSelection("search", "");
   const searchTerm = useDebouncedSearch(search);
-  const [page, setPage] = useState(0);
-  const [listPage, setListPage] = useState(0);
-  const [relayPage, setRelayPage] = useState(0);
-  const [meetId, setMeetId] = useState("");
-  const [meetEventKey, setMeetEventKey] = useState("");
-  const [meetTeam, setMeetTeam] = useState("");
-  const [meetSearchOpen, setMeetSearchOpen] = useState(true);
-  const [meetCourse, setMeetCourse] = useState("");
-  const [meetYear, setMeetYear] = useState("");
-  const [athleteId, setAthleteId] = useState("");
-  const [profileName, setProfileName] = useState("");
-  const [athleteSearchOpen, setAthleteSearchOpen] = useState(true);
-  const [athleteEvent, setAthleteEvent] = useState("");
+  const [page, setPage] = useTimesSelection("page", 0);
+  const [listPage, setListPage] = useTimesSelection("listPage", 0);
+  const [relayPage, setRelayPage] = useTimesSelection("relayPage", 0);
+  const [meetId, setMeetId] = useTimesSelection("meetId", "");
+  const [meetEventKey, setMeetEventKey] = useTimesSelection("meetEventKey", "");
+  const [meetTeam, setMeetTeam] = useTimesSelection("meetTeam", "");
+  const [meetSearchOpen, setMeetSearchOpen] = useTimesSelection(
+    "meetSearchOpen",
+    true,
+  );
+  const [meetCourse, setMeetCourse] = useTimesSelection("meetCourse", "");
+  const [meetYear, setMeetYear] = useTimesSelection("meetYear", "");
+  const [athleteId, setAthleteId] = useTimesSelection("athleteId", "");
+  const [profileName, setProfileName] = useTimesSelection("profileName", "");
+  const [athleteSearchOpen, setAthleteSearchOpen] = useTimesSelection(
+    "athleteSearchOpen",
+    true,
+  );
+  const [athleteEvent, setAthleteEvent] = useTimesSelection("athleteEvent", "");
   const [selected, setSelected] = useState<Race | null>(null);
   const detailRef = useRef<HTMLDivElement>(null);
   const profileRef = useRef<HTMLElement>(null);
@@ -1072,6 +1104,7 @@ export default function TimesDatabase() {
                       ? formatSwimTime(race.time)
                       : race.status || "—"}
                   </button>
+                  <CutChips race={race} sets={standards.sets} />
                   <ModerationNotice race={race} />
                 </td>
                 <td>
@@ -1234,7 +1267,7 @@ export default function TimesDatabase() {
         >
           <div className={s.main}>
             {view === "standards" ? (
-              <TimeStandards />
+              <TimeStandards query={standards} />
             ) : view === "records" ? (
               <>
                 <QueryNotice query={recordsQuery} />
@@ -1882,6 +1915,7 @@ export default function TimesDatabase() {
           >
             <Performance
               race={selected}
+              standards={standards.sets}
               names={names}
               filters={filters}
               onAthlete={openAthlete}

@@ -1,0 +1,927 @@
+{
+  "id": "usas_2026_speedo_winter_junior_championships_time_standards",
+  "name": "2026 Speedo Winter Junior Championships",
+  "category": "championship",
+  "governingBody": "USA_Swimming",
+  "seasonYears": "2026",
+  "effectiveDate": "2025-11-01",
+  "expirationDate": "2026-12-12",
+  "sourceUrl": "https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2026/11320828118_events_timestandards_2026_speedowinterjrs.pdf",
+  "cuts": {
+    "SCY": {
+      "F": {
+        "18&U": {
+          "50_FR_SCY": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 23290,
+                "timeDisplay": "23.29"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 23890,
+                "timeDisplay": "23.89"
+              }
+            ]
+          },
+          "100_FR_SCY": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 50390,
+                "timeDisplay": "50.39"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 51890,
+                "timeDisplay": "51.89"
+              }
+            ]
+          },
+          "200_FR_SCY": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 109090,
+                "timeDisplay": "1:49.09"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 112290,
+                "timeDisplay": "1:52.29"
+              }
+            ]
+          },
+          "500_FR_SCY": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 293590,
+                "timeDisplay": "4:53.59"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 302590,
+                "timeDisplay": "5:02.59"
+              }
+            ]
+          },
+          "1000_FR_SCY": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 611490,
+                "timeDisplay": "10:11.49"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 620490,
+                "timeDisplay": "10:20.49"
+              }
+            ]
+          },
+          "1650_FR_SCY": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 1022190,
+                "timeDisplay": "17:02.19"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 1034390,
+                "timeDisplay": "17:14.39"
+              }
+            ]
+          },
+          "100_BK_SCY": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 55090,
+                "timeDisplay": "55.09"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 57090,
+                "timeDisplay": "57.09"
+              }
+            ]
+          },
+          "200_BK_SCY": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 119390,
+                "timeDisplay": "1:59.39"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 124190,
+                "timeDisplay": "2:04.19"
+              }
+            ]
+          },
+          "100_BR_SCY": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 63090,
+                "timeDisplay": "1:03.09"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 65490,
+                "timeDisplay": "1:05.49"
+              }
+            ]
+          },
+          "200_BR_SCY": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 137190,
+                "timeDisplay": "2:17.19"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 142690,
+                "timeDisplay": "2:22.69"
+              }
+            ]
+          },
+          "100_FL_SCY": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 54690,
+                "timeDisplay": "54.69"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 56590,
+                "timeDisplay": "56.59"
+              }
+            ]
+          },
+          "200_FL_SCY": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 121690,
+                "timeDisplay": "2:01.69"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 125390,
+                "timeDisplay": "2:05.39"
+              }
+            ]
+          },
+          "200_IM_SCY": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 122190,
+                "timeDisplay": "2:02.19"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 126390,
+                "timeDisplay": "2:06.39"
+              }
+            ]
+          },
+          "400_IM_SCY": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 261690,
+                "timeDisplay": "4:21.69"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 270690,
+                "timeDisplay": "4:30.69"
+              }
+            ]
+          },
+          "400_FR-R_SCY": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 207490,
+                "timeDisplay": "3:27.49"
+              }
+            ]
+          },
+          "800_FR-R_SCY": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 452790,
+                "timeDisplay": "7:32.79"
+              }
+            ]
+          },
+          "400_MED-R_SCY": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 227790,
+                "timeDisplay": "3:47.79"
+              }
+            ]
+          }
+        }
+      },
+      "M": {
+        "18&U": {
+          "50_FR_SCY": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 20490,
+                "timeDisplay": "20.49"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 21290,
+                "timeDisplay": "21.29"
+              }
+            ]
+          },
+          "100_FR_SCY": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 44890,
+                "timeDisplay": "44.89"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 46390,
+                "timeDisplay": "46.39"
+              }
+            ]
+          },
+          "200_FR_SCY": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 98390,
+                "timeDisplay": "1:38.39"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 101590,
+                "timeDisplay": "1:41.59"
+              }
+            ]
+          },
+          "500_FR_SCY": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 268790,
+                "timeDisplay": "4:28.79"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 277090,
+                "timeDisplay": "4:37.09"
+              }
+            ]
+          },
+          "1000_FR_SCY": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 562690,
+                "timeDisplay": "9:22.69"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 574290,
+                "timeDisplay": "9:34.29"
+              }
+            ]
+          },
+          "1650_FR_SCY": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 940390,
+                "timeDisplay": "15:40.39"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 965490,
+                "timeDisplay": "16:05.49"
+              }
+            ]
+          },
+          "100_BK_SCY": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 49190,
+                "timeDisplay": "49.19"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 51490,
+                "timeDisplay": "51.49"
+              }
+            ]
+          },
+          "200_BK_SCY": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 107790,
+                "timeDisplay": "1:47.79"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 112790,
+                "timeDisplay": "1:52.79"
+              }
+            ]
+          },
+          "100_BR_SCY": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 55490,
+                "timeDisplay": "55.49"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 57990,
+                "timeDisplay": "57.99"
+              }
+            ]
+          },
+          "200_BR_SCY": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 121590,
+                "timeDisplay": "2:01.59"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 127990,
+                "timeDisplay": "2:07.99"
+              }
+            ]
+          },
+          "100_FL_SCY": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 48690,
+                "timeDisplay": "48.69"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 50590,
+                "timeDisplay": "50.59"
+              }
+            ]
+          },
+          "200_FL_SCY": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 109090,
+                "timeDisplay": "1:49.09"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 113690,
+                "timeDisplay": "1:53.69"
+              }
+            ]
+          },
+          "200_IM_SCY": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 109590,
+                "timeDisplay": "1:49.59"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 113890,
+                "timeDisplay": "1:53.89"
+              }
+            ]
+          },
+          "400_IM_SCY": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 236490,
+                "timeDisplay": "3:56.49"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 246990,
+                "timeDisplay": "4:06.99"
+              }
+            ]
+          },
+          "400_FR-R_SCY": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 185790,
+                "timeDisplay": "3:05.79"
+              }
+            ]
+          },
+          "800_FR-R_SCY": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 409590,
+                "timeDisplay": "6:49.59"
+              }
+            ]
+          },
+          "400_MED-R_SCY": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 203390,
+                "timeDisplay": "3:23.39"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "LCM": {
+      "F": {
+        "18&U": {
+          "50_FR_LCM": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 26890,
+                "timeDisplay": "26.89"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 27390,
+                "timeDisplay": "27.39"
+              }
+            ]
+          },
+          "100_FR_LCM": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 58190,
+                "timeDisplay": "58.19"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 59290,
+                "timeDisplay": "59.29"
+              }
+            ]
+          },
+          "200_FR_LCM": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 124990,
+                "timeDisplay": "2:04.99"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 127790,
+                "timeDisplay": "2:07.79"
+              }
+            ]
+          },
+          "400_FR_LCM": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 266690,
+                "timeDisplay": "4:26.69"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 268790,
+                "timeDisplay": "4:28.79"
+              }
+            ]
+          },
+          "800_FR_LCM": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 546790,
+                "timeDisplay": "9:06.79"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 553790,
+                "timeDisplay": "9:13.79"
+              }
+            ]
+          },
+          "1500_FR_LCM": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 1046790,
+                "timeDisplay": "17:26.79"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 1060190,
+                "timeDisplay": "17:40.19"
+              }
+            ]
+          },
+          "100_BK_LCM": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 64790,
+                "timeDisplay": "1:04.79"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 66790,
+                "timeDisplay": "1:06.79"
+              }
+            ]
+          },
+          "200_BK_LCM": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 139590,
+                "timeDisplay": "2:19.59"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 143990,
+                "timeDisplay": "2:23.99"
+              }
+            ]
+          },
+          "100_BR_LCM": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 73790,
+                "timeDisplay": "1:13.79"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 75990,
+                "timeDisplay": "1:15.99"
+              }
+            ]
+          },
+          "200_BR_LCM": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 158590,
+                "timeDisplay": "2:38.59"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 163390,
+                "timeDisplay": "2:43.39"
+              }
+            ]
+          },
+          "100_FL_LCM": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 62690,
+                "timeDisplay": "1:02.69"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 64690,
+                "timeDisplay": "1:04.69"
+              }
+            ]
+          },
+          "200_FL_LCM": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 138390,
+                "timeDisplay": "2:18.39"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 141890,
+                "timeDisplay": "2:21.89"
+              }
+            ]
+          },
+          "200_IM_LCM": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 142090,
+                "timeDisplay": "2:22.09"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 146190,
+                "timeDisplay": "2:26.19"
+              }
+            ]
+          },
+          "400_IM_LCM": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 300290,
+                "timeDisplay": "5:00.29"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 307290,
+                "timeDisplay": "5:07.29"
+              }
+            ]
+          },
+          "400_FR-R_LCM": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 238090,
+                "timeDisplay": "3:58.09"
+              }
+            ]
+          },
+          "800_FR-R_LCM": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 515090,
+                "timeDisplay": "8:35.09"
+              }
+            ]
+          },
+          "400_MED-R_LCM": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 264190,
+                "timeDisplay": "4:24.19"
+              }
+            ]
+          }
+        }
+      },
+      "M": {
+        "18&U": {
+          "50_FR_LCM": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 24090,
+                "timeDisplay": "24.09"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 24590,
+                "timeDisplay": "24.59"
+              }
+            ]
+          },
+          "100_FR_LCM": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 52590,
+                "timeDisplay": "52.59"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 53590,
+                "timeDisplay": "53.59"
+              }
+            ]
+          },
+          "200_FR_LCM": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 115290,
+                "timeDisplay": "1:55.29"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 117790,
+                "timeDisplay": "1:57.79"
+              }
+            ]
+          },
+          "400_FR_LCM": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 244990,
+                "timeDisplay": "4:04.99"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 277090,
+                "timeDisplay": "4:37.09"
+              }
+            ]
+          },
+          "800_FR_LCM": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 508190,
+                "timeDisplay": "8:28.19"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 520690,
+                "timeDisplay": "8:40.69"
+              }
+            ]
+          },
+          "1500_FR_LCM": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 974790,
+                "timeDisplay": "16:14.79"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 998990,
+                "timeDisplay": "16:38.99"
+              }
+            ]
+          },
+          "100_BK_LCM": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 58790,
+                "timeDisplay": "58.79"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 60590,
+                "timeDisplay": "1:00.59"
+              }
+            ]
+          },
+          "200_BK_LCM": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 128290,
+                "timeDisplay": "2:08.29"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 131890,
+                "timeDisplay": "2:11.89"
+              }
+            ]
+          },
+          "100_BR_LCM": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 65890,
+                "timeDisplay": "1:05.89"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 68190,
+                "timeDisplay": "1:08.19"
+              }
+            ]
+          },
+          "200_BR_LCM": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 144090,
+                "timeDisplay": "2:24.09"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 149090,
+                "timeDisplay": "2:29.09"
+              }
+            ]
+          },
+          "100_FL_LCM": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 56490,
+                "timeDisplay": "56.49"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 57990,
+                "timeDisplay": "57.99"
+              }
+            ]
+          },
+          "200_FL_LCM": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 126390,
+                "timeDisplay": "2:06.39"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 130190,
+                "timeDisplay": "2:10.19"
+              }
+            ]
+          },
+          "200_IM_LCM": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 129290,
+                "timeDisplay": "2:09.29"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 132790,
+                "timeDisplay": "2:12.79"
+              }
+            ]
+          },
+          "400_IM_LCM": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 275890,
+                "timeDisplay": "4:35.89"
+              },
+              {
+                "tierName": "Bonus",
+                "timeMs": 282390,
+                "timeDisplay": "4:42.39"
+              }
+            ]
+          },
+          "400_FR-R_LCM": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 215790,
+                "timeDisplay": "3:35.79"
+              }
+            ]
+          },
+          "800_FR-R_LCM": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 472390,
+                "timeDisplay": "7:52.39"
+              }
+            ]
+          },
+          "400_MED-R_LCM": {
+            "cutsByTier": [
+              {
+                "tierName": "Qualifying",
+                "timeMs": 238690,
+                "timeDisplay": "3:58.69"
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "gaps": [
+    "Official PDF page 2 prints men\u2019s 400m freestyle Bonus as 4:37.09, equal to the SCY 500 cut and slower than the qualifying 4:04.99. Preserved exactly; verify with USA Swimming before relying on this value."
+  ]
+}

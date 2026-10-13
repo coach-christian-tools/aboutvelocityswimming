@@ -397,7 +397,112 @@ async function setup({ failure = false, expiry = false } = {}) {
   });
   return { page, calls };
 }
+async function checkSharedSelections() {
+  const { page } = await setup();
+  await page.route("**/rest/v1/standards?*", (route) =>
+    route.fulfill({
+      json: [
+        {
+          id: "sharing-standard",
+          data: {
+            ...standard,
+            seasonYears: "2026",
+            effectiveDate: "2026-01-01",
+            expirationDate: "2026-12-31",
+          },
+        },
+      ],
+    }),
+  );
+  await page.goto(base + "/tools/times?source=shared#results");
+  await page.getByRole("button", { name: "Meet Results", exact: true }).click();
+  await page
+    .getByLabel("Meet search course", { exact: true })
+    .selectOption("SCY");
+  await page
+    .getByLabel("Meet search year", { exact: true })
+    .selectOption(today.slice(0, 4));
+  await page.getByPlaceholder("Search meet name…").fill("Fixture meet");
+  const meetUrl = page.url();
+  assert.equal(new URL(meetUrl).searchParams.get("meetCourse"), "SCY");
+  assert.equal(new URL(meetUrl).searchParams.get("source"), "shared");
+  assert.equal(new URL(meetUrl).hash, "#results");
+  await page.reload();
+  assert.equal(
+    await page
+      .getByRole("button", { name: "Meet Results", exact: true })
+      .getAttribute("aria-pressed"),
+    "true",
+  );
+  assert.equal(
+    await page.getByLabel("Meet search course", { exact: true }).inputValue(),
+    "SCY",
+  );
+  assert.equal(
+    await page.getByPlaceholder("Search meet name…").inputValue(),
+    "Fixture meet",
+  );
+
+  await page.getByRole("button", { name: "Athletes", exact: true }).click();
+  await page.getByLabel("Athlete course", { exact: true }).selectOption("LCM");
+  await page.getByLabel("Athlete period", { exact: true }).selectOption("all");
+  await page
+    .getByLabel("Search team athletes", { exact: true })
+    .fill("Swimmer & Test");
+  await page.reload();
+  assert.equal(
+    await page.getByLabel("Athlete course", { exact: true }).inputValue(),
+    "LCM",
+  );
+  assert.equal(
+    await page.getByLabel("Athlete period", { exact: true }).inputValue(),
+    "all",
+  );
+  assert.equal(
+    await page.getByLabel("Search team athletes", { exact: true }).inputValue(),
+    "Swimmer & Test",
+  );
+
+  await page
+    .getByRole("button", { name: "Time Standards", exact: true })
+    .click();
+  await page
+    .getByLabel("Standard", { exact: true })
+    .selectOption("sharing-standard");
+  await page.getByLabel("Tier", { exact: true }).selectOption("A");
+  await page.reload();
+  assert.equal(
+    await page.getByLabel("Standard", { exact: true }).inputValue(),
+    "sharing-standard",
+  );
+  assert.equal(
+    await page.getByLabel("Tier", { exact: true }).inputValue(),
+    "A",
+  );
+
+  // A fresh document restores URL state without relying on mounted components.
+  await page.goto(meetUrl);
+  assert.equal(
+    await page.getByLabel("Meet search year", { exact: true }).inputValue(),
+    today.slice(0, 4),
+  );
+  await page.goBack();
+  assert.equal(
+    await page
+      .getByRole("button", { name: "Time Standards", exact: true })
+      .getAttribute("aria-pressed"),
+    "true",
+  );
+  await page.goForward();
+  assert.equal(
+    await page.getByPlaceholder("Search meet name…").inputValue(),
+    "Fixture meet",
+  );
+  await page.close();
+}
+
 try {
+  await checkSharedSelections();
   const { page, calls } = await setup();
   await page.goto(base + "/tools/times");
   await page

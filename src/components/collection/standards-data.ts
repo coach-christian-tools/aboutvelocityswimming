@@ -62,7 +62,8 @@ export function defaultStandard(sets: StandardSet[], day: string) {
   return [...sets].sort((a, b) => {
     const rank = (s: StandardSet) =>
       standardStatus(s, day) === "Current"
-        ? s.category === "motivational"
+        ? s.category === "motivational" &&
+          (!s.standardType || s.standardType === "age-group")
           ? 0
           : 1
         : 2;

@@ -1,0 +1,104 @@
+{
+  "id": "usas_open_water_junior_nationals_pool_2027",
+  "name": "2027 Open Water Junior Nationals \u2014 Pool Qualifying Times",
+  "category": "championship",
+  "governingBody": "USA_Swimming",
+  "seasonYears": "2027",
+  "effectiveDate": "2026-01-01",
+  "expirationDate": "2027-04-04",
+  "sourceUrl": "https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2027/2027_events_openwater_timestandards.pdf",
+  "cuts": {
+    "LCM": {
+      "M": {
+        "16&U (AQUA age)": {
+          "800_FR_LCM": {
+            "cutsByTier": [
+              {
+                "tierName": "3K knockout / 5K",
+                "timeMs": 546090,
+                "timeDisplay": "9:06.09"
+              }
+            ]
+          },
+          "1500_FR_LCM": {
+            "cutsByTier": [
+              {
+                "tierName": "3K knockout / 5K",
+                "timeMs": 1047190,
+                "timeDisplay": "17:27.19"
+              }
+            ]
+          }
+        }
+      },
+      "F": {
+        "16&U (AQUA age)": {
+          "800_FR_LCM": {
+            "cutsByTier": [
+              {
+                "tierName": "3K knockout / 5K",
+                "timeMs": 576290,
+                "timeDisplay": "9:36.29"
+              }
+            ]
+          },
+          "1500_FR_LCM": {
+            "cutsByTier": [
+              {
+                "tierName": "3K knockout / 5K",
+                "timeMs": 1103190,
+                "timeDisplay": "18:23.19"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "SCY": {
+      "M": {
+        "16&U (AQUA age)": {
+          "1000_FR_SCY": {
+            "cutsByTier": [
+              {
+                "tierName": "3K knockout / 5K",
+                "timeMs": 600690,
+                "timeDisplay": "10:00.69"
+              }
+            ]
+          },
+          "1650_FR_SCY": {
+            "cutsByTier": [
+              {
+                "tierName": "3K knockout / 5K",
+                "timeMs": 1014190,
+                "timeDisplay": "16:54.19"
+              }
+            ]
+          }
+        }
+      },
+      "F": {
+        "16&U (AQUA age)": {
+          "1000_FR_SCY": {
+            "cutsByTier": [
+              {
+                "tierName": "3K knockout / 5K",
+                "timeMs": 645490,
+                "timeDisplay": "10:45.49"
+              }
+            ]
+          },
+          "1650_FR_SCY": {
+            "cutsByTier": [
+              {
+                "tierName": "3K knockout / 5K",
+                "timeMs": 1076290,
+                "timeDisplay": "17:56.29"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "sourceSha256": "d2c42dfa73f6ce9f003b39135b99d77b0d1e6dda3c07731bb9117efbceb98a0c",
+  "capturedAt": "2026-10-13",
+  "sourceUrl": "https://www.si-swimming.com/wzone/UserFiles/Image/QuickUpload/2025-2028-western-zone-sr-championships-time-standards_084274.pdf",
+  "method": "Source-specific row extraction with course/gender headers checked against PDF rendering; no time conversions.",
+  "notes": [
+    "Qualification period: October 1, 2024 through meet entry deadline. No de-qualification standards. Source decimal comma 34,29 normalized to 34.29."
+  ],
+  "datePolicy": "Library availability starts at the published qualifying start where supplied, otherwise the verification date; ends on final meet day (not the entry deadline). Multi-year editions use the stated edition period. Actual entry rules and qualifying windows remain in the source.",
+  "cutCount": 180,
+  "coverage": {
+    "cuts": 180,
+    "courses": [
+      "SCY",
+      "SCM",
+      "LCM"
+    ],
+    "pages": [
+      1
+    ]
+  },
+  "rowEvidenceFile": "research/expanded-standards-2026-10-13/prepared/western_senior_zones_2025_2028.evidence.json",
+  "rowEvidenceSha256": "705cb4563b58bc0de249746277a2fa5b42cc14fadb7e2e080d2c633523d55887",
+  "sampleRows": [
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "50_FR_SCY",
+      "tier": "Qualifying",
+      "sourceTime": "26.09",
+      "timeMs": 26090
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "400_FR_SCM",
+      "tier": "Qualifying",
+      "sourceTime": "4:24.79",
+      "timeMs": 264790
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "100_BK_LCM",
+      "tier": "Qualifying",
+      "sourceTime": "1:11.39",
+      "timeMs": 71390
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "200_BR_SCY",
+      "tier": "Qualifying",
+      "sourceTime": "2:32.79",
+      "timeMs": 152790
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "200_FL_SCM",
+      "tier": "Qualifying",
+      "sourceTime": "2:16.39",
+      "timeMs": 136390
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "100_FR_LCM",
+      "tier": "Bonus",
+      "sourceTime": "1:05.39",
+      "timeMs": 65390
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "200_BK_SCY",
+      "tier": "Bonus",
+      "sourceTime": "2:15.29",
+      "timeMs": 135290
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "200_BR_SCM",
+      "tier": "Bonus",
+      "sourceTime": "2:33.69",
+      "timeMs": 153690
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "200_IM_LCM",
+      "tier": "Bonus",
+      "sourceTime": "2:38.99",
+      "timeMs": 158990
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "200_IM_SCY",
+      "tier": "Bonus",
+      "sourceTime": "2:05.99",
+      "timeMs": 125990
+    }
+  ]
+}

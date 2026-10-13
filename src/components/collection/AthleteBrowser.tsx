@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTimesSelection } from "./use-times-selection";
 import {
   type AthleteRankingOptions,
   type RankedAthlete,
@@ -118,13 +119,15 @@ export default function AthleteBrowser({
   onAthlete: (id: string) => void;
   enabled?: boolean;
 }) {
-  const [options, setOptions] = useState<Omit<AthleteRankingOptions, "today">>({
+  const [options, setOptions] = useTimesSelection<
+    Omit<AthleteRankingOptions, "today">
+  >("athleteOptions", {
     team: "",
     course: "SCY",
     period: "recent",
   });
-  const [ages, setAges] = useState<string[]>([]);
-  const [search, setSearch] = useState("");
+  const [ages, setAges] = useTimesSelection<string[]>("athleteAges", []);
+  const [search, setSearch] = useTimesSelection("athleteSearch", "");
   const searchTerm = useDebouncedSearch(search).trim().toLowerCase();
   const query = useTimes(
     options.team

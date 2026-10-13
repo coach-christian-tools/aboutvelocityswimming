@@ -1,0 +1,130 @@
+{
+  "sourceSha256": "5196ed592a6081a4c17f21e9a7d3f9148eed09784d7ab2dd4abb6628f7e64091",
+  "capturedAt": "2026-10-13",
+  "sourceUrl": "https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2026/2026_tyrfutureschampionships_timestandards-2.pdf",
+  "method": "Source-specific row extraction with course/gender headers checked against PDF rendering; no time conversions.",
+  "notes": [
+    "* Qualifying from June 1, 2025 through Entry Deadline",
+    "* Swimmers may qualify for 50 Bk/Br/Fly using the 50 standard or the corresponding",
+    "* Qualifying from June 1, 2025 through Entry Deadline",
+    "* Swimmers may qualify for 50 Bk/Br/Fly using the 50 standard or the corresponding"
+  ],
+  "datePolicy": "Library availability starts at the published qualifying start where supplied, otherwise the verification date; ends on final meet day (not the entry deadline). Multi-year editions use the stated edition period. Actual entry rules and qualifying windows remain in the source.",
+  "calendarSource": "https://www.usaswimming.org/events",
+  "cutCount": 142,
+  "coverage": {
+    "cuts": 142,
+    "courses": [
+      "SCY",
+      "LCM"
+    ],
+    "pages": [
+      1,
+      2
+    ]
+  },
+  "rowEvidenceFile": "research/expanded-standards-2026-10-13/prepared/usas_2026_tyr_futures_championships_time_standards.evidence.json",
+  "rowEvidenceSha256": "af7267067d7335ef695ad77843a85d25f651f0a750a3d16c4ad3b38f594b0cc5",
+  "sampleRows": [
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "F",
+      "ageGroup": "18&U",
+      "eventCode": "50_FR_SCY",
+      "tier": "Qualifying",
+      "sourceTime": "23.89",
+      "timeMs": 23890
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "F",
+      "ageGroup": "18&U",
+      "eventCode": "800_FR_LCM",
+      "tier": "Qualifying",
+      "sourceTime": "9:13.79",
+      "timeMs": 553790
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "M",
+      "ageGroup": "18&U",
+      "eventCode": "200_BK_LCM",
+      "tier": "Qualifying",
+      "sourceTime": "2:11.89",
+      "timeMs": 131890
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "M",
+      "ageGroup": "18&U",
+      "eventCode": "50_FL_SCY",
+      "tier": "Qualifying",
+      "sourceTime": "22.89",
+      "timeMs": 22890
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "F",
+      "ageGroup": "18&U",
+      "eventCode": "400_FR-R_LCM",
+      "tier": "Qualifying",
+      "sourceTime": "4:04.29",
+      "timeMs": 244290
+    },
+    {
+      "page": 2,
+      "course": "SCY",
+      "gender": "M",
+      "ageGroup": "19&O",
+      "eventCode": "200_FR_SCY",
+      "tier": "Qualifying",
+      "sourceTime": "1:37.59",
+      "timeMs": 97590
+    },
+    {
+      "page": 2,
+      "course": "SCY",
+      "gender": "F",
+      "ageGroup": "19&O",
+      "eventCode": "100_BK_SCY",
+      "tier": "Qualifying",
+      "sourceTime": "54.39",
+      "timeMs": 54390
+    },
+    {
+      "page": 2,
+      "course": "LCM",
+      "gender": "F",
+      "ageGroup": "19&O",
+      "eventCode": "200_BR_LCM",
+      "tier": "Qualifying",
+      "sourceTime": "2:38.59",
+      "timeMs": 158590
+    },
+    {
+      "page": 2,
+      "course": "LCM",
+      "gender": "M",
+      "ageGroup": "19&O",
+      "eventCode": "200_IM_LCM",
+      "tier": "Qualifying",
+      "sourceTime": "2:07.99",
+      "timeMs": 127990
+    },
+    {
+      "page": 2,
+      "course": "SCY",
+      "gender": "M",
+      "ageGroup": "19&O",
+      "eventCode": "400_IM_SCY",
+      "tier": "Qualifying",
+      "sourceTime": "3:52.69",
+      "timeMs": 232690
+    }
+  ]
+}

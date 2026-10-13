@@ -1,0 +1,137 @@
+{
+  "sourceSha256": "ee406fcf50ed8dcd47a612cdbc6c673fa6110c4ec67bc3b9a9424481de150dd0",
+  "capturedAt": "2026-10-13",
+  "sourceUrl": "https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2025/2028-motivational-standards-single-age.pdf",
+  "method": "Source-specific row extraction with course/gender headers checked against PDF rendering; no time conversions.",
+  "notes": [],
+  "datePolicy": "Library availability starts at the published qualifying start where supplied, otherwise the verification date; ends on final meet day (not the entry deadline). Multi-year editions use the stated edition period. Actual entry rules and qualifying windows remain in the source.",
+  "cutCount": 5364,
+  "coverage": {
+    "cuts": 5364,
+    "courses": [
+      "SCY",
+      "SCM",
+      "LCM"
+    ],
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ]
+  },
+  "rowEvidenceFile": "research/expanded-standards-2026-10-13/prepared/usas_motivational_single_age_2024_2028.evidence.json",
+  "rowEvidenceSha256": "e13b6312d130b8e82614bb55b6fe99ffd4a386f160741653ea23e2c977c8bda1",
+  "sampleRows": [
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "F",
+      "ageGroup": "10",
+      "eventCode": "50_FR_SCY",
+      "tier": "B",
+      "sourceTime": "39.89",
+      "timeMs": 39890
+    },
+    {
+      "page": 2,
+      "course": "SCY",
+      "gender": "M",
+      "ageGroup": "13",
+      "eventCode": "100_BK_SCY",
+      "tier": "BB",
+      "sourceTime": "1:09.09",
+      "timeMs": 69090
+    },
+    {
+      "page": 4,
+      "course": "SCY",
+      "gender": "M",
+      "ageGroup": "16",
+      "eventCode": "50_FL_SCY",
+      "tier": "AA",
+      "sourceTime": "26.09",
+      "timeMs": 26090
+    },
+    {
+      "page": 6,
+      "course": "SCM",
+      "gender": "M",
+      "ageGroup": "11",
+      "eventCode": "1500_FR_SCM",
+      "tier": "AAAA",
+      "sourceTime": "19:46.99",
+      "timeMs": 1186990
+    },
+    {
+      "page": 7,
+      "course": "SCM",
+      "gender": "F",
+      "ageGroup": "14",
+      "eventCode": "200_BK_SCM",
+      "tier": "AAA",
+      "sourceTime": "2:25.79",
+      "timeMs": 145790
+    },
+    {
+      "page": 9,
+      "course": "SCM",
+      "gender": "F",
+      "ageGroup": "17",
+      "eventCode": "100_FL_SCM",
+      "tier": "A",
+      "sourceTime": "1:10.19",
+      "timeMs": 70190
+    },
+    {
+      "page": 11,
+      "course": "LCM",
+      "gender": "F",
+      "ageGroup": "12",
+      "eventCode": "100_BK_LCM",
+      "tier": "B",
+      "sourceTime": "1:40.59",
+      "timeMs": 100590
+    },
+    {
+      "page": 12,
+      "course": "LCM",
+      "gender": "M",
+      "ageGroup": "15",
+      "eventCode": "200_BR_LCM",
+      "tier": "BB",
+      "sourceTime": "3:05.69",
+      "timeMs": 185690
+    },
+    {
+      "page": 14,
+      "course": "LCM",
+      "gender": "M",
+      "ageGroup": "18",
+      "eventCode": "400_IM_LCM",
+      "tier": "AA",
+      "sourceTime": "5:04.79",
+      "timeMs": 304790
+    },
+    {
+      "page": 14,
+      "course": "LCM",
+      "gender": "M",
+      "ageGroup": "18",
+      "eventCode": "400_IM_LCM",
+      "tier": "B",
+      "sourceTime": "6:10.99",
+      "timeMs": 370990
+    }
+  ]
+}

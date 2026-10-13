@@ -265,6 +265,7 @@ export interface StandardTierCut {
 }
 
 export interface StandardSet {
+  standardType?: "age-group" | "single-age" | "para";
   sourceUrl?: string; // Official public source; collection evidence remains private.
   category?: 'motivational' | 'championship'; // Required by fresh reviewed imports.
   id: string;                         // e.g. "usas_motivational_2024_2028", "pnw_age_group_champs_2026"

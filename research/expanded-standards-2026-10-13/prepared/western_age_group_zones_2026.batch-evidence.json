@@ -1,0 +1,128 @@
+{
+  "sourceSha256": "2a3de4c7952e8f359fe984220f6894c548e1e3cf181af39c6a798b3019d9d650",
+  "capturedAt": "2026-10-13",
+  "sourceUrl": "https://www.si-swimming.com/wzone/UserFiles/Image/QuickUpload/2026-wzag-championships---standards_052050.pdf",
+  "method": "Source-specific row extraction with course/gender headers checked against PDF rendering; no time conversions.",
+  "notes": [
+    "2026 edition only. Qualifying August 6, 2025 through July 29, 2026 entry deadline; meet August 5–8, 2026. No de-qualification. Source says AAA standards, but printed table is retained exactly, including any differences from the newer motivational revision."
+  ],
+  "datePolicy": "Library availability starts at the published qualifying start where supplied, otherwise the verification date; ends on final meet day (not the entry deadline). Multi-year editions use the stated edition period. Actual entry rules and qualifying windows remain in the source.",
+  "cutCount": 252,
+  "coverage": {
+    "cuts": 252,
+    "courses": [
+      "LCM",
+      "SCM",
+      "SCY"
+    ],
+    "pages": [
+      1,
+      2,
+      3
+    ]
+  },
+  "rowEvidenceFile": "research/expanded-standards-2026-10-13/prepared/western_age_group_zones_2026.evidence.json",
+  "rowEvidenceSha256": "4786ebeafe2181dcd3e7bf3607624936c291f0abb90ba5199058c47b728db8f1",
+  "sampleRows": [
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "F",
+      "ageGroup": "10&U",
+      "eventCode": "50_FR_LCM",
+      "tier": "Qualifying",
+      "sourceTime": "33.69",
+      "timeMs": 33690
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "F",
+      "ageGroup": "10&U",
+      "eventCode": "50_BR_SCM",
+      "tier": "Qualifying",
+      "sourceTime": "42.99",
+      "timeMs": 42990
+    },
+    {
+      "page": 2,
+      "course": "SCY",
+      "gender": "F",
+      "ageGroup": "11-12",
+      "eventCode": "50_FR_SCY",
+      "tier": "Qualifying",
+      "sourceTime": "26.99",
+      "timeMs": 26990
+    },
+    {
+      "page": 2,
+      "course": "LCM",
+      "gender": "M",
+      "ageGroup": "11-12",
+      "eventCode": "100_BK_LCM",
+      "tier": "Qualifying",
+      "sourceTime": "1:14.29",
+      "timeMs": 74290
+    },
+    {
+      "page": 2,
+      "course": "SCM",
+      "gender": "M",
+      "ageGroup": "11-12",
+      "eventCode": "50_FL_SCM",
+      "tier": "Qualifying",
+      "sourceTime": "31.19",
+      "timeMs": 31190
+    },
+    {
+      "page": 3,
+      "course": "SCY",
+      "gender": "M",
+      "ageGroup": "13-14",
+      "eventCode": "50_FR_SCY",
+      "tier": "Qualifying",
+      "sourceTime": "23.49",
+      "timeMs": 23490
+    },
+    {
+      "page": 3,
+      "course": "LCM",
+      "gender": "F",
+      "ageGroup": "13-14",
+      "eventCode": "50_BK_LCM",
+      "tier": "Qualifying",
+      "sourceTime": "33.49",
+      "timeMs": 33490
+    },
+    {
+      "page": 3,
+      "course": "SCM",
+      "gender": "F",
+      "ageGroup": "13-14",
+      "eventCode": "200_BR_SCM",
+      "tier": "Qualifying",
+      "sourceTime": "2:45.89",
+      "timeMs": 165890
+    },
+    {
+      "page": 3,
+      "course": "SCY",
+      "gender": "F",
+      "ageGroup": "13-14",
+      "eventCode": "400_IM_SCY",
+      "tier": "Qualifying",
+      "sourceTime": "4:47.39",
+      "timeMs": 287390
+    },
+    {
+      "page": 3,
+      "course": "SCY",
+      "gender": "M",
+      "ageGroup": "13-14",
+      "eventCode": "400_IM_SCY",
+      "tier": "Qualifying",
+      "sourceTime": "4:25.39",
+      "timeMs": 265390
+    }
+  ]
+}

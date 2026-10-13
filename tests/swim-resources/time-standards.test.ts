@@ -10,6 +10,7 @@ import { validateStandard } from "@/components/collection/validate-standard";
 import { eventColumn } from "@/components/collection/event-layout";
 import { formatSwimTime } from "@/features/swim-resources/lib/domain/swim-time";
 import type { StandardSet } from "@/features/swim-resources/types/schema";
+import { currentStandard } from "@/features/swim-resources/lib/domain/standards";
 const set: StandardSet = {
   id: "test",
   name: "Test",
@@ -87,6 +88,26 @@ describe("standards reference", () => {
     expect(defaultStandard([old, set], "2026-10-13")?.id).toBe("test");
     expect(standardStatus(old, "2026-10-13")).toBe("Expired");
     expect(standardStatus(set, "2020-01-01")).toBe("Upcoming");
+  });
+  it("keeps specialized motivational editions out of the default athlete benchmark", () => {
+    const para: StandardSet = {
+      ...set,
+      id: "para",
+      standardType: "para",
+      effectiveDate: "2024-10-29",
+    };
+    const single: StandardSet = {
+      ...para,
+      id: "single",
+      standardType: "single-age",
+    };
+    expect(defaultStandard([para, single, set], "2026-10-13")?.id).toBe(set.id);
+    expect(
+      currentStandard([para, single, set], "motivational", "2026-10-13")?.id,
+    ).toBe(set.id);
+    expect(
+      currentStandard([para, single], "motivational", "2026-10-13"),
+    ).toBeNull();
   });
   it("reports added, changed and removed cuts", () => {
     const next = structuredClone(set);

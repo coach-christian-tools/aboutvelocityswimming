@@ -1,0 +1,93 @@
+{
+  "sourceSha256": "24fb3bf3e6400e757f1b008a919fc817f0cda7a2f4944b50e108dc8f6c064dff",
+  "capturedAt": "2026-10-13",
+  "sourceUrl": "https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2027/2027_events_openwater_timestandards.pdf",
+  "method": "Source-specific row extraction with course/gender headers checked against PDF rendering; no time conversions.",
+  "rows": [
+    {
+      "page": 2,
+      "course": "LCM",
+      "gender": "M",
+      "ageGroup": "16&U (AQUA age)",
+      "eventCode": "800_FR_LCM",
+      "tier": "3K knockout / 5K",
+      "sourceTime": "9:06.09",
+      "timeMs": 546090
+    },
+    {
+      "page": 2,
+      "course": "LCM",
+      "gender": "M",
+      "ageGroup": "16&U (AQUA age)",
+      "eventCode": "1500_FR_LCM",
+      "tier": "3K knockout / 5K",
+      "sourceTime": "17:27.19",
+      "timeMs": 1047190
+    },
+    {
+      "page": 2,
+      "course": "SCY",
+      "gender": "M",
+      "ageGroup": "16&U (AQUA age)",
+      "eventCode": "1000_FR_SCY",
+      "tier": "3K knockout / 5K",
+      "sourceTime": "10:00.69",
+      "timeMs": 600690
+    },
+    {
+      "page": 2,
+      "course": "SCY",
+      "gender": "M",
+      "ageGroup": "16&U (AQUA age)",
+      "eventCode": "1650_FR_SCY",
+      "tier": "3K knockout / 5K",
+      "sourceTime": "16:54.19",
+      "timeMs": 1014190
+    },
+    {
+      "page": 2,
+      "course": "LCM",
+      "gender": "F",
+      "ageGroup": "16&U (AQUA age)",
+      "eventCode": "800_FR_LCM",
+      "tier": "3K knockout / 5K",
+      "sourceTime": "9:36.29",
+      "timeMs": 576290
+    },
+    {
+      "page": 2,
+      "course": "LCM",
+      "gender": "F",
+      "ageGroup": "16&U (AQUA age)",
+      "eventCode": "1500_FR_LCM",
+      "tier": "3K knockout / 5K",
+      "sourceTime": "18:23.19",
+      "timeMs": 1103190
+    },
+    {
+      "page": 2,
+      "course": "SCY",
+      "gender": "F",
+      "ageGroup": "16&U (AQUA age)",
+      "eventCode": "1000_FR_SCY",
+      "tier": "3K knockout / 5K",
+      "sourceTime": "10:45.49",
+      "timeMs": 645490
+    },
+    {
+      "page": 2,
+      "course": "SCY",
+      "gender": "F",
+      "ageGroup": "16&U (AQUA age)",
+      "eventCode": "1650_FR_SCY",
+      "tier": "3K knockout / 5K",
+      "sourceTime": "17:56.29",
+      "timeMs": 1076290
+    }
+  ],
+  "notes": [
+    "Pool qualifying performances for the open-water event named in the tier. AQUA age means age on December 31, 2027. The 19&U 10K is not a separate race."
+  ],
+  "datePolicy": "Library availability starts at the published qualifying start where supplied, otherwise the verification date; ends on final meet day (not the entry deadline). Multi-year editions use the stated edition period. Actual entry rules and qualifying windows remain in the source.",
+  "cutCount": 8
+}

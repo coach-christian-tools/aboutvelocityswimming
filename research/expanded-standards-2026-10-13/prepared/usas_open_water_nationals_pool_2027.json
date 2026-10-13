@@ -1,0 +1,224 @@
+{
+  "id": "usas_open_water_nationals_pool_2027",
+  "name": "2027 Open Water Nationals \u2014 Pool Qualifying Times",
+  "category": "championship",
+  "governingBody": "USA_Swimming",
+  "seasonYears": "2027",
+  "effectiveDate": "2026-01-01",
+  "expirationDate": "2027-04-04",
+  "sourceUrl": "https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2027/2027_events_openwater_timestandards.pdf",
+  "cuts": {
+    "LCM": {
+      "M": {
+        "Open": {
+          "800_FR_LCM": {
+            "cutsByTier": [
+              {
+                "tierName": "10K",
+                "timeMs": 501490,
+                "timeDisplay": "8:21.49"
+              },
+              {
+                "tierName": "3K knockout / 5K",
+                "timeMs": 511590,
+                "timeDisplay": "8:31.59"
+              }
+            ]
+          },
+          "1500_FR_LCM": {
+            "cutsByTier": [
+              {
+                "tierName": "10K",
+                "timeMs": 959990,
+                "timeDisplay": "15:59.99"
+              },
+              {
+                "tierName": "3K knockout / 5K",
+                "timeMs": 979290,
+                "timeDisplay": "16:19.29"
+              }
+            ]
+          }
+        },
+        "19&U (AQUA age)": {
+          "800_FR_LCM": {
+            "cutsByTier": [
+              {
+                "tierName": "10K",
+                "timeMs": 511590,
+                "timeDisplay": "8:31.59"
+              }
+            ]
+          },
+          "1500_FR_LCM": {
+            "cutsByTier": [
+              {
+                "tierName": "10K",
+                "timeMs": 979290,
+                "timeDisplay": "16:19.29"
+              }
+            ]
+          }
+        }
+      },
+      "F": {
+        "Open": {
+          "800_FR_LCM": {
+            "cutsByTier": [
+              {
+                "tierName": "10K",
+                "timeMs": 539990,
+                "timeDisplay": "8:59.99"
+              },
+              {
+                "tierName": "3K knockout / 5K",
+                "timeMs": 554490,
+                "timeDisplay": "9:14.49"
+              }
+            ]
+          },
+          "1500_FR_LCM": {
+            "cutsByTier": [
+              {
+                "tierName": "10K",
+                "timeMs": 1036990,
+                "timeDisplay": "17:16.99"
+              },
+              {
+                "tierName": "3K knockout / 5K",
+                "timeMs": 1061490,
+                "timeDisplay": "17:41.49"
+              }
+            ]
+          }
+        },
+        "19&U (AQUA age)": {
+          "800_FR_LCM": {
+            "cutsByTier": [
+              {
+                "tierName": "10K",
+                "timeMs": 554490,
+                "timeDisplay": "9:14.49"
+              }
+            ]
+          },
+          "1500_FR_LCM": {
+            "cutsByTier": [
+              {
+                "tierName": "10K",
+                "timeMs": 1061490,
+                "timeDisplay": "17:41.49"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "SCY": {
+      "M": {
+        "Open": {
+          "1000_FR_SCY": {
+            "cutsByTier": [
+              {
+                "tierName": "10K",
+                "timeMs": 555190,
+                "timeDisplay": "9:15.19"
+              },
+              {
+                "tierName": "3K knockout / 5K",
+                "timeMs": 566390,
+                "timeDisplay": "9:26.39"
+              }
+            ]
+          },
+          "1650_FR_SCY": {
+            "cutsByTier": [
+              {
+                "tierName": "10K",
+                "timeMs": 934890,
+                "timeDisplay": "15:34.89"
+              },
+              {
+                "tierName": "3K knockout / 5K",
+                "timeMs": 953690,
+                "timeDisplay": "15:53.69"
+              }
+            ]
+          }
+        },
+        "19&U (AQUA age)": {
+          "1000_FR_SCY": {
+            "cutsByTier": [
+              {
+                "tierName": "10K",
+                "timeMs": 566390,
+                "timeDisplay": "9:26.39"
+              }
+            ]
+          },
+          "1650_FR_SCY": {
+            "cutsByTier": [
+              {
+                "tierName": "10K",
+                "timeMs": 953690,
+                "timeDisplay": "15:53.69"
+              }
+            ]
+          }
+        }
+      },
+      "F": {
+        "Open": {
+          "1000_FR_SCY": {
+            "cutsByTier": [
+              {
+                "tierName": "10K",
+                "timeMs": 604790,
+                "timeDisplay": "10:04.79"
+              },
+              {
+                "tierName": "3K knockout / 5K",
+                "timeMs": 615790,
+                "timeDisplay": "10:15.79"
+              }
+            ]
+          },
+          "1650_FR_SCY": {
+            "cutsByTier": [
+              {
+                "tierName": "10K",
+                "timeMs": 1005890,
+                "timeDisplay": "16:45.89"
+              },
+              {
+                "tierName": "3K knockout / 5K",
+                "timeMs": 1026490,
+                "timeDisplay": "17:06.49"
+              }
+            ]
+          }
+        },
+        "19&U (AQUA age)": {
+          "1000_FR_SCY": {
+            "cutsByTier": [
+              {
+                "tierName": "10K",
+                "timeMs": 615790,
+                "timeDisplay": "10:15.79"
+              }
+            ]
+          },
+          "1650_FR_SCY": {
+            "cutsByTier": [
+              {
+                "tierName": "10K",
+                "timeMs": 1026490,
+                "timeDisplay": "17:06.49"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

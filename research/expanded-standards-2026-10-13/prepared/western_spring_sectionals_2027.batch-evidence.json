@@ -1,0 +1,126 @@
+{
+  "sourceSha256": "2951ee418dbb534477df8805e51edbe2033d5377a542a3563cf079f4e2984496",
+  "capturedAt": "2026-10-13",
+  "sourceUrl": "https://www.si-swimming.com/wzone/UserFiles/Image/QuickUpload/2027-western-region-sectional-time-standards_002592.pdf",
+  "method": "Source-specific row extraction with course/gender headers checked against PDF rendering; no time conversions.",
+  "notes": [
+    "March 11–14 Four Corners; March 18–21 Pacific Northwest. 800/1000 and 1500/1650 times may be used reciprocally as specified in the source. Spring table only; Summer is a separate edition and is not silently substituted."
+  ],
+  "datePolicy": "Library availability starts at the published qualifying start where supplied, otherwise the verification date; ends on final meet day (not the entry deadline). Multi-year editions use the stated edition period. Actual entry rules and qualifying windows remain in the source.",
+  "cutCount": 114,
+  "coverage": {
+    "cuts": 114,
+    "courses": [
+      "SCY",
+      "SCM",
+      "LCM"
+    ],
+    "pages": [
+      1
+    ]
+  },
+  "rowEvidenceFile": "research/expanded-standards-2026-10-13/prepared/western_spring_sectionals_2027.evidence.json",
+  "rowEvidenceSha256": "832c26a86ec1fb21489327a5ec5cbaaf5e37e5ae25ea7773da30e8f34ce5d424",
+  "sampleRows": [
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "50_FR_SCY",
+      "tier": "Qualifying",
+      "sourceTime": "24.99",
+      "timeMs": 24990
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "200_FR_LCM",
+      "tier": "Qualifying",
+      "sourceTime": "2:12.75",
+      "timeMs": 132750
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "800_FR_SCM",
+      "tier": "Qualifying",
+      "sourceTime": "8:53.74",
+      "timeMs": 533740
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "200_BK_SCY",
+      "tier": "Qualifying",
+      "sourceTime": "2:07.80",
+      "timeMs": 127800
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "200_BR_LCM",
+      "tier": "Qualifying",
+      "sourceTime": "2:54.86",
+      "timeMs": 174860
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "200_FL_SCM",
+      "tier": "Qualifying",
+      "sourceTime": "2:14.37",
+      "timeMs": 134370
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "200_FR-R_SCY",
+      "tier": "Qualifying",
+      "sourceTime": "1:44.69",
+      "timeMs": 104690
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "800_FR-R_LCM",
+      "tier": "Qualifying",
+      "sourceTime": "9:21.69",
+      "timeMs": 561690
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "400_MED-R_SCM",
+      "tier": "Qualifying",
+      "sourceTime": "4:15.75",
+      "timeMs": 255750
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "400_MED-R_LCM",
+      "tier": "Qualifying",
+      "sourceTime": "4:23.39",
+      "timeMs": 263390
+    }
+  ]
+}

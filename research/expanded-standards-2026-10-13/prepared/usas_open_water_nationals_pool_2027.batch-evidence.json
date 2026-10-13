@@ -1,0 +1,115 @@
+{
+  "sourceSha256": "24fb3bf3e6400e757f1b008a919fc817f0cda7a2f4944b50e108dc8f6c064dff",
+  "capturedAt": "2026-10-13",
+  "sourceUrl": "https://www.usaswimming.org/docs/default-source/timesdocuments/time-standards/2027/2027_events_openwater_timestandards.pdf",
+  "method": "Source-specific row extraction with course/gender headers checked against PDF rendering; no time conversions.",
+  "notes": [
+    "Pool qualifying performances for the open-water event named in the tier. AQUA age means age on December 31, 2027. The 19&U 10K is not a separate race."
+  ],
+  "datePolicy": "Library availability starts at the published qualifying start where supplied, otherwise the verification date; ends on final meet day (not the entry deadline). Multi-year editions use the stated edition period. Actual entry rules and qualifying windows remain in the source.",
+  "cutCount": 24,
+  "coverage": {
+    "cuts": 24,
+    "courses": [
+      "LCM",
+      "SCY"
+    ],
+    "pages": [
+      1
+    ]
+  },
+  "rowEvidenceFile": "research/expanded-standards-2026-10-13/prepared/usas_open_water_nationals_pool_2027.evidence.json",
+  "rowEvidenceSha256": "2c9c74201d6376b504b8c16cacefacd367b449a64e439b7f9eb68e1d68f35ad5",
+  "sampleRows": [
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "800_FR_LCM",
+      "tier": "10K",
+      "sourceTime": "8:21.49",
+      "timeMs": 501490
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "1500_FR_LCM",
+      "tier": "10K",
+      "sourceTime": "15:59.99",
+      "timeMs": 959990
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "1000_FR_SCY",
+      "tier": "10K",
+      "sourceTime": "9:15.19",
+      "timeMs": 555190
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "1650_FR_SCY",
+      "tier": "10K",
+      "sourceTime": "15:34.89",
+      "timeMs": 934890
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "800_FR_LCM",
+      "tier": "10K",
+      "sourceTime": "8:59.99",
+      "timeMs": 539990
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "1500_FR_LCM",
+      "tier": "10K",
+      "sourceTime": "17:16.99",
+      "timeMs": 1036990
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "1000_FR_SCY",
+      "tier": "10K",
+      "sourceTime": "10:04.79",
+      "timeMs": 604790
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "1650_FR_SCY",
+      "tier": "10K",
+      "sourceTime": "16:45.89",
+      "timeMs": 1005890
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "1650_FR_SCY",
+      "tier": "3K knockout / 5K",
+      "sourceTime": "17:06.49",
+      "timeMs": 1026490
+    }
+  ]
+}

@@ -1,0 +1,1813 @@
+{
+  "sourceSha256": "d2c42dfa73f6ce9f003b39135b99d77b0d1e6dda3c07731bb9117efbceb98a0c",
+  "capturedAt": "2026-10-13",
+  "sourceUrl": "https://www.si-swimming.com/wzone/UserFiles/Image/QuickUpload/2025-2028-western-zone-sr-championships-time-standards_084274.pdf",
+  "method": "Source-specific row extraction with course/gender headers checked against PDF rendering; no time conversions.",
+  "rows": [
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "50_FR_SCY",
+      "tier": "Qualifying",
+      "sourceTime": "26.09",
+      "timeMs": 26090
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "50_FR_SCM",
+      "tier": "Qualifying",
+      "sourceTime": "28.89",
+      "timeMs": 28890
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "50_FR_LCM",
+      "tier": "Qualifying",
+      "sourceTime": "29.59",
+      "timeMs": 29590
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "50_FR_LCM",
+      "tier": "Qualifying",
+      "sourceTime": "26.99",
+      "timeMs": 26990
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "50_FR_SCM",
+      "tier": "Qualifying",
+      "sourceTime": "25.69",
+      "timeMs": 25690
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "50_FR_SCY",
+      "tier": "Qualifying",
+      "sourceTime": "23.19",
+      "timeMs": 23190
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "100_FR_SCY",
+      "tier": "Qualifying",
+      "sourceTime": "56.49",
+      "timeMs": 56490
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "100_FR_SCM",
+      "tier": "Qualifying",
+      "sourceTime": "1:02.39",
+      "timeMs": 62390
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "100_FR_LCM",
+      "tier": "Qualifying",
+      "sourceTime": "1:04.39",
+      "timeMs": 64390
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "100_FR_LCM",
+      "tier": "Qualifying",
+      "sourceTime": "58.99",
+      "timeMs": 58990
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "100_FR_SCM",
+      "tier": "Qualifying",
+      "sourceTime": "56.29",
+      "timeMs": 56290
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "100_FR_SCY",
+      "tier": "Qualifying",
+      "sourceTime": "50.99",
+      "timeMs": 50990
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "200_FR_SCY",
+      "tier": "Qualifying",
+      "sourceTime": "2:02.39",
+      "timeMs": 122390
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "200_FR_SCM",
+      "tier": "Qualifying",
+      "sourceTime": "2:15.29",
+      "timeMs": 135290
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "200_FR_LCM",
+      "tier": "Qualifying",
+      "sourceTime": "2:18.99",
+      "timeMs": 138990
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "200_FR_LCM",
+      "tier": "Qualifying",
+      "sourceTime": "2:08.69",
+      "timeMs": 128690
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "200_FR_SCM",
+      "tier": "Qualifying",
+      "sourceTime": "2:03.49",
+      "timeMs": 123490
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "200_FR_SCY",
+      "tier": "Qualifying",
+      "sourceTime": "1:51.79",
+      "timeMs": 111790
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "500_FR_SCY",
+      "tier": "Qualifying",
+      "sourceTime": "5:29.39",
+      "timeMs": 329390
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "400_FR_SCM",
+      "tier": "Qualifying",
+      "sourceTime": "4:48.19",
+      "timeMs": 288190
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "400_FR_LCM",
+      "tier": "Qualifying",
+      "sourceTime": "4:51.79",
+      "timeMs": 291790
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "400_FR_LCM",
+      "tier": "Qualifying",
+      "sourceTime": "4:34.39",
+      "timeMs": 274390
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "400_FR_SCM",
+      "tier": "Qualifying",
+      "sourceTime": "4:24.79",
+      "timeMs": 264790
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "500_FR_SCY",
+      "tier": "Qualifying",
+      "sourceTime": "5:02.69",
+      "timeMs": 302690
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "1000_FR_SCY",
+      "tier": "Qualifying",
+      "sourceTime": "11:24.19",
+      "timeMs": 684190
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "800_FR_SCM",
+      "tier": "Qualifying",
+      "sourceTime": "9:58.69",
+      "timeMs": 598690
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "800_FR_LCM",
+      "tier": "Qualifying",
+      "sourceTime": "10:05.99",
+      "timeMs": 605990
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "800_FR_LCM",
+      "tier": "Qualifying",
+      "sourceTime": "9:29.99",
+      "timeMs": 569990
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "800_FR_SCM",
+      "tier": "Qualifying",
+      "sourceTime": "9:14.79",
+      "timeMs": 554790
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "1000_FR_SCY",
+      "tier": "Qualifying",
+      "sourceTime": "10:33.99",
+      "timeMs": 633990
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "1650_FR_SCY",
+      "tier": "Qualifying",
+      "sourceTime": "19:06.69",
+      "timeMs": 1146690
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "1500_FR_SCM",
+      "tier": "Qualifying",
+      "sourceTime": "18:59.79",
+      "timeMs": 1139790
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "1500_FR_LCM",
+      "tier": "Qualifying",
+      "sourceTime": "19:21.09",
+      "timeMs": 1161090
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "1500_FR_LCM",
+      "tier": "Qualifying",
+      "sourceTime": "18:11.09",
+      "timeMs": 1091090
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "1500_FR_SCM",
+      "tier": "Qualifying",
+      "sourceTime": "17:30.49",
+      "timeMs": 1050490
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "1650_FR_SCY",
+      "tier": "Qualifying",
+      "sourceTime": "17:36.89",
+      "timeMs": 1056890
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "50_BK_SCY",
+      "tier": "Qualifying",
+      "sourceTime": "28.99",
+      "timeMs": 28990
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "50_BK_SCM",
+      "tier": "Qualifying",
+      "sourceTime": "31.99",
+      "timeMs": 31990
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "50_BK_LCM",
+      "tier": "Qualifying",
+      "sourceTime": "33.89",
+      "timeMs": 33890
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "50_BK_LCM",
+      "tier": "Qualifying",
+      "sourceTime": "31.09",
+      "timeMs": 31090
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "50_BK_SCM",
+      "tier": "Qualifying",
+      "sourceTime": "28.79",
+      "timeMs": 28790
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "50_BK_SCY",
+      "tier": "Qualifying",
+      "sourceTime": "26.09",
+      "timeMs": 26090
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "100_BK_SCY",
+      "tier": "Qualifying",
+      "sourceTime": "1:01.39",
+      "timeMs": 61390
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "100_BK_SCM",
+      "tier": "Qualifying",
+      "sourceTime": "1:07.79",
+      "timeMs": 67790
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "100_BK_LCM",
+      "tier": "Qualifying",
+      "sourceTime": "1:11.39",
+      "timeMs": 71390
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "100_BK_LCM",
+      "tier": "Qualifying",
+      "sourceTime": "1:05.19",
+      "timeMs": 65190
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "100_BK_SCM",
+      "tier": "Qualifying",
+      "sourceTime": "1:01.29",
+      "timeMs": 61290
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "100_BK_SCY",
+      "tier": "Qualifying",
+      "sourceTime": "55.49",
+      "timeMs": 55490
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "200_BK_SCY",
+      "tier": "Qualifying",
+      "sourceTime": "2:13.29",
+      "timeMs": 133290
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "200_BK_SCM",
+      "tier": "Qualifying",
+      "sourceTime": "2:27.29",
+      "timeMs": 147290
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "200_BK_LCM",
+      "tier": "Qualifying",
+      "sourceTime": "2:33.39",
+      "timeMs": 153390
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "200_BK_LCM",
+      "tier": "Qualifying",
+      "sourceTime": "2:21.49",
+      "timeMs": 141490
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "200_BK_SCM",
+      "tier": "Qualifying",
+      "sourceTime": "2:13.99",
+      "timeMs": 133990
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "200_BK_SCY",
+      "tier": "Qualifying",
+      "sourceTime": "2:01.29",
+      "timeMs": 121290
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "50_BR_SCY",
+      "tier": "Qualifying",
+      "sourceTime": "33.79",
+      "timeMs": 33790
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "50_BR_SCM",
+      "tier": "Qualifying",
+      "sourceTime": "37.29",
+      "timeMs": 37290
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "50_BR_LCM",
+      "tier": "Qualifying",
+      "sourceTime": "37.89",
+      "timeMs": 37890
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "50_BR_LCM",
+      "tier": "Qualifying",
+      "sourceTime": "34.29",
+      "timeMs": 34290
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "50_BR_SCM",
+      "tier": "Qualifying",
+      "sourceTime": "33.29",
+      "timeMs": 33290
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "50_BR_SCY",
+      "tier": "Qualifying",
+      "sourceTime": "30.09",
+      "timeMs": 30090
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "100_BR_SCY",
+      "tier": "Qualifying",
+      "sourceTime": "1:10.59",
+      "timeMs": 70590
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "100_BR_SCM",
+      "tier": "Qualifying",
+      "sourceTime": "1:17.99",
+      "timeMs": 77990
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "100_BR_LCM",
+      "tier": "Qualifying",
+      "sourceTime": "1:20.99",
+      "timeMs": 80990
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "100_BR_LCM",
+      "tier": "Qualifying",
+      "sourceTime": "1:13.49",
+      "timeMs": 73490
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "100_BR_SCM",
+      "tier": "Qualifying",
+      "sourceTime": "1:09.79",
+      "timeMs": 69790
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "100_BR_SCY",
+      "tier": "Qualifying",
+      "sourceTime": "1:03.19",
+      "timeMs": 63190
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "200_BR_SCY",
+      "tier": "Qualifying",
+      "sourceTime": "2:32.79",
+      "timeMs": 152790
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "200_BR_SCM",
+      "tier": "Qualifying",
+      "sourceTime": "2:48.79",
+      "timeMs": 168790
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "200_BR_LCM",
+      "tier": "Qualifying",
+      "sourceTime": "2:54.49",
+      "timeMs": 174490
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "200_BR_LCM",
+      "tier": "Qualifying",
+      "sourceTime": "2:39.79",
+      "timeMs": 159790
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "200_BR_SCM",
+      "tier": "Qualifying",
+      "sourceTime": "2:31.69",
+      "timeMs": 151690
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "200_BR_SCY",
+      "tier": "Qualifying",
+      "sourceTime": "2:17.29",
+      "timeMs": 137290
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "50_FL_SCY",
+      "tier": "Qualifying",
+      "sourceTime": "28.59",
+      "timeMs": 28590
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "50_FL_SCM",
+      "tier": "Qualifying",
+      "sourceTime": "31.49",
+      "timeMs": 31490
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "50_FL_LCM",
+      "tier": "Qualifying",
+      "sourceTime": "32.09",
+      "timeMs": 32090
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "50_FL_LCM",
+      "tier": "Qualifying",
+      "sourceTime": "29.29",
+      "timeMs": 29290
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "50_FL_SCM",
+      "tier": "Qualifying",
+      "sourceTime": "28.59",
+      "timeMs": 28590
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "50_FL_SCY",
+      "tier": "Qualifying",
+      "sourceTime": "25.89",
+      "timeMs": 25890
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "100_FL_SCY",
+      "tier": "Qualifying",
+      "sourceTime": "1:01.09",
+      "timeMs": 61090
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "100_FL_SCM",
+      "tier": "Qualifying",
+      "sourceTime": "1:07.49",
+      "timeMs": 67490
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "100_FL_LCM",
+      "tier": "Qualifying",
+      "sourceTime": "1:09.29",
+      "timeMs": 69290
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "100_FL_LCM",
+      "tier": "Qualifying",
+      "sourceTime": "1:03.09",
+      "timeMs": 63090
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "100_FL_SCM",
+      "tier": "Qualifying",
+      "sourceTime": "1:00.99",
+      "timeMs": 60990
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "100_FL_SCY",
+      "tier": "Qualifying",
+      "sourceTime": "55.19",
+      "timeMs": 55190
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "200_FL_SCY",
+      "tier": "Qualifying",
+      "sourceTime": "2:16.19",
+      "timeMs": 136190
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "200_FL_SCM",
+      "tier": "Qualifying",
+      "sourceTime": "2:30.49",
+      "timeMs": 150490
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "200_FL_LCM",
+      "tier": "Qualifying",
+      "sourceTime": "2:34.29",
+      "timeMs": 154290
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "200_FL_LCM",
+      "tier": "Qualifying",
+      "sourceTime": "2:21.09",
+      "timeMs": 141090
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "200_FL_SCM",
+      "tier": "Qualifying",
+      "sourceTime": "2:16.39",
+      "timeMs": 136390
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "200_FL_SCY",
+      "tier": "Qualifying",
+      "sourceTime": "2:03.39",
+      "timeMs": 123390
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "200_IM_SCY",
+      "tier": "Qualifying",
+      "sourceTime": "2:16.49",
+      "timeMs": 136490
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "200_IM_SCM",
+      "tier": "Qualifying",
+      "sourceTime": "2:30.79",
+      "timeMs": 150790
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "200_IM_LCM",
+      "tier": "Qualifying",
+      "sourceTime": "2:36.99",
+      "timeMs": 156990
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "200_IM_LCM",
+      "tier": "Qualifying",
+      "sourceTime": "2:24.69",
+      "timeMs": 144690
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "200_IM_SCM",
+      "tier": "Qualifying",
+      "sourceTime": "2:16.99",
+      "timeMs": 136990
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "200_IM_SCY",
+      "tier": "Qualifying",
+      "sourceTime": "2:03.99",
+      "timeMs": 123990
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "400_IM_SCY",
+      "tier": "Qualifying",
+      "sourceTime": "4:51.59",
+      "timeMs": 291590
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "400_IM_SCM",
+      "tier": "Qualifying",
+      "sourceTime": "5:22.29",
+      "timeMs": 322290
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "400_IM_LCM",
+      "tier": "Qualifying",
+      "sourceTime": "5:32.49",
+      "timeMs": 332490
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "400_IM_LCM",
+      "tier": "Qualifying",
+      "sourceTime": "5:07.79",
+      "timeMs": 307790
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "400_IM_SCM",
+      "tier": "Qualifying",
+      "sourceTime": "4:52.39",
+      "timeMs": 292390
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "400_IM_SCY",
+      "tier": "Qualifying",
+      "sourceTime": "4:24.69",
+      "timeMs": 264690
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "50_FR_SCY",
+      "tier": "Bonus",
+      "sourceTime": "26.59",
+      "timeMs": 26590
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "50_FR_SCM",
+      "tier": "Bonus",
+      "sourceTime": "29.39",
+      "timeMs": 29390
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "50_FR_LCM",
+      "tier": "Bonus",
+      "sourceTime": "30.09",
+      "timeMs": 30090
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "50_FR_LCM",
+      "tier": "Bonus",
+      "sourceTime": "27.49",
+      "timeMs": 27490
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "50_FR_SCM",
+      "tier": "Bonus",
+      "sourceTime": "26.19",
+      "timeMs": 26190
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "50_FR_SCY",
+      "tier": "Bonus",
+      "sourceTime": "23.69",
+      "timeMs": 23690
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "100_FR_SCY",
+      "tier": "Bonus",
+      "sourceTime": "57.49",
+      "timeMs": 57490
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "100_FR_SCM",
+      "tier": "Bonus",
+      "sourceTime": "1:03.39",
+      "timeMs": 63390
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "100_FR_LCM",
+      "tier": "Bonus",
+      "sourceTime": "1:05.39",
+      "timeMs": 65390
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "100_FR_LCM",
+      "tier": "Bonus",
+      "sourceTime": "59.99",
+      "timeMs": 59990
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "100_FR_SCM",
+      "tier": "Bonus",
+      "sourceTime": "57.29",
+      "timeMs": 57290
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "100_FR_SCY",
+      "tier": "Bonus",
+      "sourceTime": "51.99",
+      "timeMs": 51990
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "200_FR_SCY",
+      "tier": "Bonus",
+      "sourceTime": "2:04.39",
+      "timeMs": 124390
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "200_FR_SCM",
+      "tier": "Bonus",
+      "sourceTime": "2:17.29",
+      "timeMs": 137290
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "200_FR_LCM",
+      "tier": "Bonus",
+      "sourceTime": "2:20.99",
+      "timeMs": 140990
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "200_FR_LCM",
+      "tier": "Bonus",
+      "sourceTime": "2:10.69",
+      "timeMs": 130690
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "200_FR_SCM",
+      "tier": "Bonus",
+      "sourceTime": "2:05.49",
+      "timeMs": 125490
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "200_FR_SCY",
+      "tier": "Bonus",
+      "sourceTime": "1:53.79",
+      "timeMs": 113790
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "50_BK_SCY",
+      "tier": "Bonus",
+      "sourceTime": "29.49",
+      "timeMs": 29490
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "50_BK_SCM",
+      "tier": "Bonus",
+      "sourceTime": "32.49",
+      "timeMs": 32490
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "50_BK_LCM",
+      "tier": "Bonus",
+      "sourceTime": "34.39",
+      "timeMs": 34390
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "50_BK_LCM",
+      "tier": "Bonus",
+      "sourceTime": "31.59",
+      "timeMs": 31590
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "50_BK_SCM",
+      "tier": "Bonus",
+      "sourceTime": "29.29",
+      "timeMs": 29290
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "50_BK_SCY",
+      "tier": "Bonus",
+      "sourceTime": "26.59",
+      "timeMs": 26590
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "100_BK_SCY",
+      "tier": "Bonus",
+      "sourceTime": "1:02.39",
+      "timeMs": 62390
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "100_BK_SCM",
+      "tier": "Bonus",
+      "sourceTime": "1:08.79",
+      "timeMs": 68790
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "100_BK_LCM",
+      "tier": "Bonus",
+      "sourceTime": "1:12.39",
+      "timeMs": 72390
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "100_BK_LCM",
+      "tier": "Bonus",
+      "sourceTime": "1:06.19",
+      "timeMs": 66190
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "100_BK_SCM",
+      "tier": "Bonus",
+      "sourceTime": "1:02.29",
+      "timeMs": 62290
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "100_BK_SCY",
+      "tier": "Bonus",
+      "sourceTime": "56.49",
+      "timeMs": 56490
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "200_BK_SCY",
+      "tier": "Bonus",
+      "sourceTime": "2:15.29",
+      "timeMs": 135290
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "200_BK_SCM",
+      "tier": "Bonus",
+      "sourceTime": "2:29.29",
+      "timeMs": 149290
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "200_BK_LCM",
+      "tier": "Bonus",
+      "sourceTime": "2:35.39",
+      "timeMs": 155390
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "200_BK_LCM",
+      "tier": "Bonus",
+      "sourceTime": "2:23.49",
+      "timeMs": 143490
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "200_BK_SCM",
+      "tier": "Bonus",
+      "sourceTime": "2:15.99",
+      "timeMs": 135990
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "200_BK_SCY",
+      "tier": "Bonus",
+      "sourceTime": "2:03.29",
+      "timeMs": 123290
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "50_BR_SCY",
+      "tier": "Bonus",
+      "sourceTime": "34,29",
+      "timeMs": 34290
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "50_BR_SCM",
+      "tier": "Bonus",
+      "sourceTime": "37.79",
+      "timeMs": 37790
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "50_BR_LCM",
+      "tier": "Bonus",
+      "sourceTime": "38.39",
+      "timeMs": 38390
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "50_BR_LCM",
+      "tier": "Bonus",
+      "sourceTime": "34.79",
+      "timeMs": 34790
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "50_BR_SCM",
+      "tier": "Bonus",
+      "sourceTime": "33.79",
+      "timeMs": 33790
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "50_BR_SCY",
+      "tier": "Bonus",
+      "sourceTime": "30.59",
+      "timeMs": 30590
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "100_BR_SCY",
+      "tier": "Bonus",
+      "sourceTime": "1:11.59",
+      "timeMs": 71590
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "100_BR_SCM",
+      "tier": "Bonus",
+      "sourceTime": "1:18.99",
+      "timeMs": 78990
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "100_BR_LCM",
+      "tier": "Bonus",
+      "sourceTime": "1:21.99",
+      "timeMs": 81990
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "100_BR_LCM",
+      "tier": "Bonus",
+      "sourceTime": "1:14.49",
+      "timeMs": 74490
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "100_BR_SCM",
+      "tier": "Bonus",
+      "sourceTime": "1:10.79",
+      "timeMs": 70790
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "100_BR_SCY",
+      "tier": "Bonus",
+      "sourceTime": "1:04.19",
+      "timeMs": 64190
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "200_BR_SCY",
+      "tier": "Bonus",
+      "sourceTime": "2:34.79",
+      "timeMs": 154790
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "200_BR_SCM",
+      "tier": "Bonus",
+      "sourceTime": "2:50.79",
+      "timeMs": 170790
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "200_BR_LCM",
+      "tier": "Bonus",
+      "sourceTime": "2:56.49",
+      "timeMs": 176490
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "200_BR_LCM",
+      "tier": "Bonus",
+      "sourceTime": "2:41.79",
+      "timeMs": 161790
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "200_BR_SCM",
+      "tier": "Bonus",
+      "sourceTime": "2:33.69",
+      "timeMs": 153690
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "200_BR_SCY",
+      "tier": "Bonus",
+      "sourceTime": "2:19.29",
+      "timeMs": 139290
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "50_FL_SCY",
+      "tier": "Bonus",
+      "sourceTime": "29.09",
+      "timeMs": 29090
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "50_FL_SCM",
+      "tier": "Bonus",
+      "sourceTime": "31.99",
+      "timeMs": 31990
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "50_FL_LCM",
+      "tier": "Bonus",
+      "sourceTime": "32.59",
+      "timeMs": 32590
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "50_FL_LCM",
+      "tier": "Bonus",
+      "sourceTime": "29.79",
+      "timeMs": 29790
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "50_FL_SCM",
+      "tier": "Bonus",
+      "sourceTime": "29.09",
+      "timeMs": 29090
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "50_FL_SCY",
+      "tier": "Bonus",
+      "sourceTime": "26.39",
+      "timeMs": 26390
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "100_FL_SCY",
+      "tier": "Bonus",
+      "sourceTime": "1:02.09",
+      "timeMs": 62090
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "100_FL_SCM",
+      "tier": "Bonus",
+      "sourceTime": "1:08.49",
+      "timeMs": 68490
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "100_FL_LCM",
+      "tier": "Bonus",
+      "sourceTime": "1:10.29",
+      "timeMs": 70290
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "100_FL_LCM",
+      "tier": "Bonus",
+      "sourceTime": "1:04.09",
+      "timeMs": 64090
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "100_FL_SCM",
+      "tier": "Bonus",
+      "sourceTime": "1:01.99",
+      "timeMs": 61990
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "100_FL_SCY",
+      "tier": "Bonus",
+      "sourceTime": "56.19",
+      "timeMs": 56190
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "200_FL_SCY",
+      "tier": "Bonus",
+      "sourceTime": "2:18.19",
+      "timeMs": 138190
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "200_FL_SCM",
+      "tier": "Bonus",
+      "sourceTime": "2:32.49",
+      "timeMs": 152490
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "200_FL_LCM",
+      "tier": "Bonus",
+      "sourceTime": "2:36.29",
+      "timeMs": 156290
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "200_FL_LCM",
+      "tier": "Bonus",
+      "sourceTime": "2:23.09",
+      "timeMs": 143090
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "200_FL_SCM",
+      "tier": "Bonus",
+      "sourceTime": "2:18.39",
+      "timeMs": 138390
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "200_FL_SCY",
+      "tier": "Bonus",
+      "sourceTime": "2:05.39",
+      "timeMs": 125390
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "200_IM_SCY",
+      "tier": "Bonus",
+      "sourceTime": "2:18.49",
+      "timeMs": 138490
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "200_IM_SCM",
+      "tier": "Bonus",
+      "sourceTime": "2:32.79",
+      "timeMs": 152790
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "F",
+      "ageGroup": "Open",
+      "eventCode": "200_IM_LCM",
+      "tier": "Bonus",
+      "sourceTime": "2:38.99",
+      "timeMs": 158990
+    },
+    {
+      "page": 1,
+      "course": "LCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "200_IM_LCM",
+      "tier": "Bonus",
+      "sourceTime": "2:26.69",
+      "timeMs": 146690
+    },
+    {
+      "page": 1,
+      "course": "SCM",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "200_IM_SCM",
+      "tier": "Bonus",
+      "sourceTime": "2:18.99",
+      "timeMs": 138990
+    },
+    {
+      "page": 1,
+      "course": "SCY",
+      "gender": "M",
+      "ageGroup": "Open",
+      "eventCode": "200_IM_SCY",
+      "tier": "Bonus",
+      "sourceTime": "2:05.99",
+      "timeMs": 125990
+    }
+  ],
+  "notes": [
+    "Qualification period: October 1, 2024 through meet entry deadline. No de-qualification standards. Source decimal comma 34,29 normalized to 34.29."
+  ],
+  "datePolicy": "Library availability starts at the published qualifying start where supplied, otherwise the verification date; ends on final meet day (not the entry deadline). Multi-year editions use the stated edition period. Actual entry rules and qualifying windows remain in the source.",
+  "cutCount": 180
+}
