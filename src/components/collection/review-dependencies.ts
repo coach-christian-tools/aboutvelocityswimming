@@ -1,6 +1,6 @@
 import { object, type ReviewWrite } from "./review-summary";
 
-export const dependencyTables = ["teams", "venues", "meets", "athletes"] as const;
+export const dependencyTables = ["teams", "venues", "meets", "athletes", "relay_results"] as const;
 export type DependencyTable = (typeof dependencyTables)[number];
 
 export function reviewDependencies(writes: ReviewWrite[]) {
@@ -15,6 +15,12 @@ export function reviewDependencies(writes: ReviewWrite[]) {
     if (root === "swims") {
       reference("athletes", data.athleteId);
       reference("meets", object(data.meet).id);
+      reference("relay_results", data.parentRelayResultId);
+    }
+    if (root === "relay_results") {
+      reference("teams", data.teamId);
+      reference("meets", object(data.meet).id);
+      if (Array.isArray(data.members)) for (const member of data.members) reference("athletes", object(member).athleteId);
     }
     if (root === "athletes" || root === "meets") reference("teams", data.teamId);
     if (root === "meets") {

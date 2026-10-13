@@ -47,7 +47,7 @@ export async function POST(request: Request) {
     }));
     if (checks.some(check => check.error))
       return Response.json({ error: "Could not verify prerequisite records. Refresh and try again." }, { status: 503 });
-    const labels = { teams: "teams", venues: "venues", meets: "meets", athletes: "swimmer profiles" };
+    const labels = { teams: "teams", venues: "venues", meets: "meets", athletes: "swimmer profiles", relay_results: "parent relay results" };
     const missing = checks.filter(check => check.missing).map(check => `${check.missing} ${labels[check.table]}`);
     if (missing.length)
       return Response.json({ error: `Approve the prerequisite batches first: ${missing.join(", ")} are not yet in the database. Teams and meets appear at the top of the pending queue, followed by swimmer profiles, then results. No changes were applied.` }, { status: 409 });

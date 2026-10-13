@@ -12,6 +12,7 @@ import {
   type Race,
 } from "./times-data";
 import s from "./TeamRecords.module.css";
+import RelayLineup from "./RelayLineup";
 
 export interface RecordSelection {
   course: string;
@@ -53,15 +54,22 @@ function RecordCells({
   const nameCell = (
     <td key="name" className={s.holder}>
       {race ? (
-        <button
-          onClick={() => onRecord(selection)}
-          aria-label={label}
-          title={holderNames}
-        >
-          {holderNames}
-        </button>
+        race.relay ? (
+          holders.map((holder) => <RelayLineup race={holder} key={holder.id} />)
+        ) : (
+          <button
+            onClick={() => onRecord(selection)}
+            aria-label={label}
+            title={holderNames}
+          >
+            {holderNames}
+          </button>
+        )
       ) : (
         <span className={s.missing}>—</span>
+      )}
+      {holders.some((holder) => holder.resultOrigin === "relay_leadoff") && (
+        <small className={s.lineup}>Verified relay lead-off</small>
       )}
     </td>
   );
@@ -107,14 +115,24 @@ export default function TeamRecords({
   ready?: boolean;
 }) {
   const prefix = useId().replaceAll(":", "");
-  const records = useMemo(() => teamRecords(races, team), [races, team]);
-  const groups = useMemo(() => recordAgeGroups(races), [races]);
+  const visibleRaces = useMemo(
+    () => races.filter((race) => !race.relay || race.gender !== "X"),
+    [races],
+  );
+  const records = useMemo(
+    () => teamRecords(visibleRaces, team),
+    [visibleRaces, team],
+  );
+  const groups = useMemo(() => recordAgeGroups(visibleRaces), [visibleRaces]);
   const events = useMemo(
     () =>
       new Map(
-        recordCourses.map(([course]) => [course, recordEvents(course, races)]),
+        recordCourses.map(([course]) => [
+          course,
+          recordEvents(course, visibleRaces),
+        ]),
       ),
-    [races],
+    [visibleRaces],
   );
   const anchor = (course: string, group?: string) =>
     `${prefix}-${course}${group ? `-${group.replace(/[^a-z0-9]/gi, "")}` : ""}`;
@@ -168,122 +186,89 @@ export default function TeamRecords({
                 </h2>
                 <a href={`#${prefix}-top`}>Back to navigation ↑</a>
               </div>
-              {groups.map(([group, ageLabel]) => {
-                const hasMixed = (events.get(course) ?? []).some((event) =>
-                  records.has(recordKey(course, group, event, "X")),
-                );
-                return (
-                  <section
-                    key={group}
-                    id={anchor(course, group)}
-                    className={s.ageSection}
-                    aria-label={`${course} ${ageLabel} records`}
+              {groups.map(([group, ageLabel]) => (
+                <section
+                  key={group}
+                  id={anchor(course, group)}
+                  className={s.ageSection}
+                  aria-label={`${course} ${ageLabel} records`}
+                >
+                  <h3>{ageLabel}</h3>
+                  <div
+                    className={s.tableWrap}
+                    tabIndex={0}
+                    role="region"
+                    aria-label={`${course} ${ageLabel} record table`}
                   >
-                    <h3>{ageLabel}</h3>
-                    <div
-                      className={s.tableWrap}
-                      tabIndex={0}
-                      role="region"
-                      aria-label={`${course} ${ageLabel} record table`}
-                    >
-                      <table className={s.table}>
-                        <caption className="sr-only">
-                          {teamName} · {course} · {ageLabel} · girls and boys
-                          records
-                        </caption>
-                        <thead>
-                          <tr>
-                            <th scope="col">Girls</th>
-                            <th scope="col">Date</th>
-                            <th scope="col">Record</th>
-                            <th scope="col">Event</th>
-                            <th scope="col">Record</th>
-                            <th scope="col">Date</th>
-                            <th scope="col">Boys</th>
-                            {hasMixed && (
-                              <>
-                                <th scope="col">Mixed</th>
-                                <th scope="col">Date</th>
-                                <th scope="col">Record</th>
-                              </>
-                            )}
-                          </tr>
-                        </thead>
-                        <tbody>
-                          {(events.get(course) ?? []).map((event) => (
-                            <tr
-                              key={event}
-                              className={
-                                event === "100_FR-R" || event === "200_FR-R"
-                                  ? s.relayRow
-                                  : undefined
+                    <table className={s.table}>
+                      <caption className="sr-only">
+                        {teamName} · {course} · {ageLabel} · girls and boys
+                        records
+                      </caption>
+                      <thead>
+                        <tr>
+                          <th scope="col">Girls</th>
+                          <th scope="col">Date</th>
+                          <th scope="col">Record</th>
+                          <th scope="col">Event</th>
+                          <th scope="col">Record</th>
+                          <th scope="col">Date</th>
+                          <th scope="col">Boys</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {(events.get(course) ?? []).map((event) => (
+                          <tr
+                            key={event}
+                            className={
+                              event.endsWith("-R") ? s.relayRow : undefined
+                            }
+                          >
+                            <RecordCells
+                              holders={
+                                records.get(
+                                  recordKey(course, group, event, "F"),
+                                ) ?? []
                               }
-                            >
-                              <RecordCells
-                                holders={
-                                  records.get(
-                                    recordKey(course, group, event, "F"),
-                                  ) ?? []
-                                }
-                                names={names}
-                                selection={{
-                                  course,
-                                  ageGroup: group,
-                                  event,
-                                  gender: "F",
-                                  relay: event.endsWith("-R"),
-                                }}
-                                ageLabel={ageLabel}
-                                onRecord={onRecord}
-                              />
-                              <th scope="row" className={s.event}>
-                                {event.replace("_", " ")}
-                              </th>
-                              <RecordCells
-                                holders={
-                                  records.get(
-                                    recordKey(course, group, event, "M"),
-                                  ) ?? []
-                                }
-                                names={names}
-                                selection={{
-                                  course,
-                                  ageGroup: group,
-                                  event,
-                                  gender: "M",
-                                  relay: event.endsWith("-R"),
-                                }}
-                                ageLabel={ageLabel}
-                                onRecord={onRecord}
-                                reverse
-                              />
-                              {hasMixed && (
-                                <RecordCells
-                                  holders={
-                                    records.get(
-                                      recordKey(course, group, event, "X"),
-                                    ) ?? []
-                                  }
-                                  names={names}
-                                  selection={{
-                                    course,
-                                    ageGroup: group,
-                                    event,
-                                    gender: "X",
-                                    relay: event.endsWith("-R"),
-                                  }}
-                                  ageLabel={ageLabel}
-                                  onRecord={onRecord}
-                                />
-                              )}
-                            </tr>
-                          ))}
-                        </tbody>
-                      </table>
-                    </div>
-                  </section>
-                );
-              })}
+                              names={names}
+                              selection={{
+                                course,
+                                ageGroup: group,
+                                event,
+                                gender: "F",
+                                relay: event.endsWith("-R"),
+                              }}
+                              ageLabel={ageLabel}
+                              onRecord={onRecord}
+                            />
+                            <th scope="row" className={s.event}>
+                              {event.replace("_", " ")}
+                            </th>
+                            <RecordCells
+                              holders={
+                                records.get(
+                                  recordKey(course, group, event, "M"),
+                                ) ?? []
+                              }
+                              names={names}
+                              selection={{
+                                course,
+                                ageGroup: group,
+                                event,
+                                gender: "M",
+                                relay: event.endsWith("-R"),
+                              }}
+                              ageLabel={ageLabel}
+                              onRecord={onRecord}
+                              reverse
+                            />
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </section>
+              ))}
             </section>
           ))}
         </>

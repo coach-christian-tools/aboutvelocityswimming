@@ -1,4 +1,5 @@
-import Link from 'next/link';
-import AdminLoginFooter from '@/features/swim-resources/components/AdminLoginFooter';
-const links=[['Times and records','Browse best times and team records.','times'],['USA Swimming standards','Compare event times with motivational standards.','standards/usa'],['Championship standards','Review qualifying and bonus cuts.','standards/champ'],['Practice attendance','Coaching tools connected to the shared roster.','attendance']];
-export default function ResourceHome(){return <main className="mx-auto max-w-5xl px-6 py-8"><Link className="text-accent underline" href="/tools">All tools</Link><h1 className="text-4xl mt-4 mb-3">Swim Resources</h1><p className="text-text-secondary mb-8">Swimming standards, results, and coaching tools in one place.</p><div className="grid sm:grid-cols-2 gap-5">{links.map(([title,description,path])=><Link key={path} href={'/tools/swim-resources/'+path} className="rounded-xl border border-border bg-surface p-6 hover:bg-hover-bg"><h2 className="text-xl mb-2">{title}</h2><p className="text-text-secondary">{description}</p></Link>)}</div><AdminLoginFooter/></main>;}
+import { redirect } from "next/navigation";
+
+export default function ResourceHome() {
+  redirect("/tools");
+}

@@ -2,13 +2,12 @@ import { errorCode, errorMessage } from "../../lib/errors"
 import { useState, useEffect, useRef } from "react"
 import { signInWithGoogle, signInWithEmailAndPassword } from "@/lib/auth"
 import { browserClient } from "@/lib/supabase/client"
-import { useNavigate } from "@/features/workshare/lib/navigation"
+import { useRouter } from "next/navigation"
 import { auth } from "../../lib/backend"
 import { useAuth } from "../../contexts/auth"
 import { Button } from "../ui/Button"
 import { Input } from "../ui/Input"
 import { Card } from "../ui/Card"
-import { VSLogo } from "../ui/VSLogo"
 import { Mail, ArrowLeft, CheckCircle2, KeyRound } from "lucide-react"
 
 export function Login() {
@@ -25,18 +24,14 @@ export function Login() {
   const [countdown, setCountdown] = useState(0)
 
   const otpInputRef = useRef<HTMLInputElement>(null)
-  const { user, isAdmin, loading: authLoading } = useAuth()
-  const navigate = useNavigate()
+  const { user, loading: authLoading } = useAuth()
+  const router = useRouter()
 
   useEffect(() => {
     if (user && !authLoading) {
-      if (isAdmin) {
-        navigate("/admin/families")
-      } else {
-        navigate("/")
-      }
+      router.replace("/tools")
     }
-  }, [user, isAdmin, authLoading, navigate])
+  }, [user, authLoading, router])
 
   useEffect(() => {
     if (step === "code" && otpInputRef.current) {
@@ -64,7 +59,7 @@ export function Login() {
       if(error)throw error;
       setStep("code")
       setCountdown(60)
-      setSuccessMessage(`We sent a 8-digit code to ${email.trim()}`)
+      setSuccessMessage(`We sent an 8-digit code to ${email.trim()}`)
     } catch (err: unknown) {
       console.error("OTP send error:", err)
       if (errorCode(err) === "functions/not-found" || errorCode(err) === "not-found") {
@@ -143,14 +138,8 @@ export function Login() {
   }
 
   return (
-    <div className="min-h-screen bg-bg flex flex-col items-center justify-center p-4 sm:p-6">
+    <div className="min-h-[calc(100svh-var(--site-header-height))] bg-bg flex flex-col items-center justify-center px-4 py-8 sm:px-6">
       <div className="w-full max-w-md flex flex-col items-center">
-        {/* Brand Header */}
-        <div className="mb-6 flex flex-col items-center text-center">
-          <VSLogo size="lg" showBadge={false} className="mb-2" />
-          <p className="text-sm text-slate-500 font-medium">Family and coaching tools</p>
-        </div>
-
         <Card className="w-full bg-surface shadow-sm border border-slate-200 p-6 sm:p-8">
           <h2 className="text-2xl font-bold mb-1 text-text-primary text-center">
             {step === "code" ? "Enter Verification Code" : "Sign In to Portal"}

@@ -1,10 +1,14 @@
 import ReviewQueue from "@/components/collection/ReviewQueue";
+import SectionPage from "@/components/SectionPage";
 export const metadata = { title: "Collection review | Velocity Swimming" };
 export default function Page() {
   return (
-    <main className="mx-auto max-w-6xl space-y-6 px-6 py-12">
-      <h1 className="text-3xl font-semibold">Collection review</h1>
+    <SectionPage
+      eyebrow="Staff tools"
+      title="Collection review"
+      description="Review collected additions and corrections before they appear across Velocity tools."
+    >
       <ReviewQueue />
-    </main>
+    </SectionPage>
   );
 }

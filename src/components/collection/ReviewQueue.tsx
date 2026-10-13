@@ -6,6 +6,7 @@ import { browserClient, hasBackendConfiguration } from "@/lib/supabase/client";
 import { loadReviewBatches, applyReviewDecision, type QueueBatch, type ReviewQueueSnapshot } from "./load-review-batches";
 import type { Database, Json } from "@/lib/supabase/database.types";
 import { useAuth } from "@/features/workshare/contexts/auth";
+import styles from "./ReviewQueue.module.css";
 
 import {
   athleteName,
@@ -21,8 +22,8 @@ import {
 type Batch = Database["public"]["Tables"]["collection_batches"]["Row"];
 const divisions: Record<string, string> = {
   workshare: "Velocity Workshare",
-  times: "Inland Empire Times",
-  knowledge: "USA Swimming Knowledge Base",
+  times: "Velocity Times",
+  knowledge: "Swim Atlas",
 };
 function safeUrl(value: string) {
   try {
@@ -77,17 +78,16 @@ function PageButtons({ page, pages, disabled = false, label, onChange }: {
   label: string;
   onChange: (page: number) => void;
 }) {
-  return <nav className="flex flex-wrap items-center gap-2 text-sm" aria-label={label}>
-    <button className="rounded border px-3 py-2 disabled:opacity-50" disabled={disabled || page === 0} onClick={() => onChange(page - 1)}>Previous</button>
+  return <nav className={styles.pagination} aria-label={label}>
+    <button disabled={disabled || page === 0} onClick={() => onChange(page - 1)}>Previous</button>
     {Array.from({ length: pages }, (_, index) => <button
       key={index}
       aria-label={`Go to page ${index + 1}`}
       aria-current={index === page ? "page" : undefined}
       disabled={disabled}
-      className={`min-w-9 rounded border px-3 py-2 disabled:opacity-50 ${index === page ? "border-primary-blue bg-primary-blue font-semibold text-primary-ink" : ""}`}
       onClick={() => onChange(index)}
     >{index + 1}</button>)}
-    <button className="rounded border px-3 py-2 disabled:opacity-50" disabled={disabled || page + 1 >= pages} onClick={() => onChange(page + 1)}>Next</button>
+    <button disabled={disabled || page + 1 >= pages} onClick={() => onChange(page + 1)}>Next</button>
   </nav>;
 }
 function Records({ writes, reads }: { writes: Json; reads: Json }) {
@@ -141,7 +141,7 @@ function Records({ writes, reads }: { writes: Json; reads: Json }) {
   const rows = changes.map((change) => {
     const previous = previousByPath.get(change.path) ?? null;
     const value = change.after ?? previous;
-    const swim = change.path.startsWith("swims/");
+    const swim = change.path.startsWith("swims/") || change.path.startsWith("relay_results/");
     const knowledge = change.path.startsWith("knowledge_entries/");
     const action =
       change.after === null ? "Remove" : previous === null ? "Add" : "Update";
@@ -179,7 +179,7 @@ function Records({ writes, reads }: { writes: Json; reads: Json }) {
     Math.max(0, Math.ceil(filtered.length / 25) - 1),
   );
   return (
-    <div className="space-y-2">
+    <div className={`${styles.records} space-y-2`}>
       <div className="flex flex-wrap items-center gap-2">
         <input
           type="search"
@@ -333,7 +333,7 @@ function BatchDetails({ id }: { id: string }) {
       });
     return () => controller.abort();
   }, [id, expanded, revision]);
-  return <details onToggle={event => setExpanded(event.currentTarget.open)}>
+  return <details className={styles.batchDetails} onToggle={event => setExpanded(event.currentTarget.open)}>
     <summary className="cursor-pointer py-1 text-sm font-semibold">Review records, conflicts and source evidence</summary>
     {error ? <div role="alert"><p>{error}</p><button onClick={() => { setError(""); setRevision(value => value + 1); }}>Retry loading records</button></div> : !batch ? <p role="status">Loading batch records…</p> : <div className="mt-2 space-y-3">
       <a href={safeUrl(batch.source_url)} target="_blank" rel="noopener noreferrer" className="underline break-all">{batch.source_url}</a>
@@ -428,31 +428,33 @@ export default function ReviewQueue() {
       setBusy(null);
     }
   }
-  if (authLoading) return <p>Checking your account…</p>;
+  if (authLoading) return <p className={styles.emptyState} role="status">Checking your account…</p>;
   if (!isAdmin)
     return (
-      <p>
-        Staff access is required. <Link href="/login">Sign in</Link>
+      <p className={styles.emptyState}>
+        Staff access is required. <Link className={styles.signIn} href="/login">Sign in</Link>
       </p>
     );
   return (
-    <section className="space-y-3">
-      <p>
-        Collected changes stay private until approved. A batch is applied
-        together; changed records require a fresh collection.
-        {status === "pending" || status === "held" ? " Teams, venues, and meets appear first, then swimmer profiles, then results. Within each group, oldest batches appear first." : ""}
-      </p>
-      <label className="block text-sm font-medium">
-        Search batches
-        <input type="search" className="mt-1 block w-full rounded border p-2" placeholder="Search batch, meet, swimmer, source or record…" value={query} onChange={event => { setQuery(event.target.value); setOffset(0); }} />
-      </label>
-      <div className="flex flex-wrap gap-4">
-        <label>
-          Status{" "}
+    <section className={styles.queue} aria-label="Collected changes">
+      <div className={styles.guide}>
+        <p>
+          Collected changes stay private until approved. A batch is applied
+          together; changed records require a fresh collection.
+          {status === "pending" || status === "held" ? " Review teams, venues, and meets first, then swimmer profiles, then results." : ""}
+        </p>
+        <Link href="/tools/review/meets" className={styles.meetLink}>Choose meets to finish importing <span aria-hidden="true">→</span></Link>
+      </div>
+      <div className={styles.toolbar}>
+        <label className={styles.field}>
+          Search batches
+          <input type="search" placeholder="Search batch, meet, swimmer, source or record…" value={query} onChange={event => { setQuery(event.target.value); setOffset(0); }} />
+        </label>
+        <label className={styles.field}>
+          Status
           <select
             disabled={busy !== null}
             aria-label="Status"
-            className="rounded border p-2"
             value={status}
             onChange={(event) => {
               setSnapshot(null);
@@ -462,11 +464,12 @@ export default function ReviewQueue() {
             }}
           >
             {["pending", "held", "approved", "declined"].map((value) => (
-              <option key={value}>{value}</option>
+              <option key={value} value={value}>{value.charAt(0).toUpperCase() + value.slice(1)}</option>
             ))}
           </select>
         </label>
         <button
+          className={styles.button}
           onClick={() => {
             setRefreshing(true);
             setRefresh((value) => value + 1);
@@ -476,18 +479,20 @@ export default function ReviewQueue() {
           {refreshing ? "Refreshing…" : "Refresh"}
         </button>
       </div>
-      <p className="text-sm text-text-secondary">{total} matching batches · {status === "pending" || status === "held" ? "Prerequisites first; oldest ready batches first." : "Oldest batches first."}</p>
-      {pageControls}
-      {refreshing && !loading && <p role="status" className="text-sm text-text-secondary">Checking for changes…</p>}
+      <div className={styles.resultsHead}>
+        <p className={styles.resultCount}>{total} matching {total === 1 ? "batch" : "batches"}<span>{status === "pending" || status === "held" ? "Prerequisites first; oldest ready batches first." : "Oldest batches first."}</span></p>
+        {total > 20 && pageControls}
+      </div>
+      {refreshing && !loading && <p role="status" className={styles.muted}>Checking for changes…</p>}
       {error && (
-        <p role="alert" className="text-red-700">
+        <p role="alert" className={styles.error}>
           {error}
         </p>
       )}
       {loading ? (
-        <p>Loading proposals…</p>
+        <p className={styles.emptyState} role="status">Loading proposals…</p>
       ) : total === 0 ? (
-        <p>{query.trim() ? "No batches match your search." : `No ${status} proposals.`}</p>
+        <p className={styles.emptyState}>{query.trim() ? "No batches match your search." : `No ${status} proposals.`}</p>
       ) : (
         filteredBatches.slice(currentOffset, currentOffset + 20).map((batch) => {
           const stats = reviewStats(
@@ -497,30 +502,36 @@ export default function ReviewQueue() {
           return (
             <article
               key={batch.id}
-              className="min-w-0 space-y-2 rounded-xl border p-3"
+              className={styles.batch}
             >
-              <h2 className="text-base font-semibold">
-                {divisions[batch.division]}
-              </h2>
-              <p className="break-words text-sm font-medium">{batch.scope}</p>
-              <p className="text-sm">
+              <div className={styles.batchHead}>
+                <div>
+                  <p className={styles.division}>{divisions[batch.division]}</p>
+                  <h2>{batch.scope}</h2>
+                </div>
+                <span className={styles.status} data-status={batch.status}>{batch.status}</span>
+              </div>
+              <p className={styles.muted}>
                 Captured {new Date(batch.captured_at).toLocaleString()} ·{" "}
-                {batch.coverage} coverage · {batch.status}
+                {batch.coverage} coverage
               </p>
-              {(blockers[batch.id]?.length ?? 0) > 0 && <details className="rounded bg-amber-100 p-2 text-sm text-amber-900">
+              <dl className={styles.stats}>
+                {[["Records", stats.total], ["Additions", stats.added], ["Updates", stats.updated], ["Removals", stats.removed]].map(([label, count]) => <div key={label}><dt>{label}</dt><dd>{Number(count).toLocaleString()}</dd></div>)}
+              </dl>
+              {(blockers[batch.id]?.length ?? 0) > 0 && <details className={styles.attention}>
                 <summary className="cursor-pointer font-medium">Waiting for {blockers[batch.id].length} prerequisite {blockers[batch.id].length === 1 ? "record" : "records"} · expand for approval order</summary>
                 <ul className="mt-1 list-disc pl-5 break-words">{blockers[batch.id].map(message => <li key={message}>{message}</li>)}</ul>
               </details>}
               {["pending", "held"].includes(batch.status) ? (
                 <>
-                  <div className="flex flex-wrap gap-2">
+                  <div className={styles.actions}>
                     {[
                       ["approved", "Approve all changes"],
                       ["held", "Hold"],
                       ["declined", "Decline"],
                     ].map(([decision, label]) => (
                       <button
-                        className={`rounded border px-3 py-2 text-sm disabled:opacity-50 ${decision === "approved" ? "border-primary-blue bg-primary-blue font-semibold text-primary-ink" : ""}`}
+                        className={`${styles.button} ${decision === "approved" ? styles.primary : ""}`}
                         key={decision}
                         disabled={busy !== null || (decision === "approved" && (loading || (blockers[batch.id]?.length ?? 0) > 0))}
                         onClick={() => void decide(batch, decision)}
@@ -529,7 +540,7 @@ export default function ReviewQueue() {
                       </button>
                     ))}
                   </div>
-                  <details>
+                  <details className={styles.note}>
                     <summary className="cursor-pointer text-sm">
                       Review note{notes[batch.id] ? " · added" : " (optional)"}
                     </summary>
@@ -553,12 +564,8 @@ export default function ReviewQueue() {
                     new Date(batch.reviewed_at).toLocaleString()}
                 </p>
               )}
-              <p className="text-sm font-medium">
-                {stats.total} records · {stats.added} additions ·{" "}
-                {stats.updated} updates · {stats.removed} removals
-              </p>
               {stats.attention > 0 && (
-                <p className="rounded bg-amber-100 px-2 py-1 text-sm text-amber-900">
+                <p className={styles.attention}>
                   Needs attention: {stats.issues} {stats.issues === 1 ? "record" : "records"} with gaps / source
                   conflicts · {stats.removed} {stats.removed === 1 ? "removal" : "removals"}
                 </p>
@@ -568,7 +575,7 @@ export default function ReviewQueue() {
           );
         })
       )}
-      {pageControls}
+      {total > 20 && pageControls}
     </section>
   );
 }

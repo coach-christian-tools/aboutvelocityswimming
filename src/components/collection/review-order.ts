@@ -8,13 +8,9 @@ export type ReviewBatch = {
   status: string;
   writes: Json;
 };
-export const dependencyTables = [
-  "teams",
-  "venues",
-  "meets",
-  "athletes",
-] as const;
-export type DependencyTable = (typeof dependencyTables)[number];
+import { dependencyTables, type DependencyTable } from './review-dependencies';
+export { dependencyTables };
+export type { DependencyTable };
 
 // These are the foreign keys accepted by the times collector. Athlete people
 // and training groups are created by put_record as part of the athlete write.
@@ -34,6 +30,12 @@ export function recordDependencies(write: ReviewWrite): string[] {
   if (root === "swims") {
     add("athletes", data.athleteId);
     add("meets", object(data.meet).id);
+    add("relay_results", data.parentRelayResultId);
+  }
+  if (root === "relay_results") {
+    add("teams", data.teamId);
+    add("meets", object(data.meet).id);
+    if (Array.isArray(data.members)) for (const member of data.members) add("athletes", object(member).athleteId);
   }
   return [...new Set(refs)];
 }

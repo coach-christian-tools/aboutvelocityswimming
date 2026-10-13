@@ -1,6 +1,6 @@
 import TimesDatabase from "@/components/collection/TimesDatabase";
 export const metadata = {
-  title: "IES Times | Velocity Swimming",
+  title: "Velocity Times | Velocity Swimming",
   description:
     "Explore Inland Empire swimming results, event rankings, performance percentiles, and athlete personal bests with Velocity Swimming.",
 };

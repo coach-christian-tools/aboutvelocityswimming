@@ -34,6 +34,76 @@ export type Database = {
   };
   public: {
     Tables: {
+      meet_collection_work: {
+        Row: {
+          meet_id: string;
+          selected: boolean;
+          priority: number;
+          notes: string;
+          blockers: string[];
+          acquisition_state: string;
+          import_state: string;
+          reconciliation_note: string;
+          updated_at: string;
+        };
+        Insert: {
+          meet_id: string;
+          selected?: boolean;
+          priority?: number;
+          notes?: string;
+          blockers?: string[];
+          acquisition_state?: string;
+          import_state?: string;
+          reconciliation_note?: string;
+          updated_at?: string;
+        };
+        Update: {
+          selected?: boolean;
+          priority?: number;
+          notes?: string;
+          blockers?: string[];
+          acquisition_state?: string;
+          import_state?: string;
+          reconciliation_note?: string;
+          updated_at?: string;
+        };
+        Relationships: [];
+      };
+      collection_coverage: {
+        Row: {
+          id: string;
+          source_url: string;
+          year: number;
+          category: string;
+          scope: string;
+          checked_at: string;
+          status: string;
+          meet_count: number;
+          gaps: string[];
+        };
+        Insert: {
+          id: string;
+          source_url: string;
+          year: number;
+          category: string;
+          scope: string;
+          checked_at?: string;
+          status: string;
+          meet_count?: number;
+          gaps?: string[];
+        };
+        Update: {
+          source_url?: string;
+          year?: number;
+          category?: string;
+          scope?: string;
+          checked_at?: string;
+          status?: string;
+          meet_count?: number;
+          gaps?: string[];
+        };
+        Relationships: [];
+      };
       administrators: {
         Row: {
           user_id: string;
@@ -665,8 +735,109 @@ export type Database = {
           },
         ];
       };
+      public_relay_results: {
+        Row: {
+          data: Json;
+          id: string;
+          swim_date: string | null;
+          team_id: string;
+          times_course: string | null;
+          times_event: string | null;
+          times_meet: string | null;
+          times_time: number | null;
+        };
+        Insert: {
+          data: Json;
+          id: string;
+          swim_date?: string | null;
+          team_id: string;
+          times_course?: string | null;
+          times_event?: string | null;
+          times_meet?: string | null;
+          times_time?: number | null;
+        };
+        Update: {
+          data?: Json;
+          id?: string;
+          swim_date?: string | null;
+          team_id?: string;
+          times_course?: string | null;
+          times_event?: string | null;
+          times_meet?: string | null;
+          times_time?: number | null;
+        };
+        Relationships: [
+          {
+            foreignKeyName: "public_relay_results_id_fkey";
+            columns: ["id"];
+            isOneToOne: true;
+            referencedRelation: "relay_results";
+            referencedColumns: ["id"];
+          },
+          {
+            foreignKeyName: "public_relay_results_team_id_fkey";
+            columns: ["team_id"];
+            isOneToOne: false;
+            referencedRelation: "teams";
+            referencedColumns: ["id"];
+          },
+        ];
+      };
+      relay_results: {
+        Row: {
+          course: string;
+          data: Json;
+          event_code: string;
+          id: string;
+          meet_id: string | null;
+          status: string | null;
+          team_id: string;
+          time_ms: number | null;
+        };
+        Insert: {
+          course?: string;
+          data: Json;
+          event_code?: string;
+          id: string;
+          meet_id?: string | null;
+          status?: string | null;
+          team_id?: string;
+          time_ms?: number | null;
+        };
+        Update: {
+          course?: string;
+          data?: Json;
+          event_code?: string;
+          id?: string;
+          meet_id?: string | null;
+          status?: string | null;
+          team_id?: string;
+          time_ms?: number | null;
+        };
+        Relationships: [
+          {
+            foreignKeyName: "relay_results_meet_id_fkey";
+            columns: ["meet_id"];
+            isOneToOne: false;
+            referencedRelation: "meets";
+            referencedColumns: ["id"];
+          },
+          {
+            foreignKeyName: "relay_results_team_id_fkey";
+            columns: ["team_id"];
+            isOneToOne: false;
+            referencedRelation: "teams";
+            referencedColumns: ["id"];
+          },
+        ];
+      };
       public_swims: {
         Row: {
+          times_meet_name: string;
+          times_status: string;
+          times_gender: string;
+          times_age: number | null;
+          times_official: boolean | null;
           athlete_id: string;
           data: Json;
           id: string;
@@ -681,6 +852,11 @@ export type Database = {
           times_time: number | null;
         };
         Insert: {
+          times_meet_name?: never;
+          times_status?: never;
+          times_gender?: never;
+          times_age?: never;
+          times_official?: never;
           athlete_id: string;
           data: Json;
           id: string;
@@ -695,6 +871,11 @@ export type Database = {
           times_time?: number | null;
         };
         Update: {
+          times_meet_name?: never;
+          times_status?: never;
+          times_gender?: never;
+          times_age?: never;
+          times_official?: never;
           athlete_id?: string;
           data?: Json;
           id?: string;
@@ -819,6 +1000,7 @@ export type Database = {
       };
       swims: {
         Row: {
+          parent_relay_result_id: string | null;
           athlete_id: string;
           course: string;
           data: NonNullable<Json>;
@@ -832,6 +1014,7 @@ export type Database = {
           time_ms: number | null;
         };
         Insert: {
+          parent_relay_result_id?: never;
           athlete_id?: never;
           course?: never;
           data: NonNullable<Json>;
@@ -845,6 +1028,7 @@ export type Database = {
           time_ms?: never;
         };
         Update: {
+          parent_relay_result_id?: never;
           athlete_id?: never;
           course?: never;
           data?: NonNullable<Json>;
@@ -858,6 +1042,13 @@ export type Database = {
           time_ms?: never;
         };
         Relationships: [
+          {
+            foreignKeyName: "swims_parent_relay_result_id_fkey";
+            columns: ["parent_relay_result_id"];
+            isOneToOne: false;
+            referencedRelation: "relay_results";
+            referencedColumns: ["id"];
+          },
           {
             foreignKeyName: "swims_athlete_id_fkey";
             columns: ["athlete_id"];
@@ -1053,6 +1244,8 @@ export type Database = {
     };
     Functions: {
       claim_shift_reminders: { Args: { dry_run?: boolean }; Returns: Json };
+      meet_collection_queue: { Args: { input?: Json }; Returns: Json };
+      update_meet_collection_work: { Args: { input: Json }; Returns: Json };
       collect_records: {
         Args: { reads: Json; writes: Json };
         Returns: undefined;
@@ -1103,6 +1296,31 @@ export type Database = {
       ies_times_age: {
         Args: { age: number; relay: boolean; relay_age: string };
         Returns: string;
+      };
+      ies_times_age_matches: {
+        Args: { age: number; groups: Json; relay: boolean; relay_age: string };
+        Returns: boolean;
+      };
+      ies_times_age_range: {
+        Args: { age_group: string };
+        Returns: unknown;
+      };
+      ies_times_candidates: {
+        Args: { input: Json };
+        Returns: {
+          id: string;
+          athlete_id: string;
+          date: string;
+          course: string;
+          event: string;
+          time: number;
+          relay: boolean;
+          search_name: string;
+        }[];
+      };
+      ies_times_json_id: {
+        Args: { race_id: string };
+        Returns: Json;
       };
       ies_times_filtered: {
         Args: { input: Json };

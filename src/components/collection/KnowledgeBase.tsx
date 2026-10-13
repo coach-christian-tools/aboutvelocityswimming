@@ -84,7 +84,7 @@ export default function KnowledgeBase() {
   const activeFilters = Boolean(search || zones.length || lscs.length || region || venue || from || until);
   return <section className={styles.wiki}>
     <p className={styles.intro}>Explore the swimming community through reviewed information and original sources.</p>
-    <div className={styles.tabs} role="tablist" aria-label="Wiki sections">
+    <div className={styles.tabs} role="tablist" aria-label="Swim Atlas sections">
       {tabs.map(item => <button key={item.id} id={`wiki-tab-${item.id}`} role="tab" aria-selected={tab === item.id} aria-controls="wiki-panel" tabIndex={tab === item.id ? 0 : -1} onKeyDown={event => {
         if (!["ArrowRight", "ArrowLeft", "Home", "End"].includes(event.key)) return;
         event.preventDefault(); const index = tabs.findIndex(item => item.id === tab);

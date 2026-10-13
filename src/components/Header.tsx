@@ -229,7 +229,7 @@ function Navigation({ pathname }: { pathname: string }) {
 
 export default function Header() {
   const pathname = usePathname();
-  if (isStaffRoute(pathname)) return null;
+  if (pathname.startsWith("/tools/") || isStaffRoute(pathname)) return null;
   // A route change resets disclosures without an effect or a flash of stale state.
   return <Navigation key={pathname} pathname={pathname} />;
 }

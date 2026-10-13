@@ -7,6 +7,11 @@
   scroll-behavior: smooth;
 }
 
+.marketing-site:has([data-times-page]) {
+  /* Keep the Times header sticky without creating a horizontal scroll container. */
+  overflow-x: clip;
+}
+
 .marketing-site :is(h1, h2, h3, h4, h5, h6) {
   font-family: var(--font-heading);
   font-weight: 700;

@@ -1,4 +1,4 @@
-# USA Swim Wiki geography
+# Swim Atlas geography
 
 The UI is a national → zone → LSC explorer. Public team queries use only approved `knowledge_entries`, fetched by selected LSC in stable 500-record pages. No credentials, collection payloads, or private membership data are included in map assets.
 

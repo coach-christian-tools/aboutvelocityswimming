@@ -63,7 +63,7 @@ try {
   page.on("pageerror", (e) => errors.push(e.message));
   await page.goto("http://127.0.0.1:3001/tools/knowledge");
   await page
-    .getByRole("heading", { name: "USA Swim Wiki", exact: true })
+    .getByRole("heading", { name: "Swim Atlas", exact: true })
     .waitFor();
   await page.getByRole("tab", { name: "Meets", exact: true }).click();
   await page.getByText("Loading…", { exact: true }).waitFor({state:"hidden"});
@@ -76,7 +76,7 @@ try {
   await page.locator("input[type=email]").fill("coach@velocity-swimming.com");
   await page.locator("input[type=password]").fill("Velocity-local-test-2026!");
   await page.locator("button[type=submit]").click();
-  await page.waitForURL("**/tools/workshare/admin/families");
+  await page.waitForURL("http://127.0.0.1:3001/tools");
   await page.goto("http://127.0.0.1:3001/tools/review");
   const article = page.locator("article").filter({ hasText: title });
   await article.getByRole("button", { name: "Hold", exact: true }).click();

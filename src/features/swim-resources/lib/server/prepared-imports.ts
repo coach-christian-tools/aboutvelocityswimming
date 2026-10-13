@@ -40,7 +40,7 @@ export async function listPreparedImports(directory = pendingDirectory()): Promi
       const counts = Object.fromEntries(Object.keys(IMPORT_COLLECTIONS).map(kind => [kind, 0])) as Record<keyof typeof IMPORT_COLLECTIONS, number>;
       for (const row of batch.rows) counts[row.kind]++;
       const kinds = Object.values(counts).filter(count => count > 0).length;
-      const label = kinds > 1 ? 'Combined updates' : counts.athlete ? 'Roster updates' : counts.meet ? 'Regional meet opportunities' : counts.swim ? 'Swimmer results' : counts.team ? 'Team updates' : counts.person ? 'People updates' : counts.venue ? 'Venue updates' : counts.document ? 'Document updates' : counts.standard ? 'Standards updates' : 'Source review';
+      const label = kinds > 1 ? 'Combined updates' : counts.athlete ? 'Roster updates' : counts.meet ? 'Regional meet opportunities' : counts.swim ? 'Swimmer results' : counts.relay ? 'Relay results' : counts.team ? 'Team updates' : counts.person ? 'People updates' : counts.venue ? 'Venue updates' : counts.document ? 'Document updates' : counts.standard ? 'Standards updates' : 'Source review';
       batches.push({ file: entry.name, id: batch.id, collectedAt: batch.collectedAt, label, observations: batch.rows.length, counts, held: batch.rows.filter(row => !row.verified || row.holdReason).length, unresolved: batch.unresolved.length });
     } catch { skipped++; }
   }

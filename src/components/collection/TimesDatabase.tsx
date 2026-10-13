@@ -17,8 +17,10 @@ import {
 import { hasBackendConfiguration } from "@/lib/supabase/client";
 import { formatSwimTime } from "@/features/swim-resources/lib/domain/swim-time";
 import {
-  ageGroups,
-  recordEvents,
+  timesAgeGroups,
+  timesEvents,
+  changeResultCategory,
+  changeTimesCourse,
   resultName,
   dailyBestTimes,
   eventLabel,
@@ -30,6 +32,8 @@ import {
 } from "./times-data";
 import s from "./TimesDatabase.module.css";
 import AthleteBrowser from "./AthleteBrowser";
+import RaceDetails from "./RaceDetails";
+import RelayLineup from "./RelayLineup";
 import { timesUrl } from "./times-api";
 import { useTimes, useDebouncedSearch } from "./use-times";
 import TeamRecords, { type RecordSelection } from "./TeamRecords";
@@ -224,7 +228,7 @@ function FilterChips({
 function AgeGroupPicker({
   value,
   onChange,
-  options = ageGroups.map(([key, label]): [string, string] => [key, label]),
+  options = timesAgeGroups,
 }: {
   value: string[];
   onChange: (value: string[]) => void;
@@ -298,13 +302,15 @@ function Pager({
   page,
   total,
   onChange,
+  label = "Result pages",
 }: {
   page: number;
   total: number;
   onChange: (page: number) => void;
+  label?: string;
 }) {
   return (
-    <nav className={s.pager} aria-label="Result pages">
+    <nav className={s.pager} aria-label={label}>
       <button
         className={s.button}
         disabled={page === 0}
@@ -397,12 +403,14 @@ function Performance({
   names,
   filters,
   onAthlete,
+  onRace,
   onClose,
 }: {
   race: Race | null;
   names: Map<string, string>;
   filters: Filters;
   onAthlete: (id: string) => void;
+  onRace: (race: Race) => void;
   onClose: () => void;
 }) {
   const [basis, setBasis] = useState("bests");
@@ -478,6 +486,7 @@ function Performance({
                     ? "Unofficial"
                     : "Status unreported"}
               </p>
+              <RaceDetails race={race} onAthlete={onAthlete} onRace={onRace} />
               <QueryNotice query={analysis} />
               <div className={s.percentile}>
                 {!race.relay && (
@@ -590,6 +599,7 @@ export default function TimesDatabase() {
   const searchTerm = useDebouncedSearch(search);
   const [page, setPage] = useState(0);
   const [listPage, setListPage] = useState(0);
+  const [relayPage, setRelayPage] = useState(0);
   const [meetId, setMeetId] = useState("");
   const [athleteId, setAthleteId] = useState("");
   const [profileName, setProfileName] = useState("");
@@ -601,12 +611,11 @@ export default function TimesDatabase() {
   const enabled = hasBackendConfiguration;
   const facets = useTimes(enabled ? timesUrl("facets") : null);
   const teams = facets.data?.teams ?? [];
-  const events = facets.data?.events ?? ["100_FR"];
   const years = facets.data?.years ?? [];
   const ageOptions: [string, string][] = [
-    ...ageGroups.map(([key, label]): [string, string] => [key, label]),
+    ...timesAgeGroups,
     ...(facets.data?.relayAges ?? [])
-      .filter((key) => !ageGroups.some(([id]) => id === key))
+      .filter((key) => !timesAgeGroups.some(([id]) => id === key))
       .map((key): [string, string] => [
         key,
         key.replace("&U", " & under").replace("&O", " & over"),
@@ -670,6 +679,11 @@ export default function TimesDatabase() {
         })
       : null,
   );
+  const athleteRelaysQuery = useTimes(
+    enabled && view === "athletes" && athleteId && !athleteSearchOpen
+      ? timesUrl("athlete_relays", { athleteId, offset: relayPage * pageSize })
+      : null,
+  );
   const recordsQuery = useTimes(
     enabled && view === "records" && activeRecordTeam
       ? timesUrl("records", { team: activeRecordTeam })
@@ -698,9 +712,31 @@ export default function TimesDatabase() {
   );
   if (athleteId && profileQuery.data?.name)
     names.set(athleteId, profileQuery.data.name);
-  const rankingEvents = filters.relay
-    ? recordEvents(filters.course || "SCY", []).filter((e) => e.endsWith("-R"))
-    : events;
+  const rankingEvents = [
+    ...timesEvents(filters.course),
+    ...timesEvents(filters.course, true),
+  ];
+  const summaryCourse =
+    view === "athletes" && !athleteSearchOpen
+      ? activeEvent.split("_").at(-1) || "All courses"
+      : filters.course || "All courses";
+  const summaryEvent =
+    view === "athletes" && !athleteSearchOpen
+      ? activeEvent.split("_").slice(0, 2).join("_")
+      : filters.event;
+  const summaryTeam =
+    view === "records"
+      ? recordTeamName
+      : teams.find(([id]) => id === filters.team)?.[1];
+  const selectedAgeLabels =
+    ageOptions
+      .filter(([key]) => filters.ageGroups.includes(key))
+      .map(([, label]) => label)
+      .join(", ") || "All ages";
+  const selectedGenderLabels =
+    (view === "records" ? ["F", "M"] : filters.genders)
+      .map((gender) => ({ F: "Female", M: "Male", X: "Mixed" })[gender])
+      .join(" / ") || "All genders";
   function returnToAthletes() {
     setAthleteSearchOpen(true);
     requestAnimationFrame(() => {
@@ -710,9 +746,25 @@ export default function TimesDatabase() {
     });
   }
   function updateFilter<K extends keyof Filters>(key: K, value: Filters[K]) {
-    setFilters((f) => ({ ...f, [key]: value }));
+    setFilters((f) =>
+      key === "course"
+        ? changeTimesCourse(f, String(value))
+        : { ...f, [key]: value },
+    );
     setPage(0);
     setSelected(null);
+  }
+  function updateResultCategory(relay: boolean) {
+    if (Boolean(filters.relay) === relay) return;
+    setFilters((current) => {
+      const next = changeResultCategory(current, relay, view === "meets");
+      return view === "rankings" && !next.genders.length
+        ? { ...next, genders: ["F"] }
+        : next;
+    });
+    setPage(0);
+    setSelected(null);
+    if (view === "rankings") setSearch("");
   }
   function changeView(next: View) {
     setView(next);
@@ -748,6 +800,8 @@ export default function TimesDatabase() {
     );
   }
   function openAthlete(id: string) {
+    if (!id) return;
+    setRelayPage(0);
     if (view === "athletes") athleteScroll.current = window.scrollY;
     else changeView("athletes");
     setAthleteId(id);
@@ -784,13 +838,19 @@ export default function TimesDatabase() {
           <caption className="sr-only">
             {view === "rankings"
               ? filters.mode === "bests"
-                ? "Event rankings, one best swim per athlete in the selected age groups"
-                : "Event rankings, every matching performance"
-              : "Individual swim results"}
+                ? "Event Rankings, one best swim per athlete in the selected age groups"
+                : "Event Rankings, every matching performance"
+              : filters.relay
+                ? "Relay team results"
+                : "Individual swim results"}
           </caption>
           <thead>
             <tr>
-              {view === "rankings" && <th scope="col">Rank</th>}
+              {view === "rankings" && (
+                <th scope="col" className={s.rank}>
+                  <span className="sr-only">Rank</span>
+                </th>
+              )}
               <th scope="col">
                 {view === "athletes"
                   ? "Meet"
@@ -798,9 +858,10 @@ export default function TimesDatabase() {
                     ? "Relay team"
                     : "Athlete"}
               </th>
-              <th scope="col">Event</th>
+              {view !== "rankings" && <th scope="col">Event</th>}
               <th scope="col">Time</th>
-              <th scope="col">{view === "rankings" ? "Meet" : "Round"}</th>
+              <th scope="col">{view === "rankings" ? "Date" : "Round"}</th>
+              {view === "rankings" && <th scope="col">Team</th>}
             </tr>
           </thead>
           <tbody>
@@ -815,15 +876,7 @@ export default function TimesDatabase() {
                   {view === "athletes" ? (
                     race.meet
                   ) : race.relay ? (
-                    <button
-                      className={s.link}
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        selectRace(race);
-                      }}
-                    >
-                      {resultName(race, names)}
-                    </button>
+                    <RelayLineup race={race} />
                   ) : (
                     <>
                       <button
@@ -837,14 +890,23 @@ export default function TimesDatabase() {
                       </button>
                     </>
                   )}
+                  {view === "rankings" &&
+                    race.resultOrigin === "relay_leadoff" && (
+                      <span className={s.resultTag}>Verified lead-off</span>
+                    )}
                 </td>
-                <td>
-                  {race.course} {race.event.split("_").slice(0, 2).join(" ")}
-                </td>
+                {view !== "rankings" && (
+                  <td>
+                    {race.course} {race.event.split("_").slice(0, 2).join(" ")}
+                    {race.resultOrigin === "relay_leadoff" && (
+                      <span className={s.resultTag}>Verified lead-off</span>
+                    )}
+                  </td>
+                )}
                 <td>
                   <button
                     className={s.time}
-                    aria-label={`Analyze ${race.status === "OK" ? formatSwimTime(race.time) : race.status} by ${names.get(race.athleteId) ?? race.athleteId}`}
+                    aria-label={`Analyze ${race.status === "OK" ? formatSwimTime(race.time) : race.status} by ${resultName(race, names)}`}
                     onClick={() => selectRace(race)}
                   >
                     {race.status === "OK"
@@ -854,23 +916,30 @@ export default function TimesDatabase() {
                 </td>
                 <td>
                   {view === "rankings" ? (
-                    <>
-                      <button
-                        className={s.link}
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          changeView("meets");
-                          setMeetId(race.meetId);
-                          showProfile();
-                        }}
-                      >
-                        {race.meet}
-                      </button>
-                    </>
+                    <button
+                      className={s.link}
+                      title={race.meet}
+                      aria-label={`View ${race.meet} results from ${date(race.date)}`}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        changeView("meets");
+                        setMeetId(race.meetId);
+                        showProfile();
+                      }}
+                    >
+                      {date(race.date)}
+                    </button>
                   ) : (
                     (rounds[race.round] ?? race.round)
                   )}
                 </td>
+                {view === "rankings" && (
+                  <td className={s.teamCell}>
+                    {race.teamName ||
+                      teams.find(([id]) => id === race.team)?.[1] ||
+                      "Team unavailable"}
+                  </td>
+                )}
               </tr>
             ))}
           </tbody>
@@ -891,26 +960,52 @@ export default function TimesDatabase() {
     </>
   );
   return (
-    <main className={s.page}>
-      <nav className={s.tabs} aria-label="Explore times">
-        {(
-          [
-            ["rankings", "Event rankings", BarChart3],
-            ["records", "Team Records", Trophy],
-            ["meets", "Meet results", CalendarDays],
-            ["athletes", "Athletes", Users],
-          ] as const
-        ).map(([key, label, Icon]) => (
-          <button
-            key={key}
-            aria-pressed={view === key}
-            onClick={() => changeView(key)}
-          >
-            <Icon size={17} />
-            {label}
-          </button>
-        ))}
-      </nav>
+    <main className={s.page} data-times-page="">
+      <header className={s.toolHeader}>
+        <nav className={s.tabs} aria-label="Explore times">
+          {(
+            [
+              ["rankings", "Event Rankings", BarChart3],
+              ["records", "Team Records", Trophy],
+              ["meets", "Meet Results", CalendarDays],
+              ["athletes", "Athletes", Users],
+            ] as const
+          ).map(([key, label, Icon]) => (
+            <button
+              key={key}
+              aria-pressed={view === key}
+              onClick={() => changeView(key)}
+            >
+              <Icon size={17} />
+              {label}
+            </button>
+          ))}
+        </nav>
+        <dl className={s.filterSummary} aria-label="Selected times filters">
+          <div>
+            <dt>Course</dt>
+            <dd>{summaryCourse}</dd>
+          </div>
+          <div>
+            <dt>Event</dt>
+            <dd>{summaryEvent ? eventLabel(summaryEvent) : "All events"}</dd>
+          </div>
+          <div>
+            <dt>Age group</dt>
+            <dd>{selectedAgeLabels}</dd>
+          </div>
+          <div>
+            <dt>Gender</dt>
+            <dd>{selectedGenderLabels}</dd>
+          </div>
+          {summaryTeam && (
+            <div>
+              <dt>Team</dt>
+              <dd>{summaryTeam}</dd>
+            </div>
+          )}
+        </dl>
+      </header>
       {!hasBackendConfiguration && (
         <div className={s.notice} role="status">
           The times database is not connected yet. Approved results will appear
@@ -952,7 +1047,7 @@ export default function TimesDatabase() {
                 className={s.panel}
                 aria-label={
                   view === "rankings"
-                    ? "Event rankings"
+                    ? "Event Rankings"
                     : view === "meets"
                       ? "Meet browser"
                       : "Athlete browser"
@@ -1031,10 +1126,11 @@ export default function TimesDatabase() {
                       <PopupPicker
                         label="Event"
                         value={filters.event}
-                        onChange={(v) => updateFilter("event", v)}
-                        options={(filters.relay ? rankingEvents : events).map(
-                          (e) => [e, eventLabel(e)],
-                        )}
+                        onChange={(event) => {
+                          updateResultCategory(event.endsWith("-R"));
+                          updateFilter("event", event);
+                        }}
+                        options={rankingEvents.map((e) => [e, eventLabel(e)])}
                       />
                       <fieldset className={s.courseField}>
                         <legend>Gender</legend>
@@ -1042,14 +1138,13 @@ export default function TimesDatabase() {
                           {[
                             ["F", "Female"],
                             ["M", "Male"],
+                            ...(filters.relay ? [["X", "Mixed"]] : []),
                           ].map(([id, label]) => (
                             <button
                               key={id}
                               aria-pressed={filters.genders.includes(id)}
                               onClick={() => {
-                                const current = filters.genders.filter(
-                                  (g) => g !== "X",
-                                );
+                                const current = filters.genders;
                                 const next = current.includes(id)
                                   ? current.filter((g) => g !== id)
                                   : [...current, id];
@@ -1205,7 +1300,9 @@ export default function TimesDatabase() {
                       <h2>{chosenMeet.name}</h2>
                       <p>
                         {date(chosenMeet.date)} · {number(chosenMeet.count)}{" "}
-                        approved results · individual swims below
+                        approved results ·{" "}
+                        {filters.relay ? "relay teams" : "individual swims"}{" "}
+                        below
                       </p>
                     </div>
                   </div>
@@ -1213,9 +1310,12 @@ export default function TimesDatabase() {
                     <PopupPicker
                       label="Meet event"
                       value={filters.event}
-                      onChange={(v) => updateFilter("event", v)}
+                      onChange={(event) => {
+                        if (event) updateResultCategory(event.endsWith("-R"));
+                        updateFilter("event", event);
+                      }}
                       all="All events"
-                      options={events.map((e) => [e, eventLabel(e)])}
+                      options={rankingEvents.map((e) => [e, eventLabel(e)])}
                     />
                     <FilterChips
                       label="Meet course"
@@ -1227,6 +1327,26 @@ export default function TimesDatabase() {
                           (course): [string, string] => [course, course],
                         ),
                       ]}
+                    />
+                    <FilterChips
+                      label="Meet gender"
+                      value={filters.genders[0] ?? ""}
+                      onChange={(value) =>
+                        updateFilter("genders", value ? [value] : [])
+                      }
+                      options={[
+                        ["", "All"],
+                        ["F", "Female"],
+                        ["M", "Male"],
+                        ...(filters.relay
+                          ? [["X", "Mixed"] as [string, string]]
+                          : []),
+                      ]}
+                    />
+                    <AgeGroupPicker
+                      options={ageOptions}
+                      value={filters.ageGroups}
+                      onChange={(value) => updateFilter("ageGroups", value)}
                     />
                     <PopupPicker
                       label="Meet team"
@@ -1259,7 +1379,13 @@ export default function TimesDatabase() {
                         <p>
                           {pbs.length} personal bests ·{" "}
                           {number(profileQuery.data?.count ?? 0)} individual
-                          results
+                          results ·{" "}
+                          {number(
+                            profileQuery.data?.relayCount ??
+                              athleteRelaysQuery.data?.total ??
+                              0,
+                          )}{" "}
+                          relay appearances
                         </p>
                       )}
                     </div>
@@ -1284,6 +1410,9 @@ export default function TimesDatabase() {
                         }}
                       >
                         <span>{eventLabel(r.event)}</span>
+                        {r.resultOrigin === "relay_leadoff" && (
+                          <span className={s.resultTag}>Verified lead-off</span>
+                        )}
                         <strong>{formatSwimTime(r.time)}</strong>
                         <span>
                           {r.course} · {date(r.date)}
@@ -1314,17 +1443,92 @@ export default function TimesDatabase() {
                   {historyQuery.data && <ProgressChart races={history} />}
                   <QueryNotice query={rowsQuery} />
                   {rowsQuery.data && table}
+                  <section aria-label="Athlete relay participation">
+                    <div className={s.toolbar}>
+                      <h3>Relay participation</h3>
+                      <span className={s.muted}>
+                        Complete team results · your recorded leg
+                      </span>
+                    </div>
+                    <QueryNotice query={athleteRelaysQuery} />
+                    {athleteRelaysQuery.data && (
+                      <>
+                        <div className={s.tableWrap}>
+                          <table className={s.table}>
+                            <caption className="sr-only">
+                              Athlete relay participation
+                            </caption>
+                            <thead>
+                              <tr>
+                                <th scope="col">Meet</th>
+                                <th scope="col">Relay</th>
+                                <th scope="col">Leg</th>
+                                <th scope="col">Team time</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              {(athleteRelaysQuery.data.rows ?? []).map(
+                                ({ race }) => {
+                                  const member = race.members?.find(
+                                    (member) => member.athleteId === athleteId,
+                                  );
+                                  return (
+                                    <tr key={race.id}>
+                                      <td>
+                                        {race.meet}
+                                        <span className={s.resultTag}>
+                                          {date(race.date)}
+                                        </span>
+                                      </td>
+                                      <td>
+                                        {eventLabel(race.event)} · {race.course}
+                                      </td>
+                                      <td>{member?.leg ?? "—"}</td>
+                                      <td>
+                                        <button
+                                          className={s.time}
+                                          aria-label={`View relay ${eventLabel(race.event)} at ${race.meet}`}
+                                          onClick={() => selectRace(race)}
+                                        >
+                                          {race.status === "OK"
+                                            ? formatSwimTime(race.time)
+                                            : race.status || "—"}
+                                        </button>
+                                      </td>
+                                    </tr>
+                                  );
+                                },
+                              )}
+                            </tbody>
+                          </table>
+                        </div>
+                        {!athleteRelaysQuery.data.rows?.length && (
+                          <p className={s.empty}>
+                            No recorded relay participation is available.
+                          </p>
+                        )}
+                        <Pager
+                          page={relayPage}
+                          total={athleteRelaysQuery.data.total ?? 0}
+                          onChange={setRelayPage}
+                          label="Relay participation pages"
+                        />
+                      </>
+                    )}
+                  </section>
                 </section>
               )}
               <p className={s.footer}>
                 Approved IES dataset only; coverage may be incomplete. Rankings
                 exclude disqualifications, scratches, and missing times.
-                Individual personal bests exclude relays; relay rankings use
-                complete team results. Equal times share a rank. Individual age
-                groups use age at the swim; relay groups use the reported event
-                age group. All IES Teams includes unattached IES entries. Gender
-                filters include only the selected reported genders. Unreported
-                ages are included when no age group is selected.
+                Verified flat-start relay lead-offs can count toward individual
+                personal bests; flying-start splits remain relay details. Relay
+                rankings use complete team results. Equal times share a rank.
+                Individual age groups use age at the swim; relay groups use the
+                reported event age group. All IES Teams includes unattached IES
+                entries. Gender filters include only the selected reported
+                genders. Unreported ages are included when no age group is
+                selected.
               </p>
             </>
           )}
@@ -1341,6 +1545,7 @@ export default function TimesDatabase() {
             names={names}
             filters={filters}
             onAthlete={openAthlete}
+            onRace={selectRace}
             onClose={() => setSelected(null)}
           />
         </div>

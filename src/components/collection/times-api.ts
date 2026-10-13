@@ -8,6 +8,8 @@ export const timesKinds = [
   "meet_results",
   "profile",
   "athlete_history",
+  "athlete_relays",
+  "race",
   "records",
   "athletes",
 ] as const;
@@ -27,10 +29,12 @@ export interface TimesResponse {
   events?: string[];
   years?: string[];
   relayAges?: string[];
+  relayEvents?: string[];
   meets?: MeetSummary[];
   meet?: MeetSummary;
   name?: string;
   count?: number;
+  relayCount?: number;
   pbs?: Race[];
   points?: Race[];
   races?: Race[];
@@ -160,6 +164,8 @@ export function parseTimesQuery(params: URLSearchParams): {
     meet_results: ["meetId"],
     profile: ["athleteId"],
     athlete_history: ["athleteId", "historyEvent"],
+    athlete_relays: ["athleteId"],
+    race: ["raceId"],
     records: ["team"],
     athletes: ["team"],
   };

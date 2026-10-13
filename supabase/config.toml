@@ -418,9 +418,9 @@ enabled = true
 verify_jwt = false
 
 [auth.email.template.magic_link]
-subject = "Your Velocity Swimming sign-in code"
+subject = "{{ .Token }} is your Velocity Swimming sign-in code"
 content_path = "./supabase/templates/code.html"
 
 [auth.email.template.confirmation]
-subject = "Your Velocity Swimming sign-in code"
+subject = "{{ .Token }} is your Velocity Swimming sign-in code"
 content_path = "./supabase/templates/code.html"

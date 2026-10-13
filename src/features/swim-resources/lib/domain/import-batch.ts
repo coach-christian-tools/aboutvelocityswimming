@@ -1,10 +1,11 @@
 import { validateObservation, factFields, type ObservationEvidence } from './evidence.ts';
 import { ENTITY_COLLECTIONS, validateEntityPatch, validateEntityLinks, type EntityKind } from './entities.ts';
-import type { Athlete, Meet, Swim } from '@/features/swim-resources/types/schema';
+import type { Athlete, Meet, Swim, RelayResult } from '@/features/swim-resources/types/schema';
+import { canonicalRelayResult, validateLeadOff, validateRaceSplits } from './relay.ts';
 import { isCalendarDate } from './date.ts';
 import { parseSwimTime } from './swim-time.ts';
 
-export type ImportKind = 'athlete' | 'meet' | 'swim' | EntityKind | 'standard';
+export type ImportKind = 'athlete' | 'meet' | 'swim' | 'relay' | EntityKind | 'standard';
 export type JsonRecord = Record<string, unknown>;
 export interface ImportSource {
   id: string;
@@ -51,7 +52,7 @@ export interface ImportPreviewRow {
   relationshipDependencies?: Record<string, string>;
   reviewed?: boolean;
 }
-export const IMPORT_COLLECTIONS = { athlete: 'athletes', meet: 'meets', swim: 'swims', standard: 'standards', ...ENTITY_COLLECTIONS } as const;
+export const IMPORT_COLLECTIONS = { athlete: 'athletes', meet: 'meets', swim: 'swims', relay: 'relay_results', standard: 'standards', ...ENTITY_COLLECTIONS } as const;
 const safeId = (value: unknown): value is string => typeof value === 'string' && /^[a-zA-Z0-9_-]{1,128}$/.test(value);
 const record = (value: unknown): value is JsonRecord => !!value && typeof value === 'object' && !Array.isArray(value);
 const isoTimestamp = (value: unknown): value is string => typeof value === 'string' && /^\d{4}-\d{2}-\d{2}T/.test(value) && Number.isFinite(Date.parse(value));
@@ -164,7 +165,8 @@ const allowed: Record<ImportKind, string[]> = {
   standard: ['category', 'id', 'name', 'governingBody', 'seasonYears', 'effectiveDate', 'expirationDate', 'cuts'],
   athlete: ['teamId', 'personId', 'documentIds', 'id', 'name', 'dob', 'gender', 'status', 'currentGroup', 'aliases', 'teamUnifyId', 'swimsId', 'swimcloudId', 'graduatingYear', 'contact'],
   meet: ['teamId', 'hostTeamId', 'venueId', 'contactPersonIds', 'documentIds', 'id', 'name', 'sanctionNumber', 'host', 'hostClub', 'location', 'dates', 'type', 'venue', 'events'],
-  swim: ['teamId', 'id', 'athleteId', 'externalResult', 'athleteName', 'gender', 'ageAtSwim', 'ageGroup', 'eventCode', 'distance', 'stroke', 'course', 'isOfficial', 'isRelay', 'relay', 'timeMs', 'timeDisplay', 'splits', 'reactionTimeMs', 'status', 'dqDetails', 'meet', 'round'],
+  swim: ['teamId', 'id', 'athleteId', 'externalResult', 'athleteName', 'gender', 'ageAtSwim', 'ageGroup', 'eventCode', 'distance', 'stroke', 'course', 'isOfficial', 'isRelay', 'relay', 'timeMs', 'timeDisplay', 'splits', 'splitCoverage', 'resultOrigin', 'parentRelayResultId', 'leadOffVerification', 'reactionTimeMs', 'status', 'dqDetails', 'meet', 'round'],
+  relay: ['id', 'teamId', 'relayName', 'eventCode', 'distance', 'stroke', 'course', 'gender', 'ageGroup', 'round', 'status', 'timeMs', 'timeDisplay', 'isOfficial', 'members', 'splits', 'splitCoverage', 'meet'],
 };
 export function validateImportData(kind: ImportKind, data: JsonRecord): void {
   if (Object.hasOwn(ENTITY_COLLECTIONS, kind)) { validateEntityPatch(kind as EntityKind, data); return; }
@@ -185,6 +187,7 @@ export function validateImportData(kind: ImportKind, data: JsonRecord): void {
   validateEntityLinks(data);
   for (const key of Object.keys(data)) if (!allowed[kind].includes(key)) throw new Error('Import cannot write ' + key + '. Coaching fields cannot be imported.');
   if (data.id !== undefined && !safeId(data.id)) throw new Error('Invalid document id.');
+  if (kind === 'relay') { canonicalRelayResult(data); return; }
   if (kind === 'athlete') {
     for (const key of ['teamUnifyId', 'swimsId', 'swimcloudId']) if (data[key] !== undefined && (typeof data[key] !== 'string' || !String(data[key]).trim())) throw new Error('External IDs must be nonempty strings.');
     if (data.name !== undefined) keys(data.name, ['first', 'last', 'preferred', 'middle'], 'name');
@@ -232,7 +235,9 @@ export function validateImportData(kind: ImportKind, data: JsonRecord): void {
       if (!data.isRelay || ![1, 2, 3, 4].includes(Number(data.relay.leg)) || typeof data.relay.isLeadOffFlatStart !== 'boolean' || typeof data.relay.teamName !== 'string') throw new Error('Invalid observed relay context.');
     }
     if (data.isRelay === true && !data.relay) throw new Error('Relay races require observed leg and start context.');
-    if (data.splits !== undefined || data.reactionTimeMs !== undefined || data.dqDetails !== undefined) throw new Error('Detailed race telemetry needs separate verification; import the core official result first.');
+    validateRaceSplits(data);
+    validateLeadOff(data);
+    if (data.reactionTimeMs !== undefined || data.dqDetails !== undefined) throw new Error('Detailed race telemetry needs separate verification; import the core official result first.');
     if (data.externalResult !== undefined) {
       keys(data.externalResult, ['namespace', 'id'], 'external result');
       if (!safeId(data.externalResult.namespace) || !safeId(data.externalResult.id)) throw new Error('A result needs a stable source namespace and id.');
@@ -243,4 +248,4 @@ export function validateImportData(kind: ImportKind, data: JsonRecord): void {
     }
   }
 }
-export type ImportedEntity = Athlete | Meet | Swim;
+export type ImportedEntity = Athlete | Meet | Swim | RelayResult;

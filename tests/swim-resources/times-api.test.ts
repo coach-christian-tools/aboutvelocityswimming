@@ -36,6 +36,8 @@ describe("IES times requests", () => {
       "view=rankings&course=bad",
       "view=rankings&relay=1",
       "view=profile",
+      "view=athlete_relays",
+      "view=race",
     ])
       expect(() => parseTimesQuery(new URLSearchParams(query))).toThrow();
   });
@@ -87,5 +89,25 @@ describe("IES times requests", () => {
         { ...initialFilters, genders: ["F", "M"] },
       ),
     ).toBe(false);
+  });
+});
+
+describe("relay result requests", () => {
+  it("supports bounded athlete relay participation and individual race detail lookups", () => {
+    expect(
+      parseTimesQuery(
+        new URLSearchParams("view=athlete_relays&athleteId=a&offset=25"),
+      ).input,
+    ).toMatchObject({ athleteId: "a", offset: 25, limit: 25 });
+    expect(
+      parseTimesQuery(new URLSearchParams("view=race&raceId=relay-a")).input,
+    ).toMatchObject({ raceId: "relay-a" });
+    expect(
+      parseTimesQuery(
+        new URLSearchParams(
+          "view=rankings&relay=true&genders=X&mode=performances",
+        ),
+      ).input,
+    ).toMatchObject({ relay: true, genders: ["X"], mode: "performances" });
   });
 });

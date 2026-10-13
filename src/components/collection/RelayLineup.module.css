@@ -1,0 +1,19 @@
+.lineup {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: 4px 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--text-main);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: left;
+}
+.lineup li {
+  white-space: nowrap;
+}
+.lineup + .lineup {
+  margin-top: 8px;
+}

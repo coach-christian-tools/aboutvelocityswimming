@@ -1,6 +1,7 @@
 import type { Swim } from '@/features/swim-resources/types/schema';
 import { isCalendarDate } from './date.ts';
 import { formatSwimTime, parseSwimTime } from './swim-time.ts';
+import { validateLeadOff, validateRaceSplits } from './relay.ts';
 
 export function canonicalSwim(input: Partial<Swim>): Swim {
   const fail = (field: string): never => { throw new Error(`Swim import requires a valid ${field}. Missing data must not be invented.`); };
@@ -18,6 +19,8 @@ export function canonicalSwim(input: Partial<Swim>): Swim {
   if (!input.meet?.name?.trim() || !isCalendarDate(input.meet?.date)) fail('meet name and date');
   const timeMs = parseSwimTime(input.timeMs ?? input.timeDisplay);
   if (input.status === 'OK' && (!timeMs || timeMs <= 0)) fail('positive time');
+  validateRaceSplits({ ...input, timeMs });
+  validateLeadOff({ ...input, timeMs });
   const meetId = input.meet!.id || `${input.meet!.name}_${input.meet!.date}`.toLowerCase().replace(/[^a-z0-9_-]/g, '_');
   const eventCode = `${input.distance}_${input.stroke}_${input.course}`;
   if (input.eventCode && input.eventCode !== eventCode && !input.isRelay) fail('eventCode matching distance, stroke and course');

@@ -61,12 +61,60 @@ export interface Athlete {
   };
 }
 
+export interface RaceSplit {
+  distance: number;
+  cumulativeMs: number;
+  lapMs?: number;
+}
+export type SplitCoverage = 'complete' | 'partial' | 'unavailable';
+export interface LeadOffVerification {
+  verified: true;
+  flatStart: true;
+  timingVerified: true;
+  leadOffStatus: 'OK';
+  sourceUrl: string;
+}
+export interface RelayMember {
+  leg: 1 | 2 | 3 | 4;
+  athleteId?: string;
+  name: string;
+  gender?: 'F' | 'M' | 'X';
+  stroke?: 'FR' | 'BK' | 'BR' | 'FL';
+  timeMs?: number;
+  leadOffEligible?: boolean;
+}
+/** A team performance, independent of any one swimmer's result. */
+export interface RelayResult {
+  id: string;
+  teamId: string;
+  relayName: string;
+  eventCode: string;
+  distance: number;
+  stroke: 'FR' | 'IM';
+  course: 'SCY' | 'SCM' | 'LCM';
+  gender: 'F' | 'M' | 'X';
+  ageGroup: string;
+  round: 'F' | 'P' | 'S' | 'TT';
+  status: 'OK' | 'DQ' | 'DFS' | 'NS';
+  timeMs: number;
+  timeDisplay: string;
+  isOfficial: boolean;
+  members: RelayMember[];
+  splits: RaceSplit[];
+  splitCoverage: SplitCoverage;
+  meet: { id: string; name: string; date: string };
+}
+
 export interface Swim {
   teamId?: string; // Missing legacy ownership resolves to Velocity Swimming.
   id: string;                         // Prefer stable externalResult identity; preserve existing IDs.
   athleteId: string;                  // Foreign key to `athletes`
   isOfficial?: boolean; // False for exhibition or unofficial times.
   externalResult?: { namespace: string; id: string }; // Stable source race identity, including repeated swim-offs.
+  resultOrigin?: 'relay_leadoff';
+  parentRelayResultId?: string;
+  leadOffVerification?: LeadOffVerification;
+  splitCoverage?: SplitCoverage;
   athleteName: {
     first: string;
     last: string;

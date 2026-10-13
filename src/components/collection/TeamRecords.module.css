@@ -2,7 +2,7 @@
   min-width: 0;
 }
 .controls {
-  scroll-margin-top: 110px;
+  scroll-margin-top: 165px;
   display: flex;
   align-items: center;
   gap: 24px;
@@ -52,7 +52,7 @@
 .course,
 .ageSection,
 .topAnchor {
-  scroll-margin-top: 110px;
+  scroll-margin-top: 165px;
 }
 .course {
   margin-bottom: 36px;
@@ -218,4 +218,19 @@
 .relayRow > td,
 .relayRow > th {
   border-top: 2px solid var(--border);
+}
+
+.lineup {
+  display: block;
+  max-width: 260px;
+  white-space: normal;
+  font-size: 10px;
+  line-height: 1.5;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+@media (max-width: 600px) {
+  .lineup {
+    max-width: 130px;
+  }
 }

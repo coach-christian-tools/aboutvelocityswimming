@@ -85,13 +85,88 @@ races.push(
     gender: "M",
     athleteName: "Male Fixture",
   }),
-  race("relay", "athlete0", "100_FR-R", 60000, {
+);
+const relayMembers = [
+  {
+    leg: 1,
+    athleteId: "athlete0",
+    name: names.get("athlete0"),
+    stroke: "FR",
+    timeMs: 28000,
+    leadOffEligible: true,
+  },
+  {
+    leg: 2,
+    athleteId: "athlete1",
+    name: names.get("athlete1"),
+    stroke: "FR",
+    timeMs: 31000,
+  },
+  { leg: 3, name: "Unlinked Fixture", stroke: "FR" },
+  { leg: 4, athleteId: "athlete3", name: names.get("athlete3"), stroke: "FR" },
+];
+races.push(
+  ...Array.from({ length: 26 }, (_, index) =>
+    race("relay" + index, "", "200_FR-R", 120000 + index * 1000, {
+      relay: true,
+      gender: "X",
+      relayAgeGroup: "11-12",
+      relayName:
+        index === 0 ? "Mixed fixture relay" : "Mixed fixture relay " + index,
+      members: relayMembers,
+      splitCoverage: "partial",
+      splits: [
+        { distance: 50, cumulativeMs: 28000, lapMs: 28000 },
+        { distance: 100, cumulativeMs: 59000, lapMs: 31000 },
+      ],
+    }),
+  ),
+);
+races.push(
+  race("girls-relay", "", "200_MED-R", 130000, {
+    relay: true,
+    gender: "F",
+    relayAgeGroup: "11-12",
+    relayName: "Girls fixture relay",
+    members: relayMembers,
+  }),
+  race("boys-relay", "", "200_MED-R", 125000, {
+    relay: true,
+    gender: "M",
+    relayAgeGroup: "11-12",
+    relayName: "Boys fixture relay",
+    members: relayMembers,
+  }),
+  race("mixed-only-event", "", "300_FR-R", 180000, {
+    relay: true,
+    gender: "X",
+    relayAgeGroup: "13-15",
+    relayName: "Mixed-only fixture relay",
+    members: relayMembers,
+  }),
+  race("relay-dq", "", "200_FR-R", 110000, {
     relay: true,
     gender: "X",
     relayAgeGroup: "11-12",
-    relayName: "Mixed fixture relay",
+    relayName: "Disqualified fixture relay",
+    status: "DQ",
+    members: relayMembers,
+    splitCoverage: "unavailable",
   }),
 );
+races.push(
+  race("leadoff", "athlete0", "50_FR", 28000, {
+    resultOrigin: "relay_leadoff",
+    parentRelayResultId: "relay-dq",
+    splits: [{ distance: 50, cumulativeMs: 28000, lapMs: 28000 }],
+    splitCoverage: "complete",
+  }),
+);
+races.find((race) => race.id === "athlete0_1").splits = [
+  { distance: 50, cumulativeMs: 29000, lapMs: 29000 },
+  { distance: 100, cumulativeMs: 60000, lapMs: 31000 },
+];
+races.find((race) => race.id === "athlete0_1").splitCoverage = "complete";
 const browser = await chromium.launch({ headless: true });
 const errors = [];
 async function setup({ failure = false, expiry = false } = {}) {
@@ -121,7 +196,8 @@ async function setup({ failure = false, expiry = false } = {}) {
     const filters = {
       ...initialFilters,
       ...input,
-      genders: q.get("genders")?.split(",") ?? ["F"],
+      genders:
+        q.get("genders")?.split(",") ?? (view === "rankings" ? ["F"] : []),
       relay: q.get("relay") === "true",
     };
     let data;
@@ -146,7 +222,7 @@ async function setup({ failure = false, expiry = false } = {}) {
       ).filter(
         ({ race }) =>
           !q.get("search") ||
-          race.athleteName
+          (race.relay ? race.relayName : race.athleteName)
             .toLowerCase()
             .includes(q.get("search").toLowerCase()),
       );
@@ -163,16 +239,26 @@ async function setup({ failure = false, expiry = false } = {}) {
         matches(r, { ...filters, event: chosen.event, course: chosen.course }),
       );
       data = {
-        stats: percentile(
-          chosen.time,
-          q.get("basis") === "swims" ? eligible : bestTimes(eligible),
-        ),
+        count: eligible.length,
+        stats: chosen.relay
+          ? null
+          : percentile(
+              chosen.time,
+              q.get("basis") === "swims" ? eligible : bestTimes(eligible),
+            ),
       };
     }
     if (view === "profile")
       data = {
         name: names.get(q.get("athleteId")),
         count: own.length,
+        relayCount: races.filter(
+          (race) =>
+            race.relay &&
+            race.members?.some(
+              (member) => member.athleteId === q.get("athleteId"),
+            ),
+        ).length,
         pbs: bestTimes(own),
         events: [...new Set(own.map((r) => r.event + "_" + r.course))],
       };
@@ -188,6 +274,25 @@ async function setup({ failure = false, expiry = false } = {}) {
         points: dailyBestTimes(all),
       };
     }
+    if (view === "athlete_relays") {
+      const all = races.filter(
+        (race) =>
+          race.relay &&
+          race.members?.some(
+            (member) => member.athleteId === q.get("athleteId"),
+          ),
+      );
+      data = {
+        rows: all
+          .slice(input.offset, input.offset + 25)
+          .map((race) => ({ race })),
+        total: all.length,
+      };
+    }
+    if (view === "race") {
+      const chosen = races.find((race) => race.id === q.get("raceId"));
+      data = { rows: chosen ? [{ race: chosen }] : [], total: chosen ? 1 : 0 };
+    }
     const meet = {
       id: "meet",
       name: "Fixture meet",
@@ -196,17 +301,26 @@ async function setup({ failure = false, expiry = false } = {}) {
       courses: ["SCY"],
     };
     if (view === "meets") data = { meets: [meet], total: 1 };
-    if (view === "meet_results")
+    if (view === "meet_results") {
+      const all = races.filter((race) => matches(race, filters));
       data = {
         meet,
-        rows: races
-          .filter((r) => !r.relay)
-          .slice(0, 25)
+        rows: all
+          .slice(input.offset, input.offset + 25)
           .map((race) => ({ race })),
-        total: races.filter((r) => !r.relay).length,
+        total: all.length,
       };
+    }
     if (view === "records")
-      data = { races: [...teamRecords(races, "VS").values()].flat() };
+      data = {
+        races: [
+          ...new Map(
+            [...teamRecords(races, "VS").values()]
+              .flat()
+              .map((race) => [race.id, race]),
+          ).values(),
+        ],
+      };
     if (view === "athletes")
       data = {
         groups: athletePages(
@@ -234,11 +348,78 @@ async function setup({ failure = false, expiry = false } = {}) {
 try {
   const { page, calls } = await setup();
   await page.goto(base + "/tools/times");
-  await page.getByRole("table").first().waitFor();
+  await page
+    .getByRole("table")
+    .first()
+    .waitFor()
+    .catch(async (error) => {
+      console.error(
+        "Fixture calls",
+        calls.map((q) => q.toString()),
+        "Page errors",
+        errors,
+        await page.locator("body").innerText(),
+      );
+      throw error;
+    });
   assert.deepEqual(calls.map((q) => q.get("view")).sort(), [
     "facets",
     "rankings",
   ]);
+  assert.equal(
+    await page
+      .getByRole("navigation", { name: "Main navigation", exact: true })
+      .count(),
+    0,
+  );
+  const summary = page.getByLabel("Selected times filters");
+  assert.deepEqual(await summary.locator("dd").allTextContents(), [
+    "SCY",
+    "100 Freestyle",
+    "All ages",
+    "Female",
+  ]);
+  const rankedTable = page.getByRole("table").first();
+  assert.deepEqual(
+    await rankedTable.getByRole("columnheader").allTextContents(),
+    ["Rank", "Athlete", "Time", "Date", "Team"],
+  );
+  assert.equal(
+    await rankedTable
+      .getByRole("columnheader", { name: "Rank", exact: true })
+      .locator("span")
+      .getAttribute("class"),
+    "sr-only",
+  );
+  assert.equal(
+    await rankedTable
+      .locator("tbody tr")
+      .first()
+      .locator("td")
+      .first()
+      .evaluate((cell) => getComputedStyle(cell).textAlign),
+    "center",
+  );
+  await page.getByRole("button", { name: "Team", exact: true }).click();
+  await page
+    .getByRole("dialog")
+    .getByRole("button", { name: "Velocity Swimming", exact: true })
+    .click();
+  await summary.getByText("Velocity Swimming", { exact: true }).waitFor();
+  await page.getByRole("button", { name: "Age group", exact: true }).click();
+  await page
+    .getByRole("dialog")
+    .getByRole("button", { name: "12 & Under", exact: true })
+    .click();
+  await page
+    .getByRole("dialog")
+    .getByRole("button", { name: "Done", exact: true })
+    .click();
+  await summary.getByText("12 & Under", { exact: true }).waitFor();
+  await rankedTable.getByText("Swimmer 00 Fixture", { exact: true }).waitFor();
+  await page
+    .getByRole("button", { name: "Reset filters", exact: true })
+    .click();
   const female = page.getByRole("button", { name: "Female", exact: true }),
     male = page.getByRole("button", { name: "Male", exact: true });
   await female.click();
@@ -289,26 +470,105 @@ try {
     .getByRole("heading", { name: "Freestyle", exact: true })
     .waitFor();
   await page.keyboard.press("Escape");
-  await page.getByRole("button", { name: "Meet results", exact: true }).click();
+  await page.getByRole("button", { name: "Meet Results", exact: true }).click();
   await page.getByText("Fixture meet", { exact: true }).first().click();
   await page
     .getByRole("heading", { name: "Fixture meet", exact: true })
     .waitFor();
   await page.getByRole("button", { name: "Team Records", exact: true }).click();
+  const recordsPanel = page.getByRole("region", {
+    name: "Team records",
+    exact: true,
+  });
+  await recordsPanel
+    .getByRole("button", {
+      name: "View girls 11–12 SCY 200 MED-R rankings",
+      exact: true,
+    })
+    .first()
+    .waitFor();
+  await recordsPanel
+    .getByRole("button", {
+      name: "View boys 11–12 SCY 200 MED-R rankings",
+      exact: true,
+    })
+    .first()
+    .waitFor();
+  assert.equal(
+    await recordsPanel
+      .getByText("Girls fixture relay", { exact: true })
+      .count(),
+    0,
+  );
+  assert.equal(
+    await recordsPanel.getByText("Boys fixture relay", { exact: true }).count(),
+    0,
+  );
+  assert.equal(
+    await recordsPanel
+      .getByRole("columnheader", { name: "Mixed", exact: true })
+      .count(),
+    0,
+  );
+  assert.equal(
+    await recordsPanel.getByRole("button", { name: /^View mixed / }).count(),
+    0,
+  );
+  assert.equal(
+    await recordsPanel
+      .getByText("Mixed-only fixture relay", { exact: true })
+      .count(),
+    0,
+  );
+  assert.equal(
+    await recordsPanel.getByText("300 FR-R", { exact: true }).count(),
+    0,
+  );
+  assert.equal(
+    await recordsPanel
+      .getByRole("heading", { name: "13-15", exact: true })
+      .count(),
+    0,
+  );
+  const recordLineup = recordsPanel
+    .getByRole("list", { name: "Relay swimmers" })
+    .first();
+  await recordLineup.waitFor();
+  assert.deepEqual(await recordLineup.getByRole("listitem").allTextContents(), [
+    "Swimmer F.",
+    "Swimmer F.",
+    "Unlinked F.",
+    "Swimmer F.",
+  ]);
+  assert.equal(
+    await recordLineup.evaluate(
+      (list) => getComputedStyle(list).gridTemplateColumns.split(" ").length,
+    ),
+    2,
+  );
   await page
     .getByRole("button", {
-      name: "View mixed 11–12 SCY 100 FR-R rankings",
+      name: "View girls 11–12 SCY 200 MED-R rankings",
       exact: true,
     })
     .first()
     .click();
   await page
-    .getByRole("table")
-    .getByText("Mixed fixture relay", { exact: true })
+    .getByRole("button", {
+      name: "Analyze 2:10.00 by Girls fixture relay",
+      exact: true,
+    })
     .waitFor();
   assert.equal(
-    await page.getByRole("button", { name: "Mixed", exact: true }).count(),
+    await page
+      .getByRole("table")
+      .getByText("Girls fixture relay", { exact: true })
+      .count(),
     0,
+  );
+  assert.equal(
+    await page.getByRole("button", { name: "Mixed", exact: true }).count(),
+    1,
   );
   await page.getByRole("button", { name: "Athletes", exact: true }).click();
   await page
@@ -342,7 +602,7 @@ try {
     .getByText("Swimmer 26 Fixture", { exact: true })
     .waitFor();
   await page
-    .getByRole("button", { name: "Event rankings", exact: true })
+    .getByRole("button", { name: "Event Rankings", exact: true })
     .click();
   await Promise.all([
     page.waitForRequest(
@@ -361,6 +621,189 @@ try {
     .getByRole("table")
     .getByText("Swimmer 00 Fixture", { exact: true })
     .waitFor();
+  // Relay events are available directly in the Event picker and switch category.
+  await page.getByRole("button", { name: "Event", exact: true }).click();
+  await page
+    .getByRole("dialog")
+    .getByRole("heading", { name: "Freestyle Relays", exact: true })
+    .waitFor();
+  await page
+    .getByRole("dialog")
+    .getByRole("button", { name: "200 Freestyle relay", exact: true })
+    .click();
+  assert.equal(
+    await page.getByRole("group", { name: "Result type", exact: true }).count(),
+    0,
+  );
+  await page
+    .getByLabel("Selected times filters")
+    .getByText("200 Freestyle relay", { exact: true })
+    .waitFor();
+  await page.getByRole("button", { name: "Mixed", exact: true }).click();
+  await page
+    .getByRole("button", {
+      name: "Analyze 2:00.00 by Mixed fixture relay",
+      exact: true,
+    })
+    .waitFor();
+  assert.equal(
+    await page
+      .getByRole("table")
+      .getByText("Mixed fixture relay", { exact: true })
+      .count(),
+    0,
+  );
+  const rankedLineup = page
+    .getByRole("table")
+    .first()
+    .getByRole("list", { name: "Relay swimmers" })
+    .first();
+  assert.deepEqual(await rankedLineup.getByRole("listitem").allTextContents(), [
+    "Swimmer F.",
+    "Swimmer F.",
+    "Unlinked F.",
+    "Swimmer F.",
+  ]);
+  assert.equal(
+    await rankedLineup.evaluate(
+      (list) => getComputedStyle(list).gridTemplateColumns.split(" ").length,
+    ),
+    2,
+  );
+  await page
+    .getByRole("button", {
+      name: "Analyze 2:00.00 by Mixed fixture relay",
+      exact: true,
+    })
+    .click();
+  const detail = page.getByRole("complementary", {
+    name: "Performance analysis",
+  });
+  await detail
+    .getByRole("heading", { name: "Relay lineup", exact: true })
+    .waitFor();
+  await detail
+    .getByText(
+      "All four members are reported; some athlete profiles are unlinked.",
+      { exact: true },
+    )
+    .waitFor();
+  assert.equal(await detail.getByRole("listitem").count(), 4);
+  assert.equal(
+    await detail
+      .getByRole("button", { name: "Unlinked Fixture", exact: true })
+      .count(),
+    0,
+  );
+  await detail.getByText("Unlinked Fixture", { exact: true }).waitFor();
+  await detail.getByRole("table").getByText("50 yd", { exact: true }).waitFor();
+  await detail
+    .getByText(
+      "Partial validated split coverage; some distances are unavailable.",
+      { exact: true },
+    )
+    .waitFor();
+  await page.getByRole("button", { name: "LCM", exact: true }).click();
+  await page.getByRole("button", { name: "Event", exact: true }).click();
+  assert.equal(
+    await page
+      .getByRole("dialog")
+      .getByRole("button", { name: "100 Freestyle relay", exact: true })
+      .count(),
+    0,
+  );
+  await page.keyboard.press("Escape");
+  await page
+    .getByRole("button", { name: "Reset filters", exact: true })
+    .click();
+  await page
+    .getByLabel("Selected times filters")
+    .getByText("100 Freestyle", { exact: true })
+    .waitFor();
+  assert.equal(
+    await page.getByRole("button", { name: "Mixed", exact: true }).count(),
+    0,
+  );
+  // An eligible lead-off remains an individual PB when the parent team is disqualified.
+  await page.getByRole("button", { name: "Event", exact: true }).click();
+  await page
+    .getByRole("dialog")
+    .getByRole("button", { name: "50 Freestyle", exact: true })
+    .click();
+  await page
+    .getByRole("table")
+    .getByText("Verified lead-off", { exact: true })
+    .waitFor();
+  await page
+    .getByRole("button", {
+      name: "Analyze 28.00 by Swimmer 00 Fixture",
+      exact: true,
+    })
+    .click();
+  await detail.getByText("Verified relay lead-off", { exact: true }).waitFor();
+  await detail
+    .getByRole("button", { name: "Load parent relay", exact: true })
+    .click();
+  await detail
+    .getByRole("button", {
+      name: "View parent relay · 200 Freestyle relay",
+      exact: true,
+    })
+    .click();
+  await detail
+    .getByText("Disqualified fixture relay · 11-12", { exact: true })
+    .waitFor();
+  await detail.getByText("DQ", { exact: true }).waitFor();
+  await detail
+    .getByRole("button", { name: "Swimmer 00 Fixture", exact: true })
+    .click();
+  await page
+    .getByRole("heading", { name: "Swimmer 00 Fixture", exact: true })
+    .waitFor();
+  const participation = page.getByRole("region", {
+    name: "Athlete relay participation",
+  });
+  await participation.getByRole("table").waitFor();
+  await participation
+    .getByRole("navigation", { name: "Relay participation pages" })
+    .getByRole("button", { name: "Next", exact: true })
+    .click();
+  await participation.getByText("26–30 of 30", { exact: true }).waitFor();
+  // Meet results can switch categories and filter Mixed relays.
+  await page.getByRole("button", { name: "Meet Results", exact: true }).click();
+  await page.getByLabel("Search meets", { exact: true }).fill("Fixture meet");
+  await page.getByText("Fixture meet", { exact: true }).first().click();
+  await page.getByRole("button", { name: "Meet event", exact: true }).click();
+  await page
+    .getByRole("dialog")
+    .getByRole("button", { name: "200 Freestyle relay", exact: true })
+    .click();
+  assert.equal(
+    await page.getByLabel("Search meets", { exact: true }).inputValue(),
+    "Fixture meet",
+    "Changing a meet's result category must preserve the meet-name search.",
+  );
+  await page.getByRole("button", { name: "Mixed", exact: true }).click();
+  await page
+    .getByRole("button", {
+      name: "Analyze 2:00.00 by Mixed fixture relay",
+      exact: true,
+    })
+    .waitFor();
+  assert.equal(
+    await page
+      .getByRole("table")
+      .getByText("Mixed fixture relay", { exact: true })
+      .count(),
+    0,
+  );
+  await page
+    .getByRole("button", { name: "Event Rankings", exact: true })
+    .click();
+  await page
+    .getByRole("table")
+    .getByText("Swimmer 00 Fixture", { exact: true })
+    .waitFor();
   await page.setViewportSize({ width: 390, height: 844 });
   await page.getByRole("button", { name: "Event", exact: true }).click();
   const dialog = page.getByRole("dialog");
@@ -372,6 +815,8 @@ try {
       "Breaststroke",
       "Butterfly",
       "Individual Medley",
+      "Freestyle Relays",
+      "Medley Relays",
     ],
   );
   assert.equal(
@@ -386,6 +831,30 @@ try {
     await page.evaluate(
       () => document.documentElement.scrollWidth <= innerWidth,
     ),
+  );
+  await page.evaluate(() => window.scrollTo(0, 450));
+  const summaryBounds = await summary.boundingBox();
+  assert.ok(
+    summaryBounds.y >= 0 && summaryBounds.y + summaryBounds.height < 250,
+    "The filter summary stays visible under the tabs while scrolling on mobile",
+  );
+  await page.getByRole("button", { name: "Team Records", exact: true }).click();
+  const mobileLineup = page
+    .getByRole("region", { name: "Team records", exact: true })
+    .getByRole("list", { name: "Relay swimmers" })
+    .first();
+  await mobileLineup.scrollIntoViewIfNeeded();
+  const firstMember = await mobileLineup
+    .getByRole("listitem")
+    .nth(0)
+    .boundingBox();
+  const secondMember = await mobileLineup
+    .getByRole("listitem")
+    .nth(1)
+    .boundingBox();
+  assert.ok(
+    firstMember.x + firstMember.width < secondMember.x,
+    "Relay member names keep their column gap in narrow record tables",
   );
   await page.close();
   const recovery = await setup({ failure: true });
@@ -406,7 +875,7 @@ try {
   await expiry.page.close();
   assert.deepEqual(errors, []);
   console.log(
-    "Times browser checks passed: every view, drill-downs, combined genders, ties/ranks, paging, search, cancellation, retries, cache expiry, mobile and keyboard event selection; no bulk downloads.",
+    "Times browser checks passed: every view, relay/Mixed filters, validated lineup/splits, lead-off parent DQ, athlete relay paging, course/category resets, ties/ranks, search, cancellation, retries, cache expiry, mobile and keyboard event selection; no bulk downloads.",
   );
 } finally {
   await browser.close();

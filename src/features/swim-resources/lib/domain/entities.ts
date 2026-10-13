@@ -1,7 +1,7 @@
 /** Stable private entity links. Owning team is distinct from a meet's host. */
 export const VELOCITY_TEAM_ID = 'velocity-swimming';
 export const VELOCITY_TEAM = { id: VELOCITY_TEAM_ID, name: 'Velocity Swimming' } as const;
-export const TEAM_SCOPED_COLLECTIONS = ['athletes', 'people', 'venues', 'documents', 'meets', 'swims', 'attendance', 'roster_metadata', 'events', 'practice_sessions', 'analytics_snapshots'] as const;
+export const TEAM_SCOPED_COLLECTIONS = ['athletes', 'people', 'venues', 'documents', 'meets', 'swims', 'relay_results', 'attendance', 'roster_metadata', 'events', 'practice_sessions', 'analytics_snapshots'] as const;
 export type EntityKind = 'team' | 'person' | 'venue' | 'document';
 export const ENTITY_COLLECTIONS = { team: 'teams', person: 'people', venue: 'venues', document: 'documents' } as const;
 export const entityId = (value: unknown): value is string => typeof value === 'string' && /^[a-zA-Z0-9_-]{1,128}$/.test(value);
@@ -20,10 +20,17 @@ export function owningTeam(collection: string, data: Record<string, unknown>): {
 }
 /** Only explicit graph links are enforced; legacy embedded race/venue snapshots remain readable. */
 export function entityReferences(data: Record<string, unknown>): string[] {
-  return [...new Set(Object.entries(data).flatMap(([field, value]) => {
+  const refs = Object.entries(data).flatMap(([field, value]) => {
     if (!['teamId', 'hostTeamId', 'personId', 'contactPersonIds', 'venueId', 'venueIds', 'documentIds', 'athleteId', 'meetId'].includes(field)) return [];
     return (Array.isArray(value) ? value : [value]).flatMap(id => { const path = relationshipPath(field, id); return path ? [path] : []; });
-  }))];
+  });
+  const meet = data.meet as Record<string, unknown> | undefined;
+  if (Array.isArray(data.members) && meet?.id) { const path = relationshipPath('meetId', meet.id); if (path) refs.push(path); }
+  if (typeof data.parentRelayResultId === 'string' && entityId(data.parentRelayResultId)) refs.push(`relay_results/${data.parentRelayResultId}`);
+  if (Array.isArray(data.members)) for (const member of data.members) {
+    const path = relationshipPath('athleteId', (member as Record<string, unknown>)?.athleteId); if (path) refs.push(path);
+  }
+  return [...new Set(refs)];
 }
 export function validateEntityLinks(data: Record<string, unknown>): void {
   for (const [field, value] of Object.entries(data)) {

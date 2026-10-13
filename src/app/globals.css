@@ -115,6 +115,10 @@
   padding-top: calc(var(--site-header-height) + 24px);
   min-height: 100vh;
 }
+.portal-login {
+  padding-top: 0;
+  min-height: calc(100svh - var(--site-header-height));
+}
 :root[data-theme="dark"] .portal-shell :is(.bg-white, .bg-slate-50) {
   background: var(--surface);
 }

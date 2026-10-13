@@ -1,5 +1,11 @@
 import { describe, expect, it } from "vitest";
 import {
+  relayLineupCoverage,
+  matchesAgeGroup,
+  relayMemberName,
+  changeResultCategory,
+  changeTimesCourse,
+  timesEvents,
   bestTimes,
   dailyBestTimes,
   teamRecords,
@@ -155,6 +161,47 @@ describe("athlete progress", () => {
 });
 
 describe("IES demographic filters and results mode", () => {
+  it("includes individual swims in every enclosing category with inclusive boundaries", () => {
+    for (const ageAtSwim of [13, 14, 18, 25]) {
+      const swim = race("older", 50000, { ageAtSwim });
+      expect(matchesAgeGroup(swim, "13&O")).toBe(true);
+      expect(matchesAgeGroup(swim, "Open")).toBe(true);
+    }
+    expect(
+      matchesAgeGroup(race("young", 50000, { ageAtSwim: 12 }), "13&O"),
+    ).toBe(false);
+    expect(
+      matchesAgeGroup(race("young", 50000, { ageAtSwim: 10 }), "10&U"),
+    ).toBe(true);
+    expect(matchesAgeGroup(race("unknown", 50000), "Open")).toBe(false);
+    expect(
+      matchesAgeGroup(race("older", 50000, { ageAtSwim: 14 }), "13-14"),
+    ).toBe(true);
+  });
+  it("includes relay categories only when their whole range fits the selected category", () => {
+    const relay = race("relay", 120000, {
+      relay: true,
+      relayAgeGroup: "13-14",
+    });
+    expect(matchesAgeGroup(relay, "13&O")).toBe(true);
+    expect(matchesAgeGroup(relay, "Open")).toBe(true);
+    expect(matchesAgeGroup(relay, "12&U")).toBe(false);
+    expect(matchesAgeGroup({ ...relay, relayAgeGroup: "11-14" }, "13&O")).toBe(
+      false,
+    );
+    expect(matchesAgeGroup({ ...relay, relayAgeGroup: "13&O" }, "13-14")).toBe(
+      false,
+    );
+    expect(matchesAgeGroup({ ...relay, relayAgeGroup: "" }, "Open")).toBe(
+      false,
+    );
+  });
+  it("shows relay members as first name and last initial", () => {
+    expect(relayMemberName("Avery Example")).toBe("Avery E.");
+    expect(relayMemberName("  Mary Jane O’Connor  ")).toBe("Mary O.");
+    expect(relayMemberName("Avery")).toBe("Avery");
+    expect(relayMemberName("")).toBe("Unreported");
+  });
   it("selects bests within race-time age groups, including multiple groups", () => {
     const swims = [
       race("young-prelim", 61000, {
@@ -230,6 +277,23 @@ describe("IES demographic filters and results mode", () => {
 });
 
 describe("team records", () => {
+  it("shares record holders across enclosing categories without duplicate relays", () => {
+    const individual = race("teen", 50000, { ageAtSwim: 14 });
+    const relay = race("relay", 120000, {
+      relay: true,
+      relayAgeGroup: "13-14",
+      event: "200_FR-R",
+    });
+    const records = teamRecords([individual, relay, relay], "VS");
+    for (const group of ["13-14", "13&O", "Open"]) {
+      expect(
+        records.get(recordKey("SCY", group, "100_FR", "F"))?.map((r) => r.id),
+      ).toEqual(["teen"]);
+      expect(
+        records.get(recordKey("SCY", group, "200_FR-R", "F"))?.map((r) => r.id),
+      ).toEqual(["relay"]);
+    }
+  });
   it("separates team affiliation at the swim, course, age group, event and gender", () => {
     const swims = [
       race("young", 60000, { athleteId: "a", gender: "F", ageAtSwim: 12 }),
@@ -253,7 +317,7 @@ describe("team records", () => {
       race("relay", 30000, { gender: "F", ageAtSwim: 12, relay: true }),
     ];
     const records = teamRecords(swims, "VS");
-    expect(records.size).toBe(5);
+    expect(records.size).toBe(14);
     expect(
       records.get(recordKey("SCY", "11-12", "100_FR", "F"))?.map((r) => r.id),
     ).toEqual(["young"]);
@@ -395,9 +459,177 @@ describe("team relay records", () => {
     expect(recordEvents("LCM", [])).toContain("800_FR-R");
     expect(
       recordAgeGroups([relay("r", 60000, { relayAgeGroup: "10&U" })]),
-    ).toContainEqual(["10&U", "10 & under"]);
+    ).toContainEqual(["10&U", "10 & Under"]);
     expect(resultName(relay("r", 60000), new Map([["r", "One swimmer"]]))).toBe(
       "Velocity A",
     );
+    expect(
+      resultName(
+        relay("r", 60000, { relayName: "A", teamName: "Velocity Swimming" }),
+        new Map(),
+      ),
+    ).toBe("Velocity Swimming A");
+  });
+});
+
+describe("relay details and lead-off eligibility", () => {
+  it("preserves ordered public members and validated splits without leaking import evidence", () => {
+    const result = normalizeRace({
+      id: "relay",
+      athlete_id: "legacy-member",
+      swim_date: "2026-05-01",
+      data: {
+        isRelay: true,
+        eventCode: "200_MED-R_SCY",
+        timeMs: 150000,
+        status: "OK",
+        splitCoverage: "partial",
+        members: [
+          {
+            leg: 2,
+            name: "Second",
+            athleteId: "b",
+            stroke: "BR",
+            timeMs: 40000,
+            privateRegistration: "secret",
+          },
+          {
+            leg: 1,
+            name: "First",
+            athleteId: "a",
+            stroke: "BK",
+            leadOffEligible: true,
+          },
+          { leg: 8, name: "Invalid" },
+        ],
+        splits: [
+          { distance: 50, cumulativeMs: 30000, rawMarker: "private" },
+          { distance: 100, cumulativeMs: 70000, lapMs: 40000 },
+          { distance: -1, cumulativeMs: 1000 },
+        ],
+        sourceRecords: ["private"],
+      },
+    });
+    expect(result.athleteId).toBe("");
+    expect(result.members).toEqual([
+      {
+        leg: 1,
+        name: "First",
+        athleteId: "a",
+        stroke: "BK",
+        leadOffEligible: true,
+      },
+      { leg: 2, name: "Second", athleteId: "b", stroke: "BR", timeMs: 40000 },
+    ]);
+    expect(result.splits).toEqual([
+      { distance: 50, cumulativeMs: 30000 },
+      { distance: 100, cumulativeMs: 70000, lapMs: 40000 },
+    ]);
+    expect(result.splitCoverage).toBe("partial");
+    expect(result.lineupCoverage).toBe("partial");
+    expect(result).not.toHaveProperty("sourceRecords");
+    expect(JSON.stringify(result)).not.toContain("secret");
+  });
+  it("does not calculate missing lap times and labels unvalidated distances unavailable", () => {
+    const result = normalizeRace({
+      id: "individual",
+      athlete_id: "a",
+      swim_date: "2026-05-01",
+      data: {
+        eventCode: "100_FR_SCY",
+        splits: [
+          { distance: 50, cumulativeMs: 25000 },
+          { distance: 100, cumulativeMs: 52000 },
+        ],
+      },
+    });
+    expect(result.splitCoverage).toBe("unavailable");
+    expect(result.splits?.every((split) => split.lapMs === undefined)).toBe(
+      true,
+    );
+  });
+  it("admits a promoted individual lead-off while excluding relay totals and flying-start splits", () => {
+    const relay = race("relay", 220000, {
+      relay: true,
+      athleteId: "",
+      event: "400_FR-R",
+      status: "DQ",
+    });
+    const leadOff = race("leadoff", 52000, {
+      athleteId: "a",
+      resultOrigin: "relay_leadoff",
+      parentRelayResultId: relay.id,
+      ageAtSwim: 12,
+    });
+    const flying = race("flying", 47000, {
+      athleteId: "a",
+      split: true,
+      ageAtSwim: 12,
+    });
+    expect(bestTimes([relay, leadOff, flying])).toEqual([leadOff]);
+    expect(
+      teamRecords([relay, leadOff, flying], "VS").get(
+        recordKey("SCY", "11-12", "100_FR", "F"),
+      ),
+    ).toEqual([leadOff]);
+    expect(leadOff.status).toBe("OK");
+  });
+  it("resets incompatible event, age and Mixed filters when switching result categories", () => {
+    const relays = changeResultCategory(
+      { ...initialFilters, ageGroups: ["11-12"] },
+      true,
+    );
+    expect(relays).toMatchObject({
+      relay: true,
+      event: "200_FR-R",
+      mode: "performances",
+      ageGroups: [],
+    });
+    const individuals = changeResultCategory(
+      { ...relays, genders: ["F", "X"] },
+      false,
+    );
+    expect(individuals).toMatchObject({
+      relay: false,
+      event: "100_FR",
+      mode: "bests",
+      genders: ["F"],
+    });
+    expect(changeResultCategory(relays, false, true).event).toBe("");
+    expect(
+      changeTimesCourse({ ...initialFilters, event: "100_IM" }, "LCM").event,
+    ).not.toBe("100_IM");
+    expect(
+      changeTimesCourse({ ...initialFilters, event: "100_FR" }, "LCM").event,
+    ).toBe("100_FR");
+    expect(timesEvents("LCM", true)).not.toContain("100_FR-R");
+    expect(timesEvents("SCY", true)).toContain("100_FR-R");
+    expect(timesEvents("LCM", false)).not.toContain("500_FR");
+    expect(timesEvents("LCM", false)).toContain("400_FR");
+  });
+});
+
+describe("public relay lineup coverage", () => {
+  it("distinguishes complete linked lineups from missing members or athlete links", () => {
+    const members = [1, 2, 3, 4].map((leg) => ({ leg, name: "Member " + leg }));
+    expect(relayLineupCoverage(members)).toBe("partial");
+    expect(
+      relayLineupCoverage(
+        members.map((member) => ({
+          ...member,
+          athleteId: "athlete" + member.leg,
+        })),
+      ),
+    ).toBe("complete");
+    expect(relayLineupCoverage(members.slice(0, 2))).toBe("partial");
+    expect(relayLineupCoverage([])).toBe("unavailable");
+    expect(
+      relayLineupCoverage([
+        { leg: 1, name: "First" },
+        { leg: 1, name: "Duplicate" },
+        { leg: 2, name: "" },
+        { leg: 5, name: "Invalid" },
+      ]),
+    ).toBe("partial");
   });
 });

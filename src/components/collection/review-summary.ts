@@ -25,9 +25,10 @@ export function raceSummary(value: Json, profiles: Record<string, Json>) {
   const stroke = typeof race.stroke === "string" ? strokes[race.stroke] ?? race.stroke : "Unknown stroke";
   const status = typeof race.status === "string" ? race.status : "Unknown status";
   const meet = object(race.meet);
+  const relay = typeof race.relayName === 'string' || race.isRelay === true;
   return {
-    swimmer: athleteName(profiles[id]) || athleteName({ name: race.athleteName ?? null }) || (id ? `Name unavailable (${id})` : "Missing athlete link"),
-    event: `${typeof race.distance === "number" ? race.distance : "?"} ${stroke}${race.isRelay === true ? " relay" : ""}`,
+    swimmer: typeof race.relayName === 'string' ? race.relayName : athleteName(profiles[id]) || athleteName({ name: race.athleteName ?? null }) || (id ? `Name unavailable (${id})` : "Missing athlete link"),
+    event: `${typeof race.distance === "number" ? race.distance : "?"} ${relay && race.stroke === 'IM' ? 'Medley' : stroke}${relay ? " relay" : ""}${race.resultOrigin === 'relay_leadoff' ? ' · verified lead-off' : ''}`,
     time: status !== "OK" ? status : formatSwimTime(typeof race.timeMs === "number" ? race.timeMs : null, "No time"),
     course: typeof race.course === "string" ? race.course : "Unknown course",
     meet: typeof meet.name === "string" ? meet.name : "Unknown meet",

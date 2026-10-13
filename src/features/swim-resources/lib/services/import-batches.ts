@@ -6,6 +6,7 @@ import { batchDigest, observationDigest, changedFields, IMPORT_COLLECTIONS, matc
 import type { ImportBatch, ImportPreviewRow, ImportRow, JsonRecord } from '@/features/swim-resources/lib/domain/import-batch';
 import { publicAthlete, type FirestoreAthlete } from '@/features/swim-resources/lib/domain/athlete';
 import { canonicalSwim } from '@/features/swim-resources/lib/domain/swim';
+import { canonicalRelayResult } from '@/features/swim-resources/lib/domain/relay';
 import { isCalendarDate } from '@/features/swim-resources/lib/domain/date';
 import { canonicalAthlete } from './athletes';
 import { canonicalMeet } from './meet-tools';
@@ -46,6 +47,11 @@ function prepare(row: ImportRow, id: string, previous: JsonRecord | null, athlet
     const meet = merged as unknown as Meet;
     if (typeof meet.name !== 'string' || !meet.venue || !['SCY', 'LCM', 'SCM'].includes(meet.venue.course) || !meet.dates) throw new Error('A meet needs a verified name, dates, and pool course.');
     return asRecord(canonicalMeet(previous ?? undefined, meet));
+  }
+  if (row.kind === 'relay') {
+    const relay = canonicalRelayResult(merged);
+    if (previous && ['teamId', 'eventCode'].some(key => previous[key] !== merged[key])) throw new Error('A relay id cannot be reassigned to another team or event.');
+    return asRecord(relay);
   }
   if (!athlete) throw new Error('Import or identify the athlete before importing their races.');
   const teamId = String(athlete.teamId ?? VELOCITY_TEAM_ID);
@@ -123,7 +129,7 @@ export async function previewImportBatch(input: unknown): Promise<ImportPreview>
         preview.label = label + ' · ' + String(row.data.eventCode ?? '').replaceAll('_', ' ') + ' · ' + String((row.data.meet as Swim['meet'])?.date ?? '');
         if (athlete) preview.dependencies = { [String(athlete.id)]: stableJson(athlete) };
       }
-      if (Object.hasOwn(ENTITY_COLLECTIONS, row.kind) || row.kind === 'standard') {
+      if (Object.hasOwn(ENTITY_COLLECTIONS, row.kind) || row.kind === 'standard' || row.kind === 'relay') {
         if (!id) throw new Error('Entity imports require an explicit stable document id.');
         const existing = await getDoc(doc(db, IMPORT_COLLECTIONS[row.kind], id));
         candidates = existing.exists() ? [{ ...existing.data(), id }] : [];

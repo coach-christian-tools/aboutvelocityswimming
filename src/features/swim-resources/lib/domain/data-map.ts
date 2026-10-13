@@ -20,6 +20,7 @@ const descriptions: Record<string, [MapGroup, string, string]> = {
   athletes: ['Directory', 'Private roster, demographics, groups and athlete contact details.', 'Canonical athlete'],
   public_athletes: ['Directory', 'Allowlisted public athlete identity; excludes private contacts and coaching details.', 'Public projection'],
   swims: ['Performance', 'Structured race facts, times, athlete ID and embedded meet snapshot. Team records are calculated from these facts without a stored records collection.', 'Canonical performance'],
+  relay_results: ['Performance', 'Team relay totals with ordered swimmer links and verified splits. Lead-off results retain their parent relay identity.', 'Canonical team performance'],
 
   meets: ['Directory', 'Meet dates, hosting team, venue links, embedded venue details and document links.', 'Canonical entity with embedded snapshots'],
   standards: ['Performance', 'Shared qualifying time matrices and governing-body/season metadata.', 'Reference data'],
@@ -62,6 +63,7 @@ export const DATA_RELATIONSHIPS: DataRelationship[] = [
   edge('meets', 'teams', 'hostTeamId'), edge('meets', 'venues', 'venueId'),
   ...['meets', 'venues', 'people', 'athletes'].map(id => edge('documents', id, ({ meets: 'meetId', venues: 'venueId', people: 'personId', athletes: 'athleteId' } as Record<string, string>)[id])),
   edge('swims', 'athletes', 'athleteId'), edge('swims', 'meets', 'meet.id', 'reference', 'Embedded meet snapshot also retains name/date; ID links to the meet when present.'),
+  edge('relay_results', 'athletes', 'members[].athleteId'), edge('relay_results', 'meets', 'meet.id'), edge('swims', 'relay_results', 'parentRelayResultId'),
   edge('athletes', 'public_athletes', 'same document ID', 'projection', 'Allowlisted identity projection. Keep this privacy boundary even if names are duplicated.'),
   edge('athletes', 'athletes/bests', 'bests', 'contains', 'Nested under athletes/{athleteId}; open an athlete document to inspect its bests.'),
   edge('athletes/bests', 'swims', 'swimId', 'reference', 'Selected best performance.'),
