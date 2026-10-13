@@ -8,6 +8,7 @@ import {
 } from "./times-data";
 import { timesUrl } from "./times-api";
 import { useTimes } from "./use-times";
+import ResultModeration from "./ResultModeration";
 import s from "./TimesDatabase.module.css";
 
 function LeadOffOrigin({
@@ -28,8 +29,8 @@ function LeadOffOrigin({
     <div className={s.origin}>
       <strong>Verified relay lead-off</strong>
       <p>
-        This flat-start time is eligible for individual personal bests and
-        records. The relay’s final status is recorded separately.
+        This flat-start time can count toward individual personal bests and
+        records when it is not under review. The relay’s final status is recorded separately.
       </p>
       {race.parentRelayResultId &&
         (relay ? (
@@ -74,6 +75,7 @@ export default function RaceDetails({
   const lineupCoverage = race.lineupCoverage ?? relayLineupCoverage(members);
   return (
     <div className={s.raceDetails}>
+      <ResultModeration key={`${race.resultType}:${race.id}`} race={race} onRace={onRace} />
       {race.resultOrigin === "relay_leadoff" && (
         <LeadOffOrigin key={race.id} race={race} onRace={onRace} />
       )}

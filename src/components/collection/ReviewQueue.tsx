@@ -1,4 +1,6 @@
 "use client";
+import StandardReview from "./StandardReview";
+import type { StandardSet } from "@/features/swim-resources/types/schema";
 import { clearTimesCache } from "./times-cache";
 import Link from "next/link";
 import { useEffect, useState, useMemo, useRef } from "react";
@@ -263,6 +265,7 @@ function Records({ writes, reads }: { writes: Json; reads: Json }) {
                     }
                   />
                 )}
+                {change.path.startsWith("standards/") && <StandardReview before={previous as unknown as StandardSet | null} after={change.after as unknown as StandardSet | null} />}
                 {knowledge && (
                   <KnowledgeDetails value={change.after ?? previous} />
                 )}
@@ -444,6 +447,7 @@ export default function ReviewQueue() {
           {status === "pending" || status === "held" ? " Review teams, venues, and meets first, then swimmer profiles, then results." : ""}
         </p>
         <Link href="/tools/review/meets" className={styles.meetLink}>Choose meets to finish importing <span aria-hidden="true">→</span></Link>
+        <Link href="/tools/review/results" className={styles.meetLink}>Review flagged results <span aria-hidden="true">→</span></Link>
       </div>
       <div className={styles.toolbar}>
         <label className={styles.field}>

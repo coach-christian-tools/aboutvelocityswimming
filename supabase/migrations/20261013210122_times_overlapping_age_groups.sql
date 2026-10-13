@@ -43,6 +43,11 @@ create or replace function public.ies_times_filtered(input jsonb) returns setof 
 $$;
 
 
+-- Hosted moderation already includes the age helpers and supersedes these
+-- calculation queries. Backfill this history without replacing its exclusions.
+do $migration$
+begin
+ if to_regclass('public.result_moderation') is null then
 create or replace function public.ies_times_candidates(input jsonb)
 returns table(id text,athlete_id text,date text,course text,event text,"time" bigint,relay boolean,search_name text)
 language plpgsql stable security invoker set search_path='' set plan_cache_mode='force_custom_plan' as $$
@@ -328,3 +333,7 @@ begin
 end; $$;
 
 NOTIFY pgrst, 'reload schema';
+
+ end if;
+end;
+$migration$;

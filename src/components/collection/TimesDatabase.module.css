@@ -1,4 +1,7 @@
 .page {
+  width: 100%;
+}
+.content {
   max-width: 1320px;
   margin: auto;
   padding: 0 28px 80px;
@@ -16,13 +19,20 @@
   gap: 8px;
   border-bottom: 1px solid var(--border);
   margin-bottom: 0;
+  padding-inline: max(28px, calc((100% - 1264px) / 2));
 }
-.tabs button {
+.tabs button,
+.tabs a {
   padding: 14px 20px;
   gap: 8px;
   background: transparent;
   color: var(--text-muted);
   border-radius: 8px 8px 0 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  text-decoration: none;
 }
 .tabs button[aria-pressed="true"] {
   color: var(--accent);
@@ -34,7 +44,7 @@
   flex-wrap: wrap;
   align-items: center;
   gap: 10px 28px;
-  padding: 12px 20px;
+  padding: 12px max(28px, calc((100% - 1264px) / 2));
   background: var(--background-alt);
   border-bottom: 1px solid var(--border);
 }
@@ -292,23 +302,23 @@
 }
 .cards {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
-  padding: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: 10px;
+  padding: 16px 22px;
 }
 .card {
-  padding: 20px;
+  padding: 12px 14px;
   border-radius: 10px;
   background: var(--background-alt);
   text-align: left;
   display: flex;
   flex-direction: column;
   align-items: flex-start !important;
-  gap: 9px;
+  gap: 5px;
   color: var(--text-main);
 }
 .card strong {
-  font-size: 15px;
+  font-size: 14px;
 }
 .card span {
   font-size: 12px;
@@ -385,14 +395,15 @@
   }
 }
 @media (max-width: 600px) {
-  .page {
+  .content {
     padding: 0 16px 50px;
   }
   .filterSummary {
     gap: 10px 20px;
-    padding: 12px;
+    padding: 12px 16px;
   }
-  .tabs button {
+  .tabs button,
+  .tabs a {
     padding: 13px 12px;
     font-size: 13px;
   }
@@ -555,7 +566,8 @@
     overflow-x: auto;
     gap: 2px;
   }
-  .tabs button {
+  .tabs button,
+  .tabs a {
     flex: 0 0 auto;
     white-space: nowrap;
   }
@@ -734,4 +746,214 @@
   color: var(--text-muted);
   font-size: 10px;
   margin-top: 5px;
+}
+
+.meetNotice {
+  padding: 0 22px;
+}
+@media (max-width: 600px) {
+  .tabs {
+    padding-inline: 16px;
+  }
+  .meetNotice {
+    padding-inline: 16px;
+  }
+}
+
+/* The original swim-resources selector's six compact stroke columns. */
+.main {
+  container-type: inline-size;
+  container-name: times-results;
+}
+.inlineEventSelector {
+  display: none;
+}
+.strokeSelector {
+  width: 100%;
+  max-width: 360px;
+}
+.strokeColumns {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr)) minmax(0, 1.2fr);
+  gap: 5px;
+}
+.strokeColumns section {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+.strokeColumns h3 {
+  font-size: 11px;
+  text-align: center;
+  padding-block: 6px;
+}
+.strokeColumns button {
+  min-height: 32px;
+  padding: 2px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-main);
+  box-shadow: inset 0 0 0 1px var(--border);
+  font-size: 12px;
+  font-weight: 600;
+}
+.strokeColumns button small {
+  display: block;
+  font-size: 10px;
+}
+.strokeColumns button:hover {
+  border-color: var(--accent);
+}
+.strokeSelector button[aria-pressed="true"] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+.secondaryFilters {
+  display: contents;
+}
+@container times-results (min-width: 700px) {
+  .eventField {
+    width: 100%;
+  }
+  .filters:has(> .eventField) {
+    grid-template-columns: 360px minmax(0, 1fr);
+    align-items: start;
+    gap: 24px;
+  }
+  .secondaryFilters {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+    align-items: start;
+  }
+  .eventField > .eventTrigger {
+    display: none;
+  }
+  .inlineEventSelector {
+    display: block;
+  }
+}
+.strokeColumns .selectorCourse {
+  color: #0f766e;
+  border-color: #0d948866;
+  background: #14b8a61a;
+}
+.strokeColumns .selectorCourse[aria-pressed="true"] {
+  background: #0f766e;
+  border-color: #0f766e;
+  color: #fff;
+}
+
+@container times-results (min-width: 960px) {
+  .secondaryFilters {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Pack ranking columns around their content; the final visible column fills. */
+.rankingTable th,
+.rankingTable td {
+  width: 1%;
+}
+.rankingTable .rankingTeam {
+  width: auto;
+  max-width: none;
+}
+.rankingTable .rankingMeet {
+  display: none;
+}
+@container times-results (min-width: 960px) {
+  .rankingTable .rankingTeam {
+    width: 1%;
+    white-space: nowrap;
+  }
+  .rankingTable .rankingMeet {
+    display: table-cell;
+    width: auto;
+    min-width: 180px;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+}
+
+.meetEventLayout {
+  padding: 16px 22px 0;
+  display: grid;
+  grid-template-columns: minmax(200px, 260px) minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+.meetEventNav {
+  max-height: 70vh;
+  overflow-y: auto;
+  padding: 2px;
+}
+.meetEventNav h3 {
+  font-size: 0.8rem;
+  margin: 12px 0;
+}
+.meetEventNav .meetEventButton {
+  display: grid;
+  justify-items: start;
+  justify-content: stretch;
+  gap: 6px;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 6px;
+  text-align: left;
+  border: 1px solid var(--border, #d1d5db);
+  border-radius: 8px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+.meetEventNav .meetEventButton[aria-pressed="true"] {
+  background: #eaf5f7;
+  border-color: #086579;
+  box-shadow: inset 3px 0 #086579;
+  color: #143d47;
+}
+.meetEventButton:focus-visible,
+.meetEventSelect select:focus-visible {
+  outline: 2px solid #086579;
+  outline-offset: 2px;
+}
+.meetEventResults {
+  min-width: 0;
+}
+.meetEventResults h3 {
+  font-size: 1rem;
+  margin: 12px 0;
+}
+.meetEventSelect {
+  display: none;
+}
+@media (max-width: 760px) {
+  .meetEventLayout {
+    padding: 12px 12px 0;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+  .meetEventNav {
+    display: none;
+  }
+  .meetEventSelect {
+    display: grid;
+    gap: 8px;
+    min-width: 0;
+  }
+  .meetEventSelect select {
+    width: 100%;
+    min-width: 0;
+    padding: 12px;
+    font: inherit;
+    color: inherit;
+    background: white;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+  }
 }

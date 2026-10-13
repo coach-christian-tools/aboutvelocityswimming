@@ -111,3 +111,25 @@ describe("relay result requests", () => {
     ).toMatchObject({ relay: true, genders: ["X"], mode: "performances" });
   });
 });
+
+describe("meet event navigation requests", () => {
+  it("requires a meet and validates stable event keys", () => {
+    expect(() =>
+      parseTimesQuery(new URLSearchParams("view=meet_events")),
+    ).toThrow();
+    expect(
+      parseTimesQuery(new URLSearchParams("view=meet_events&meetId=m")).input,
+    ).toEqual({ meetId: "m", offset: 0, limit: 25 });
+    const key = "a".repeat(32);
+    expect(
+      parseTimesQuery(
+        new URLSearchParams(`view=meet_results&meetId=m&meetEventKey=${key}`),
+      ).input,
+    ).toMatchObject({ meetEventKey: key });
+    expect(() =>
+      parseTimesQuery(
+        new URLSearchParams("view=meet_results&meetId=m&meetEventKey=invalid"),
+      ),
+    ).toThrow("Invalid meet event");
+  });
+});

@@ -1,0 +1,1530 @@
+{
+  "sourceSha256": "9eb877a4a0d23f55401b5f87bc22e92cf46b3af391ac5f22d30917325514ab49",
+  "pages": 12,
+  "eventRows": 304,
+  "cutCount": 3648,
+  "rows": [
+    {
+      "page": 1,
+      "ageGroup": "10&U",
+      "eventCode": "50_FR_SCY"
+    },
+    {
+      "page": 1,
+      "ageGroup": "10&U",
+      "eventCode": "100_FR_SCY"
+    },
+    {
+      "page": 1,
+      "ageGroup": "10&U",
+      "eventCode": "200_FR_SCY"
+    },
+    {
+      "page": 1,
+      "ageGroup": "10&U",
+      "eventCode": "500_FR_SCY"
+    },
+    {
+      "page": 1,
+      "ageGroup": "10&U",
+      "eventCode": "50_BK_SCY"
+    },
+    {
+      "page": 1,
+      "ageGroup": "10&U",
+      "eventCode": "100_BK_SCY"
+    },
+    {
+      "page": 1,
+      "ageGroup": "10&U",
+      "eventCode": "50_BR_SCY"
+    },
+    {
+      "page": 1,
+      "ageGroup": "10&U",
+      "eventCode": "100_BR_SCY"
+    },
+    {
+      "page": 1,
+      "ageGroup": "10&U",
+      "eventCode": "50_FL_SCY"
+    },
+    {
+      "page": 1,
+      "ageGroup": "10&U",
+      "eventCode": "100_FL_SCY"
+    },
+    {
+      "page": 1,
+      "ageGroup": "10&U",
+      "eventCode": "100_IM_SCY"
+    },
+    {
+      "page": 1,
+      "ageGroup": "10&U",
+      "eventCode": "200_IM_SCY"
+    },
+    {
+      "page": 1,
+      "ageGroup": "10&U",
+      "eventCode": "200_FR-R_SCY"
+    },
+    {
+      "page": 1,
+      "ageGroup": "10&U",
+      "eventCode": "200_MED-R_SCY"
+    },
+    {
+      "page": 1,
+      "ageGroup": "11-12",
+      "eventCode": "50_FR_SCY"
+    },
+    {
+      "page": 1,
+      "ageGroup": "11-12",
+      "eventCode": "100_FR_SCY"
+    },
+    {
+      "page": 1,
+      "ageGroup": "11-12",
+      "eventCode": "200_FR_SCY"
+    },
+    {
+      "page": 1,
+      "ageGroup": "11-12",
+      "eventCode": "500_FR_SCY"
+    },
+    {
+      "page": 1,
+      "ageGroup": "11-12",
+      "eventCode": "1000_FR_SCY"
+    },
+    {
+      "page": 1,
+      "ageGroup": "11-12",
+      "eventCode": "1650_FR_SCY"
+    },
+    {
+      "page": 1,
+      "ageGroup": "11-12",
+      "eventCode": "50_BK_SCY"
+    },
+    {
+      "page": 1,
+      "ageGroup": "11-12",
+      "eventCode": "100_BK_SCY"
+    },
+    {
+      "page": 1,
+      "ageGroup": "11-12",
+      "eventCode": "200_BK_SCY"
+    },
+    {
+      "page": 1,
+      "ageGroup": "11-12",
+      "eventCode": "50_BR_SCY"
+    },
+    {
+      "page": 1,
+      "ageGroup": "11-12",
+      "eventCode": "100_BR_SCY"
+    },
+    {
+      "page": 1,
+      "ageGroup": "11-12",
+      "eventCode": "200_BR_SCY"
+    },
+    {
+      "page": 1,
+      "ageGroup": "11-12",
+      "eventCode": "50_FL_SCY"
+    },
+    {
+      "page": 1,
+      "ageGroup": "11-12",
+      "eventCode": "100_FL_SCY"
+    },
+    {
+      "page": 1,
+      "ageGroup": "11-12",
+      "eventCode": "200_FL_SCY"
+    },
+    {
+      "page": 1,
+      "ageGroup": "11-12",
+      "eventCode": "100_IM_SCY"
+    },
+    {
+      "page": 1,
+      "ageGroup": "11-12",
+      "eventCode": "200_IM_SCY"
+    },
+    {
+      "page": 1,
+      "ageGroup": "11-12",
+      "eventCode": "400_IM_SCY"
+    },
+    {
+      "page": 1,
+      "ageGroup": "11-12",
+      "eventCode": "200_FR-R_SCY"
+    },
+    {
+      "page": 1,
+      "ageGroup": "11-12",
+      "eventCode": "400_FR-R_SCY"
+    },
+    {
+      "page": 1,
+      "ageGroup": "11-12",
+      "eventCode": "200_MED-R_SCY"
+    },
+    {
+      "page": 1,
+      "ageGroup": "11-12",
+      "eventCode": "400_MED-R_SCY"
+    },
+    {
+      "page": 2,
+      "ageGroup": "13-14",
+      "eventCode": "50_FR_SCY"
+    },
+    {
+      "page": 2,
+      "ageGroup": "13-14",
+      "eventCode": "100_FR_SCY"
+    },
+    {
+      "page": 2,
+      "ageGroup": "13-14",
+      "eventCode": "200_FR_SCY"
+    },
+    {
+      "page": 2,
+      "ageGroup": "13-14",
+      "eventCode": "500_FR_SCY"
+    },
+    {
+      "page": 2,
+      "ageGroup": "13-14",
+      "eventCode": "1000_FR_SCY"
+    },
+    {
+      "page": 2,
+      "ageGroup": "13-14",
+      "eventCode": "1650_FR_SCY"
+    },
+    {
+      "page": 2,
+      "ageGroup": "13-14",
+      "eventCode": "50_BK_SCY"
+    },
+    {
+      "page": 2,
+      "ageGroup": "13-14",
+      "eventCode": "100_BK_SCY"
+    },
+    {
+      "page": 2,
+      "ageGroup": "13-14",
+      "eventCode": "200_BK_SCY"
+    },
+    {
+      "page": 2,
+      "ageGroup": "13-14",
+      "eventCode": "50_BR_SCY"
+    },
+    {
+      "page": 2,
+      "ageGroup": "13-14",
+      "eventCode": "100_BR_SCY"
+    },
+    {
+      "page": 2,
+      "ageGroup": "13-14",
+      "eventCode": "200_BR_SCY"
+    },
+    {
+      "page": 2,
+      "ageGroup": "13-14",
+      "eventCode": "50_FL_SCY"
+    },
+    {
+      "page": 2,
+      "ageGroup": "13-14",
+      "eventCode": "100_FL_SCY"
+    },
+    {
+      "page": 2,
+      "ageGroup": "13-14",
+      "eventCode": "200_FL_SCY"
+    },
+    {
+      "page": 2,
+      "ageGroup": "13-14",
+      "eventCode": "200_IM_SCY"
+    },
+    {
+      "page": 2,
+      "ageGroup": "13-14",
+      "eventCode": "400_IM_SCY"
+    },
+    {
+      "page": 2,
+      "ageGroup": "13-14",
+      "eventCode": "200_FR-R_SCY"
+    },
+    {
+      "page": 2,
+      "ageGroup": "13-14",
+      "eventCode": "400_FR-R_SCY"
+    },
+    {
+      "page": 2,
+      "ageGroup": "13-14",
+      "eventCode": "800_FR-R_SCY"
+    },
+    {
+      "page": 2,
+      "ageGroup": "13-14",
+      "eventCode": "200_MED-R_SCY"
+    },
+    {
+      "page": 2,
+      "ageGroup": "13-14",
+      "eventCode": "400_MED-R_SCY"
+    },
+    {
+      "page": 3,
+      "ageGroup": "15-16",
+      "eventCode": "50_FR_SCY"
+    },
+    {
+      "page": 3,
+      "ageGroup": "15-16",
+      "eventCode": "100_FR_SCY"
+    },
+    {
+      "page": 3,
+      "ageGroup": "15-16",
+      "eventCode": "200_FR_SCY"
+    },
+    {
+      "page": 3,
+      "ageGroup": "15-16",
+      "eventCode": "500_FR_SCY"
+    },
+    {
+      "page": 3,
+      "ageGroup": "15-16",
+      "eventCode": "1000_FR_SCY"
+    },
+    {
+      "page": 3,
+      "ageGroup": "15-16",
+      "eventCode": "1650_FR_SCY"
+    },
+    {
+      "page": 3,
+      "ageGroup": "15-16",
+      "eventCode": "50_BK_SCY"
+    },
+    {
+      "page": 3,
+      "ageGroup": "15-16",
+      "eventCode": "100_BK_SCY"
+    },
+    {
+      "page": 3,
+      "ageGroup": "15-16",
+      "eventCode": "200_BK_SCY"
+    },
+    {
+      "page": 3,
+      "ageGroup": "15-16",
+      "eventCode": "50_BR_SCY"
+    },
+    {
+      "page": 3,
+      "ageGroup": "15-16",
+      "eventCode": "100_BR_SCY"
+    },
+    {
+      "page": 3,
+      "ageGroup": "15-16",
+      "eventCode": "200_BR_SCY"
+    },
+    {
+      "page": 3,
+      "ageGroup": "15-16",
+      "eventCode": "50_FL_SCY"
+    },
+    {
+      "page": 3,
+      "ageGroup": "15-16",
+      "eventCode": "100_FL_SCY"
+    },
+    {
+      "page": 3,
+      "ageGroup": "15-16",
+      "eventCode": "200_FL_SCY"
+    },
+    {
+      "page": 3,
+      "ageGroup": "15-16",
+      "eventCode": "200_IM_SCY"
+    },
+    {
+      "page": 3,
+      "ageGroup": "15-16",
+      "eventCode": "400_IM_SCY"
+    },
+    {
+      "page": 3,
+      "ageGroup": "15-16",
+      "eventCode": "200_FR-R_SCY"
+    },
+    {
+      "page": 3,
+      "ageGroup": "15-16",
+      "eventCode": "400_FR-R_SCY"
+    },
+    {
+      "page": 3,
+      "ageGroup": "15-16",
+      "eventCode": "800_FR-R_SCY"
+    },
+    {
+      "page": 3,
+      "ageGroup": "15-16",
+      "eventCode": "200_MED-R_SCY"
+    },
+    {
+      "page": 3,
+      "ageGroup": "15-16",
+      "eventCode": "400_MED-R_SCY"
+    },
+    {
+      "page": 4,
+      "ageGroup": "17-18",
+      "eventCode": "50_FR_SCY"
+    },
+    {
+      "page": 4,
+      "ageGroup": "17-18",
+      "eventCode": "100_FR_SCY"
+    },
+    {
+      "page": 4,
+      "ageGroup": "17-18",
+      "eventCode": "200_FR_SCY"
+    },
+    {
+      "page": 4,
+      "ageGroup": "17-18",
+      "eventCode": "500_FR_SCY"
+    },
+    {
+      "page": 4,
+      "ageGroup": "17-18",
+      "eventCode": "1000_FR_SCY"
+    },
+    {
+      "page": 4,
+      "ageGroup": "17-18",
+      "eventCode": "1650_FR_SCY"
+    },
+    {
+      "page": 4,
+      "ageGroup": "17-18",
+      "eventCode": "50_BK_SCY"
+    },
+    {
+      "page": 4,
+      "ageGroup": "17-18",
+      "eventCode": "100_BK_SCY"
+    },
+    {
+      "page": 4,
+      "ageGroup": "17-18",
+      "eventCode": "200_BK_SCY"
+    },
+    {
+      "page": 4,
+      "ageGroup": "17-18",
+      "eventCode": "50_BR_SCY"
+    },
+    {
+      "page": 4,
+      "ageGroup": "17-18",
+      "eventCode": "100_BR_SCY"
+    },
+    {
+      "page": 4,
+      "ageGroup": "17-18",
+      "eventCode": "200_BR_SCY"
+    },
+    {
+      "page": 4,
+      "ageGroup": "17-18",
+      "eventCode": "50_FL_SCY"
+    },
+    {
+      "page": 4,
+      "ageGroup": "17-18",
+      "eventCode": "100_FL_SCY"
+    },
+    {
+      "page": 4,
+      "ageGroup": "17-18",
+      "eventCode": "200_FL_SCY"
+    },
+    {
+      "page": 4,
+      "ageGroup": "17-18",
+      "eventCode": "200_IM_SCY"
+    },
+    {
+      "page": 4,
+      "ageGroup": "17-18",
+      "eventCode": "400_IM_SCY"
+    },
+    {
+      "page": 4,
+      "ageGroup": "17-18",
+      "eventCode": "200_FR-R_SCY"
+    },
+    {
+      "page": 4,
+      "ageGroup": "17-18",
+      "eventCode": "400_FR-R_SCY"
+    },
+    {
+      "page": 4,
+      "ageGroup": "17-18",
+      "eventCode": "800_FR-R_SCY"
+    },
+    {
+      "page": 4,
+      "ageGroup": "17-18",
+      "eventCode": "200_MED-R_SCY"
+    },
+    {
+      "page": 4,
+      "ageGroup": "17-18",
+      "eventCode": "400_MED-R_SCY"
+    },
+    {
+      "page": 4,
+      "ageGroup": "10&U",
+      "eventCode": "50_FR_SCM"
+    },
+    {
+      "page": 4,
+      "ageGroup": "10&U",
+      "eventCode": "100_FR_SCM"
+    },
+    {
+      "page": 4,
+      "ageGroup": "10&U",
+      "eventCode": "200_FR_SCM"
+    },
+    {
+      "page": 4,
+      "ageGroup": "10&U",
+      "eventCode": "400_FR_SCM"
+    },
+    {
+      "page": 4,
+      "ageGroup": "10&U",
+      "eventCode": "50_BK_SCM"
+    },
+    {
+      "page": 4,
+      "ageGroup": "10&U",
+      "eventCode": "100_BK_SCM"
+    },
+    {
+      "page": 4,
+      "ageGroup": "10&U",
+      "eventCode": "50_BR_SCM"
+    },
+    {
+      "page": 4,
+      "ageGroup": "10&U",
+      "eventCode": "100_BR_SCM"
+    },
+    {
+      "page": 4,
+      "ageGroup": "10&U",
+      "eventCode": "50_FL_SCM"
+    },
+    {
+      "page": 4,
+      "ageGroup": "10&U",
+      "eventCode": "100_FL_SCM"
+    },
+    {
+      "page": 4,
+      "ageGroup": "10&U",
+      "eventCode": "100_IM_SCM"
+    },
+    {
+      "page": 4,
+      "ageGroup": "10&U",
+      "eventCode": "200_IM_SCM"
+    },
+    {
+      "page": 4,
+      "ageGroup": "10&U",
+      "eventCode": "200_FR-R_SCM"
+    },
+    {
+      "page": 4,
+      "ageGroup": "10&U",
+      "eventCode": "200_MED-R_SCM"
+    },
+    {
+      "page": 5,
+      "ageGroup": "11-12",
+      "eventCode": "50_FR_SCM"
+    },
+    {
+      "page": 5,
+      "ageGroup": "11-12",
+      "eventCode": "100_FR_SCM"
+    },
+    {
+      "page": 5,
+      "ageGroup": "11-12",
+      "eventCode": "200_FR_SCM"
+    },
+    {
+      "page": 5,
+      "ageGroup": "11-12",
+      "eventCode": "400_FR_SCM"
+    },
+    {
+      "page": 5,
+      "ageGroup": "11-12",
+      "eventCode": "800_FR_SCM"
+    },
+    {
+      "page": 5,
+      "ageGroup": "11-12",
+      "eventCode": "1500_FR_SCM"
+    },
+    {
+      "page": 5,
+      "ageGroup": "11-12",
+      "eventCode": "50_BK_SCM"
+    },
+    {
+      "page": 5,
+      "ageGroup": "11-12",
+      "eventCode": "100_BK_SCM"
+    },
+    {
+      "page": 5,
+      "ageGroup": "11-12",
+      "eventCode": "200_BK_SCM"
+    },
+    {
+      "page": 5,
+      "ageGroup": "11-12",
+      "eventCode": "50_BR_SCM"
+    },
+    {
+      "page": 5,
+      "ageGroup": "11-12",
+      "eventCode": "100_BR_SCM"
+    },
+    {
+      "page": 5,
+      "ageGroup": "11-12",
+      "eventCode": "200_BR_SCM"
+    },
+    {
+      "page": 5,
+      "ageGroup": "11-12",
+      "eventCode": "50_FL_SCM"
+    },
+    {
+      "page": 5,
+      "ageGroup": "11-12",
+      "eventCode": "100_FL_SCM"
+    },
+    {
+      "page": 5,
+      "ageGroup": "11-12",
+      "eventCode": "200_FL_SCM"
+    },
+    {
+      "page": 5,
+      "ageGroup": "11-12",
+      "eventCode": "100_IM_SCM"
+    },
+    {
+      "page": 5,
+      "ageGroup": "11-12",
+      "eventCode": "200_IM_SCM"
+    },
+    {
+      "page": 5,
+      "ageGroup": "11-12",
+      "eventCode": "400_IM_SCM"
+    },
+    {
+      "page": 5,
+      "ageGroup": "11-12",
+      "eventCode": "200_FR-R_SCM"
+    },
+    {
+      "page": 5,
+      "ageGroup": "11-12",
+      "eventCode": "400_FR-R_SCM"
+    },
+    {
+      "page": 5,
+      "ageGroup": "11-12",
+      "eventCode": "200_MED-R_SCM"
+    },
+    {
+      "page": 5,
+      "ageGroup": "11-12",
+      "eventCode": "400_MED-R_SCM"
+    },
+    {
+      "page": 6,
+      "ageGroup": "13-14",
+      "eventCode": "50_FR_SCM"
+    },
+    {
+      "page": 6,
+      "ageGroup": "13-14",
+      "eventCode": "100_FR_SCM"
+    },
+    {
+      "page": 6,
+      "ageGroup": "13-14",
+      "eventCode": "200_FR_SCM"
+    },
+    {
+      "page": 6,
+      "ageGroup": "13-14",
+      "eventCode": "400_FR_SCM"
+    },
+    {
+      "page": 6,
+      "ageGroup": "13-14",
+      "eventCode": "800_FR_SCM"
+    },
+    {
+      "page": 6,
+      "ageGroup": "13-14",
+      "eventCode": "1500_FR_SCM"
+    },
+    {
+      "page": 6,
+      "ageGroup": "13-14",
+      "eventCode": "50_BK_SCM"
+    },
+    {
+      "page": 6,
+      "ageGroup": "13-14",
+      "eventCode": "100_BK_SCM"
+    },
+    {
+      "page": 6,
+      "ageGroup": "13-14",
+      "eventCode": "200_BK_SCM"
+    },
+    {
+      "page": 6,
+      "ageGroup": "13-14",
+      "eventCode": "50_BR_SCM"
+    },
+    {
+      "page": 6,
+      "ageGroup": "13-14",
+      "eventCode": "100_BR_SCM"
+    },
+    {
+      "page": 6,
+      "ageGroup": "13-14",
+      "eventCode": "200_BR_SCM"
+    },
+    {
+      "page": 6,
+      "ageGroup": "13-14",
+      "eventCode": "50_FL_SCM"
+    },
+    {
+      "page": 6,
+      "ageGroup": "13-14",
+      "eventCode": "100_FL_SCM"
+    },
+    {
+      "page": 6,
+      "ageGroup": "13-14",
+      "eventCode": "200_FL_SCM"
+    },
+    {
+      "page": 6,
+      "ageGroup": "13-14",
+      "eventCode": "200_IM_SCM"
+    },
+    {
+      "page": 6,
+      "ageGroup": "13-14",
+      "eventCode": "400_IM_SCM"
+    },
+    {
+      "page": 6,
+      "ageGroup": "13-14",
+      "eventCode": "200_FR-R_SCM"
+    },
+    {
+      "page": 6,
+      "ageGroup": "13-14",
+      "eventCode": "400_FR-R_SCM"
+    },
+    {
+      "page": 6,
+      "ageGroup": "13-14",
+      "eventCode": "800_FR-R_SCM"
+    },
+    {
+      "page": 6,
+      "ageGroup": "13-14",
+      "eventCode": "200_MED-R_SCM"
+    },
+    {
+      "page": 6,
+      "ageGroup": "13-14",
+      "eventCode": "400_MED-R_SCM"
+    },
+    {
+      "page": 7,
+      "ageGroup": "15-16",
+      "eventCode": "50_FR_SCM"
+    },
+    {
+      "page": 7,
+      "ageGroup": "15-16",
+      "eventCode": "100_FR_SCM"
+    },
+    {
+      "page": 7,
+      "ageGroup": "15-16",
+      "eventCode": "200_FR_SCM"
+    },
+    {
+      "page": 7,
+      "ageGroup": "15-16",
+      "eventCode": "400_FR_SCM"
+    },
+    {
+      "page": 7,
+      "ageGroup": "15-16",
+      "eventCode": "800_FR_SCM"
+    },
+    {
+      "page": 7,
+      "ageGroup": "15-16",
+      "eventCode": "1500_FR_SCM"
+    },
+    {
+      "page": 7,
+      "ageGroup": "15-16",
+      "eventCode": "50_BK_SCM"
+    },
+    {
+      "page": 7,
+      "ageGroup": "15-16",
+      "eventCode": "100_BK_SCM"
+    },
+    {
+      "page": 7,
+      "ageGroup": "15-16",
+      "eventCode": "200_BK_SCM"
+    },
+    {
+      "page": 7,
+      "ageGroup": "15-16",
+      "eventCode": "50_BR_SCM"
+    },
+    {
+      "page": 7,
+      "ageGroup": "15-16",
+      "eventCode": "100_BR_SCM"
+    },
+    {
+      "page": 7,
+      "ageGroup": "15-16",
+      "eventCode": "200_BR_SCM"
+    },
+    {
+      "page": 7,
+      "ageGroup": "15-16",
+      "eventCode": "50_FL_SCM"
+    },
+    {
+      "page": 7,
+      "ageGroup": "15-16",
+      "eventCode": "100_FL_SCM"
+    },
+    {
+      "page": 7,
+      "ageGroup": "15-16",
+      "eventCode": "200_FL_SCM"
+    },
+    {
+      "page": 7,
+      "ageGroup": "15-16",
+      "eventCode": "200_IM_SCM"
+    },
+    {
+      "page": 7,
+      "ageGroup": "15-16",
+      "eventCode": "400_IM_SCM"
+    },
+    {
+      "page": 7,
+      "ageGroup": "15-16",
+      "eventCode": "200_FR-R_SCM"
+    },
+    {
+      "page": 7,
+      "ageGroup": "15-16",
+      "eventCode": "400_FR-R_SCM"
+    },
+    {
+      "page": 7,
+      "ageGroup": "15-16",
+      "eventCode": "800_FR-R_SCM"
+    },
+    {
+      "page": 7,
+      "ageGroup": "15-16",
+      "eventCode": "200_MED-R_SCM"
+    },
+    {
+      "page": 7,
+      "ageGroup": "15-16",
+      "eventCode": "400_MED-R_SCM"
+    },
+    {
+      "page": 8,
+      "ageGroup": "17-18",
+      "eventCode": "50_FR_SCM"
+    },
+    {
+      "page": 8,
+      "ageGroup": "17-18",
+      "eventCode": "100_FR_SCM"
+    },
+    {
+      "page": 8,
+      "ageGroup": "17-18",
+      "eventCode": "200_FR_SCM"
+    },
+    {
+      "page": 8,
+      "ageGroup": "17-18",
+      "eventCode": "400_FR_SCM"
+    },
+    {
+      "page": 8,
+      "ageGroup": "17-18",
+      "eventCode": "800_FR_SCM"
+    },
+    {
+      "page": 8,
+      "ageGroup": "17-18",
+      "eventCode": "1500_FR_SCM"
+    },
+    {
+      "page": 8,
+      "ageGroup": "17-18",
+      "eventCode": "50_BK_SCM"
+    },
+    {
+      "page": 8,
+      "ageGroup": "17-18",
+      "eventCode": "100_BK_SCM"
+    },
+    {
+      "page": 8,
+      "ageGroup": "17-18",
+      "eventCode": "200_BK_SCM"
+    },
+    {
+      "page": 8,
+      "ageGroup": "17-18",
+      "eventCode": "50_BR_SCM"
+    },
+    {
+      "page": 8,
+      "ageGroup": "17-18",
+      "eventCode": "100_BR_SCM"
+    },
+    {
+      "page": 8,
+      "ageGroup": "17-18",
+      "eventCode": "200_BR_SCM"
+    },
+    {
+      "page": 8,
+      "ageGroup": "17-18",
+      "eventCode": "50_FL_SCM"
+    },
+    {
+      "page": 8,
+      "ageGroup": "17-18",
+      "eventCode": "100_FL_SCM"
+    },
+    {
+      "page": 8,
+      "ageGroup": "17-18",
+      "eventCode": "200_FL_SCM"
+    },
+    {
+      "page": 8,
+      "ageGroup": "17-18",
+      "eventCode": "200_IM_SCM"
+    },
+    {
+      "page": 8,
+      "ageGroup": "17-18",
+      "eventCode": "400_IM_SCM"
+    },
+    {
+      "page": 8,
+      "ageGroup": "17-18",
+      "eventCode": "200_FR-R_SCM"
+    },
+    {
+      "page": 8,
+      "ageGroup": "17-18",
+      "eventCode": "400_FR-R_SCM"
+    },
+    {
+      "page": 8,
+      "ageGroup": "17-18",
+      "eventCode": "800_FR-R_SCM"
+    },
+    {
+      "page": 8,
+      "ageGroup": "17-18",
+      "eventCode": "200_MED-R_SCM"
+    },
+    {
+      "page": 8,
+      "ageGroup": "17-18",
+      "eventCode": "400_MED-R_SCM"
+    },
+    {
+      "page": 8,
+      "ageGroup": "10&U",
+      "eventCode": "50_FR_LCM"
+    },
+    {
+      "page": 8,
+      "ageGroup": "10&U",
+      "eventCode": "100_FR_LCM"
+    },
+    {
+      "page": 8,
+      "ageGroup": "10&U",
+      "eventCode": "200_FR_LCM"
+    },
+    {
+      "page": 8,
+      "ageGroup": "10&U",
+      "eventCode": "400_FR_LCM"
+    },
+    {
+      "page": 8,
+      "ageGroup": "10&U",
+      "eventCode": "50_BK_LCM"
+    },
+    {
+      "page": 8,
+      "ageGroup": "10&U",
+      "eventCode": "100_BK_LCM"
+    },
+    {
+      "page": 8,
+      "ageGroup": "10&U",
+      "eventCode": "50_BR_LCM"
+    },
+    {
+      "page": 8,
+      "ageGroup": "10&U",
+      "eventCode": "100_BR_LCM"
+    },
+    {
+      "page": 8,
+      "ageGroup": "10&U",
+      "eventCode": "50_FL_LCM"
+    },
+    {
+      "page": 8,
+      "ageGroup": "10&U",
+      "eventCode": "100_FL_LCM"
+    },
+    {
+      "page": 8,
+      "ageGroup": "10&U",
+      "eventCode": "200_IM_LCM"
+    },
+    {
+      "page": 8,
+      "ageGroup": "10&U",
+      "eventCode": "200_FR-R_LCM"
+    },
+    {
+      "page": 8,
+      "ageGroup": "10&U",
+      "eventCode": "200_MED-R_LCM"
+    },
+    {
+      "page": 9,
+      "ageGroup": "11-12",
+      "eventCode": "50_FR_LCM"
+    },
+    {
+      "page": 9,
+      "ageGroup": "11-12",
+      "eventCode": "100_FR_LCM"
+    },
+    {
+      "page": 9,
+      "ageGroup": "11-12",
+      "eventCode": "200_FR_LCM"
+    },
+    {
+      "page": 9,
+      "ageGroup": "11-12",
+      "eventCode": "400_FR_LCM"
+    },
+    {
+      "page": 9,
+      "ageGroup": "11-12",
+      "eventCode": "800_FR_LCM"
+    },
+    {
+      "page": 9,
+      "ageGroup": "11-12",
+      "eventCode": "1500_FR_LCM"
+    },
+    {
+      "page": 9,
+      "ageGroup": "11-12",
+      "eventCode": "50_BK_LCM"
+    },
+    {
+      "page": 9,
+      "ageGroup": "11-12",
+      "eventCode": "100_BK_LCM"
+    },
+    {
+      "page": 9,
+      "ageGroup": "11-12",
+      "eventCode": "200_BK_LCM"
+    },
+    {
+      "page": 9,
+      "ageGroup": "11-12",
+      "eventCode": "50_BR_LCM"
+    },
+    {
+      "page": 9,
+      "ageGroup": "11-12",
+      "eventCode": "100_BR_LCM"
+    },
+    {
+      "page": 9,
+      "ageGroup": "11-12",
+      "eventCode": "200_BR_LCM"
+    },
+    {
+      "page": 9,
+      "ageGroup": "11-12",
+      "eventCode": "50_FL_LCM"
+    },
+    {
+      "page": 9,
+      "ageGroup": "11-12",
+      "eventCode": "100_FL_LCM"
+    },
+    {
+      "page": 9,
+      "ageGroup": "11-12",
+      "eventCode": "200_FL_LCM"
+    },
+    {
+      "page": 9,
+      "ageGroup": "11-12",
+      "eventCode": "200_IM_LCM"
+    },
+    {
+      "page": 9,
+      "ageGroup": "11-12",
+      "eventCode": "400_IM_LCM"
+    },
+    {
+      "page": 9,
+      "ageGroup": "11-12",
+      "eventCode": "200_FR-R_LCM"
+    },
+    {
+      "page": 9,
+      "ageGroup": "11-12",
+      "eventCode": "400_FR-R_LCM"
+    },
+    {
+      "page": 9,
+      "ageGroup": "11-12",
+      "eventCode": "200_MED-R_LCM"
+    },
+    {
+      "page": 9,
+      "ageGroup": "11-12",
+      "eventCode": "400_MED-R_LCM"
+    },
+    {
+      "page": 10,
+      "ageGroup": "13-14",
+      "eventCode": "50_FR_LCM"
+    },
+    {
+      "page": 10,
+      "ageGroup": "13-14",
+      "eventCode": "100_FR_LCM"
+    },
+    {
+      "page": 10,
+      "ageGroup": "13-14",
+      "eventCode": "200_FR_LCM"
+    },
+    {
+      "page": 10,
+      "ageGroup": "13-14",
+      "eventCode": "400_FR_LCM"
+    },
+    {
+      "page": 10,
+      "ageGroup": "13-14",
+      "eventCode": "800_FR_LCM"
+    },
+    {
+      "page": 10,
+      "ageGroup": "13-14",
+      "eventCode": "1500_FR_LCM"
+    },
+    {
+      "page": 10,
+      "ageGroup": "13-14",
+      "eventCode": "50_BK_LCM"
+    },
+    {
+      "page": 10,
+      "ageGroup": "13-14",
+      "eventCode": "100_BK_LCM"
+    },
+    {
+      "page": 10,
+      "ageGroup": "13-14",
+      "eventCode": "200_BK_LCM"
+    },
+    {
+      "page": 10,
+      "ageGroup": "13-14",
+      "eventCode": "50_BR_LCM"
+    },
+    {
+      "page": 10,
+      "ageGroup": "13-14",
+      "eventCode": "100_BR_LCM"
+    },
+    {
+      "page": 10,
+      "ageGroup": "13-14",
+      "eventCode": "200_BR_LCM"
+    },
+    {
+      "page": 10,
+      "ageGroup": "13-14",
+      "eventCode": "50_FL_LCM"
+    },
+    {
+      "page": 10,
+      "ageGroup": "13-14",
+      "eventCode": "100_FL_LCM"
+    },
+    {
+      "page": 10,
+      "ageGroup": "13-14",
+      "eventCode": "200_FL_LCM"
+    },
+    {
+      "page": 10,
+      "ageGroup": "13-14",
+      "eventCode": "200_IM_LCM"
+    },
+    {
+      "page": 10,
+      "ageGroup": "13-14",
+      "eventCode": "400_IM_LCM"
+    },
+    {
+      "page": 10,
+      "ageGroup": "13-14",
+      "eventCode": "200_FR-R_LCM"
+    },
+    {
+      "page": 10,
+      "ageGroup": "13-14",
+      "eventCode": "400_FR-R_LCM"
+    },
+    {
+      "page": 10,
+      "ageGroup": "13-14",
+      "eventCode": "800_FR-R_LCM"
+    },
+    {
+      "page": 10,
+      "ageGroup": "13-14",
+      "eventCode": "200_MED-R_LCM"
+    },
+    {
+      "page": 10,
+      "ageGroup": "13-14",
+      "eventCode": "400_MED-R_LCM"
+    },
+    {
+      "page": 11,
+      "ageGroup": "15-16",
+      "eventCode": "50_FR_LCM"
+    },
+    {
+      "page": 11,
+      "ageGroup": "15-16",
+      "eventCode": "100_FR_LCM"
+    },
+    {
+      "page": 11,
+      "ageGroup": "15-16",
+      "eventCode": "200_FR_LCM"
+    },
+    {
+      "page": 11,
+      "ageGroup": "15-16",
+      "eventCode": "400_FR_LCM"
+    },
+    {
+      "page": 11,
+      "ageGroup": "15-16",
+      "eventCode": "800_FR_LCM"
+    },
+    {
+      "page": 11,
+      "ageGroup": "15-16",
+      "eventCode": "1500_FR_LCM"
+    },
+    {
+      "page": 11,
+      "ageGroup": "15-16",
+      "eventCode": "50_BK_LCM"
+    },
+    {
+      "page": 11,
+      "ageGroup": "15-16",
+      "eventCode": "100_BK_LCM"
+    },
+    {
+      "page": 11,
+      "ageGroup": "15-16",
+      "eventCode": "200_BK_LCM"
+    },
+    {
+      "page": 11,
+      "ageGroup": "15-16",
+      "eventCode": "50_BR_LCM"
+    },
+    {
+      "page": 11,
+      "ageGroup": "15-16",
+      "eventCode": "100_BR_LCM"
+    },
+    {
+      "page": 11,
+      "ageGroup": "15-16",
+      "eventCode": "200_BR_LCM"
+    },
+    {
+      "page": 11,
+      "ageGroup": "15-16",
+      "eventCode": "50_FL_LCM"
+    },
+    {
+      "page": 11,
+      "ageGroup": "15-16",
+      "eventCode": "100_FL_LCM"
+    },
+    {
+      "page": 11,
+      "ageGroup": "15-16",
+      "eventCode": "200_FL_LCM"
+    },
+    {
+      "page": 11,
+      "ageGroup": "15-16",
+      "eventCode": "200_IM_LCM"
+    },
+    {
+      "page": 11,
+      "ageGroup": "15-16",
+      "eventCode": "400_IM_LCM"
+    },
+    {
+      "page": 11,
+      "ageGroup": "15-16",
+      "eventCode": "200_FR-R_LCM"
+    },
+    {
+      "page": 11,
+      "ageGroup": "15-16",
+      "eventCode": "400_FR-R_LCM"
+    },
+    {
+      "page": 11,
+      "ageGroup": "15-16",
+      "eventCode": "800_FR-R_LCM"
+    },
+    {
+      "page": 11,
+      "ageGroup": "15-16",
+      "eventCode": "200_MED-R_LCM"
+    },
+    {
+      "page": 11,
+      "ageGroup": "15-16",
+      "eventCode": "400_MED-R_LCM"
+    },
+    {
+      "page": 12,
+      "ageGroup": "17-18",
+      "eventCode": "50_FR_LCM"
+    },
+    {
+      "page": 12,
+      "ageGroup": "17-18",
+      "eventCode": "100_FR_LCM"
+    },
+    {
+      "page": 12,
+      "ageGroup": "17-18",
+      "eventCode": "200_FR_LCM"
+    },
+    {
+      "page": 12,
+      "ageGroup": "17-18",
+      "eventCode": "400_FR_LCM"
+    },
+    {
+      "page": 12,
+      "ageGroup": "17-18",
+      "eventCode": "800_FR_LCM"
+    },
+    {
+      "page": 12,
+      "ageGroup": "17-18",
+      "eventCode": "1500_FR_LCM"
+    },
+    {
+      "page": 12,
+      "ageGroup": "17-18",
+      "eventCode": "50_BK_LCM"
+    },
+    {
+      "page": 12,
+      "ageGroup": "17-18",
+      "eventCode": "100_BK_LCM"
+    },
+    {
+      "page": 12,
+      "ageGroup": "17-18",
+      "eventCode": "200_BK_LCM"
+    },
+    {
+      "page": 12,
+      "ageGroup": "17-18",
+      "eventCode": "50_BR_LCM"
+    },
+    {
+      "page": 12,
+      "ageGroup": "17-18",
+      "eventCode": "100_BR_LCM"
+    },
+    {
+      "page": 12,
+      "ageGroup": "17-18",
+      "eventCode": "200_BR_LCM"
+    },
+    {
+      "page": 12,
+      "ageGroup": "17-18",
+      "eventCode": "50_FL_LCM"
+    },
+    {
+      "page": 12,
+      "ageGroup": "17-18",
+      "eventCode": "100_FL_LCM"
+    },
+    {
+      "page": 12,
+      "ageGroup": "17-18",
+      "eventCode": "200_FL_LCM"
+    },
+    {
+      "page": 12,
+      "ageGroup": "17-18",
+      "eventCode": "200_IM_LCM"
+    },
+    {
+      "page": 12,
+      "ageGroup": "17-18",
+      "eventCode": "400_IM_LCM"
+    },
+    {
+      "page": 12,
+      "ageGroup": "17-18",
+      "eventCode": "200_FR-R_LCM"
+    },
+    {
+      "page": 12,
+      "ageGroup": "17-18",
+      "eventCode": "400_FR-R_LCM"
+    },
+    {
+      "page": 12,
+      "ageGroup": "17-18",
+      "eventCode": "800_FR-R_LCM"
+    },
+    {
+      "page": 12,
+      "ageGroup": "17-18",
+      "eventCode": "200_MED-R_LCM"
+    },
+    {
+      "page": 12,
+      "ageGroup": "17-18",
+      "eventCode": "400_MED-R_LCM"
+    }
+  ],
+  "method": "All PDF event rows parsed; six female B\u2192AAAA and six male AAAA\u2192B columns checked; wrapped medley relay course labels retained.",
+  "validityNote": "2024\u20132028 quad: September 1, 2024 through August 31, 2028; PDF revision October 10, 2025."
+}

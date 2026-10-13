@@ -255,6 +255,8 @@ const standard = {
   governingBody: "USA_Swimming",
   category: "motivational",
   name: "Fixture benchmark",
+  seasonYears: "2026–2028",
+  sourceUrl: "https://example.test/standards",
   effectiveDate: "2026-01-01",
   expirationDate: "2028-01-01",
   cuts: {
@@ -278,6 +280,15 @@ const query = async (kind, input = {}) => {
   return data;
 };
 const normalized = [...races, ...nativeRelays].map((row) => ({
+    resultType: nativeRelays.includes(row) ? "relay" : "swim",
+    moderationStatus: "clear",
+    moderationInherited: false,
+    calculationEligible:
+      row.data.status === "OK" &&
+      row.data.timeMs > 0 &&
+      !row.data.isSplit &&
+      !row.data.isRelaySplit &&
+      row.data.relay?.leg == null,
     ...normalizeRace({
       ...row,
       data: {
@@ -446,6 +457,34 @@ try {
       );
     }
   });
+  await test("meet discovery filters the catalog before pagination", async () => {
+    const search = "IES fixture meet";
+    const catalog = await query("meets", { search });
+    const selected = catalog.meets.find((item) => item.id === meet);
+    assert.ok(selected);
+    const filtered = await query("meets", {
+      search,
+      course: "SCY",
+      year: today.slice(0, 4),
+      limit: 1,
+    });
+    assert.equal(filtered.total, 1);
+    assert.deepEqual(
+      filtered.meets,
+      [selected],
+      "Filtered discovery retains full meet metadata",
+    );
+    assert.equal((await query("meets", { search, course: "SCM" })).total, 0);
+    assert.equal((await query("meets", { search, year: "1900" })).total, 0);
+    const next = await query("meets", {
+      search,
+      course: "SCY",
+      limit: 1,
+      offset: 1,
+    });
+    assert.equal(next.total, 1);
+    assert.deepEqual(next.meets, []);
+  });
   await test("profiles, histories and score cohorts preserve complete athlete semantics", async () => {
     const profile = await query("profile", { athleteId: prefix + "0" });
     assert.equal(
@@ -521,6 +560,162 @@ try {
       writes: [{ path: "standards/" + standard.id, after: standard }],
     });
     assert.ifError(restoreStandard.error);
+  });
+  await test("meet navigation partitions public results and verifies stored event evidence", async () => {
+    const baseline = await query("meet_events", { meetId: meet, limit: 1 });
+    assert.ok(
+      baseline.meetEvents.length > 1,
+      "catalog is not result-paginated",
+    );
+    assert.ok(baseline.meetEvents.every((e) => e.ordering === "fallback"));
+    assert.ok(
+      baseline.meetEvents
+        .filter((e) => !e.relay)
+        .every((e) => e.ageGroup === null),
+    );
+    const seen = [];
+    for (const event of baseline.meetEvents) {
+      const results = await query("meet_results", {
+        meetId: meet,
+        meetEventKey: event.key,
+        limit: 100,
+      });
+      assert.equal(results.total, event.count);
+      seen.push(...results.rows.map(({ race }) => race.id));
+      assert.ok(
+        results.rows.every(
+          ({ race }) =>
+            race.relay === event.relay &&
+            race.course === event.course &&
+            race.gender === event.gender,
+        ),
+      );
+    }
+    assert.equal(new Set(seen).size, seen.length);
+    assert.equal(
+      seen.length,
+      normalized.filter(
+        (r) =>
+          [team, linked, unattached].includes(r.team) &&
+          (!r.relay || r.relayLeg == null),
+      ).length,
+    );
+    assert.ok(!JSON.stringify(baseline).includes("sourceObservation"));
+    assert.deepEqual(
+      (await query("meet_events", { meetId: "missing" })).meetEvents,
+      [],
+    );
+
+    const targets = ["a", "b", "fr50", "d", "c", "im"].map((id) =>
+      races.find((r) => r.id === prefix + id),
+    );
+    const provenance = (number) => ({
+      metadata: { source: "hytek_hy3" },
+      sourceObservation: {
+        eventNumber: number,
+        archiveSha256: "a".repeat(64),
+        file: "fixture.hy3",
+        line: 10,
+        url: "https://example.test/results.zip",
+        ageMinimum: 11,
+        ageMaximum: 12,
+      },
+    });
+    try {
+      const changes = targets.map((r, index) => ({
+        path: "swims/" + r.id,
+        after: {
+          ...r.data,
+          ...provenance(["2", "2", "10", "2", "0", "bad"][index]),
+        },
+      }));
+      assert.ifError(
+        (await admin.rpc("collect_records", { reads: [], writes: changes }))
+          .error,
+      );
+      const catalog = await query("meet_events", { meetId: meet });
+      const official = catalog.meetEvents.filter(
+        (e) => e.ordering === "official",
+      );
+      assert.deepEqual(
+        official.map((e) => e.eventNumber),
+        [2, 2, 10],
+      );
+      assert.ok(official.every((e) => e.ageGroup === "11-12"));
+      const female = official.find(
+        (e) => e.eventNumber === 2 && e.gender === "F",
+      );
+      assert.equal(female.count, 2);
+      const first = await query("meet_results", {
+        meetId: meet,
+        meetEventKey: female.key,
+        limit: 1,
+      });
+      const next = await query("meet_results", {
+        meetId: meet,
+        meetEventKey: female.key,
+        limit: 1,
+        offset: 1,
+      });
+      assert.equal(first.total, 2);
+      assert.notEqual(first.rows[0].race.id, next.rows[0].race.id);
+      assert.equal(
+        (
+          await query("meet_results", {
+            meetId: meet,
+            meetEventKey: female.key,
+            team: outside,
+          })
+        ).total,
+        0,
+      );
+      const published = await anon
+        .from("public_swims")
+        .select("data")
+        .eq("id", targets[0].id)
+        .single();
+      assert.ifError(published.error);
+      assert.equal(published.data.data.meetEventNumber, 2);
+      assert.ok(!("sourceObservation" in published.data.data));
+      // A conflicting distance for the same numbered division demotes every
+      // conflicting record, not just the last imported record.
+      assert.ifError(
+        (
+          await admin.rpc("collect_records", {
+            reads: [],
+            writes: [
+              {
+                path: "swims/" + targets[2].id,
+                after: { ...targets[2].data, ...provenance("2") },
+              },
+            ],
+          })
+        ).error,
+      );
+      const conflicted = await query("meet_events", { meetId: meet });
+      assert.ok(
+        !conflicted.meetEvents.some(
+          (e) => e.ordering === "official" && e.gender === "F",
+        ),
+      );
+      assert.ok(
+        conflicted.meetEvents.some(
+          (e) => e.ordering === "official" && e.gender === "M",
+        ),
+      );
+    } finally {
+      assert.ifError(
+        (
+          await admin.rpc("collect_records", {
+            reads: [],
+            writes: targets.map((r) => ({
+              path: "swims/" + r.id,
+              after: r.data,
+            })),
+          })
+        ).error,
+      );
+    }
   });
   await test("public teams and meet results exclude outside teams and private fields", async () => {
     const facets = await query("facets");

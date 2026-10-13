@@ -1,6 +1,7 @@
 "use client";
 
 import { useId, useRef, useState } from "react";
+import Link from "next/link";
 import {
   ArrowUpRight,
   BarChart3,
@@ -17,8 +18,9 @@ import {
 import { hasBackendConfiguration } from "@/lib/supabase/client";
 import { formatSwimTime } from "@/features/swim-resources/lib/domain/swim-time";
 import {
-  timesAgeGroups,
+  ageGroups,
   timesEvents,
+  hide25sForAgeGroups,
   changeResultCategory,
   changeTimesCourse,
   resultName,
@@ -28,18 +30,26 @@ import {
   rounds,
   type Filters,
   type Race,
-  groupedEvents,
 } from "./times-data";
 import s from "./TimesDatabase.module.css";
+import loadingStyles from "./TimesLoading.module.css";
 import AthleteBrowser from "./AthleteBrowser";
+import TimeStandards from "./TimeStandards";
+import TimesEventSelector from "./TimesEventSelector";
 import RaceDetails from "./RaceDetails";
+import { ModerationNotice } from "./ResultModeration";
 import RelayLineup from "./RelayLineup";
 import { timesUrl } from "./times-api";
 import { useTimes, useDebouncedSearch } from "./use-times";
+import MeetEventNavigation, { meetEventLabel } from "./MeetEventNavigation";
 import TeamRecords, { type RecordSelection } from "./TeamRecords";
 
-type View = "rankings" | "meets" | "athletes" | "records";
+type View = "rankings" | "meets" | "athletes" | "records" | "standards";
 const pageSize = 25;
+const ageOptions: [string, string][] = ageGroups.map(([key, label]) => [
+  key,
+  label,
+]);
 const number = (n: number) => n.toLocaleString("en-US");
 function date(value: string) {
   return value
@@ -54,8 +64,8 @@ function date(value: string) {
 
 function QueryNotice({ query }: { query: ReturnType<typeof useTimes> }) {
   return query.loading ? (
-    <p className={s.notice} role="status">
-      Loading approved results…
+    <p className="sr-only" role="status">
+      Loading results…
     </p>
   ) : query.error ? (
     <p className={s.notice} role="alert">
@@ -100,18 +110,49 @@ function PopupPicker({
   onChange,
   options,
   all,
+  course,
+  onCourseChange,
+  hideLabel = false,
+  showChevron = true,
 }: {
   label: string;
+  hideLabel?: boolean;
+  showChevron?: boolean;
   value: string;
   onChange: (value: string) => void;
   options: [string, string][];
   all?: string;
+  course?: string;
+  onCourseChange?: (course: string) => void;
 }) {
   const id = useId();
   const dialog = useRef<HTMLDialogElement>(null);
+  const isEvent = label.toLowerCase().includes("event");
   return (
-    <div className={s.field}>
-      <label htmlFor={id}>{label}</label>
+    <div className={`${s.field} ${isEvent ? s.eventField : ""}`}>
+      <label
+        id={`${id}-label`}
+        htmlFor={id}
+        className={isEvent || hideLabel ? "sr-only" : undefined}
+      >
+        {label}
+      </label>
+      {isEvent && (
+        <div
+          className={s.inlineEventSelector}
+          role="group"
+          aria-labelledby={`${id}-label`}
+        >
+          <TimesEventSelector
+            value={value}
+            options={options}
+            onChange={onChange}
+            all={all}
+            course={course}
+            onCourseChange={onCourseChange}
+          />
+        </div>
+      )}
       <button
         id={id}
         className={s.eventTrigger}
@@ -128,7 +169,7 @@ function PopupPicker({
             all ??
             `Select ${label.toLowerCase()}`}
         </span>
-        <ChevronDown size={16} />
+        {showChevron && <ChevronDown size={16} />}
       </button>
       <dialog
         ref={dialog}
@@ -157,42 +198,34 @@ function PopupPicker({
             <X size={18} />
           </button>
         </div>
-        {all && (
-          <button
-            className={s.button}
-            aria-pressed={value === ""}
-            onClick={() => {
-              onChange("");
+        {isEvent ? (
+          <TimesEventSelector
+            value={value}
+            options={options}
+            all={all}
+            course={course}
+            onCourseChange={onCourseChange}
+            onChange={(next) => {
+              onChange(next);
               dialog.current?.close();
             }}
-          >
-            {all}
-          </button>
+          />
+        ) : (
+          <div className={s.eventGrid}>
+            {[...(all ? [["", all]] : []), ...options].map(([key, text]) => (
+              <button
+                key={key}
+                aria-pressed={value === key}
+                onClick={() => {
+                  onChange(key);
+                  dialog.current?.close();
+                }}
+              >
+                {text}
+              </button>
+            ))}
+          </div>
         )}
-        {(label.toLowerCase().includes("event")
-          ? groupedEvents(options)
-          : [{ label: "", options }]
-        ).map((group) => (
-          <section key={group.label} aria-label={group.label || undefined}>
-            {group.label && (
-              <h3 className={s.eventGroupTitle}>{group.label}</h3>
-            )}
-            <div className={s.eventGrid}>
-              {group.options.map(([key, text]) => (
-                <button
-                  key={key}
-                  aria-pressed={value === key}
-                  onClick={() => {
-                    onChange(key);
-                    dialog.current?.close();
-                  }}
-                >
-                  {text}
-                </button>
-              ))}
-            </div>
-          </section>
-        ))}
       </dialog>
     </div>
   );
@@ -228,7 +261,7 @@ function FilterChips({
 function AgeGroupPicker({
   value,
   onChange,
-  options = timesAgeGroups,
+  options = ageOptions,
 }: {
   value: string[];
   onChange: (value: string[]) => void;
@@ -399,7 +432,7 @@ function ProgressChart({ races }: { races: Race[] }) {
   );
 }
 function Performance({
-  race,
+  race: selectedRace,
   names,
   filters,
   onAthlete,
@@ -414,6 +447,10 @@ function Performance({
   onClose: () => void;
 }) {
   const [basis, setBasis] = useState("bests");
+  const selectedQuery = useTimes(
+    selectedRace ? timesUrl("race", { raceId: selectedRace.id }) : null,
+  );
+  const race = selectedQuery.data?.rows?.[0]?.race ?? selectedRace;
   const analysis = useTimes(
     race
       ? timesUrl("analysis", {
@@ -424,7 +461,8 @@ function Performance({
         })
       : null,
   );
-  const stats = analysis.data?.stats;
+  const stats =
+    race?.moderationStatus === "flagged" ? null : analysis.data?.stats;
   return (
     <aside className={s.side} aria-label="Performance analysis">
       <div className={s.panel}>
@@ -601,6 +639,11 @@ export default function TimesDatabase() {
   const [listPage, setListPage] = useState(0);
   const [relayPage, setRelayPage] = useState(0);
   const [meetId, setMeetId] = useState("");
+  const [meetEventKey, setMeetEventKey] = useState("");
+  const [meetTeam, setMeetTeam] = useState("");
+  const [meetSearchOpen, setMeetSearchOpen] = useState(true);
+  const [meetCourse, setMeetCourse] = useState("");
+  const [meetYear, setMeetYear] = useState("");
   const [athleteId, setAthleteId] = useState("");
   const [profileName, setProfileName] = useState("");
   const [athleteSearchOpen, setAthleteSearchOpen] = useState(true);
@@ -611,20 +654,16 @@ export default function TimesDatabase() {
   const enabled = hasBackendConfiguration;
   const facets = useTimes(enabled ? timesUrl("facets") : null);
   const teams = facets.data?.teams ?? [];
+  const recordTeams = teams.filter(
+    ([id, name]) =>
+      !/unattached/i.test(`${id} ${name}`) &&
+      !/^UN(?:AT|SC)(?:$|[-_\s])/i.test(id),
+  );
   const years = facets.data?.years ?? [];
-  const ageOptions: [string, string][] = [
-    ...timesAgeGroups,
-    ...(facets.data?.relayAges ?? [])
-      .filter((key) => !timesAgeGroups.some(([id]) => id === key))
-      .map((key): [string, string] => [
-        key,
-        key.replace("&U", " & under").replace("&O", " & over"),
-      ]),
-  ];
   const activeRecordTeam =
-    recordTeam ||
-    teams.find(([id]) => id === "velocity-swimming")?.[0] ||
-    teams[0]?.[0] ||
+    recordTeams.find(([id]) => id === recordTeam)?.[0] ||
+    recordTeams.find(([id]) => id === "velocity-swimming")?.[0] ||
+    recordTeams[0]?.[0] ||
     "";
   const recordTeamName =
     teams.find(([id]) => id === activeRecordTeam)?.[1] ?? "";
@@ -643,14 +682,28 @@ export default function TimesDatabase() {
   );
   const meetsQuery = useTimes(
     enabled && view === "meets"
-      ? timesUrl("meets", { search: searchTerm, offset: listPage * pageSize })
+      ? timesUrl("meets", {
+          search: searchTerm,
+          course: meetCourse,
+          year: meetYear,
+          offset: listPage * pageSize,
+        })
       : null,
   );
-  const meetQuery = useTimes(
+  const meetEventsQuery = useTimes(
     enabled && view === "meets" && meetId
+      ? timesUrl("meet_events", { meetId })
+      : null,
+  );
+  const meetEvents = meetEventsQuery.data?.meetEvents ?? [];
+  const activeMeetEvent =
+    meetEvents.find((event) => event.key === meetEventKey) ?? meetEvents[0];
+  const meetQuery = useTimes(
+    enabled && view === "meets" && meetId && activeMeetEvent
       ? timesUrl("meet_results", {
-          ...queryFilters,
           meetId,
+          meetEventKey: activeMeetEvent.key,
+          team: meetTeam,
           offset: page * pageSize,
         })
       : null,
@@ -693,7 +746,9 @@ export default function TimesDatabase() {
   const history = historyQuery.data?.points ?? [];
   const foundMeets = meetsQuery.data?.meets ?? [];
   const chosenMeet =
-    meetQuery.data?.meet ?? foundMeets.find((m) => m.id === meetId);
+    meetEventsQuery.data?.meet ??
+    meetQuery.data?.meet ??
+    foundMeets.find((m) => m.id === meetId);
   const rowsQuery =
     view === "rankings"
       ? rankingsQuery
@@ -712,29 +767,45 @@ export default function TimesDatabase() {
   );
   if (athleteId && profileQuery.data?.name)
     names.set(athleteId, profileQuery.data.name);
+  const hide25s =
+    (view === "rankings" || view === "meets") &&
+    hide25sForAgeGroups(filters.course, filters.ageGroups);
   const rankingEvents = [
     ...timesEvents(filters.course),
     ...timesEvents(filters.course, true),
-  ];
+  ].filter((event) => !hide25s || !event.startsWith("25_"));
   const summaryCourse =
-    view === "athletes" && !athleteSearchOpen
-      ? activeEvent.split("_").at(-1) || "All courses"
-      : filters.course || "All courses";
+    view === "meets"
+      ? activeMeetEvent?.course || "All courses"
+      : view === "athletes" && !athleteSearchOpen
+        ? activeEvent.split("_").at(-1) || "All courses"
+        : filters.course || "All courses";
   const summaryEvent =
-    view === "athletes" && !athleteSearchOpen
-      ? activeEvent.split("_").slice(0, 2).join("_")
-      : filters.event;
+    view === "meets"
+      ? activeMeetEvent?.event || ""
+      : view === "athletes" && !athleteSearchOpen
+        ? activeEvent.split("_").slice(0, 2).join("_")
+        : filters.event;
   const summaryTeam =
     view === "records"
       ? recordTeamName
-      : teams.find(([id]) => id === filters.team)?.[1];
+      : teams.find(
+          ([id]) => id === (view === "meets" ? meetTeam : filters.team),
+        )?.[1];
   const selectedAgeLabels =
-    ageOptions
-      .filter(([key]) => filters.ageGroups.includes(key))
-      .map(([, label]) => label)
-      .join(", ") || "All ages";
+    view === "meets"
+      ? activeMeetEvent?.ageGroup || "Event age group unreported"
+      : ageOptions
+          .filter(([key]) => filters.ageGroups.includes(key))
+          .map(([, label]) => label)
+          .join(", ") || "All ages";
   const selectedGenderLabels =
-    (view === "records" ? ["F", "M"] : filters.genders)
+    (view === "meets"
+      ? [activeMeetEvent?.gender || ""]
+      : view === "records"
+        ? ["F", "M"]
+        : filters.genders
+    )
       .map((gender) => ({ F: "Female", M: "Male", X: "Mixed" })[gender])
       .join(" / ") || "All genders";
   function returnToAthletes() {
@@ -746,11 +817,24 @@ export default function TimesDatabase() {
     });
   }
   function updateFilter<K extends keyof Filters>(key: K, value: Filters[K]) {
-    setFilters((f) =>
-      key === "course"
-        ? changeTimesCourse(f, String(value))
-        : { ...f, [key]: value },
-    );
+    setFilters((f) => {
+      const next =
+        key === "course"
+          ? changeTimesCourse(f, String(value))
+          : { ...f, [key]: value };
+      if (
+        (view === "rankings" || view === "meets") &&
+        hide25sForAgeGroups(next.course, next.ageGroups) &&
+        next.event.startsWith("25_")
+      ) {
+        const sameStroke50 = next.event.replace(/^25_/, "50_");
+        const available = timesEvents(next.course, next.relay);
+        next.event = available.includes(sameStroke50)
+          ? sameStroke50
+          : available.find((event) => !event.startsWith("25_")) || "";
+      }
+      return next;
+    });
     setPage(0);
     setSelected(null);
   }
@@ -768,6 +852,7 @@ export default function TimesDatabase() {
   }
   function changeView(next: View) {
     setView(next);
+    setMeetSearchOpen(true);
     setFromRecords(false);
     setAthleteSearchOpen(!athleteId);
     setListPage(0);
@@ -831,16 +916,21 @@ export default function TimesDatabase() {
       });
     });
   }
+  const tableRelay =
+    view === "meets" ? Boolean(activeMeetEvent?.relay) : Boolean(filters.relay);
   const table = (
     <>
       <div className={s.tableWrap}>
-        <table className={s.table}>
+        <table
+          aria-busy={rowsQuery.loading}
+          className={`${s.table} ${view === "rankings" ? s.rankingTable : ""}`}
+        >
           <caption className="sr-only">
             {view === "rankings"
               ? filters.mode === "bests"
                 ? "Event Rankings, one best swim per athlete in the selected age groups"
                 : "Event Rankings, every matching performance"
-              : filters.relay
+              : tableRelay
                 ? "Relay team results"
                 : "Individual swim results"}
           </caption>
@@ -854,17 +944,86 @@ export default function TimesDatabase() {
               <th scope="col">
                 {view === "athletes"
                   ? "Meet"
-                  : filters.relay
+                  : tableRelay
                     ? "Relay team"
                     : "Athlete"}
               </th>
               {view !== "rankings" && <th scope="col">Event</th>}
               <th scope="col">Time</th>
               <th scope="col">{view === "rankings" ? "Date" : "Round"}</th>
-              {view === "rankings" && <th scope="col">Team</th>}
+              {view === "rankings" && (
+                <>
+                  <th scope="col" className={s.rankingTeam}>
+                    Team
+                  </th>
+                  <th scope="col" className={s.rankingMeet}>
+                    Meet
+                  </th>
+                </>
+              )}
             </tr>
           </thead>
-          <tbody>
+          <tbody
+            className={rowsQuery.loading ? loadingStyles.pulse : undefined}
+          >
+            {rowsQuery.loading &&
+              Array.from(
+                { length: rowsQuery.placeholderRowCount || pageSize },
+                (_, index) => (
+                  <tr key={`loading-${index}`} aria-hidden="true">
+                    {view === "rankings" && (
+                      <td className={s.rank}>
+                        <span
+                          className={loadingStyles.bar}
+                          style={{ width: 16 }}
+                        />
+                      </td>
+                    )}
+                    <td>
+                      <span
+                        className={loadingStyles.bar}
+                        style={{ width: 150 }}
+                      />
+                    </td>
+                    {view !== "rankings" && (
+                      <td>
+                        <span
+                          className={loadingStyles.bar}
+                          style={{ width: 100 }}
+                        />
+                      </td>
+                    )}
+                    <td>
+                      <span
+                        className={loadingStyles.bar}
+                        style={{ width: 60, height: 24 }}
+                      />
+                    </td>
+                    <td>
+                      <span
+                        className={loadingStyles.bar}
+                        style={{ width: 85 }}
+                      />
+                    </td>
+                    {view === "rankings" && (
+                      <>
+                        <td className={s.rankingTeam}>
+                          <span
+                            className={loadingStyles.bar}
+                            style={{ width: 120 }}
+                          />
+                        </td>
+                        <td className={s.rankingMeet}>
+                          <span
+                            className={loadingStyles.bar}
+                            style={{ width: "70%" }}
+                          />
+                        </td>
+                      </>
+                    )}
+                  </tr>
+                ),
+              )}
             {displayed.map(({ race, rank }) => (
               <tr
                 key={race.id}
@@ -913,6 +1072,7 @@ export default function TimesDatabase() {
                       ? formatSwimTime(race.time)
                       : race.status || "—"}
                   </button>
+                  <ModerationNotice race={race} />
                 </td>
                 <td>
                   {view === "rankings" ? (
@@ -924,6 +1084,9 @@ export default function TimesDatabase() {
                         e.stopPropagation();
                         changeView("meets");
                         setMeetId(race.meetId);
+                        setMeetEventKey("");
+                        setMeetTeam("");
+                        setMeetSearchOpen(false);
                         showProfile();
                       }}
                     >
@@ -934,39 +1097,76 @@ export default function TimesDatabase() {
                   )}
                 </td>
                 {view === "rankings" && (
-                  <td className={s.teamCell}>
-                    {race.teamName ||
-                      teams.find(([id]) => id === race.team)?.[1] ||
-                      "Team unavailable"}
-                  </td>
+                  <>
+                    <td className={`${s.teamCell} ${s.rankingTeam}`}>
+                      {race.teamName ||
+                        teams.find(([id]) => id === race.team)?.[1] ||
+                        "Team unavailable"}
+                    </td>
+                    <td className={s.rankingMeet}>
+                      <button
+                        className={s.link}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          changeView("meets");
+                          setMeetId(race.meetId);
+                          setMeetEventKey("");
+                          setMeetTeam("");
+                          setMeetSearchOpen(false);
+                          showProfile();
+                        }}
+                      >
+                        {race.meet || "Meet unavailable"}
+                      </button>
+                    </td>
+                  </>
                 )}
               </tr>
             ))}
           </tbody>
         </table>
       </div>
-      {!displayed.length && (
+      {!rowsQuery.loading && !displayed.length && (
         <div className={s.empty}>
           <Search size={24} style={{ margin: "auto" }} />
           <h3>No matching results</h3>
           <p>Try another event or broaden your filters.</p>
         </div>
       )}
-      <Pager
-        page={page}
-        total={rowsQuery.data?.total ?? 0}
-        onChange={setPage}
-      />
+      {rowsQuery.loading ? (
+        <div className={s.pager} aria-hidden="true">
+          <span
+            className={loadingStyles.bar}
+            style={{ width: 90, height: 36 }}
+          />
+          <span className={loadingStyles.bar} style={{ width: 100 }} />
+          <span
+            className={loadingStyles.bar}
+            style={{ width: 90, height: 36 }}
+          />
+        </div>
+      ) : (
+        <Pager
+          page={page}
+          total={rowsQuery.data?.total ?? 0}
+          onChange={setPage}
+        />
+      )}
     </>
   );
   return (
     <main className={s.page} data-times-page="">
       <header className={s.toolHeader}>
         <nav className={s.tabs} aria-label="Explore times">
+          <Link href="/tools">
+            <ChevronLeft size={17} />
+            Tools Page
+          </Link>
           {(
             [
               ["rankings", "Event Rankings", BarChart3],
               ["records", "Team Records", Trophy],
+              ["standards", "Time Standards", Timer],
               ["meets", "Meet Results", CalendarDays],
               ["athletes", "Athletes", Users],
             ] as const
@@ -981,573 +1181,714 @@ export default function TimesDatabase() {
             </button>
           ))}
         </nav>
-        <dl className={s.filterSummary} aria-label="Selected times filters">
-          <div>
-            <dt>Course</dt>
-            <dd>{summaryCourse}</dd>
-          </div>
-          <div>
-            <dt>Event</dt>
-            <dd>{summaryEvent ? eventLabel(summaryEvent) : "All events"}</dd>
-          </div>
-          <div>
-            <dt>Age group</dt>
-            <dd>{selectedAgeLabels}</dd>
-          </div>
-          <div>
-            <dt>Gender</dt>
-            <dd>{selectedGenderLabels}</dd>
-          </div>
-          {summaryTeam && (
+        {view !== "records" && view !== "standards" && (
+          <dl className={s.filterSummary} aria-label="Selected times filters">
             <div>
-              <dt>Team</dt>
-              <dd>{summaryTeam}</dd>
+              <dt className={view === "rankings" ? "sr-only" : undefined}>
+                Course
+              </dt>
+              <dd>{summaryCourse}</dd>
             </div>
-          )}
-        </dl>
+            <div>
+              <dt className={view === "rankings" ? "sr-only" : undefined}>
+                Event
+              </dt>
+              <dd>{summaryEvent ? eventLabel(summaryEvent) : "All events"}</dd>
+            </div>
+            <div>
+              <dt className={view === "rankings" ? "sr-only" : undefined}>
+                Age group
+              </dt>
+              <dd>{selectedAgeLabels}</dd>
+            </div>
+            <div>
+              <dt className={view === "rankings" ? "sr-only" : undefined}>
+                Gender
+              </dt>
+              <dd>{selectedGenderLabels}</dd>
+            </div>
+            {summaryTeam && (
+              <div>
+                <dt className={view === "rankings" ? "sr-only" : undefined}>
+                  Team
+                </dt>
+                <dd>{summaryTeam}</dd>
+              </div>
+            )}
+          </dl>
+        )}
       </header>
-      {!hasBackendConfiguration && (
-        <div className={s.notice} role="status">
-          The times database is not connected yet. Approved results will appear
-          here once it is available.
-        </div>
-      )}
-      <QueryNotice query={facets} />
-      {view === "meets" && meetId && !chosenMeet && (
-        <QueryNotice query={meetQuery} />
-      )}
-      <div
-        className={`${s.workspace} ${view === "records" || (view === "athletes" && athleteSearchOpen) ? s.recordsWorkspace : ""}`}
-      >
-        <div className={s.main}>
-          {view === "records" ? (
-            <>
-              <QueryNotice query={recordsQuery} />
-              <TeamRecords
-                races={races}
-                team={activeRecordTeam}
-                teamName={recordTeamName}
-                ready={Boolean(recordsQuery.data)}
-                names={names}
-                onRecord={openRecord}
-                selector={
-                  <PopupPicker
-                    label="Record team"
-                    value={activeRecordTeam}
-                    onChange={setRecordTeam}
-                    options={teams}
-                  />
-                }
-              />
-            </>
-          ) : (
-            <>
-              <section
-                id="times-rankings"
-                className={s.panel}
-                aria-label={
-                  view === "rankings"
-                    ? "Event Rankings"
-                    : view === "meets"
-                      ? "Meet browser"
-                      : "Athlete browser"
-                }
-              >
-                {view !== "rankings" && (
-                  <div className={s.panelHead}>
-                    <div>
-                      <h2>
-                        {view === "meets" ? "Find a meet" : "Team athletes"}
-                      </h2>
-                      <p>
-                        {view === "meets"
-                          ? "Browse approved results, then select a meet to explore each swim."
-                          : "Choose a team to compare athletes across their strongest events."}
-                      </p>
-                    </div>
-                    {view === "athletes" && athleteId && (
-                      <button
-                        className={s.button}
-                        aria-expanded={athleteSearchOpen}
-                        aria-controls="athlete-search"
-                        onClick={() =>
-                          athleteSearchOpen
-                            ? setAthleteSearchOpen(false)
-                            : returnToAthletes()
-                        }
-                      >
-                        {athleteSearchOpen
-                          ? "Hide team list"
-                          : "← Back to team athletes"}
-                      </button>
-                    )}
-                  </div>
-                )}
-                <div
-                  id={view === "athletes" ? "athlete-search" : undefined}
-                  tabIndex={view === "athletes" ? -1 : undefined}
-                  hidden={view === "athletes" && !athleteSearchOpen}
+      <div className={s.content}>
+        {!hasBackendConfiguration && (
+          <div className={s.notice} role="status">
+            The times database is not connected yet. Approved results will
+            appear here once it is available.
+          </div>
+        )}
+        <QueryNotice query={facets} />
+        {view === "meets" && meetId && !chosenMeet && (
+          <QueryNotice query={meetEventsQuery} />
+        )}
+        <div
+          className={`${s.workspace} ${view === "standards" || view === "records" || (view === "athletes" && athleteSearchOpen) || ((view === "rankings" || view === "meets") && !selected) ? s.recordsWorkspace : ""}`}
+        >
+          <div className={s.main}>
+            {view === "standards" ? (
+              <TimeStandards />
+            ) : view === "records" ? (
+              <>
+                <QueryNotice query={recordsQuery} />
+                <TeamRecords
+                  races={races}
+                  team={activeRecordTeam}
+                  teamName={recordTeamName}
+                  ready={Boolean(recordsQuery.data)}
+                  loading={recordsQuery.loading || facets.loading}
+                  names={names}
+                  onRecord={openRecord}
+                  selector={
+                    <PopupPicker
+                      label="Record team"
+                      hideLabel
+                      showChevron={false}
+                      value={activeRecordTeam}
+                      onChange={setRecordTeam}
+                      options={recordTeams}
+                    />
+                  }
+                />
+              </>
+            ) : (
+              <>
+                <section
+                  hidden={view === "meets" && !meetSearchOpen}
+                  id="times-rankings"
+                  className={s.panel}
+                  aria-label={
+                    view === "rankings"
+                      ? "Event Rankings"
+                      : view === "meets"
+                        ? "Meet browser"
+                        : "Athlete browser"
+                  }
                 >
-                  {view === "rankings" && fromRecords && (
-                    <div className={s.recordBreadcrumb}>
-                      <button
-                        className={s.link}
-                        onClick={() => changeView("records")}
-                      >
-                        ← Team records
-                      </button>
-                      <span>
-                        {teams.find(([id]) => id === filters.team)?.[1]} ·{" "}
-                        {filters.course} {filters.event.replace("_", " ")} ·{" "}
-                        {filters.genders[0] === "F"
-                          ? "Girls"
-                          : filters.genders[0] === "M"
-                            ? "Boys"
-                            : "Mixed"}{" "}
-                        ·{" "}
-                        {ageOptions
-                          .filter(([key]) => filters.ageGroups.includes(key))
-                          .map(([, label]) => label)
-                          .join(", ") || "All ages"}
-                      </span>
-                    </div>
-                  )}
-                  {view === "rankings" && (
-                    <div className={s.filters}>
-                      <FilterChips
-                        label="Course"
-                        value={filters.course}
-                        onChange={(v) => updateFilter("course", v)}
-                        options={["SCY", "LCM", "SCM"].map((course) => [
-                          course,
-                          course,
-                        ])}
-                      />
-                      <PopupPicker
-                        label="Event"
-                        value={filters.event}
-                        onChange={(event) => {
-                          updateResultCategory(event.endsWith("-R"));
-                          updateFilter("event", event);
-                        }}
-                        options={rankingEvents.map((e) => [e, eventLabel(e)])}
-                      />
-                      <fieldset className={s.courseField}>
-                        <legend>Gender</legend>
-                        <div className={s.chips}>
-                          {[
-                            ["F", "Female"],
-                            ["M", "Male"],
-                            ...(filters.relay ? [["X", "Mixed"]] : []),
-                          ].map(([id, label]) => (
-                            <button
-                              key={id}
-                              aria-pressed={filters.genders.includes(id)}
-                              onClick={() => {
-                                const current = filters.genders;
-                                const next = current.includes(id)
-                                  ? current.filter((g) => g !== id)
-                                  : [...current, id];
-                                if (next.length) updateFilter("genders", next);
-                              }}
-                            >
-                              {label}
-                            </button>
-                          ))}
-                        </div>
-                      </fieldset>
-                      <AgeGroupPicker
-                        options={ageOptions}
-                        value={filters.ageGroups}
-                        onChange={(v) => updateFilter("ageGroups", v)}
-                      />
-                      {!filters.relay && (
-                        <FilterChips
-                          label="Results"
-                          value={filters.mode}
-                          onChange={(v) =>
-                            updateFilter("mode", v as Filters["mode"])
-                          }
-                          options={[
-                            ["bests", "Bests"],
-                            ["performances", "Performances"],
-                          ]}
-                        />
-                      )}
-                      <PopupPicker
-                        label="Team"
-                        value={filters.team}
-                        onChange={(v) => updateFilter("team", v)}
-                        all="All IES Teams"
-                        options={teams}
-                      />
-                      <PopupPicker
-                        label="Year"
-                        value={filters.year}
-                        onChange={(v) => updateFilter("year", v)}
-                        all="All years"
-                        options={years.map((y) => [y, y])}
-                      />
-                    </div>
-                  )}
-                  {view !== "athletes" && (
-                    <div className={s.toolbar}>
-                      <label className={s.field}>
-                        <span className="sr-only">
+                  {view !== "rankings" && (
+                    <div className={s.panelHead}>
+                      <div>
+                        <h2>
+                          {view === "meets" ? "Find a meet" : "Team athletes"}
+                        </h2>
+                        <p>
                           {view === "meets"
-                            ? "Search meets"
-                            : filters.relay
-                              ? "Search relay teams"
-                              : "Search athletes"}
-                        </span>
-                        <input
-                          type="search"
-                          placeholder={
-                            view === "meets"
-                              ? "Search meet name…"
-                              : filters.relay
-                                ? "Search relay team…"
-                                : "Search athlete name…"
-                          }
-                          value={search}
-                          onChange={(e) => {
-                            setSearch(e.target.value);
-                            setListPage(0);
-                            setPage(0);
-                          }}
-                        />
-                      </label>
-                      {view === "rankings" && (
+                            ? "Browse approved results, then select a meet to explore each swim."
+                            : "Choose a team to compare athletes across their strongest events."}
+                        </p>
+                      </div>
+                      {view === "athletes" && athleteId && (
                         <button
-                          className={s.link}
-                          onClick={() => {
-                            setFilters({ ...initialFilters });
-                            setSearch("");
-                            setPage(0);
-                            setSelected(null);
-                          }}
+                          className={s.button}
+                          aria-expanded={athleteSearchOpen}
+                          aria-controls="athlete-search"
+                          onClick={() =>
+                            athleteSearchOpen
+                              ? setAthleteSearchOpen(false)
+                              : returnToAthletes()
+                          }
                         >
-                          Reset filters
+                          {athleteSearchOpen
+                            ? "Hide team list"
+                            : "← Back to team athletes"}
                         </button>
                       )}
                     </div>
                   )}
-                  {view === "athletes" ? (
-                    <AthleteBrowser
-                      teams={teams}
-                      onAthlete={openAthlete}
-                      enabled={athleteSearchOpen}
-                    />
-                  ) : view === "rankings" ? (
-                    <>
-                      <QueryNotice query={rankingsQuery} />
-                      {rankingsQuery.data && table}
-                    </>
-                  ) : (
-                    <>
-                      <QueryNotice query={meetsQuery} />
-                      {meetsQuery.data && (
-                        <>
-                          <div className={s.cards}>
-                            {view === "meets"
-                              ? foundMeets.map((m) => (
-                                  <button
-                                    key={m.id}
-                                    className={s.card}
-                                    aria-pressed={meetId === m.id}
-                                    onClick={() => {
-                                      setMeetId(m.id);
-                                      showProfile();
-                                      setPage(0);
-                                      setSelected(null);
-                                    }}
-                                  >
-                                    <span>
-                                      {date(m.date)} ·{" "}
-                                      {[...m.courses].join(" / ")}
-                                    </span>
-                                    <strong>{m.name}</strong>
-                                    <span>
-                                      {number(m.count)} approved results ↗
-                                    </span>
-                                  </button>
-                                ))
-                              : null}
-                          </div>
-                          {!foundMeets.length && (
-                            <p className={s.empty}>
-                              No matching{" "}
-                              {view === "meets" ? "meets" : "athletes"}. Try a
-                              different name.
-                            </p>
-                          )}
-                          <Pager
-                            page={listPage}
-                            total={meetsQuery.data?.total ?? 0}
-                            onChange={setListPage}
+                  <div
+                    id={view === "athletes" ? "athlete-search" : undefined}
+                    tabIndex={view === "athletes" ? -1 : undefined}
+                    hidden={view === "athletes" && !athleteSearchOpen}
+                  >
+                    {view === "rankings" && fromRecords && (
+                      <div className={s.recordBreadcrumb}>
+                        <button
+                          className={s.link}
+                          onClick={() => changeView("records")}
+                        >
+                          ← Team records
+                        </button>
+                        <span>
+                          {teams.find(([id]) => id === filters.team)?.[1]} ·{" "}
+                          {filters.course} {filters.event.replace("_", " ")} ·{" "}
+                          {filters.genders[0] === "F"
+                            ? "Girls"
+                            : filters.genders[0] === "M"
+                              ? "Boys"
+                              : "Mixed"}{" "}
+                          ·{" "}
+                          {ageOptions
+                            .filter(([key]) => filters.ageGroups.includes(key))
+                            .map(([, label]) => label)
+                            .join(", ") || "All ages"}
+                        </span>
+                      </div>
+                    )}
+                    {view === "rankings" && (
+                      <div className={s.filters}>
+                        <PopupPicker
+                          label="Event"
+                          course={filters.course}
+                          onCourseChange={(course) =>
+                            updateFilter("course", course)
+                          }
+                          value={filters.event}
+                          onChange={(event) => {
+                            updateResultCategory(event.endsWith("-R"));
+                            updateFilter("event", event);
+                          }}
+                          options={rankingEvents.map((e) => [e, eventLabel(e)])}
+                        />
+                        <div className={s.secondaryFilters}>
+                          <fieldset className={s.courseField}>
+                            <legend>Gender</legend>
+                            <div className={s.chips}>
+                              {[
+                                ["F", "Female"],
+                                ["M", "Male"],
+                                ...(filters.relay ? [["X", "Mixed"]] : []),
+                              ].map(([id, label]) => (
+                                <button
+                                  key={id}
+                                  aria-pressed={filters.genders.includes(id)}
+                                  onClick={() => {
+                                    const current = filters.genders;
+                                    const next = current.includes(id)
+                                      ? current.filter((g) => g !== id)
+                                      : [...current, id];
+                                    if (next.length)
+                                      updateFilter("genders", next);
+                                  }}
+                                >
+                                  {label}
+                                </button>
+                              ))}
+                            </div>
+                          </fieldset>
+                          <AgeGroupPicker
+                            options={ageOptions}
+                            value={filters.ageGroups}
+                            onChange={(v) => updateFilter("ageGroups", v)}
                           />
-                        </>
-                      )}
-                    </>
-                  )}
-                </div>
-              </section>
-              {view === "meets" && chosenMeet && (
-                <section className={s.panel} ref={profileRef} tabIndex={-1}>
-                  <div className={s.panelHead}>
-                    <div>
-                      <span className={s.badge}>Meet results</span>
-                      <h2>{chosenMeet.name}</h2>
-                      <p>
-                        {date(chosenMeet.date)} · {number(chosenMeet.count)}{" "}
-                        approved results ·{" "}
-                        {filters.relay ? "relay teams" : "individual swims"}{" "}
-                        below
-                      </p>
-                    </div>
+                          {!filters.relay && (
+                            <FilterChips
+                              label="Results"
+                              value={filters.mode}
+                              onChange={(v) =>
+                                updateFilter("mode", v as Filters["mode"])
+                              }
+                              options={[
+                                ["bests", "Bests"],
+                                ["performances", "Performances"],
+                              ]}
+                            />
+                          )}
+                          <PopupPicker
+                            label="Team"
+                            value={filters.team}
+                            onChange={(v) => updateFilter("team", v)}
+                            all="All IES Teams"
+                            options={teams}
+                          />
+                          <PopupPicker
+                            label="Year"
+                            value={filters.year}
+                            onChange={(v) => updateFilter("year", v)}
+                            all="All years"
+                            options={years.map((y) => [y, y])}
+                          />
+                        </div>
+                      </div>
+                    )}
+                    {view === "meets" && (
+                      <div className={s.filters}>
+                        <Select
+                          label="Meet search course"
+                          value={meetCourse}
+                          onChange={(value) => {
+                            setMeetCourse(value);
+                            setListPage(0);
+                          }}
+                          all="All courses"
+                          options={["SCY", "LCM", "SCM"].map((course) => [
+                            course,
+                            course,
+                          ])}
+                        />
+                        <Select
+                          label="Meet search year"
+                          value={meetYear}
+                          onChange={(value) => {
+                            setMeetYear(value);
+                            setListPage(0);
+                          }}
+                          all="All years"
+                          options={years.map((year) => [year, year])}
+                        />
+                      </div>
+                    )}
+                    {view !== "athletes" && (
+                      <div className={s.toolbar}>
+                        <label className={s.field}>
+                          <span className="sr-only">
+                            {view === "meets"
+                              ? "Search meets"
+                              : filters.relay
+                                ? "Search relay teams"
+                                : "Search athletes"}
+                          </span>
+                          <input
+                            type="search"
+                            placeholder={
+                              view === "meets"
+                                ? "Search meet name…"
+                                : filters.relay
+                                  ? "Search relay team…"
+                                  : "Search athlete name…"
+                            }
+                            value={search}
+                            onChange={(e) => {
+                              setSearch(e.target.value);
+                              setListPage(0);
+                              setPage(0);
+                            }}
+                          />
+                        </label>
+                        {view === "rankings" && (
+                          <button
+                            className={s.link}
+                            onClick={() => {
+                              setFilters({ ...initialFilters });
+                              setSearch("");
+                              setPage(0);
+                              setSelected(null);
+                            }}
+                          >
+                            Reset filters
+                          </button>
+                        )}
+                      </div>
+                    )}
+                    {view === "athletes" ? (
+                      <AthleteBrowser
+                        teams={teams}
+                        onAthlete={openAthlete}
+                        enabled={athleteSearchOpen}
+                      />
+                    ) : view === "rankings" ? (
+                      <>
+                        <QueryNotice query={rankingsQuery} />
+                        {(rankingsQuery.data || rankingsQuery.loading) && table}
+                      </>
+                    ) : (
+                      <>
+                        <div className={s.meetNotice}>
+                          <QueryNotice query={meetsQuery} />
+                        </div>
+                        {meetsQuery.loading && (
+                          <div
+                            className={`${s.cards} ${loadingStyles.pulse}`}
+                            aria-hidden="true"
+                            data-loading-meets=""
+                          >
+                            {Array.from({ length: 6 }, (_, index) => (
+                              <div key={index} className={s.card}>
+                                <span
+                                  className={loadingStyles.bar}
+                                  style={{ width: "40%" }}
+                                />
+                                <span
+                                  className={loadingStyles.bar}
+                                  style={{ width: "80%", height: 22 }}
+                                />
+                                <span
+                                  className={loadingStyles.bar}
+                                  style={{ width: "55%" }}
+                                />
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                        {meetsQuery.data && (
+                          <>
+                            <div className={s.cards}>
+                              {view === "meets"
+                                ? foundMeets.map((m) => (
+                                    <button
+                                      key={m.id}
+                                      className={s.card}
+                                      aria-pressed={meetId === m.id}
+                                      onClick={() => {
+                                        setMeetId(m.id);
+                                        setMeetEventKey("");
+                                        setMeetTeam("");
+                                        setMeetSearchOpen(false);
+                                        showProfile();
+                                        setPage(0);
+                                        setSelected(null);
+                                      }}
+                                    >
+                                      <span>
+                                        {date(m.date)} ·{" "}
+                                        {[...m.courses].join(" / ")}
+                                      </span>
+                                      <strong>{m.name}</strong>
+                                      <span>
+                                        {number(m.count)} approved results ↗
+                                      </span>
+                                    </button>
+                                  ))
+                                : null}
+                            </div>
+                            {!foundMeets.length && (
+                              <p className={s.empty}>
+                                No matching{" "}
+                                {view === "meets" ? "meets" : "athletes"}. Try a
+                                different name or broaden the filters.
+                              </p>
+                            )}
+                            <Pager
+                              page={listPage}
+                              total={meetsQuery.data?.total ?? 0}
+                              onChange={setListPage}
+                            />
+                          </>
+                        )}
+                      </>
+                    )}
                   </div>
-                  <div className={s.filters}>
-                    <PopupPicker
-                      label="Meet event"
-                      value={filters.event}
-                      onChange={(event) => {
-                        if (event) updateResultCategory(event.endsWith("-R"));
-                        updateFilter("event", event);
-                      }}
-                      all="All events"
-                      options={rankingEvents.map((e) => [e, eventLabel(e)])}
-                    />
-                    <FilterChips
-                      label="Meet course"
-                      value={filters.course}
-                      onChange={(v) => updateFilter("course", v)}
-                      options={[
-                        ["", "All"],
-                        ...["SCY", "LCM", "SCM"].map(
-                          (course): [string, string] => [course, course],
-                        ),
-                      ]}
-                    />
-                    <FilterChips
-                      label="Meet gender"
-                      value={filters.genders[0] ?? ""}
-                      onChange={(value) =>
-                        updateFilter("genders", value ? [value] : [])
-                      }
-                      options={[
-                        ["", "All"],
-                        ["F", "Female"],
-                        ["M", "Male"],
-                        ...(filters.relay
-                          ? [["X", "Mixed"] as [string, string]]
-                          : []),
-                      ]}
-                    />
-                    <AgeGroupPicker
-                      options={ageOptions}
-                      value={filters.ageGroups}
-                      onChange={(value) => updateFilter("ageGroups", value)}
-                    />
-                    <PopupPicker
-                      label="Meet team"
-                      value={filters.team}
-                      onChange={(v) => updateFilter("team", v)}
-                      all="All IES Teams"
-                      options={teams}
-                    />
-                  </div>
-                  <QueryNotice query={rowsQuery} />
-                  {rowsQuery.data && table}
                 </section>
-              )}
-              {view === "athletes" && athleteId && (
-                <section
-                  className={s.panel}
-                  ref={profileRef}
-                  tabIndex={-1}
-                  hidden={athleteSearchOpen}
-                >
-                  <div className={s.panelHead}>
-                    <div>
-                      <span className={s.badge}>Athlete profile</span>
-                      <h2>
-                        {profileQuery.data?.name ||
-                          profileName ||
-                          "Athlete profile"}
-                      </h2>
-                      {profileQuery.data && (
+                {view === "meets" && chosenMeet && (
+                  <section className={s.panel} ref={profileRef} tabIndex={-1}>
+                    <div className={s.panelHead}>
+                      <div>
+                        <span className={s.badge}>Meet results</span>
+                        <h2>{chosenMeet.name}</h2>
                         <p>
-                          {pbs.length} personal bests ·{" "}
-                          {number(profileQuery.data?.count ?? 0)} individual
-                          results ·{" "}
-                          {number(
-                            profileQuery.data?.relayCount ??
-                              athleteRelaysQuery.data?.total ??
-                              0,
-                          )}{" "}
-                          relay appearances
+                          {date(chosenMeet.date)} · {number(chosenMeet.count)}{" "}
+                          approved results
                         </p>
-                      )}
-                    </div>
-                  </div>
-                  <QueryNotice query={profileQuery} />
-                  <div className={s.toolbar}>
-                    <h3>Personal bests</h3>
-                    <span className={s.muted}>
-                      All available dates · courses kept separate
-                    </span>
-                  </div>
-                  <div className={s.pbs}>
-                    {pbs.map((r) => (
+                      </div>
                       <button
-                        key={r.id}
-                        className={s.pb}
-                        aria-pressed={activeEvent === `${r.event}_${r.course}`}
+                        className={s.button}
+                        aria-expanded={meetSearchOpen}
+                        aria-controls="times-rankings"
                         onClick={() => {
-                          setAthleteEvent(`${r.event}_${r.course}`);
+                          setMeetSearchOpen((open) => !open);
+                          if (!meetSearchOpen)
+                            requestAnimationFrame(() => {
+                              document
+                                .getElementById("times-rankings")
+                                ?.scrollIntoView({
+                                  behavior: "smooth",
+                                  block: "start",
+                                });
+                              document
+                                .querySelector<HTMLInputElement>(
+                                  'input[placeholder="Search meet name…"]',
+                                )
+                                ?.focus({ preventScroll: true });
+                            });
+                        }}
+                      >
+                        {meetSearchOpen
+                          ? "Hide meet finder"
+                          : "Find another meet"}
+                      </button>
+                    </div>
+                    <QueryNotice query={meetEventsQuery} />
+                    {meetEventsQuery.loading && (
+                      <p className={s.note}>Loading meet events…</p>
+                    )}
+                    {meetEventsQuery.data && !meetEvents.length && (
+                      <p className={s.empty}>
+                        No events with available results for this meet.
+                      </p>
+                    )}
+                    {activeMeetEvent && (
+                      <div className={s.meetEventLayout}>
+                        <MeetEventNavigation
+                          events={meetEvents}
+                          selectedKey={activeMeetEvent.key}
+                          onSelect={(key) => {
+                            setMeetEventKey(key);
+                            setPage(0);
+                            setSelected(null);
+                          }}
+                        />
+                        <section
+                          id="meet-event-results"
+                          className={s.meetEventResults}
+                          aria-label="Selected event results"
+                        >
+                          <h3>{meetEventLabel(activeMeetEvent)}</h3>
+                          <p className={s.note}>
+                            {activeMeetEvent.ordering === "official"
+                              ? "Official event order"
+                              : "Event order unavailable — grouped by event"}
+                          </p>
+                          <div className={s.filters}>
+                            <PopupPicker
+                              label="Meet team"
+                              value={meetTeam}
+                              onChange={(team) => {
+                                setMeetTeam(team);
+                                setPage(0);
+                                setSelected(null);
+                              }}
+                              all="All IES Teams"
+                              options={teams}
+                            />
+                          </div>
+                          <QueryNotice query={rowsQuery} />
+                          {(rowsQuery.data || rowsQuery.loading) && table}
+                        </section>
+                      </div>
+                    )}
+                  </section>
+                )}
+                {view === "athletes" && athleteId && (
+                  <section
+                    className={s.panel}
+                    ref={profileRef}
+                    tabIndex={-1}
+                    hidden={athleteSearchOpen}
+                  >
+                    <div className={s.panelHead}>
+                      <div>
+                        <span className={s.badge}>Athlete profile</span>
+                        <h2>
+                          {profileQuery.data?.name ||
+                            profileName ||
+                            "Athlete profile"}
+                        </h2>
+                        {profileQuery.data && (
+                          <p>
+                            {pbs.length} personal bests ·{" "}
+                            {number(profileQuery.data?.count ?? 0)} individual
+                            results ·{" "}
+                            {number(
+                              profileQuery.data?.relayCount ??
+                                athleteRelaysQuery.data?.total ??
+                                0,
+                            )}{" "}
+                            relay appearances
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                    <QueryNotice query={profileQuery} />
+                    <div className={s.toolbar}>
+                      <h3>Personal bests</h3>
+                      <span className={s.muted}>
+                        All available dates · courses kept separate
+                      </span>
+                    </div>
+                    <div className={s.pbs}>
+                      {pbs.map((r) => (
+                        <button
+                          key={r.id}
+                          className={s.pb}
+                          aria-pressed={
+                            activeEvent === `${r.event}_${r.course}`
+                          }
+                          onClick={() => {
+                            setAthleteEvent(`${r.event}_${r.course}`);
+                            setPage(0);
+                            setSelected(null);
+                          }}
+                        >
+                          <span>{eventLabel(r.event)}</span>
+                          {r.resultOrigin === "relay_leadoff" && (
+                            <span className={s.resultTag}>
+                              Verified lead-off
+                            </span>
+                          )}
+                          <strong>{formatSwimTime(r.time)}</strong>
+                          <span>
+                            {r.course} · {date(r.date)}
+                          </span>
+                        </button>
+                      ))}
+                    </div>
+                    {profileQuery.data && !pbs.length && (
+                      <p className={s.empty}>
+                        No valid individual personal bests are available.
+                      </p>
+                    )}
+                    <div className={s.toolbar}>
+                      <PopupPicker
+                        label="Event history"
+                        value={activeEvent}
+                        onChange={(v) => {
+                          setAthleteEvent(v);
                           setPage(0);
                           setSelected(null);
                         }}
-                      >
-                        <span>{eventLabel(r.event)}</span>
-                        {r.resultOrigin === "relay_leadoff" && (
-                          <span className={s.resultTag}>Verified lead-off</span>
-                        )}
-                        <strong>{formatSwimTime(r.time)}</strong>
-                        <span>
-                          {r.course} · {date(r.date)}
-                        </span>
-                      </button>
-                    ))}
-                  </div>
-                  {profileQuery.data && !pbs.length && (
-                    <p className={s.empty}>
-                      No valid individual personal bests are available.
-                    </p>
-                  )}
-                  <div className={s.toolbar}>
-                    <PopupPicker
-                      label="Event history"
-                      value={activeEvent}
-                      onChange={(v) => {
-                        setAthleteEvent(v);
-                        setPage(0);
-                        setSelected(null);
-                      }}
-                      options={(profileQuery.data?.events ?? []).map((e) => [
-                        e,
-                        `${eventLabel(e)} · ${e.split("_").at(-1)}`,
-                      ])}
-                    />
-                  </div>
-                  {historyQuery.data && <ProgressChart races={history} />}
-                  <QueryNotice query={rowsQuery} />
-                  {rowsQuery.data && table}
-                  <section aria-label="Athlete relay participation">
-                    <div className={s.toolbar}>
-                      <h3>Relay participation</h3>
-                      <span className={s.muted}>
-                        Complete team results · your recorded leg
-                      </span>
+                        options={(profileQuery.data?.events ?? []).map((e) => [
+                          e,
+                          `${eventLabel(e)} · ${e.split("_").at(-1)}`,
+                        ])}
+                      />
                     </div>
-                    <QueryNotice query={athleteRelaysQuery} />
-                    {athleteRelaysQuery.data && (
-                      <>
-                        <div className={s.tableWrap}>
-                          <table className={s.table}>
-                            <caption className="sr-only">
-                              Athlete relay participation
-                            </caption>
-                            <thead>
-                              <tr>
-                                <th scope="col">Meet</th>
-                                <th scope="col">Relay</th>
-                                <th scope="col">Leg</th>
-                                <th scope="col">Team time</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              {(athleteRelaysQuery.data.rows ?? []).map(
-                                ({ race }) => {
-                                  const member = race.members?.find(
-                                    (member) => member.athleteId === athleteId,
-                                  );
-                                  return (
-                                    <tr key={race.id}>
-                                      <td>
-                                        {race.meet}
-                                        <span className={s.resultTag}>
-                                          {date(race.date)}
-                                        </span>
-                                      </td>
-                                      <td>
-                                        {eventLabel(race.event)} · {race.course}
-                                      </td>
-                                      <td>{member?.leg ?? "—"}</td>
-                                      <td>
-                                        <button
-                                          className={s.time}
-                                          aria-label={`View relay ${eventLabel(race.event)} at ${race.meet}`}
-                                          onClick={() => selectRace(race)}
-                                        >
-                                          {race.status === "OK"
-                                            ? formatSwimTime(race.time)
-                                            : race.status || "—"}
-                                        </button>
-                                      </td>
-                                    </tr>
-                                  );
-                                },
-                              )}
-                            </tbody>
-                          </table>
-                        </div>
-                        {!athleteRelaysQuery.data.rows?.length && (
-                          <p className={s.empty}>
-                            No recorded relay participation is available.
-                          </p>
-                        )}
-                        <Pager
-                          page={relayPage}
-                          total={athleteRelaysQuery.data.total ?? 0}
-                          onChange={setRelayPage}
-                          label="Relay participation pages"
-                        />
-                      </>
-                    )}
+                    {historyQuery.data && <ProgressChart races={history} />}
+                    <QueryNotice query={rowsQuery} />
+                    {(rowsQuery.data || rowsQuery.loading) && table}
+                    <section aria-label="Athlete relay participation">
+                      <div className={s.toolbar}>
+                        <h3>Relay participation</h3>
+                        <span className={s.muted}>
+                          Complete team results · your recorded leg
+                        </span>
+                      </div>
+                      <QueryNotice query={athleteRelaysQuery} />
+                      {(athleteRelaysQuery.data ||
+                        athleteRelaysQuery.loading) && (
+                        <>
+                          <div className={s.tableWrap}>
+                            <table
+                              className={s.table}
+                              aria-busy={athleteRelaysQuery.loading}
+                            >
+                              <caption className="sr-only">
+                                Athlete relay participation
+                              </caption>
+                              <thead>
+                                <tr>
+                                  <th scope="col">Meet</th>
+                                  <th scope="col">Relay</th>
+                                  <th scope="col">Leg</th>
+                                  <th scope="col">Team time</th>
+                                </tr>
+                              </thead>
+                              <tbody
+                                className={
+                                  athleteRelaysQuery.loading
+                                    ? loadingStyles.pulse
+                                    : undefined
+                                }
+                              >
+                                {athleteRelaysQuery.loading &&
+                                  Array.from(
+                                    {
+                                      length:
+                                        athleteRelaysQuery.placeholderRowCount ||
+                                        pageSize,
+                                    },
+                                    (_, index) => (
+                                      <tr
+                                        key={`loading-${index}`}
+                                        aria-hidden="true"
+                                      >
+                                        {[150, 100, 25, 65].map(
+                                          (width, column) => (
+                                            <td key={column}>
+                                              <span
+                                                className={loadingStyles.bar}
+                                                style={{ width }}
+                                              />
+                                            </td>
+                                          ),
+                                        )}
+                                      </tr>
+                                    ),
+                                  )}
+                                {(athleteRelaysQuery.data?.rows ?? []).map(
+                                  ({ race }) => {
+                                    const member = race.members?.find(
+                                      (member) =>
+                                        member.athleteId === athleteId,
+                                    );
+                                    return (
+                                      <tr key={race.id}>
+                                        <td>
+                                          {race.meet}
+                                          <span className={s.resultTag}>
+                                            {date(race.date)}
+                                          </span>
+                                        </td>
+                                        <td>
+                                          {eventLabel(race.event)} ·{" "}
+                                          {race.course}
+                                        </td>
+                                        <td>{member?.leg ?? "—"}</td>
+                                        <td>
+                                          <button
+                                            className={s.time}
+                                            aria-label={`View relay ${eventLabel(race.event)} at ${race.meet}`}
+                                            onClick={() => selectRace(race)}
+                                          >
+                                            {race.status === "OK"
+                                              ? formatSwimTime(race.time)
+                                              : race.status || "—"}
+                                          </button>
+                                          <ModerationNotice race={race} />
+                                        </td>
+                                      </tr>
+                                    );
+                                  },
+                                )}
+                              </tbody>
+                            </table>
+                          </div>
+                          {!athleteRelaysQuery.loading &&
+                            !athleteRelaysQuery.data?.rows?.length && (
+                              <p className={s.empty}>
+                                No recorded relay participation is available.
+                              </p>
+                            )}
+                          <Pager
+                            page={relayPage}
+                            total={athleteRelaysQuery.data?.total ?? 0}
+                            onChange={setRelayPage}
+                            label="Relay participation pages"
+                          />
+                        </>
+                      )}
+                    </section>
                   </section>
-                </section>
-              )}
-              <p className={s.footer}>
-                Approved IES dataset only; coverage may be incomplete. Rankings
-                exclude disqualifications, scratches, and missing times.
-                Verified flat-start relay lead-offs can count toward individual
-                personal bests; flying-start splits remain relay details. Relay
-                rankings use complete team results. Equal times share a rank.
-                Individual age groups use age at the swim; relay groups use the
-                reported event age group. All IES Teams includes unattached IES
-                entries. Gender filters include only the selected reported
-                genders. Unreported ages are included when no age group is
-                selected.
-              </p>
-            </>
-          )}
-        </div>
-        <div
-          ref={detailRef}
-          tabIndex={-1}
-          hidden={
-            view === "records" || (view === "athletes" && athleteSearchOpen)
-          }
-        >
-          <Performance
-            race={selected}
-            names={names}
-            filters={filters}
-            onAthlete={openAthlete}
-            onRace={selectRace}
-            onClose={() => setSelected(null)}
-          />
+                )}
+                <p className={s.footer}>
+                  Approved IES dataset only; coverage may be incomplete.
+                  Rankings exclude disqualifications, scratches, and missing
+                  times. Verified flat-start relay lead-offs can count toward
+                  individual personal bests; flying-start splits remain relay
+                  details. Relay rankings use complete team results. Equal times
+                  share a rank. Individual age groups use age at the swim; relay
+                  groups use the reported event age group. All IES Teams
+                  includes unattached IES entries. Gender filters include only
+                  the selected reported genders. Unreported ages are included
+                  when no age group is selected.
+                </p>
+              </>
+            )}
+          </div>
+          <div
+            ref={detailRef}
+            tabIndex={-1}
+            hidden={
+              view === "standards" ||
+              view === "records" ||
+              (view === "athletes" && athleteSearchOpen) ||
+              ((view === "rankings" || view === "meets") && !selected)
+            }
+          >
+            <Performance
+              race={selected}
+              names={names}
+              filters={filters}
+              onAthlete={openAthlete}
+              onRace={selectRace}
+              onClose={() => setSelected(null)}
+            />
+          </div>
         </div>
       </div>
     </main>

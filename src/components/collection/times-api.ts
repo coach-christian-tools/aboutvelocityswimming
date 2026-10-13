@@ -6,6 +6,7 @@ export const timesKinds = [
   "analysis",
   "meets",
   "meet_results",
+  "meet_events",
   "profile",
   "athlete_history",
   "athlete_relays",
@@ -21,7 +22,19 @@ export interface MeetSummary {
   count: number;
   courses: string[];
 }
+export interface MeetEventEntry {
+  key: string;
+  event: string;
+  course: string;
+  gender: string;
+  relay: boolean;
+  ageGroup: string | null;
+  eventNumber: number | null;
+  ordering: "official" | "fallback";
+  count: number;
+}
 export interface TimesResponse {
+  meetEvents?: MeetEventEntry[];
   expiresAt: number;
   rows?: { race: Race; rank?: number }[];
   total?: number;
@@ -86,6 +99,7 @@ export function parseTimesQuery(params: URLSearchParams): {
     "mode",
     "search",
     "meetId",
+    "meetEventKey",
     "athleteId",
     "raceId",
     "historyEvent",
@@ -151,6 +165,8 @@ export function parseTimesQuery(params: URLSearchParams): {
   }
   if (input.year && !/^\d{4}$/.test(String(input.year)))
     throw new Error("Invalid year.");
+  if (input.meetEventKey && !/^[a-f0-9]{32}$/.test(String(input.meetEventKey)))
+    throw new Error("Invalid meet event.");
   if (kind === "rankings") {
     input.genders ??= ["F"];
     input.mode ??= "bests";
@@ -162,6 +178,7 @@ export function parseTimesQuery(params: URLSearchParams): {
   const required: Partial<Record<TimesKind, string[]>> = {
     analysis: ["raceId"],
     meet_results: ["meetId"],
+    meet_events: ["meetId"],
     profile: ["athleteId"],
     athlete_history: ["athleteId", "historyEvent"],
     athlete_relays: ["athleteId"],

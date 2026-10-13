@@ -34,76 +34,6 @@ export type Database = {
   };
   public: {
     Tables: {
-      meet_collection_work: {
-        Row: {
-          meet_id: string;
-          selected: boolean;
-          priority: number;
-          notes: string;
-          blockers: string[];
-          acquisition_state: string;
-          import_state: string;
-          reconciliation_note: string;
-          updated_at: string;
-        };
-        Insert: {
-          meet_id: string;
-          selected?: boolean;
-          priority?: number;
-          notes?: string;
-          blockers?: string[];
-          acquisition_state?: string;
-          import_state?: string;
-          reconciliation_note?: string;
-          updated_at?: string;
-        };
-        Update: {
-          selected?: boolean;
-          priority?: number;
-          notes?: string;
-          blockers?: string[];
-          acquisition_state?: string;
-          import_state?: string;
-          reconciliation_note?: string;
-          updated_at?: string;
-        };
-        Relationships: [];
-      };
-      collection_coverage: {
-        Row: {
-          id: string;
-          source_url: string;
-          year: number;
-          category: string;
-          scope: string;
-          checked_at: string;
-          status: string;
-          meet_count: number;
-          gaps: string[];
-        };
-        Insert: {
-          id: string;
-          source_url: string;
-          year: number;
-          category: string;
-          scope: string;
-          checked_at?: string;
-          status: string;
-          meet_count?: number;
-          gaps?: string[];
-        };
-        Update: {
-          source_url?: string;
-          year?: number;
-          category?: string;
-          scope?: string;
-          checked_at?: string;
-          status?: string;
-          meet_count?: number;
-          gaps?: string[];
-        };
-        Relationships: [];
-      };
       administrators: {
         Row: {
           user_id: string;
@@ -234,8 +164,8 @@ export type Database = {
           id: string;
           reads: NonNullable<Json>;
           received_at: string;
-          review_priority: number;
           review_note: string | null;
+          review_priority: number | null;
           reviewed_at: string | null;
           reviewed_by: string | null;
           scope: string;
@@ -253,8 +183,8 @@ export type Database = {
           id?: string;
           reads: NonNullable<Json>;
           received_at?: string;
-          review_priority?: never;
           review_note?: string | null;
+          review_priority?: never;
           reviewed_at?: string | null;
           reviewed_by?: string | null;
           scope: string;
@@ -272,8 +202,8 @@ export type Database = {
           id?: string;
           reads?: NonNullable<Json>;
           received_at?: string;
-          review_priority?: never;
           review_note?: string | null;
+          review_priority?: never;
           reviewed_at?: string | null;
           reviewed_by?: string | null;
           scope?: string;
@@ -281,6 +211,42 @@ export type Database = {
           status?: string;
           worker_id?: string;
           writes?: NonNullable<Json>;
+        };
+        Relationships: [];
+      };
+      collection_coverage: {
+        Row: {
+          category: string;
+          checked_at: string;
+          gaps: string[];
+          id: string;
+          meet_count: number;
+          scope: string;
+          source_url: string;
+          status: string;
+          year: number;
+        };
+        Insert: {
+          category: string;
+          checked_at?: string;
+          gaps?: string[];
+          id: string;
+          meet_count?: number;
+          scope: string;
+          source_url: string;
+          status?: string;
+          year: number;
+        };
+        Update: {
+          category?: string;
+          checked_at?: string;
+          gaps?: string[];
+          id?: string;
+          meet_count?: number;
+          scope?: string;
+          source_url?: string;
+          status?: string;
+          year?: number;
         };
         Relationships: [];
       };
@@ -310,6 +276,13 @@ export type Database = {
           reviewer_id?: string;
         };
         Relationships: [
+          {
+            foreignKeyName: "collection_reviews_batch_id_fkey";
+            columns: ["batch_id"];
+            isOneToOne: false;
+            referencedRelation: "collection_batch_queue";
+            referencedColumns: ["id"];
+          },
           {
             foreignKeyName: "collection_reviews_batch_id_fkey";
             columns: ["batch_id"];
@@ -550,6 +523,50 @@ export type Database = {
           },
         ];
       };
+      meet_collection_work: {
+        Row: {
+          acquisition_state: string;
+          blockers: string[];
+          import_state: string;
+          meet_id: string;
+          notes: string;
+          priority: number;
+          reconciliation_note: string;
+          selected: boolean;
+          updated_at: string;
+        };
+        Insert: {
+          acquisition_state?: string;
+          blockers?: string[];
+          import_state?: string;
+          meet_id: string;
+          notes?: string;
+          priority?: number;
+          reconciliation_note?: string;
+          selected?: boolean;
+          updated_at?: string;
+        };
+        Update: {
+          acquisition_state?: string;
+          blockers?: string[];
+          import_state?: string;
+          meet_id?: string;
+          notes?: string;
+          priority?: number;
+          reconciliation_note?: string;
+          selected?: boolean;
+          updated_at?: string;
+        };
+        Relationships: [
+          {
+            foreignKeyName: "meet_collection_work_meet_id_fkey";
+            columns: ["meet_id"];
+            isOneToOne: true;
+            referencedRelation: "knowledge_entries";
+            referencedColumns: ["id"];
+          },
+        ];
+      };
       meets: {
         Row: {
           data: NonNullable<Json>;
@@ -706,6 +723,129 @@ export type Database = {
           },
         ];
       };
+      public_relay_results: {
+        Row: {
+          data: NonNullable<Json>;
+          id: string;
+          swim_date: string | null;
+          team_id: string;
+          times_course: string | null;
+          times_event: string | null;
+          times_meet: string | null;
+          times_time: number | null;
+        };
+        Insert: {
+          data: NonNullable<Json>;
+          id: string;
+          swim_date?: string | null;
+          team_id: string;
+          times_course?: never;
+          times_event?: never;
+          times_meet?: never;
+          times_time?: never;
+        };
+        Update: {
+          data?: NonNullable<Json>;
+          id?: string;
+          swim_date?: string | null;
+          team_id?: string;
+          times_course?: never;
+          times_event?: never;
+          times_meet?: never;
+          times_time?: never;
+        };
+        Relationships: [
+          {
+            foreignKeyName: "public_relay_results_id_fkey";
+            columns: ["id"];
+            isOneToOne: true;
+            referencedRelation: "relay_results";
+            referencedColumns: ["id"];
+          },
+          {
+            foreignKeyName: "public_relay_results_team_id_fkey";
+            columns: ["team_id"];
+            isOneToOne: false;
+            referencedRelation: "teams";
+            referencedColumns: ["id"];
+          },
+        ];
+      };
+      public_swims: {
+        Row: {
+          athlete_id: string;
+          data: NonNullable<Json>;
+          id: string;
+          swim_date: string;
+          times_age: number | null;
+          times_course: string | null;
+          times_event: string | null;
+          times_gender: string | null;
+          times_leg: number | null;
+          times_meet: string | null;
+          times_meet_name: string;
+          times_official: boolean | null;
+          times_relay: boolean | null;
+          times_split: boolean | null;
+          times_status: string | null;
+          times_team: string | null;
+          times_time: number | null;
+        };
+        Insert: {
+          athlete_id: string;
+          data: NonNullable<Json>;
+          id: string;
+          swim_date: string;
+          times_age?: never;
+          times_course?: never;
+          times_event?: never;
+          times_gender?: never;
+          times_leg?: never;
+          times_meet?: never;
+          times_meet_name?: never;
+          times_official?: never;
+          times_relay?: never;
+          times_split?: never;
+          times_status?: never;
+          times_team?: never;
+          times_time?: never;
+        };
+        Update: {
+          athlete_id?: string;
+          data?: NonNullable<Json>;
+          id?: string;
+          swim_date?: string;
+          times_age?: never;
+          times_course?: never;
+          times_event?: never;
+          times_gender?: never;
+          times_leg?: never;
+          times_meet?: never;
+          times_meet_name?: never;
+          times_official?: never;
+          times_relay?: never;
+          times_split?: never;
+          times_status?: never;
+          times_team?: never;
+          times_time?: never;
+        };
+        Relationships: [
+          {
+            foreignKeyName: "public_swims_athlete_id_fkey";
+            columns: ["athlete_id"];
+            isOneToOne: false;
+            referencedRelation: "public_athletes";
+            referencedColumns: ["id"];
+          },
+          {
+            foreignKeyName: "public_swims_id_fkey";
+            columns: ["id"];
+            isOneToOne: true;
+            referencedRelation: "swims";
+            referencedColumns: ["id"];
+          },
+        ];
+      };
       public_times_teams: {
         Row: {
           club_code: string | null;
@@ -731,177 +871,6 @@ export type Database = {
             columns: ["id"];
             isOneToOne: true;
             referencedRelation: "teams";
-            referencedColumns: ["id"];
-          },
-        ];
-      };
-      public_relay_results: {
-        Row: {
-          data: Json;
-          id: string;
-          swim_date: string | null;
-          team_id: string;
-          times_course: string | null;
-          times_event: string | null;
-          times_meet: string | null;
-          times_time: number | null;
-        };
-        Insert: {
-          data: Json;
-          id: string;
-          swim_date?: string | null;
-          team_id: string;
-          times_course?: string | null;
-          times_event?: string | null;
-          times_meet?: string | null;
-          times_time?: number | null;
-        };
-        Update: {
-          data?: Json;
-          id?: string;
-          swim_date?: string | null;
-          team_id?: string;
-          times_course?: string | null;
-          times_event?: string | null;
-          times_meet?: string | null;
-          times_time?: number | null;
-        };
-        Relationships: [
-          {
-            foreignKeyName: "public_relay_results_id_fkey";
-            columns: ["id"];
-            isOneToOne: true;
-            referencedRelation: "relay_results";
-            referencedColumns: ["id"];
-          },
-          {
-            foreignKeyName: "public_relay_results_team_id_fkey";
-            columns: ["team_id"];
-            isOneToOne: false;
-            referencedRelation: "teams";
-            referencedColumns: ["id"];
-          },
-        ];
-      };
-      relay_results: {
-        Row: {
-          course: string;
-          data: Json;
-          event_code: string;
-          id: string;
-          meet_id: string | null;
-          status: string | null;
-          team_id: string;
-          time_ms: number | null;
-        };
-        Insert: {
-          course?: string;
-          data: Json;
-          event_code?: string;
-          id: string;
-          meet_id?: string | null;
-          status?: string | null;
-          team_id?: string;
-          time_ms?: number | null;
-        };
-        Update: {
-          course?: string;
-          data?: Json;
-          event_code?: string;
-          id?: string;
-          meet_id?: string | null;
-          status?: string | null;
-          team_id?: string;
-          time_ms?: number | null;
-        };
-        Relationships: [
-          {
-            foreignKeyName: "relay_results_meet_id_fkey";
-            columns: ["meet_id"];
-            isOneToOne: false;
-            referencedRelation: "meets";
-            referencedColumns: ["id"];
-          },
-          {
-            foreignKeyName: "relay_results_team_id_fkey";
-            columns: ["team_id"];
-            isOneToOne: false;
-            referencedRelation: "teams";
-            referencedColumns: ["id"];
-          },
-        ];
-      };
-      public_swims: {
-        Row: {
-          times_meet_name: string;
-          times_status: string;
-          times_gender: string;
-          times_age: number | null;
-          times_official: boolean | null;
-          athlete_id: string;
-          data: Json;
-          id: string;
-          swim_date: string;
-          times_course: string | null;
-          times_event: string | null;
-          times_leg: number | null;
-          times_meet: string | null;
-          times_relay: boolean | null;
-          times_split: boolean | null;
-          times_team: string | null;
-          times_time: number | null;
-        };
-        Insert: {
-          times_meet_name?: never;
-          times_status?: never;
-          times_gender?: never;
-          times_age?: never;
-          times_official?: never;
-          athlete_id: string;
-          data: Json;
-          id: string;
-          swim_date: string;
-          times_course?: string | null;
-          times_event?: string | null;
-          times_leg?: number | null;
-          times_meet?: string | null;
-          times_relay?: boolean | null;
-          times_split?: boolean | null;
-          times_team?: string | null;
-          times_time?: number | null;
-        };
-        Update: {
-          times_meet_name?: never;
-          times_status?: never;
-          times_gender?: never;
-          times_age?: never;
-          times_official?: never;
-          athlete_id?: string;
-          data?: Json;
-          id?: string;
-          swim_date?: string;
-          times_course?: string | null;
-          times_event?: string | null;
-          times_leg?: number | null;
-          times_meet?: string | null;
-          times_relay?: boolean | null;
-          times_split?: boolean | null;
-          times_team?: string | null;
-          times_time?: number | null;
-        };
-        Relationships: [
-          {
-            foreignKeyName: "public_swims_athlete_id_fkey";
-            columns: ["athlete_id"];
-            isOneToOne: false;
-            referencedRelation: "public_athletes";
-            referencedColumns: ["id"];
-          },
-          {
-            foreignKeyName: "public_swims_id_fkey";
-            columns: ["id"];
-            isOneToOne: true;
-            referencedRelation: "swims";
             referencedColumns: ["id"];
           },
         ];
@@ -944,6 +913,75 @@ export type Database = {
             referencedColumns: ["id"];
           },
         ];
+      };
+      relay_results: {
+        Row: {
+          course: string;
+          data: NonNullable<Json>;
+          event_code: string;
+          id: string;
+          meet_id: string | null;
+          status: string | null;
+          team_id: string;
+          time_ms: number | null;
+        };
+        Insert: {
+          course?: never;
+          data: NonNullable<Json>;
+          event_code?: never;
+          id: string;
+          meet_id?: never;
+          status?: never;
+          team_id?: never;
+          time_ms?: never;
+        };
+        Update: {
+          course?: never;
+          data?: NonNullable<Json>;
+          event_code?: never;
+          id?: string;
+          meet_id?: never;
+          status?: never;
+          team_id?: never;
+          time_ms?: never;
+        };
+        Relationships: [
+          {
+            foreignKeyName: "relay_results_meet_id_fkey";
+            columns: ["meet_id"];
+            isOneToOne: false;
+            referencedRelation: "meets";
+            referencedColumns: ["id"];
+          },
+          {
+            foreignKeyName: "relay_results_team_id_fkey";
+            columns: ["team_id"];
+            isOneToOne: false;
+            referencedRelation: "teams";
+            referencedColumns: ["id"];
+          },
+        ];
+      };
+      result_moderation: {
+        Row: {
+          flagged: boolean;
+          result_id: string;
+          result_type: string;
+          version: number;
+        };
+        Insert: {
+          flagged: boolean;
+          result_id: string;
+          result_type: string;
+          version: number;
+        };
+        Update: {
+          flagged?: boolean;
+          result_id?: string;
+          result_type?: string;
+          version?: number;
+        };
+        Relationships: [];
       };
       standard_cuts: {
         Row: {
@@ -1000,7 +1038,6 @@ export type Database = {
       };
       swims: {
         Row: {
-          parent_relay_result_id: string | null;
           athlete_id: string;
           course: string;
           data: NonNullable<Json>;
@@ -1009,12 +1046,12 @@ export type Database = {
           is_official: boolean;
           is_relay: boolean;
           meet_id: string;
+          parent_relay_result_id: string | null;
           round: string;
           status: string;
           time_ms: number | null;
         };
         Insert: {
-          parent_relay_result_id?: never;
           athlete_id?: never;
           course?: never;
           data: NonNullable<Json>;
@@ -1023,12 +1060,12 @@ export type Database = {
           is_official?: never;
           is_relay?: never;
           meet_id?: never;
+          parent_relay_result_id?: never;
           round?: never;
           status?: never;
           time_ms?: never;
         };
         Update: {
-          parent_relay_result_id?: never;
           athlete_id?: never;
           course?: never;
           data?: NonNullable<Json>;
@@ -1037,18 +1074,12 @@ export type Database = {
           is_official?: never;
           is_relay?: never;
           meet_id?: never;
+          parent_relay_result_id?: never;
           round?: never;
           status?: never;
           time_ms?: never;
         };
         Relationships: [
-          {
-            foreignKeyName: "swims_parent_relay_result_id_fkey";
-            columns: ["parent_relay_result_id"];
-            isOneToOne: false;
-            referencedRelation: "relay_results";
-            referencedColumns: ["id"];
-          },
           {
             foreignKeyName: "swims_athlete_id_fkey";
             columns: ["athlete_id"];
@@ -1061,6 +1092,13 @@ export type Database = {
             columns: ["meet_id"];
             isOneToOne: false;
             referencedRelation: "meets";
+            referencedColumns: ["id"];
+          },
+          {
+            foreignKeyName: "swims_parent_relay_result_id_fkey";
+            columns: ["parent_relay_result_id"];
+            isOneToOne: false;
+            referencedRelation: "relay_results";
             referencedColumns: ["id"];
           },
         ];
@@ -1176,6 +1214,14 @@ export type Database = {
       };
     };
     Views: {
+      app_records: {
+        Row: {
+          data: Json | null;
+          path: string | null;
+        };
+        Relationships: [];
+      };
+      // This view selects required columns from collection_batches directly.
       collection_batch_queue: {
         Row: {
           id: string;
@@ -1216,6 +1262,116 @@ export type Database = {
           team: string | null;
           team_name: string | null;
           time: number | null;
+          ies_times_json: Json | null;
+          race_moderation: Json | null;
+        };
+        Relationships: [];
+      };
+      unflagged_times_relays: {
+        Row: {
+          data: Json | null;
+          id: string | null;
+          swim_date: string | null;
+          team_id: string | null;
+          times_course: string | null;
+          times_event: string | null;
+          times_meet: string | null;
+          times_time: number | null;
+        };
+        Insert: {
+          data?: Json | null;
+          id?: string | null;
+          swim_date?: string | null;
+          team_id?: string | null;
+          times_course?: string | null;
+          times_event?: string | null;
+          times_meet?: string | null;
+          times_time?: number | null;
+        };
+        Update: {
+          data?: Json | null;
+          id?: string | null;
+          swim_date?: string | null;
+          team_id?: string | null;
+          times_course?: string | null;
+          times_event?: string | null;
+          times_meet?: string | null;
+          times_time?: number | null;
+        };
+        Relationships: [
+          {
+            foreignKeyName: "public_relay_results_id_fkey";
+            columns: ["id"];
+            isOneToOne: true;
+            referencedRelation: "relay_results";
+            referencedColumns: ["id"];
+          },
+          {
+            foreignKeyName: "public_relay_results_team_id_fkey";
+            columns: ["team_id"];
+            isOneToOne: false;
+            referencedRelation: "teams";
+            referencedColumns: ["id"];
+          },
+        ];
+      };
+      unflagged_times_swims: {
+        Row: {
+          athlete_id: string | null;
+          data: Json | null;
+          id: string | null;
+          swim_date: string | null;
+          times_age: number | null;
+          times_course: string | null;
+          times_event: string | null;
+          times_gender: string | null;
+          times_leg: number | null;
+          times_meet: string | null;
+          times_meet_name: string | null;
+          times_official: boolean | null;
+          times_relay: boolean | null;
+          times_split: boolean | null;
+          times_status: string | null;
+          times_team: string | null;
+          times_time: number | null;
+        };
+        Insert: {
+          athlete_id?: string | null;
+          data?: Json | null;
+          id?: string | null;
+          swim_date?: string | null;
+          times_age?: number | null;
+          times_course?: string | null;
+          times_event?: string | null;
+          times_gender?: string | null;
+          times_leg?: number | null;
+          times_meet?: string | null;
+          times_meet_name?: string | null;
+          times_official?: boolean | null;
+          times_relay?: boolean | null;
+          times_split?: boolean | null;
+          times_status?: string | null;
+          times_team?: string | null;
+          times_time?: number | null;
+        };
+        Update: {
+          athlete_id?: string | null;
+          data?: Json | null;
+          id?: string | null;
+          swim_date?: string | null;
+          times_age?: number | null;
+          times_course?: string | null;
+          times_event?: string | null;
+          times_gender?: string | null;
+          times_leg?: number | null;
+          times_meet?: string | null;
+          times_meet_name?: string | null;
+          times_official?: boolean | null;
+          times_relay?: boolean | null;
+          times_split?: boolean | null;
+          times_status?: string | null;
+          times_team?: string | null;
+          times_time?: number | null;
         };
         Relationships: [
           {
@@ -1234,18 +1390,9 @@ export type Database = {
           },
         ];
       };
-      app_records: {
-        Row: {
-          data: Json | null;
-          path: string | null;
-        };
-        Relationships: [];
-      };
     };
     Functions: {
       claim_shift_reminders: { Args: { dry_run?: boolean }; Returns: Json };
-      meet_collection_queue: { Args: { input?: Json }; Returns: Json };
-      update_meet_collection_work: { Args: { input: Json }; Returns: Json };
       collect_records: {
         Args: { reads: Json; writes: Json };
         Returns: undefined;
@@ -1270,28 +1417,26 @@ export type Database = {
         };
         Returns: undefined;
       };
-      is_staff: { Args: Record<PropertyKey, never>; Returns: boolean };
-      projection_counts: { Args: Record<PropertyKey, never>; Returns: Json };
-      query_records: {
-        Args: {
-          after_id?: string;
-          collection_path: string;
-          filters?: Json;
-          page_size?: number;
-          record_id?: string;
-        };
+      ies_meet_event_rows: {
+        Args: { meet_id: string };
         Returns: {
-          data: Json;
-          path: string;
+          age_group: string;
+          course: string;
+          event: string;
+          event_key: string;
+          event_number: number;
+          gender: string;
+          id: string;
+          relay: boolean;
+          round: string;
+          status: string;
+          team: string;
+          time: number;
         }[];
       };
-      review_collection: {
-        Args: { batch_id: string; decision: string; note?: string };
-        Returns: undefined;
-      };
-      stage_collection: {
-        Args: { batch: Json; worker_token: string };
-        Returns: string;
+      ies_meet_navigation_query: {
+        Args: { input: Json; query_kind: string };
+        Returns: Json;
       };
       ies_times_age: {
         Args: { age: number; relay: boolean; relay_age: string };
@@ -1301,26 +1446,19 @@ export type Database = {
         Args: { age: number; groups: Json; relay: boolean; relay_age: string };
         Returns: boolean;
       };
-      ies_times_age_range: {
-        Args: { age_group: string };
-        Returns: unknown;
-      };
+      ies_times_age_range: { Args: { age_group: string }; Returns: unknown };
       ies_times_candidates: {
         Args: { input: Json };
         Returns: {
-          id: string;
           athlete_id: string;
-          date: string;
           course: string;
+          date: string;
           event: string;
-          time: number;
+          id: string;
           relay: boolean;
           search_name: string;
+          time: number;
         }[];
-      };
-      ies_times_json_id: {
-        Args: { race_id: string };
-        Returns: Json;
       };
       ies_times_filtered: {
         Args: { input: Json };
@@ -1358,9 +1496,65 @@ export type Database = {
         Args: { r: Database["public"]["Views"]["ies_times_races"]["Row"] };
         Returns: Json;
       };
+      ies_times_json_id: { Args: { race_id: string }; Returns: Json };
       ies_times_query: {
         Args: { input?: Json; query_kind: string };
         Returns: Json;
+      };
+      is_staff: { Args: Record<PropertyKey, never>; Returns: boolean };
+      list_result_moderation: {
+        Args: {
+          include_restored?: boolean;
+          page_from?: number;
+          page_size?: number;
+        };
+        Returns: Json;
+      };
+      meet_collection_queue: { Args: { input?: Json }; Returns: Json };
+      moderate_result: {
+        Args: {
+          action: string;
+          expected_version: number;
+          note: string;
+          reason: string;
+          result_id: string;
+          result_type: string;
+        };
+        Returns: Json;
+      };
+      projection_counts: { Args: Record<PropertyKey, never>; Returns: Json };
+      query_records: {
+        Args: {
+          after_id?: string;
+          collection_path: string;
+          filters?: Json;
+          page_size?: number;
+          record_id?: string;
+        };
+        Returns: {
+          data: Json;
+          path: string;
+        }[];
+      };
+      race_moderation: {
+        Args: { r: Database["public"]["Views"]["ies_times_races"]["Row"] };
+        Returns: Json;
+      };
+      read_result_moderation: {
+        Args: { result_id: string; result_type: string };
+        Returns: Json;
+      };
+      result_is_excluded: {
+        Args: { kind: string; parent_id?: string; rid: string };
+        Returns: boolean;
+      };
+      review_collection: {
+        Args: { batch_id: string; decision: string; note?: string };
+        Returns: undefined;
+      };
+      stage_collection: {
+        Args: { batch: Json; worker_token: string };
+        Returns: string;
       };
       times_page: {
         Args: {
@@ -1372,6 +1566,7 @@ export type Database = {
         };
         Returns: Json;
       };
+      update_meet_collection_work: { Args: { input: Json }; Returns: Json };
       workshare_action: {
         Args: { input: Json; operation: string };
         Returns: Json;

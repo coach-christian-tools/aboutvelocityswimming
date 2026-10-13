@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import ImageWithLightbox from "./ImageWithLightbox";
+import styles from "./Carousel.module.css";
 
 interface CarouselProps {
   images: string[];
@@ -10,17 +11,17 @@ interface CarouselProps {
   className?: string;
 }
 
-export default function Carousel({ 
-  images, 
+export default function Carousel({
+  images,
   autoPlayInterval = 4000,
   altPrefix = "Velocity Image",
-  className = ""
+  className = "",
 }: CarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     if (!images || images.length === 0) return;
-    
+
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % images.length);
     }, autoPlayInterval);
@@ -32,33 +33,47 @@ export default function Carousel({
   }
 
   const nextSlide = () => setCurrentIndex((prev) => (prev + 1) % images.length);
-  const prevSlide = () => setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+  const prevSlide = () =>
+    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
 
   return (
-    <div className={`carousel-container ${className}`}>
-      <ImageWithLightbox 
-        src={images[currentIndex]} 
-        alt={`${altPrefix} ${currentIndex + 1}`} 
-        className="carousel-img" 
+    <div className={`${styles["carousel-container"]} ${className}`}>
+      <ImageWithLightbox
+        src={images[currentIndex]}
+        alt={`${altPrefix} ${currentIndex + 1}`}
+        className={styles["carousel-img"]}
       />
-      
+
       {images.length > 1 && (
-        <div className="carousel-controls">
-          <button onClick={prevSlide} className="carousel-btn" aria-label="Previous image">&larr;</button>
-          <div className="carousel-dots">
+        <div className={styles["carousel-controls"]}>
+          <button
+            onClick={prevSlide}
+            className={styles["carousel-btn"]}
+            aria-label="Previous image"
+          >
+            &larr;
+          </button>
+          <div className={styles["carousel-dots"]}>
             {images.map((_, idx) => (
-              <button 
-                key={idx} 
-                className={`carousel-dot ${idx === currentIndex ? 'active' : ''}`}
+              <button
+                key={idx}
+                className={`${styles["carousel-dot"]} ${idx === currentIndex ? styles.active : ""}`}
+                aria-current={idx === currentIndex ? "true" : undefined}
                 onClick={() => setCurrentIndex(idx)}
                 aria-label={`Go to slide ${idx + 1}`}
               />
             ))}
           </div>
-          <button onClick={nextSlide} className="carousel-btn" aria-label="Next image">&rarr;</button>
+          <button
+            onClick={nextSlide}
+            className={styles["carousel-btn"]}
+            aria-label="Next image"
+          >
+            &rarr;
+          </button>
         </div>
       )}
-      <div className="accent-blob"></div>
+      <div className={styles["accent-blob"]}></div>
     </div>
   );
 }

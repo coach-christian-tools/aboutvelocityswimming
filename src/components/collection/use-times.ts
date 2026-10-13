@@ -23,7 +23,10 @@ export function useTimes(url: string | null, enabled = true) {
     const controller = new AbortController();
     const generation = timesGeneration;
     let timer: ReturnType<typeof setTimeout>;
-    const changed = () => retry((n) => n + 1);
+    const changed = () => {
+      setState({ url: null, data: null, error: "" });
+      retry((n) => n + 1);
+    };
     window.addEventListener("ies-times-changed", changed);
     async function load() {
       try {
@@ -70,6 +73,7 @@ export function useTimes(url: string | null, enabled = true) {
   const error = url && state.url === url ? state.error : "";
   return {
     data,
+    placeholderRowCount: state.data?.rows?.length,
     error,
     loading: Boolean(enabled && url && !data && !error),
     retry: () => {

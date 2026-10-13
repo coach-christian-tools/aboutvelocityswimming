@@ -1,53 +1,69 @@
 .records {
+  --record-board-background: #0b665d;
   min-width: 0;
 }
 .controls {
   scroll-margin-top: 165px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 24px;
-  padding: 20px;
-  border: 1px solid var(--border);
-  border-radius: 12px 12px 0 0;
-  background: var(--surface);
+  gap: 16px;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto 24px;
 }
 .selector {
-  flex: 0 0 300px;
+  width: 640px;
   min-width: 0;
+  max-width: 100%;
 }
-.controls h2 {
-  font-size: 21px;
+.selector > div > button {
+  min-height: 44px;
+  padding: 4px 0;
+  border: 0;
+  box-shadow: none;
+  border-radius: 0;
+  background: transparent;
+  font-size: clamp(22px, 3vw, 30px);
+  font-weight: 750;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
 }
-.controls p {
-  font-size: 12px;
-  color: var(--text-muted);
-  margin-top: 5px;
+.selector > div > button span {
+  text-align: center;
 }
 .jumpLinks {
-  padding: 12px 20px;
-  border: 1px solid var(--border);
-  border-top: 0;
-  border-radius: 0 0 12px 12px;
-  background: var(--background-alt);
-  margin-bottom: 24px;
+  display: grid;
+  gap: 8px;
+  width: 100%;
 }
-.jumpLinks > div {
-  display: flex;
-  align-items: center;
-  gap: 8px 18px;
-  flex-wrap: wrap;
-  padding: 6px 0;
+.jumpRow {
+  display: grid;
+  grid-template-columns: 70px repeat(7, minmax(0, 1fr));
+  gap: 6px;
 }
 .jumpLinks a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 7px 6px;
+  border: 1px solid var(--record-board-background);
+  border-radius: 7px;
+  background: var(--record-board-background);
+  color: white;
   font-size: 12px;
-  color: var(--accent);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  padding-block: 6px;
+  font-weight: 650;
+  text-align: center;
+  text-decoration: none;
 }
-.courseLink {
+.jumpLinks a:hover {
+  background: color-mix(in srgb, var(--record-board-background) 85%, black);
+}
+.jumpLinks .courseLink {
+  background: var(--primary-dark);
+  border-color: var(--primary-dark);
   font-weight: 750;
-  min-width: 35px;
 }
 .course,
 .ageSection,
@@ -55,7 +71,9 @@
   scroll-margin-top: 165px;
 }
 .course {
-  margin-bottom: 36px;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto 36px;
 }
 .courseHeading {
   display: flex;
@@ -83,84 +101,149 @@
 .ageSection {
   margin-bottom: 20px;
 }
-.ageSection h3 {
-  font-size: 16px;
-  margin-bottom: 8px;
+.tableHeading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 4fr) minmax(0, 1fr);
+  align-items: end;
+  gap: 16px;
+  padding: 8px 6px 2px;
+  text-align: center;
+}
+.tableTitle h3 {
+  font-size: 22px;
+  margin: 0;
+}
+.tableTitle time {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+.genderLabel {
+  font-size: 13px;
+  font-weight: 650;
+  text-align: left;
+}
+.genderLabel:last-child {
+  text-align: right;
 }
 .tableWrap {
   width: 100%;
+  max-width: 960px;
+  margin-inline: auto;
   overflow-x: auto;
-  border: 1px solid var(--border);
-  border-radius: 6px;
 }
 .table {
+  --cell-padding-block: 6px;
+  --cell-padding-inline: 6px;
   width: 100%;
+  min-width: 820px;
+  table-layout: fixed;
   border-collapse: collapse;
   font-size: 12px;
-  white-space: nowrap;
   text-align: left;
 }
-.table thead {
-  background: var(--primary-dark);
-  color: white;
-}
-.table thead th {
-  font-weight: 650;
+.recordColumn {
+  width: 40%;
 }
 .table th,
 .table td {
-  padding: 5px 8px;
-  border-right: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
+  padding: var(--cell-padding-block) var(--cell-padding-inline);
+  border: 0;
 }
-.table tr:last-child td,
-.table tr:last-child th {
-  border-bottom: 0;
+.recordCell {
+  vertical-align: middle;
 }
-.table tr > :last-child {
-  border-right: 0;
-}
-.table tbody tr:nth-child(even) {
-  background: var(--background-alt);
-}
-.table tbody tr:hover {
-  background: color-mix(in srgb, var(--accent) 8%, var(--surface));
-}
-.table button {
-  display: block;
-  background: none;
-  color: var(--accent);
+.table .recordBoard {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 82px 36px;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 42px;
+  padding: 10px 12px;
+  border: 1px solid var(--record-board-background);
+  border-radius: 7px;
+  background: var(--record-board-background);
+  color: white;
   font: inherit;
   text-align: left;
-  padding: 0;
 }
-.table button:hover {
+.recordBoard + .recordBoard {
+  margin-top: 6px;
+}
+.table button.recordBoard:hover {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--record-board-background) 85%, black);
+}
+.recordName {
+  min-width: 0;
+  font-size: 13px;
+  font-weight: 650;
+  overflow-wrap: anywhere;
+}
+.recordName ul {
+  color: inherit;
+  font-weight: 650;
+  font-size: 13px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px 12px;
+}
+.recordName li {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.time,
+.table button.time {
+  display: block;
+  width: 100%;
+  padding: 0;
+  background: none;
+  color: white;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 750;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  text-align: right;
+}
+.table button.time:hover {
   text-decoration: underline;
+}
+.recordYear {
+  font-size: 11px;
+  color: #ffffffc4;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+.event,
+.eventHeading {
+  text-align: center;
 }
 .event {
   font-weight: 750;
-  color: var(--text-main);
+  color: white;
+}
+.event > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 10px 6px;
+  border-radius: 7px;
+  background: var(--primary-dark);
+}
+.relayEvent {
+  position: relative;
+}
+.relayEvent > span {
+  position: absolute;
+  inset: var(--cell-padding-block) var(--cell-padding-inline);
+}
+.table .missing {
+  color: var(--text-muted);
   background: var(--background-alt);
-}
-.holder {
-  width: 28%;
-}
-.holder button {
-  max-width: 260px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.time {
-  font-weight: 750;
-  font-variant-numeric: tabular-nums;
-}
-.recordDate {
-  font-size: 11px;
-  color: var(--text-muted);
-}
-.missing {
-  color: var(--text-muted);
+  border-color: var(--border);
 }
 .empty {
   padding: 16px;
@@ -169,25 +252,14 @@
   font-size: 13px;
 }
 @media (max-width: 600px) {
-  .controls {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 12px;
-    padding: 16px;
-  }
-  .selector {
-    flex-basis: auto;
-  }
   .jumpLinks {
-    padding: 12px 16px;
+    gap: 12px;
   }
-  .jumpLinks > div {
-    gap: 4px 14px;
+  .jumpRow {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
-  .jumpLinks a {
-    min-height: 36px;
-    display: inline-flex;
-    align-items: center;
+  .jumpLinks .courseLink {
+    grid-column: 1 / -1;
   }
   .courseHeading {
     flex-wrap: wrap;
@@ -195,42 +267,17 @@
   .courseHeading h2 {
     font-size: 20px;
   }
-  .table th,
-  .table td {
-    padding: 7px 8px;
+  .table {
+    --cell-padding-block: 7px;
+    --cell-padding-inline: 8px;
   }
-  .holder button {
-    max-width: 130px;
-  }
-  .recordDate,
-  .table thead th:nth-child(2),
-  .table thead th:nth-child(6),
-  .table thead th:nth-child(9) {
-    display: none;
-  }
-  .event {
-    position: sticky;
-    left: 0;
-    z-index: 1;
-  }
-}
-
-.relayRow > td,
-.relayRow > th {
-  border-top: 2px solid var(--border);
 }
 
 .lineup {
   display: block;
-  max-width: 260px;
   white-space: normal;
   font-size: 10px;
   line-height: 1.5;
-  color: var(--text-muted);
+  color: #ffffffc4;
   margin-top: 4px;
-}
-@media (max-width: 600px) {
-  .lineup {
-    max-width: 130px;
-  }
 }

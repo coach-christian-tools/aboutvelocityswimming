@@ -20,6 +20,10 @@ export interface RaceSplit {
 }
 export interface Race {
   id: string;
+  resultType?: "swim" | "relay";
+  moderationStatus?: "clear" | "flagged";
+  moderationInherited?: boolean;
+  calculationEligible?: boolean;
   athleteId: string;
   athleteName?: string;
   date: string;
@@ -103,6 +107,17 @@ function ageRange(group: string): [number, number] | null {
       : [Number(bound[1]), Infinity]
     : null;
 }
+export function hide25sForAgeGroups(course: string, groups: string[]) {
+  return (
+    (course === "SCY" || course === "SCM") &&
+    groups.length > 0 &&
+    groups.every((group) => {
+      const range = ageRange(group);
+      return range !== null && range[0] >= 11;
+    })
+  );
+}
+
 export function matchesAgeGroup(race: Race, group: string) {
   const range = ageRange(group);
   if (!race.relay)
@@ -283,6 +298,8 @@ export function normalizeRace(row: PublicRace): Race {
 }
 export function validPerformance(race: Race) {
   return (
+    race.moderationStatus !== "flagged" &&
+    race.calculationEligible !== false &&
     race.status === "OK" &&
     Number.isFinite(race.time) &&
     race.time > 0 &&

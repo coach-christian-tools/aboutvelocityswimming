@@ -1,4 +1,5 @@
 /** Stage a bounded, evidence-backed batch from this machine. Never publishes. */
+import { validateStandard } from "../../src/components/collection/validate-standard.ts";
 import { readFile } from "node:fs/promises";
 import { createClient } from "@supabase/supabase-js";
 const path = process.argv[2];
@@ -23,6 +24,11 @@ if (
   batch.writes.length > 100
 )
   throw new Error("A batch requires 1–100 proposed records.");
+for (const write of batch.writes) if (write.path.startsWith("standards/")) {
+  validateStandard(write.after, write.path.slice(10));
+  if (batch.coverage !== "complete" || !batch.reads?.some(read => read.path === write.path && Object.hasOwn(read, "before")))
+    throw new Error("Standards require complete edition coverage and an explicit baseline read.");
+}
 const client = createClient(url, key, { auth: { persistSession: false } });
 const { data, error } = await client.rpc("stage_collection", {
   worker_token: token,

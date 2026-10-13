@@ -17,7 +17,9 @@
     "test:calendar": "node scripts/test-calendar.mjs",
     "test:workshare": "node --import ./scripts/workshare/register-typescript.mjs --test tests/workshare/*.test.ts",
     "test:reminders": "node --test tests/reminders.test.mjs",
-    "test:database": "node --test tests/unified.integration.mjs && npm run test:records:database && npm run test:times:database && npm run test:meets:database",
+    "test:database": "node --test tests/unified.integration.mjs && npm run test:records:database && npm run test:times:database && npm run test:meets:database && npm run test:moderation:database && npm run test:standards:database",
+    "test:moderation:database": "node --test tests/result-moderation.integration.mjs",
+    "test:moderation:browser": "node scripts/collection/moderation-browser-check.mjs",
     "test:records:database": "node --test tests/records.integration.mjs",
     "test:browser": "node scripts/unified/browser-check.mjs",
     "test:auth:browser": "node scripts/unified/auth-membership-browser-check.mjs",
@@ -33,7 +35,9 @@
     "test:meets:browser": "node scripts/collection/meet-queue-browser-check.mjs",
     "test:collection:browser": "node scripts/collection/browser-check.mjs",
     "test:times:database": "node --import ./scripts/workshare/register-typescript.mjs --test tests/times.integration.mjs",
-    "test:times:browser": "node --import ./scripts/workshare/register-typescript.mjs scripts/collection/times-browser-check.mjs"
+    "test:times:browser": "node --import ./scripts/workshare/register-typescript.mjs scripts/collection/times-browser-check.mjs",
+    "test:standards:database": "node --test tests/standards.integration.mjs",
+    "test:standards:browser": "node scripts/collection/standards-browser-check.mjs"
   },
   "dependencies": {
     "@stripe/stripe-js": "^9.8.0",

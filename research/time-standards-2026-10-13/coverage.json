@@ -1,0 +1,14 @@
+{
+  "checkedAt": "2026-10-13",
+  "motivational": {
+    "batchId": "bcacf495-71df-42ac-9049-7468daec72eb",
+    "status": "pending",
+    "cutCount": 3648,
+    "eventRows": 304
+  },
+  "inlandEmpire": {
+    "sourceUrl": "https://www.gomotionapp.com/team/wzielsc/page/times/links-to-time-standards",
+    "status": "unavailable",
+    "reason": "Official current page lists 2027 Junior, Short Course and Long Course Championships with blank standards cells. No 2026 or Western Zone cuts substituted."
+  }
+}
