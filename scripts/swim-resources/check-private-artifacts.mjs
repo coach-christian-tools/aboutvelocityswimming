@@ -2,13 +2,14 @@ import { readdir, readFile } from 'node:fs/promises';
 import { join, relative, resolve } from 'node:path';
 
 const root = process.cwd();
+const buildDirectory = process.env.VELOCITY_TEST_BUILD === 'true' ? '.next-velocity-test' : '.next';
 async function traceFiles(directory) {
   const entries = await readdir(directory, { withFileTypes: true });
   const groups = await Promise.all(entries.map(entry => entry.isDirectory() ? traceFiles(join(directory, entry.name)) : Promise.resolve(entry.name.endsWith('.nft.json') ? [join(directory, entry.name)] : [])));
   return groups.flat();
 }
-const traces = await traceFiles(join(root, '.next', 'server'));
-for (const entry of await readdir(join(root, '.next'))) if (entry.endsWith('.nft.json')) traces.push(join(root, '.next', entry));
+const traces = await traceFiles(join(root, buildDirectory, 'server'));
+for (const entry of await readdir(join(root, buildDirectory))) if (entry.endsWith('.nft.json')) traces.push(join(root, buildDirectory, entry));
 if (!traces.length) throw new Error('No production file traces found. Run the build first.');
 const exposed = new Set();
 for (const trace of traces) {

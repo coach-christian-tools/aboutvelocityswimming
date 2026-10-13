@@ -1,3 +1,4 @@
+import { invalidateTimes } from "@/lib/times/server";
 import { sameOrigin } from "@/lib/same-origin";
 import { serverClient } from "@/lib/supabase/server";
 export async function POST(request: Request) {
@@ -19,6 +20,7 @@ export async function POST(request: Request) {
         { error: error.message, code: error.code },
         { status: error.code === "40001" ? 409 : 403 },
       );
+    invalidateTimes();
     return Response.json({ success: true });
   } catch {
     return Response.json(

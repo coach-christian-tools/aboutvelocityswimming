@@ -1,3 +1,4 @@
+import { invalidateTimes } from "@/lib/times/server";
 import { sameOrigin } from "@/lib/same-origin";
 import { serverClient } from "@/lib/supabase/server";
 import { dependencyTables, reviewDependencies } from "@/components/collection/review-dependencies";
@@ -61,5 +62,6 @@ export async function POST(request: Request) {
       { error: error.message },
       { status: ["40001", "23503"].includes(error.code) ? 409 : 403 },
     );
+  invalidateTimes();
   return Response.json({ success: true });
 }

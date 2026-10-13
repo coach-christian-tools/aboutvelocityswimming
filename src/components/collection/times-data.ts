@@ -1,9 +1,13 @@
 import type { Database } from "@/lib/supabase/database.types";
 export type Athlete = Database["public"]["Tables"]["public_athletes"]["Row"];
-export type PublicRace = Database["public"]["Tables"]["public_swims"]["Row"];
+export type PublicRace = Pick<
+  Database["public"]["Tables"]["public_swims"]["Row"],
+  "id" | "athlete_id" | "swim_date" | "data"
+>;
 export interface Race {
   id: string;
   athleteId: string;
+  athleteName?: string;
   date: string;
   event: string;
   course: string;
@@ -30,7 +34,7 @@ export interface Filters {
   year: string;
   round: string;
   official: string;
-  gender: string;
+  genders: string[];
   ageGroups: string[];
   mode: "bests" | "performances";
   relay?: boolean;
@@ -42,7 +46,7 @@ export const initialFilters: Filters = {
   year: "",
   round: "",
   official: "",
-  gender: "",
+  genders: ["F"],
   ageGroups: [],
   mode: "bests",
 };
@@ -140,7 +144,7 @@ export function validTime(race: Race) {
 export function resultName(race: Race, names: Map<string, string>) {
   return race.relay
     ? race.relayName || `${race.teamName || "Team"} relay`
-    : (names.get(race.athleteId) ?? race.athleteId);
+    : race.athleteName || names.get(race.athleteId) || race.athleteId;
 }
 export function raceAgeGroup(race: Race) {
   if (race.relay) return race.relayAgeGroup || "";
@@ -180,7 +184,7 @@ export function matches(race: Race, filters: Filters) {
     (!filters.event || race.event === filters.event) &&
     (!filters.team || race.team === filters.team) &&
     (!filters.year || race.date.startsWith(filters.year)) &&
-    (!filters.gender || race.gender === filters.gender) &&
+    (!filters.genders.length || filters.genders.includes(race.gender || "")) &&
     (!filters.ageGroups.length ||
       filters.ageGroups.includes(raceAgeGroup(race))) &&
     (!filters.round || race.round === filters.round) &&
@@ -331,4 +335,34 @@ export function recordEvents(course: string, races: Race[]) {
       a.localeCompare(b)
     );
   });
+}
+
+export function groupedEvents(options: [string, string][]) {
+  const order = ["FR", "BK", "BR", "FL", "IM", "FR-R", "MED-R"];
+  const labels: Record<string, string> = {
+    FR: "Freestyle",
+    BK: "Backstroke",
+    BR: "Breaststroke",
+    FL: "Butterfly",
+    IM: "Individual Medley",
+    "FR-R": "Freestyle Relays",
+    "MED-R": "Medley Relays",
+  };
+  const keys = [
+    ...new Set(options.map(([event]) => event.split("_")[1] || "Other")),
+  ].sort(
+    (a, b) =>
+      (order.includes(a) ? order.indexOf(a) : 99) -
+        (order.includes(b) ? order.indexOf(b) : 99) || a.localeCompare(b),
+  );
+  return keys.map((key) => ({
+    label: labels[key] || "Other events",
+    options: options
+      .filter(([event]) => event.split("_")[1] === key)
+      .sort(
+        ([a], [b]) =>
+          Number(a.split("_")[0]) - Number(b.split("_")[0]) ||
+          a.localeCompare(b),
+      ),
+  }));
 }

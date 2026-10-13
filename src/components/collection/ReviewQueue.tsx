@@ -1,4 +1,5 @@
 "use client";
+import { clearTimesCache } from "./times-cache";
 import Link from "next/link";
 import { useEffect, useState, useMemo, useRef } from "react";
 import { browserClient, hasBackendConfiguration } from "@/lib/supabase/client";
@@ -413,6 +414,7 @@ export default function ReviewQueue() {
       const result = await response.json();
       if (!response.ok)
         throw new Error(result.error || "Unable to save decision.");
+      clearTimesCache();
       // Cancel a background read that began before this successful decision.
       // Its stale response must not put the batch back into the queue.
       loadController.current?.abort();

@@ -67,7 +67,12 @@ const end = new Date(at.getTime() + 3600000);
 const records = [
   [
     "teams/velocity-swimming",
-    { id: "velocity-swimming", name: "Velocity Swimming", clubCode: "IEVS" },
+    {
+      id: "velocity-swimming",
+      name: "Velocity Swimming",
+      clubCode: "IEVS",
+      lscCode: "IE",
+    },
   ],
   [
     "athletes/test-swimmer-a",

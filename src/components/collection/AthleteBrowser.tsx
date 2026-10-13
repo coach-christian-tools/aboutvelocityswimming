@@ -1,33 +1,58 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import {
-  athleteRankings,
   type AthleteRankingOptions,
   type RankedAthlete,
 } from "./athlete-rankings";
-import { ageGroups, eventLabel, type Race } from "./times-data";
-import type { StandardSet } from "@/features/swim-resources/types/schema";
+import { ageGroups, eventLabel } from "./times-data";
+import { timesUrl } from "./times-api";
+import { useTimes, useDebouncedSearch } from "./use-times";
 import { formatSwimTime } from "@/features/swim-resources/lib/domain/swim-time";
 import s from "./TimesDatabase.module.css";
 
 function RankingList({
   title,
   athletes,
+  total,
+  input,
+  status,
+  enabled,
   onAthlete,
 }: {
   title: string;
   athletes: RankedAthlete[];
+  total: number;
+  input: Parameters<typeof timesUrl>[1];
+  status: RankedAthlete["status"];
+  enabled: boolean;
   onAthlete: (id: string) => void;
 }) {
-  const [limit, setLimit] = useState(25);
-  if (!athletes.length) return null;
+  const [page, setPage] = useState(0);
+  const query = useTimes(
+    page > 0
+      ? timesUrl("athletes", { ...input, status, offset: page * 25 })
+      : null,
+    enabled,
+  );
+  const displayed =
+    page > 0 ? (query.data?.groups?.[0]?.athletes ?? []) : athletes;
+  if (!total) return null;
   return (
     <div className={s.athleteList}>
       <h4>
-        {title} <span className={s.muted}>({athletes.length})</span>
+        {title} <span className={s.muted}>({total})</span>
       </h4>
-      {athletes.slice(0, limit).map((a) => (
+      {query.loading && <p role="status">Loading team athletes…</p>}
+      {query.error && (
+        <p role="alert">
+          {query.error}{" "}
+          <button className={s.link} onClick={query.retry}>
+            Try again
+          </button>
+        </p>
+      )}
+      {displayed.map((a) => (
         <button
           key={a.id}
           className={s.athleteRow}
@@ -60,32 +85,38 @@ function RankingList({
           </span>
         </button>
       ))}
-      {athletes.length > limit && (
-        <button className={s.button} onClick={() => setLimit((n) => n + 25)}>
-          Show more {title.toLowerCase()} ({athletes.length - limit} remaining)
-        </button>
+      {total > 25 && (
+        <nav className={s.pager} aria-label={`${title} pages`}>
+          <button
+            className={s.button}
+            disabled={!page}
+            onClick={() => setPage((p) => p - 1)}
+          >
+            Previous
+          </button>
+          <span>
+            {page * 25 + 1}–{Math.min((page + 1) * 25, total)} of {total}
+          </span>
+          <button
+            className={s.button}
+            disabled={(page + 1) * 25 >= total}
+            onClick={() => setPage((p) => p + 1)}
+          >
+            Next
+          </button>
+        </nav>
       )}
     </div>
   );
 }
 export default function AthleteBrowser({
-  races,
-  names,
   teams,
-  standard,
-  standardsLoading,
-  standardsError,
-  onRetry,
   onAthlete,
+  enabled = true,
 }: {
-  races: Race[];
-  names: Map<string, string>;
   teams: [string, string][];
-  standard: StandardSet | null;
-  standardsLoading: boolean;
-  standardsError: string;
-  onRetry: () => void;
   onAthlete: (id: string) => void;
+  enabled?: boolean;
 }) {
   const [options, setOptions] = useState<Omit<AthleteRankingOptions, "today">>({
     team: "",
@@ -94,24 +125,31 @@ export default function AthleteBrowser({
   });
   const [ages, setAges] = useState<string[]>([]);
   const [search, setSearch] = useState("");
-  const today = new Date().toLocaleDateString("en-CA", {
-    timeZone: "America/Los_Angeles",
-  });
-  const groups = useMemo(
-    () => athleteRankings(races, names, standard, { ...options, today }),
-    [races, names, standard, options, today],
+  const searchTerm = useDebouncedSearch(search).trim().toLowerCase();
+  const query = useTimes(
+    options.team
+      ? timesUrl("athletes", {
+          ...options,
+          search: searchTerm,
+          ageGroups: ages,
+        })
+      : null,
+    enabled,
   );
-  const visible = groups
-    .filter((g) => !ages.length || ages.includes(g.ageGroup))
-    .map((g) => ({
-      ...g,
-      athletes: g.athletes.filter((a) =>
-        a.name.toLowerCase().includes(search.trim().toLowerCase()),
-      ),
-    }))
-    .filter((g) => g.athletes.length);
+  const groups = query.data?.groups ?? [];
+  const standardsLoading = query.loading;
+  const standardsError = query.error;
+  const standard = query.data?.standardAvailable
+    ? { name: query.data.standardName }
+    : null;
+  const visible = groups;
   const sections = [...new Set(visible.map((g) => g.ageGroup))];
-  const resetKey = JSON.stringify([options, ages]);
+  const resetKey = JSON.stringify([
+    options,
+    ages,
+    searchTerm,
+    query.data?.expiresAt,
+  ]);
   return (
     <div className={s.athleteBrowser}>
       <div className={s.filters}>
@@ -226,16 +264,16 @@ export default function AthleteBrowser({
           benchmark.
         </p>
       </details>
-      {standardsLoading && <p role="status">Loading scoring standards…</p>}
+      {standardsLoading && <p role="status">Loading team athletes…</p>}
       {standardsError && (
         <p className={s.notice} role="alert">
           {standardsError}{" "}
-          <button className={s.link} onClick={onRetry}>
-            Retry standards
+          <button className={s.link} onClick={query.retry}>
+            Try again
           </button>
         </p>
       )}
-      {!standardsLoading && !standard && (
+      {query.data && !standardsLoading && !standard && (
         <p className={s.notice}>
           Current verified motivational standards unavailable. Athletes are
           listed alphabetically without scores.
@@ -253,7 +291,7 @@ export default function AthleteBrowser({
               : "Historical affiliation and age at the swim"}{" "}
             · {options.course}
           </p>
-          {!visible.length && (
+          {query.data && !visible.length && (
             <p className={s.empty}>
               No matching athletes. Try another name, age group, team, or
               period.
@@ -281,6 +319,15 @@ export default function AthleteBrowser({
                         </h3>
                         <RankingList
                           title="Ranked athletes"
+                          enabled={enabled}
+                          total={g.totals.ranked}
+                          status="ranked"
+                          input={{
+                            ...options,
+                            search: searchTerm,
+                            groupAge: g.ageGroup,
+                            groupGender: g.gender,
+                          }}
                           athletes={g.athletes.filter(
                             (a) => a.status === "ranked",
                           )}
@@ -288,6 +335,15 @@ export default function AthleteBrowser({
                         />
                         <RankingList
                           title="Provisional — fewer than three events"
+                          enabled={enabled}
+                          total={g.totals.provisional}
+                          status="provisional"
+                          input={{
+                            ...options,
+                            search: searchTerm,
+                            groupAge: g.ageGroup,
+                            groupGender: g.gender,
+                          }}
                           athletes={g.athletes.filter(
                             (a) => a.status === "provisional",
                           )}
@@ -295,6 +351,15 @@ export default function AthleteBrowser({
                         />
                         <RankingList
                           title="Not scored"
+                          enabled={enabled}
+                          total={g.totals.unscored}
+                          status="unscored"
+                          input={{
+                            ...options,
+                            search: searchTerm,
+                            groupAge: g.ageGroup,
+                            groupGender: g.gender,
+                          }}
                           athletes={g.athletes.filter(
                             (a) => a.status === "unscored",
                           )}

@@ -628,3 +628,9 @@
     padding-inline: 0;
   }
 }
+
+.eventGroupTitle {
+  font-size: 14px;
+  margin: 20px 0 4px;
+  color: var(--text-main);
+}

@@ -27,6 +27,7 @@ const race = (id: string, time: number, extra: Partial<Race> = {}): Race => ({
   team: "VS",
   official: true,
   relay: false,
+  gender: "F",
   meetId: "meet",
   meet: "Meet",
   ...extra,
@@ -41,6 +42,7 @@ describe("IES performance comparisons", () => {
         eventCode: "100_FR_SCY",
         teamId: "swimcloud_8185",
         teamName: "Tri-City Channel Cats",
+        gender: "F",
       },
     });
     expect(result.teamName).toBe("Tri-City Channel Cats");
@@ -169,7 +171,7 @@ describe("IES demographic filters and results mode", () => {
       race("male", 49000, { ageAtSwim: 12, gender: "M" }),
       race("missing", 48000),
     ];
-    const filters = { ...initialFilters, gender: "F", ageGroups: ["11-12"] };
+    const filters = { ...initialFilters, genders: ["F"], ageGroups: ["11-12"] };
     const included = swims.filter((r) => matches(r, filters));
     expect(rankedTimes(included).map(({ race }) => race.id)).toEqual([
       "young-final",
@@ -190,7 +192,9 @@ describe("IES demographic filters and results mode", () => {
         ),
       ).map(({ race }) => race.id),
     ).toEqual(["older"]);
-    expect(swims.filter((r) => matches(r, initialFilters))).toHaveLength(5);
+    expect(
+      swims.filter((r) => matches(r, { ...initialFilters, genders: [] })),
+    ).toHaveLength(5);
   });
   it("uses inclusive age boundaries and excludes missing age from specific groups", () => {
     const filters = { ...initialFilters, ageGroups: ["9-10"] };
@@ -244,7 +248,7 @@ describe("team records", () => {
         team: "OTHER",
       }),
       race("no-age", 30000, { gender: "F" }),
-      race("no-gender", 30000, { ageAtSwim: 12 }),
+      race("no-gender", 30000, { ageAtSwim: 12, gender: undefined }),
       race("dq", 30000, { gender: "F", ageAtSwim: 12, status: "DQ" }),
       race("relay", 30000, { gender: "F", ageAtSwim: 12, relay: true }),
     ];
@@ -357,7 +361,7 @@ describe("team relay records", () => {
       relay: true,
       event: "100_FR-R",
       team: "VS",
-      gender: "F",
+      genders: ["F"],
       ageGroups: ["8&U"],
       mode: "performances" as const,
     };

@@ -1,3 +1,4 @@
+import { clearTimesCache } from "@/components/collection/times-cache";
 import type { Json } from "../supabase/database.types";
 /* eslint-disable @typescript-eslint/no-explicit-any */
 // Registered record keys preserve existing provenance URLs while all persistence
@@ -128,6 +129,7 @@ async function request(body: unknown) {
     throw Object.assign(new Error(result.error ?? "Unable to save data."), {
       code: result.code,
     });
+  clearTimesCache();
   return result;
 }
 export async function getDoc<T>(

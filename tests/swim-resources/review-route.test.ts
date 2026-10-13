@@ -1,6 +1,7 @@
 import { beforeEach, describe, expect, it, vi } from "vitest";
 const mocks = vi.hoisted(() => ({ from: vi.fn(), rpc: vi.fn(), getUser: vi.fn() }));
 vi.mock("@/lib/supabase/server", () => ({ serverClient: async () => ({ from: mocks.from, rpc: mocks.rpc, auth: { getUser: mocks.getUser } }) }));
+vi.mock("@/lib/times/server", () => ({ invalidateTimes: vi.fn() }));
 vi.mock("@/lib/same-origin", () => ({ sameOrigin: () => true }));
 import { POST } from "@/app/api/collection/review/route";
 

@@ -636,24 +636,77 @@ export type Database = {
           },
         ];
       };
+      public_times_teams: {
+        Row: {
+          club_code: string | null;
+          id: string;
+          lsc_code: string;
+          name: string;
+        };
+        Insert: {
+          club_code?: string | null;
+          id: string;
+          lsc_code: string;
+          name: string;
+        };
+        Update: {
+          club_code?: string | null;
+          id?: string;
+          lsc_code?: string;
+          name?: string;
+        };
+        Relationships: [
+          {
+            foreignKeyName: "public_times_teams_id_fkey";
+            columns: ["id"];
+            isOneToOne: true;
+            referencedRelation: "teams";
+            referencedColumns: ["id"];
+          },
+        ];
+      };
       public_swims: {
         Row: {
           athlete_id: string;
-          data: NonNullable<Json>;
+          data: Json;
           id: string;
           swim_date: string;
+          times_course: string | null;
+          times_event: string | null;
+          times_leg: number | null;
+          times_meet: string | null;
+          times_relay: boolean | null;
+          times_split: boolean | null;
+          times_team: string | null;
+          times_time: number | null;
         };
         Insert: {
           athlete_id: string;
-          data: NonNullable<Json>;
+          data: Json;
           id: string;
           swim_date: string;
+          times_course?: string | null;
+          times_event?: string | null;
+          times_leg?: number | null;
+          times_meet?: string | null;
+          times_relay?: boolean | null;
+          times_split?: boolean | null;
+          times_team?: string | null;
+          times_time?: number | null;
         };
         Update: {
           athlete_id?: string;
-          data?: NonNullable<Json>;
+          data?: Json;
           id?: string;
           swim_date?: string;
+          times_course?: string | null;
+          times_event?: string | null;
+          times_leg?: number | null;
+          times_meet?: string | null;
+          times_relay?: boolean | null;
+          times_split?: boolean | null;
+          times_team?: string | null;
+          times_time?: number | null;
         };
         Relationships: [
           {
@@ -934,12 +987,61 @@ export type Database = {
     Views: {
       collection_batch_queue: {
         Row: {
-          id: string; division: string; scope: string; source_url: string;
-          captured_at: string; received_at: string; coverage: string;
-          status: string; review_note: string | null; reviewed_at: string | null;
-          writes: Json; reads: Json;
+          id: string;
+          division: string;
+          scope: string;
+          source_url: string;
+          captured_at: string;
+          received_at: string;
+          coverage: string;
+          status: string;
+          review_note: string | null;
+          reviewed_at: string | null;
+          writes: Json;
+          reads: Json;
         };
         Relationships: [];
+      };
+      ies_times_races: {
+        Row: {
+          age: number | null;
+          athlete_id: string | null;
+          athlete_name: string | null;
+          course: string | null;
+          date: string | null;
+          event: string | null;
+          gender: string | null;
+          id: string | null;
+          meet: string | null;
+          meet_id: string | null;
+          official: boolean | null;
+          relay: boolean | null;
+          relay_age: string | null;
+          relay_leg: number | null;
+          relay_name: string | null;
+          round: string | null;
+          split: boolean | null;
+          status: string | null;
+          team: string | null;
+          team_name: string | null;
+          time: number | null;
+        };
+        Relationships: [
+          {
+            foreignKeyName: "public_swims_athlete_id_fkey";
+            columns: ["athlete_id"];
+            isOneToOne: false;
+            referencedRelation: "public_athletes";
+            referencedColumns: ["id"];
+          },
+          {
+            foreignKeyName: "public_swims_id_fkey";
+            columns: ["id"];
+            isOneToOne: true;
+            referencedRelation: "swims";
+            referencedColumns: ["id"];
+          },
+        ];
       };
       app_records: {
         Row: {
@@ -997,6 +1099,50 @@ export type Database = {
       stage_collection: {
         Args: { batch: Json; worker_token: string };
         Returns: string;
+      };
+      ies_times_age: {
+        Args: { age: number; relay: boolean; relay_age: string };
+        Returns: string;
+      };
+      ies_times_filtered: {
+        Args: { input: Json };
+        Returns: {
+          age: number | null;
+          athlete_id: string | null;
+          athlete_name: string | null;
+          course: string | null;
+          date: string | null;
+          event: string | null;
+          gender: string | null;
+          id: string | null;
+          meet: string | null;
+          meet_id: string | null;
+          official: boolean | null;
+          relay: boolean | null;
+          relay_age: string | null;
+          relay_leg: number | null;
+          relay_name: string | null;
+          round: string | null;
+          split: boolean | null;
+          status: string | null;
+          team: string | null;
+          team_name: string | null;
+          time: number | null;
+        }[];
+        SetofOptions: {
+          from: "*";
+          to: "ies_times_races";
+          isOneToOne: false;
+          isSetofReturn: true;
+        };
+      };
+      ies_times_json: {
+        Args: { r: Database["public"]["Views"]["ies_times_races"]["Row"] };
+        Returns: Json;
+      };
+      ies_times_query: {
+        Args: { input?: Json; query_kind: string };
+        Returns: Json;
       };
       times_page: {
         Args: {
