@@ -66,8 +66,12 @@ def member_lineup(result: dict, companion: dict, local_athletes: dict, identity:
 
 
 def fingerprint(swim: dict) -> tuple:
+    # A relay lead-off is a separately verified start. Equal individual-final
+    # times do not identify it, and different parent relays cannot share it.
+    lead_off = swim.get("resultOrigin") == "relay_leadoff"
     return (swim.get("athleteId"), swim.get("meet", {}).get("id"), swim.get("meet", {}).get("date"),
-            swim.get("eventCode"), swim.get("round"), swim.get("status"), swim.get("timeMs", 0))
+            swim.get("eventCode"), swim.get("round"), swim.get("status"), swim.get("timeMs", 0),
+            "relay_leadoff" if lead_off else "individual", swim.get("parentRelayResultId") if lead_off else None)
 
 
 def same_source_performance(swim: dict, result: dict, meet_id: str) -> bool:
@@ -95,7 +99,6 @@ def verified_leadoff(relay: dict, verification: dict, existing: set[tuple]) -> t
     # An overall DQ neither proves nor disproves first-leg validity. Explicit
     # first-leg OK evidence remains required by the checks above in either case.
     event = f"{relay['distance'] // 4}_{first['stroke']}_{relay['course']}"
-    key = (first["athleteId"], relay["meet"]["id"], relay["meet"]["date"], event, relay["round"], "OK", first["timeMs"])
     athlete_name = relay.get("sourceObservation", {}).get("memberNames", {}).get("1")
     if not athlete_name:
         return None, "Lead-off exact source first and last names unavailable"
@@ -106,6 +109,10 @@ def verified_leadoff(relay: dict, verification: dict, existing: set[tuple]) -> t
         "status": "OK", "timeMs": first["timeMs"], "timeDisplay": display(first["timeMs"]),
         "isRelay": False, "isOfficial": True, "meet": copy.deepcopy(relay["meet"]),
         "resultOrigin": "relay_leadoff", "parentRelayResultId": relay["id"],
+        "raceIdentity": {"occurrence": "relay_leadoff:" + digest(relay["id"] + "|" + first["athleteId"]),
+            "reviewed": True,
+            "basis": "Separately reviewed exact parent relay, linked first member, flat start, official timing and OK lead-off status; paired first-leg cumulative boundary",
+            "sourceUrl": verification["sourceUrl"]},
         "leadOffVerification": {key: verification[key] for key in ("verified", "flatStart", "timingVerified", "leadOffStatus", "sourceUrl")},
         "sourceObservation": {**copy.deepcopy(relay["sourceObservation"]), "leadOffVerificationEvidence": copy.deepcopy(verification)}}
     exact_age = relay.get("sourceObservation", {}).get("memberAges", {}).get("1")
@@ -116,6 +123,7 @@ def verified_leadoff(relay: dict, verification: dict, existing: set[tuple]) -> t
     else:
         return None, "Lead-off exact race-day age unavailable"
     individual["metadata"] = {"source": "official_relay_leadoff", "createdAt": relay.get("metadata", {}).get("createdAt")}
+    key = fingerprint(individual)
     if key in existing:
         return None, "Exact eligible individual performance already exists"
     existing.add(key)

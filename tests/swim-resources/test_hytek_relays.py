@@ -181,6 +181,12 @@ class LeadOffTests(unittest.TestCase):
         self.assertEqual(swim["parentRelayResultId"], "relay_1")
         self.assertEqual(len(swim["leadOffVerification"]), 5)
         self.assertEqual(swim["sourceObservation"]["leadOffVerificationEvidence"]["reportPage"], 27)
+        self.assertEqual(swim["raceIdentity"], {
+            "occurrence": "relay_leadoff:" + hytek.digest("relay_1|athlete"),
+            "reviewed": True,
+            "basis": "Separately reviewed exact parent relay, linked first member, flat start, official timing and OK lead-off status; paired first-leg cumulative boundary",
+            "sourceUrl": self.verification()["sourceUrl"],
+        })
 
     def test_first_leg_alone_does_not_imply_eligibility(self):
         for key, value in (("timingVerified", False), ("flatStart", False), ("leadOffStatus", "DQ")):
@@ -194,13 +200,39 @@ class LeadOffTests(unittest.TestCase):
             verification[key] = value
             self.assertIsNone(prepare_module.verified_leadoff(self.relay(), verification, set())[0])
 
-    def test_existing_individual_and_repeat_leadoff_do_not_duplicate(self):
+    def test_repeat_leadoff_does_not_duplicate(self):
         known = set()
         swim, _ = prepare_module.verified_leadoff(self.relay(), self.verification(), known)
         self.assertIn(prepare_module.fingerprint(swim), known)
         repeated, reason = prepare_module.verified_leadoff(self.relay(), self.verification(), known)
         self.assertIsNone(repeated)
         self.assertEqual(reason, "Exact eligible individual performance already exists")
+
+    def test_equal_time_individual_final_and_different_parent_starts_remain_distinct(self):
+        individual = {"athleteId": "athlete", "eventCode": "50_BK_SCY", "round": "F", "status": "OK",
+                      "timeMs": 29270, "meet": {"id": "meet", "date": "2026-02-28"}}
+        original = copy.deepcopy(individual)
+        known = {prepare_module.fingerprint(individual)}
+        first, reason = prepare_module.verified_leadoff(self.relay(), self.verification(), known)
+        self.assertIsNone(reason)
+        self.assertIsNotNone(first)
+        relay, verification = self.relay(), self.verification()
+        relay["id"] = verification["relayResultId"] = "relay_2"
+        second, reason = prepare_module.verified_leadoff(relay, verification, known)
+        self.assertIsNone(reason)
+        self.assertNotEqual(first["id"], second["id"])
+        self.assertNotEqual(first["raceIdentity"]["occurrence"], second["raceIdentity"]["occurrence"])
+        self.assertEqual(len(known), 3)
+        self.assertEqual(individual, original)
+
+    def test_occurrence_identity_uses_parent_start_and_member_not_time(self):
+        first, _ = prepare_module.verified_leadoff(self.relay(), self.verification(), set())
+        relay, verification = self.relay(), self.verification()
+        relay["members"][0]["timeMs"] = relay["splits"][0]["cumulativeMs"] = verification["timeMs"] = 29280
+        corrected, reason = prepare_module.verified_leadoff(relay, verification, set())
+        self.assertIsNone(reason)
+        self.assertEqual(first["id"], corrected["id"])
+        self.assertEqual(first["raceIdentity"], corrected["raceIdentity"])
 
     def test_held_age_validation_does_not_reserve_duplicate_fingerprint(self):
         relay = self.relay()
@@ -254,16 +286,29 @@ class ReviewArtifactsTests(unittest.TestCase):
             # against a fresh snapshot. Existing eligibility must remain on the
             # parent instead of producing a spurious changed-relay hold.
             current["relay_results"] = []
+            individual_final = {"id": "already-published-individual-final", "athleteId": "ath_1", "teamId": "velocity-swimming",
+                                "eventCode": "50_BK_SCY", "round": "F", "status": "OK", "timeMs": 30000,
+                                "meet": {"id": "meet", "date": "2025-10-25", "name": "Meet"}}
+            current["swims"] = [{"id": individual_final["id"], "data": copy.deepcopy(individual_final)}]
             baseline.write_text(json.dumps(current))
+            before_verification = baseline.read_bytes()
             verification = root / "verification.json"
             verification.write_text(json.dumps([{**LeadOffTests().verification(), "relayResultId": first_id, "athleteId": "ath_1", "timeMs": 30000}]))
             verified_output = root / "verified-output"
             verified_summary = prepare_module.prepare(archives, baseline, manifest, verified_output, verification)
             self.assertEqual(verified_summary["leadOffsPrepared"], 1)
+            self.assertEqual(baseline.read_bytes(), before_verification)
+            self.assertEqual(current["swims"], [{"id": individual_final["id"], "data": individual_final}])
+            lead_offs = []
             for batch_path in (verified_output / "batches").glob("*.json"):
                 for write in json.loads(batch_path.read_text())["writes"]:
+                    self.assertNotEqual(write["path"], "swims/" + individual_final["id"])
+                    if write["after"].get("resultOrigin") == "relay_leadoff":
+                        lead_offs.append(write["after"])
                     collection, record_id = write["path"].split("/")
                     current[collection].append({"id": record_id, "data": write["after"]})
+            self.assertEqual(len(lead_offs), 1)
+            self.assertEqual(lead_offs[0]["raceIdentity"]["occurrence"], "relay_leadoff:" + hytek.digest(first_id + "|ath_1"))
             current["capturedAt"] = "2026-10-13T20:00:00Z"
             baseline.write_text(json.dumps(current))
             repeated_output = root / "repeated-output"

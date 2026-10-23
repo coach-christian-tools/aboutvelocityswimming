@@ -503,7 +503,13 @@ await test("collection is staging-only, isolated, deduplicated and atomically re
   assert.equal((await staff.from("collection_batches").select("status").eq("id", missing.data).single()).data.status, "pending");
   const parent = await stage({ ...base, division: "times", writes: [{ path: "meets/" + missingId, after: { name: "Parent meet" } }] }); assert.ifError(parent.error);
   assert.ifError((await staff.rpc("review_collection", { batch_id: parent.data, decision: "approved", note: "Parent first" })).error);
-  assert.ifError((await staff.rpc("review_collection", { batch_id: missing.data, decision: "approved", note: "Parent now exists" })).error);
+  assert.equal((await staff.rpc("review_collection", { batch_id: missing.data, decision: "approved", note: "Parent now exists" })).error?.code, "40001");
+  const original = await staff.from("collection_batches").select("writes").eq("id", missing.data).single(); assert.ifError(original.error);
+  // Existing collectors do not supply identityGuard. Their unchanged proposal
+  // must still refresh after an unrelated canonical prerequisite was approved.
+  const fresh = await stage({ ...base, division: "times", writes: original.data.writes }); assert.ifError(fresh.error);
+  assert.notEqual(fresh.data, missing.data);
+  assert.ifError((await staff.rpc("review_collection", { batch_id: fresh.data, decision: "approved", note: "Parent checked in fresh proposal" })).error);
   for (const path of [
     "swims/" + missingId, "swims/" + dependencyId,
     "athletes/" + dependencyId, "public_athletes/" + dependencyId, "people/person_" + dependencyId,

@@ -172,12 +172,15 @@ participation, and prepares metadata/participation batches for selected IDs
 only. It writes `assisted-run.json` with a selected archive manifest (stable ID,
 URL, retained path, SHA-256 and indexed/held status) for the follow-on phase.
 Preparing individual/relay performance batches remains a separate human-assisted
-step through staff review: retain visiting
+step through staff review. The repeatable file-only preparer and its required
+source/baseline/mapping contracts are in [collection-races.md](collection-races.md).
+Retain visiting
 teams, reconcile dates and identities, and explicitly disposition source
 exceptions before declaring a meet complete. Automatic race imports and
 background schedules are deferred. The prior individual-race prototype remains
 at ignored `backups/ies-results/2026-10-10/prepare-results.py`; it is specific to
-that original batch and is not a durable generic race-import CLI.
+that original batch and is not a durable generic race-import CLI. The new
+preparer never stages or approves proposals and does not enable background runs.
 
 ## Coverage and national expansion
 

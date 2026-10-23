@@ -1,11 +1,13 @@
 "use client";
 import StandardReview from "./StandardReview";
+import PrivateRaceBaseline from "./PrivateRaceBaseline";
 import type { StandardSet } from "@/features/swim-resources/types/schema";
 import { clearTimesCache } from "./times-cache";
 import Link from "next/link";
 import { useEffect, useState, useMemo, useRef } from "react";
 import { browserClient, hasBackendConfiguration } from "@/lib/supabase/client";
 import { loadReviewBatches, applyReviewDecision, type QueueBatch, type ReviewQueueSnapshot } from "./load-review-batches";
+import { loadReviewHistory, loadReviewBatchDetails, HISTORY_PAGE_SIZE, reviewDivisions as divisions, type HistoryBatch, type ReviewHistoryPage } from "./load-review-history";
 import type { Database, Json } from "@/lib/supabase/database.types";
 import { useAuth } from "@/features/workshare/contexts/auth";
 import styles from "./ReviewQueue.module.css";
@@ -22,11 +24,9 @@ import {
 } from "./review-summary";
 
 type Batch = Database["public"]["Tables"]["collection_batches"]["Row"];
-const divisions: Record<string, string> = {
-  workshare: "Velocity Workshare",
-  times: "Velocity Times",
-  knowledge: "Swim Atlas",
-};
+function hasQueueRecords(batch: HistoryBatch): batch is QueueBatch {
+  return "writes" in batch && "reads" in batch;
+}
 function safeUrl(value: string) {
   try {
     return ["https:", "http:"].includes(new URL(value).protocol) ? value : undefined;
@@ -320,7 +320,11 @@ function Records({ writes, reads }: { writes: Json; reads: Json }) {
     </div>
   );
 }
-function BatchDetails({ id }: { id: string }) {
+function HistoryRecordCounts({ batch }: { batch: Batch }) {
+  const stats = reviewStats(batch.writes as ReviewWrite[], batch.reads as ReviewRead[]);
+  return <p className="text-sm">{stats.total} records · {stats.added} additions · {stats.updated} updates · {stats.removed} removals{stats.attention ? ` · ${stats.attention} need attention` : ""}</p>;
+}
+function BatchDetails({ id, showCounts = false }: { id: string; showCounts?: boolean }) {
   const [expanded, setExpanded] = useState(false);
   const [batch, setBatch] = useState<Batch | null>(null);
   const [error, setError] = useState("");
@@ -328,17 +332,22 @@ function BatchDetails({ id }: { id: string }) {
   useEffect(() => {
     if (!expanded) return;
     const controller = new AbortController();
-    void browserClient().from("collection_batches").select("*").eq("id", id).abortSignal(controller.signal).single()
-      .then(({ data, error }) => {
+    void loadReviewBatchDetails(id, controller.signal)
+      .then(data => {
         if (controller.signal.aborted) return;
-        setError(error?.message ?? "");
-        setBatch(error ? null : data);
+        setError("");
+        setBatch(data);
+      }).catch(cause => {
+        if (controller.signal.aborted) return;
+        setError(typeof cause?.message === "string" ? cause.message : "Unable to load batch records.");
+        setBatch(null);
       });
     return () => controller.abort();
   }, [id, expanded, revision]);
   return <details className={styles.batchDetails} onToggle={event => setExpanded(event.currentTarget.open)}>
     <summary className="cursor-pointer py-1 text-sm font-semibold">Review records, conflicts and source evidence</summary>
     {error ? <div role="alert"><p>{error}</p><button onClick={() => { setError(""); setRevision(value => value + 1); }}>Retry loading records</button></div> : !batch ? <p role="status">Loading batch records…</p> : <div className="mt-2 space-y-3">
+      {showCounts && <HistoryRecordCounts batch={batch} />}
       <a href={safeUrl(batch.source_url)} target="_blank" rel="noopener noreferrer" className="underline break-all">{batch.source_url}</a>
       <Records writes={batch.writes} reads={batch.reads} />
       <details><summary className="cursor-pointer">Source evidence</summary><pre className="max-h-96 overflow-auto whitespace-pre-wrap break-words text-xs">{JSON.stringify(batch.evidence, null, 2)}</pre></details>
@@ -348,11 +357,15 @@ function BatchDetails({ id }: { id: string }) {
 export default function ReviewQueue() {
   const { isAdmin, loading: authLoading } = useAuth();
   const [snapshot, setSnapshot] = useState<ReviewQueueSnapshot | null>(null);
+  const [historyPage, setHistoryPage] = useState<ReviewHistoryPage | null>(null);
   const blockers = snapshot?.blockers ?? {};
   const loadController = useRef<AbortController | null>(null);
   const [status, setStatus] = useState("pending");
   const [offset, setOffset] = useState(0);
   const [query, setQuery] = useState("");
+  const activeQueue = ["pending", "held"].includes(status);
+  const historySearch = activeQueue ? "" : query;
+  const historyOffset = activeQueue ? 0 : offset;
 
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(true);
@@ -364,13 +377,20 @@ export default function ReviewQueue() {
     const controller = new AbortController();
     if (!isAdmin || !hasBackendConfiguration) return;
     loadController.current = controller;
-    void loadReviewBatches(status, controller.signal).then(result => {
-      if (controller.signal.aborted) return;
-      setSnapshot(result);
+    void (async () => {
+      if (activeQueue) {
+        const result = await loadReviewBatches(status, controller.signal);
+        if (controller.signal.aborted) return;
+        setSnapshot(result);
+      } else {
+        const result = await loadReviewHistory(status, historySearch, historyOffset, controller.signal);
+        if (controller.signal.aborted) return;
+        setHistoryPage(result);
+      }
       setError("");
       setLoading(false);
       setRefreshing(false);
-    }).catch(cause => {
+    })().catch(cause => {
       if (controller.signal.aborted) return;
       setError(cause instanceof Error ? cause.message : typeof cause?.message === "string" ? cause.message : "Unable to load review batches.");
 
@@ -378,7 +398,7 @@ export default function ReviewQueue() {
       setRefreshing(false);
     });
     return () => controller.abort();
-  }, [status, isAdmin, refresh]);
+  }, [status, isAdmin, refresh, activeQueue, historySearch, historyOffset]);
   useEffect(() => {
     const refreshOnReturn = () => { setRefreshing(true); setRefresh(value => value + 1); };
     window.addEventListener("focus", refreshOnReturn);
@@ -389,18 +409,29 @@ export default function ReviewQueue() {
     text: `${divisions[batch.division]} ${batch.scope} ${batch.source_url} ${JSON.stringify(batch.writes)}`.toLowerCase(),
   })), [snapshot]);
   const filteredBatches = useMemo(() => {
+    if (!activeQueue) return historyPage?.batches ?? [];
     const search = query.trim().toLowerCase();
     return searchableBatches.filter(item => !search || item.text.includes(search)).map(item => item.batch);
-  }, [searchableBatches, query]);
+  }, [searchableBatches, query, activeQueue, historyPage]);
   const total = filteredBatches.length;
-  const currentOffset = Math.min(offset, Math.max(0, Math.ceil(total / 20) - 1) * 20);
-  const pageControls = <PageButtons
+  const currentOffset = activeQueue ? Math.min(offset, Math.max(0, Math.ceil(total / 20) - 1) * 20) : 0;
+  function changeHistoryPage(next: number) {
+    setHistoryPage(null);
+    setLoading(true);
+    setOffset(next);
+  }
+  const showPageControls = activeQueue ? total > 20 : offset > 0 || historyPage?.hasMore;
+  const pageControls = activeQueue ? <PageButtons
     page={currentOffset / 20}
     pages={Math.max(1, Math.ceil(total / 20))}
     disabled={loading}
     label="Proposal pages"
     onChange={page => setOffset(page * 20)}
-  />;
+  /> : <nav className={styles.pagination} aria-label="History pages">
+    <button disabled={loading || offset === 0} onClick={() => changeHistoryPage(offset - HISTORY_PAGE_SIZE)}>Previous</button>
+    <span>Page {offset / HISTORY_PAGE_SIZE + 1}</span>
+    <button disabled={loading || !historyPage?.hasMore} onClick={() => changeHistoryPage(offset + HISTORY_PAGE_SIZE)}>Next</button>
+  </nav>;
   async function decide(batch: QueueBatch, decision: string) {
     setBusy(batch.id);
     setError("");
@@ -448,11 +479,16 @@ export default function ReviewQueue() {
         </p>
         <Link href="/tools/review/meets" className={styles.meetLink}>Choose meets to finish importing <span aria-hidden="true">→</span></Link>
         <Link href="/tools/review/results" className={styles.meetLink}>Review flagged results <span aria-hidden="true">→</span></Link>
+        <PrivateRaceBaseline />
       </div>
       <div className={styles.toolbar}>
         <label className={styles.field}>
-          Search batches
-          <input type="search" placeholder="Search batch, meet, swimmer, source or record…" value={query} onChange={event => { setQuery(event.target.value); setOffset(0); }} />
+          {activeQueue ? "Search batches and records" : "Search completed batches"}
+          <input type="search" maxLength={activeQueue ? undefined : 200} placeholder={activeQueue ? "Search batch, meet, swimmer, source or record…" : "Search batch title, division or source…"} value={query} onChange={event => {
+            if (!activeQueue) { setHistoryPage(null); setLoading(true); }
+            setQuery(event.target.value); setOffset(0);
+          }} />
+          {!activeQueue && <span className={styles.muted}>Search records after expanding a batch.</span>}
         </label>
         <label className={styles.field}>
           Status
@@ -462,6 +498,7 @@ export default function ReviewQueue() {
             value={status}
             onChange={(event) => {
               setSnapshot(null);
+              setHistoryPage(null);
               setStatus(event.target.value);
               setOffset(0);
               setLoading(true);
@@ -484,8 +521,8 @@ export default function ReviewQueue() {
         </button>
       </div>
       <div className={styles.resultsHead}>
-        <p className={styles.resultCount}>{total} matching {total === 1 ? "batch" : "batches"}<span>{status === "pending" || status === "held" ? "Prerequisites first; oldest ready batches first." : "Oldest batches first."}</span></p>
-        {total > 20 && pageControls}
+        <p className={styles.resultCount}>{total} {activeQueue ? "matching " : ""}{total === 1 ? "batch" : "batches"}{!activeQueue && " on this page"}<span>{activeQueue ? "Prerequisites first; oldest ready batches first." : "Oldest batches first. More pages are available when Next is enabled."}</span></p>
+        {showPageControls && pageControls}
       </div>
       {refreshing && !loading && <p role="status" className={styles.muted}>Checking for changes…</p>}
       {error && (
@@ -499,10 +536,10 @@ export default function ReviewQueue() {
         <p className={styles.emptyState}>{query.trim() ? "No batches match your search." : `No ${status} proposals.`}</p>
       ) : (
         filteredBatches.slice(currentOffset, currentOffset + 20).map((batch) => {
-          const stats = reviewStats(
+          const stats = hasQueueRecords(batch) ? reviewStats(
             batch.writes as ReviewWrite[],
             batch.reads as ReviewRead[],
-          );
+          ) : null;
           return (
             <article
               key={batch.id}
@@ -519,14 +556,14 @@ export default function ReviewQueue() {
                 Captured {new Date(batch.captured_at).toLocaleString()} ·{" "}
                 {batch.coverage} coverage
               </p>
-              <dl className={styles.stats}>
+              {stats && <dl className={styles.stats}>
                 {[["Records", stats.total], ["Additions", stats.added], ["Updates", stats.updated], ["Removals", stats.removed]].map(([label, count]) => <div key={label}><dt>{label}</dt><dd>{Number(count).toLocaleString()}</dd></div>)}
-              </dl>
+              </dl>}
               {(blockers[batch.id]?.length ?? 0) > 0 && <details className={styles.attention}>
                 <summary className="cursor-pointer font-medium">Waiting for {blockers[batch.id].length} prerequisite {blockers[batch.id].length === 1 ? "record" : "records"} · expand for approval order</summary>
                 <ul className="mt-1 list-disc pl-5 break-words">{blockers[batch.id].map(message => <li key={message}>{message}</li>)}</ul>
               </details>}
-              {["pending", "held"].includes(batch.status) ? (
+              {hasQueueRecords(batch) && ["pending", "held"].includes(batch.status) ? (
                 <>
                   <div className={styles.actions}>
                     {[
@@ -568,18 +605,18 @@ export default function ReviewQueue() {
                     new Date(batch.reviewed_at).toLocaleString()}
                 </p>
               )}
-              {stats.attention > 0 && (
+              {stats && stats.attention > 0 && (
                 <p className={styles.attention}>
                   Needs attention: {stats.issues} {stats.issues === 1 ? "record" : "records"} with gaps / source
                   conflicts · {stats.removed} {stats.removed === 1 ? "removal" : "removals"}
                 </p>
               )}
-              <BatchDetails id={batch.id} />
+              <BatchDetails id={batch.id} showCounts={!activeQueue} />
             </article>
           );
         })
       )}
-      {total > 20 && pageControls}
+      {showPageControls && pageControls}
     </section>
   );
 }

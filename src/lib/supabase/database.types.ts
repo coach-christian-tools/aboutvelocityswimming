@@ -1523,6 +1523,10 @@ export type Database = {
         Returns: Json;
       };
       projection_counts: { Args: Record<PropertyKey, never>; Returns: Json };
+      private_race_baseline_page: {
+        Args: { collection_name?: string; after_id?: string; page_size?: number; expected_revision?: string };
+        Returns: Json;
+      };
       query_records: {
         Args: {
           after_id?: string;

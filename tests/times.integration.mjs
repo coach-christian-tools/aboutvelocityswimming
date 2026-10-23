@@ -82,6 +82,7 @@ for (let i = 0; i < 7; i++)
 function swim(id, athlete, time, extra = {}) {
   const data = {
     id: prefix + id,
+    raceIdentity: { occurrence: "synthetic-" + id, reviewed: true, basis: "Independent synthetic starts for query comparisons", sourceUrl: "https://example.test/fixture-starts" },
     athleteId: prefix + athlete,
     eventCode: "100_FR_SCY",
     course: "SCY",
@@ -167,6 +168,7 @@ const nativeRelays = [];
 function relayResult(id, extra = {}) {
   const data = {
     id: prefix + id,
+    raceIdentity: { occurrence: "synthetic-" + id, reviewed: true, basis: "Independent synthetic starts for query comparisons", sourceUrl: "https://example.test/fixture-starts" },
     eventCode: "200_FR-R_SCY",
     course: "SCY",
     distance: 200,
@@ -984,10 +986,11 @@ try {
         ],
       });
       assert.equal(stale.error?.code, "40001");
-      const relay = { ...dqRelay, id: prefix + "review-relay" };
+      const relay = { ...dqRelay, id: prefix + "review-relay", raceIdentity: { ...dqRelay.raceIdentity, occurrence: "synthetic-review-relay" } };
       const lead = {
         ...races.find((r) => r.id === prefix + "verified-leadoff").data,
         id: prefix + "review-leadoff",
+        raceIdentity: { occurrence: "synthetic-review-leadoff", reviewed: true, basis: "Distinct synthetic relay start", sourceUrl: "https://example.test/fixture-starts" },
         parentRelayResultId: relay.id,
       };
       const reverseWrites = [

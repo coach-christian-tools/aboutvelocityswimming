@@ -2,6 +2,7 @@ export const CALENDAR_ID = "webadmin@velocity-swimming.com";
 export const CALENDAR_URL = "https://calendar.google.com/calendar/u/0?cid=d2ViYWRtaW5AdmVsb2NpdHktc3dpbW1pbmcuY29t";
 export const CALENDAR_FEED = `https://calendar.google.com/calendar/ical/${encodeURIComponent(CALENDAR_ID)}/public/basic.ics`;
 export const CALENDAR_TIME_ZONE = "America/Los_Angeles";
+export const CALENDAR_LOAD_ERROR = "The calendar is temporarily unavailable. Please try again or open Google Calendar.";
 
 export type CalendarEvent = {
   id: string;

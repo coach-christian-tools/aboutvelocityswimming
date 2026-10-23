@@ -92,9 +92,11 @@ def parse_hy3(lines: list[str]) -> dict:
             if entry is None or (code == "E2" and entry["athlete"] is None):
                 raise ValueError(f"HY3 {code} line {number} lacks entry context")
             date_slice = line[87:95] if code == "E2" else line[102:110]
+            status = STATUS.get(line[12])
+            present = bool(line[4:11].strip())
             result = {**entry, "round": line[2], "course": COURSES.get(line[11]),
-                      "status": STATUS.get(line[12]), "sourceFlag": line[12],
-                      "sourceTimeMs": time_ms(line[4:11]), "rawDate": date_slice,
+                      "status": status, "sourceFlag": line[12], "sourceTimePresent": present,
+                      "sourceTimeMs": 0 if not present and status in ("DQ", "NS", "DNF", "DFS") else time_ms(line[4:11]), "rawDate": date_slice,
                       "line": number, "hy3Splits": [], "hy3Members": [], "dqReasons": []}
             try:
                 result["date"] = iso_date(date_slice)

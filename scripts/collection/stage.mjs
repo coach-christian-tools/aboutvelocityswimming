@@ -2,6 +2,7 @@
 import { validateStandard } from "../../src/components/collection/validate-standard.ts";
 import { readFile } from "node:fs/promises";
 import { createClient } from "@supabase/supabase-js";
+import { assertCollectionTarget } from "./target.mjs";
 const path = process.argv[2];
 if (!path)
   throw new Error(
@@ -18,6 +19,7 @@ const content = await readFile(path, "utf8");
 if (Buffer.byteLength(content) > 2_000_000)
   throw new Error("Split collection into batches smaller than 2 MB.");
 const batch = JSON.parse(content);
+assertCollectionTarget(batch, url);
 if (
   !Array.isArray(batch.writes) ||
   batch.writes.length < 1 ||

@@ -1,6 +1,9 @@
+import { syntheticStandard } from "./synthetic-standard.mjs";
+import { validateStandard } from "../../src/components/collection/validate-standard.ts";
 import { createClient } from "@supabase/supabase-js";
 import { execFileSync } from "node:child_process";
 import { writeFileSync } from "node:fs";
+validateStandard(syntheticStandard, "test-standard");
 const local = JSON.parse(
   execFileSync("supabase", ["status", "--output", "json"], {
     encoding: "utf8",
@@ -213,28 +216,7 @@ const { error: standardError } = await client.rpc("collect_records", {
   writes: [
     {
       path: "standards/test-standard",
-      after: {
-        id: "test-standard",
-        category: "motivational",
-        name: "Synthetic test standards",
-        governingBody: "Team",
-        seasonYears: "2026",
-        effectiveDate: "2026-01-01",
-        expirationDate: "2026-12-31",
-        cuts: {
-          SCY: {
-            F: {
-              "13-14": {
-                "100_FR_SCY": {
-                  cutsByTier: [
-                    { tierName: "A", timeMs: 65000, timeDisplay: "1:05.00" },
-                  ],
-                },
-              },
-            },
-          },
-        },
-      },
+      after: syntheticStandard,
     },
   ],
 });

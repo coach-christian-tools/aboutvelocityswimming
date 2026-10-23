@@ -1,5 +1,6 @@
 import test from "node:test";
 import { execFileSync } from "node:child_process";
+import { readFileSync } from "node:fs";
 
 const run = (sql) =>
   execFileSync(
@@ -37,7 +38,7 @@ SELECT private.put_record('athletes/mod-fixture-athlete','{"id":"mod-fixture-ath
 SELECT private.put_record('athletes/mod-fixture-other','{"id":"mod-fixture-other","name":{"first":"Other","last":"Swimmer"},"status":"active","teamId":"mod-fixture-team"}');
 CREATE FUNCTION pg_temp.swim(rid text, athlete text, ms integer, extra jsonb default '{}') RETURNS void LANGUAGE sql AS $$
  SELECT private.put_record('swims/'||rid,jsonb_build_object('id',rid,'athleteId',athlete,'eventCode','100_FR_LCM','course','LCM','distance',100,'stroke','FR',
- 'timeMs',ms,'status','OK','round','F','isOfficial',true,'isRelay',false,'gender','M','ageAtSwim',12,'teamId','mod-fixture-team',
+ 'raceIdentity',jsonb_build_object('occurrence',rid,'reviewed',true,'basis','Independent synthetic moderation starts','sourceUrl','https://example.test/fixture-starts'),'timeMs',ms,'status','OK','round','F','isOfficial',true,'isRelay',false,'gender','M','ageAtSwim',12,'teamId','mod-fixture-team',
  'meet',jsonb_build_object('id','mod-fixture-meet','name','2026 IE PSA Pendleton Open','date','2026-07-04'),'sourceObservation','private-source-marker')||extra); $$;
 SELECT pg_temp.swim('mod-fixture-bad','mod-fixture-athlete',26150);
 SELECT pg_temp.swim('mod-fixture-next','mod-fixture-athlete',60000);
@@ -148,3 +149,59 @@ test("review history survives source deletion and missing results cannot be rest
       PERFORM public.moderate_result('swim','mod-fixture-bad','restore','','Checked source',1);
       RAISE EXCEPTION 'Missing result restored'; EXCEPTION WHEN no_data_found THEN NULL; END; $$;
   `));
+
+
+test("event rebuild preserves legacy historical active ranks, null gender, ties, exclusions, and no-op rows", () => {
+  const legacy = readFileSync("supabase/migrations/20261013225448_result_moderation.sql", "utf8")
+    .match(/create or replace function private\.rebuild_bests\(\)[\s\S]*?end; \$function\$;/i)?.[0]
+    .replace("private.rebuild_bests()", "pg_temp.legacy_rebuild_bests()");
+  if (!legacy) throw new Error("Legacy full rebuild oracle was not found");
+  check(`RESET ROLE;
+    SELECT set_config('velocity.defer_bests','true',true);
+    ${legacy}
+    SELECT private.put_record('athletes/mod-fixture-inactive','{"id":"mod-fixture-inactive","name":{"first":"Inactive","last":"Fixture"},"status":"inactive"}');
+    SELECT private.put_record('athletes/mod-fixture-null-a','{"id":"mod-fixture-null-a","name":{"first":"Null A","last":"Fixture"},"status":"active"}');
+    SELECT private.put_record('athletes/mod-fixture-null-b','{"id":"mod-fixture-null-b","name":{"first":"Null B","last":"Fixture"},"status":"active"}');
+    SELECT pg_temp.swim('mod-fixture-female-history','mod-fixture-athlete',40000,'{"gender":"F"}');
+    SELECT pg_temp.swim('mod-fixture-female-history-tie','mod-fixture-athlete',40000,'{"gender":"F"}');
+    SELECT pg_temp.swim('mod-fixture-female-target','mod-fixture-other',50000,'{"gender":"F"}');
+    SELECT pg_temp.swim('mod-fixture-inactive-fast','mod-fixture-inactive',20000,'{"gender":"F"}');
+    SELECT pg_temp.swim('mod-fixture-null-a','mod-fixture-null-a',45000,'{"gender":null}');
+    SELECT pg_temp.swim('mod-fixture-null-b','mod-fixture-null-b',55000,'{"gender":null}');
+    SELECT pg_temp.swim('mod-fixture-dq','mod-fixture-other',11000,'{"status":"DQ","gender":"F"}');
+    SELECT pg_temp.swim('mod-fixture-unofficial','mod-fixture-other',12000,'{"isOfficial":false,"gender":"F"}');
+    SELECT pg_temp.swim('mod-fixture-relay-split','mod-fixture-other',13000,'{"isRelaySplit":true,"gender":"F"}');
+    SELECT pg_temp.swim('mod-fixture-flagged','mod-fixture-other',14000,'{"gender":"F"}');
+    INSERT INTO public.result_moderation(result_type,result_id,flagged,version) VALUES
+      ('swim','mod-fixture-flagged',true,1),('relay','mod-fixture-relay',true,1);
+    SELECT pg_temp.legacy_rebuild_bests();
+    CREATE TEMP TABLE expected_full_bests AS SELECT athlete_id,event_code,data FROM public.athlete_bests;
+    DELETE FROM public.athlete_bests;
+    INSERT INTO public.athlete_bests(athlete_id,event_code,data) VALUES
+      ('mod-fixture-other','100_FR_LCM','{"wrong":true}'),
+      ('mod-fixture-other','50_FR_LCM','{"stale":true}');
+    SELECT private.rebuild_bests_for_events(array(select distinct event_code from public.swims));
+    SELECT pg_temp.check_ok(NOT EXISTS(
+      (SELECT athlete_id,event_code,data FROM expected_full_bests EXCEPT SELECT athlete_id,event_code,data FROM public.athlete_bests)
+      UNION ALL
+      (SELECT athlete_id,event_code,data FROM public.athlete_bests EXCEPT SELECT athlete_id,event_code,data FROM expected_full_bests)
+    ),'full rebuild changed legacy output');
+    SELECT pg_temp.check_ok((SELECT data->>'clubRankActiveRoster'='2' FROM public.athlete_bests WHERE athlete_id='mod-fixture-other' AND event_code='100_FR_LCM'),'historical gender minimum must count once');
+    SELECT pg_temp.check_ok((SELECT bool_and(data->>'clubRankActiveRoster'='1') FROM public.athlete_bests WHERE athlete_id IN ('mod-fixture-null-a','mod-fixture-null-b')),'null gender keeps SQL equality semantics');
+    CREATE TEMP TABLE unchanged_full_bests AS SELECT athlete_id,event_code,ctid AS row_tid FROM public.athlete_bests;
+    SELECT private.rebuild_bests_for_events(array(select distinct event_code from public.swims));
+    SELECT pg_temp.check_ok(NOT EXISTS(SELECT 1 FROM unchanged_full_bests x LEFT JOIN public.athlete_bests b USING(athlete_id,event_code) WHERE b.ctid IS DISTINCT FROM x.row_tid),'no-op rebuild rewrote rows');
+    UPDATE public.swims SET data=jsonb_set(data,'{status}','"DQ"') WHERE id LIKE 'mod-fixture-%' AND coalesce(data->>'resultOrigin','')<>'relay_leadoff';
+    SELECT pg_temp.legacy_rebuild_bests();
+    DELETE FROM expected_full_bests;
+    INSERT INTO expected_full_bests SELECT athlete_id,event_code,data FROM public.athlete_bests;
+    INSERT INTO public.athlete_bests(athlete_id,event_code,data) VALUES ('mod-fixture-other','100_FR_LCM','{"stale":true}');
+    SELECT private.rebuild_bests_for_events(array(select distinct event_code from public.swims));
+    SELECT pg_temp.check_ok(NOT EXISTS(
+      (SELECT athlete_id,event_code,data FROM expected_full_bests EXCEPT SELECT athlete_id,event_code,data FROM public.athlete_bests)
+      UNION ALL
+      (SELECT athlete_id,event_code,data FROM public.athlete_bests EXCEPT SELECT athlete_id,event_code,data FROM expected_full_bests)
+    ),'full rebuild cleanup changed legacy output');
+    SELECT pg_temp.check_ok(NOT EXISTS(SELECT 1 FROM public.athlete_bests WHERE athlete_id LIKE 'mod-fixture-%'),'full rebuild retained ineligible fixture PBs');
+  `);
+});

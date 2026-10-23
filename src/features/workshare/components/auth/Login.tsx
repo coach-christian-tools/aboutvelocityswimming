@@ -5,6 +5,7 @@ import { browserClient } from "@/lib/supabase/client"
 import { useRouter } from "next/navigation"
 import { auth } from "../../lib/backend"
 import { useAuth } from "../../contexts/auth"
+import { isToolsAdmin } from "@/lib/tools-access"
 import { Button } from "../ui/Button"
 import { Input } from "../ui/Input"
 import { Card } from "../ui/Card"
@@ -24,11 +25,11 @@ export function Login() {
   const [countdown, setCountdown] = useState(0)
 
   const otpInputRef = useRef<HTMLInputElement>(null)
-  const { user, loading: authLoading } = useAuth()
+  const { user, loading: authLoading, logout } = useAuth()
   const router = useRouter()
 
   useEffect(() => {
-    if (user && !authLoading) {
+    if (!authLoading && isToolsAdmin(user?.email, user?.emailVerified === true)) {
       router.replace("/tools")
     }
   }, [user, authLoading, router])
@@ -147,6 +148,16 @@ export function Login() {
           <p className="text-xs text-slate-500 text-center mb-6">
             {step === "code" ? "Check your email for the 8-digit code" : "Instant passwordless sign-in with your email"}
           </p>
+
+          <p className="text-sm text-center mb-5">Tools are temporarily restricted to the administrator account.</p>
+          {user && !authLoading && !isToolsAdmin(user.email, user.emailVerified) && (
+            <div className="text-sm text-center mb-5 space-y-2" role="status">
+              <p>This account does not have access to the tools.</p>
+              <button type="button" className="underline" onClick={async () => {
+                try { await logout() } catch { setError("Could not sign out. Please try again.") }
+              }}>Sign out to switch accounts</button>
+            </div>
+          )}
 
           {error && (
             <div role="alert" className="p-3.5 mb-5 text-sm font-medium text-red-600 bg-red-50 border border-red-200 rounded-xl">

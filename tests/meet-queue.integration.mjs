@@ -81,8 +81,12 @@ try {
     visit(plan);
     assert.ok(scans.length >= 2, "Explain both full-catalog progress existence and paginated swim counts");
     for (const scan of scans) {
-      assert.equal(scan["Index Name"], "swims_meet_id_idx");
-      assert.match(scan["Index Cond"] ?? "", /meet_id = .*canonical_meet_id/,
+      // PostgreSQL may choose a bitmap heap/index pair as fixture statistics
+      // change. Check the underlying index condition in either valid plan.
+      const index = scan["Node Type"] === "Bitmap Heap Scan"
+        ? scan.Plans?.find(node => node["Node Type"] === "Bitmap Index Scan") : scan;
+      assert.equal(index?.["Index Name"], "swims_meet_id_idx", JSON.stringify(scan));
+      assert.match(index?.["Index Cond"] ?? "", /meet_id = .*canonical_meet_id/,
         "The meet key must restrict the index, rather than filter a complete swim scan");
       assert.match(scan.Filter ?? "", /private\.is_staff\(\)/, "The existing swim RLS check remains active");
     }

@@ -5,9 +5,19 @@ function text(value: ical.ParameterValue | undefined): string {
   return typeof value === "string" ? value : value?.val ?? "";
 }
 
+async function readCalendar(source: string) {
+  if (!source.trimStart().startsWith("BEGIN:VCALENDAR") || !source.trimEnd().endsWith("END:VCALENDAR")) {
+    throw new Error("Invalid calendar response");
+  }
+  return ical.async.parseICS(source);
+}
+
+export async function validateCalendar(source: string): Promise<void> {
+  await readCalendar(source);
+}
+
 export async function parseCalendar(source: string, from: Date, to: Date): Promise<CalendarEvent[]> {
-  if (!source.trimStart().startsWith("BEGIN:VCALENDAR")) throw new Error("Invalid calendar response");
-  const calendar = await ical.async.parseICS(source);
+  const calendar = await readCalendar(source);
   const events = new Map<string, CalendarEvent>();
   for (const event of Object.values(calendar)) {
     if (event?.type !== "VEVENT" || event.status === "CANCELLED") continue;

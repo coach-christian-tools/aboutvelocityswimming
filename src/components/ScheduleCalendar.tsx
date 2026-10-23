@@ -30,17 +30,27 @@ function groupByStart(events: CalendarEvent[]): CalendarEvent[][] {
   return [...groups.values()];
 }
 
-export default function ScheduleCalendar({ initialMonth, today }: { initialMonth: string; today: string }) {
+export default function ScheduleCalendar({ initialMonth, today, initialEvents, initialError }: {
+  initialMonth: string;
+  today: string;
+  initialEvents: CalendarEvent[];
+  initialError?: string;
+}) {
   const [month, setMonth] = useState(initialMonth);
   const [view, setView] = useState<"month" | "agenda">("month");
   const [selectedDay, setSelectedDay] = useState<string | null>(null);
   const [search, setSearch] = useState("");
-  const [result, setResult] = useState<{ month: string; events: CalendarEvent[]; error?: string } | null>(null);
+  const [result, setResult] = useState<{ month: string; events: CalendarEvent[]; error?: string } | null>(() => ({ month: initialMonth, events: initialEvents, error: initialError }));
   const [attempt, setAttempt] = useState(0);
   const [selected, setSelected] = useState<CalendarEvent | null>(null);
   const dialog = useRef<HTMLDialogElement>(null);
+  const hasRequested = useRef(false);
 
   useEffect(() => {
+    // The initial month (including its error state) was already loaded by the
+    // server. Only navigation or an explicit retry needs a browser request.
+    if (month !== initialMonth || attempt > 0) hasRequested.current = true;
+    if (!hasRequested.current) return;
     const controller = new AbortController();
     async function load() {
       try {
@@ -54,7 +64,7 @@ export default function ScheduleCalendar({ initialMonth, today }: { initialMonth
     }
     void load();
     return () => controller.abort();
-  }, [month, attempt]);
+  }, [month, attempt, initialMonth]);
 
   useEffect(() => {
     if (selected) dialog.current?.showModal();

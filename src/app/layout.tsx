@@ -5,6 +5,7 @@ import { AuthProvider } from "@/features/workshare/contexts/AuthContext";
 import SiteAccount from "@/components/shared/SiteAccount";
 import Header from "@/components/Header";
 import NavigationScroll from "@/components/NavigationScroll";
+import ToolsAccessGate from "@/components/shared/ToolsAccessGate";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -137,7 +138,7 @@ export default function RootLayout({
         <AuthProvider>
           <Header />
           <SiteAccount />
-          {children}
+          <ToolsAccessGate>{children}</ToolsAccessGate>
         </AuthProvider>
       </body>
     </html>

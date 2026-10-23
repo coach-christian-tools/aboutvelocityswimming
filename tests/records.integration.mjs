@@ -69,7 +69,7 @@ INSERT INTO public.athlete_bests(athlete_id,event_code,data) VALUES
 INSERT INTO public.evidence_records(path,data) VALUES (${quote(`athletes/test-swimmer-a/bests/${scope}-a`)},jsonb_build_object('testScope',${quote(scope)},'bestTimeMs',51000));
 INSERT INTO public.relay_results(id,data) VALUES (${quote(`${scope}-relay`)},jsonb_build_object(
   'id',${quote(`${scope}-relay`)},'course','SCY','gender','X','eventCode','200_FR-R_SCY','stroke','FR','round','F',
-  'relayName','Synthetic Query Relay','teamId','velocity-swimming','meet',jsonb_build_object('id',(SELECT id FROM public.meets ORDER BY id LIMIT 1)),
+  'relayName','Synthetic Query Relay','teamId','velocity-swimming','meet',jsonb_build_object('id',(SELECT id FROM public.meets ORDER BY id LIMIT 1),'date','2001-01-01'),
   'status','OK','timeMs',120000,'isOfficial',false,'distance',200,'members','[]'::jsonb,'splitCoverage','unavailable'));
 `;
 const scoped = JSON.stringify([{ field: "testScope", op: "==", value: scope }]);

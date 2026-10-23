@@ -10,15 +10,16 @@ import type { ReviewWrite } from "./review-summary";
 export type QueueBatch =
   Database["public"]["Views"]["collection_batch_queue"]["Row"];
 export async function loadReviewBatches(status: string, signal: AbortSignal) {
+  if (!["pending", "held"].includes(status))
+    throw new Error("Completed batches must use the paged history loader.");
   const client = browserClient();
-  const active = ["pending", "held"].includes(status);
   const batches: QueueBatch[] = [];
   // Sort and search across the entire queue, not just the current screen.
   for (let offset = 0; ; offset += 100) {
     const { data, error } = await client
       .from("collection_batch_queue")
       .select("*")
-      .in("status", active ? ["pending", "held"] : [status])
+      .in("status", ["pending", "held"])
       .order("received_at", { ascending: true })
       .order("id")
       .range(offset, offset + 99)
@@ -27,13 +28,6 @@ export async function loadReviewBatches(status: string, signal: AbortSignal) {
     batches.push(...(data ?? []));
     if (!data || data.length < 100) break;
   }
-  if (!active)
-    return {
-      batches,
-      blockers: {} as Record<string, string[]>,
-      sourceBatches: batches,
-      existing: new Set<string>(),
-    };
   const refs = new Set(
     batches.flatMap((batch) =>
       (batch.writes as ReviewWrite[]).flatMap(recordDependencies),
