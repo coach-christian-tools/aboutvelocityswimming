@@ -1,0 +1,340 @@
+{
+  "asOf": "2026-10-27",
+  "rows": [
+    {
+      "date": "2026-02-28",
+      "meet": "2026 IE Inland Empire Swimming Short Course Championships",
+      "course": "SCY",
+      "cut_ms": 54420,
+      "swim_id": "hytek_result_09a8ff4847554051159b6c20",
+      "time_ms": 52720,
+      "last_name": "Hobson",
+      "athlete_id": "swimcloud_2867460",
+      "event_code": "100_BK_SCY",
+      "first_name": "Sam",
+      "source_url": "https://www.gomotionapp.com/wzielsc/__eventform__/1532088_9ea81450-b329-4e8f-87cd-0aee7f7ac8fd.zip",
+      "cut_display": "54.42"
+    },
+    {
+      "date": "2026-02-28",
+      "meet": "2026 IE Inland Empire Swimming Short Course Championships",
+      "course": "SCY",
+      "cut_ms": 53460,
+      "swim_id": "hytek_result_fc6a21b5944fb54055dc5ef6",
+      "time_ms": 53160,
+      "last_name": "Hobson",
+      "athlete_id": "swimcloud_2867460",
+      "event_code": "100_FL_SCY",
+      "first_name": "Sam",
+      "source_url": "https://www.gomotionapp.com/wzielsc/__eventform__/1532088_9ea81450-b329-4e8f-87cd-0aee7f7ac8fd.zip",
+      "cut_display": "53.46"
+    },
+    {
+      "date": "2026-03-01",
+      "meet": "2026 IE Inland Empire Swimming Short Course Championships",
+      "course": "SCY",
+      "cut_ms": 48460,
+      "swim_id": "hytek_result_2493fc72a756edbd366a615c",
+      "time_ms": 46270,
+      "last_name": "Hobson",
+      "athlete_id": "swimcloud_2867460",
+      "event_code": "100_FR_SCY",
+      "first_name": "Sam",
+      "source_url": "https://www.gomotionapp.com/wzielsc/__eventform__/1532088_9ea81450-b329-4e8f-87cd-0aee7f7ac8fd.zip",
+      "cut_display": "48.46"
+    },
+    {
+      "date": "2026-07-24",
+      "meet": "2026 IE Inland Empire Swimming Long Course Championships",
+      "course": "LCM",
+      "cut_ms": 25790,
+      "swim_id": "hytek_result_8d489406b62ca17dadec2c4c",
+      "time_ms": 23910,
+      "last_name": "Hobson",
+      "athlete_id": "swimcloud_2867460",
+      "event_code": "50_FR_LCM",
+      "first_name": "Sam",
+      "source_url": "https://www.gomotionapp.com/wzielsc/__eventform__/1585752_a95b82a5-031e-4b7f-91b3-8d7984afd9d7.zip",
+      "cut_display": "25.79"
+    },
+    {
+      "date": "2026-02-27",
+      "meet": "2026 IE Inland Empire Swimming Short Course Championships",
+      "course": "SCY",
+      "cut_ms": 22410,
+      "swim_id": "hytek_result_a8d5ab51d2df4b2860b852af",
+      "time_ms": 21150,
+      "last_name": "Hobson",
+      "athlete_id": "swimcloud_2867460",
+      "event_code": "50_FR_SCY",
+      "first_name": "Sam",
+      "source_url": "https://www.gomotionapp.com/wzielsc/__eventform__/1532088_9ea81450-b329-4e8f-87cd-0aee7f7ac8fd.zip",
+      "cut_display": "22.41"
+    },
+    {
+      "date": "2026-07-28",
+      "meet": "Western Zone Senior Championship",
+      "course": "LCM",
+      "cut_ms": 140400,
+      "swim_id": "result_swimcloud_183094605",
+      "time_ms": 136710,
+      "last_name": "Stiles",
+      "athlete_id": "swimcloud_3634257",
+      "event_code": "200_BK_LCM",
+      "first_name": "Ole",
+      "source_url": "https://www.swimcloud.com/times/183094605/",
+      "cut_display": "2:20.40"
+    },
+    {
+      "date": "2026-02-27",
+      "meet": "IES Short Course Championships",
+      "course": "SCY",
+      "cut_ms": 118450,
+      "swim_id": "result_swimcloud_172554861",
+      "time_ms": 116950,
+      "last_name": "Stiles",
+      "athlete_id": "swimcloud_3634257",
+      "event_code": "200_BK_SCY",
+      "first_name": "Ole",
+      "source_url": "https://www.swimcloud.com/times/172554861/",
+      "cut_display": "1:58.45"
+    },
+    {
+      "date": "2026-07-24",
+      "meet": "2026 IE Inland Empire Swimming Long Course Championships",
+      "course": "LCM",
+      "cut_ms": 25790,
+      "swim_id": "hytek_result_ef758d3e4c0573a85f60935d",
+      "time_ms": 25300,
+      "last_name": "Stiles",
+      "athlete_id": "swimcloud_3634257",
+      "event_code": "50_FR_LCM",
+      "first_name": "Ole",
+      "source_url": "https://www.gomotionapp.com/wzielsc/__eventform__/1585752_a95b82a5-031e-4b7f-91b3-8d7984afd9d7.zip",
+      "cut_display": "25.79"
+    },
+    {
+      "date": "2026-07-24",
+      "meet": "2026 IE Inland Empire Swimming Long Course Championships",
+      "course": "LCM",
+      "cut_ms": 25790,
+      "swim_id": "hytek_result_1819f1d7d045939094b04bee",
+      "time_ms": 25470,
+      "last_name": "Sullivan",
+      "athlete_id": "hytek_ath_ee9d794d14cfaed1d0919d83",
+      "event_code": "50_FR_LCM",
+      "first_name": "Liam",
+      "source_url": "https://www.gomotionapp.com/wzielsc/__eventform__/1585752_a95b82a5-031e-4b7f-91b3-8d7984afd9d7.zip",
+      "cut_display": "25.79"
+    },
+    {
+      "date": "2026-07-24",
+      "meet": "2026 IE Inland Empire Swimming Long Course Championships",
+      "course": "LCM",
+      "cut_ms": 80460,
+      "swim_id": "hytek_result_e3be5fadbe0a0f22555086ce",
+      "time_ms": 76860,
+      "last_name": "Sullivan",
+      "athlete_id": "hytek_ath_b496a9332ec5e8d5117f7c1f",
+      "event_code": "100_BR_LCM",
+      "first_name": "Sadie",
+      "source_url": "https://www.gomotionapp.com/wzielsc/__eventform__/1585752_a95b82a5-031e-4b7f-91b3-8d7984afd9d7.zip",
+      "cut_display": "1:20.46"
+    },
+    {
+      "date": "2026-02-27",
+      "meet": "2026 IE Inland Empire Swimming Short Course Championships",
+      "course": "SCY",
+      "cut_ms": 68460,
+      "swim_id": "hytek_result_d2d9e16b6c83f5bb303dbe2b",
+      "time_ms": 67960,
+      "last_name": "Sullivan",
+      "athlete_id": "hytek_ath_b496a9332ec5e8d5117f7c1f",
+      "event_code": "100_BR_SCY",
+      "first_name": "Sadie",
+      "source_url": "https://www.gomotionapp.com/wzielsc/__eventform__/1532088_9ea81450-b329-4e8f-87cd-0aee7f7ac8fd.zip",
+      "cut_display": "1:08.46"
+    },
+    {
+      "athlete_id": "hytek_ath_f018f54f7d04faa44eb108c1",
+      "first_name": "Brian",
+      "last_name": "Vargas",
+      "event_code": "100_FL_LCM",
+      "course": "LCM",
+      "time_ms": 59980,
+      "cut_ms": 60970,
+      "cut_display": "1:00.97",
+      "swim_id": null,
+      "external_result_id": "183094934",
+      "date": null,
+      "date_display": "Jul 28–Aug 1, 2026",
+      "meet_start_date": "2026-07-28",
+      "meet_end_date": "2026-08-01",
+      "meet": "Western Zone Senior Championship",
+      "source_url": "https://www.swimcloud.com/times/183094934/",
+      "source_status": "verified-external-not-imported",
+      "source_note": "Verified Swimcloud event result; exact race day not provided by the retrieved page. Meet date range is shown."
+    },
+    {
+      "athlete_id": "hytek_ath_f018f54f7d04faa44eb108c1",
+      "first_name": "Brian",
+      "last_name": "Vargas",
+      "event_code": "1000_FR_SCY",
+      "course": "SCY",
+      "time_ms": 605010,
+      "cut_ms": 610580,
+      "cut_display": "10:10.58",
+      "swim_id": null,
+      "external_result_id": "166144730",
+      "date": null,
+      "date_display": "Dec 18–21, 2025",
+      "meet_start_date": "2025-12-18",
+      "meet_end_date": "2025-12-21",
+      "meet": "Washington State Senior SCY Championships",
+      "source_url": "https://www.swimcloud.com/times/166144730/",
+      "source_status": "verified-external-not-imported",
+      "source_note": "Intermediate split from the 1650; both distance events also qualify using the full 1650 result and reciprocal distance rule."
+    },
+    {
+      "athlete_id": "hytek_ath_f018f54f7d04faa44eb108c1",
+      "first_name": "Brian",
+      "last_name": "Vargas",
+      "event_code": "1650_FR_SCY",
+      "course": "SCY",
+      "time_ms": 1003240,
+      "cut_ms": 1033160,
+      "cut_display": "17:13.16",
+      "swim_id": null,
+      "external_result_id": "166141750",
+      "date": null,
+      "date_display": "Dec 18–21, 2025",
+      "meet_start_date": "2025-12-18",
+      "meet_end_date": "2025-12-21",
+      "meet": "Washington State Senior SCY Championships",
+      "source_url": "https://www.swimcloud.com/times/166141750/",
+      "source_status": "verified-external-not-imported",
+      "source_note": "Verified Swimcloud event result; exact race day not provided by the retrieved page. Meet date range is shown."
+    },
+    {
+      "athlete_id": "hytek_ath_f018f54f7d04faa44eb108c1",
+      "first_name": "Brian",
+      "last_name": "Vargas",
+      "event_code": "500_FR_SCY",
+      "course": "SCY",
+      "time_ms": 288050,
+      "cut_ms": 289980,
+      "cut_display": "4:49.98",
+      "swim_id": null,
+      "external_result_id": "168356917",
+      "date": null,
+      "date_display": "Jan 15–18, 2026",
+      "meet_start_date": "2026-01-15",
+      "meet_end_date": "2026-01-18",
+      "meet": "PN VAST 49th Annual Washington Open",
+      "source_url": "https://www.swimcloud.com/times/168356917/",
+      "source_status": "verified-external-not-imported",
+      "source_note": "Verified Swimcloud event result; exact race day not provided by the retrieved page. Meet date range is shown."
+    },
+    {
+      "athlete_id": "hytek_ath_f018f54f7d04faa44eb108c1",
+      "first_name": "Brian",
+      "last_name": "Vargas",
+      "event_code": "800_FR_LCM",
+      "course": "LCM",
+      "time_ms": 543110,
+      "cut_ms": 559510,
+      "cut_display": "9:19.51",
+      "swim_id": null,
+      "external_result_id": "183097682",
+      "date": null,
+      "date_display": "Jul 28–Aug 1, 2026",
+      "meet_start_date": "2026-07-28",
+      "meet_end_date": "2026-08-01",
+      "meet": "Western Zone Senior Championship",
+      "source_url": "https://www.swimcloud.com/times/183097682/",
+      "source_status": "verified-external-not-imported",
+      "source_note": "Verified Swimcloud event result; exact race day not provided by the retrieved page. Meet date range is shown."
+    }
+  ],
+  "relayCuts": [
+    {
+      "id": "hytek_relay_9290c07134bd1711310801c7",
+      "cut": "1:46.89",
+      "date": "2026-07-25",
+      "time": "1:42.09",
+      "event": "200_FR-R_LCM"
+    },
+    {
+      "id": "hytek_relay_a95c7b0c7cdcedcd81cc605e",
+      "cut": "1:59.69",
+      "date": "2026-07-24",
+      "time": "1:59.59",
+      "event": "200_MED-R_LCM"
+    },
+    {
+      "id": "hytek_relay_6452a7cd6471beb1fec6c511",
+      "cut": "1:44.69",
+      "date": "2026-03-01",
+      "time": "1:44.44",
+      "event": "200_FR-R_SCY"
+    },
+    {
+      "id": "hytek_relay_226e54fc6725478f85219640",
+      "cut": "1:56.29",
+      "date": "2026-02-28",
+      "time": "1:54.63",
+      "event": "200_MED-R_SCY"
+    },
+    {
+      "id": "hytek_relay_660a21cdfe92ed6260b34dec",
+      "cut": "1:32.99",
+      "date": "2026-03-01",
+      "time": "1:29.55",
+      "event": "200_FR-R_SCY"
+    },
+    {
+      "id": "hytek_relay_77c62e7cfdd881c7ac4b51b1",
+      "cut": "1:44.69",
+      "date": "2026-02-28",
+      "time": "1:42.74",
+      "event": "200_MED-R_SCY"
+    }
+  ],
+  "rosterCount": 87,
+  "qualifyingStart": "2025-12-01",
+  "withEligibleTimes": 81,
+  "qualifyingRegularDeadline": "2027-03-10T23:59:00-08:00",
+  "rosterWithoutEligibleTimes": [
+    {
+      "id": "hytek_ath_1d84438931dba5e64df3a012",
+      "name": "Sam Anger"
+    },
+    {
+      "id": "hytek_ath_6af47834b63cbb91d13ac435",
+      "name": "Fiona Huber"
+    },
+    {
+      "id": "hytek_ath_874c8091eb7ebd24b73be36e",
+      "name": "Audrey Huber"
+    },
+    {
+      "id": "hytek_ath_a05a0376a8bcaf11c9062c51",
+      "name": "Hunter Krahenbuhl"
+    },
+    {
+      "id": "hytek_ath_d664b6dd723f542e36be3857",
+      "name": "Sawyer Smith"
+    },
+    {
+      "id": "hytek_ath_f490b97f5439031c1c39c68a",
+      "name": "Henry Hill"
+    }
+  ],
+  "externalSupplement": {
+    "athleteId": "hytek_ath_f018f54f7d04faa44eb108c1",
+    "name": "Brian Vargas",
+    "verifiedAt": "2026-10-27T15:31:14.526Z",
+    "sources": "brian-vargas-source-evidence.json",
+    "note": "Adds verified public source results missing from the database. Canonical race records have not been imported by this report correction."
+  }
+}

@@ -1,0 +1,276 @@
+[
+  {
+    "id": "hytek_relay_6452a7cd6471beb1fec6c511",
+    "gender": "F",
+    "event": "200_FR-R_SCY",
+    "time": "1:44.44",
+    "members": [
+      {
+        "leg": 1,
+        "name": "Marieka Campbell",
+        "gender": "F",
+        "stroke": "FR",
+        "timeMs": 26440,
+        "athleteId": "hytek_ath_09ae43f11d9a4082f8cfbda3",
+        "leadOffEligible": false
+      },
+      {
+        "leg": 2,
+        "name": "Aurelia Ribellia",
+        "gender": "F",
+        "stroke": "FR",
+        "timeMs": 25810,
+        "athleteId": "hytek_ath_9b913fba0e33b6b0f4716f51",
+        "leadOffEligible": false
+      },
+      {
+        "leg": 3,
+        "name": "Sadie Sullivan",
+        "gender": "F",
+        "stroke": "FR",
+        "timeMs": 26380,
+        "athleteId": "hytek_ath_b496a9332ec5e8d5117f7c1f",
+        "leadOffEligible": false
+      },
+      {
+        "leg": 4,
+        "name": "Lindsay Sutton",
+        "gender": "F",
+        "stroke": "FR",
+        "timeMs": 25810,
+        "athleteId": "hytek_ath_c4295cab986a0b1eb164ed20",
+        "leadOffEligible": false
+      }
+    ],
+    "lineup_coverage": "complete",
+    "meet": "2026 IE Inland Empire Swimming Short Course Championships",
+    "date": "2026-03-01"
+  },
+  {
+    "id": "hytek_relay_226e54fc6725478f85219640",
+    "gender": "F",
+    "event": "200_MED-R_SCY",
+    "time": "1:54.63",
+    "members": [
+      {
+        "leg": 1,
+        "name": "Lindsay Sutton",
+        "gender": "F",
+        "stroke": "BK",
+        "timeMs": 29270,
+        "athleteId": "hytek_ath_c4295cab986a0b1eb164ed20",
+        "leadOffEligible": true
+      },
+      {
+        "leg": 2,
+        "name": "Marieka Campbell",
+        "gender": "F",
+        "stroke": "BR",
+        "timeMs": 31860,
+        "athleteId": "hytek_ath_09ae43f11d9a4082f8cfbda3",
+        "leadOffEligible": false
+      },
+      {
+        "leg": 3,
+        "name": "Sadie Sullivan",
+        "gender": "F",
+        "stroke": "FL",
+        "timeMs": 27920,
+        "athleteId": "hytek_ath_b496a9332ec5e8d5117f7c1f",
+        "leadOffEligible": false
+      },
+      {
+        "leg": 4,
+        "name": "Aurelia Ribellia",
+        "gender": "F",
+        "stroke": "FR",
+        "timeMs": 25580,
+        "athleteId": "hytek_ath_9b913fba0e33b6b0f4716f51",
+        "leadOffEligible": false
+      }
+    ],
+    "lineup_coverage": "complete",
+    "meet": "2026 IE Inland Empire Swimming Short Course Championships",
+    "date": "2026-02-28"
+  },
+  {
+    "id": "hytek_relay_9290c07134bd1711310801c7",
+    "gender": "M",
+    "event": "200_FR-R_LCM",
+    "time": "1:42.09",
+    "members": [
+      {
+        "leg": 1,
+        "name": "Brian Vargas",
+        "gender": "M",
+        "stroke": "FR",
+        "athleteId": "hytek_ath_f018f54f7d04faa44eb108c1",
+        "leadOffEligible": false
+      },
+      {
+        "leg": 2,
+        "name": "Liam Sullivan",
+        "gender": "M",
+        "stroke": "FR",
+        "athleteId": "hytek_ath_ee9d794d14cfaed1d0919d83",
+        "leadOffEligible": false
+      },
+      {
+        "leg": 3,
+        "name": "Noah Doiron",
+        "gender": "M",
+        "stroke": "FR",
+        "athleteId": "swimcloud_3335149",
+        "leadOffEligible": false
+      },
+      {
+        "leg": 4,
+        "name": "Sam Hobson",
+        "gender": "M",
+        "stroke": "FR",
+        "athleteId": "swimcloud_2867460",
+        "leadOffEligible": false
+      }
+    ],
+    "lineup_coverage": "complete",
+    "meet": "2026 IE Inland Empire Swimming Long Course Championships",
+    "date": "2026-07-25"
+  },
+  {
+    "id": "hytek_relay_660a21cdfe92ed6260b34dec",
+    "gender": "M",
+    "event": "200_FR-R_SCY",
+    "time": "1:29.55",
+    "members": [
+      {
+        "leg": 1,
+        "name": "Liam Sullivan",
+        "gender": "M",
+        "stroke": "FR",
+        "timeMs": 23350,
+        "athleteId": "hytek_ath_ee9d794d14cfaed1d0919d83",
+        "leadOffEligible": false
+      },
+      {
+        "leg": 2,
+        "name": "Brian Vargas",
+        "gender": "M",
+        "stroke": "FR",
+        "timeMs": 22660,
+        "athleteId": "hytek_ath_f018f54f7d04faa44eb108c1",
+        "leadOffEligible": false
+      },
+      {
+        "leg": 3,
+        "name": "Noah Doiron",
+        "gender": "M",
+        "stroke": "FR",
+        "timeMs": 22840,
+        "athleteId": "swimcloud_3335149",
+        "leadOffEligible": false
+      },
+      {
+        "leg": 4,
+        "name": "Sam Hobson",
+        "gender": "M",
+        "stroke": "FR",
+        "timeMs": 20700,
+        "athleteId": "swimcloud_2867460",
+        "leadOffEligible": false
+      }
+    ],
+    "lineup_coverage": "complete",
+    "meet": "2026 IE Inland Empire Swimming Short Course Championships",
+    "date": "2026-03-01"
+  },
+  {
+    "id": "hytek_relay_a95c7b0c7cdcedcd81cc605e",
+    "gender": "M",
+    "event": "200_MED-R_LCM",
+    "time": "1:59.59",
+    "members": [
+      {
+        "leg": 1,
+        "name": "Sam Hobson",
+        "gender": "M",
+        "stroke": "BK",
+        "athleteId": "swimcloud_2867460",
+        "leadOffEligible": false
+      },
+      {
+        "leg": 2,
+        "name": "Gavin Brown",
+        "gender": "M",
+        "stroke": "BR",
+        "athleteId": "hytek_ath_0dfb40f01083eef05c07e773",
+        "leadOffEligible": false
+      },
+      {
+        "leg": 3,
+        "name": "Brian Vargas",
+        "gender": "M",
+        "stroke": "FL",
+        "athleteId": "hytek_ath_f018f54f7d04faa44eb108c1",
+        "leadOffEligible": false
+      },
+      {
+        "leg": 4,
+        "name": "Liam Sullivan",
+        "gender": "M",
+        "stroke": "FR",
+        "athleteId": "hytek_ath_ee9d794d14cfaed1d0919d83",
+        "leadOffEligible": false
+      }
+    ],
+    "lineup_coverage": "complete",
+    "meet": "2026 IE Inland Empire Swimming Long Course Championships",
+    "date": "2026-07-24"
+  },
+  {
+    "id": "hytek_relay_77c62e7cfdd881c7ac4b51b1",
+    "gender": "M",
+    "event": "200_MED-R_SCY",
+    "time": "1:42.74",
+    "members": [
+      {
+        "leg": 1,
+        "name": "Sam Hobson",
+        "gender": "M",
+        "stroke": "BK",
+        "timeMs": 25330,
+        "athleteId": "swimcloud_2867460",
+        "leadOffEligible": true
+      },
+      {
+        "leg": 2,
+        "name": "Gavin Brown",
+        "gender": "M",
+        "stroke": "BR",
+        "timeMs": 30200,
+        "athleteId": "hytek_ath_0dfb40f01083eef05c07e773",
+        "leadOffEligible": false
+      },
+      {
+        "leg": 3,
+        "name": "Brian Vargas",
+        "gender": "M",
+        "stroke": "FL",
+        "timeMs": 24160,
+        "athleteId": "hytek_ath_f018f54f7d04faa44eb108c1",
+        "leadOffEligible": false
+      },
+      {
+        "leg": 4,
+        "name": "Noah Doiron",
+        "gender": "M",
+        "stroke": "FR",
+        "timeMs": 23050,
+        "athleteId": "swimcloud_3335149",
+        "leadOffEligible": false
+      }
+    ],
+    "lineup_coverage": "complete",
+    "meet": "2026 IE Inland Empire Swimming Short Course Championships",
+    "date": "2026-02-28"
+  }
+]

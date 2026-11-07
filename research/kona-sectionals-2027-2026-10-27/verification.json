@@ -1,0 +1,98 @@
+{
+  "asOf": "2026-10-27",
+  "screenshotCutsVerified": 114,
+  "meetEventsVerified": 38,
+  "qualifiers": 9,
+  "individualEntries": 20,
+  "qualifyingPerformances": 28,
+  "qualifyingRelayPerformances": 6,
+  "rosterCount": 87,
+  "withEligibleTimes": 81,
+  "preparedAt": "2026-10-27T15:24:55.282Z",
+  "standardSha256": "9e503c4365fc8e12bcd7e221465060cc3e6d481945b029219334dbd661bfb5bd",
+  "publication": {
+    "project": "hgsghjqefynhbavmkehv",
+    "status": "published",
+    "standardId": "western_spring_sectionals_2027",
+    "cuts": 114,
+    "meetId": "meet_2027_nw_speedo_sectionals_kona",
+    "scheduledEvents": 38,
+    "batchId": "aad67499-c188-4322-a1f6-455cd2f81b0e",
+    "batchStatus": "approved",
+    "verifiedThroughNormalStandardsRead": true,
+    "meetAccess": "staff-only as required by existing RLS"
+  },
+  "reportChecks": {
+    "qualifiers": 9,
+    "qualifyingTimes": 28,
+    "individualEntriesIncludingDistanceRule": 20,
+    "allTimesInWindow": true,
+    "allTimesAtOrBelowCut": true,
+    "allCurrentRosterProfileLinksChecked": true,
+    "emptyProfiles": 2,
+    "unmatchedDatabaseNames": 2
+  },
+  "reportUpdatedAt": "2026-10-27T15:58:12.412Z",
+  "externalSupplement": {
+    "verifiedAt": "2026-10-27T15:56:13.624Z",
+    "scope": "Roster-wide Swimcloud verification",
+    "sources": "swimcloud-audit/results.json",
+    "note": "Updates this report with verified source times; no canonical athlete, swim or meet records were changed by this audit."
+  },
+  "swimcloudAudit": {
+    "checkedAt": "2026-10-27T15:56:13.624Z",
+    "source": "Swimcloud normal signed-in browser; public swimmer best-times and event-history tables",
+    "rosterSources": [
+      "https://www.swimcloud.com/team/10002750/roster/?gender=M&season_id=30",
+      "https://www.swimcloud.com/team/10002750/roster/?gender=F&season_id=30",
+      "https://www.swimcloud.com/team/10002750/roster/?gender=M&season_id=29",
+      "https://www.swimcloud.com/team/10002750/roster/?gender=F&season_id=29"
+    ],
+    "currentRosterProfiles": 85,
+    "currentRosterPeople": 84,
+    "extraProfilesChecked": 2,
+    "profileTablesRead": 85,
+    "totalBestTimeRows": 1593,
+    "eventHistoryChecks": [
+      {
+        "profileId": "3090407",
+        "event": "100_BR_SCY",
+        "rows": 22
+      },
+      {
+        "profileId": "2800313",
+        "event": "100_BR_LCM",
+        "rows": 35
+      },
+      {
+        "profileId": "2535322",
+        "event": "100_BR_SCY",
+        "rows": 36
+      }
+    ],
+    "method": "Check every event/course all-time personal best. If above the cut, every slower recorded swim is also above it. If at or faster than the cut, verify the date. For qualifying-level PBs before December 1, 2025, check the full event history and choose the best eligible swim. Include all recorded affiliations. Link both Ole Stiles profiles for this report and count him once. Do not infer missing times or treat intermediate splits as independent full-race proof.",
+    "unavailableProfiles": [
+      {
+        "profileId": "3590649",
+        "name": "Sam Anger",
+        "reason": "No times available"
+      },
+      {
+        "profileId": "3549833",
+        "name": "Sawyer Smith",
+        "reason": "No times available"
+      }
+    ],
+    "unmatchedDatabaseNames": [
+      "Bella Castro Lopez",
+      "Ignacio Harrison"
+    ],
+    "scopeLimit": "No matching Swimcloud profile was located for Bella Castro Lopez or Ignacio Harrison. No published time table was available for Sam Anger or Sawyer Smith. No qualifying claim is made for those four swimmers. The roster comparison does not independently verify current USA Swimming registration or sanction eligibility of each school result.",
+    "newlyIdentifiedQualifiers": [
+      "Marieka Campbell",
+      "Aurelia Ribellia",
+      "Caroline Sullivan",
+      "Lindsay Sutton"
+    ]
+  }
+}

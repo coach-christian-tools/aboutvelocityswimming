@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import type { TimesResponse } from "./times-api";
 import { timesCache as cache, timesGeneration } from "./times-cache";
+import { loadTimes } from "./load-times";
 export function useDebouncedSearch(value: string) {
   const [search, setSearch] = useState(value);
   useEffect(() => {
@@ -32,15 +33,7 @@ export function useTimes(url: string | null, enabled = true) {
       try {
         let data = cache.get(cacheKey);
         if (!data || data.expiresAt <= Date.now()) {
-          const response = await fetch(url!, {
-            signal: controller.signal,
-            cache: "no-store",
-          });
-          if (!response.ok)
-            throw new Error(
-              "We couldn’t load these results. Please try again.",
-            );
-          data = (await response.json()) as TimesResponse;
+          data = await loadTimes(url!, controller.signal);
           if (controller.signal.aborted || generation !== timesGeneration)
             return;
           cache.set(cacheKey, data);

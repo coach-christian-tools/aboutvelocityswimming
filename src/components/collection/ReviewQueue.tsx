@@ -3,6 +3,7 @@ import StandardReview from "./StandardReview";
 import PrivateRaceBaseline from "./PrivateRaceBaseline";
 import type { StandardSet } from "@/features/swim-resources/types/schema";
 import { clearTimesCache } from "./times-cache";
+import { saveReviewDecision } from "./save-review-decision";
 import Link from "next/link";
 import { useEffect, useState, useMemo, useRef } from "react";
 import { browserClient, hasBackendConfiguration } from "@/lib/supabase/client";
@@ -371,6 +372,7 @@ export default function ReviewQueue() {
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
   const [busy, setBusy] = useState<string | null>(null);
+  const [slowDecision, setSlowDecision] = useState(false);
   const [notes, setNotes] = useState<Record<string, string>>({});
   const [refresh, setRefresh] = useState(0);
   useEffect(() => {
@@ -434,20 +436,10 @@ export default function ReviewQueue() {
   </nav>;
   async function decide(batch: QueueBatch, decision: string) {
     setBusy(batch.id);
+    setSlowDecision(false);
     setError("");
     try {
-      const response = await fetch("/api/collection/review", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          batchId: batch.id,
-          decision,
-          note: notes[batch.id] ?? "",
-        }),
-      });
-      const result = await response.json();
-      if (!response.ok)
-        throw new Error(result.error || "Unable to save decision.");
+      await saveReviewDecision(batch.id, decision, notes[batch.id] ?? "", () => setSlowDecision(true));
       clearTimesCache();
       // Cancel a background read that began before this successful decision.
       // Its stale response must not put the batch back into the queue.
@@ -460,6 +452,7 @@ export default function ReviewQueue() {
       );
     } finally {
       setBusy(null);
+      setSlowDecision(false);
     }
   }
   if (authLoading) return <p className={styles.emptyState} role="status">Checking your account…</p>;
@@ -525,6 +518,7 @@ export default function ReviewQueue() {
         {showPageControls && pageControls}
       </div>
       {refreshing && !loading && <p role="status" className={styles.muted}>Checking for changes…</p>}
+      {busy && slowDecision && <p role="status">Still saving the decision. Keep this page open while we wait for confirmation.</p>}
       {error && (
         <p role="alert" className={styles.error}>
           {error}

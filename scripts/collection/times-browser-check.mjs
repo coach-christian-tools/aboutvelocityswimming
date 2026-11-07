@@ -1326,10 +1326,10 @@ try {
   await page.close();
   const recovery = await setup({ failure: true });
   await recovery.page.goto(base + "/tools/times");
-  await recovery.page
-    .getByRole("button", { name: "Try again", exact: true })
-    .click();
   await recovery.page.getByRole("table").waitFor();
+  assert.equal(recovery.calls.filter((q) => q.get("view") === "rankings").length, 2);
+  assert.equal(await recovery.page.getByRole("button", { name: "Try again", exact: true }).count(), 0,
+    "A temporary failure recovers without a manual retry or error popup");
   await recovery.page.close();
   const expiry = await setup({ expiry: true });
   await expiry.page.goto(base + "/tools/times");

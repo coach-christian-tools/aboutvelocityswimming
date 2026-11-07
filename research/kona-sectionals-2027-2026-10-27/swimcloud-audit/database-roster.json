@@ -1,0 +1,1220 @@
+[
+  {
+    "id": "hytek_ath_1d84438931dba5e64df3a012",
+    "team_id": "velocity-swimming",
+    "first": "Sam",
+    "last": "Anger",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677374",
+      "observedAt": "2026-07-12",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_c0bf57b910768a65325dbaff",
+    "team_id": "velocity-swimming",
+    "first": "Kinsey",
+    "last": "Bartholomew",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677371",
+      "observedAt": "2026-06-21",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_c461a7c9213b86a7fc790f0a",
+    "team_id": "velocity-swimming",
+    "first": "Ephraim",
+    "last": "Blakey",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677376",
+      "observedAt": "2026-07-26",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_16a340a6a0c940322f559313",
+    "team_id": "velocity-swimming",
+    "first": "Ezra",
+    "last": "Blakey",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677374",
+      "observedAt": "2026-07-11",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_28d8f848a1772e97c43cfcdc",
+    "team_id": "velocity-swimming",
+    "first": "Judah",
+    "last": "Blakey",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677376",
+      "observedAt": "2026-07-26",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_0dfb40f01083eef05c07e773",
+    "team_id": "velocity-swimming",
+    "first": "Gavin",
+    "last": "Brown",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677376",
+      "observedAt": "2026-07-26",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_821f4fd671ae4d759a651da7",
+    "team_id": "velocity-swimming",
+    "first": "Isla",
+    "last": "Brownlee",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677376",
+      "observedAt": "2026-07-26",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_d15fbc44218679c91482a911",
+    "team_id": "velocity-swimming",
+    "first": "Oliver",
+    "last": "Brownlee",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677376",
+      "observedAt": "2026-07-26",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_62190d39ea35de78b38ca2da",
+    "team_id": "velocity-swimming",
+    "first": "Theo",
+    "last": "Brownlee",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677376",
+      "observedAt": "2026-07-26",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_09ae43f11d9a4082f8cfbda3",
+    "team_id": "velocity-swimming",
+    "first": "Marieka",
+    "last": "Campbell",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677376",
+      "observedAt": "2026-07-24",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_c3782f0e1d06f1ecf5cdde76",
+    "team_id": "velocity-swimming",
+    "first": "Cedar",
+    "last": "Cary",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677371",
+      "observedAt": "2026-06-21",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_bc273f6d4e78f7c4b87004a6",
+    "team_id": "velocity-swimming",
+    "first": "Dahlia",
+    "last": "Cary",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677371",
+      "observedAt": "2026-06-21",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_3a142985c4b6d8bf51b76963",
+    "team_id": "velocity-swimming",
+    "first": "Annaleah",
+    "last": "Castro Lopez",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677371",
+      "observedAt": "2026-06-20",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_7304b21232620650efd0412f",
+    "team_id": "velocity-swimming",
+    "first": "Bella",
+    "last": "Castro Lopez",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677371",
+      "observedAt": "2026-06-20",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_16f87bcb6adf38b53a591916",
+    "team_id": "velocity-swimming",
+    "first": "Maddie",
+    "last": "Critchell",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677371",
+      "observedAt": "2026-06-21",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "swimcloud_3030295",
+    "team_id": "velocity-swimming",
+    "first": "Torin",
+    "last": "DeShazo",
+    "swimcloud_id": "3030295",
+    "athlete_swimcloud_id": "3030295",
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "swimcloud_398253",
+      "observedAt": "2026-09-19",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "swimcloud_3335149",
+    "team_id": "velocity-swimming",
+    "first": "Noah",
+    "last": "Doiron",
+    "swimcloud_id": "3335149",
+    "athlete_swimcloud_id": "3335149",
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "swimcloud_398253",
+      "observedAt": "2026-09-19",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "swimcloud_3307668",
+    "team_id": "velocity-swimming",
+    "first": "Atley",
+    "last": "Eddings",
+    "swimcloud_id": "3307668",
+    "athlete_swimcloud_id": "3307668",
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "swimcloud_398253",
+      "observedAt": "2026-09-19",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "swimcloud_3076549",
+    "team_id": "velocity-swimming",
+    "first": "Graysen",
+    "last": "Eddings",
+    "swimcloud_id": "3076549",
+    "athlete_swimcloud_id": "3076549",
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "swimcloud_398253",
+      "observedAt": "2026-09-19",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "swimcloud_3076568",
+    "team_id": "velocity-swimming",
+    "first": "MaKena",
+    "last": "Eddings",
+    "swimcloud_id": "3076568",
+    "athlete_swimcloud_id": "3076568",
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "swimcloud_398253",
+      "observedAt": "2026-09-19",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_5528aab928c6680644cbc54d",
+    "team_id": "velocity-swimming",
+    "first": "Benat",
+    "last": "Escure",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677376",
+      "observedAt": "2026-07-26",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_ad0a38c96336c4e1447ffc30",
+    "team_id": "velocity-swimming",
+    "first": "Aubry",
+    "last": "Fischer",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677371",
+      "observedAt": "2026-06-21",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "swimcloud_3178559",
+    "team_id": "velocity-swimming",
+    "first": "Charley",
+    "last": "Foss",
+    "swimcloud_id": "3178559",
+    "athlete_swimcloud_id": "3178559",
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "swimcloud_398253",
+      "observedAt": "2026-09-19",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_adb169e63ced8027e220d131",
+    "team_id": "velocity-swimming",
+    "first": "Huck",
+    "last": "Foster",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677376",
+      "observedAt": "2026-07-26",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "swimcloud_2415494",
+    "team_id": "velocity-swimming",
+    "first": "Cherise",
+    "last": "Fourie",
+    "swimcloud_id": "2415494",
+    "athlete_swimcloud_id": "2415494",
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "swimcloud_398253",
+      "observedAt": "2026-09-19",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "swimcloud_2556192",
+    "team_id": "velocity-swimming",
+    "first": "Charlotte",
+    "last": "Fulmer",
+    "swimcloud_id": "2556192",
+    "athlete_swimcloud_id": "2556192",
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "swimcloud_398253",
+      "observedAt": "2026-09-19",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "swimcloud_1773487",
+    "team_id": "velocity-swimming",
+    "first": "Rory",
+    "last": "Fulmer",
+    "swimcloud_id": "1773487",
+    "athlete_swimcloud_id": "1773487",
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "swimcloud_398253",
+      "observedAt": "2026-09-19",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "swimcloud_3307671",
+    "team_id": "velocity-swimming",
+    "first": "Riley",
+    "last": "Gebbers",
+    "swimcloud_id": "3307671",
+    "athlete_swimcloud_id": "3307671",
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "swimcloud_398253",
+      "observedAt": "2026-09-19",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_46c113dbff5822e87ff918f7",
+    "team_id": "velocity-swimming",
+    "first": "Natalie",
+    "last": "Gray",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677374",
+      "observedAt": "2026-07-12",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_229b0b8067f144dbfa8a90f4",
+    "team_id": "velocity-swimming",
+    "first": "Hudson",
+    "last": "Gross",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677366",
+      "observedAt": "2026-05-31",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_8c54eaf9d3a2d365541dddcf",
+    "team_id": "velocity-swimming",
+    "first": "Angel",
+    "last": "Guerra",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677371",
+      "observedAt": "2026-06-21",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "swimcloud_3521769",
+    "team_id": "velocity-swimming",
+    "first": "Abby",
+    "last": "Harris",
+    "swimcloud_id": "3521769",
+    "athlete_swimcloud_id": "3521769",
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "swimcloud_398253",
+      "observedAt": "2026-09-19",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_49858a606211a22c04d4e084",
+    "team_id": "velocity-swimming",
+    "first": "Ignacio",
+    "last": "Harrison",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677349",
+      "observedAt": "2026-01-31",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_fbbca4411fb7958f6404652e",
+    "team_id": "velocity-swimming",
+    "first": "Juliette",
+    "last": "Harrison",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677376",
+      "observedAt": "2026-07-25",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_1e8f8acc2447c53b0b83b58e",
+    "team_id": "velocity-swimming",
+    "first": "Lucas",
+    "last": "Hernandez",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677369",
+      "observedAt": "2026-06-03",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_7dafbed0ff7346fb6516b035",
+    "team_id": "velocity-swimming",
+    "first": "Caroline",
+    "last": "Hill",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677366",
+      "observedAt": "2026-05-31",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_80db464f690d410ee57765ab",
+    "team_id": "velocity-swimming",
+    "first": "Gabe",
+    "last": "Hill",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677371",
+      "observedAt": "2026-06-20",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_f490b97f5439031c1c39c68a",
+    "team_id": "velocity-swimming",
+    "first": "Henry",
+    "last": "Hill",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677376",
+      "observedAt": "2026-07-26",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_90969c2c423368eb37c1d136",
+    "team_id": "velocity-swimming",
+    "first": "Lawton",
+    "last": "Hinderer",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677371",
+      "observedAt": "2026-06-21",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "swimcloud_2867460",
+    "team_id": "velocity-swimming",
+    "first": "Sam",
+    "last": "Hobson",
+    "swimcloud_id": "2867460",
+    "athlete_swimcloud_id": "2867460",
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "swimcloud_398253",
+      "observedAt": "2026-09-19",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_874c8091eb7ebd24b73be36e",
+    "team_id": "velocity-swimming",
+    "first": "Audrey",
+    "last": "Huber",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677371",
+      "observedAt": "2026-06-21",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_6af47834b63cbb91d13ac435",
+    "team_id": "velocity-swimming",
+    "first": "Fiona",
+    "last": "Huber",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1630943",
+      "observedAt": "2025-12-07",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_5f6b40cfb53639d45a8ba03f",
+    "team_id": "velocity-swimming",
+    "first": "Sonja",
+    "last": "Huber",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677376",
+      "observedAt": "2026-07-26",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_96ed61402f86196d486da5a5",
+    "team_id": "velocity-swimming",
+    "first": "Eva",
+    "last": "Itterley",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677376",
+      "observedAt": "2026-07-26",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_23106eb33de58e5222ee9c68",
+    "team_id": "velocity-swimming",
+    "first": "Theo",
+    "last": "Jackson",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677371",
+      "observedAt": "2026-06-21",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_a05a0376a8bcaf11c9062c51",
+    "team_id": "velocity-swimming",
+    "first": "Hunter",
+    "last": "Krahenbuhl",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1630933",
+      "observedAt": "2025-10-25",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_156cdaa12aed88a1779c9b1b",
+    "team_id": "velocity-swimming",
+    "first": "Caden",
+    "last": "Lammert",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677376",
+      "observedAt": "2026-07-26",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_5bdffda281d0bd0b1a4290b5",
+    "team_id": "velocity-swimming",
+    "first": "Haley",
+    "last": "Lammert",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677376",
+      "observedAt": "2026-07-26",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_aaa109422446ee5ea3d406fd",
+    "team_id": "velocity-swimming",
+    "first": "Julia",
+    "last": "Lisk",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1630943",
+      "observedAt": "2025-12-06",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "swimcloud_3076576",
+    "team_id": "velocity-swimming",
+    "first": "David",
+    "last": "Lynn",
+    "swimcloud_id": "3076576",
+    "athlete_swimcloud_id": "3076576",
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "swimcloud_398253",
+      "observedAt": "2026-09-19",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "swimcloud_2415217",
+    "team_id": "velocity-swimming",
+    "first": "Gibran",
+    "last": "Martin",
+    "swimcloud_id": "2415217",
+    "athlete_swimcloud_id": "2415217",
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "swimcloud_398253",
+      "observedAt": "2026-09-19",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_3b56ca4a7a0ffdae3c20f1a4",
+    "team_id": "velocity-swimming",
+    "first": "Declan",
+    "last": "McLaren",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677371",
+      "observedAt": "2026-06-21",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_8d4d40af837788ae8e6ca1de",
+    "team_id": "velocity-swimming",
+    "first": "Henry",
+    "last": "McLaren",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677371",
+      "observedAt": "2026-06-21",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_3c70b66a05d4b502096d2c78",
+    "team_id": "velocity-swimming",
+    "first": "Dianne",
+    "last": "Mejias",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677356",
+      "observedAt": "2026-03-01",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_ad0438a0c1fb831d2ed95d7a",
+    "team_id": "velocity-swimming",
+    "first": "Manuel",
+    "last": "Mejias",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677354",
+      "observedAt": "2026-02-15",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_bac93cbf40fb81e2c2fab5b5",
+    "team_id": "velocity-swimming",
+    "first": "Sarah",
+    "last": "Mejias",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677356",
+      "observedAt": "2026-03-01",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "swimcloud_3178542",
+    "team_id": "velocity-swimming",
+    "first": "Colt",
+    "last": "Melton",
+    "swimcloud_id": "3178542",
+    "athlete_swimcloud_id": "3178542",
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "swimcloud_398253",
+      "observedAt": "2026-09-19",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_2b366dfc95522e7e85b0f091",
+    "team_id": "velocity-swimming",
+    "first": "Kaden",
+    "last": "Moore",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677376",
+      "observedAt": "2026-07-26",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_d5b18cb303a702bd3692ec6e",
+    "team_id": "velocity-swimming",
+    "first": "Maddie",
+    "last": "Moore",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677376",
+      "observedAt": "2026-07-26",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "swimcloud_3391951",
+    "team_id": "velocity-swimming",
+    "first": "Ezra",
+    "last": "Overton",
+    "swimcloud_id": "3391951",
+    "athlete_swimcloud_id": "3391951",
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "swimcloud_398253",
+      "observedAt": "2026-09-19",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_683be69ac874484b58969a84",
+    "team_id": "velocity-swimming",
+    "first": "Sam",
+    "last": "Parrish",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677371",
+      "observedAt": "2026-06-21",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_13d3dce20ca35250e49a82b6",
+    "team_id": "velocity-swimming",
+    "first": "Thinuj",
+    "last": "Pathirana",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677376",
+      "observedAt": "2026-07-26",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_ea8634c0329fcef7bde4f608",
+    "team_id": "velocity-swimming",
+    "first": "Levi",
+    "last": "Reed",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677371",
+      "observedAt": "2026-06-21",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_9b913fba0e33b6b0f4716f51",
+    "team_id": "velocity-swimming",
+    "first": "Aurelia",
+    "last": "Ribellia",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677376",
+      "observedAt": "2026-07-25",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_3a41a0dbe7a3dbeb0403c9e8",
+    "team_id": "velocity-swimming",
+    "first": "Eloise",
+    "last": "Ribellia",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677376",
+      "observedAt": "2026-07-25",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_67942f10beb41fd766c4d927",
+    "team_id": "velocity-swimming",
+    "first": "EZ",
+    "last": "Ribellia",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677376",
+      "observedAt": "2026-07-26",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_de04142e03ebe57110893200",
+    "team_id": "velocity-swimming",
+    "first": "Noah",
+    "last": "Ribellia",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677376",
+      "observedAt": "2026-07-26",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_8293b66f6d71858dfb1fae82",
+    "team_id": "velocity-swimming",
+    "first": "Joshua",
+    "last": "Riedel",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677371",
+      "observedAt": "2026-06-21",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_06e3bfcbb13cf022f585064e",
+    "team_id": "velocity-swimming",
+    "first": "Jolene",
+    "last": "Roe",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677354",
+      "observedAt": "2026-02-14",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_24eed38da7f5da603330de5f",
+    "team_id": "velocity-swimming",
+    "first": "Luke",
+    "last": "Skale",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677371",
+      "observedAt": "2026-06-21",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_9eee3a0e83362259ea130971",
+    "team_id": "velocity-swimming",
+    "first": "Soren",
+    "last": "Skale",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677371",
+      "observedAt": "2026-06-21",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_941f641d659f68b785bef417",
+    "team_id": "velocity-swimming",
+    "first": "Eli",
+    "last": "Smith",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677374",
+      "observedAt": "2026-07-11",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_d664b6dd723f542e36be3857",
+    "team_id": "velocity-swimming",
+    "first": "Sawyer",
+    "last": "Smith",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677366",
+      "observedAt": "2026-05-31",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_e2bf186398f3c130adfd1e6c",
+    "team_id": "velocity-swimming",
+    "first": "Tyler",
+    "last": "Staples",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677371",
+      "observedAt": "2026-06-21",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "swimcloud_3634257",
+    "team_id": "velocity-swimming",
+    "first": "Ole",
+    "last": "Stiles",
+    "swimcloud_id": "3634257",
+    "athlete_swimcloud_id": "3634257",
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "swimcloud_398253",
+      "observedAt": "2026-09-19",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "swimcloud_3224579",
+    "team_id": "velocity-swimming",
+    "first": "Caroline",
+    "last": "Sullivan",
+    "swimcloud_id": "3224579",
+    "athlete_swimcloud_id": "3224579",
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "swimcloud_398253",
+      "observedAt": "2026-09-19",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_ee9d794d14cfaed1d0919d83",
+    "team_id": "velocity-swimming",
+    "first": "Liam",
+    "last": "Sullivan",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677376",
+      "observedAt": "2026-07-24",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_b496a9332ec5e8d5117f7c1f",
+    "team_id": "velocity-swimming",
+    "first": "Sadie",
+    "last": "Sullivan",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677376",
+      "observedAt": "2026-07-24",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "swimcloud_3549821",
+    "team_id": "velocity-swimming",
+    "first": "Khash",
+    "last": "Sutton",
+    "swimcloud_id": "3549821",
+    "athlete_swimcloud_id": "3549821",
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "swimcloud_398253",
+      "observedAt": "2026-09-19",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_c4295cab986a0b1eb164ed20",
+    "team_id": "velocity-swimming",
+    "first": "Lindsay",
+    "last": "Sutton",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677371",
+      "observedAt": "2026-06-21",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_315394770abb8ef2c26bd94d",
+    "team_id": "velocity-swimming",
+    "first": "Miles",
+    "last": "Thompson",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677371",
+      "observedAt": "2026-06-21",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_f018f54f7d04faa44eb108c1",
+    "team_id": "velocity-swimming",
+    "first": "Brian",
+    "last": "Vargas",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677376",
+      "observedAt": "2026-07-24",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_1a6f06ccff1cfb9559fd4566",
+    "team_id": "velocity-swimming",
+    "first": "Matias",
+    "last": "Velazquez",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677371",
+      "observedAt": "2026-06-21",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_0bcb256d522c505eceec1116",
+    "team_id": "velocity-swimming",
+    "first": "Willa",
+    "last": "Walden",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677366",
+      "observedAt": "2026-05-31",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_b059c9f5d4efc2c7e5053e02",
+    "team_id": "velocity-swimming",
+    "first": "Benny",
+    "last": "Wilgus",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677376",
+      "observedAt": "2026-07-26",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_bf8ae6c7afef1e3a087928eb",
+    "team_id": "velocity-swimming",
+    "first": "Sophia",
+    "last": "Wilgus",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677376",
+      "observedAt": "2026-07-26",
+      "currentRegistrationVerified": false
+    }
+  },
+  {
+    "id": "hytek_ath_ea9a28d6171b69b9dbe6bd4d",
+    "team_id": "velocity-swimming",
+    "first": "Adeline",
+    "last": "Williams",
+    "swimcloud_id": null,
+    "athlete_swimcloud_id": null,
+    "affiliation": {
+      "basis": "latest published race affiliation",
+      "meetId": "usa-meet-ie-1677356",
+      "observedAt": "2026-03-01",
+      "currentRegistrationVerified": false
+    }
+  }
+]

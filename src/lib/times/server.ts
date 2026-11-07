@@ -9,6 +9,7 @@ import type {
 } from "@/components/collection/times-api";
 import { timesBucket, timesExpiry } from "@/components/collection/times-cache";
 import { athletePages } from "./athlete-pages";
+import { diagnosticCode } from "@/lib/request-diagnostics";
 const tag = "ies-times";
 export function invalidateTimes() {
   revalidateTag(tag, { expire: 0 });
@@ -32,11 +33,17 @@ const readCached = unstable_cache(
       },
     });
     const input = JSON.parse(serialized);
-    const { data, error } = await client.rpc("ies_times_query", {
+    const started = performance.now();
+    const { data, error, status } = await client.rpc("ies_times_query", {
       query_kind: kind,
       input,
     });
-    if (error) throw new Error("Times query failed: " + error.code);
+    const timing = { kind, durationMs: Math.round(performance.now() - started), status };
+    if (error) {
+      console.error("[velocity:times] database read failed", { ...timing, code: diagnosticCode(error) });
+      throw Object.assign(new Error("Times query failed"), { code: error.code });
+    }
+    console.info("[velocity:times] database read completed", timing);
     const result = data as unknown as TimesResponse;
     return { ...result, expiresAt: timesExpiry(bucket) };
   },

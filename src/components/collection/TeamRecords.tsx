@@ -16,6 +16,8 @@ import s from "./TeamRecords.module.css";
 import loadingStyles from "./TimesLoading.module.css";
 import RelayLineup from "./RelayLineup";
 
+const visibleCourses = recordCourses.filter(([course]) => course !== "SCM");
+
 export interface RecordSelection {
   course: string;
   ageGroup: string;
@@ -142,7 +144,10 @@ export default function TeamRecords({
     timeZone: "America/Los_Angeles",
   });
   const visibleRaces = useMemo(
-    () => races.filter((race) => !race.relay || race.gender !== "X"),
+    () =>
+      races.filter(
+        (race) => race.course !== "SCM" && (!race.relay || race.gender !== "X"),
+      ),
     [races],
   );
   const records = useMemo(
@@ -155,7 +160,7 @@ export default function TeamRecords({
   const events = useMemo(
     () =>
       new Map(
-        recordCourses.map(([course]) => [
+        visibleCourses.map(([course]) => [
           course,
           recordEvents(course, visibleRaces),
         ]),
@@ -174,7 +179,7 @@ export default function TeamRecords({
         <h2 className="sr-only">{teamName || "Team"} records</h2>
         <div className={s.selector}>{selector}</div>
         <nav className={s.jumpLinks} aria-label="Record sections">
-          {recordCourses.map(([course, label]) => (
+          {visibleCourses.map(([course, label]) => (
             <div
               className={s.jumpRow}
               key={course}
@@ -208,7 +213,7 @@ export default function TeamRecords({
               No eligible records for this team in the available results.
             </p>
           )}
-          {recordCourses.map(([course, courseName]) => (
+          {visibleCourses.map(([course, courseName]) => (
             <section
               key={course}
               id={anchor(course)}
@@ -273,7 +278,7 @@ export default function TeamRecords({
                           .filter(
                             (event) =>
                               !(
-                                (course === "SCY" || course === "SCM") &&
+                                course === "SCY" &&
                                 minAge >= 11 &&
                                 event.startsWith("25_")
                               ),
