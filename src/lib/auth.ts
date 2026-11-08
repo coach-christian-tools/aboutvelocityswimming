@@ -1,3 +1,4 @@
+import { holdUpdates, withUpdateHold } from "./update-safety";
 import type { User as SupabaseUser } from "@supabase/supabase-js";
 import { browserClient, hasBackendConfiguration } from "./supabase/client";
 export interface User {
@@ -57,23 +58,44 @@ export function onAuthStateChanged(
 }
 
 export async function signOut(_auth = auth) {
-  const { error } = await browserClient().auth.signOut();
-  if (error) throw error;
-  auth.currentUser = null;
+  return withUpdateHold(async () => {
+    const { error } = await browserClient().auth.signOut();
+    if (error) throw error;
+    auth.currentUser = null;
+  });
 }
 export async function signInWithEmailAndPassword(
   _auth: typeof auth,
   email: string,
   password: string,
 ) {
-  const { data, error } = await browserClient().auth.signInWithPassword({
-    email,
-    password,
+  return withUpdateHold(async () => {
+    const { data, error } = await browserClient().auth.signInWithPassword({
+      email,
+      password,
+    });
+    if (error) throw error;
+    return { user: await currentUser(data.user) };
   });
-  if (error) throw error;
-  return { user: await currentUser(data.user) };
 }
 export async function signInWithGoogle() {
- const {error}=await browserClient().auth.signInWithOAuth({provider:'google',options:{redirectTo:window.location.origin+'/auth/callback?next='+encodeURIComponent('/tools'),queryParams:{prompt:'select_account'}}});
- if(error)throw error;
+  const release = holdUpdates();
+  try {
+    const { error } = await browserClient().auth.signInWithOAuth({
+      provider: "google",
+      options: {
+        redirectTo:
+          window.location.origin +
+          "/auth/callback?next=" +
+          encodeURIComponent("/tools"),
+        queryParams: { prompt: "select_account" },
+      },
+    });
+    if (error) throw error;
+    // Successful OAuth navigates away. Keep refresh blocked until that happens.
+    window.addEventListener("pageshow", release, { once: true });
+  } catch (error) {
+    release();
+    throw error;
+  }
 }

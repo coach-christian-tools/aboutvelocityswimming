@@ -1,3 +1,4 @@
+import { holdUpdates } from "@/lib/update-safety";
 // Approval writes are never retried: a lost response may follow a successful commit.
 export async function saveReviewDecision(
   batchId: string,
@@ -16,6 +17,7 @@ export async function saveReviewDecision(
     });
     onSlow();
   }, 10000);
+  const release = holdUpdates();
   try {
     const response = await fetch("/api/collection/review", {
       method: "POST",
@@ -55,5 +57,6 @@ export async function saveReviewDecision(
     throw error;
   } finally {
     clearTimeout(slowTimer);
+    release();
   }
 }

@@ -1,4 +1,5 @@
 "use client";
+import { holdUpdates } from "@/lib/update-safety";
 
 import Link from "next/link";
 import { useEffect, useRef, useState, type FormEvent } from "react";
@@ -812,6 +813,7 @@ export default function MeetCollectionQueue() {
       return;
     }
     setBusy(row.id);
+    const release = holdUpdates();
     try {
       const response = await fetch("/api/collection/meets", {
         method: "PATCH",
@@ -839,6 +841,7 @@ export default function MeetCollectionQueue() {
           cause instanceof Error ? cause.message : "Unable to save this meet.",
       }));
     } finally {
+      release();
       setBusy(null);
     }
   }

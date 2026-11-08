@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import { useUpdateBlocker } from "@/hooks/useUpdateBlocker";
 import type { ReactNode } from "react";
 import type { User } from "@/lib/auth";
 import { onAuthStateChanged, signOut } from "@/lib/auth";
@@ -12,6 +13,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [isAdmin, setIsAdmin] = useState(false);
   const [familyId, setFamilyId] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
+  useUpdateBlocker(loading);
   const [clientMode, setClientMode] = useState(false);
   const [previewFamilyId, setPreviewFamilyId] = useState<string | null>(null);
 

@@ -1,3 +1,5 @@
+import { withUpdateHold } from "@/lib/update-safety"
+import { useUpdateBlocker } from "@/hooks/useUpdateBlocker"
 import { errorCode, errorMessage } from "../../lib/errors"
 import { useState, useEffect, useRef } from "react"
 import { signInWithGoogle, signInWithEmailAndPassword } from "@/lib/auth"
@@ -25,6 +27,7 @@ export function Login() {
 
   const otpInputRef = useRef<HTMLInputElement>(null)
   const { user, loading: authLoading, logout } = useAuth()
+  useUpdateBlocker(authLoading || loading || googleLoading)
   const canOpenTools = isToolsAdmin(user?.email, user?.emailVerified === true)
 
   useEffect(() => {
@@ -56,7 +59,7 @@ export function Login() {
     setLoading(true)
 
     try {
-      const {error} = await browserClient().auth.signInWithOtp({email:email.trim()});
+      const {error} = await withUpdateHold(() => browserClient().auth.signInWithOtp({email:email.trim()}));
       if(error)throw error;
       setStep("code")
       setCountdown(60)
@@ -85,7 +88,7 @@ export function Login() {
     setLoading(true)
 
     try {
-      const {error}=await browserClient().auth.verifyOtp({email:email.trim(),token:cleanCode,type:'email'});
+      const {error}=await withUpdateHold(() => browserClient().auth.verifyOtp({email:email.trim(),token:cleanCode,type:'email'}));
       if(error)throw error;
     } catch (err: unknown) {
       console.error("OTP verify error:", err)

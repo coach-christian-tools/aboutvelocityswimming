@@ -6,6 +6,8 @@ import SiteAccount from "@/components/shared/SiteAccount";
 import Header from "@/components/Header";
 import NavigationScroll from "@/components/NavigationScroll";
 import ToolsAccessGate from "@/components/shared/ToolsAccessGate";
+import UpdateNotice from "@/components/UpdateNotice";
+import { APP_VERSION } from "@/lib/app-version";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -100,6 +102,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
+        <meta name="app-version" content={APP_VERSION} />
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -135,6 +138,7 @@ export default function RootLayout({
       </head>
       <body>
         <NavigationScroll />
+        <UpdateNotice />
         <AuthProvider>
           <Header />
           <SiteAccount />

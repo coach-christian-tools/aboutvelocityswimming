@@ -1,4 +1,5 @@
-function callable<Input,Output>(operation:string){return async(input:Input):Promise<{data:Output}>=>{const response=await fetch('/api/workshare',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({operation,input})});const result=await response.json();if(!response.ok)throw new Error(result.error??'Unable to process request.');return result;};}
+import { withUpdateHold } from "@/lib/update-safety";
+function callable<Input,Output>(operation:string){return async(input:Input):Promise<{data:Output}>=>withUpdateHold(async()=>{const response=await fetch('/api/workshare',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({operation,input})});const result=await response.json();if(!response.ok)throw new Error(result.error??'Unable to process request.');return result;});}
 
 
 import { worksharePath } from "./routes"

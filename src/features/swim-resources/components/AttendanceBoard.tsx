@@ -1,4 +1,5 @@
 "use client";
+import { useUpdateBlocker } from "@/hooks/useUpdateBlocker";
 import { useEffect, useState } from "react";
 import { collection, db, onSnapshot, runTransaction, doc } from "@/lib/data";
 import { teamDate } from "@/lib/dates";
@@ -33,6 +34,7 @@ export default function AttendanceBoard() {
     [error, setError] = useState(""),
     [busy, setBusy] = useState(false),
     [saved, setSaved] = useState(false);
+  useUpdateBlocker(busy || Object.keys(draft).length > 0);
   useEffect(() => {
     if (!isAdmin) return;
     const fail = (e: Error) => setError(e.message);

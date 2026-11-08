@@ -35,6 +35,10 @@ Use `.env.example` for a new synthetic environment; do not overwrite an existing
 
 Checks: `npm run verify` runs strict migrated-code lint, global TypeScript, commerce and resource regression tests, and a production build with private-file checks. `npm run test:rules` runs the Firestore/Storage emulator suite (Firebase CLI 15.30.2 and Java 21+). `npm run lint` still checks the whole website and includes its pre-existing lint findings.
 
+## Website update notices
+
+Production builds now include mobile-friendly Update now/Later notices and a refresh confirmation. Use `npm run build` so all Next.js workers share one release ID. See [behavior, safeguards, and release checks](docs/WEBSITE-UPDATES.md).
+
 ## Store checkout and fulfillment
 
 Set these server environment variables before running the store:

@@ -1,4 +1,5 @@
 "use client";
+import { holdUpdates } from "@/lib/update-safety";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useAuth } from "@/features/workshare/contexts/auth";
@@ -77,6 +78,7 @@ export function ModerationEditor({
     event.preventDefault();
     if (!detail || !detail.available || busy || conflict) return;
     setBusy(true);
+    const release = holdUpdates();
     setError("");
     setMessage("");
     try {
@@ -113,6 +115,7 @@ export function ModerationEditor({
         error instanceof Error ? error.message : "Could not save this review.",
       );
     } finally {
+      release();
       setBusy(false);
     }
   }

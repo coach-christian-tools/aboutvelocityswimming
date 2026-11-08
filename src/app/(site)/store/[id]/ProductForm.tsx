@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { holdUpdates } from "@/lib/update-safety";
 
 interface Variant {
   id: number;
@@ -17,6 +18,23 @@ interface ProductFormProps {
 
 export default function ProductForm({ productId, productName, variants }: ProductFormProps) {
   const [selectedVariantId, setSelectedVariantId] = useState(variants[0]?.id);
+  const [checkoutPending, setCheckoutPending] = useState(false);
+  const checkoutRelease = useRef<(() => void) | null>(null);
+  useEffect(() => {
+    const release = () => {
+      checkoutRelease.current?.();
+      checkoutRelease.current = null;
+    };
+    const restore = () => {
+      release();
+      setCheckoutPending(false);
+    };
+    window.addEventListener("pageshow", restore);
+    return () => {
+      window.removeEventListener("pageshow", restore);
+      release();
+    };
+  }, []);
   
   const selectedVariant = variants.find((v) => v.id === selectedVariantId) || variants[0];
   
@@ -30,7 +48,14 @@ export default function ProductForm({ productId, productName, variants }: Produc
         ${selectedVariant?.retail_price}
       </div>
       
-      <form action="/api/checkout" method="POST">
+      <form action="/api/checkout" method="POST" onSubmit={(event) => {
+        if (checkoutRelease.current) {
+          event.preventDefault();
+          return;
+        }
+        checkoutRelease.current = holdUpdates();
+        setCheckoutPending(true);
+      }}>
         <input type="hidden" name="sync_variant_id" value={selectedVariant?.id} />
         <input type="hidden" name="product_id" value={productId} />
         
@@ -69,9 +94,17 @@ export default function ProductForm({ productId, productName, variants }: Produc
           </div>
         )}
         
-        <button type="submit" disabled={!selectedVariant} className="btn btn-primary buy-button-large">
-          Checkout with Stripe
+        <button type="submit" disabled={!selectedVariant || checkoutPending} className="btn btn-primary buy-button-large">
+          {checkoutPending ? "Opening checkout…" : "Checkout with Stripe"}
         </button>
+        {checkoutPending && (
+          <div role="status">
+            <p>Opening secure checkout. If navigation was stopped or nothing opens, reload this page before trying again. Reloading will not submit another checkout.</p>
+            <button type="button" className="btn" onClick={() => window.location.reload()}>
+              Reload page
+            </button>
+          </div>
+        )}
       </form>
     </div>
   );

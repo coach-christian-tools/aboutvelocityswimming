@@ -1,3 +1,4 @@
+import { withUpdateHold } from "../update-safety";
 import { clearTimesCache } from "@/components/collection/times-cache";
 import type { Json } from "../supabase/database.types";
 /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -183,50 +184,52 @@ export async function runTransaction<T>(
   _db: typeof db,
   callback: (transaction: Transaction) => Promise<T>,
 ): Promise<T> {
-  const reads = new Map<string, DocumentData | null>(),
-    writes = new Map<string, DocumentData | null>();
-  const transaction: Transaction = {
-    async get(ref) {
-      const result = await getDoc(ref);
-      reads.set(
-        ref.path,
-        result.exists() ? (result.data() as DocumentData) : null,
-      );
-      return result;
-    },
-    set(ref, value, options) {
-      const before = reads.get(ref.path);
-      writes.set(
-        ref.path,
-        options?.merge ? { ...before, ...value } : (value as DocumentData),
-      );
-      return transaction;
-    },
-    update(ref, value) {
-      if (!reads.has(ref.path))
-        throw new Error("Read a record before updating it.");
-      writes.set(ref.path, { ...reads.get(ref.path), ...value });
-      return transaction;
-    },
-    delete(ref) {
-      writes.set(ref.path, null);
-      return transaction;
-    },
-  };
-  const result = await callback(transaction);
-  // Include an existence check for every newly written key. Do not retry reviewed
-  // snapshots automatically: a conflict requires the operator to review again.
-  for (const path of writes.keys())
-    if (!reads.has(path)) {
-      const current = await getDoc(doc(db, path));
-      reads.set(path, current.exists() ? current.data() : null);
-    }
-  await request({
-    reads: [...reads].map(([path, before]) => ({ path, before })),
-    writes: [...writes].map(([path, after]) => ({ path, after })),
+  return withUpdateHold(async () => {
+    const reads = new Map<string, DocumentData | null>(),
+      writes = new Map<string, DocumentData | null>();
+    const transaction: Transaction = {
+      async get(ref) {
+        const result = await getDoc(ref);
+        reads.set(
+          ref.path,
+          result.exists() ? (result.data() as DocumentData) : null,
+        );
+        return result;
+      },
+      set(ref, value, options) {
+        const before = reads.get(ref.path);
+        writes.set(
+          ref.path,
+          options?.merge ? { ...before, ...value } : (value as DocumentData),
+        );
+        return transaction;
+      },
+      update(ref, value) {
+        if (!reads.has(ref.path))
+          throw new Error("Read a record before updating it.");
+        writes.set(ref.path, { ...reads.get(ref.path), ...value });
+        return transaction;
+      },
+      delete(ref) {
+        writes.set(ref.path, null);
+        return transaction;
+      },
+    };
+    const result = await callback(transaction);
+    // Include an existence check for every newly written key. Do not retry reviewed
+    // snapshots automatically: a conflict requires the operator to review again.
+    for (const path of writes.keys())
+      if (!reads.has(path)) {
+        const current = await getDoc(doc(db, path));
+        reads.set(path, current.exists() ? current.data() : null);
+      }
+    await request({
+      reads: [...reads].map(([path, before]) => ({ path, before })),
+      writes: [...writes].map(([path, after]) => ({ path, after })),
+    });
+    window.dispatchEvent(new Event("velocity-data"));
+    return result;
   });
-  window.dispatchEvent(new Event("velocity-data"));
-  return result;
 }
 export async function addDoc<T>(
   target: CollectionReference<T>,

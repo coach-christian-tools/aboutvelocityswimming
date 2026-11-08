@@ -4,12 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && node scripts/swim-resources/check-private-artifacts.mjs",
+    "build": "node scripts/updates/build.mjs && node scripts/swim-resources/check-private-artifacts.mjs",
     "start": "next start",
     "lint": "eslint src scripts tests extensions *.mjs *.mts --max-warnings 0",
     "test:commerce": "node scripts/test-commerce.mjs",
     "typecheck": "next typegen && tsc --noEmit",
-    "test": "npm run test:commerce && npm run test:calendar && npm run test:swim-resources && npm run test:workshare && npm run test:reminders && npm run test:meets:catalog && npm run test:collection:files",
+    "test": "npm run test:commerce && npm run test:calendar && npm run test:swim-resources && npm run test:workshare && npm run test:reminders && npm run test:meets:catalog && npm run test:collection:files && npm run test:updates",
     "test:swim-resources": "vitest run",
     "test:rules": "npm run test:database",
     "verify": "npm run check:secrets && npm run lint && npm run typecheck && npm test && npm run test:database && npm run build",
@@ -41,7 +41,9 @@
     "test:standards:database": "node --test tests/standards.integration.mjs",
     "test:standards:browser": "node scripts/collection/standards-browser-check.mjs",
     "test:identity:database": "node --test tests/identity-guard.integration.mjs",
-    "test:baseline:browser": "node scripts/collection/baseline-browser-check.mjs"
+    "test:baseline:browser": "node scripts/collection/baseline-browser-check.mjs",
+    "test:updates": "node --test tests/updates/*.test.ts",
+    "test:updates:browser": "node scripts/updates/browser-check.mjs"
   },
   "dependencies": {
     "@stripe/stripe-js": "^9.8.0",
