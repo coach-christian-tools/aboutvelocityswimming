@@ -9,19 +9,28 @@ const browser=await chromium.launch({headless:true});
 const directory=new URL('../../backups/private-baseline-browser/',import.meta.url);
 await mkdir(directory,{recursive:true,mode:0o700});
 const file=new URL('baseline.json',directory);
+const exportsUrl=base+'/tools/review/exports';
+const buttonName='Download private race baseline';
+async function testContext(options){
+ const context=await browser.newContext(options);
+ await context.route('**/auth/v1/**',route=>new URL(route.request().url()).origin===status.API_URL?route.continue():route.abort());
+ return context;
+}
 try{
- const context=await browser.newContext({acceptDownloads:true});
+ const context=await testContext({acceptDownloads:true});
  assert.equal((await context.request.get(base+'/api/collection/race-baseline')).status(),401);
  const page=await context.newPage();
  page.setDefaultTimeout(60000);
- await page.goto(base+'/login');
+ await page.goto(exportsUrl);
+ await page.waitForURL(base+'/login');
+ assert.equal(await page.getByRole('button',{name:buttonName,exact:true}).count(),0);
  await page.getByRole('button',{name:/password/i}).click();
- await page.locator('input[type=email]').fill('coach@velocity-swimming.com');
+ await page.locator('input[type=email]').fill('christiancutter02@gmail.com');
  await page.locator('input[type=password]').fill('Velocity-local-test-2026!');
  await page.locator('button[type=submit]').click();
  await page.waitForURL(base+'/tools');
- await page.goto(base+'/tools/review');
- const action=page.getByRole('button',{name:'Download private race baseline',exact:true});
+ await page.goto(exportsUrl);
+ const action=page.getByRole('button',{name:buttonName,exact:true});
  await action.waitFor();
  const pending=page.waitForEvent('download');
  await action.click();
@@ -40,7 +49,7 @@ try{
   await page.setViewportSize({width,height:1000});
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
  }
- await page.screenshot({path:new URL('review.png',directory).pathname,fullPage:true});
+ await page.screenshot({path:new URL('exports.png',directory).pathname,fullPage:true,animations:'disabled'});
  // A failed middle page must produce a message, never a partial download.
  let downloaded=false;page.on('download',()=>downloaded=true);
  await page.route('**/api/collection/race-baseline?*',async route=>{
@@ -50,12 +59,14 @@ try{
  await action.click();await page.getByRole('status').filter({hasText:'Data changed during export'}).waitFor();
  assert.equal(downloaded,false);
  await context.close();
- const family=await browser.newContext();const familyPage=await family.newPage();
+ const family=await testContext();const familyPage=await family.newPage();
  await familyPage.goto(base+'/login');await familyPage.getByRole('button',{name:/password/i}).click();
  await familyPage.locator('input[type=email]').fill('family-a@example.test');
  await familyPage.locator('input[type=password]').fill('Velocity-local-test-2026!');await familyPage.locator('button[type=submit]').click();
- await familyPage.waitForURL(base+'/tools');
+ await familyPage.getByText('This account does not have access to the tools.').waitFor();
  assert.equal((await family.request.get(base+'/api/collection/race-baseline')).status(),403);
- await familyPage.goto(base+'/tools/review');assert.equal(await familyPage.getByRole('button',{name:'Download private race baseline',exact:true}).count(),0);
+ await familyPage.goto(exportsUrl);
+ await familyPage.waitForURL(base+'/login');
+ assert.equal(await familyPage.getByRole('button',{name:buttonName,exact:true}).count(),0);
  console.log('Verified staff private baseline download, all collection counts/catalog, private headers, mobile layout, changing-export rejection, and anonymous/family denial.');
 }finally{await browser.close();}

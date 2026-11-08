@@ -58,9 +58,6 @@
   display: block;
   margin: 1rem auto;
 }
-.compact .nationalMap {
-  max-height: 220px;
-}
 .zone {
   cursor: pointer;
   outline: none;
@@ -68,9 +65,13 @@
 .zone:hover path,
 .zone:focus-visible path,
 .zone[aria-pressed="true"] path {
+  filter: brightness(0.94);
+}
+.zoneOutline {
+  fill: none;
   stroke: var(--accent);
   stroke-width: 3px;
-  filter: brightness(0.94);
+  pointer-events: none;
 }
 .zoneName {
   font:
@@ -105,17 +106,12 @@
   border-color: var(--accent);
   box-shadow: 0 0 0 1px var(--accent);
 }
-.regionLayout {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(240px, 0.8fr);
-  gap: 2rem;
-  margin-top: 1.5rem;
-  align-items: start;
-}
 .regionMap {
-  overflow: hidden;
+  display: block;
   width: 100%;
-  height: 440px;
+  height: auto;
+  max-height: 580px;
+  margin: 1rem auto;
 }
 .boundaries {
   fill: none;
@@ -148,7 +144,7 @@
 }
 .lscButtons {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr));
   gap: 0.45rem;
 }
 .lscButtons button {
@@ -167,9 +163,13 @@
 .lscButtons svg {
   flex-shrink: 0;
 }
-.lscButtons button[aria-pressed="true"] {
+.lscButtons button[aria-pressed="true"],
+.lscButtons button[data-highlighted="true"] {
   border-color: var(--accent);
   background: var(--surface);
+}
+.lscButtons button[data-highlighted="true"] {
+  box-shadow: 0 0 0 1px var(--accent);
 }
 .localLayout {
   display: grid;
@@ -275,7 +275,6 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  justify-content: space-between;
   padding: 0.8rem;
   text-align: left;
   border-radius: 10px;
@@ -283,6 +282,9 @@
   background: var(--surface);
   color: var(--text-main);
   font-size: 0.85rem;
+}
+.teamList button > span {
+  margin-inline-end: auto;
 }
 .teamList button[aria-pressed="true"] {
   border-color: var(--accent);
@@ -338,14 +340,9 @@
   outline-offset: 3px;
 }
 @media (max-width: 750px) {
-  .regionLayout,
   .localLayout {
     grid-template-columns: 1fr;
     gap: 1rem;
-  }
-  .regionMap {
-    overflow: hidden;
-    height: 380px;
   }
   .localCanvas svg {
     height: 360px;
@@ -365,10 +362,6 @@
   }
   .nationalMap {
     min-height: 240px;
-  }
-  .compact .nationalMap {
-    min-height: 140px;
-    max-height: 180px;
   }
   .teamDetail .heading {
     gap: 0.4rem;

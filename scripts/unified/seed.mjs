@@ -18,6 +18,7 @@ const client = createClient(local.API_URL, local.SERVICE_ROLE_KEY, {
 const password = "Velocity-local-test-2026!";
 const users = [
   ["staff", "coach@velocity-swimming.com"],
+  ["staff", "christiancutter02@gmail.com"],
   ["family-a", "family-a@example.test"],
   ["family-b", "family-b@example.test"],
   ["unverified", "unverified@velocity-swimming.com"],
@@ -40,10 +41,12 @@ for (const [label, email] of users) {
 // Local staff permissions are explicit; a team email domain alone grants no access.
 const staffUsers = await client.auth.admin.listUsers();
 if (staffUsers.error) throw staffUsers.error;
-const staffId = staffUsers.data.users.find(
-  (user) => user.email === "coach@velocity-swimming.com",
-)?.id;
-const grant = await client.from("administrators").upsert({ user_id: staffId });
+const staffGrants = users.filter(([label]) => label === "staff").map(([, email]) => {
+  const staff = staffUsers.data.users.find((user) => user.email === email);
+  if (!staff) throw new Error("Missing local staff fixture: " + email);
+  return { user_id: staff.id };
+});
+const grant = await client.from("administrators").upsert(staffGrants);
 if (grant.error) throw grant.error;
 const athlete = (id, first, last, gender) => ({
   id,

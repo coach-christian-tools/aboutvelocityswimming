@@ -75,7 +75,7 @@ export default function FlaggedResults() {
   return (
     <div className={s.queue}>
       <div className={s.actions}>
-        <Link href="/tools/review">Collection review</Link>
+        <Link href="/tools/review">Back to review</Link>
         <Link href="/tools/times">Browse results to flag</Link>
         <label>
           <input

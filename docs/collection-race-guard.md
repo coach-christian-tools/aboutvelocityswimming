@@ -44,7 +44,8 @@ relay totals, and lead-off eligibility review.
 
 ## Export and full-catalog preparation
 
-Verified staff see **Download private race baseline** in `/tools/review`.
+Verified staff see **Download private race baseline** under **Exports** in
+Velocity Imports (`/tools/review/exports`).
 The existing authenticated session is used; no credentials are included. The
 RPC checks staff itself, fixes its search path, allows only bounded known
 collections, and grants no private-table access. Anonymous, family, and collector

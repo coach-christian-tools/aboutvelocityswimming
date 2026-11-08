@@ -7,8 +7,7 @@ import { importDirectory } from '@/features/swim-resources/lib/domain/database-t
 import { legacyViewerHref, viewerHref } from '@/features/swim-resources/lib/domain/data-viewer';
 
 vi.mock('next/navigation', () => ({ redirect: (path: string) => { throw new Error('redirect:' + path); } }));
-import AthleteRedirect from '@/app/(swim-resources)/tools/swim-resources/admin/athletes/page';
-import SwimRedirect from '@/app/(swim-resources)/tools/swim-resources/admin/swimsdb/page';
+import RetiredStaffRedirect from '@/app/(swim-resources)/tools/swim-resources/admin/[[...path]]/page';
 import AttendanceRedirect from '@/app/(swim-resources)/tools/swim-resources/attendance/admin/page';
 
 describe('migrated navigation', () => {
@@ -30,9 +29,8 @@ describe('migrated navigation', () => {
     expect(legacyViewerHref('unknown')).toBe('/tools/swim-resources/admin');
   });
 
-  it('executes the migrated redirects including array search parameters', async () => {
-    await expect(AthleteRedirect({ searchParams: Promise.resolve({ athlete: ['a #1', 'ignored'] }) })).rejects.toThrow('redirect:/tools/swim-resources/admin/data/athletes/a%20%231');
-    await expect(SwimRedirect({ searchParams: Promise.resolve({ athlete: 'a+b' }) })).rejects.toThrow('redirect:/tools/swim-resources/admin/data/swims?field=athleteId&value=a%2Bb');
+  it('redirects retired staff pages to collection review and keeps the attendance page', () => {
+    expect(() => RetiredStaffRedirect()).toThrow('redirect:/tools/review');
     expect(AttendanceRedirect().type).toBeTruthy();
   });
 });

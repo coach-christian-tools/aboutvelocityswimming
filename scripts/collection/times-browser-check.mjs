@@ -466,19 +466,47 @@ async function checkSharedSelections() {
   await page
     .getByRole("button", { name: "Time Standards", exact: true })
     .click();
-  await page
-    .getByLabel("Standard", { exact: true })
-    .selectOption("sharing-standard");
-  await page.getByLabel("Tier", { exact: true }).selectOption("A");
+  const standards = page.getByRole("region", { name: "Time Standards" });
+  const standardPicker = standards.getByRole("button", {
+    name: "Standard",
+    exact: true,
+  });
+  const tierPicker = standards.getByRole("button", {
+    name: "Tier",
+    exact: true,
+  });
+  const tierDialog = standards.getByRole("dialog", { name: "Tier" });
+  const standardOption = /^Browser verified standards · /;
+  await standardPicker.click();
+  await standards
+    .getByRole("dialog", { name: "Standard" })
+    .getByRole("button", { name: standardOption })
+    .click();
+  await tierPicker.click();
+  await tierDialog.getByRole("button", { name: "A", exact: true }).click();
   await page.reload();
+  assert.match(await standardPicker.innerText(), standardOption);
+  assert.equal(await tierPicker.innerText(), "A");
+  const standardParams = new URL(page.url()).searchParams;
+  assert.equal(standardParams.get("standard"), "sharing-standard");
+  assert.equal(JSON.parse(standardParams.get("standardFilters")).tier, "A");
+
+  await page.setViewportSize({ width: 390, height: 844 });
+  await tierPicker.press("Enter");
+  await tierDialog.waitFor();
   assert.equal(
-    await page.getByLabel("Standard", { exact: true }).inputValue(),
-    "sharing-standard",
+    await tierDialog
+      .getByRole("button", { name: "A", exact: true })
+      .getAttribute("aria-pressed"),
+    "true",
   );
+  await page.keyboard.press("Escape");
+  await tierDialog.waitFor({ state: "hidden" });
   assert.equal(
-    await page.getByLabel("Tier", { exact: true }).inputValue(),
-    "A",
+    await tierPicker.evaluate((button) => document.activeElement === button),
+    true,
   );
+  await page.setViewportSize({ width: 1440, height: 1000 });
 
   // A fresh document restores URL state without relying on mounted components.
   await page.goto(meetUrl);
@@ -537,14 +565,36 @@ try {
     0,
     "Rankings start without an analysis sidebar",
   );
-  const toolsLink = page.getByRole("link", { name: "Tools Page", exact: true });
+  const timesNav = page.getByRole("navigation", { name: "Explore times" });
+  const toolsLink = page.getByRole("link", {
+    name: "Back to Tools",
+    exact: true,
+  });
   assert.equal(await toolsLink.getAttribute("href"), "/tools");
+  const sidebarBounds = await timesNav.boundingBox();
   const headerBounds = await page
     .locator("[data-times-page] > header")
     .boundingBox();
-  assert.equal(headerBounds.x, 0);
-  assert.equal(headerBounds.width, 1440, "The header spans the viewport");
+  assert.ok(sidebarBounds.x + sidebarBounds.width <= headerBounds.x);
+  assert.equal(headerBounds.x + headerBounds.width, 1440);
   const summary = page.getByLabel("Selected times filters");
+  async function checkCenteredSummary() {
+    assert.equal(
+      await summary.evaluate((node) => getComputedStyle(node).justifyContent),
+      "center",
+    );
+    assert.equal(
+      await summary
+        .locator("..")
+        .evaluate((node) => getComputedStyle(node).position),
+      "sticky",
+    );
+  }
+  await checkCenteredSummary();
+  await page.getByRole("button", { name: "Collapse navigation sidebar" }).click();
+  await timesNav.waitFor({ state: "hidden" });
+  await page.getByRole("button", { name: "Open navigation sidebar" }).click();
+  await timesNav.waitFor();
   assert.equal(
     await summary
       .locator("dt")
@@ -674,6 +724,7 @@ try {
     .getByRole("heading", { name: "Free", exact: true })
     .waitFor();
   await page.getByRole("button", { name: "Meet Results", exact: true }).click();
+  await checkCenteredSummary();
   const meetBrowser = page.getByRole("region", {
     name: "Meet browser",
     exact: true,
@@ -964,6 +1015,7 @@ try {
     1,
   );
   await page.getByRole("button", { name: "Athletes", exact: true }).click();
+  await checkCenteredSummary();
   await page
     .getByRole("button", { name: "← Back to team athletes", exact: true })
     .click();
@@ -1298,9 +1350,13 @@ try {
   const summaryBounds = await summary.boundingBox();
   assert.ok(
     summaryBounds.y >= 0 && summaryBounds.y + summaryBounds.height < 250,
-    "The filter summary stays visible under the tabs while scrolling on mobile",
+    "The filter summary stays visible under the mobile toolbar while scrolling",
   );
-  await page.getByRole("button", { name: "Team Records", exact: true }).click();
+  await page.getByRole("button", { name: "Open navigation sidebar" }).click();
+  await timesNav
+    .getByRole("button", { name: "Team Records", exact: true })
+    .click();
+  await timesNav.waitFor({ state: "hidden" });
   const mobileLineup = page
     .getByRole("region", { name: "Team records", exact: true })
     .getByRole("list", { name: "Relay swimmers" })

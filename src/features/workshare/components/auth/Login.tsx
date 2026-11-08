@@ -2,7 +2,6 @@ import { errorCode, errorMessage } from "../../lib/errors"
 import { useState, useEffect, useRef } from "react"
 import { signInWithGoogle, signInWithEmailAndPassword } from "@/lib/auth"
 import { browserClient } from "@/lib/supabase/client"
-import { useRouter } from "next/navigation"
 import { auth } from "../../lib/backend"
 import { useAuth } from "../../contexts/auth"
 import { isToolsAdmin } from "@/lib/tools-access"
@@ -26,13 +25,14 @@ export function Login() {
 
   const otpInputRef = useRef<HTMLInputElement>(null)
   const { user, loading: authLoading, logout } = useAuth()
-  const router = useRouter()
+  const canOpenTools = isToolsAdmin(user?.email, user?.emailVerified === true)
 
   useEffect(() => {
-    if (!authLoading && isToolsAdmin(user?.email, user?.emailVerified === true)) {
-      router.replace("/tools")
+    if (!authLoading && canOpenTools) {
+      // A signed-out prefetch may have cached a redirect back to login.
+      window.location.replace("/tools")
     }
-  }, [user, authLoading, router])
+  }, [authLoading, canOpenTools])
 
   useEffect(() => {
     if (step === "code" && otpInputRef.current) {
@@ -150,7 +150,7 @@ export function Login() {
           </p>
 
           <p className="text-sm text-center mb-5">Tools are temporarily restricted to the administrator account.</p>
-          {user && !authLoading && !isToolsAdmin(user.email, user.emailVerified) && (
+          {user && !authLoading && !canOpenTools && (
             <div className="text-sm text-center mb-5 space-y-2" role="status">
               <p>This account does not have access to the tools.</p>
               <button type="button" className="underline" onClick={async () => {

@@ -207,7 +207,7 @@ export default function Programs() {
               </p>
               <div className={scopedClasses(styles, 'mt-4')}>
                 <a
-                  href="https://www.gomotionapp.com/team/ievs/page/online-registration1"
+                  href="https://www.gomotionapp.com/team/ievs/page/online-registration1/registration"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={scopedClasses(styles, 'btn btn-primary w-full register-cta-btn')}

@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { ExternalLink, ChevronRight, MapPin } from "lucide-react";
 import { browserClient, hasBackendConfiguration } from "@/lib/supabase/client";
+import AtlasSectionGuide, { atlasTopSection } from "../AtlasSectionGuide";
 import { field, originalSource, reviewedDate, type WikiEntry } from "../wiki";
 import {
   boundarySource,
@@ -12,6 +13,12 @@ import {
   type NationalMap,
 } from "./geometry";
 import styles from "./MapExplorer.module.css";
+const usaSection = { id: "national-heading", label: "USA" };
+const zoneSection = { id: "zone-heading", label: "Zone" };
+const lscSection = { id: "lsc-heading", label: "LSC" };
+const usaSections = [atlasTopSection, usaSection];
+const zoneSections = [...usaSections, zoneSection];
+const lscSections = [...zoneSections, lscSection];
 const colors: Record<string, string> = {
   western: "#a1c4c2",
   central: "#c3cbdc",
@@ -19,11 +26,16 @@ const colors: Record<string, string> = {
   eastern: "#c9c4d8",
 };
 const zoneViews: Record<string, string> = {
-  western: "10 55 335 540",
+  western: "-5 55 335 365",
   central: "270 85 350 325",
   southern: "225 245 480 285",
   eastern: "560 80 225 275",
 };
+// The Western paths in national.json are ordered mainland, Alaska, then Hawaii.
+const westernInsets = [
+  { lscId: "usa-lsc-ak", start: 1, end: 8, x: -41.1, y: 139.8, scale: 0.4 },
+  { lscId: "usa-lsc-hi", start: 8, end: 16, x: -18.24, y: 165.4, scale: 0.48 },
+];
 function color(id: string) {
   return colors[id.replace("usa-zone-", "")] ?? "#b5c9c7";
 }
@@ -34,11 +46,17 @@ async function asset<T>(url: string, signal: AbortSignal): Promise<T> {
 }
 export default function MapExplorer({ facets }: { facets: WikiEntry[] }) {
   const [national, setNational] = useState<NationalMap | null>(null);
+  const [hoveredZoneId, setHoveredZoneId] = useState("");
+  const [focusedZoneId, setFocusedZoneId] = useState("");
   const [zoneId, setZoneId] = useState("");
   const [lscId, setLscId] = useState("");
+  const [hoveredLscId, setHoveredLscId] = useState("");
+  const [focusedLscId, setFocusedLscId] = useState("");
   const [detail, setDetail] = useState<DetailMap | null>(null);
   const [teams, setTeams] = useState<WikiEntry[]>([]);
-  const [selected, setSelected] = useState("");
+  const [selectedTeamIds, setSelectedTeamIds] = useState<Set<string>>(
+    () => new Set(),
+  );
   const [search, setSearch] = useState("");
   const [error, setError] = useState("");
   const [detailError, setDetailError] = useState("");
@@ -109,24 +127,28 @@ export default function MapExplorer({ facets }: { facets: WikiEntry[] }) {
   const lscs = facets.filter(
     (entry) => entry.kind === "lsc" && field(entry.data, "zoneId") === zoneId,
   );
-  const activeTeam = teams.find((team) => team.id === selected);
+  const highlightedLscId = hoveredLscId || focusedLscId;
+  const activeTeams = teams.filter((team) => selectedTeamIds.has(team.id));
   const visibleTeams = teams.filter((team) =>
     `${team.title} ${field(team.data, "geographicCoverage")}`
       .toLowerCase()
       .includes(search.toLowerCase()),
   );
   function chooseZone(id: string) {
+    setHoveredLscId("");
+    setFocusedLscId("");
     setZoneId(id);
     setLscId("");
-    setSelected("");
+    setSelectedTeamIds(new Set());
     setDetail(null);
     setTeams([]);
     setSearch("");
     setDetailError("");
   }
   function chooseLsc(id: string) {
+    if (id === lscId) return;
     setLscId(id);
-    setSelected("");
+    setSelectedTeamIds(new Set());
     setDetail(null);
     setTeams([]);
     setSearch("");
@@ -152,6 +174,8 @@ export default function MapExplorer({ facets }: { facets: WikiEntry[] }) {
   const locatedCount = new Set(points.map((point) => point.team.id)).size;
   function mapSvg(regional: boolean) {
     if (!national) return null;
+    const showWesternInsets = regional && zoneId === "usa-zone-western";
+    const outlinedZones = new Set([zoneId, focusedZoneId, hoveredZoneId]);
     return (
       <svg
         viewBox={
@@ -172,7 +196,8 @@ export default function MapExplorer({ facets }: { facets: WikiEntry[] }) {
             <clipPath id={`zone-boundary-${zoneId}`}>
               {national.zones
                 .find((item) => item.id === zoneId)
-                ?.paths.map((path, index) => (
+                ?.paths.slice(0, showWesternInsets ? 1 : undefined)
+                .map((path, index) => (
                   <path key={index} d={path} />
                 ))}
             </clipPath>
@@ -187,6 +212,12 @@ export default function MapExplorer({ facets }: { facets: WikiEntry[] }) {
               tabIndex={regional ? undefined : 0}
               aria-label={regional ? undefined : `Explore ${item.name}`}
               aria-pressed={regional ? undefined : zoneId === item.id}
+              onPointerEnter={
+                regional ? undefined : () => setHoveredZoneId(item.id)
+              }
+              onPointerLeave={regional ? undefined : () => setHoveredZoneId("")}
+              onFocus={regional ? undefined : () => setFocusedZoneId(item.id)}
+              onBlur={regional ? undefined : () => setFocusedZoneId("")}
               onClick={regional ? undefined : () => chooseZone(item.id)}
               onKeyDown={
                 regional
@@ -201,16 +232,27 @@ export default function MapExplorer({ facets }: { facets: WikiEntry[] }) {
               className={regional ? undefined : styles.zone}
               opacity={regional && item.id !== zoneId ? 0.12 : 1}
             >
-              {item.paths.map((path, index) => (
-                <path
-                  key={index}
-                  d={path}
-                  fill={color(item.id)}
-                  stroke="var(--surface)"
-                  strokeWidth="1.5"
-                  vectorEffect="non-scaling-stroke"
-                />
-              ))}
+              {item.paths.map((path, index) => {
+                const inset = showWesternInsets
+                  ? westernInsets.find(
+                      ({ start, end }) => index >= start && index < end,
+                    )
+                  : undefined;
+                return (
+                  <path
+                    key={index}
+                    d={path}
+                    transform={
+                      inset &&
+                      `translate(${inset.x} ${inset.y}) scale(${inset.scale})`
+                    }
+                    fill={color(item.id)}
+                    stroke="var(--surface)"
+                    strokeWidth="1.5"
+                    vectorEffect="non-scaling-stroke"
+                  />
+                );
+              })}
               <title>{item.name}</title>
             </g>
           ))}
@@ -228,6 +270,11 @@ export default function MapExplorer({ facets }: { facets: WikiEntry[] }) {
           national.lscs
             .filter((label) => lscs.some((entry) => entry.id === label.id))
             .map((label) => {
+              const inset = showWesternInsets
+                ? westernInsets.find(({ lscId }) => lscId === label.id)
+                : undefined;
+              const x = inset ? label.x * inset.scale + inset.x : label.x;
+              const y = inset ? label.y * inset.scale + inset.y : label.y;
               const name =
                 lscs.find((entry) => entry.id === label.id)?.title ??
                 label.code;
@@ -239,6 +286,14 @@ export default function MapExplorer({ facets }: { facets: WikiEntry[] }) {
                   tabIndex={0}
                   aria-label={`Explore ${name}`}
                   aria-pressed={lscId === label.id}
+                  onPointerEnter={() => setHoveredLscId(label.id)}
+                  onPointerLeave={() => setHoveredLscId("")}
+                  onFocus={(event) => {
+                    if (event.currentTarget.matches(":focus-visible")) {
+                      setFocusedLscId(label.id);
+                    }
+                  }}
+                  onBlur={() => setFocusedLscId("")}
                   onClick={() => chooseLsc(label.id)}
                   onKeyDown={(event) => {
                     if (["Enter", " "].includes(event.key)) {
@@ -248,14 +303,8 @@ export default function MapExplorer({ facets }: { facets: WikiEntry[] }) {
                   }}
                 >
                   <title>{name}</title>
-                  <rect
-                    x={label.x - 9}
-                    y={label.y - 8}
-                    width="18"
-                    height="15"
-                    rx="4"
-                  />
-                  <text x={label.x} y={label.y + 2} textAnchor="middle">
+                  <rect x={x - 9} y={y - 8} width="18" height="15" rx="4" />
+                  <text x={x} y={y + 2} textAnchor="middle">
                     {label.code}
                   </text>
                 </g>
@@ -278,10 +327,25 @@ export default function MapExplorer({ facets }: { facets: WikiEntry[] }) {
               {name}
             </text>
           ))}
+        {!regional && (
+          <g className={styles.zoneOutline} aria-hidden="true">
+            {national.zones
+              .filter((item) => outlinedZones.has(item.id))
+              .flatMap((item) =>
+                item.paths.map((path, index) => (
+                  <path
+                    key={`${item.id}-${index}`}
+                    d={path}
+                    vectorEffect="non-scaling-stroke"
+                  />
+                )),
+              )}
+          </g>
+        )}
       </svg>
     );
   }
-  return (
+  const explorer = (
     <div className={styles.explorer}>
       <nav className={styles.breadcrumb} aria-label="Map location">
         <button onClick={() => chooseZone("")}>USA</button>
@@ -300,11 +364,13 @@ export default function MapExplorer({ facets }: { facets: WikiEntry[] }) {
           </>
         )}
       </nav>
-      <section className={styles.stage} aria-labelledby="national-heading">
+      <section className={styles.stage} aria-labelledby={usaSection.id}>
         <div className={styles.heading}>
           <div>
             <p className={styles.eyebrow}>Explore the swimming community</p>
-            <h2 id="national-heading">A place for every team.</h2>
+            <h2 id={usaSection.id} tabIndex={-1} data-atlas-section>
+              A place for every team.
+            </h2>
             <p>Start with a zone, find your LSC, and explore its teams.</p>
           </div>
           <span className={styles.step}>01 / USA</span>
@@ -324,7 +390,7 @@ export default function MapExplorer({ facets }: { facets: WikiEntry[] }) {
         ) : !national ? (
           <p role="status">Loading map…</p>
         ) : (
-          <div className={zoneId ? styles.compact : ""}>{mapSvg(false)}</div>
+          mapSvg(false)
         )}
         <div className={styles.zoneButtons}>
           {(national?.zones ?? []).map((item) => (
@@ -340,41 +406,44 @@ export default function MapExplorer({ facets }: { facets: WikiEntry[] }) {
         </div>
       </section>
       {zoneId && (
-        <section className={styles.stage} aria-labelledby="zone-heading">
+        <section className={styles.stage} aria-labelledby={zoneSection.id}>
           <div className={styles.heading}>
             <div>
               <p className={styles.eyebrow}>Local Swimming Committees</p>
-              <h2 id="zone-heading">{zone?.title ?? "Select an LSC"}</h2>
+              <h2 id={zoneSection.id} tabIndex={-1} data-atlas-section>
+                {zone?.title ?? "Select an LSC"}
+              </h2>
               <p>Choose an abbreviation on the map or an LSC below.</p>
             </div>
             <span className={styles.step}>02 / ZONE</span>
           </div>
-          <div className={styles.regionLayout}>
-            {mapSvg(true)}
-            <div className={styles.lscButtons}>
-              {lscs.map((entry) => (
-                <button
-                  key={entry.id}
-                  aria-pressed={lscId === entry.id}
-                  onClick={() => chooseLsc(entry.id)}
-                >
-                  {entry.title}
-                  <ChevronRight size={14} aria-hidden="true" />
-                </button>
-              ))}
-              {!lscs.length && (
-                <p>No approved LSC records are available for this zone yet.</p>
-              )}
-            </div>
+          {mapSvg(true)}
+          <div className={styles.lscButtons}>
+            {lscs.map((entry) => (
+              <button
+                key={entry.id}
+                aria-pressed={lscId === entry.id}
+                data-highlighted={highlightedLscId === entry.id || undefined}
+                onClick={() => chooseLsc(entry.id)}
+              >
+                {entry.title}
+                <ChevronRight size={14} aria-hidden="true" />
+              </button>
+            ))}
+            {!lscs.length && (
+              <p>No approved LSC records are available for this zone yet.</p>
+            )}
           </div>
         </section>
       )}
       {lscId && (
-        <section className={styles.stage} aria-labelledby="lsc-heading">
+        <section className={styles.stage} aria-labelledby={lscSection.id}>
           <div className={styles.heading}>
             <div>
               <p className={styles.eyebrow}>Teams & places</p>
-              <h2 id="lsc-heading">{lsc?.title ?? "LSC teams"}</h2>
+              <h2 id={lscSection.id} tabIndex={-1} data-atlas-section>
+                {lsc?.title ?? "LSC teams"}
+              </h2>
               <p>
                 {loading ? "Loading teams…" : `${teams.length} approved teams`}
               </p>
@@ -430,16 +499,17 @@ export default function MapExplorer({ facets }: { facets: WikiEntry[] }) {
                           y =
                             group.reduce((sum, p) => sum + p.y, 0) /
                             group.length;
-                        const active = group.some(
-                            (p) => p.team.id === selected,
-                          ),
-                          index = members.findIndex(
-                            (p) => p.team.id === selected,
-                          );
-                        const name = group
-                          .map((p) => p.team.title)
-                          .filter((name, i, all) => all.indexOf(name) === i)
+                        const active = members.some(({ team }) =>
+                          selectedTeamIds.has(team.id),
+                        );
+                        const name = members
+                          .map(({ team }) => team.title)
                           .join(", ");
+                        function selectTeams() {
+                          setSelectedTeamIds(
+                            new Set(members.map(({ team }) => team.id)),
+                          );
+                        }
                         const radius =
                           Math.max(detail.viewBox[2], detail.viewBox[3]) / 48;
                         return (
@@ -452,18 +522,15 @@ export default function MapExplorer({ facets }: { facets: WikiEntry[] }) {
                             )}
                             role="button"
                             tabIndex={0}
-                            aria-label={`${name}${members.length > 1 ? ". Select to cycle teams at this location" : ""}`}
-                            onClick={() =>
-                              setSelected(
-                                members[(index + 1) % members.length].team.id,
-                              )
-                            }
+                            aria-label={name}
+                            aria-pressed={members.every(({ team }) =>
+                              selectedTeamIds.has(team.id),
+                            )}
+                            onClick={selectTeams}
                             onKeyDown={(event) => {
                               if (["Enter", " "].includes(event.key)) {
                                 event.preventDefault();
-                                setSelected(
-                                  members[(index + 1) % members.length].team.id,
-                                );
+                                selectTeams();
                               }
                             }}
                           >
@@ -490,8 +557,7 @@ export default function MapExplorer({ facets }: { facets: WikiEntry[] }) {
                     </p>
                     <p className={styles.note}>
                       Illustrative locations. Hollow dots use the team’s listed
-                      city, not a confirmed home pool. Shared dots cycle through
-                      teams.
+                      city. Select a numbered dot to see all its teams.
                     </p>
                   </div>
                   <aside
@@ -505,7 +571,7 @@ export default function MapExplorer({ facets }: { facets: WikiEntry[] }) {
                         value={search}
                         onChange={(event) => {
                           setSearch(event.target.value);
-                          setSelected("");
+                          setSelectedTeamIds(new Set());
                         }}
                         placeholder="Team or city…"
                       />
@@ -521,8 +587,8 @@ export default function MapExplorer({ facets }: { facets: WikiEntry[] }) {
                       {visibleTeams.map((team) => (
                         <button
                           key={team.id}
-                          aria-pressed={selected === team.id}
-                          onClick={() => setSelected(team.id)}
+                          aria-pressed={selectedTeamIds.has(team.id)}
+                          onClick={() => setSelectedTeamIds(new Set([team.id]))}
                         >
                           <span>
                             {team.title}
@@ -544,46 +610,48 @@ export default function MapExplorer({ facets }: { facets: WikiEntry[] }) {
                     )}
                   </aside>
                 </div>
-                {activeTeam && (
-                  <article className={styles.teamDetail} aria-live="polite">
-                    <div className={styles.heading}>
-                      <h3>
-                        {activeTeam.title}
-                        {originalSource(activeTeam) && (
-                          <a
-                            href={originalSource(activeTeam)}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label={`Website for ${activeTeam.title}`}
-                          >
-                            <ExternalLink size={18} />
-                          </a>
-                        )}
-                      </h3>
-                      <time dateTime={activeTeam.updated_at}>
-                        Reviewed {reviewedDate(activeTeam.updated_at)}
-                      </time>
-                    </div>
-                    <p>{field(activeTeam.data, "summary")}</p>
-                    <ul>
-                      {teamLocations(activeTeam).map((location, index) => (
-                        <li key={index}>
-                          {location.label} ·{" "}
-                          {location.precision === "pool"
-                            ? "Reviewed pool"
-                            : "Approximate city location"}{" "}
-                          <a
-                            href={location.sourceUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            Location source ↗
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  </article>
-                )}
+                <div aria-live="polite">
+                  {activeTeams.map((activeTeam) => (
+                    <article className={styles.teamDetail} key={activeTeam.id}>
+                      <div className={styles.heading}>
+                        <h3>
+                          {activeTeam.title}
+                          {originalSource(activeTeam) && (
+                            <a
+                              href={originalSource(activeTeam)}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              aria-label={`Website for ${activeTeam.title}`}
+                            >
+                              <ExternalLink size={18} />
+                            </a>
+                          )}
+                        </h3>
+                        <time dateTime={activeTeam.updated_at}>
+                          Reviewed {reviewedDate(activeTeam.updated_at)}
+                        </time>
+                      </div>
+                      <p>{field(activeTeam.data, "summary")}</p>
+                      <ul>
+                        {teamLocations(activeTeam).map((location, index) => (
+                          <li key={index}>
+                            {location.label} ·{" "}
+                            {location.precision === "pool"
+                              ? "Reviewed pool"
+                              : "Approximate city location"}{" "}
+                            <a
+                              href={location.sourceUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Location source ↗
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </article>
+                  ))}
+                </div>
               </>
             )
           )}
@@ -598,5 +666,15 @@ export default function MapExplorer({ facets }: { facets: WikiEntry[] }) {
         approved Wiki records.
       </p>
     </div>
+  );
+  return (
+    <AtlasSectionGuide
+      sections={lscId ? lscSections : zoneId ? zoneSections : usaSections}
+      nextSectionId={
+        lscId ? lscSection.id : zoneId ? zoneSection.id : undefined
+      }
+    >
+      {explorer}
+    </AtlasSectionGuide>
   );
 }

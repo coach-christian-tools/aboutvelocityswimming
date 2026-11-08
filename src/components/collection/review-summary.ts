@@ -1,5 +1,6 @@
 import type { Json } from "@/lib/supabase/database.types";
 import { formatSwimTime } from "@/features/swim-resources/lib/domain/swim-time";
+import { rounds } from "./times-data";
 
 export type ReviewWrite = { path: string; after: Json };
 export type ReviewRead = { path: string; before: Json };
@@ -29,6 +30,7 @@ export function raceSummary(value: Json, profiles: Record<string, Json>) {
   return {
     swimmer: typeof race.relayName === 'string' ? race.relayName : athleteName(profiles[id]) || athleteName({ name: race.athleteName ?? null }) || (id ? `Name unavailable (${id})` : "Missing athlete link"),
     event: `${typeof race.distance === "number" ? race.distance : "?"} ${relay && race.stroke === 'IM' ? 'Medley' : stroke}${relay ? " relay" : ""}${race.resultOrigin === 'relay_leadoff' ? ' · verified lead-off' : ''}`,
+    round: typeof race.round === "string" ? rounds[race.round] ?? race.round : "",
     time: status !== "OK" ? status : formatSwimTime(typeof race.timeMs === "number" ? race.timeMs : null, "No time"),
     course: typeof race.course === "string" ? race.course : "Unknown course",
     meet: typeof meet.name === "string" ? meet.name : "Unknown meet",

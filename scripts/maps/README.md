@@ -26,4 +26,4 @@ All four national zones and all 59 LSC detail outlines are available. Team-marke
 
 The Inland Empire affine display adapter is fitted to the ten numbered city locators on official page 18 using Census representative coordinates (approximate 3.2 PDF-point RMS fit). Pool coordinates stay geographic in the database, independent of this display adapter. Boundary changes require regenerating geometry and checking calibration. Never imply that an approximate marker establishes a home pool or legal jurisdiction.
 
-Shared or nearby locations group into selectable markers; clicking cycles teams, and the searchable list always exposes each individual team. Missing/unreviewed locations remain in the list. There are no paid map tiles or geocoding requests per visit.
+Shared or nearby locations group into selectable markers. Selecting a marker highlights every team it represents in the searchable list and displays their details below the map. Teams with missing or unreviewed locations remain in the list. There are no paid map tiles or geocoding requests per visit.

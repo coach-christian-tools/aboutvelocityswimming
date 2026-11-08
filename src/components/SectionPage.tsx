@@ -3,7 +3,7 @@ import Footer from "./Footer";
 import styles from "./SectionPage.module.css";
 
 export default function SectionPage({ eyebrow, title, description, children }: {
-  eyebrow?: string;
+  eyebrow?: ReactNode;
   title?: string;
   description?: string;
   children: ReactNode;

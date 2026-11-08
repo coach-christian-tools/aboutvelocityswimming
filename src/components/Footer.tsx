@@ -86,7 +86,7 @@ export default function Footer() {
           <div className={scopedClasses(styles, 'footer-links')}>
             <h4>Quick Links</h4>
             <ul>
-              <li><a href="https://www.gomotionapp.com/team/ievs/page/online-registration1" target="_blank" rel="noopener noreferrer">SportsEngine Registration</a></li>
+              <li><a href="https://www.gomotionapp.com/team/ievs/page/online-registration1/registration" target="_blank" rel="noopener noreferrer">SportsEngine Registration</a></li>
               <li><a href="https://www.gomotionapp.com/team/ievs/page/practice-calendar/practice-calendar1" target="_blank" rel="noopener noreferrer">Current Schedules</a></li>
             </ul>
           </div>

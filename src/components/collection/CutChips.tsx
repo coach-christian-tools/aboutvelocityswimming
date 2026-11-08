@@ -13,9 +13,11 @@ function description(cut: ResultCut, race: Race) {
 export default function CutChips({
   race,
   sets,
+  inline = false,
 }: {
   race: Race;
   sets: StandardSet[];
+  inline?: boolean;
 }) {
   const id = useId();
   const [active, setActive] = useState<{
@@ -44,7 +46,10 @@ export default function CutChips({
     });
   };
   return (
-    <span className={s.chips} aria-label="Time standards achieved">
+    <span
+      className={inline ? `${s.chips} ${s.inline}` : s.chips}
+      aria-label="Time standards achieved"
+    >
       {cuts.map((cut, index) => (
         <span key={cut.id} className={s.item}>
           <button

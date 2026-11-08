@@ -1,6 +1,6 @@
 "use client";
 import StandardReview from "./StandardReview";
-import PrivateRaceBaseline from "./PrivateRaceBaseline";
+import ReviewResultsTable from "./ReviewResultsTable";
 import type { StandardSet } from "@/features/swim-resources/types/schema";
 import { clearTimesCache } from "./times-cache";
 import { saveReviewDecision } from "./save-review-decision";
@@ -101,6 +101,7 @@ function Records({ writes, reads }: { writes: Json; reads: Json }) {
   const [query, setQuery] = useState("");
   const [filter, setFilter] = useState("all");
   const [page, setPage] = useState(0);
+  const [showAllRecords, setShowAllRecords] = useState(false);
   const athleteIds = useMemo(
     () => [
       ...new Set(
@@ -165,29 +166,54 @@ function Records({ writes, reads }: { writes: Json; reads: Json }) {
         ? name
         : change.path;
     const issues = reviewIssues(value);
-    return { change, previous, swim, knowledge, action, label, issues };
+    return { change, previous, swim, knowledge, action, label, issues, race };
   });
-  const filtered = rows.filter(
+  const raceRows = rows.filter((row) => row.race !== null);
+  const showingResults = raceRows.length > 0 && !showAllRecords;
+  const visibleRows = showingResults ? raceRows : rows;
+  const search = query.trim().toLowerCase();
+  const filtered = visibleRows.filter(
     (row) =>
       (filter === "all" ||
         (filter === "attention"
           ? row.issues.length > 0 || row.action === "Remove"
           : row.action.toLowerCase() === filter)) &&
-      `${row.label} ${row.change.path} ${row.issues.join(" ")}`
+      `${row.label} ${row.race?.round ?? ""} ${row.race?.meet ?? ""} ${row.race?.date ?? ""} ${row.change.path} ${row.issues.join(" ")}`
         .toLowerCase()
-        .includes(query.toLowerCase()),
+        .includes(search),
   );
+  const hasRecordPages = !showingResults && filtered.length > 25;
   const currentPage = Math.min(
     page,
     Math.max(0, Math.ceil(filtered.length / 25) - 1),
   );
   return (
     <div className={`${styles.records} space-y-2`}>
+      {raceRows.length > 0 && (
+        <div className="flex flex-wrap gap-2" role="group" aria-label="Batch record view">
+          <button
+            type="button"
+            className={showingResults ? styles.primary : undefined}
+            aria-pressed={showingResults}
+            onClick={() => setShowAllRecords(false)}
+          >
+            Results table
+          </button>
+          <button
+            type="button"
+            className={!showingResults ? styles.primary : undefined}
+            aria-pressed={!showingResults}
+            onClick={() => setShowAllRecords(true)}
+          >
+            All records
+          </button>
+        </div>
+      )}
       <div className="flex flex-wrap items-center gap-2">
         <input
           type="search"
-          aria-label="Search records"
-          placeholder="Search records or conflicts…"
+          aria-label={showingResults ? "Search results" : "Search records"}
+          placeholder={showingResults ? "Search swimmers, meets, events or conflicts…" : "Search records or conflicts…"}
           className="min-w-0 flex-1 rounded border p-2 text-sm"
           value={query}
           onChange={(event) => {
@@ -196,7 +222,7 @@ function Records({ writes, reads }: { writes: Json; reads: Json }) {
           }}
         />
         <select
-          aria-label="Filter records"
+          aria-label={showingResults ? "Filter results" : "Filter records"}
           className="rounded border p-2 text-sm"
           value={filter}
           onChange={(event) => {
@@ -204,11 +230,11 @@ function Records({ writes, reads }: { writes: Json; reads: Json }) {
             setPage(0);
           }}
         >
-          <option value="all">All records ({rows.length})</option>
+          <option value="all">{showingResults ? "All results" : "All records"} ({visibleRows.length})</option>
           <option value="attention">
             Needs attention (
             {
-              rows.filter((row) => row.issues.length || row.action === "Remove")
+              visibleRows.filter((row) => row.issues.length || row.action === "Remove")
                 .length
             }
             )
@@ -218,15 +244,25 @@ function Records({ writes, reads }: { writes: Json; reads: Json }) {
           <option value="remove">Removals</option>
         </select>
       </div>
-      <p className="text-xs text-text-secondary">
-        {filtered.length
-          ? `${currentPage * 25 + 1}–${Math.min((currentPage + 1) * 25, filtered.length)} of ${filtered.length} records`
-          : "No records match."}{" "}
-        · Expand a record to inspect its fields.
-      </p>
-      {filtered.length > 25 && <PageButtons page={currentPage} pages={Math.ceil(filtered.length / 25)} label="Record pages" onChange={setPage} />}
+      {showingResults ? (
+        <p className="text-xs text-text-secondary" role="status">
+          {filtered.length ? `${filtered.length} of ${raceRows.length} results` : "No results match."}
+        </p>
+      ) : (
+        <p className="text-xs text-text-secondary">
+          {filtered.length
+            ? `${currentPage * 25 + 1}–${Math.min((currentPage + 1) * 25, filtered.length)} of ${filtered.length} records · Expand a record to inspect its fields.`
+            : "No records match."}
+        </p>
+      )}
+      {hasRecordPages && <PageButtons page={currentPage} pages={Math.ceil(filtered.length / 25)} label="Record pages" onChange={setPage} />}
       {lookupError && <p role="alert">{lookupError}</p>}
-      {filtered
+      {showingResults && filtered.length > 0 && (
+        <ReviewResultsTable rows={filtered.flatMap(({ change, race, action, issues }) =>
+          race ? [{ path: change.path, race, action, issueCount: issues.length }] : [],
+        )} />
+      )}
+      {!showingResults && filtered
         .slice(currentPage * 25, (currentPage + 1) * 25)
         .map(({ change, previous, swim, knowledge, action, label, issues }) => {
           return (
@@ -315,7 +351,7 @@ function Records({ writes, reads }: { writes: Json; reads: Json }) {
             </details>
           );
         })}
-      {filtered.length > 25 && (
+      {hasRecordPages && (
         <PageButtons page={currentPage} pages={Math.ceil(filtered.length / 25)} label="Record pages" onChange={setPage} />
       )}
     </div>
@@ -464,16 +500,6 @@ export default function ReviewQueue() {
     );
   return (
     <section className={styles.queue} aria-label="Collected changes">
-      <div className={styles.guide}>
-        <p>
-          Collected changes stay private until approved. A batch is applied
-          together; changed records require a fresh collection.
-          {status === "pending" || status === "held" ? " Review teams, venues, and meets first, then swimmer profiles, then results." : ""}
-        </p>
-        <Link href="/tools/review/meets" className={styles.meetLink}>Choose meets to finish importing <span aria-hidden="true">→</span></Link>
-        <Link href="/tools/review/results" className={styles.meetLink}>Review flagged results <span aria-hidden="true">→</span></Link>
-        <PrivateRaceBaseline />
-      </div>
       <div className={styles.toolbar}>
         <label className={styles.field}>
           {activeQueue ? "Search batches and records" : "Search completed batches"}

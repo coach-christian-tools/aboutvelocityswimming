@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import { collectPrivateRaceBaseline } from "@/lib/collection/race-baseline";
-import styles from "./ReviewQueue.module.css";
 
 export default function PrivateRaceBaseline() {
   const [busy, setBusy] = useState(false);
@@ -27,9 +26,12 @@ export default function PrivateRaceBaseline() {
       setMessage(error instanceof Error ? error.message : "Private export failed. No complete file was created.");
     } finally { setBusy(false); }
   }
-  return <div>
-    <button className={styles.button} onClick={download} disabled={busy}>{busy ? "Preparing private baseline…" : "Download private race baseline"}</button>
-    <p className={styles.muted}>Complete private race data and the whole meet catalog for staff preparation.</p>
-    {message && <p role="status">{message}</p>}
-  </div>;
+  return (
+    <>
+      <button type="button" className="btn btn-secondary" onClick={download} disabled={busy}>
+        {busy ? "Preparing private baseline…" : "Download private race baseline"}
+      </button>
+      {message && <p role="status">{message}</p>}
+    </>
+  );
 }

@@ -1,6 +1,6 @@
 .pill { position: fixed; bottom: .75rem; z-index: 1100; border: 1px solid var(--border); border-radius: 999px; background: var(--surface); color: var(--text-main); padding: .6rem 1rem; box-shadow: var(--shadow-sm); font-size: .875rem; text-decoration: none; }
-.account { right: .75rem; max-width: min(70vw, 24rem); }
-.staff { left: .75rem; }
+.account { right: .75rem; max-width: min(70vw, 24rem); display: flex; align-items: center; gap: .375rem; }
+.icon { width: 1.2em; height: 1.2em; flex-shrink: 0; }
 .email { position: relative; display: block; min-width: 4.5rem; max-width: 100%; white-space: nowrap; }
 .emailText { display: block; overflow: hidden; text-overflow: ellipsis; }
 .signOut { position: absolute; inset: 0; display: grid; place-items: center; opacity: 0; }
@@ -10,4 +10,4 @@
   .account:hover .emailText { opacity: 0; }
   .account:hover .signOut { opacity: 1; }
 }
-@media (max-width: 550px) { .account { max-width: calc(100vw - 10rem); } .pill { font-size: .75rem; padding: .65rem .8rem; } }
+@media (max-width: 550px) { .pill { font-size: .75rem; padding: .65rem .8rem; } }

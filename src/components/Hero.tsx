@@ -25,7 +25,7 @@ export default function Hero() {
         
         <div className={scopedClasses(styles, 'hero-ctas')}>
           <Link href="/sponsors" className={scopedClasses(styles, 'btn btn-secondary glass-btn')}>Partner With Us</Link>
-          <a href="https://www.gomotionapp.com/team/ievs/page/online-registration1" target="_blank" rel="noopener noreferrer" className={scopedClasses(styles, 'btn btn-primary')}>Join the Team</a>
+          <a href="https://www.gomotionapp.com/team/ievs/page/online-registration1/registration" target="_blank" rel="noopener noreferrer" className={scopedClasses(styles, 'btn btn-primary')}>Join the Team</a>
         </div>
       </div>
     </section>

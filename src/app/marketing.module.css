@@ -7,8 +7,8 @@
   scroll-behavior: smooth;
 }
 
-.marketing-site:has([data-times-page]) {
-  /* Keep the Times header sticky without creating a horizontal scroll container. */
+.marketing-site:has([data-tool-sidebar]) {
+  /* Sticky tool navigation needs to use the document's scroll position. */
   overflow-x: clip;
 }
 

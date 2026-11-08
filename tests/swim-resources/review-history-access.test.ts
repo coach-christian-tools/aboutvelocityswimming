@@ -8,7 +8,6 @@ const mocks = vi.hoisted(() => ({
 vi.mock("@/lib/supabase/client", () => ({ browserClient: mocks.browserClient, hasBackendConfiguration: true }));
 vi.mock("@/features/workshare/contexts/auth", () => ({ useAuth: () => mocks.auth }));
 vi.mock("@/components/collection/StandardReview", () => ({ default: () => null }));
-vi.mock("@/components/collection/PrivateRaceBaseline", () => ({ default: () => null }));
 import ReviewQueue from "@/components/collection/ReviewQueue";
 
 describe("review history retains the staff UI boundary", () => {

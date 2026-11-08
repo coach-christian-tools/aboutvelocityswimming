@@ -1,7 +1,6 @@
 "use client";
 
 import { Suspense, useId, useRef, useState } from "react";
-import Link from "next/link";
 import {
   ArrowUpRight,
   BarChart3,
@@ -16,6 +15,7 @@ import {
   Users,
 } from "lucide-react";
 import { hasBackendConfiguration } from "@/lib/supabase/client";
+import ToolSidebar, { ToolSidebarItem } from "@/components/shared/ToolSidebar";
 import { formatSwimTime } from "@/features/swim-resources/lib/domain/swim-time";
 import {
   ageGroups,
@@ -34,8 +34,11 @@ import {
 import s from "./TimesDatabase.module.css";
 import loadingStyles from "./TimesLoading.module.css";
 import AthleteBrowser from "./AthleteBrowser";
-import TimeStandards from "./TimeStandards";
-import TimesEventSelector from "./TimesEventSelector";
+import TimeStandards, {
+  TimeStandardsSummary,
+  useTimeStandardsSelection,
+} from "./TimeStandards";
+import { FilterChips, FilterSummary, PopupPicker } from "./TimesFilters";
 import RaceDetails from "./RaceDetails";
 import { ModerationNotice } from "./ResultModeration";
 import RelayLineup from "./RelayLineup";
@@ -51,6 +54,13 @@ import { useStandards } from "./use-standards";
 import type { StandardSet } from "@/features/swim-resources/types/schema";
 
 type View = "rankings" | "meets" | "athletes" | "records" | "standards";
+const timesViews = [
+  ["rankings", "Event Rankings", BarChart3],
+  ["records", "Team Records", Trophy],
+  ["standards", "Time Standards", Timer],
+  ["meets", "Meet Results", CalendarDays],
+  ["athletes", "Athletes", Users],
+] as const;
 const pageSize = 25;
 const ageOptions: [string, string][] = ageGroups.map(([key, label]) => [
   key,
@@ -108,160 +118,6 @@ function Select({
         ))}
       </select>
     </div>
-  );
-}
-function PopupPicker({
-  label,
-  value,
-  onChange,
-  options,
-  all,
-  course,
-  onCourseChange,
-  hideLabel = false,
-  showChevron = true,
-}: {
-  label: string;
-  hideLabel?: boolean;
-  showChevron?: boolean;
-  value: string;
-  onChange: (value: string) => void;
-  options: [string, string][];
-  all?: string;
-  course?: string;
-  onCourseChange?: (course: string) => void;
-}) {
-  const id = useId();
-  const dialog = useRef<HTMLDialogElement>(null);
-  const isEvent = label.toLowerCase().includes("event");
-  return (
-    <div className={`${s.field} ${isEvent ? s.eventField : ""}`}>
-      <label
-        id={`${id}-label`}
-        htmlFor={id}
-        className={isEvent || hideLabel ? "sr-only" : undefined}
-      >
-        {label}
-      </label>
-      {isEvent && (
-        <div
-          className={s.inlineEventSelector}
-          role="group"
-          aria-labelledby={`${id}-label`}
-        >
-          <TimesEventSelector
-            value={value}
-            options={options}
-            onChange={onChange}
-            all={all}
-            course={course}
-            onCourseChange={onCourseChange}
-          />
-        </div>
-      )}
-      <button
-        id={id}
-        className={s.eventTrigger}
-        aria-haspopup="dialog"
-        onClick={() => {
-          dialog.current?.showModal();
-          dialog.current
-            ?.querySelector<HTMLButtonElement>('[aria-pressed="true"]')
-            ?.focus();
-        }}
-      >
-        <span>
-          {options.find(([key]) => key === value)?.[1] ??
-            all ??
-            `Select ${label.toLowerCase()}`}
-        </span>
-        {showChevron && <ChevronDown size={16} />}
-      </button>
-      <dialog
-        ref={dialog}
-        className={s.eventDialog}
-        aria-labelledby={`${id}-title`}
-        onClick={(e) => {
-          if (e.target === e.currentTarget) {
-            const bounds = e.currentTarget.getBoundingClientRect();
-            if (
-              e.clientX < bounds.left ||
-              e.clientX > bounds.right ||
-              e.clientY < bounds.top ||
-              e.clientY > bounds.bottom
-            )
-              dialog.current?.close();
-          }
-        }}
-      >
-        <div className={s.popupHead}>
-          <h2 id={`${id}-title`}>{label}</h2>
-          <button
-            className={s.button}
-            aria-label={`Close ${label.toLowerCase()} picker`}
-            onClick={() => dialog.current?.close()}
-          >
-            <X size={18} />
-          </button>
-        </div>
-        {isEvent ? (
-          <TimesEventSelector
-            value={value}
-            options={options}
-            all={all}
-            course={course}
-            onCourseChange={onCourseChange}
-            onChange={(next) => {
-              onChange(next);
-              dialog.current?.close();
-            }}
-          />
-        ) : (
-          <div className={s.eventGrid}>
-            {[...(all ? [["", all]] : []), ...options].map(([key, text]) => (
-              <button
-                key={key}
-                aria-pressed={value === key}
-                onClick={() => {
-                  onChange(key);
-                  dialog.current?.close();
-                }}
-              >
-                {text}
-              </button>
-            ))}
-          </div>
-        )}
-      </dialog>
-    </div>
-  );
-}
-function FilterChips({
-  label,
-  value,
-  onChange,
-  options,
-}: {
-  label: string;
-  value: string;
-  onChange: (value: string) => void;
-  options: [string, string][];
-}) {
-  return (
-    <fieldset className={s.courseField}>
-      <legend>{label}</legend>
-      <div className={s.chips}>
-        {options.map(([key, text]) => (
-          <button
-            key={key}
-            aria-pressed={value === key}
-            onClick={() => onChange(key)}
-          >
-            {text}
-          </button>
-        ))}
-      </div>
-    </fieldset>
   );
 }
 function AgeGroupPicker({
@@ -653,6 +509,10 @@ function TimesDatabaseContent() {
   ).includes(requestedView)
     ? requestedView
     : "rankings";
+  const standardSelection = useTimeStandardsSelection(
+    standards.sets,
+    view === "standards",
+  );
   const [filters, setFilters] = useTimesSelection<Filters>(
     "filters",
     initialFilters,
@@ -1104,7 +964,11 @@ function TimesDatabaseContent() {
                       ? formatSwimTime(race.time)
                       : race.status || "—"}
                   </button>
-                  <CutChips race={race} sets={standards.sets} />
+                  <CutChips
+                    race={race}
+                    sets={standards.sets}
+                    inline={view === "rankings"}
+                  />
                   <ModerationNotice race={race} />
                 </td>
                 <td>
@@ -1187,70 +1051,27 @@ function TimesDatabaseContent() {
       )}
     </>
   );
-  return (
+  const content = (
     <main className={s.page} data-times-page="">
-      <header className={s.toolHeader}>
-        <nav className={s.tabs} aria-label="Explore times">
-          <Link href="/tools">
-            <ChevronLeft size={17} />
-            Tools Page
-          </Link>
-          {(
-            [
-              ["rankings", "Event Rankings", BarChart3],
-              ["records", "Team Records", Trophy],
-              ["standards", "Time Standards", Timer],
-              ["meets", "Meet Results", CalendarDays],
-              ["athletes", "Athletes", Users],
-            ] as const
-          ).map(([key, label, Icon]) => (
-            <button
-              key={key}
-              aria-pressed={view === key}
-              onClick={() => changeView(key)}
-            >
-              <Icon size={17} />
-              {label}
-            </button>
-          ))}
-        </nav>
-        {view !== "records" && view !== "standards" && (
-          <dl className={s.filterSummary} aria-label="Selected times filters">
-            <div>
-              <dt className={view === "rankings" ? "sr-only" : undefined}>
-                Course
-              </dt>
-              <dd>{summaryCourse}</dd>
-            </div>
-            <div>
-              <dt className={view === "rankings" ? "sr-only" : undefined}>
-                Event
-              </dt>
-              <dd>{summaryEvent ? eventLabel(summaryEvent) : "All events"}</dd>
-            </div>
-            <div>
-              <dt className={view === "rankings" ? "sr-only" : undefined}>
-                Age group
-              </dt>
-              <dd>{selectedAgeLabels}</dd>
-            </div>
-            <div>
-              <dt className={view === "rankings" ? "sr-only" : undefined}>
-                Gender
-              </dt>
-              <dd>{selectedGenderLabels}</dd>
-            </div>
-            {summaryTeam && (
-              <div>
-                <dt className={view === "rankings" ? "sr-only" : undefined}>
-                  Team
-                </dt>
-                <dd>{summaryTeam}</dd>
-              </div>
-            )}
-          </dl>
-        )}
-      </header>
+      {view !== "records" && (
+        <header className={s.toolHeader}>
+          {view === "standards" ? (
+            <TimeStandardsSummary state={standardSelection} />
+          ) : (
+            <FilterSummary
+              label="Selected times filters"
+              compact={view === "rankings"}
+              items={[
+                ["Course", summaryCourse],
+                ["Event", summaryEvent ? eventLabel(summaryEvent) : "All events"],
+                ["Age group", selectedAgeLabels],
+                ["Gender", selectedGenderLabels],
+                ["Team", summaryTeam],
+              ]}
+            />
+          )}
+        </header>
+      )}
       <div className={s.content}>
         {!hasBackendConfiguration && (
           <div className={s.notice} role="status">
@@ -1267,7 +1088,7 @@ function TimesDatabaseContent() {
         >
           <div className={s.main}>
             {view === "standards" ? (
-              <TimeStandards query={standards} />
+              <TimeStandards query={standards} state={standardSelection} />
             ) : view === "records" ? (
               <>
                 <QueryNotice query={recordsQuery} />
@@ -1926,5 +1747,28 @@ function TimesDatabaseContent() {
         </div>
       </div>
     </main>
+  );
+  return (
+    <ToolSidebar
+      tool="times"
+      navigationLabel="Explore times"
+      storageKey="velocity-times-sidebar"
+      navigation={timesViews.map(([key, label, icon]) => (
+        <ToolSidebarItem
+          key={key}
+          icon={icon}
+          active={view === key}
+          aria-pressed={view === key}
+          onClick={() => {
+            changeView(key);
+            if (view !== key) window.scrollTo({ top: 0, behavior: "instant" });
+          }}
+        >
+          {label}
+        </ToolSidebarItem>
+      ))}
+    >
+      {content}
+    </ToolSidebar>
   );
 }

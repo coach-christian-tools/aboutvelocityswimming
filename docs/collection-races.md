@@ -14,8 +14,9 @@ directories are created with mode 0700 and artifact files with mode 0600.
 
 ## Inputs
 
-Use **Download private race baseline** in `/tools/review` while signed in as
-verified staff. It exports all five canonical collections, private identity
+In Velocity Imports, open **Exports** (`/tools/review/exports`) and select
+**Download private race baseline** while signed in as verified staff. It exports
+all five canonical collections, private identity
 mappings, and **every listed catalog meet**, independently of saved selections.
 Pages and closing counts must share the same canonical revision. Any change
 aborts the download. The file includes `canonicalRevision`, verified consistency,

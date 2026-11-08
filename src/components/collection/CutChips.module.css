@@ -7,6 +7,13 @@
   width: max-content;
   max-width: 220px;
 }
+.chips.inline {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  max-width: none;
+  margin-block: 0;
+  margin-inline-start: 6px;
+}
 .item {
   position: relative;
   display: inline-flex;

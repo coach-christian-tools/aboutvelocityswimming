@@ -1,0 +1,52 @@
+.scroll {
+  max-width: 100%;
+  max-height: min(32rem, 70vh);
+  overflow: auto;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.scroll:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.table {
+  width: 100%;
+  min-width: 42rem;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.875rem;
+  text-align: left;
+}
+
+.table :is(th, td) {
+  padding: 0.65rem 0.8rem;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+.table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  border-bottom: 1px solid var(--border);
+  background: var(--background-alt);
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+.table tbody tr + tr > * {
+  border-top: 1px solid var(--border);
+}
+
+.secondary {
+  display: block;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+}
+
+.numeric {
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}

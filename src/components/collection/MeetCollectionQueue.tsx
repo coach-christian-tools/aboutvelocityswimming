@@ -906,7 +906,7 @@ export default function MeetCollectionQueue() {
         <div>
           <Link className={styles.backLink} href="/tools/review">
             <ArrowLeft size={15} aria-hidden="true" />
-            Collection review
+            Back to review
           </Link>
           <h1>Meet collection</h1>
           <p>

@@ -1,14 +1,16 @@
 import ReviewQueue from "@/components/collection/ReviewQueue";
-import SectionPage from "@/components/SectionPage";
-export const metadata = { title: "Collection review | Velocity Swimming" };
+import { toolDirectory } from "@/lib/tool-directory";
+import styles from "./review.module.css";
+
+export const metadata = { title: `${toolDirectory.imports.title} | Velocity Swimming` };
+
 export default function Page() {
   return (
-    <SectionPage
-      eyebrow="Staff tools"
-      title="Collection review"
-      description="Review collected additions and corrections before they appear across Velocity tools."
-    >
+    <main className={styles.page}>
+      <header className={styles.intro}>
+        <h1>Review queue</h1>
+      </header>
       <ReviewQueue />
-    </SectionPage>
+    </main>
   );
 }

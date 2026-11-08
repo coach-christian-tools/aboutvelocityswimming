@@ -4,27 +4,20 @@
   padding: clamp(1rem, 3vw, 2rem);
 }
 .filters {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  align-items: start;
+  border: 1px solid var(--border);
+  border-radius: 14px;
 }
-.field {
-  display: grid;
-  gap: 0.4rem;
-  font-size: 0.85rem;
-  font-weight: 600;
+.filters > :first-child {
+  grid-column: 1 / -1;
 }
-.field select {
-  background: var(--surface, white);
-  color: inherit;
-  border: 1px solid var(--border, #ccd4de);
-  border-radius: 0.6rem;
-  padding: 0.65rem;
-  max-width: 100%;
+.filters > fieldset {
+  order: 0;
 }
-.field:first-child {
-  flex: 1 1 20rem;
-  min-width: 0;
+@media (min-width: 900px) {
+  .page .filters {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }
 .grid {
   display: grid;
@@ -56,14 +49,23 @@
 .chip span {
   font-size: 0.85rem;
 }
-.meta {
-  display: flex;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-  font-size: 0.9rem;
+.sourceButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  gap: 0.5rem;
+  width: min(100%, 18rem);
+  min-height: 3.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.85rem;
+  background: var(--accent);
+  color: var(--primary-ink);
+  font-weight: 700;
+  text-decoration: none;
 }
-.meta a {
-  text-decoration: underline;
+.sourceButton:hover {
+  background: var(--accent-hover);
 }
 @media (max-width: 720px) {
   .grid {

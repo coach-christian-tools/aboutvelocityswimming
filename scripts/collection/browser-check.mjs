@@ -3,6 +3,8 @@ import { createClient } from "@supabase/supabase-js";
 import { execFileSync } from "node:child_process";
 import { randomUUID, createHash } from "node:crypto";
 import assert from "node:assert/strict";
+const base = process.env.VELOCITY_TEST_URL ?? "http://127.0.0.1:3001";
+assert.ok(["127.0.0.1", "localhost"].includes(new URL(base).hostname));
 const config = JSON.parse(
   execFileSync("supabase", ["status", "--output", "json"], {
     encoding: "utf8",
@@ -61,7 +63,19 @@ try {
   page.setDefaultTimeout(60000);
   const errors = [];
   page.on("pageerror", (e) => errors.push(e.message));
-  await page.goto("http://127.0.0.1:3001/tools/knowledge");
+  await page.route("**/auth/v1/**", (route) => {
+    if (new URL(route.request().url()).origin === config.API_URL)
+      return route.continue();
+    errors.push("Refused a nonlocal authentication request");
+    return route.abort();
+  });
+  await page.goto(base + "/login");
+  await page.getByRole("button", { name: /password/i }).click();
+  await page.locator("input[type=email]").fill("christiancutter02@gmail.com");
+  await page.locator("input[type=password]").fill("Velocity-local-test-2026!");
+  await page.locator("button[type=submit]").click();
+  await page.waitForURL(base + "/tools");
+  await page.goto(base + "/tools/knowledge");
   await page
     .getByRole("heading", { name: "Swim Atlas", exact: true })
     .waitFor();
@@ -71,13 +85,9 @@ try {
     await page.getByRole("heading", { name: title, exact: true }).count(),
     0,
   );
-  await page.goto("http://127.0.0.1:3001/login");
-  await page.getByRole("button", { name: /password/i }).click();
-  await page.locator("input[type=email]").fill("coach@velocity-swimming.com");
-  await page.locator("input[type=password]").fill("Velocity-local-test-2026!");
-  await page.locator("button[type=submit]").click();
-  await page.waitForURL("http://127.0.0.1:3001/tools");
-  await page.goto("http://127.0.0.1:3001/tools/review");
+  await page.goto(base + "/tools");
+  await page.getByRole("link", { name: /^Velocity Imports\b/ }).click();
+  await page.waitForURL(base + "/tools/review");
   const article = page.locator("article").filter({ hasText: title });
   await article.getByRole("button", { name: "Hold", exact: true }).click();
   await article.waitFor({ state: "detached" });
@@ -90,7 +100,7 @@ try {
     .getByRole("button", { name: "Approve all changes", exact: true })
     .click();
   await article.waitFor({ state: "detached" });
-  await page.goto("http://127.0.0.1:3001/tools/knowledge");
+  await page.goto(base + "/tools/knowledge");
   await page.getByRole("tab", { name: "Meets", exact: true }).click();
   await page.getByRole("heading", { name: title, exact: true }).waitFor();
   await page.getByRole("searchbox", { name: "Search meets" }).fill(title);
@@ -103,13 +113,13 @@ try {
   await page.getByText("No entries match these filters.", { exact: true }).waitFor();
   await page.getByRole("button", { name: "Clear filters", exact: true }).click();
   await page.getByRole("heading", { name: title, exact: true }).waitFor();
-  await page.goto("http://127.0.0.1:3001/tools/times");
+  await page.goto(base + "/tools/times");
   await page
     .getByRole("button", { name: "Avery Example", exact: true })
     .click();
   await page.getByText("1:04.00", { exact: true }).waitFor();
   await page.setViewportSize({ width: 390, height: 844 });
-  await page.goto("http://127.0.0.1:3001/tools/review");
+  await page.goto(base + "/tools/review");
   assert.equal(
     await page.evaluate(
       () => document.documentElement.scrollWidth > innerWidth,

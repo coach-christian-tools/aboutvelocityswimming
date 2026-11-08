@@ -66,6 +66,13 @@ try {
     viewport: { width: 1440, height: 1000 },
   });
   page.setDefaultTimeout(30000);
+  const standards = page.getByRole("region", { name: "Time Standards" });
+  const standardOption = /^Browser standards fixture · /;
+  async function chooseStandardFilter(label, option) {
+    await standards.getByRole("button", { name: label, exact: true }).click();
+    const picker = standards.getByRole("dialog", { name: label, exact: true });
+    await picker.getByRole("button", { name: option, exact: true }).click();
+  }
   const errors = [];
   page.on("pageerror", (e) => errors.push(e.message));
   await page.goto(base + "/tools/times");
@@ -76,7 +83,9 @@ try {
     .getByText("Loading approved standards…", { exact: true })
     .waitFor({ state: "hidden" });
   assert.equal(
-    await page.locator("option").filter({ hasText: set.name }).count(),
+    await standards
+      .getByRole("button", { name: standardOption, includeHidden: true })
+      .count(),
     0,
   );
   await page.goto(base + "/login");
@@ -114,15 +123,22 @@ try {
   await page
     .getByRole("button", { name: "Time Standards", exact: true })
     .click();
-  await page.getByLabel("Standard", { exact: true }).selectOption(set.id);
-  await page.getByLabel("Age group", { exact: true }).selectOption("10&U");
-  await page.getByLabel("Tier", { exact: true }).selectOption("B");
+  await chooseStandardFilter("Standard", standardOption);
+  await chooseStandardFilter("Age group", "10&U");
+  await chooseStandardFilter("Tier", "B");
   assert.ok(
     await page.getByLabel("50 Freestyle: 39.79", { exact: true }).isVisible(),
   );
   assert.ok(
     await page
-      .getByLabel("200 Individual Medley relay: 3:14.99", { exact: true })
+      .getByLabel("200 Medley relay: 3:14.99", { exact: true })
+      .getByText("200 IM Relay", { exact: true })
+      .isVisible(),
+  );
+  assert.ok(
+    await page
+      .getByLabel("200 Freestyle relay: 2:53.19", { exact: true })
+      .getByText("200 Free Relay", { exact: true })
       .isVisible(),
   );
   assert.ok(
@@ -131,14 +147,33 @@ try {
       .isVisible(),
   );
   await page.screenshot({ path: "/tmp/standards-desktop.png", fullPage: true });
-  await page.getByLabel("Course", { exact: true }).selectOption("LCM");
-  await page.getByLabel("Gender", { exact: true }).selectOption("M");
-  await page.getByLabel("Age group", { exact: true }).selectOption("17-18");
-  await page.getByLabel("Tier", { exact: true }).selectOption("AAAA");
+  const longCourse = standards
+    .getByRole("group", { name: "Course", exact: true })
+    .getByRole("button", { name: "LCM", exact: true });
+  const male = standards
+    .getByRole("group", { name: "Gender", exact: true })
+    .getByRole("button", { name: "Male", exact: true });
+  await longCourse.click();
+  await male.click();
+  await chooseStandardFilter("Age group", "17-18");
+  await chooseStandardFilter("Tier", "AAAA");
+  const summary = page.getByLabel("Selected time standards filters");
+  assert.equal(
+    await summary.evaluate((node) => getComputedStyle(node).justifyContent),
+    "center",
+  );
+  assert.equal(
+    await summary
+      .locator("..")
+      .evaluate((node) => getComputedStyle(node).position),
+    "sticky",
+  );
   assert.ok(
     await page.getByLabel("50 Freestyle: 23.99", { exact: true }).isVisible(),
   );
   await page.setViewportSize({ width: 390, height: 844 });
+  assert.equal(await longCourse.getAttribute("aria-pressed"), "true");
+  assert.equal(await male.getAttribute("aria-pressed"), "true");
   assert.equal(
     await page.evaluate(
       () => document.documentElement.scrollWidth > innerWidth,
@@ -152,11 +187,15 @@ try {
     "Meet Results",
     "Athletes",
   ]) {
-    await page.getByRole("button", { name, exact: true }).click();
+    await page.getByRole("button", { name: "Open navigation sidebar" }).click();
+    await page
+      .getByRole("navigation", { name: "Explore times" })
+      .getByRole("button", { name, exact: true })
+      .click();
   }
   assert.deepEqual(errors, []);
   console.log(
-    "Browser: private staging → review preview → approval → exact cuts, filters, mobile and existing tabs passed.",
+    "Browser: private staging → review preview → approval → exact cuts, filters, and mobile sidebar passed.",
   );
 } finally {
   await browser.close();

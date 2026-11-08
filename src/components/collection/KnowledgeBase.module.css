@@ -1,8 +1,6 @@
-.wiki { --wiki-line: var(--border); padding-bottom: 3rem; }
-.intro { color: var(--text-muted); margin-bottom: 2rem; }
-.tabs { display: flex; gap: .35rem; border-bottom: 1px solid var(--wiki-line); overflow-x: auto; }
-.tabs button { background: transparent; color: var(--text-muted); padding: .9rem 1.2rem; border-bottom: 3px solid transparent; font-weight: 600; white-space: nowrap; }
-.tabs button[aria-selected="true"] { color: var(--accent); border-bottom-color: var(--accent); }
+.wiki { --wiki-line: var(--border); padding: clamp(1rem, 4vw, 2rem) clamp(1rem, 4vw, 2rem) 3rem; }
+.content { max-width: 64rem; margin-inline: auto; }
+.intro { color: var(--text-muted); margin-top: .65rem; }
 .panel { padding-top: 1.5rem; }
 .filters { padding: 1.25rem; border: 1px solid var(--wiki-line); border-radius: 16px; background: var(--background-alt); display: grid; gap: 1.2rem; }
 .search { display: flex; align-items: center; gap: .7rem; padding: .65rem .9rem; background: var(--surface); color: var(--text-muted); border: 1px solid var(--wiki-line); border-radius: 10px; }
@@ -33,4 +31,4 @@
 .pagination { display: flex; justify-content: space-between; margin-top: 1.5rem; }
 .pagination button { border: 1px solid var(--wiki-line); border-radius: 999px; padding: .6rem 1.2rem; color: var(--text-main); background: var(--surface); }
 .pagination button:disabled { opacity: .4; cursor: default; }
-@media(max-width: 600px) { .tabs button { padding: .8rem .65rem; font-size: .85rem; } .filters, .card { padding: 1rem; } .cardTop { flex-wrap: wrap; gap: .25rem; } .reviewed { margin-left: auto; } .selects { grid-template-columns: minmax(0, 1fr); } }
+@media(max-width: 600px) { .filters, .card { padding: 1rem; } .cardTop { flex-wrap: wrap; gap: .25rem; } .reviewed { margin-left: auto; } .selects { grid-template-columns: minmax(0, 1fr); } }

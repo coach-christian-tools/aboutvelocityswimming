@@ -15,7 +15,7 @@
 .clear { flex-shrink: 0; background: transparent; color: var(--green); padding: .8rem .25rem; min-height: 46px; font-size: .85rem; }
 .filterNote { padding: .8rem 2rem; background: var(--background-alt); color: var(--text-muted); font-size: .8rem; line-height: 1.6; }
 .filterNote button { display: inline; background: transparent; color: var(--green); text-decoration: underline; font: inherit; }
-.toolbar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.5rem 2rem; }
+.toolbar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; padding: 1rem 2rem; }
 .navigation { display: flex; flex-shrink: 0; align-items: center; gap: 1rem; }
 .navigation h3 { font-size: 1.4rem; letter-spacing: -.03em; font-weight: 600; }
 .arrows { display: flex; gap: .4rem; }
@@ -27,7 +27,7 @@
 .views button { padding: .6rem 1rem; border-radius: 7px; background: transparent; color: var(--text-muted); font-size: .8rem; }
 .views button[aria-pressed="true"] { background: var(--background); color: var(--green); box-shadow: var(--shadow-sm); }
 .monthGrid { flex: 1; display: grid; grid-template-columns: minmax(0, .65fr) repeat(5, minmax(0, 1fr)) minmax(0, .65fr); border-top: 1px solid var(--line); }
-.weekday { padding: .85rem .8rem; text-transform: uppercase; letter-spacing: .09em; font-size: .65rem; font-weight: 600; color: var(--text-muted); background: var(--background-alt); border-bottom: 1px solid var(--line); }
+.weekday { padding: .85rem .8rem; text-align: center; text-transform: uppercase; letter-spacing: .09em; font-size: .65rem; font-weight: 600; color: var(--text-muted); background: var(--background-alt); border-bottom: 1px solid var(--line); }
 .day { min-height: 145px; padding: .65rem; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .day:nth-child(7n) { border-right: 0; }
 .outside { background: var(--background-alt); }
@@ -52,6 +52,8 @@
 .agendaEvents { display: grid; gap: .5rem; }
 .agendaGroup { display: flex; flex-direction: column; gap: .75rem; background: var(--background-alt); border-radius: 8px; border-left: 3px solid var(--event-color); padding: 1rem 1.2rem; }
 .agendaEvent { display: flex; align-items: center; gap: 1.5rem; width: 100%; text-align: left; background: transparent; border-radius: 3px; padding: .2rem 0; color: var(--text-main); font-family: var(--font-body); }
+.event.practice + .event.practice,
+.agendaEvent.practice + .agendaEvent.practice { margin-block-start: -.4rem; }
 .agendaEvent:hover { background: color-mix(in srgb, var(--event-color) 8%, var(--background-alt)); }
 .agendaTime { flex: 0 0 165px; text-align: center; color: var(--text-muted); font-size: .8rem; font-weight: 400; }
 .agendaDetails { display: flex; flex-direction: column; gap: .35rem; min-width: 0; }
@@ -107,7 +109,7 @@
   .agendaTime { flex-basis: 140px; }
 }
 @media (max-width: 550px) {
-  .toolbar { padding: 1.25rem 1.25rem 1rem; }
+  .toolbar { padding: .75rem 1.25rem; }
   .navigation { width: 100%; gap: .7rem; }
   .navigation h3 { font-size: 1.05rem; }
   .today { margin-left: auto; padding-inline: .7rem; }

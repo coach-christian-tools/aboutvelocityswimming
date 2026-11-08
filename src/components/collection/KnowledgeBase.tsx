@@ -1,13 +1,22 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, type KeyboardEvent } from "react";
 import dynamic from "next/dynamic";
-import { ExternalLink, Search } from "lucide-react";
+import { Building2, CalendarDays, ExternalLink, Files, Map, Search, Users } from "lucide-react";
+import ToolSidebar, { ToolSidebarItem } from "@/components/shared/ToolSidebar";
 import { browserClient, hasBackendConfiguration } from "@/lib/supabase/client";
+import AtlasSectionGuide, { atlasTopSection } from "./AtlasSectionGuide";
 import { field, originalSource, reviewedDate, type WikiEntry } from "./wiki";
 import styles from "./KnowledgeBase.module.css";
 const MapExplorer = dynamic(() => import("./map/MapExplorer"), { loading: () => <p role="status">Loading map explorer…</p> });
-const tabs = [{ id: "map", label: "Map" }, { id: "team", label: "Teams" }, { id: "meet", label: "Meets" }, { id: "document", label: "Documents" }, { id: "organization", label: "Organizations" }] as const;
+const tabs = [
+  { id: "map", label: "Map", icon: Map },
+  { id: "team", label: "Teams", icon: Users },
+  { id: "meet", label: "Meets", icon: CalendarDays },
+  { id: "document", label: "Documents", icon: Files },
+  { id: "organization", label: "Organizations", icon: Building2 },
+] as const;
 type Tab = typeof tabs[number]["id"];
+const directorySections = [atlasTopSection, { id: "atlas-filters", label: "Filters" }, { id: "atlas-results", label: "Results" }];
 function Chips({ label, entries, selected, onChange, initialLimit }: { label: string; entries: WikiEntry[]; selected: string[]; onChange: (value: string[]) => void; initialLimit?: number }) {
   const [expanded, setExpanded] = useState(false);
   const visibleEntries = initialLimit && !expanded ? entries.slice(0, initialLimit) : entries;
@@ -80,22 +89,63 @@ export default function KnowledgeBase() {
   }, [tab, organization, zones, lscs, region, venue, from, until, query, offset, invalidDates, revision]);
   function resetPage() { setOffset(0); setLoading(true); }
   function clear() { setZones([]); setLscs([]); setRegion(""); setVenue(""); setFrom(""); setUntil(""); setSearch(""); setQuery(""); resetPage(); }
+  function selectTab(next: Tab) {
+    setTab(next);
+    clear();
+  }
+  function navigateTabs(event: KeyboardEvent<HTMLButtonElement>, index: number) {
+    let nextIndex: number;
+    switch (event.key) {
+      case "Home":
+        nextIndex = 0;
+        break;
+      case "End":
+        nextIndex = tabs.length - 1;
+        break;
+      case "ArrowUp":
+      case "ArrowLeft":
+        nextIndex = (index - 1 + tabs.length) % tabs.length;
+        break;
+      case "ArrowDown":
+      case "ArrowRight":
+        nextIndex = (index + 1) % tabs.length;
+        break;
+      default:
+        return;
+    }
+    event.preventDefault();
+    const next = tabs[nextIndex].id;
+    selectTab(next);
+    document.getElementById(`wiki-tab-${next}`)?.focus();
+  }
   const availableLscs = facets.filter(entry => entry.kind === "lsc" && (!zones.length || zones.includes(field(entry.data, "zoneId"))));
   const activeFilters = Boolean(search || zones.length || lscs.length || region || venue || from || until);
-  return <section className={styles.wiki}>
-    <p className={styles.intro}>Explore the swimming community through reviewed information and original sources.</p>
-    <div className={styles.tabs} role="tablist" aria-label="Swim Atlas sections">
-      {tabs.map(item => <button key={item.id} id={`wiki-tab-${item.id}`} role="tab" aria-selected={tab === item.id} aria-controls="wiki-panel" tabIndex={tab === item.id ? 0 : -1} onKeyDown={event => {
-        if (!["ArrowRight", "ArrowLeft", "Home", "End"].includes(event.key)) return;
-        event.preventDefault(); const index = tabs.findIndex(item => item.id === tab);
-        const next = event.key === "Home" ? 0 : event.key === "End" ? tabs.length - 1 : (index + (event.key === "ArrowRight" ? 1 : -1) + tabs.length) % tabs.length;
-        setTab(tabs[next].id); clear(); document.getElementById(`wiki-tab-${tabs[next].id}`)?.focus();
-      }} onClick={() => { setTab(item.id); clear(); }}>{item.label}</button>)}
+  const navigation = (
+    <div role="tablist" aria-label="Swim Atlas sections" aria-orientation="vertical">
+      {tabs.map((item, index) => (
+        <ToolSidebarItem
+          key={item.id}
+          id={`wiki-tab-${item.id}`}
+          type="button"
+          role="tab"
+          icon={item.icon}
+          active={tab === item.id}
+          aria-selected={tab === item.id}
+          aria-controls="wiki-panel"
+          tabIndex={tab === item.id ? 0 : -1}
+          onKeyDown={event => navigateTabs(event, index)}
+          onClick={() => selectTab(item.id)}
+        >
+          {item.label}
+        </ToolSidebarItem>
+      ))}
     </div>
-    <div role="tabpanel" id="wiki-panel" aria-labelledby={`wiki-tab-${tab}`} className={styles.panel}>
+  );
+  const panel = (
+    <div role="tabpanel" id="wiki-panel" aria-labelledby={`wiki-tab-${tab}`} className={styles.panel} tabIndex={0}>
       {tab === "map" && facetError && <p role="alert">{facetError} <button onClick={() => setRevision(value => value + 1)}>Retry filters</button></p>}
-      {tab === "map" ? <MapExplorer facets={facets} /> : <>
-      <div className={styles.filters}>
+      {tab === "map" ? <MapExplorer facets={facets} /> : <AtlasSectionGuide sections={directorySections}>
+      <section id="atlas-filters" aria-label="Filters" tabIndex={-1} data-atlas-section className={styles.filters}>
         <label className={styles.search}><Search size={18} aria-hidden="true" /><span className="sr-only">Search {tab === "organization" ? "organizations" : `${tab}s`}</span><input type="search" placeholder={`Search ${tab === "organization" ? "organizations" : `${tab}s`}…`} value={search} onChange={event => setSearch(event.target.value)} /></label>
         {(tab === "team" || tab === "meet") && <>
           <Chips label="Zones" entries={facets.filter(entry => entry.kind === "zone")} selected={zones} onChange={value => { setZones(value); setLscs([]); resetPage(); }} />
@@ -108,7 +158,8 @@ export default function KnowledgeBase() {
         </div>}
         {tab === "organization" && <label className={styles.organization}>Organization type<select value={organization} onChange={event => { setOrganization(event.target.value); resetPage(); }}>{[["zone", "Zones"], ["lsc", "LSCs"], ["region", "Regions"], ["venue", "Venues"]].map(([value, label]) => <option key={value} value={value}>{label}</option>)}</select></label>}
         {activeFilters && <button className={styles.clear} onClick={clear}>Clear filters</button>}
-      </div>
+      </section>
+      <section id="atlas-results" aria-label="Results" tabIndex={-1} data-atlas-section>
       {facetError && <p role="alert">{facetError} <button onClick={() => setRevision(value => value + 1)}>Retry filters</button></p>}
       {!hasBackendConfiguration ? <p className={styles.empty}>The database is being connected.</p> : invalidDates ? <p role="alert">The end date must be on or after the start date.</p> : error ? <p role="alert">{error} <button onClick={() => { setLoading(true); setRevision(value => value + 1); }}>Try again</button></p> : loading ? <p className={styles.empty} role="status">Loading…</p> : <>
         <p className={styles.count} role="status">{entries.length ? `${entries.length} entries · Page ${offset / 24 + 1}` : activeFilters ? "No entries match these filters." : "No approved entries yet."}</p>
@@ -124,7 +175,19 @@ export default function KnowledgeBase() {
         })}</div>
       </>}
       <nav aria-label="Knowledge pages" className={styles.pagination}><button disabled={!offset || loading || invalidDates} onClick={() => { setOffset(offset - 24); setLoading(true); }}>Previous</button><button disabled={!hasNext || loading || invalidDates} onClick={() => { setOffset(offset + 24); setLoading(true); }}>Next</button></nav>
-      </>}
+      </section>
+      </AtlasSectionGuide>}
     </div>
-  </section>;
+  );
+  return (
+    <ToolSidebar tool="atlas" navigationLabel="Swim Atlas navigation" storageKey="swim-atlas-sidebar" navigation={navigation}>
+      <main className={styles.wiki}>
+        <div className={styles.content}>
+          <h1 id={atlasTopSection.id} tabIndex={-1} className="text-3xl font-semibold">Swim Atlas</h1>
+          <p className={styles.intro}>Explore the swimming community through reviewed information and original sources.</p>
+          {panel}
+        </div>
+      </main>
+    </ToolSidebar>
+  );
 }

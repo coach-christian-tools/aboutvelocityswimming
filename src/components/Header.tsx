@@ -4,13 +4,11 @@ import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { isStaffRoute } from "@/lib/staff-routes";
 import styles from "./Header.module.css";
 import { scopedClasses } from "@/lib/styles";
 
 const sections = [
   { href: "/schedule", label: "Schedule" },
-  { href: "/news", label: "News" },
   { href: "/tools", label: "Tools" },
 ];
 const aboutSections = [
@@ -218,7 +216,7 @@ function Navigation({ pathname }: { pathname: string }) {
                 </ul>
               </div>
             </div>
-            <a href="https://www.gomotionapp.com/team/ievs/page/online-registration1" target="_blank" rel="noopener noreferrer" className={scopedClasses(styles, 'btn btn-primary site-join')} onClick={closeMenus}>Join the Team</a>
+            <a href="https://www.gomotionapp.com/team/ievs/page/online-registration1/registration" target="_blank" rel="noopener noreferrer" className={scopedClasses(styles, 'btn btn-primary site-join')} onClick={closeMenus}>Join the Team</a>
           </nav>
         </div>
       </header>
@@ -229,7 +227,7 @@ function Navigation({ pathname }: { pathname: string }) {
 
 export default function Header() {
   const pathname = usePathname();
-  if (pathname.startsWith("/tools/") || isStaffRoute(pathname)) return null;
+  if (pathname.startsWith("/tools/")) return null;
   // A route change resets disclosures without an effect or a flash of stale state.
   return <Navigation key={pathname} pathname={pathname} />;
 }

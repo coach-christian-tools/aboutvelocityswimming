@@ -30,7 +30,7 @@ function toolPages(directory = "src/app"): string[] {
         .replace(/^src\/app/, "")
         .replace(/\/\([^/]+\)/g, "")
         .replace(/\/page.tsx$/, "")
-        .replace(/\[\.\.\.[^\]]+\]/g, "example/nested")
+        .replace(/\[\[?\.\.\.[^\]]+\]\]?/g, "example/nested")
         .replace(/\[[^\]]+\]/g, "example");
       return route === "/tools" || route.startsWith("/tools/") ? [route] : [];
     },
@@ -90,7 +90,7 @@ describe("temporary tools lock", () => {
 
   it("allows only the verified admin and keeps responses private", async () => {
     mocks.getUser.mockResolvedValue({ data: { user: admin }, error: null });
-    const response = await proxy(request("/tools/swim-resources/admin/import"));
+    const response = await proxy(request("/tools/review"));
     expect(response.headers.get("x-middleware-next")).toBe("1");
     expect(response.headers.get("cache-control")).toBe("private, no-store");
     expect(isToolsAdmin("CHRISTIANCUTTER02@gmail.com", true)).toBe(true);
@@ -172,7 +172,6 @@ describe("temporary tools lock", () => {
   it.each([
     "/",
     "/schedule",
-    "/news",
     "/store",
     "/api/calendar",
     "/api/checkout",

@@ -1,0 +1,193 @@
+.page {
+  min-width: 0;
+  padding: clamp(.875rem, 2vw, 1.5rem) clamp(.75rem, 2vw, 1.5rem) 4rem;
+}
+
+.intro {
+  margin-bottom: 1rem;
+}
+
+.intro h1 {
+  font-size: 1.5rem;
+}
+
+.intro p, .notice {
+  margin-top: .375rem;
+  color: var(--text-muted);
+  font-size: .8125rem;
+}
+
+.page a {
+  text-decoration: underline;
+  text-underline-offset: .15em;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: .625rem .75rem;
+  min-width: 0;
+  padding-block: .625rem .875rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.field {
+  display: grid;
+  gap: .25rem;
+  min-width: 0;
+  max-width: 100%;
+  color: var(--text-muted);
+  font-size: .75rem;
+  font-weight: 600;
+}
+
+.field :is(input, select), .page .filterActions button {
+  max-width: 100%;
+  min-height: 2rem;
+  padding: .25rem .5rem;
+  border: 1px solid var(--border);
+  border-radius: .25rem;
+  background: var(--surface);
+  color: var(--text-main);
+  font: 400 .8125rem/1.25 var(--font-body);
+}
+
+.field input[type="search"] {
+  width: 15rem;
+}
+
+.field select {
+  max-width: min(14rem, 100%);
+}
+
+.filterActions, .pagination, .pagination nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .5rem 1rem;
+  font-size: .8125rem;
+}
+
+.page .filterActions button {
+  font-weight: 600;
+  background: var(--background-alt);
+}
+
+.page .filterActions button:hover {
+  border-color: var(--accent);
+}
+
+.pagination {
+  justify-content: space-between;
+  margin-block: .75rem;
+  color: var(--text-muted);
+}
+
+.tableScroll {
+  position: relative;
+  max-width: 100%;
+  max-height: 68vh;
+  margin-top: .75rem;
+  overflow: auto;
+  border: 1px solid var(--border);
+  border-radius: .25rem;
+  background: var(--surface);
+}
+
+.tableScroll:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.table {
+  width: 100%;
+  min-width: 64rem;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: .8125rem;
+  text-align: left;
+  line-height: 1.35;
+}
+
+.table :is(th, td) {
+  padding: .375rem .5rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: var(--background-alt);
+  font-size: .75rem;
+}
+
+.table tbody tr:last-child > * {
+  border-bottom: 0;
+}
+
+.table tbody tr {
+  --inventory-row-bg: var(--surface);
+  background: var(--inventory-row-bg);
+}
+
+.table tbody tr:nth-child(even) {
+  --inventory-row-bg: color-mix(in srgb, var(--background-alt) 50%, var(--surface));
+}
+
+.table tbody tr:hover,
+.table tbody tr:focus-within {
+  --inventory-row-bg: var(--background-alt);
+}
+
+.table thead th:first-child,
+.table tbody th[scope="row"] {
+  position: sticky;
+  left: 0;
+  border-right: 1px solid var(--border);
+}
+
+.table thead th:first-child {
+  z-index: 2;
+}
+
+.table tbody th[scope="row"] {
+  background: var(--inventory-row-bg);
+}
+
+.cellText {
+  display: block;
+  max-width: 13rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.table th[scope="row"] .cellText {
+  max-width: min(13rem, 36vw);
+}
+
+.table .empty {
+  padding: 1rem .5rem;
+  color: var(--text-muted);
+}
+
+.numeric {
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.muted {
+  color: var(--text-muted);
+}
+
+.missing {
+  color: #854500;
+  font-weight: 600;
+}
+
+:global(:root[data-theme="dark"]) .missing {
+  color: #f3bf75;
+}
