@@ -139,7 +139,7 @@ export async function POST(request: Request) {
         );
       return respond(
         { error: error.message },
-        ["40001", "23503"].includes(error.code) ? 409 : 403,
+        ["PT409", "40001", "23503"].includes(error.code) ? 409 : 403,
       );
     }
     // A cache failure must not turn a committed decision into an apparent failure.

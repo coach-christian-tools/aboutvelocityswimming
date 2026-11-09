@@ -57,6 +57,16 @@ describe("collection approval API", () => {
     expect(await response.json()).toEqual({ success: true });
     expect(mocks.rpc).toHaveBeenCalledTimes(1);
   });
+  it.each(["PT409", "40001"])("returns a stale proposal conflict (%s) without retrying or invalidating results", async (code) => {
+    queries([{ id: "claire" }]);
+    const message = "Canonical baseline changed after staging. Export and revalidate this batch before approval.";
+    mocks.rpc.mockResolvedValue({ error: { code, message } });
+    const response = await POST(request());
+    expect(response.status).toBe(409);
+    expect(await response.json()).toEqual({ error: message });
+    expect(mocks.rpc).toHaveBeenCalledTimes(1);
+    expect(invalidateTimes).not.toHaveBeenCalled();
+  });
   it("checks a large prerequisite list in bounded requests without inventing missing profiles", async () => {
     const profiles = Array.from({ length: 1005 }, (_, i) => `athlete-${i}`);
     const inQuery = vi.fn(async (column: string, ids: string[]) => ({ data: ids.map(id => ({ id })), error: null }));

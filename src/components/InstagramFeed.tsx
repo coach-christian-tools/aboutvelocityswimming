@@ -1,6 +1,7 @@
 "use client";
 
 import Script from "next/script";
+import { useState } from "react";
 import styles from "./InstagramFeed.module.css";
 import { scopedClasses } from "@/lib/styles";
 
@@ -11,111 +12,173 @@ const POST_URLS = [
 ];
 
 export default function InstagramFeed() {
+  const [postsRequested, setPostsRequested] = useState(false);
+  const [loadFailed, setLoadFailed] = useState(false);
 
   return (
-    <section id="social" className={scopedClasses(styles, 'section insta-feed-section')}>
-      <Script
-        id="instagram-embed-script"
-        src="https://www.instagram.com/embed.js"
-        onReady={() => {
-          (window as Window & { instgrm?: { Embeds?: { process(): void } } })
-            .instgrm?.Embeds?.process();
-        }}
-      />
-      <div className={scopedClasses(styles, 'container')}>
-        <div className={scopedClasses(styles, 'text-center mb-12')}>
-          <span className={scopedClasses(styles, 'section-badge')}>Social Highlights</span>
-          <h2 className={scopedClasses(styles, 'section-title centered')}>Follow Our Journey</h2>
-          <p className={scopedClasses(styles, 'lead-text centered')}>
+    <section
+      id="social"
+      className={scopedClasses(styles, "section insta-feed-section")}
+    >
+      {postsRequested && (
+        <Script
+          id="instagram-embed-script"
+          src="https://www.instagram.com/embed.js"
+          onReady={() => {
+            (
+              window as Window & { instgrm?: { Embeds?: { process(): void } } }
+            ).instgrm?.Embeds?.process();
+          }}
+          onError={() => setLoadFailed(true)}
+        />
+      )}
+      <div className={scopedClasses(styles, "container")}>
+        <div className={scopedClasses(styles, "text-center mb-12")}>
+          <span className={scopedClasses(styles, "section-badge")}>
+            Social Highlights
+          </span>
+          <h2 className={scopedClasses(styles, "section-title centered")}>
+            Follow Our Journey
+          </h2>
+          <p className={scopedClasses(styles, "lead-text centered")}>
             Stay up to date with the latest from Velocity Swimming on Instagram{" "}
             <a
               href="https://www.instagram.com/velocity.swim"
               target="_blank"
               rel="noopener noreferrer"
-              className={scopedClasses(styles, 'insta-handle-link')}
+              className={scopedClasses(styles, "insta-handle-link")}
             >
               @velocity.swim
             </a>
           </p>
         </div>
 
-        <div className={scopedClasses(styles, 'insta-embeds-grid')}>
-          {POST_URLS.map((url, index) => (
-            <div key={index} className={scopedClasses(styles, 'insta-embed-card')}>
-              <blockquote
-                className="instagram-media"
-                data-instgrm-captioned
-                data-instgrm-permalink={url}
-                data-instgrm-version="14"
-                style={{
-                  background: "#FFF",
-                  border: 0,
-                  borderRadius: "12px",
-                  boxShadow: "0 0 1px 0 rgba(0,0,0,0.5), 0 1px 10px 0 rgba(0,0,0,0.15)",
-                  margin: "1px auto",
-                  maxWidth: "540px",
-                  minWidth: "280px",
-                  padding: 0,
-                  width: "100%",
-                }}
+        {!postsRequested && (
+          <div className={styles["embed-controls"]}>
+            <p>
+              Choose to load posts here, or visit our Instagram profile above.
+            </p>
+            <button
+              type="button"
+              className="btn btn-primary"
+              aria-controls="instagram-posts"
+              onClick={() => setPostsRequested(true)}
+            >
+              Load Instagram posts
+            </button>
+          </div>
+        )}
+        {loadFailed && (
+          <p role="status" className={styles["embed-note"]}>
+            Instagram couldn’t load. You can still open each post using the
+            links below.
+          </p>
+        )}
+        <div
+          id="instagram-posts"
+          className={scopedClasses(styles, "insta-embeds-grid")}
+        >
+          {postsRequested &&
+            POST_URLS.map((url, index) => (
+              <div
+                key={index}
+                className={scopedClasses(styles, "insta-embed-card")}
               >
-                <div style={{ padding: "16px" }}>
-                  <a
-                    href={url}
-                    style={{
-                      background: "#FFFFFF",
-                      lineHeight: 0,
-                      padding: "0 0",
-                      textAlign: "center",
-                      textDecoration: "none",
-                      width: "100%",
-                      display: "block",
-                    }}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <div style={{ display: "flex", flexDirection: "row", alignItems: "center" }}>
+                <blockquote
+                  className="instagram-media"
+                  data-instgrm-captioned
+                  data-instgrm-permalink={url}
+                  data-instgrm-version="14"
+                  style={{
+                    background: "#FFF",
+                    border: 0,
+                    borderRadius: "12px",
+                    boxShadow:
+                      "0 0 1px 0 rgba(0,0,0,0.5), 0 1px 10px 0 rgba(0,0,0,0.15)",
+                    margin: "1px auto",
+                    maxWidth: "540px",
+                    minWidth: "280px",
+                    padding: 0,
+                    width: "100%",
+                  }}
+                >
+                  <div style={{ padding: "16px" }}>
+                    <a
+                      href={url}
+                      style={{
+                        background: "#FFFFFF",
+                        lineHeight: 0,
+                        padding: "0 0",
+                        textAlign: "center",
+                        textDecoration: "none",
+                        width: "100%",
+                        display: "block",
+                      }}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <div
                         style={{
-                          backgroundColor: "#F4F4F4",
-                          borderRadius: "50%",
-                          flexGrow: 0,
-                          height: "40px",
-                          marginRight: "14px",
-                          width: "40px",
+                          display: "flex",
+                          flexDirection: "row",
+                          alignItems: "center",
                         }}
-                      />
-                      <div style={{ display: "flex", flexDirection: "column", flexGrow: 1, justifyContent: "center" }}>
+                      >
                         <div
                           style={{
                             backgroundColor: "#F4F4F4",
-                            borderRadius: "4px",
+                            borderRadius: "50%",
                             flexGrow: 0,
-                            height: "14px",
-                            marginBottom: "6px",
-                            width: "100px",
+                            height: "40px",
+                            marginRight: "14px",
+                            width: "40px",
                           }}
                         />
                         <div
                           style={{
-                            backgroundColor: "#F4F4F4",
-                            borderRadius: "4px",
-                            flexGrow: 0,
-                            height: "14px",
-                            width: "60px",
+                            display: "flex",
+                            flexDirection: "column",
+                            flexGrow: 1,
+                            justifyContent: "center",
                           }}
-                        />
+                        >
+                          <div
+                            style={{
+                              backgroundColor: "#F4F4F4",
+                              borderRadius: "4px",
+                              flexGrow: 0,
+                              height: "14px",
+                              marginBottom: "6px",
+                              width: "100px",
+                            }}
+                          />
+                          <div
+                            style={{
+                              backgroundColor: "#F4F4F4",
+                              borderRadius: "4px",
+                              flexGrow: 0,
+                              height: "14px",
+                              width: "60px",
+                            }}
+                          />
+                        </div>
                       </div>
-                    </div>
-                    <div style={{ padding: "19% 0" }} />
-                    <div style={{ color: "#3897f0", fontFamily: "Arial,sans-serif", fontSize: "14px", fontWeight: 600 }}>
-                      View this post on Instagram
-                    </div>
-                  </a>
-                </div>
-              </blockquote>
-            </div>
-          ))}
+                      <div style={{ padding: "19% 0" }} />
+                      <div
+                        style={{
+                          color: "#3897f0",
+                          fontFamily: "Arial,sans-serif",
+                          fontSize: "14px",
+                          fontWeight: 600,
+                        }}
+                      >
+                        View this post on Instagram
+                      </div>
+                    </a>
+                  </div>
+                </blockquote>
+              </div>
+            ))}
         </div>
       </div>
     </section>

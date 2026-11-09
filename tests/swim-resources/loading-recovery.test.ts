@@ -87,6 +87,15 @@ it("handles a non-JSON gateway response without hiding the recovery action", asy
   ).rejects.toThrow("Refresh the queue");
   expect(fetchMock).toHaveBeenCalledTimes(1);
 });
+it("shows the stale batch recovery instruction immediately without resubmitting", async () => {
+  const message = "Canonical baseline changed after staging. Export and revalidate this batch before approval.";
+  fetchMock.mockResolvedValue(response(409, { error: message }));
+  const onSlow = vi.fn();
+  await expect(saveReviewDecision("batch", "approved", "", onSlow)).rejects.toThrow(message);
+  await vi.advanceTimersByTimeAsync(10000);
+  expect(onSlow).not.toHaveBeenCalled();
+  expect(fetchMock).toHaveBeenCalledTimes(1);
+});
 it("shows slow approval feedback and bounds a hung approval without resubmitting", async () => {
   vi.spyOn(AbortSignal, "timeout").mockImplementation((ms) => {
     const controller = new AbortController();

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, PanelLeftClose, PanelLeftOpen } from "lucide-react";
+import { PanelLeftClose, PanelLeftOpen } from "lucide-react";
 import {
   useEffect,
   useId,
@@ -264,11 +264,9 @@ export default function ToolSidebar({
             {badge}
           </div>
           <nav className={styles.navigation} aria-label="Tools navigation">
-            <Link href="/" className={styles.back}><ArrowLeft aria-hidden="true" />Back to Home</Link>
             {navigation}
           </nav>
-          <div className={styles.footer}>
-            {footer}
+          <div className={styles.controls}>
             <button
               type="button"
               className={styles.collapse}
@@ -280,6 +278,9 @@ export default function ToolSidebar({
             >
               <PanelLeftClose aria-hidden="true" />Collapse
             </button>
+          </div>
+          <div className={styles.footer}>
+            {footer}
           </div>
           {!collapsed && (
             <div

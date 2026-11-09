@@ -3,14 +3,14 @@
 import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import {
-  Briefcase, CalendarDays, ChevronDown, ClipboardList, Download, Eye, EyeOff, Flag,
-  Home, LayoutGrid, LogOut, Settings, Shield, Table2, Users, type LucideIcon,
+  ArrowLeft, CircleUserRound, Eye, EyeOff, LogOut, Shield, type LucideIcon,
 } from "lucide-react";
-import { Suspense, useId, useState, useSyncExternalStore, type ReactNode } from "react";
+import { Suspense, useId, useSyncExternalStore, type ReactNode } from "react";
 import { timesViewHref } from "@/components/collection/times-url-state";
 import { useAuth } from "@/features/workshare/contexts/auth";
 import { worksharePath } from "@/features/workshare/lib/routes";
-import { atlasViews, getAtlasView, getAvailableTools, getTimesView, timesViews, toolDirectory, type ToolId } from "@/lib/tool-directory";
+import { getAtlasView, getAvailableTools, getTimesView, toolDirectory, type TimesView, type ToolId } from "@/lib/tool-directory";
+import { getToolPages } from "@/lib/tool-pages";
 import ToolSidebar from "./ToolSidebar";
 import styles from "./ToolSidebar.module.css";
 
@@ -44,77 +44,47 @@ function ToolsNavigation({ pathname, currentTool }: { pathname: string; currentT
   const params = useSearchParams();
   const hash = useSyncExternalStore(subscribeToHash, () => window.location.hash, () => "");
   const sectionId = useId();
-  const [disclosure, setDisclosure] = useState<{ currentTool?: ToolId; openTool?: ToolId }>({ currentTool, openTool: currentTool });
-  if (disclosure.currentTool !== currentTool) {
-    setDisclosure({ currentTool, openTool: currentTool });
-  }
-  const openTool = disclosure.currentTool === currentTool ? disclosure.openTool : currentTool;
   const onTimes = pathname === toolDirectory.times.href;
   const onAtlas = pathname === toolDirectory.atlas.href;
   const timesView = getTimesView(params.get("view"));
   const atlasView = getAtlasView(params.get("view"));
   const timesSearch = onTimes ? params.toString() : "";
   const timesHash = onTimes ? hash : "";
-  const importsHref = toolDirectory.imports.href;
   const workshareAdmin = isAdmin && !clientMode;
 
-  const subpages = {
-    times: timesViews.map(([id, label, icon]) => {
-      const active = onTimes && timesView === id;
-      const href = active
+  const subpages = currentTool ? getToolPages(currentTool, workshareAdmin).map(page => {
+    if (currentTool === "times") {
+      const active = onTimes && timesView === page.id;
+      return { ...page, active, href: active
         ? `${pathname}${timesSearch ? `?${timesSearch}` : ""}${timesHash}`
-        : timesViewHref(id, timesSearch, timesHash);
-      return { href, label, icon, active };
-    }),
-    workshare: [
-      routeItem(pathname, worksharePath(), "Dashboard", Home),
-      ...(!workshareAdmin ? [routeItem(pathname, worksharePath("logs"), "Volunteer Logs", ClipboardList)] : []),
-      routeItem(pathname, worksharePath("jobs"), "Job Board", Briefcase),
-      ...(workshareAdmin ? [
-        routeItem(pathname, worksharePath("admin/families"), "Families", Users, true),
-        routeItem(pathname, worksharePath("admin/roster"), "Roster", ClipboardList),
-        routeItem(pathname, worksharePath("admin/settings"), "Settings", Settings),
-      ] : []),
-    ],
-    atlas: atlasViews.map(([id, label, icon]) => ({
-      href: `${toolDirectory.atlas.href}${id === "map" ? "" : `?view=${id}`}`,
-      label,
-      icon,
-      active: onAtlas && atlasView === id,
-    })),
-    imports: [
-      routeItem(pathname, `${importsHref}/swims`, "Swims", Table2),
-      routeItem(pathname, `${importsHref}/meet-inventory`, "Meets", CalendarDays),
-      routeItem(pathname, importsHref, "Review queue", ClipboardList),
-      routeItem(pathname, `${importsHref}/meets`, "Meet collection", CalendarDays),
-      routeItem(pathname, `${importsHref}/results`, "Flagged results", Flag),
-      routeItem(pathname, `${importsHref}/exports`, "Exports", Download),
-    ],
-  };
+        : timesViewHref(page.id as TimesView, timesSearch, timesHash) };
+    }
+    if (currentTool === "atlas") return { ...page, active: onAtlas && atlasView === page.id };
+    return routeItem(pathname, page.href, page.label, page.icon, page.includeChildren);
+  }) : [];
 
   return (
     <>
-      <SidebarLink {...routeItem(pathname, "/tools", "Tools overview", LayoutGrid)} />
+      <SidebarLink {...routeItem(pathname, "/tools", "Account & Tools", CircleUserRound)} />
       <ul className={styles.groups}>
-        {getAvailableTools(isAdmin).map(([id, { title, icon: Icon }]) => {
-          const expanded = openTool === id;
+        {getAvailableTools(isAdmin).map(([id, { homeHref, title, icon: Icon }]) => {
+          const expanded = currentTool === id;
           const idForPages = `${sectionId}-${id}`;
           return (
             <li key={id}>
-              <button
-                type="button"
-                className={`${styles.item} ${styles.groupButton}`}
-                data-current-tool={currentTool === id}
+              <Link
+                href={homeHref}
+                className={`${styles.item} ${styles.groupLink}`}
+                data-current-tool={expanded}
+                aria-current={pathname === homeHref ? "page" : undefined}
                 aria-expanded={expanded}
                 aria-controls={idForPages}
-                onClick={() => setDisclosure({ currentTool, openTool: expanded ? undefined : id })}
               >
                 <Icon aria-hidden="true" />
                 <span>{title}</span>
-                <ChevronDown className={styles.chevron} aria-hidden="true" />
-              </button>
+              </Link>
               <ul id={idForPages} className={styles.subpages} hidden={!expanded}>
-                {expanded && subpages[id].map(page => (
+                {expanded && subpages.map(page => (
                   <li key={page.label}><SidebarLink {...page} /></li>
                 ))}
               </ul>
@@ -149,7 +119,8 @@ function ToolsAccount({ workshare, pathname }: { workshare: boolean; pathname: s
           {clientMode ? "To Admin" : "View Client"}
         </button>
       )}
-      <button type="button" className={`${styles.item} ${styles.signOut}`} onClick={() => void logout()}>
+      <Link href="/" className={`${styles.item} ${styles.footerAction}`}><ArrowLeft aria-hidden="true" />Back to Home</Link>
+      <button type="button" className={`${styles.item} ${styles.footerAction}`} onClick={() => void logout()}>
         <LogOut aria-hidden="true" />Sign Out
       </button>
     </>

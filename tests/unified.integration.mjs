@@ -473,7 +473,7 @@ await test("collection is staging-only, isolated, deduplicated and atomically re
   ] }); assert.ifError(stale.error);
   await collect("teams/velocity-swimming", { ...before, name: "Edited since collection" });
   const decision = await staff.rpc("review_collection", { batch_id: stale.data, decision: "approved", note: "" });
-  assert.equal(decision.error?.code, "40001");
+  assert.equal(decision.error?.code, "PT409");
   assert.equal(await record(staff, "teams/stale-" + suffix), null);
   await collect("teams/velocity-swimming", before);
 
@@ -503,7 +503,7 @@ await test("collection is staging-only, isolated, deduplicated and atomically re
   assert.equal((await staff.from("collection_batches").select("status").eq("id", missing.data).single()).data.status, "pending");
   const parent = await stage({ ...base, division: "times", writes: [{ path: "meets/" + missingId, after: { name: "Parent meet" } }] }); assert.ifError(parent.error);
   assert.ifError((await staff.rpc("review_collection", { batch_id: parent.data, decision: "approved", note: "Parent first" })).error);
-  assert.equal((await staff.rpc("review_collection", { batch_id: missing.data, decision: "approved", note: "Parent now exists" })).error?.code, "40001");
+  assert.equal((await staff.rpc("review_collection", { batch_id: missing.data, decision: "approved", note: "Parent now exists" })).error?.code, "PT409");
   const original = await staff.from("collection_batches").select("writes").eq("id", missing.data).single(); assert.ifError(original.error);
   // Existing collectors do not supply identityGuard. Their unchanged proposal
   // must still refresh after an unrelated canonical prerequisite was approved.

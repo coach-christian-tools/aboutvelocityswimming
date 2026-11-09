@@ -70,7 +70,6 @@
   padding: .75rem;
 }
 
-.frame .back,
 .frame .item,
 .frame .collapse,
 .frame .expand,
@@ -87,21 +86,10 @@
   transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease;
 }
 
-.frame .back,
 .frame .item,
 .frame .collapse {
   justify-content: flex-start;
   border-radius: .75rem;
-}
-
-.frame .back {
-  width: 100%;
-  margin-bottom: .875rem;
-  padding: .625rem .875rem;
-  border: 1px solid var(--border);
-  background: var(--background-alt);
-  color: var(--accent);
-  font-weight: 700;
 }
 
 .frame .item {
@@ -131,14 +119,13 @@
   box-shadow: var(--shadow-sm);
 }
 
-.frame .back:hover,
 .frame .expand:hover,
 .frame .mobileToggle:hover {
   border-color: var(--accent);
   color: var(--accent);
 }
 
-.frame :is(.back, .item, .collapse, .expand, .mobileToggle) svg {
+.frame :is(.item, .collapse, .expand, .mobileToggle) svg {
   flex: none;
   width: 1.125rem;
   height: 1.125rem;
@@ -150,9 +137,8 @@
 }
 
 .groups {
-  margin: .75rem 0 0;
-  padding: .75rem 0 0;
-  border-top: 1px solid var(--border);
+  margin: .2rem 0 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -160,28 +146,18 @@
   margin-top: .2rem;
 }
 
-.frame .groupButton {
+.frame .groupLink {
   font-weight: 700;
 }
 
-.frame .groupButton:is([data-current-tool="true"], [aria-expanded="true"]) {
+.frame .groupLink[data-current-tool="true"]:not([aria-current="page"]) {
   background: var(--background-alt);
   color: var(--accent);
 }
 
-.groupButton span {
+.groupLink span {
   flex: 1;
   white-space: normal;
-}
-
-.frame .groupButton .chevron {
-  width: 1rem;
-  height: 1rem;
-  transition: transform 150ms ease;
-}
-
-.groupButton[aria-expanded="true"] .chevron {
-  transform: rotate(180deg);
 }
 
 .subpages {
@@ -203,13 +179,20 @@
   height: 1rem;
 }
 
-.frame .signOut {
+.frame .footerAction {
+  margin-bottom: 0;
   color: var(--text-muted);
 }
 
 .navigation :is(a, button):focus-visible,
-.footer button:focus-visible {
+.controls button:focus-visible,
+.footer :is(a, button):focus-visible {
   outline-offset: -2px;
+}
+
+.controls {
+  flex: none;
+  padding: 0 .75rem .75rem;
 }
 
 .footer {

@@ -131,7 +131,8 @@ export default function PrivacyPolicy() {
                 </li>
                 <li>
                   <strong>Social media:</strong> Instagram embeds connect your
-                  browser to Meta services. Those services may receive technical
+                  browser to Meta services after you select “Load Instagram
+                  posts.” Those services may receive technical
                   information and use cookies when embedded posts load, even if
                   you do not click a post.
                 </li>

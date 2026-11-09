@@ -1,2 +1,5 @@
-import {redirect} from 'next/navigation';
-export default function AccountPage(){redirect('/tools/workshare');}
+import { redirect } from "next/navigation";
+
+export default function AccountPage() {
+  redirect("/tools");
+}

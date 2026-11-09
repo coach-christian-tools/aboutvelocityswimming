@@ -4,6 +4,7 @@ type Tool = {
   title: string;
   description: string;
   href: string;
+  homeHref: string;
   icon: LucideIcon;
   adminOnly?: boolean;
 };
@@ -13,24 +14,28 @@ export const toolDirectory = {
     title: "Velocity Times",
     description: "Explore approved results and time standards for Inland Empire athletes wherever they compete.",
     href: "/tools/times",
+    homeHref: "/tools/times/overview",
     icon: Timer,
   },
   workshare: {
     title: "Velocity Workshare",
     description: "Find volunteer opportunities, sign up for shifts, and track your family’s workshare hours.",
     href: "/tools/workshare",
+    homeHref: "/tools/workshare/overview",
     icon: Briefcase,
   },
   atlas: {
     title: "Swim Atlas",
     description: "Explore teams, meets, swimming organizations, and documents with original source links.",
     href: "/tools/knowledge",
+    homeHref: "/tools/knowledge/overview",
     icon: Map,
   },
   imports: {
     title: "Velocity Imports",
     description: "Inspect swim and meet data, and review proposed changes before publication.",
     href: "/tools/review",
+    homeHref: "/tools/review/overview",
     icon: ClipboardList,
     adminOnly: true,
   },

@@ -34,6 +34,27 @@ export type Database = {
   };
   public: {
     Tables: {
+      account_profiles: {
+        Row: {
+          user_id: string;
+          username: string;
+          bio: string;
+          avatar_path: string | null;
+        };
+        Insert: {
+          user_id: string;
+          username?: string;
+          bio?: string;
+          avatar_path?: string | null;
+        };
+        Update: {
+          user_id?: string;
+          username?: string;
+          bio?: string;
+          avatar_path?: string | null;
+        };
+        Relationships: [];
+      };
       administrators: {
         Row: {
           user_id: string;

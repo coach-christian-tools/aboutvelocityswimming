@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { execFileSync, spawn } from 'node:child_process';
 import { readFileSync, mkdirSync, writeFileSync, rmSync } from 'node:fs';
 import { randomUUID } from 'node:crypto';
+import { createClient } from '@supabase/supabase-js';
 const status=JSON.parse(execFileSync('supabase',['status','--output','json'],{encoding:'utf8',stdio:['ignore','pipe','ignore']}));
 assert.equal(status.API_URL,'http://127.0.0.1:54321','Identity tests refuse hosted data.');
 const project=readFileSync('supabase/config.toml','utf8').match(/^project_id = "([a-zA-Z0-9_-]+)"/m)?.[1];
@@ -151,10 +152,36 @@ await test('alias changes after staging reject approval and held/declined decisi
  try{
   const [batch]=createBatches(p);
   run(`select private.claim_athlete_identity('fixture',${q(p)},${q(p)},'{}');`,true);
-  run(staff+`DO $$ ${expect(`perform public.review_collection(${q(batch)},'approved','Stale must reject');`,'40001')} $$;
+  run(staff+`DO $$ ${expect(`perform public.review_collection(${q(batch)},'approved','Stale must reject');`,'PT409')} $$;
  select public.review_collection(${q(batch)},'held','Keep existing review decision');`);
   assert.equal(run(`select count(*) from public.swims where data->>'athleteId'=${q(p)};`),'0');
  }finally{cleanup(p);}
+});
+await test('obsolete and changed proposals return HTTP 409 promptly without writes or review receipts',async()=>{
+ const p=id();
+ const client=createClient(status.API_URL,status.PUBLISHABLE_KEY,{auth:{persistSession:false,autoRefreshToken:false}});
+ const login=await client.auth.signInWithPassword({email:'coach@velocity-swimming.com',password:'Velocity-local-test-2026!'});
+ assert.ifError(login.error);
+ try{
+  const [batch]=createBatches(p);
+  const revision=run('select revision from private.canonical_revision;');
+  for(const [change,message] of [
+   ['canonical_revision=null',/baseline changed/i],
+   [`canonical_revision=${Number(revision)-1}`,/baseline changed/i],
+   [`canonical_revision=${revision},reads=reads||${j([{path:'swims/'+p+'-absent',before:{timeMs:60000}}])}`,/record changed/i],
+  ]){
+   run(`update public.collection_batches set ${change} where id=${q(batch)};`,true);
+   const result=await client.rpc('review_collection',{batch_id:batch,decision:'approved',note:'Synthetic HTTP conflict regression'}).abortSignal(AbortSignal.timeout(5000));
+   assert.equal(result.status,409,'Stale approval must return a conflict instead of timing out');
+   assert.equal(result.error?.code,'PT409');
+   assert.match(result.error.message,message);
+   const saved=JSON.parse(run(`select jsonb_build_object('status',(select status from public.collection_batches where id=${q(batch)}),'races',(select count(*) from public.swims where data->>'athleteId'=${q(p)}),'extras',(select count(*) from public.athletes where id like ${q(p+'-extra-%')}),'reviews',(select count(*) from public.collection_reviews where batch_id=${q(batch)}));`));
+   assert.deepEqual(saved,{status:'pending',races:0,extras:0,reviews:0});
+  }
+  const held=await client.rpc('review_collection',{batch_id:batch,decision:'held',note:'Needs a fresh proposal'}).abortSignal(AbortSignal.timeout(5000));
+  assert.ifError(held.error);
+  assert.equal(run(`select status from public.collection_batches where id=${q(batch)};`),'held');
+ }finally{await client.auth.signOut();cleanup(p);}
 });
 console.log('Identity/revision/export verification completed against localhost only.');
 await test('a duplicate rejected after earlier writes rolls back profiles, aliases, revision, and review receipt',()=>{
@@ -237,7 +264,7 @@ await test('the existing staging CLI refreshes an unchanged old collector propos
  try{
   const old=stage(); assert.ok(old); assert.equal(stage(),old);
   run(`select private.claim_athlete_identity('fixture',${q(p)},${q(p)},'{}');`,true);
-  run(staff+`DO $$ ${expect(`perform public.review_collection(${q(old)},'approved','Must reject stale old batch');`,'40001')} $$;`);
+  run(staff+`DO $$ ${expect(`perform public.review_collection(${q(old)},'approved','Must reject stale old batch');`,'PT409')} $$;`);
   const fresh=stage(); assert.ok(fresh); assert.notEqual(fresh,old); assert.equal(stage(),fresh);
   run(staff+`select public.review_collection(${q(fresh)},'approved','Fresh legacy collector proposal');`,true);
   assert.equal(run(`select count(*) from public.swims where id=${q(body.id)};`),'1');

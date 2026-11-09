@@ -87,7 +87,7 @@ try {
     0,
   );
   await page.goto(base + "/tools");
-  await navigation.getByRole("button", { name: "Velocity Imports", exact: true }).click();
+  await navigation.getByRole("link", { name: "Velocity Imports", exact: true }).click();
   await navigation.getByRole("link", { name: "Review queue", exact: true }).click();
   await page.waitForURL(base + "/tools/review");
   const article = page.locator("article").filter({ hasText: title });
