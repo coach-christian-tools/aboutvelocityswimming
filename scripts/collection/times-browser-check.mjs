@@ -415,7 +415,7 @@ async function checkSharedSelections() {
     }),
   );
   await page.goto(base + "/tools/times?source=shared#results");
-  await page.getByRole("button", { name: "Meet Results", exact: true }).click();
+  await page.getByRole("link", { name: "Meet Results", exact: true }).click();
   await page
     .getByLabel("Meet search course", { exact: true })
     .selectOption("SCY");
@@ -430,9 +430,9 @@ async function checkSharedSelections() {
   await page.reload();
   assert.equal(
     await page
-      .getByRole("button", { name: "Meet Results", exact: true })
-      .getAttribute("aria-pressed"),
-    "true",
+      .getByRole("link", { name: "Meet Results", exact: true })
+      .getAttribute("aria-current"),
+    "page",
   );
   assert.equal(
     await page.getByLabel("Meet search course", { exact: true }).inputValue(),
@@ -443,7 +443,7 @@ async function checkSharedSelections() {
     "Fixture meet",
   );
 
-  await page.getByRole("button", { name: "Athletes", exact: true }).click();
+  await page.getByRole("link", { name: "Athletes", exact: true }).click();
   await page.getByLabel("Athlete course", { exact: true }).selectOption("LCM");
   await page.getByLabel("Athlete period", { exact: true }).selectOption("all");
   await page
@@ -464,7 +464,7 @@ async function checkSharedSelections() {
   );
 
   await page
-    .getByRole("button", { name: "Time Standards", exact: true })
+    .getByRole("link", { name: "Time Standards", exact: true })
     .click();
   const standards = page.getByRole("region", { name: "Time Standards" });
   const standardPicker = standards.getByRole("button", {
@@ -510,16 +510,17 @@ async function checkSharedSelections() {
 
   // A fresh document restores URL state without relying on mounted components.
   await page.goto(meetUrl);
-  assert.equal(
-    await page.getByLabel("Meet search year", { exact: true }).inputValue(),
-    today.slice(0, 4),
-  );
+  const meetYear = page.getByLabel("Meet search year", { exact: true });
+  await meetYear
+    .locator(`option[value="${today.slice(0, 4)}"]`)
+    .waitFor({ state: "attached" });
+  assert.equal(await meetYear.inputValue(), today.slice(0, 4));
   await page.goBack();
   assert.equal(
     await page
-      .getByRole("button", { name: "Time Standards", exact: true })
-      .getAttribute("aria-pressed"),
-    "true",
+      .getByRole("link", { name: "Time Standards", exact: true })
+      .getAttribute("aria-current"),
+    "page",
   );
   await page.goForward();
   assert.equal(
@@ -565,9 +566,9 @@ try {
     0,
     "Rankings start without an analysis sidebar",
   );
-  const timesNav = page.getByRole("navigation", { name: "Explore times" });
+  const timesNav = page.getByRole("navigation", { name: "Tools navigation" });
   const toolsLink = page.getByRole("link", {
-    name: "Back to Tools",
+    name: "Tools overview",
     exact: true,
   });
   assert.equal(await toolsLink.getAttribute("href"), "/tools");
@@ -723,7 +724,7 @@ try {
     .getByRole("group", { name: "Event history", exact: true })
     .getByRole("heading", { name: "Free", exact: true })
     .waitFor();
-  await page.getByRole("button", { name: "Meet Results", exact: true }).click();
+  await page.getByRole("link", { name: "Meet Results", exact: true }).click();
   await checkCenteredSummary();
   const meetBrowser = page.getByRole("region", {
     name: "Meet browser",
@@ -778,7 +779,7 @@ try {
   await page
     .getByRole("heading", { name: "Fixture meet", exact: true })
     .waitFor();
-  await page.getByRole("button", { name: "Team Records", exact: true }).click();
+  await page.getByRole("link", { name: "Team Records", exact: true }).click();
   const recordsPanel = page.getByRole("region", {
     name: "Team records",
     exact: true,
@@ -1014,7 +1015,7 @@ try {
     await page.getByRole("button", { name: "Mixed", exact: true }).count(),
     1,
   );
-  await page.getByRole("button", { name: "Athletes", exact: true }).click();
+  await page.getByRole("link", { name: "Athletes", exact: true }).click();
   await checkCenteredSummary();
   await page
     .getByRole("button", { name: "← Back to team athletes", exact: true })
@@ -1047,7 +1048,7 @@ try {
     .getByText("Swimmer 26 Fixture", { exact: true })
     .waitFor();
   await page
-    .getByRole("button", { name: "Event Rankings", exact: true })
+    .getByRole("link", { name: "Event Rankings", exact: true })
     .click();
   await Promise.all([
     page.waitForRequest(
@@ -1218,7 +1219,7 @@ try {
     .click();
   await participation.getByText("26–30 of 30", { exact: true }).waitFor();
   // Numbered and fallback groups share the same event selection behavior.
-  await page.getByRole("button", { name: "Meet Results", exact: true }).click();
+  await page.getByRole("link", { name: "Meet Results", exact: true }).click();
   await page.getByLabel("Search meets", { exact: true }).fill("Fixture meet");
   await page.getByText("Fixture meet", { exact: true }).first().click();
   const eventNav = page.getByRole("navigation", {
@@ -1286,7 +1287,7 @@ try {
     fullPage: true,
   });
   await page
-    .getByRole("button", { name: "Event Rankings", exact: true })
+    .getByRole("link", { name: "Event Rankings", exact: true })
     .click();
   await page
     .getByRole("table")
@@ -1354,7 +1355,7 @@ try {
   );
   await page.getByRole("button", { name: "Open navigation sidebar" }).click();
   await timesNav
-    .getByRole("button", { name: "Team Records", exact: true })
+    .getByRole("link", { name: "Team Records", exact: true })
     .click();
   await timesNav.waitFor({ state: "hidden" });
   const mobileLineup = page

@@ -1,21 +1,19 @@
 "use client";
 
 import { Suspense, useId, useRef, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import {
   ArrowUpRight,
   BarChart3,
-  CalendarDays,
   ChevronDown,
   X,
   ChevronLeft,
   ChevronRight,
   Search,
   Timer,
-  Trophy,
-  Users,
 } from "lucide-react";
 import { hasBackendConfiguration } from "@/lib/supabase/client";
-import ToolSidebar, { ToolSidebarItem } from "@/components/shared/ToolSidebar";
+import { getTimesView, type TimesView } from "@/lib/tool-directory";
 import { formatSwimTime } from "@/features/swim-resources/lib/domain/swim-time";
 import {
   ageGroups,
@@ -48,19 +46,12 @@ import MeetEventNavigation, { meetEventLabel } from "./MeetEventNavigation";
 import TeamRecords, { type RecordSelection } from "./TeamRecords";
 
 import { useTimesSelection } from "./use-times-selection";
+import { timesViewHref } from "./times-url-state";
 
 import CutChips from "./CutChips";
 import { useStandards } from "./use-standards";
 import type { StandardSet } from "@/features/swim-resources/types/schema";
 
-type View = "rankings" | "meets" | "athletes" | "records" | "standards";
-const timesViews = [
-  ["rankings", "Event Rankings", BarChart3],
-  ["records", "Team Records", Trophy],
-  ["standards", "Time Standards", Timer],
-  ["meets", "Meet Results", CalendarDays],
-  ["athletes", "Athletes", Users],
-] as const;
 const pageSize = 25;
 const ageOptions: [string, string][] = ageGroups.map(([key, label]) => [
   key,
@@ -503,12 +494,7 @@ export default function TimesDatabase() {
 function TimesDatabaseContent() {
   const standards = useStandards();
   const athleteScroll = useRef<number | null>(null);
-  const [requestedView, setView] = useTimesSelection<View>("view", "rankings");
-  const view = (
-    ["rankings", "meets", "athletes", "records", "standards"] as const
-  ).includes(requestedView)
-    ? requestedView
-    : "rankings";
+  const view = getTimesView(useSearchParams().get("view"));
   const standardSelection = useTimeStandardsSelection(
     standards.sets,
     view === "standards",
@@ -541,6 +527,12 @@ function TimesDatabaseContent() {
   );
   const [athleteEvent, setAthleteEvent] = useTimesSelection("athleteEvent", "");
   const [selected, setSelected] = useState<Race | null>(null);
+  const [previousView, setPreviousView] = useState(view);
+  if (previousView !== view) {
+    setPreviousView(view);
+    setSelected(null);
+    if (view !== "rankings") setFromRecords(false);
+  }
   const detailRef = useRef<HTMLDivElement>(null);
   const profileRef = useRef<HTMLElement>(null);
   const enabled = hasBackendConfiguration;
@@ -742,20 +734,10 @@ function TimesDatabaseContent() {
     setSelected(null);
     if (view === "rankings") setSearch("");
   }
-  function changeView(next: View) {
-    setView(next);
-    setMeetSearchOpen(true);
+  function changeView(next: TimesView) {
+    window.history.replaceState(null, "", timesViewHref(next, window.location.search, window.location.hash));
     setFromRecords(false);
-    setAthleteSearchOpen(!athleteId);
-    setListPage(0);
-    setSearch("");
-    setPage(0);
     setSelected(null);
-    setFilters(
-      next === "rankings"
-        ? { ...initialFilters }
-        : { ...initialFilters, course: "", event: "", genders: [] },
-    );
   }
   function openRecord(selection: RecordSelection) {
     changeView("rankings");
@@ -1051,7 +1033,7 @@ function TimesDatabaseContent() {
       )}
     </>
   );
-  const content = (
+  return (
     <main className={s.page} data-times-page="">
       {view !== "records" && (
         <header className={s.toolHeader}>
@@ -1747,28 +1729,5 @@ function TimesDatabaseContent() {
         </div>
       </div>
     </main>
-  );
-  return (
-    <ToolSidebar
-      tool="times"
-      navigationLabel="Explore times"
-      storageKey="velocity-times-sidebar"
-      navigation={timesViews.map(([key, label, icon]) => (
-        <ToolSidebarItem
-          key={key}
-          icon={icon}
-          active={view === key}
-          aria-pressed={view === key}
-          onClick={() => {
-            changeView(key);
-            if (view !== key) window.scrollTo({ top: 0, behavior: "instant" });
-          }}
-        >
-          {label}
-        </ToolSidebarItem>
-      ))}
-    >
-      {content}
-    </ToolSidebar>
   );
 }

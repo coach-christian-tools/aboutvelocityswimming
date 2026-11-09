@@ -62,6 +62,7 @@ try {
   });
   page.setDefaultTimeout(60000);
   const errors = [];
+  const navigation = page.getByRole("navigation", { name: "Tools navigation" });
   page.on("pageerror", (e) => errors.push(e.message));
   await page.route("**/auth/v1/**", (route) => {
     if (new URL(route.request().url()).origin === config.API_URL)
@@ -79,14 +80,15 @@ try {
   await page
     .getByRole("heading", { name: "Swim Atlas", exact: true })
     .waitFor();
-  await page.getByRole("tab", { name: "Meets", exact: true }).click();
+  await navigation.getByRole("link", { name: "Meets", exact: true }).click();
   await page.getByText("Loading…", { exact: true }).waitFor({state:"hidden"});
   assert.equal(
     await page.getByRole("heading", { name: title, exact: true }).count(),
     0,
   );
   await page.goto(base + "/tools");
-  await page.getByRole("link", { name: /^Velocity Imports\b/ }).click();
+  await navigation.getByRole("button", { name: "Velocity Imports", exact: true }).click();
+  await navigation.getByRole("link", { name: "Review queue", exact: true }).click();
   await page.waitForURL(base + "/tools/review");
   const article = page.locator("article").filter({ hasText: title });
   await article.getByRole("button", { name: "Hold", exact: true }).click();
@@ -101,7 +103,7 @@ try {
     .click();
   await article.waitFor({ state: "detached" });
   await page.goto(base + "/tools/knowledge");
-  await page.getByRole("tab", { name: "Meets", exact: true }).click();
+  await navigation.getByRole("link", { name: "Meets", exact: true }).click();
   await page.getByRole("heading", { name: title, exact: true }).waitFor();
   await page.getByRole("searchbox", { name: "Search meets" }).fill(title);
   await page.getByLabel("From", { exact: true }).fill("2026-10-03");

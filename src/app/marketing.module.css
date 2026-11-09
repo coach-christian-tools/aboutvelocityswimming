@@ -7,8 +7,8 @@
   scroll-behavior: smooth;
 }
 
-.marketing-site:has([data-tool-sidebar]) {
-  /* Sticky tool navigation needs to use the document's scroll position. */
+.marketing-site.tools-content {
+  /* Keep tool headers sticky against the document's scroll position. */
   overflow-x: clip;
 }
 

@@ -1,3 +1,6 @@
+import { toolDirectory, type TimesView } from "@/lib/tool-directory";
+import { initialFilters } from "./times-data";
+
 // Decode only the shape represented by the defaults; malformed shared links
 // must not put null arrays or objects into filter controls.
 function matchesShape(value: unknown, fallback: unknown): boolean {
@@ -45,4 +48,18 @@ export function writeTimesSelection<T>(
       typeof value === "string" ? value : JSON.stringify(value),
     );
   return `${url.pathname}${url.search}${url.hash}`;
+}
+
+export function timesViewHref(view: TimesView, search = "", hash = "") {
+  const params = new URLSearchParams(search);
+  for (const key of ["view", "meetSearchOpen", "athleteSearchOpen", "listPage", "search", "page", "filters"]) {
+    params.delete(key);
+  }
+  if (view !== "rankings") {
+    params.set("view", view);
+    params.set("filters", JSON.stringify({ ...initialFilters, course: "", event: "", genders: [] }));
+  }
+  if (params.get("athleteId")) params.set("athleteSearchOpen", "false");
+  const query = params.toString();
+  return `${toolDirectory.times.href}${query ? `?${query}` : ""}${hash}`;
 }

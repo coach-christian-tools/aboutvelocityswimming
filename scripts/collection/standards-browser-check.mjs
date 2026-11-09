@@ -77,7 +77,7 @@ try {
   page.on("pageerror", (e) => errors.push(e.message));
   await page.goto(base + "/tools/times");
   await page
-    .getByRole("button", { name: "Time Standards", exact: true })
+    .getByRole("link", { name: "Time Standards", exact: true })
     .click();
   await page
     .getByText("Loading approved standards…", { exact: true })
@@ -121,7 +121,7 @@ try {
   );
   await page.goto(base + "/tools/times");
   await page
-    .getByRole("button", { name: "Time Standards", exact: true })
+    .getByRole("link", { name: "Time Standards", exact: true })
     .click();
   await chooseStandardFilter("Standard", standardOption);
   await chooseStandardFilter("Age group", "10&U");
@@ -189,8 +189,8 @@ try {
   ]) {
     await page.getByRole("button", { name: "Open navigation sidebar" }).click();
     await page
-      .getByRole("navigation", { name: "Explore times" })
-      .getByRole("button", { name, exact: true })
+      .getByRole("navigation", { name: "Tools navigation" })
+      .getByRole("link", { name, exact: true })
       .click();
   }
   assert.deepEqual(errors, []);

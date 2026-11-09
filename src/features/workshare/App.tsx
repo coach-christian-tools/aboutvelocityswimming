@@ -13,4 +13,4 @@ const Registrations=lazy(()=>import('./components/admin/Registrations').then(m=>
 const Settings=lazy(()=>import('./components/admin/Settings').then(m=>({default:m.Settings})));
 const views={login:Login,guest:Guest,dashboard:Dashboard,jobs:Jobs,logs:Logs,families:Families,family:Family,registrations:Registrations,settings:Settings};
 export type WorkshareView=keyof typeof views;
-export default function App({view}:{view:WorkshareView}){const View=views[view];const isAdmin=['families','family','registrations','settings'].includes(view);return <Suspense fallback={<p role="status" className="p-8">Loading Workshare…</p>}>{['login','guest'].includes(view)?<View/>:<ProtectedRoute requireAdmin={isAdmin}><MainLayout isAdmin={isAdmin}><View/></MainLayout></ProtectedRoute>}</Suspense>;}
+export default function App({view}:{view:WorkshareView}){const View=views[view];const isAdmin=['families','family','registrations','settings'].includes(view);return <Suspense fallback={<p role="status" className="p-8">Loading Workshare…</p>}>{['login','guest'].includes(view)?<View/>:<ProtectedRoute requireAdmin={isAdmin}><MainLayout><View/></MainLayout></ProtectedRoute>}</Suspense>;}

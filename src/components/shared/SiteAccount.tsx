@@ -1,12 +1,15 @@
 "use client";
 import { CircleUserRound } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useAuth } from "@/features/workshare/contexts/auth";
+import { isToolsAdmin, isToolsPage } from "@/lib/tools-access";
 import styles from "./SiteAccount.module.css";
 
 export default function SiteAccount() {
   const { user, loading, logout } = useAuth();
-  if (loading) return null;
+  const pathname = usePathname();
+  if (loading || (isToolsPage(pathname) && isToolsAdmin(user?.email, user?.emailVerified === true))) return null;
   const className = `${styles.pill} ${styles.account}`;
   return user ? (
     <button

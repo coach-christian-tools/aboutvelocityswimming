@@ -110,7 +110,7 @@ try {
     } else await route.continue();
   });
   await page.goto(base + "/tools/times");
-  await page.getByRole("button", { name: "Meet Results", exact: true }).click();
+  await page.getByRole("link", { name: "Meet Results", exact: true }).click();
   await page.getByLabel("Search meets", { exact: true }).fill(prefix);
   await page.getByText(title, { exact: true }).click();
   await page.getByRole("button", { name: "Try again", exact: true }).click();

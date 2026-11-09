@@ -343,7 +343,7 @@ try {
     .getByText(/eligible relay performances in this comparison group/)
     .waitFor();
   await fullScreenshot("meet-mixed-relay-details.png");
-  await page.getByRole("button", { name: "Team Records", exact: true }).click();
+  await page.getByRole("link", { name: "Team Records", exact: true }).click();
   await page.getByRole("region", { name: "Team records" }).waitFor();
   for (const member of relayRecord.members) {
     await page

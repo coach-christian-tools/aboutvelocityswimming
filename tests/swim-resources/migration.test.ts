@@ -7,8 +7,8 @@ import { importDirectory } from '@/features/swim-resources/lib/domain/database-t
 import { legacyViewerHref, viewerHref } from '@/features/swim-resources/lib/domain/data-viewer';
 
 vi.mock('next/navigation', () => ({ redirect: (path: string) => { throw new Error('redirect:' + path); } }));
-import RetiredStaffRedirect from '@/app/(swim-resources)/tools/swim-resources/admin/[[...path]]/page';
-import AttendanceRedirect from '@/app/(swim-resources)/tools/swim-resources/attendance/admin/page';
+import RetiredStaffRedirect from '@/app/tools/(swim-resources)/swim-resources/admin/[[...path]]/page';
+import AttendanceRedirect from '@/app/tools/(swim-resources)/swim-resources/attendance/admin/page';
 
 describe('migrated navigation', () => {
   it('keeps public pages, assets and local API requests in their namespaces', () => {
