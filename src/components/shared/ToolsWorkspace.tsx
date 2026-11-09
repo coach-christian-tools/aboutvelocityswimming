@@ -9,7 +9,7 @@ import { Suspense, useId, useSyncExternalStore, type ReactNode } from "react";
 import { timesViewHref } from "@/components/collection/times-url-state";
 import { useAuth } from "@/features/workshare/contexts/auth";
 import { worksharePath } from "@/features/workshare/lib/routes";
-import { getAtlasView, getAvailableTools, getTimesView, toolDirectory, type TimesView, type ToolId } from "@/lib/tool-directory";
+import { getAtlasView, getAvailableTools, getOverviewView, getTimesView, toolDirectory, type TimesView, type ToolId } from "@/lib/tool-directory";
 import { getToolPages } from "@/lib/tool-pages";
 import ToolSidebar from "./ToolSidebar";
 import styles from "./ToolSidebar.module.css";
@@ -53,6 +53,11 @@ function ToolsNavigation({ pathname, currentTool }: { pathname: string; currentT
   const workshareAdmin = isAdmin && !clientMode;
 
   const subpages = currentTool ? getToolPages(currentTool, workshareAdmin).map(page => {
+    if (currentTool === "overview") {
+      const query = new URLSearchParams(params);
+      query.set("view", page.id);
+      return { ...page, href: `/tools/overview?${query}`, active: getOverviewView(params.get("view")) === page.id };
+    }
     if (currentTool === "times") {
       const active = onTimes && timesView === page.id;
       return { ...page, active, href: active

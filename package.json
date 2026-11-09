@@ -45,7 +45,9 @@
     "test:identity:database": "node --test tests/identity-guard.integration.mjs",
     "test:baseline:browser": "node scripts/collection/baseline-browser-check.mjs",
     "test:updates": "node --test tests/updates/*.test.ts",
-    "test:updates:browser": "node scripts/updates/browser-check.mjs"
+    "test:updates:browser": "node scripts/updates/browser-check.mjs",
+    "test:overview:database": "node scripts/observatory/database-check.mjs",
+    "test:overview:browser": "node scripts/observatory/browser-check.mjs"
   },
   "dependencies": {
     "@stripe/stripe-js": "^9.8.0",

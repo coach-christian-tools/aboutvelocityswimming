@@ -14,6 +14,7 @@ import { timesViewHref } from "@/components/collection/times-url-state";
 import { worksharePath } from "@/features/workshare/lib/routes";
 import {
   atlasViews,
+  overviewViews,
   timesViews,
   toolDirectory,
   type AtlasView,
@@ -58,6 +59,14 @@ export function getToolPages(
   workshareAdmin: boolean,
 ): ToolPage[] {
   switch (tool) {
+    case "overview":
+      return overviewViews.map(([id, label, icon]) => ({
+        id,
+        label,
+        icon,
+        description: `Explore the swimming archive with ${label}.`,
+        href: `/tools/overview?view=${id}`,
+      }));
     case "times":
       return timesViews.map(([id, label, icon]) => ({
         id,

@@ -1,4 +1,21 @@
-import { BarChart3, Briefcase, Building2, CalendarDays, ClipboardList, Files, Map, Timer, Trophy, Users, type LucideIcon } from "lucide-react";
+import {
+  BarChart3,
+  Briefcase,
+  Building2,
+  CalendarDays,
+  ClipboardList,
+  Files,
+  Map,
+  Timer,
+  Trophy,
+  Users,
+  Orbit,
+  LayoutDashboard,
+  Grid2X2,
+  ChartNoAxesCombined,
+  Fingerprint,
+  type LucideIcon,
+} from "lucide-react";
 
 type Tool = {
   title: string;
@@ -10,30 +27,42 @@ type Tool = {
 };
 
 export const toolDirectory = {
+  overview: {
+    title: "Overview",
+    description:
+      "Explore swimming history in the Data Observatory: every year, meet, and athlete in the approved archive.",
+    href: "/tools/overview",
+    homeHref: "/tools/overview",
+    icon: Orbit,
+  },
   times: {
     title: "Velocity Times",
-    description: "Explore approved results and time standards for Inland Empire athletes wherever they compete.",
+    description:
+      "Explore approved results and time standards for Inland Empire athletes wherever they compete.",
     href: "/tools/times",
     homeHref: "/tools/times/overview",
     icon: Timer,
   },
   workshare: {
     title: "Velocity Workshare",
-    description: "Find volunteer opportunities, sign up for shifts, and track your family’s workshare hours.",
+    description:
+      "Find volunteer opportunities, sign up for shifts, and track your family’s workshare hours.",
     href: "/tools/workshare",
     homeHref: "/tools/workshare/overview",
     icon: Briefcase,
   },
   atlas: {
     title: "Swim Atlas",
-    description: "Explore teams, meets, swimming organizations, and documents with original source links.",
+    description:
+      "Explore teams, meets, swimming organizations, and documents with original source links.",
     href: "/tools/knowledge",
     homeHref: "/tools/knowledge/overview",
     icon: Map,
   },
   imports: {
     title: "Velocity Imports",
-    description: "Inspect swim and meet data, and review proposed changes before publication.",
+    description:
+      "Inspect swim and meet data, and review proposed changes before publication.",
     href: "/tools/review",
     homeHref: "/tools/review/overview",
     icon: ClipboardList,
@@ -42,6 +71,19 @@ export const toolDirectory = {
 } as const satisfies Record<string, Tool>;
 
 export type ToolId = keyof typeof toolDirectory;
+
+export const overviewViews = [
+  ["treemap", "Swim Atlas", LayoutDashboard],
+  ["pixels", "Every Swim", Grid2X2],
+  ["skyline", "Meet Skyline", BarChart3],
+  ["fingerprints", "Athlete Fingerprints", Fingerprint],
+  ["universe", "Swimming Universe", Orbit],
+  ["growth", "Archive Growth", ChartNoAxesCombined],
+] as const;
+export type OverviewView = (typeof overviewViews)[number][0];
+export function getOverviewView(value: string | null): OverviewView {
+  return overviewViews.find(([id]) => id === value)?.[0] ?? "treemap";
+}
 
 export function getAvailableTools(isAdmin: boolean) {
   const tools = Object.entries(toolDirectory) as [ToolId, Tool][];
