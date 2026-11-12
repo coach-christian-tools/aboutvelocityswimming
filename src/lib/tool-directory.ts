@@ -4,7 +4,6 @@ import {
   Building2,
   CalendarDays,
   ClipboardList,
-  Files,
   Map,
   Timer,
   Trophy,
@@ -54,7 +53,7 @@ export const toolDirectory = {
   atlas: {
     title: "Swim Atlas",
     description:
-      "Explore teams, meets, swimming organizations, and documents with original source links.",
+      "Explore teams, meets, and swimming organizations with original source links.",
     href: "/tools/knowledge",
     homeHref: "/tools/knowledge/overview",
     icon: Map,
@@ -102,7 +101,6 @@ export const atlasViews = [
   ["map", "Map", Map],
   ["team", "Teams", Users],
   ["meet", "Meets", CalendarDays],
-  ["document", "Documents", Files],
   ["organization", "Organizations", Building2],
 ] as const;
 

@@ -20,6 +20,9 @@ import {
 } from "@/lib/observatory";
 import { getOverviewView, overviewViews } from "@/lib/tool-directory";
 import { timesViewHref } from "@/components/collection/times-url-state";
+import SearchableSelect, {
+  searchableSelectThreshold,
+} from "@/components/shared/SearchableSelect";
 import ArchiveViews from "./ArchiveViews";
 import styles from "./DataObservatory.module.css";
 
@@ -128,6 +131,15 @@ export default function DataObservatory() {
   const chosenRace = data?.results.find((r) => r.id === raceId);
   const selected = !!(filters.meet || filters.athlete);
   const athleteView = view === "fingerprints" || view === "universe";
+  const teamFacets =
+    response?.data?.facets.teams ??
+    (filters.team ? [{ id: filters.team, name: filters.team }] : []);
+  const chartAthletes =
+    athleteView && !filters.athlete ? (data?.athletes ?? []) : [];
+  const showAthletePicker = chartAthletes.length >= searchableSelectThreshold;
+  const teamNames = showAthletePicker
+    ? new Map(teamFacets.map(({ id, name }) => [id, name]))
+    : undefined;
 
   return (
     <main className={styles.page}>
@@ -221,25 +233,16 @@ export default function DataObservatory() {
             )}
           </select>
         </label>
-        <label>
-          Team
-          <select
-            value={filters.team}
-            onChange={(e) =>
-              update({ team: e.target.value, meet: "", athlete: "" })
-            }
-          >
-            <option value="">All teams</option>
-            {(
-              data?.facets.teams ??
-              (filters.team ? [{ id: filters.team, name: filters.team }] : [])
-            ).map((team) => (
-              <option key={team.id} value={team.id}>
-                {team.name}
-              </option>
-            ))}
-          </select>
-        </label>
+        <SearchableSelect
+          label="Team"
+          fieldClassName={styles.teamField}
+          className={styles.teamSelect}
+          value={filters.team}
+          onChange={(team) => update({ team, meet: "", athlete: "" })}
+          options={teamFacets.map(({ id, name }) => [id, name])}
+          emptyLabel="All teams"
+          searchPlaceholder="Search teams"
+        />
         <label>
           Course
           <select
@@ -340,8 +343,27 @@ export default function DataObservatory() {
           </div>
         </div>
         <div className={styles.explorerTitle}>
-          <h2>{overviewViews.find(([id]) => id === view)?.[1]}</h2>
-          <p>{descriptions[view]}</p>
+          <div>
+            <h2>{overviewViews.find(([id]) => id === view)?.[1]}</h2>
+            <p>{descriptions[view]}</p>
+          </div>
+          {showAthletePicker && (
+            <SearchableSelect
+              label="Athletes in this chart"
+              fieldClassName={styles.athleteField}
+              className={styles.athleteSelect}
+              options={chartAthletes.map(({ id, name, teams }) => {
+                const team = teams[0]?.id;
+                const teamName = team ? teamNames?.get(team) : undefined;
+                return [id, teamName ? `${name} · ${teamName}` : name, team];
+              })}
+              emptyLabel="Select an athlete"
+              searchPlaceholder="Search athletes"
+              onChange={(id) => {
+                if (id) select("athlete", id);
+              }}
+            />
+          )}
         </div>
         {error ? (
           <div className={styles.emptyChart} role="alert">

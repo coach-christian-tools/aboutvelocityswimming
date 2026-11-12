@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { PanelLeftClose, PanelLeftOpen } from "lucide-react";
@@ -70,13 +68,13 @@ export default function ToolSidebar({
   title,
   badge,
   navigation,
-  footer,
+  renderFooter,
   children,
 }: {
   title: string;
   badge?: ReactNode;
   navigation: ReactNode;
-  footer?: ReactNode;
+  renderFooter: (collapseControl: ReactNode) => ReactNode;
   children: ReactNode;
 }) {
   const sidebarId = useId();
@@ -266,21 +264,20 @@ export default function ToolSidebar({
           <nav className={styles.navigation} aria-label="Tools navigation">
             {navigation}
           </nav>
-          <div className={styles.controls}>
-            <button
-              type="button"
-              className={styles.collapse}
-              ref={collapseButton}
-              aria-controls={sidebarId}
-              aria-expanded={true}
-              aria-label="Collapse navigation sidebar"
-              onClick={collapseSidebar}
-            >
-              <PanelLeftClose aria-hidden="true" />Collapse
-            </button>
-          </div>
           <div className={styles.footer}>
-            {footer}
+            {renderFooter(
+              <button
+                type="button"
+                className={`${styles.item} ${styles.footerAction}`}
+                ref={collapseButton}
+                aria-controls={sidebarId}
+                aria-expanded={true}
+                aria-label="Collapse navigation sidebar"
+                onClick={collapseSidebar}
+              >
+                <PanelLeftClose aria-hidden="true" />Collapse
+              </button>,
+            )}
           </div>
           {!collapsed && (
             <div

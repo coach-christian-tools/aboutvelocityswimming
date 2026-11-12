@@ -38,6 +38,7 @@ try {
   await page.locator("input[type=password]").fill("Velocity-local-test-2026!");
   await page.locator("button[type=submit]").click();
   await page.waitForURL(base + "/tools");
+  await page.getByRole("heading", { name: "Account", level: 1, exact: true }).waitFor();
   await page.getByRole("region", { name: "Account management", exact: true }).waitFor();
   await page.getByLabel("Username", { exact: true }).waitFor();
   assert.equal((await read()).username, "", "Sign-in creates a persisted profile before the first save");
@@ -46,10 +47,32 @@ try {
   await page.reload();
   await page.getByLabel("Username", { exact: true }).waitFor();
   assert.equal((await read()).username, "", "Opening the profile repairs a missing row in an existing session");
-  const accountCard = page.getByRole("region", { name: "Account management", exact: true });
-  assert.ok(await accountCard.getByRole("group", { name: "Signed-in account" }).getByText(email, { exact: true }).isVisible());
-  assert.equal(await page.getByRole("complementary", { name: "Signed-in account" }).count(), 0);
-  assert.equal(await page.getByRole("navigation", { name: "Tools navigation", exact: true }).locator(":scope > ul").evaluate(element => getComputedStyle(element).borderTopWidth), "0px");
+  const account = page.getByRole("region", { name: "Account management", exact: true });
+  const sidebar = page.getByRole("complementary", { name: "Navigation sidebar", exact: true });
+  const navigation = sidebar.getByRole("navigation", { name: "Tools navigation", exact: true });
+  const accountLink = navigation.getByRole("link", { name: "Account", exact: true });
+  await accountLink.waitFor();
+  assert.equal(await accountLink.getAttribute("aria-current"), "page");
+  assert.ok(await account.getByRole("group", { name: "Signed-in account" }).getByText(email, { exact: true }).isVisible());
+  assert.equal(await sidebar.getByText("Logged in as", { exact: true }).count(), 0);
+  assert.equal(await sidebar.getByText(email, { exact: true }).count(), 0);
+  assert.equal(await navigation.locator(":scope > ul").evaluate(element => getComputedStyle(element).borderTopWidth), "0px");
+  assert.equal(await account.getByLabel(/^Bio\b/).count(), 0);
+
+  const main = page.getByRole("main");
+  const about = main.getByRole("region", { name: "About the tools", exact: true });
+  await about.waitFor();
+  for (const [name, description] of [
+    ["Overview", /Data Observatory/],
+    ["Velocity Times", /approved results and time standards/],
+    ["Velocity Workshare", /volunteer opportunities/],
+    ["Swim Atlas", /original source links/],
+    ["Velocity Imports", /review proposed changes/],
+  ]) {
+    assert.ok(await about.getByText(name, { exact: true }).isVisible());
+    assert.ok(await about.getByText(description).isVisible());
+  }
+  assert.equal(await main.getByRole("link").count(), 0);
   const save = page.getByRole("button", { name: "Save changes", exact: true });
   assert.equal(await save.count(), 0);
   await page.getByLabel("Username", { exact: true }).fill("temporary.name");
@@ -77,12 +100,14 @@ try {
   await page.getByLabel("Choose profile picture").setInputFiles({ name: "avatar.png", mimeType: "image/png", buffer: largePhoto });
   await page.getByRole("img", { name: "Your profile picture" }).waitFor();
   await page.getByLabel("Username", { exact: true }).fill("velocity.swimmer");
-  await page.getByLabel("Bio (optional)", { exact: true }).fill("Swimmer, volunteer, and lifelong fan of the pool.");
+  const existingBio = "Swimmer, volunteer, and lifelong fan of the pool.";
+  assert.ifError((await admin.from("account_profiles").update({ bio: existingBio }).eq("user_id", user.id)).error);
   await save.click();
   await page.getByRole("status").filter({ hasText: "Profile saved" }).waitFor();
   assert.equal(await save.count(), 0, "Saving hides Save changes");
   const stored = await read();
   assert.equal(stored.username, "velocity.swimmer");
+  assert.equal(stored.bio, existingBio, "Saving username and photo preserves a bio written after the page loaded");
   assert.ok(stored.avatar_path.startsWith(user.id + "/"));
   const uploaded = await bucket.download(stored.avatar_path);
   assert.ifError(uploaded.error);
@@ -90,14 +115,12 @@ try {
   await page.reload();
   await page.getByRole("img", { name: "Your profile picture" }).waitFor();
   assert.equal(await page.getByLabel("Username", { exact: true }).inputValue(), stored.username);
-  assert.equal(await page.getByLabel("Bio (optional)", { exact: true }).inputValue(), stored.bio);
   await page.evaluate(() => window.scrollTo(0, 0));
   await page.screenshot({ path: "/tmp/velocity-account-desktop.png", fullPage: true, animations: "disabled" });
-  const directory = page.getByRole("region", { name: "Your tools", exact: true });
-  assert.ok(await directory.getByRole("link").count() >= 3);
-  await directory.getByRole("link").first().click();
-  await page.waitForURL(/\/tools\/.+\/overview/);
-  await page.getByRole("link", { name: "Account & Tools", exact: true }).click();
+  await navigation.getByRole("link", { name: "Velocity Times", exact: true }).click();
+  await page.waitForURL(base + "/tools/times/overview");
+  await accountLink.click();
+  await page.waitForURL(base + "/tools");
   await page.getByLabel("Username", { exact: true }).waitFor();
 
   const profileRequests = "**/rest/v1/account_profiles*";
@@ -129,11 +152,11 @@ try {
   assert.equal(await page.getByRole("img", { name: "Your profile picture" }).count(), 0);
   await page.goto(base + "/account");
   await page.waitForURL(base + "/tools");
-  await accountCard.getByRole("group", { name: "Signed-in account" }).getByRole("button", { name: "Sign out", exact: true }).click();
+  await account.getByRole("group", { name: "Signed-in account" }).getByRole("button", { name: "Sign out", exact: true }).click();
   await page.getByText("Tools are temporarily locked", { exact: true }).waitFor();
   assert.equal(await page.getByLabel("Username", { exact: true }).count(), 0);
   assert.deepEqual(errors, []);
-  console.log("Verified profile save/reload, private photo upload/removal, discard, validation, failed-save retry, tool directory, mobile/dark layouts, account redirect, and sign-out.");
+  console.log("Verified account layout, tool descriptions and sidebar navigation, profile save/reload, private photo upload/removal, discard, validation, failed-save retry, mobile/dark layouts, account redirect, and sign-out.");
 } finally {
   await browser.close();
   const current = await admin.from("account_profiles").select("avatar_path").eq("user_id", user.id).maybeSingle();

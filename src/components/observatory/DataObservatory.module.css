@@ -93,7 +93,7 @@
   align-items: stretch;
   padding-bottom: 28px;
 }
-.filters > label {
+.filters > :is(label, .teamField) {
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -104,7 +104,7 @@
   min-width: 105px;
   max-width: 200px;
 }
-.filters select {
+.filters :is(select, .teamSelect) {
   border: 0;
   background: transparent;
   color: var(--text-main);
@@ -114,6 +114,9 @@
   text-transform: none;
   padding: 5px 20px 5px 0;
   max-width: 100%;
+}
+.filters button.teamSelect {
+  padding-inline-end: 0;
 }
 .search {
   flex: 1;
@@ -245,18 +248,37 @@
   cursor: default;
 }
 .explorerTitle {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 24px;
   padding: 23px 24px 20px;
 }
-.explorerTitle h2 {
+.explorerTitle > div > h2 {
   font-size: 22px;
   font-weight: 500;
   margin: 0 0 5px;
   letter-spacing: -0.02em;
 }
-.explorerTitle p {
+.explorerTitle > div > p {
   font-size: 11px;
   margin: 0;
   color: #abc2cd;
+}
+.athleteField {
+  display: grid;
+  gap: 4px;
+  width: min(100%, 14rem);
+  font-size: 11px;
+  color: #abc2cd;
+}
+.athleteField .athleteSelect {
+  background: #1e3b4b;
+  color: #edf5f6;
+  border: 1px solid #ffffff20;
+  border-radius: 4px;
+  font-size: 12px;
 }
 .chartScroll {
   overflow: auto;
@@ -717,7 +739,7 @@
     flex-basis: 100%;
     min-height: 45px;
   }
-  .filters > label {
+  .filters > :is(label, .teamField) {
     flex: 1;
     max-width: none;
   }
@@ -772,10 +794,10 @@
   .filters {
     gap: 12px;
   }
-  .filters > label {
+  .filters > :is(label, .teamField) {
     min-width: 80px;
   }
-  .filters > label:nth-of-type(2) {
+  .filters > .teamField {
     max-width: 140px;
   }
   .reset {
@@ -801,7 +823,7 @@
   .explorerTitle {
     padding: 20px 16px;
   }
-  .explorerTitle p {
+  .explorerTitle > div > p {
     line-height: 1.6;
   }
   .chartScroll {

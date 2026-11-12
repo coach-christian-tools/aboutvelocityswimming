@@ -47,8 +47,6 @@ const atlasDescriptions: Record<AtlasView, string> = {
   map: "Explore swimming locations and organizations on an interactive map.",
   team: "Find swim teams and explore their locations and affiliations.",
   meet: "Browse meets by date, region, and venue, with links to original sources.",
-  document:
-    "Find swimming documents and reference materials with original source links.",
   organization:
     "Explore the zones, local swimming committees, and organizations behind the sport.",
 };

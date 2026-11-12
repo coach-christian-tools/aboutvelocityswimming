@@ -4,7 +4,7 @@ The website and tools use Supabase (`hgsghjqefynhbavmkehv`). Firebase-specific g
 
 - `/tools/workshare`: private households and commitments. Members are independent of Times athletes.
 - `/tools/times`: public approved Inland Empire athlete profiles and race history, including meets outside the region.
-- `/tools/knowledge`: approved meet, organization, venue, and document entries with source links.
+- `/tools/knowledge`: a map and approved team, meet, and organization entries with source links.
 - `/tools/review`: staff-only evidence and before/after review. Approve, hold, or decline a bounded batch. Approval checks for stale data and applies all changes atomically.
 
 Staff access requires a verified account and either an explicit user grant in `public.administrators` or a verified email listed in `private.administrator_emails`. Team email domains alone do not grant staff access. Collector tokens cannot grant permissions or publish records.

@@ -73,7 +73,7 @@ function ToolsNavigation({ pathname, currentTool }: { pathname: string; currentT
 
   return (
     <>
-      <SidebarLink {...routeItem(pathname, "/tools", "Account & Tools", CircleUserRound)} />
+      <SidebarLink {...routeItem(pathname, "/tools", "Account", CircleUserRound)} />
       <ul className={styles.groups}>
         {getAvailableTools(isAdmin).map(([id, { homeHref, title, icon: Icon }]) => {
           const expanded = currentTool === id;
@@ -105,8 +105,12 @@ function ToolsNavigation({ pathname, currentTool }: { pathname: string; currentT
   );
 }
 
-function ToolsAccount({ workshare, pathname }: { workshare: boolean; pathname: string }) {
-  const { user, logout, isAdmin, clientMode, setClientMode, setPreviewFamilyId } = useAuth();
+function ToolsAccount({ workshare, pathname, collapseControl }: {
+  workshare: boolean;
+  pathname: string;
+  collapseControl: ReactNode;
+}) {
+  const { logout, isAdmin, clientMode, setClientMode, setPreviewFamilyId } = useAuth();
   const router = useRouter();
   const PreviewIcon = clientMode ? EyeOff : Eye;
   function toggleClientMode() {
@@ -118,10 +122,6 @@ function ToolsAccount({ workshare, pathname }: { workshare: boolean; pathname: s
 
   return (
     <>
-      <div className="mb-2 px-3 text-xs">
-        <p className="font-medium text-text-secondary">Logged in as</p>
-        <p className="truncate font-semibold text-text-primary">{user?.email}</p>
-      </div>
       {workshare && isAdmin && (
         <button type="button" className={styles.item} onClick={toggleClientMode} data-close-tool-drawer>
           <PreviewIcon aria-hidden="true" />
@@ -129,6 +129,7 @@ function ToolsAccount({ workshare, pathname }: { workshare: boolean; pathname: s
         </button>
       )}
       <Link href="/" className={`${styles.item} ${styles.footerAction}`}><ArrowLeft aria-hidden="true" />Back to Home</Link>
+      {collapseControl}
       <button type="button" className={`${styles.item} ${styles.footerAction}`} onClick={() => void logout()}>
         <LogOut aria-hidden="true" />Sign Out
       </button>
@@ -152,7 +153,9 @@ export default function ToolsWorkspace({ children }: { children: ReactNode }) {
         </span>
       )}
       navigation={<Suspense fallback={null}><ToolsNavigation pathname={pathname} currentTool={currentTool} /></Suspense>}
-      footer={<ToolsAccount workshare={workshare} pathname={pathname} />}
+      renderFooter={(collapseControl) => (
+        <ToolsAccount workshare={workshare} pathname={pathname} collapseControl={collapseControl} />
+      )}
     >
       {children}
     </ToolSidebar>

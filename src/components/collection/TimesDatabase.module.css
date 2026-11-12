@@ -86,8 +86,8 @@
   font-size: 12px;
   font-weight: 600;
 }
-.field select,
-.field input {
+.field > select,
+.field > input {
   width: 100%;
   min-height: 42px;
   padding: 9px 12px;

@@ -38,7 +38,7 @@ try {
   await page.locator("button[type=submit]").click();
   await page.waitForURL(base + "/tools");
   const navigation = page.getByRole("navigation", { name: "Tools navigation", exact: true });
-  const overview = navigation.locator('a[href="/tools"]');
+  const account = navigation.getByRole("link", { name: "Account", exact: true });
   const home = page.getByRole("link", { name: "Back to Home", exact: true });
   const reviewHeading = page.getByRole("heading", { name: "Review queue", exact: true });
   const toolNames = ["Velocity Times", "Velocity Workshare", "Swim Atlas", "Velocity Imports"];
@@ -61,8 +61,8 @@ try {
     }
     return toolSection(name);
   }
-  await overview.waitFor();
-  assert.equal(await overview.getAttribute("aria-current"), "page");
+  await account.waitFor();
+  assert.equal(await account.getAttribute("aria-current"), "page");
   for (const name of toolNames) {
     assert.equal(await toolLink(name).getAttribute("aria-expanded"), "false");
     assert.equal(await (await toolSection(name)).isVisible(), false);
@@ -87,6 +87,7 @@ try {
   await page.getByRole("heading", { name: "Explore Velocity Times", exact: true }).waitFor();
   assert.equal(await toolLink("Velocity Times").getAttribute("aria-current"), "page");
   const atlasNavigation = await openTool("Swim Atlas");
+  assert.deepEqual(await atlasNavigation.getByRole("link").allTextContents(), ["Map", "Teams", "Meets", "Organizations"]);
   const atlasMeets = atlasNavigation.getByRole("link", { name: "Meets", exact: true });
   await atlasMeets.click();
   await page.waitForURL((url) => url.pathname === "/tools/knowledge");
@@ -104,7 +105,7 @@ try {
   assert.equal(await queueItem.getAttribute("aria-current"), "page");
   await page.getByRole("table", { name: "Pending meets", exact: true }).waitFor();
   await page.getByRole("table", { name: "Pending swims", exact: true }).waitFor();
-  await overview.click();
+  await account.click();
   await page.waitForURL(base + "/tools");
   await home.click();
   await page.waitForURL(base + "/");
@@ -181,7 +182,7 @@ try {
   await page.goto(base + "/tools/swim-resources/attendance/admin");
   await page.waitForURL(base + "/tools");
   assert.equal(await page.getByRole("link", { name: /Coach attendance/ }).count(), 0);
-  console.log("Retired attendance returns to Tools");
+  console.log("Retired attendance returns to Account");
   await page.goto(base+'/tools/workshare/jobs');
   await page.getByRole('button',{name:/Create Shift|Post.*Shift|Add.*Shift/}).first().click();
   await page.getByRole('dialog').waitFor();await page.keyboard.press('Escape');assert.equal(await page.getByRole('dialog').count(),0);
@@ -190,7 +191,7 @@ try {
   for (const width of [1440, 390, 320]) {
     await page.setViewportSize({ width, height: 900 });
     await page.goto(base + "/tools");
-    await page.getByRole("region", { name: "Your tools", exact: true }).waitFor();
+    await page.getByRole("region", { name: "About the tools", exact: true }).waitFor();
     assert.equal(await page.getByRole("link", { name: "Staff Tools", exact: true }).count(), 0);
     await page.screenshot({
       path: "/tmp/velocity-tools-" + width + ".png",
@@ -199,14 +200,15 @@ try {
     const overflow = await page.evaluate(
       () => document.documentElement.scrollWidth > innerWidth,
     );
-    assert.equal(overflow, false, "Tools overflow at " + width);
+    assert.equal(overflow, false, "Account overflows at " + width);
     for (const [name, path, count] of [
       ["Velocity Times", "times", 5],
       ["Velocity Workshare", "workshare", 5],
-      ["Swim Atlas", "knowledge", 5],
+      ["Swim Atlas", "knowledge", 4],
       ["Velocity Imports", "review", 6],
     ]) {
-      await page.getByRole("main").getByRole("link", { name, exact: true }).click();
+      if (width < 768) await openDrawer.click();
+      await toolLink(name).click();
       const imports = name === "Velocity Imports";
       await page.waitForURL(base + `/tools/${path}${imports ? "" : "/overview"}`);
       await page.getByRole("heading", { name: imports ? "Review queue" : `Explore ${name}`, exact: true }).waitFor();
@@ -218,9 +220,9 @@ try {
       await page.screenshot({ path: `/tmp/velocity-${path}-home-${width}.png`, fullPage: true });
       if (imports) {
         if (width < 768) await openDrawer.click();
-        await overview.click();
+        await account.click();
       } else {
-        await page.getByRole("main").getByRole("link", { name: "All tools", exact: true }).click();
+        await page.getByRole("main").getByRole("link", { name: "Back to Account", exact: true }).click();
       }
       await page.waitForURL(base + "/tools");
     }

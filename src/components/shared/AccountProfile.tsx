@@ -105,7 +105,6 @@ function ProfileEditor({
 }) {
   const [saved, setSaved] = useState(initial);
   const [username, setUsername] = useState(initial.username);
-  const [bio, setBio] = useState(initial.bio);
   // undefined keeps the saved photo; null removes it; File replaces it on save.
   const [photo, setPhoto] = useState<File | null>();
   const [saving, setSaving] = useState(false);
@@ -116,8 +115,7 @@ function ProfileEditor({
   const busy = useRef(false);
   const photoChanged =
     photo != null || (photo === null && saved.avatar_path !== null);
-  const dirty =
-    username !== saved.username || bio !== saved.bio || photoChanged;
+  const dirty = username !== saved.username || photoChanged;
   useUpdateBlocker(dirty || saving || choosingPhoto);
 
   async function choosePhoto(event: ChangeEvent<HTMLInputElement>) {
@@ -157,10 +155,9 @@ function ProfileEditor({
     setError("");
     setSuccess(false);
     try {
-      const profile = await saveAccountProfile(saved, { username, bio }, photo);
+      const profile = await saveAccountProfile(saved, username, photo);
       setSaved(profile);
       setUsername(profile.username);
-      setBio(profile.bio);
       setPhoto(undefined);
       setSuccess(true);
     } catch {
@@ -175,7 +172,6 @@ function ProfileEditor({
 
   function discard() {
     setUsername(saved.username);
-    setBio(saved.bio);
     setPhoto(undefined);
     setError("");
     setSuccess(false);
@@ -233,7 +229,7 @@ function ProfileEditor({
             </p>
           </div>
         </div>
-        <div>
+        <div className="max-w-sm">
           <label
             htmlFor="profile-username"
             className="mb-2 block text-sm font-semibold"
@@ -257,35 +253,6 @@ function ProfileEditor({
           <p id="username-hint" className="mt-2 text-xs text-text-secondary">
             3–30 letters, numbers, underscores, or periods. Optional.
           </p>
-        </div>
-        <div>
-          <label
-            htmlFor="profile-bio"
-            className="mb-2 block text-sm font-semibold"
-          >
-            Bio{" "}
-            <span className="font-normal text-text-secondary">(optional)</span>
-          </label>
-          <textarea
-            id="profile-bio"
-            rows={3}
-            maxLength={280}
-            value={bio}
-            aria-describedby="bio-hint"
-            placeholder="A little about you and your connection to swimming."
-            className="block w-full resize-y rounded-lg border border-border bg-surface px-3.5 py-3 text-sm text-text-primary placeholder:text-text-secondary/70 focus-visible:border-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/20"
-            onChange={(event) => {
-              setBio(event.target.value);
-              setSuccess(false);
-            }}
-          />
-          <div
-            id="bio-hint"
-            className="mt-2 flex justify-between gap-3 text-xs text-text-secondary"
-          >
-            <span>Your profile is visible only to you.</span>
-            <span className="shrink-0">{bio.length}/280</span>
-          </div>
         </div>
         {dirty && (
           <div className="flex flex-wrap items-center gap-3 border-t border-border pt-5">
@@ -389,10 +356,7 @@ export default function AccountProfile() {
     }
   }
   return (
-    <section
-      aria-label="Account management"
-      className="min-w-0 rounded-2xl border border-border bg-surface p-5 sm:p-7"
-    >
+    <section aria-label="Account management" className="min-w-0">
       <div
         role="group"
         className="mb-6 flex flex-wrap items-center justify-between gap-4 border-b border-border pb-6"

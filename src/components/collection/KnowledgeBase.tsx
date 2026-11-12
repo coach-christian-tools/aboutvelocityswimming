@@ -3,6 +3,7 @@ import { Suspense, useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import { useSearchParams } from "next/navigation";
 import { ExternalLink, Search } from "lucide-react";
+import { SearchableMultiSelect, searchableSelectThreshold } from "@/components/shared/SearchableSelect";
 import { browserClient, hasBackendConfiguration } from "@/lib/supabase/client";
 import { getAtlasView } from "@/lib/tool-directory";
 import AtlasSectionGuide, { atlasTopSection } from "./AtlasSectionGuide";
@@ -101,6 +102,7 @@ function AtlasContent() {
   }, [tab, organization, zones, lscs, region, venue, from, until, query, offset, invalidDates, revision]);
   function resetPage() { setOffset(0); setLoading(true); }
   function clear() { setZones([]); setLscs([]); setRegion(""); setVenue(""); setFrom(""); setUntil(""); setSearch(""); setQuery(""); resetPage(); }
+  function updateLscs(value: string[]) { setLscs(value); resetPage(); }
   const availableLscs = facets.filter(entry => entry.kind === "lsc" && (!zones.length || zones.includes(field(entry.data, "zoneId"))));
   const activeFilters = Boolean(search || zones.length || lscs.length || region || venue || from || until);
   return (
@@ -111,7 +113,18 @@ function AtlasContent() {
         <label className={styles.search}><Search size={18} aria-hidden="true" /><span className="sr-only">Search {tab === "organization" ? "organizations" : `${tab}s`}</span><input type="search" placeholder={`Search ${tab === "organization" ? "organizations" : `${tab}s`}…`} value={search} onChange={event => setSearch(event.target.value)} /></label>
         {(tab === "team" || tab === "meet") && <>
           <Chips label="Zones" entries={facets.filter(entry => entry.kind === "zone")} selected={zones} onChange={value => { setZones(value); setLscs([]); resetPage(); }} />
-          <Chips label="LSCs" entries={availableLscs} selected={lscs} initialLimit={3} onChange={value => { setLscs(value); resetPage(); }} />
+          {availableLscs.length >= searchableSelectThreshold ? (
+            <SearchableMultiSelect
+              label="LSCs"
+              value={lscs}
+              onChange={updateLscs}
+              options={availableLscs.map(entry => [entry.id, entry.title, field(entry.data, "code")])}
+              emptyLabel="All LSCs"
+              searchPlaceholder="Search LSCs"
+            />
+          ) : (
+            <Chips label="LSCs" entries={availableLscs} selected={lscs} initialLimit={3} onChange={updateLscs} />
+          )}
         </>}
         {tab === "meet" && <div className={styles.selects}>
           <label>From<input type="date" value={from} onChange={event => { setFrom(event.target.value); resetPage(); }} /></label>

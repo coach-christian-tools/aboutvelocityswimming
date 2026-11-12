@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import SearchableSelect from "@/components/shared/SearchableSelect";
 import { VELOCITY_TEAM } from "@/features/swim-resources/lib/domain/entities";
 import { useTimesSelection } from "./use-times-selection";
 import {
@@ -160,23 +161,15 @@ export default function AthleteBrowser({
   ]);
   const filterPanel = (
     <div className={`${s.filters} ${s.athleteFilters}`}>
-      <label className={`${s.field} ${s.athleteFilterWide}`}>
-        Athlete team
-        <select
-          aria-label="Athlete team"
-          value={options.team}
-          onChange={(event) =>
-            setOptions((current) => ({ ...current, team: event.target.value }))
-          }
-        >
-          <option value="">Select a team…</option>
-          {teamOptions.map(([id, name]) => (
-            <option key={id} value={id}>
-              {name}
-            </option>
-          ))}
-        </select>
-      </label>
+      <SearchableSelect
+        label="Athlete team"
+        fieldClassName={`${s.field} ${s.athleteFilterWide}`}
+        value={options.team}
+        onChange={(team) => setOptions((o) => ({ ...o, team }))}
+        options={teamOptions}
+        emptyLabel="Select a team…"
+        searchPlaceholder="Search teams"
+      />
       <label className={s.field}>
         Athlete course
         <select

@@ -18,7 +18,7 @@ export default function ToolHome({ tool }: { tool: ToolId }) {
         className="mb-8 inline-flex items-center gap-2 text-sm font-semibold text-text-secondary hover:text-accent"
       >
         <ArrowLeft className="size-4" aria-hidden="true" />
-        All tools
+        Back to Account
       </Link>
       <header className="mb-10 max-w-2xl">
         <div className="mb-4 flex size-12 items-center justify-center rounded-2xl bg-hover-bg text-accent">

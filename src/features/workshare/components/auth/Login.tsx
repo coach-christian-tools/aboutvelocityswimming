@@ -348,7 +348,7 @@ export function Login() {
             </button>
           </div>}
         </Card>
-        <p className="mt-4 text-center text-sm text-slate-500"><a href="/tools" className="hover:underline">← Back to Tools</a></p>
+        <p className="mt-4 text-center text-sm text-slate-500"><a href="/tools" className="hover:underline">← Back to Account</a></p>
       </div>
     </div>
   )

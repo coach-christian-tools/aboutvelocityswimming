@@ -13,7 +13,7 @@ vi.mock("@/lib/supabase/client", () => ({
 vi.mock("@/lib/update-safety", () => ({ withUpdateHold: (fn: () => Promise<unknown>) => fn() }));
 import { loadAccountProfile, saveAccountProfile, validateAvatar } from "@/lib/account-profile";
 
-const previous = { user_id: "owner", username: "old.name", bio: "", avatar_path: "owner/old.png" };
+const previous = { user_id: "owner", username: "old.name", avatar_path: "owner/old.png" };
 const photo = new File(["photo"], "photo.png", { type: "image/png" });
 beforeEach(() => {
   vi.clearAllMocks();
@@ -59,26 +59,26 @@ describe("profile save recovery", () => {
   });
   it("keeps the existing profile and photo when upload fails", async () => {
     mocks.upload.mockResolvedValue({ error: new Error("offline") });
-    await expect(saveAccountProfile(previous, { username: "new.name", bio: "" }, photo)).rejects.toThrow("offline");
+    await expect(saveAccountProfile(previous, "new.name", photo)).rejects.toThrow("offline");
     expect(mocks.upsert).not.toHaveBeenCalled();
     expect(mocks.remove).not.toHaveBeenCalled();
   });
   it("cleans up only the new upload when the profile save fails", async () => {
     mocks.single.mockResolvedValue({ error: new Error("save failed") });
-    await expect(saveAccountProfile(previous, { username: "new.name", bio: "" }, photo)).rejects.toThrow("save failed");
+    await expect(saveAccountProfile(previous, "new.name", photo)).rejects.toThrow("save failed");
     expect(mocks.remove).toHaveBeenCalledExactlyOnceWith([mocks.upload.mock.calls[0][0]]);
     expect(mocks.remove).not.toHaveBeenCalledWith([previous.avatar_path]);
   });
   it("does not turn a successful save into an error if old photo cleanup fails", async () => {
     mocks.remove.mockRejectedValue(new Error("offline"));
-    await expect(saveAccountProfile(previous, { username: "new.name", bio: "" }, photo)).resolves.toMatchObject({ username: "new.name" });
+    await expect(saveAccountProfile(previous, "new.name", photo)).resolves.toMatchObject({ username: "new.name" });
     expect(mocks.remove).toHaveBeenCalledWith([previous.avatar_path]);
   });
   it("preserves an unchanged photo and removes a deleted photo after saving", async () => {
-    await saveAccountProfile(previous, { username: "new.name", bio: "" }, undefined);
+    await saveAccountProfile(previous, "new.name", undefined);
     expect(mocks.upsert).toHaveBeenLastCalledWith({ ...previous, username: "new.name" });
     expect(mocks.remove).not.toHaveBeenCalled();
-    await saveAccountProfile(previous, { username: "", bio: "" }, null);
+    await saveAccountProfile(previous, "", null);
     expect(mocks.upsert).toHaveBeenLastCalledWith({ ...previous, username: "", avatar_path: null });
     expect(mocks.remove).toHaveBeenCalledWith([previous.avatar_path]);
   });

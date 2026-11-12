@@ -51,7 +51,7 @@ const athlete = {
   kind: "athlete",
   id: `${prefix}-athlete`,
   data: {
-    name: { first: "Browser Fresh", last: "Athlete" },
+    name: { first: "Browser Fresh", last: `Athlete ${prefix}` },
     sourceObservation: { memberIdHash: sha256(prefix).slice(0, 24) },
     teamId: team.id,
   },
@@ -154,7 +154,7 @@ try {
   await excludedCheckbox.uncheck();
   await meets.getByText("300 selected", { exact: true }).waitFor();
 
-  const swimLabel = "Browser Fresh Athlete";
+  const swimLabel = `${athlete.data.name.first} ${athlete.data.name.last}`;
   await swims.getByRole("button", { name: `View details for ${swimLabel}` }).click();
   const details = page.getByRole("dialog", { name: swimLabel });
   await details.getByRole("link", { name: sourceUrl }).waitFor();

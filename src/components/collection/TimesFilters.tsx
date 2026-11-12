@@ -1,5 +1,8 @@
 import { useId, useRef } from "react";
 import { ChevronDown, X } from "lucide-react";
+import SearchableSelect, {
+  searchableSelectThreshold,
+} from "@/components/shared/SearchableSelect";
 import TimesEventSelector from "./TimesEventSelector";
 import s from "./TimesDatabase.module.css";
 
@@ -36,10 +39,12 @@ export function PopupPicker({
   onCourseChange,
   hideLabel = false,
   showChevron = true,
+  searchPlaceholder,
 }: {
   label: string;
   hideLabel?: boolean;
   showChevron?: boolean;
+  searchPlaceholder?: string;
   value: string;
   onChange: (value: string) => void;
   options: [string, string][];
@@ -50,6 +55,21 @@ export function PopupPicker({
   const id = useId();
   const dialog = useRef<HTMLDialogElement>(null);
   const isEvent = label.toLowerCase().includes("event");
+  if (searchPlaceholder && options.length >= searchableSelectThreshold) {
+    return (
+      <SearchableSelect
+        label={label}
+        hideLabel={hideLabel}
+        value={value}
+        onChange={onChange}
+        options={options}
+        emptyLabel={all}
+        searchPlaceholder={searchPlaceholder}
+        fieldClassName={s.field}
+        className={s.eventTrigger}
+      />
+    );
+  }
   return (
     <div className={`${s.field} ${isEvent ? s.eventField : ""}`}>
       <label

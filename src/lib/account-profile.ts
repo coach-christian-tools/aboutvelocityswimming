@@ -2,8 +2,11 @@ import { browserClient } from "./supabase/client";
 import type { Database } from "./supabase/database.types";
 import { withUpdateHold } from "./update-safety";
 
-export type AccountProfile =
-  Database["public"]["Tables"]["account_profiles"]["Row"];
+export type AccountProfile = Pick<
+  Database["public"]["Tables"]["account_profiles"]["Row"],
+  "user_id" | "username" | "avatar_path"
+>;
+const profileColumns = "user_id, username, avatar_path";
 export const avatarBucket = "account-avatars";
 const imageExtensions: Record<string, string> = {
   "image/jpeg": "jpg",
@@ -26,7 +29,7 @@ export async function loadAccountProfile(
   const client = browserClient();
   const { data, error } = await client
     .from("account_profiles")
-    .select("user_id, username, bio, avatar_path")
+    .select(profileColumns)
     .eq("user_id", userId)
     .maybeSingle();
   if (error) throw error;
@@ -43,7 +46,7 @@ export async function loadAccountProfile(
   if (createError) throw createError;
   const { data: created, error: readError } = await client
     .from("account_profiles")
-    .select("user_id, username, bio, avatar_path")
+    .select(profileColumns)
     .eq("user_id", userId)
     .single();
   if (readError) throw readError;
@@ -60,18 +63,15 @@ export async function loadAccountAvatar(path: string) {
 
 export async function saveAccountProfile(
   previous: AccountProfile,
-  fields: { username: string; bio: string },
+  draftUsername: string,
   photo: File | null | undefined,
 ): Promise<AccountProfile> {
-  const username = fields.username.trim();
-  const bio = fields.bio.trim();
+  const username = draftUsername.trim();
   if (username && !/^[A-Za-z0-9_.]{3,30}$/.test(username)) {
     throw new Error(
       "Use 3–30 letters, numbers, underscores, or periods for your username.",
     );
   }
-  if (Array.from(bio).length > 280)
-    throw new Error("Keep your bio to 280 characters or fewer.");
   if (photo) validateAvatar(photo);
 
   return withUpdateHold(async () => {
@@ -95,10 +95,9 @@ export async function saveAccountProfile(
         .upsert({
           user_id: previous.user_id,
           username,
-          bio,
           avatar_path: avatarPath,
         })
-        .select("user_id, username, bio, avatar_path")
+        .select(profileColumns)
         .single();
       if (error) throw error;
       saved = data;

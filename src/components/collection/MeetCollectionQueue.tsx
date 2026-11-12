@@ -10,6 +10,7 @@ import {
   RefreshCw,
   ShieldCheck,
 } from "lucide-react";
+import SearchableSelect from "@/components/shared/SearchableSelect";
 import { useAuth } from "@/features/workshare/contexts/auth";
 import {
   ACQUISITION_STATES,
@@ -968,20 +969,16 @@ export default function MeetCollectionQueue() {
               ))}
             </select>
           </label>
-          <label className={styles.field}>
-            Participating team
-            <select
-              value={filters.team}
-              onChange={(event) => filter("team", event.target.value)}
-            >
-              <option value="">All teams</option>
-              {facets?.teams.map((team) => (
-                <option key={team.id} value={team.id}>
-                  {team.name}
-                </option>
-              ))}
-            </select>
-          </label>
+          <SearchableSelect
+            label="Participating team"
+            fieldClassName={styles.field}
+            className={styles.teamSelect}
+            value={filters.team}
+            onChange={(team) => filter("team", team)}
+            options={facets?.teams.map(({ id, name }) => [id, name]) ?? []}
+            emptyLabel="All teams"
+            searchPlaceholder="Search teams"
+          />
           <label className={styles.field}>
             IES participation
             <select

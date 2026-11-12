@@ -1134,6 +1134,7 @@ function TimesDatabaseContent() {
                       value={activeRecordTeam}
                       onChange={setRecordTeam}
                       options={recordTeams}
+                      searchPlaceholder="Search teams"
                     />
                   }
                 />
@@ -1270,6 +1271,7 @@ function TimesDatabaseContent() {
                               onChange={(v) => updateFilter("team", v)}
                               all="All IES Teams"
                               options={teams}
+                              searchPlaceholder="Search teams"
                             />
                             <PopupPicker
                               label="Year"
@@ -1501,6 +1503,7 @@ function TimesDatabaseContent() {
                               }}
                               all="All IES Teams"
                               options={teams}
+                              searchPlaceholder="Search teams"
                             />
                           </div>
                           <QueryNotice query={rowsQuery} />

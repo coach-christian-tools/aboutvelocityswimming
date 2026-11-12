@@ -71,7 +71,6 @@
 }
 
 .frame .item,
-.frame .collapse,
 .frame .expand,
 .frame .mobileToggle {
   display: flex;
@@ -86,15 +85,11 @@
   transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease;
 }
 
-.frame .item,
-.frame .collapse {
-  justify-content: flex-start;
-  border-radius: .75rem;
-}
-
 .frame .item {
+  justify-content: flex-start;
   width: 100%;
   margin-bottom: .125rem;
+  border-radius: .75rem;
   padding: .625rem .875rem;
   background: transparent;
   color: var(--text-main);
@@ -107,8 +102,7 @@
   white-space: nowrap;
 }
 
-.frame .item:hover,
-.frame .collapse:hover {
+.frame .item:hover {
   background: var(--background-alt);
   color: var(--accent);
 }
@@ -125,7 +119,7 @@
   color: var(--accent);
 }
 
-.frame :is(.item, .collapse, .expand, .mobileToggle) svg {
+.frame :is(.item, .expand, .mobileToggle) svg {
   flex: none;
   width: 1.125rem;
   height: 1.125rem;
@@ -185,27 +179,14 @@
 }
 
 .navigation :is(a, button):focus-visible,
-.controls button:focus-visible,
 .footer :is(a, button):focus-visible {
   outline-offset: -2px;
-}
-
-.controls {
-  flex: none;
-  padding: 0 .75rem .75rem;
 }
 
 .footer {
   flex: none;
   padding: .75rem;
   border-top: 1px solid var(--border);
-}
-
-.frame .collapse {
-  width: 100%;
-  padding: .55rem .75rem;
-  background: transparent;
-  color: var(--text-muted);
 }
 
 .frame .expand {

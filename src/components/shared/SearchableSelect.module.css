@@ -1,0 +1,190 @@
+.field {
+  display: grid;
+  align-content: start;
+  gap: 0.4rem;
+  min-width: 0;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.control,
+.search {
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  padding: 9px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--text-main);
+  font-size: 0.875rem;
+}
+
+.field > .trigger,
+.search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.field > .trigger {
+  border: 1px solid var(--border);
+  justify-content: space-between;
+  text-align: left;
+}
+
+.trigger span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.trigger svg,
+.search svg {
+  flex: none;
+  color: var(--text-muted);
+}
+
+.field > .trigger:hover,
+.search:focus-within {
+  border-color: var(--accent);
+}
+
+.dialog {
+  width: min(30rem, calc(100% - 2rem));
+  max-height: calc(100dvh - 2rem);
+  margin: auto;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  color: var(--text-main);
+  box-shadow: 0 16px 64px #0003;
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.dialog[open] {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.dialog::backdrop {
+  background: #0007;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.header h2 {
+  font-size: 1.25rem;
+}
+
+.dialog .close,
+.dialog .footer button {
+  min-width: 44px;
+  min-height: 44px;
+  padding-inline: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.dialog .close {
+  display: grid;
+  place-items: center;
+}
+
+.close:hover,
+.options button:hover {
+  background: var(--background-alt);
+}
+
+.search {
+  flex: none;
+}
+
+.search input {
+  flex: 1;
+  width: 100%;
+  min-width: 0;
+  outline: none;
+  color: var(--text-main);
+  background: transparent;
+  font-size: 1rem;
+}
+
+.search input::placeholder {
+  color: var(--text-muted);
+}
+
+.options {
+  max-height: 16.5rem;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  list-style: none;
+}
+
+.options:empty {
+  display: none;
+}
+
+.dialog .options button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  width: 100%;
+  min-height: 44px;
+  padding: 0.5rem 0.75rem;
+  border-radius: 7px;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+.options button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+.options button[aria-selected="true"] {
+  background: color-mix(in srgb, var(--accent) 13%, var(--surface));
+  font-weight: 600;
+}
+
+.options button svg {
+  flex: none;
+  color: var(--accent);
+}
+
+.empty {
+  padding: 0.5rem 0.75rem;
+  color: var(--text-muted);
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 0.25rem;
+}
+
+.dialog .footer button {
+  color: var(--primary-ink);
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .dialog {
+    margin-block: max(1rem, env(safe-area-inset-top)) auto;
+  }
+}

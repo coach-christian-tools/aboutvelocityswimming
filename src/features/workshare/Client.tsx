@@ -13,7 +13,7 @@ function Unavailable() {
   return <main className="min-h-screen flex flex-col items-center justify-center gap-4 p-8 text-center">
     <h1 className="text-2xl font-semibold">Workshare is temporarily unavailable</h1>
     <p>Please try again shortly.</p>
-    <a href="/tools" className="underline">Back to Tools</a>
+    <a href="/tools" className="underline">Back to Account</a>
   </main>;
 }
 class WorkshareBoundary extends Component<{ children: ReactNode }, { failed: boolean }> {

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import SearchableSelect from "@/components/shared/SearchableSelect";
 import {
   InventoryField,
   InventoryFilters,
@@ -141,12 +142,16 @@ function MeetFilters({ params, facets }: { params: URLSearchParams; facets?: Mee
           {facets?.years.map(year => <option key={year} value={year}>{year}</option>)}
         </select>
       </InventoryField>
-      <InventoryField label="Participating team">
-        <select name="team" defaultValue={params.get("team") ?? ""}>
-          <option value="">All teams</option>
-          {facets?.teams.map(team => <option key={team.id} value={team.id}>{team.name}</option>)}
-        </select>
-      </InventoryField>
+      <SearchableSelect
+        label="Participating team"
+        fieldClassName={styles.field}
+        className={styles.teamSelect}
+        name="team"
+        defaultValue={params.get("team") ?? ""}
+        options={facets?.teams.map(({ id, name }) => [id, name]) ?? []}
+        emptyLabel="All teams"
+        searchPlaceholder="Search teams"
+      />
       <InventoryField label="IES participation">
         <select name="ies" defaultValue={params.get("ies") ?? ""}>
           <option value="">Any evidence</option>
