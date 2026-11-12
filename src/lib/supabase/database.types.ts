@@ -1148,6 +1148,33 @@ export type Database = {
         };
         Relationships: [];
       };
+      times_ranking_bookmarks: {
+        Row: {
+          id: string;
+          user_id: string;
+          name: string;
+          filters: Json;
+          search: string;
+          created_at: string;
+        };
+        Insert: {
+          id?: string;
+          user_id?: string;
+          name: string;
+          filters: Json;
+          search?: string;
+          created_at?: string;
+        };
+        Update: {
+          id?: string;
+          user_id?: string;
+          name?: string;
+          filters?: Json;
+          search?: string;
+          created_at?: string;
+        };
+        Relationships: [];
+      };
       training_groups: {
         Row: {
           id: string;
@@ -1524,6 +1551,7 @@ export type Database = {
         Returns: Json;
       };
       ies_times_json_id: { Args: { race_id: string }; Returns: Json };
+      ies_times_recent: { Args: { input?: Json }; Returns: Json };
       ies_times_query: {
         Args: { input?: Json; query_kind: string };
         Returns: Json;

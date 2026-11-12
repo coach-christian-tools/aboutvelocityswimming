@@ -37,6 +37,7 @@ import TimeStandards, {
   useTimeStandardsSelection,
 } from "./TimeStandards";
 import { FilterChips, FilterSummary, PopupPicker } from "./TimesFilters";
+import RankingFilters from "./RankingFilters";
 import RaceDetails from "./RaceDetails";
 import { ModerationNotice } from "./ResultModeration";
 import RelayLineup from "./RelayLineup";
@@ -57,6 +58,11 @@ const ageOptions: [string, string][] = ageGroups.map(([key, label]) => [
   key,
   label,
 ]);
+const rankingResultModes: [Filters["mode"], string][] = [
+  ["bests", "Bests"],
+  ["performances", "Performances"],
+  ["recent", "Recent"],
+];
 const number = (n: number) => n.toLocaleString("en-US");
 function date(value: string) {
   return value
@@ -519,6 +525,7 @@ function TimesDatabaseContent() {
   );
   const [meetCourse, setMeetCourse] = useTimesSelection("meetCourse", "");
   const [meetYear, setMeetYear] = useTimesSelection("meetYear", "");
+  const [meetDate, setMeetDate] = useTimesSelection("meetDate", "");
   const [athleteId, setAthleteId] = useTimesSelection("athleteId", "");
   const [profileName, setProfileName] = useTimesSelection("profileName", "");
   const [athleteSearchOpen, setAthleteSearchOpen] = useTimesSelection(
@@ -570,6 +577,7 @@ function TimesDatabaseContent() {
           search: searchTerm,
           course: meetCourse,
           year: meetYear,
+          meetDate: meetDate || undefined,
           offset: listPage * pageSize,
         })
       : null,
@@ -722,6 +730,12 @@ function TimesDatabaseContent() {
     setPage(0);
     setSelected(null);
   }
+  function applyRankingFilters(next: Filters, search: string) {
+    setFilters(next);
+    setSearch(search);
+    setPage(0);
+    setSelected(null);
+  }
   function updateResultCategory(relay: boolean) {
     if (Boolean(filters.relay) === relay) return;
     setFilters((current) => {
@@ -792,6 +806,35 @@ function TimesDatabaseContent() {
   }
   const tableRelay =
     view === "meets" ? Boolean(activeMeetEvent?.relay) : Boolean(filters.relay);
+  const showRank = view === "rankings" && filters.mode !== "recent";
+  const searchField = (
+    <label className={s.field}>
+      <span className="sr-only">
+        {view === "meets"
+          ? "Search meets"
+          : filters.relay
+            ? "Search relay teams"
+            : "Search athletes"}
+      </span>
+      <input
+        type="search"
+        maxLength={100}
+        placeholder={
+          view === "meets"
+            ? "Search meet name…"
+            : filters.relay
+              ? "Search relay team…"
+              : "Search athlete name…"
+        }
+        value={search}
+        onChange={(event) => {
+          setSearch(event.target.value);
+          setListPage(0);
+          setPage(0);
+        }}
+      />
+    </label>
+  );
   const table = (
     <>
       <div className={s.tableWrap}>
@@ -801,16 +844,18 @@ function TimesDatabaseContent() {
         >
           <caption className="sr-only">
             {view === "rankings"
-              ? filters.mode === "bests"
-                ? "Event Rankings, one best swim per athlete in the selected age groups"
-                : "Event Rankings, every matching performance"
+              ? filters.mode === "recent"
+                ? "Recent event results, newest first"
+                : filters.mode === "bests" && !tableRelay
+                  ? "Event Rankings, one best swim per athlete in the selected age groups"
+                  : "Event Rankings, every matching performance"
               : tableRelay
                 ? "Relay team results"
                 : "Individual swim results"}
           </caption>
           <thead>
             <tr>
-              {view === "rankings" && (
+              {showRank && (
                 <th scope="col" className={s.rank}>
                   <span className="sr-only">Rank</span>
                 </th>
@@ -845,7 +890,7 @@ function TimesDatabaseContent() {
                 { length: rowsQuery.placeholderRowCount || pageSize },
                 (_, index) => (
                   <tr key={`loading-${index}`} aria-hidden="true">
-                    {view === "rankings" && (
+                    {showRank && (
                       <td className={s.rank}>
                         <span
                           className={loadingStyles.bar}
@@ -904,7 +949,7 @@ function TimesDatabaseContent() {
                 className={selected?.id === race.id ? s.selected : undefined}
                 onClick={() => selectRace(race)}
               >
-                {view === "rankings" && <td className={s.rank}>{rank}</td>}
+                {showRank && <td className={s.rank}>{rank}</td>}
                 <td>
                   {view === "athletes" ? (
                     race.meet
@@ -1086,7 +1131,6 @@ function TimesDatabaseContent() {
                     <PopupPicker
                       label="Record team"
                       hideLabel
-                      showChevron={false}
                       value={activeRecordTeam}
                       onChange={setRecordTeam}
                       options={recordTeams}
@@ -1108,34 +1152,22 @@ function TimesDatabaseContent() {
                         : "Athlete browser"
                   }
                 >
-                  {view !== "rankings" && (
+                  {view === "athletes" && athleteId && (
                     <div className={s.panelHead}>
-                      <div>
-                        <h2>
-                          {view === "meets" ? "Find a meet" : "Team athletes"}
-                        </h2>
-                        <p>
-                          {view === "meets"
-                            ? "Browse approved results, then select a meet to explore each swim."
-                            : "Choose a team to compare athletes across their strongest events."}
-                        </p>
-                      </div>
-                      {view === "athletes" && athleteId && (
-                        <button
-                          className={s.button}
-                          aria-expanded={athleteSearchOpen}
-                          aria-controls="athlete-search"
-                          onClick={() =>
-                            athleteSearchOpen
-                              ? setAthleteSearchOpen(false)
-                              : returnToAthletes()
-                          }
-                        >
-                          {athleteSearchOpen
-                            ? "Hide team list"
-                            : "← Back to team athletes"}
-                        </button>
-                      )}
+                      <button
+                        className={s.button}
+                        aria-expanded={athleteSearchOpen}
+                        aria-controls="athlete-search"
+                        onClick={() =>
+                          athleteSearchOpen
+                            ? setAthleteSearchOpen(false)
+                            : returnToAthletes()
+                        }
+                      >
+                        {athleteSearchOpen
+                          ? "Hide team list"
+                          : "← Back to team athletes"}
+                      </button>
                     </div>
                   )}
                   <div
@@ -1168,83 +1200,99 @@ function TimesDatabaseContent() {
                       </div>
                     )}
                     {view === "rankings" && (
-                      <div className={s.filters}>
-                        <PopupPicker
-                          label="Event"
-                          course={filters.course}
-                          onCourseChange={(course) =>
-                            updateFilter("course", course)
-                          }
-                          value={filters.event}
-                          onChange={(event) => {
-                            updateResultCategory(event.endsWith("-R"));
-                            updateFilter("event", event);
-                          }}
-                          options={rankingEvents.map((e) => [e, eventLabel(e)])}
-                        />
-                        <div className={s.secondaryFilters}>
-                          <fieldset className={s.courseField}>
-                            <legend>Gender</legend>
-                            <div className={s.chips}>
-                              {[
-                                ["F", "Female"],
-                                ["M", "Male"],
-                                ...(filters.relay ? [["X", "Mixed"]] : []),
-                              ].map(([id, label]) => (
-                                <button
-                                  key={id}
-                                  aria-pressed={filters.genders.includes(id)}
-                                  onClick={() => {
-                                    const current = filters.genders;
-                                    const next = current.includes(id)
-                                      ? current.filter((g) => g !== id)
-                                      : [...current, id];
-                                    if (next.length)
-                                      updateFilter("genders", next);
-                                  }}
-                                >
-                                  {label}
-                                </button>
-                              ))}
-                            </div>
-                          </fieldset>
-                          <AgeGroupPicker
-                            options={ageOptions}
-                            value={filters.ageGroups}
-                            onChange={(v) => updateFilter("ageGroups", v)}
+                      <RankingFilters
+                        filters={filters}
+                        search={search}
+                        onApply={applyRankingFilters}
+                      >
+                        <div className={s.filters}>
+                          <PopupPicker
+                            label="Event"
+                            course={filters.course}
+                            onCourseChange={(course) =>
+                              updateFilter("course", course)
+                            }
+                            value={filters.event}
+                            onChange={(event) => {
+                              updateResultCategory(event.endsWith("-R"));
+                              updateFilter("event", event);
+                            }}
+                            options={rankingEvents.map((e) => [e, eventLabel(e)])}
                           />
-                          {!filters.relay && (
+                          <div className={s.secondaryFilters}>
+                            <fieldset className={s.courseField}>
+                              <legend>Gender</legend>
+                              <div className={s.chips}>
+                                {[
+                                  ["F", "Female"],
+                                  ["M", "Male"],
+                                  ...(filters.relay ? [["X", "Mixed"]] : []),
+                                ].map(([id, label]) => (
+                                  <button
+                                    key={id}
+                                    aria-pressed={filters.genders.includes(id)}
+                                    onClick={() => {
+                                      const current = filters.genders;
+                                      const next = current.includes(id)
+                                        ? current.filter((g) => g !== id)
+                                        : [...current, id];
+                                      if (next.length)
+                                        updateFilter("genders", next);
+                                    }}
+                                  >
+                                    {label}
+                                  </button>
+                                ))}
+                              </div>
+                            </fieldset>
+                            <AgeGroupPicker
+                              options={ageOptions}
+                              value={filters.ageGroups}
+                              onChange={(v) => updateFilter("ageGroups", v)}
+                            />
                             <FilterChips
                               label="Results"
-                              value={filters.mode}
-                              onChange={(v) =>
-                                updateFilter("mode", v as Filters["mode"])
+                              value={
+                                filters.relay && filters.mode === "bests"
+                                  ? "performances"
+                                  : filters.mode
                               }
-                              options={[
-                                ["bests", "Bests"],
-                                ["performances", "Performances"],
-                              ]}
+                              onChange={(value) =>
+                                updateFilter("mode", value as Filters["mode"])
+                              }
+                              options={rankingResultModes.filter(
+                                ([mode]) => !filters.relay || mode !== "bests",
+                              )}
                             />
-                          )}
-                          <PopupPicker
-                            label="Team"
-                            value={filters.team}
-                            onChange={(v) => updateFilter("team", v)}
-                            all="All IES Teams"
-                            options={teams}
-                          />
-                          <PopupPicker
-                            label="Year"
-                            value={filters.year}
-                            onChange={(v) => updateFilter("year", v)}
-                            all="All years"
-                            options={years.map((y) => [y, y])}
-                          />
+                            <PopupPicker
+                              label="Team"
+                              value={filters.team}
+                              onChange={(v) => updateFilter("team", v)}
+                              all="All IES Teams"
+                              options={teams}
+                            />
+                            <PopupPicker
+                              label="Year"
+                              value={filters.year}
+                              onChange={(v) => updateFilter("year", v)}
+                              all="All years"
+                              options={years.map((y) => [y, y])}
+                            />
+                          </div>
                         </div>
-                      </div>
+                        <div className={s.toolbar}>
+                          {searchField}
+                          <button
+                            className={s.link}
+                            onClick={() => applyRankingFilters(initialFilters, "")}
+                          >
+                            Reset filters
+                          </button>
+                        </div>
+                      </RankingFilters>
                     )}
                     {view === "meets" && (
-                      <div className={s.filters}>
+                      <div className={`${s.filters} ${s.meetFilters}`}>
                         <Select
                           label="Meet search course"
                           value={meetCourse}
@@ -1268,55 +1316,27 @@ function TimesDatabaseContent() {
                           all="All years"
                           options={years.map((year) => [year, year])}
                         />
-                      </div>
-                    )}
-                    {view !== "athletes" && (
-                      <div className={s.toolbar}>
-                        <label className={s.field}>
-                          <span className="sr-only">
-                            {view === "meets"
-                              ? "Search meets"
-                              : filters.relay
-                                ? "Search relay teams"
-                                : "Search athletes"}
-                          </span>
+                        <label className={`${s.field} ${s.meetDateField}`}>
+                          Meet search date
                           <input
-                            type="search"
-                            placeholder={
-                              view === "meets"
-                                ? "Search meet name…"
-                                : filters.relay
-                                  ? "Search relay team…"
-                                  : "Search athlete name…"
-                            }
-                            value={search}
-                            onChange={(e) => {
-                              setSearch(e.target.value);
+                            type="date"
+                            value={meetDate}
+                            onChange={(event) => {
+                              setMeetDate(event.target.value);
                               setListPage(0);
-                              setPage(0);
                             }}
                           />
                         </label>
-                        {view === "rankings" && (
-                          <button
-                            className={s.link}
-                            onClick={() => {
-                              setFilters({ ...initialFilters });
-                              setSearch("");
-                              setPage(0);
-                              setSelected(null);
-                            }}
-                          >
-                            Reset filters
-                          </button>
-                        )}
                       </div>
+                    )}
+                    {view === "meets" && (
+                      <div className={s.toolbar}>{searchField}</div>
                     )}
                     {view === "athletes" ? (
                       <AthleteBrowser
                         teams={teams}
                         onAthlete={openAthlete}
-                        enabled={athleteSearchOpen}
+                        enabled={enabled && athleteSearchOpen}
                       />
                     ) : view === "rankings" ? (
                       <>

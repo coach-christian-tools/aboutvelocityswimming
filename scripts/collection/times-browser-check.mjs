@@ -21,6 +21,7 @@ assert.ok(
 const today = new Date().toLocaleDateString("en-CA", {
   timeZone: "America/Los_Angeles",
 });
+const velocityTeam = "velocity-swimming";
 const events = [
   ["50_FR", 30000],
   ["100_FR", 60000],
@@ -66,7 +67,7 @@ function race(id, athleteId, event, time, extra = {}) {
         isRelay: false,
         ageAtSwim: 12,
         gender: "F",
-        teamId: "VS",
+        teamId: velocityTeam,
         teamName: "Velocity Swimming",
         meet: { id: "meet", name: "Fixture meet" },
       },
@@ -208,7 +209,7 @@ async function setup({ failure = false, expiry = false } = {}) {
     if (view === "facets")
       data = {
         teams: [
-          ["VS", "Velocity Swimming"],
+          [velocityTeam, "Velocity Swimming"],
           ["unattached", "Unattached IES"],
         ],
         events: [...events.map(([e]) => e), "100_BK", "100_FL"],
@@ -367,7 +368,7 @@ async function setup({ failure = false, expiry = false } = {}) {
       data = {
         races: [
           ...new Map(
-            [...teamRecords(races, "VS").values()]
+            [...teamRecords(races, velocityTeam).values()]
               .flat()
               .map((race) => [race.id, race]),
           ).values(),
@@ -377,7 +378,7 @@ async function setup({ failure = false, expiry = false } = {}) {
       data = {
         groups: athletePages(
           athleteRankings(races, names, standard, {
-            team: "VS",
+            team: velocityTeam,
             course: input.course,
             period: input.period,
             today,
@@ -784,6 +785,20 @@ try {
     name: "Team records",
     exact: true,
   });
+  const recordTeamPicker = recordsPanel.getByRole("button", {
+    name: "Record team",
+    exact: true,
+  });
+  assert.equal(await recordTeamPicker.getAttribute("aria-haspopup"), "dialog");
+  assert.equal(await recordTeamPicker.locator("svg").count(), 1);
+  await recordTeamPicker.click();
+  const recordTeamDialog = recordsPanel.getByRole("dialog", {
+    name: "Record team",
+  });
+  await recordTeamDialog.waitFor();
+  await recordTeamDialog
+    .getByRole("button", { name: "Velocity Swimming" })
+    .click();
   const recordTable = recordsPanel
     .getByRole("region", { name: "SCY 11–12 record table", exact: true })
     .getByRole("table");
@@ -798,6 +813,7 @@ try {
       exact: true,
     })
     .first();
+  await recordBoard.waitFor();
   const boardText = await recordBoard
     .locator(":scope > span")
     .allTextContents();
@@ -851,7 +867,7 @@ try {
       .evaluate((node) => getComputedStyle(node).borderBottomWidth),
     "0px",
   );
-  for (const side of ["first-child", "last-child"]) {
+  for (const side of ["first-of-type", "last-of-type"]) {
     const walls = await recordsPanel
       .locator(
         `tbody > tr > td:${side} > div > :is(button, div) > :nth-child(2)`,
@@ -1020,7 +1036,10 @@ try {
   await page
     .getByRole("button", { name: "← Back to team athletes", exact: true })
     .click();
-  await page.getByLabel("Athlete team", { exact: true }).selectOption("VS");
+  assert.equal(
+    await page.getByLabel("Athlete team", { exact: true }).inputValue(),
+    velocityTeam,
+  );
   await page.getByText("3-event score", { exact: true }).first().waitFor();
   const pager = page.getByRole("navigation", { name: "Ranked athletes pages" });
   await pager.getByRole("button", { name: "Next", exact: true }).click();
@@ -1042,7 +1061,7 @@ try {
   await page
     .getByRole("button", { name: "← Back to team athletes", exact: true })
     .click();
-  assert.equal(await page.getByLabel("Athlete team").inputValue(), "VS");
+  assert.equal(await page.getByLabel("Athlete team").inputValue(), velocityTeam);
   await page
     .locator("#athlete-search")
     .getByText("Swimmer 26 Fixture", { exact: true })
@@ -1358,8 +1377,59 @@ try {
     .getByRole("link", { name: "Team Records", exact: true })
     .click();
   await timesNav.waitFor({ state: "hidden" });
-  const mobileLineup = page
-    .getByRole("region", { name: "Team records", exact: true })
+  const mobileRecords = page.getByRole("region", {
+    name: "Team records",
+    exact: true,
+  });
+  const genderToggle = mobileRecords.getByRole("group", {
+    name: "Record gender",
+  });
+  const girls = genderToggle.getByRole("button", { name: "Girls", exact: true });
+  const boys = genderToggle.getByRole("button", { name: "Boys", exact: true });
+  const mobileRecordTable = mobileRecords
+    .getByRole("region", { name: "SCY 11–12 record table", exact: true })
+    .getByRole("table");
+  await mobileRecordTable.waitFor();
+  assert.equal(await girls.getAttribute("aria-pressed"), "true");
+  assert.deepEqual(
+    await mobileRecordTable.getByRole("columnheader").allTextContents(),
+    ["Event", "Girls"],
+  );
+  await mobileRecords.getByRole("link", { name: "SCY 11–12 records" }).click();
+  await page.waitForFunction(() => {
+    const toggle = document.querySelector('[aria-label="Record gender"]');
+    return (
+      toggle &&
+      Math.abs(
+        toggle.getBoundingClientRect().top -
+          parseFloat(getComputedStyle(toggle).top),
+      ) < 1
+    );
+  });
+  await boys.click();
+  assert.equal(await boys.getAttribute("aria-pressed"), "true");
+  assert.deepEqual(
+    await mobileRecordTable.getByRole("columnheader").allTextContents(),
+    ["Event", "Boys"],
+  );
+  const mobileEvent = mobileRecordTable.getByRole("rowheader", {
+    name: "100 Freestyle",
+    exact: true,
+  });
+  const mobileBoysRecord = mobileRecordTable.getByRole("button", {
+    name: "View boys 11–12 SCY 100 FR rankings",
+    exact: true,
+  });
+  const [eventBounds, boysBounds] = await Promise.all([
+    mobileEvent.boundingBox(),
+    mobileBoysRecord.boundingBox(),
+  ]);
+  assert.ok(
+    eventBounds && boysBounds && eventBounds.x + eventBounds.width <= boysBounds.x,
+  );
+  assert.ok(boysBounds.x + boysBounds.width <= 390);
+  await girls.click();
+  const mobileLineup = mobileRecords
     .getByRole("list", { name: "Relay swimmers" })
     .first();
   await mobileLineup.scrollIntoViewIfNeeded();

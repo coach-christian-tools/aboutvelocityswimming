@@ -1,0 +1,115 @@
+.heading,
+.bookmarks {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  padding: 12px clamp(14px, 2vw, 22px);
+  border-bottom: 1px solid var(--border);
+}
+
+.heading {
+  justify-content: space-between;
+}
+
+.toggle,
+.save {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 36px;
+  padding: 6px 10px;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.toggle {
+  margin-inline-start: -10px;
+  color: var(--text-main);
+}
+
+.toggle[aria-expanded="false"] svg {
+  transform: rotate(-90deg);
+}
+
+.save {
+  color: var(--accent);
+  background: var(--background-alt);
+  border: 1px solid var(--border);
+}
+
+.save:disabled,
+.delete:disabled {
+  opacity: 0.5;
+}
+
+.chip {
+  display: inline-flex;
+  max-width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--background-alt);
+  color: var(--text-main);
+}
+
+.chip button {
+  min-height: 34px;
+  padding: 4px 11px;
+  overflow-wrap: anywhere;
+  font-size: 13px;
+  text-align: left;
+}
+
+.chip button + button {
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  border-inline-start: 1px solid var(--border);
+  color: var(--text-muted);
+}
+
+.chip button[aria-pressed="true"] {
+  background: var(--accent);
+  color: var(--background);
+}
+
+.chip button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: -3px;
+}
+
+.dialog {
+  width: min(420px, calc(100vw - 32px));
+}
+
+.dialog form {
+  display: grid;
+  gap: 16px;
+}
+
+.dialog h2 {
+  font-size: 20px;
+  font-weight: 650;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.delete,
+.error {
+  color: var(--text-main);
+  font-size: 13px;
+}
+
+.delete {
+  margin-inline-end: auto;
+  padding-block: 8px;
+  text-decoration: underline;
+}

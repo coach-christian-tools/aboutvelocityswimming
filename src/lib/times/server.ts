@@ -34,10 +34,9 @@ const readCached = unstable_cache(
     });
     const input = JSON.parse(serialized);
     const started = performance.now();
-    const { data, error, status } = await client.rpc("ies_times_query", {
-      query_kind: kind,
-      input,
-    });
+    const { data, error, status } = await (kind === "rankings" && input.mode === "recent"
+      ? client.rpc("ies_times_recent", { input })
+      : client.rpc("ies_times_query", { query_kind: kind, input }));
     const timing = { kind, durationMs: Math.round(performance.now() - started), status };
     if (error) {
       console.error("[velocity:times] database read failed", { ...timing, code: diagnosticCode(error) });

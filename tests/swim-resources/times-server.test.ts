@@ -57,6 +57,11 @@ it("does not save failed reads in the cache", async () => {
   await readTimes("facets", {});
   expect(mocks.rpc).toHaveBeenCalledTimes(2);
 });
+it("uses the recent results query for a date-ordered ranking page", async () => {
+  const input = { mode: "recent", event: "100_FR", offset: 25 };
+  await readTimes("rankings", input);
+  expect(mocks.rpc).toHaveBeenCalledWith("ies_times_recent", { input });
+});
 it("shares the scored cohort cache across athlete searches and list pages", async () => {
   const athletes = Array.from({ length: 30 }, (_, i) => ({
     id: String(i),

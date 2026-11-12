@@ -119,7 +119,7 @@ export function parseTimesQuery(params: URLSearchParams): {
   for (const [key, allowed] of Object.entries({
     course: ["", "SCY", "LCM", "SCM"],
     official: ["", "official", "unofficial"],
-    mode: ["bests", "performances"],
+    mode: ["bests", "performances", "recent"],
     period: ["recent", "all"],
     basis: ["bests", "swims"],
     round: ["", "F", "P", "S", "TT"],
@@ -165,6 +165,19 @@ export function parseTimesQuery(params: URLSearchParams): {
   }
   if (input.year && !/^\d{4}$/.test(String(input.year)))
     throw new Error("Invalid year.");
+  if (kind === "meets") {
+    const meetDate = params.get("meetDate")?.trim();
+    if (meetDate) {
+      const parsed = new Date(meetDate);
+      if (
+        !/^(?!0000)\d{4}-\d{2}-\d{2}$/.test(meetDate) ||
+        !Number.isFinite(parsed.getTime()) ||
+        parsed.toISOString().slice(0, 10) !== meetDate
+      )
+        throw new Error("Invalid meet search date.");
+      input.meetDate = meetDate;
+    }
+  }
   if (input.meetEventKey && !/^[a-f0-9]{32}$/.test(String(input.meetEventKey)))
     throw new Error("Invalid meet event.");
   if (kind === "rankings") {

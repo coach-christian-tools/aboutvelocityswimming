@@ -79,6 +79,8 @@ export default function TimeStandards({
 }) {
   const { sets, loading, error, retry } = query;
   const { day, set, filters, setSelected, setSelection } = state;
+  const eventKeys =
+    set && filters ? standardEventKeys(set, filters.selection.course) : [];
   const sourceUrl =
     set?.sourceUrl && /^https?:\/\//.test(set.sourceUrl) ? set.sourceUrl : null;
   function updateFilter(key: keyof StandardSelection, value: string) {
@@ -145,8 +147,8 @@ export default function TimeStandards({
           <div className={s.grid}>
             {strokeColumns.map(([stroke, heading, title]) => (
               <section key={stroke} className={s.column} aria-label={title}>
-                <h3 title={title}>{heading}</h3>
-                {standardEventKeys(set, filters.selection.course)
+                <h2 title={title}>{heading}</h2>
+                {eventKeys
                   .filter((key) => eventColumn(key) === stroke)
                   .map((key) => {
                     const [distance, code] = key.split("_");
@@ -169,14 +171,12 @@ export default function TimeStandards({
                         className={s.chip}
                         aria-label={`${eventName}: ${time ?? "No published cut"}`}
                       >
-                        <span>
+                        <span className={s.distance}>
                           {distance}
                           {relayLabel && (
                             <>
                               {" "}
-                              <span className="whitespace-nowrap">
-                                {relayLabel}
-                              </span>
+                              <span className={s.relayLabel}>{relayLabel}</span>
                             </>
                           )}
                         </span>

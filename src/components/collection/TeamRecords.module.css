@@ -3,7 +3,7 @@
   min-width: 0;
 }
 .controls {
-  scroll-margin-top: 165px;
+  scroll-margin-top: calc(var(--tool-toolbar-height, 0px) + 12px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,62 +13,68 @@
   margin: 0 auto 24px;
 }
 .selector {
-  width: 640px;
-  min-width: 0;
-  max-width: 100%;
+  width: min(100%, 420px);
 }
 .selector > div > button {
-  min-height: 44px;
-  padding: 4px 0;
-  border: 0;
-  box-shadow: none;
-  border-radius: 0;
-  background: transparent;
-  font-size: clamp(22px, 3vw, 30px);
-  font-weight: 750;
-  text-decoration: underline;
-  text-underline-offset: 0.18em;
+  min-height: 48px;
+  padding: 9px 14px;
+  border-radius: 10px;
+  font-size: clamp(18px, 3vw, 24px);
+  font-weight: 700;
 }
-.selector > div > button span {
-  text-align: center;
+.selector > div > button:hover {
+  border-color: var(--accent);
+}
+.selector > div > button svg {
+  width: 22px;
+  height: 22px;
+  color: var(--accent);
 }
 .jumpLinks {
   display: grid;
-  gap: 8px;
   width: 100%;
+  padding: 0 10px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
 }
 .jumpRow {
   display: grid;
   grid-template-columns: 70px repeat(7, minmax(0, 1fr));
-  gap: 6px;
+  padding-block: 5px;
+}
+.jumpRow + .jumpRow {
+  border-top: 1px solid var(--border);
 }
 .jumpLinks a {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 36px;
-  padding: 7px 6px;
-  border: 1px solid var(--record-board-background);
-  border-radius: 7px;
-  background: var(--record-board-background);
-  color: white;
+  min-height: 38px;
+  padding: 6px;
+  border-radius: 6px;
+  color: var(--text-main);
   font-size: 12px;
   font-weight: 650;
   text-align: center;
   text-decoration: none;
 }
-.jumpLinks a:hover {
-  background: color-mix(in srgb, var(--record-board-background) 85%, black);
+.jumpLinks a:hover,
+.jumpLinks a:focus-visible {
+  background: var(--background-alt);
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
 }
 .jumpLinks .courseLink {
-  background: var(--primary-dark);
-  border-color: var(--primary-dark);
+  justify-content: flex-start;
+  padding-inline: 10px;
+  color: var(--accent);
   font-weight: 750;
 }
 .course,
-.ageSection,
-.topAnchor {
-  scroll-margin-top: 165px;
+.ageSection {
+  scroll-margin-top: calc(var(--tool-toolbar-height, 0px) + 12px);
 }
 .course {
   width: 100%;
@@ -131,20 +137,23 @@
   width: 100%;
   max-width: 960px;
   margin-inline: auto;
-  overflow-x: auto;
 }
 .table {
   --cell-padding-block: 6px;
   --cell-padding-inline: 6px;
   width: 100%;
-  min-width: 820px;
   table-layout: fixed;
   border-collapse: collapse;
   font-size: 12px;
   text-align: left;
 }
-.recordColumn {
+col.girlsColumn,
+col.boysColumn {
   width: 40%;
+}
+.genderToggle,
+.mobileEvent {
+  display: none;
 }
 .table th,
 .table td {
@@ -216,11 +225,8 @@
   font-variant-numeric: tabular-nums;
   text-align: right;
 }
-.event,
-.eventHeading {
-  text-align: center;
-}
 .event {
+  text-align: center;
   font-weight: 750;
   color: white;
 }
@@ -251,9 +257,72 @@
   border-radius: 8px;
   font-size: 13px;
 }
-@media (max-width: 600px) {
-  .jumpLinks {
-    gap: 12px;
+@container times-workspace (max-width: 820px) {
+  .course,
+  .ageSection {
+    scroll-margin-top: calc(var(--tool-toolbar-height, 0px) + 70px);
+  }
+  .genderToggle {
+    position: sticky;
+    top: var(--tool-toolbar-height, 0px);
+    z-index: 20;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px;
+    padding-block: 7px;
+    margin-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+    background: var(--background);
+  }
+  .genderToggle button {
+    min-height: 44px;
+    padding: 8px;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    background: var(--surface);
+    color: var(--text-main);
+    font-size: 13px;
+    font-weight: 650;
+  }
+  .genderToggle button:hover {
+    border-color: var(--accent);
+  }
+  .genderToggle button[aria-pressed="true"] {
+    border-color: var(--accent);
+    background: var(--accent);
+    color: var(--primary-ink);
+  }
+  .tableHeading {
+    grid-template-columns: 1fr;
+  }
+  .genderLabel,
+  .desktopEvent,
+  .records[data-mobile-gender="F"] .boysColumn,
+  .records[data-mobile-gender="M"] .girlsColumn {
+    display: none;
+  }
+  th.mobileEvent {
+    display: table-cell;
+  }
+  col.mobileEvent {
+    display: table-column;
+    width: 30%;
+  }
+  col.girlsColumn,
+  col.boysColumn {
+    width: 70%;
+  }
+  .event {
+    text-align: left;
+  }
+  .event > span {
+    justify-content: flex-start;
+    padding-inline: 10px;
+  }
+}
+@container times-workspace (max-width: 540px) {
+  .controls {
+    margin-bottom: 12px;
   }
   .jumpRow {
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -268,8 +337,27 @@
     font-size: 20px;
   }
   .table {
-    --cell-padding-block: 7px;
-    --cell-padding-inline: 8px;
+    --cell-padding-block: 4px;
+    --cell-padding-inline: 3px;
+  }
+  .tableTitle h3 {
+    font-size: 18px;
+  }
+  .table .recordBoard {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 4px 10px;
+    padding: 8px 10px;
+  }
+  .recordBoard > :first-child {
+    grid-column: 1 / -1;
+  }
+  .recordBoard .time,
+  .table .recordBoard button.time {
+    text-align: left;
+  }
+  .event > span {
+    padding-inline: 6px;
+    overflow-wrap: anywhere;
   }
 }
 

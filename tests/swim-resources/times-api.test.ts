@@ -113,6 +113,20 @@ describe("relay result requests", () => {
 });
 
 describe("meet event navigation requests", () => {
+  it("accepts only valid calendar dates for meet discovery", () => {
+    expect(
+      parseTimesQuery(new URLSearchParams("view=meets&meetDate=2024-02-29"))
+        .input.meetDate,
+    ).toBe("2024-02-29");
+    expect(
+      parseTimesQuery(new URLSearchParams("view=meets&meetDate=")).input,
+    ).not.toHaveProperty("meetDate");
+    for (const value of ["2025-02-29", "2024-2-29", "0000-02-29"])
+      expect(() =>
+        parseTimesQuery(new URLSearchParams(`view=meets&meetDate=${value}`)),
+      ).toThrow("Invalid meet search date");
+  });
+
   it("requires a meet and validates stable event keys", () => {
     expect(() =>
       parseTimesQuery(new URLSearchParams("view=meet_events")),

@@ -1,6 +1,6 @@
 "use client";
 
-import { useId, useMemo, type ReactNode } from "react";
+import { useId, useMemo, useState, type ReactNode } from "react";
 import { formatSwimTime } from "@/features/swim-resources/lib/domain/swim-time";
 import {
   ageGroups,
@@ -17,6 +17,10 @@ import loadingStyles from "./TimesLoading.module.css";
 import RelayLineup from "./RelayLineup";
 
 const visibleCourses = recordCourses.filter(([course]) => course !== "SCM");
+const recordGenders = [
+  ["F", "Girls"],
+  ["M", "Boys"],
+] as const;
 
 export interface RecordSelection {
   course: string;
@@ -42,8 +46,9 @@ function RecordCell({
 }) {
   const gender = selection.gender === "F" ? "girls" : "boys";
   const label = `View ${gender} ${ageLabel} ${selection.course} ${selection.event.replace("_", " ")} rankings`;
+  const column = selection.gender === "F" ? s.girlsColumn : s.boysColumn;
   return (
-    <td className={s.recordCell}>
+    <td className={`${s.recordCell} ${column}`}>
       <div>
         {loading ? (
           <div className={s.recordBoard} aria-hidden="true">
@@ -133,6 +138,7 @@ export default function TeamRecords({
   loading?: boolean;
 }) {
   const prefix = useId().replaceAll(":", "");
+  const [mobileGender, setMobileGender] = useState<"F" | "M">("F");
   const now = new Date();
   const currentDate = now.toLocaleDateString("en-US", {
     month: "short",
@@ -174,6 +180,7 @@ export default function TeamRecords({
       className={s.records}
       aria-label="Team records"
       aria-busy={loading}
+      data-mobile-gender={mobileGender}
     >
       <div id={`${prefix}-top`} className={s.controls}>
         <h2 className="sr-only">{teamName || "Team"} records</h2>
@@ -208,6 +215,22 @@ export default function TeamRecords({
       </div>
       {(ready || loading) && (
         <>
+          <div
+            className={s.genderToggle}
+            role="group"
+            aria-label="Record gender"
+          >
+            {recordGenders.map(([gender, label]) => (
+              <button
+                key={gender}
+                type="button"
+                aria-pressed={mobileGender === gender}
+                onClick={() => setMobileGender(gender)}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
           {!loading && ready && !records.size && (
             <p className={s.empty}>
               No eligible records for this team in the available results.
@@ -235,7 +258,6 @@ export default function TeamRecords({
                 >
                   <div
                     className={s.tableWrap}
-                    tabIndex={0}
                     role="region"
                     aria-label={`${course} ${ageLabel} record table`}
                   >
@@ -258,17 +280,25 @@ export default function TeamRecords({
                         </div>
                       </caption>
                       <colgroup>
-                        <col className={s.recordColumn} />
-                        <col />
-                        <col className={s.recordColumn} />
+                        <col className={s.mobileEvent} />
+                        <col className={s.girlsColumn} />
+                        <col className={s.desktopEvent} />
+                        <col className={s.boysColumn} />
                       </colgroup>
                       <thead className="sr-only">
                         <tr>
-                          <th scope="col">Girls</th>
-                          <th scope="col" className={s.eventHeading}>
+                          <th scope="col" className={s.mobileEvent}>
                             Event
                           </th>
-                          <th scope="col">Boys</th>
+                          <th scope="col" className={s.girlsColumn}>
+                            Girls
+                          </th>
+                          <th scope="col" className={s.desktopEvent}>
+                            Event
+                          </th>
+                          <th scope="col" className={s.boysColumn}>
+                            Boys
+                          </th>
                         </tr>
                       </thead>
                       <tbody
@@ -283,52 +313,63 @@ export default function TeamRecords({
                                 event.startsWith("25_")
                               ),
                           )
-                          .map((event) => (
-                            <tr key={event}>
-                              <RecordCell
-                                loading={loading}
-                                holders={
-                                  records.get(
-                                    recordKey(course, group, event, "F"),
-                                  ) ?? []
-                                }
-                                names={names}
-                                selection={{
-                                  course,
-                                  ageGroup: group,
-                                  event,
-                                  gender: "F",
-                                  relay: event.endsWith("-R"),
-                                }}
-                                ageLabel={ageLabel}
-                                onRecord={onRecord}
-                              />
-                              <th
-                                scope="row"
-                                className={`${s.event} ${event.endsWith("-R") ? s.relayEvent : ""}`}
-                              >
-                                <span>{eventLabel(event)}</span>
-                              </th>
-                              <RecordCell
-                                loading={loading}
-                                holders={
-                                  records.get(
-                                    recordKey(course, group, event, "M"),
-                                  ) ?? []
-                                }
-                                names={names}
-                                selection={{
-                                  course,
-                                  ageGroup: group,
-                                  event,
-                                  gender: "M",
-                                  relay: event.endsWith("-R"),
-                                }}
-                                ageLabel={ageLabel}
-                                onRecord={onRecord}
-                              />
-                            </tr>
-                          ))}
+                          .map((event) => {
+                            const label = eventLabel(event);
+                            const relay = event.endsWith("-R");
+                            const eventClass = `${s.event} ${relay ? s.relayEvent : ""}`;
+                            return (
+                              <tr key={event}>
+                                <th
+                                  scope="row"
+                                  className={`${eventClass} ${s.mobileEvent}`}
+                                >
+                                  <span>{label}</span>
+                                </th>
+                                <RecordCell
+                                  loading={loading}
+                                  holders={
+                                    records.get(
+                                      recordKey(course, group, event, "F"),
+                                    ) ?? []
+                                  }
+                                  names={names}
+                                  selection={{
+                                    course,
+                                    ageGroup: group,
+                                    event,
+                                    gender: "F",
+                                    relay,
+                                  }}
+                                  ageLabel={ageLabel}
+                                  onRecord={onRecord}
+                                />
+                                <th
+                                  scope="row"
+                                  className={`${eventClass} ${s.desktopEvent}`}
+                                >
+                                  <span>{label}</span>
+                                </th>
+                                <RecordCell
+                                  loading={loading}
+                                  holders={
+                                    records.get(
+                                      recordKey(course, group, event, "M"),
+                                    ) ?? []
+                                  }
+                                  names={names}
+                                  selection={{
+                                    course,
+                                    ageGroup: group,
+                                    event,
+                                    gender: "M",
+                                    relay,
+                                  }}
+                                  ageLabel={ageLabel}
+                                  onRecord={onRecord}
+                                />
+                              </tr>
+                            );
+                          })}
                       </tbody>
                     </table>
                   </div>

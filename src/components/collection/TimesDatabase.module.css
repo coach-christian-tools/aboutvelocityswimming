@@ -505,6 +505,17 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+.meetDateField {
+  grid-column: 1 / -1;
+}
+@container times-results (min-width: 550px) {
+  .meetFilters {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .meetDateField {
+    grid-column: auto;
+  }
+}
 @media (max-width: 600px) {
   .eventGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -537,8 +548,22 @@
 .athleteBrowser {
   padding: 0 22px 22px;
 }
-.athleteBrowser .filters {
-  padding-inline: 0;
+.athleteFilters {
+  border-bottom: 1px solid var(--border);
+}
+.athleteFilters .athleteAgeFilter {
+  grid-column: 1 / -1;
+  order: 0;
+}
+@container times-workspace (min-width: 800px) {
+  .filters.athleteFilters {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+@container times-workspace (max-width: 350px) {
+  .athleteFilterWide {
+    grid-column: 1 / -1;
+  }
 }
 .scoreExplanation {
   margin: 20px 0;

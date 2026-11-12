@@ -60,7 +60,7 @@ export interface Filters {
   official: string;
   genders: string[];
   ageGroups: string[];
-  mode: "bests" | "performances";
+  mode: "bests" | "performances" | "recent";
   relay?: boolean;
 }
 export const initialFilters: Filters = {
@@ -396,7 +396,7 @@ export function percentile(time: number, races: Race[]) {
 }
 export function rankedTimes(
   races: Race[],
-  mode: Filters["mode"] = "bests",
+  mode: Exclude<Filters["mode"], "recent"> = "bests",
   relay = false,
 ) {
   let rank = 0;

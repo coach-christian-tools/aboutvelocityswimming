@@ -396,6 +396,32 @@ try {
       expected.get(recordKey("SCY", "11-12", "100_FR-R", "X")).map((r) => r.id),
     );
   });
+  await test("recent event results sort all matching swims by date before paging", async () => {
+    const filters = { ...initialFilters, team, search: "Synthetic 0" };
+    const expected = rankedTimes(
+      ies.filter(
+        (race) => race.athleteId === prefix + "0" && matches(race, filters),
+      ),
+      "performances",
+    )
+      .map(({ race }) => race)
+      .sort(
+        (a, b) => b.date.localeCompare(a.date) || a.time - b.time || a.id.localeCompare(b.id),
+      );
+    assert.ok(expected.length > 2);
+    assert.ok(new Set(expected.map(({ date }) => date)).size > 1);
+    const { data, error } = await anon.rpc("ies_times_recent", {
+      input: { ...filters, mode: "recent", offset: 1, limit: 2 },
+    });
+    assert.ifError(error);
+    assert.equal(data.total, expected.length);
+    assert.deepEqual(
+      data.rows.map(({ race }) => race.id),
+      expected.slice(1, 3).map(({ id }) => id),
+    );
+    assert.ok(data.rows.every((row) => !("rank" in row)));
+  });
+
   await test("enclosing age categories agree across rankings, analysis, meet results and records", async () => {
     const filters = { ...initialFilters, team, ageGroups: ["13&O"] };
     const rankings = await query("rankings", filters);
@@ -486,6 +512,62 @@ try {
     });
     assert.equal(next.total, 1);
     assert.deepEqual(next.meets, []);
+  });
+  await test("meet discovery orders matching dates before applying page offsets", async () => {
+    const search = "IES fixture date search";
+    const dated = [
+      ["earlier", "2024-02-27"],
+      ["exact", "2024-02-29"],
+      ["later", "2024-03-02"],
+      ["newest", "2024-03-20"],
+    ].map(([suffix, date]) => ({
+      id: `${prefix}dated-${suffix}`,
+      name: `${search} ${suffix}`,
+      date,
+    }));
+    const changes = [
+      ...dated.map((meet) => ({ path: `meets/${meet.id}`, after: meet })),
+      ...dated.map((meet) => ({
+        path: `swims/${meet.id}`,
+        after: {
+          ...races[0].data,
+          id: meet.id,
+          meet,
+          raceIdentity: { ...races[0].data.raceIdentity, occurrence: meet.id },
+        },
+      })),
+    ];
+    assert.ifError(
+      (await admin.rpc("collect_records", { reads: [], writes: changes })).error,
+    );
+    try {
+      const [earlier, exact, later, newest] = dated.map(({ id }) => id);
+      const unsorted = await query("meets", { search, limit: 1 });
+      assert.equal(unsorted.meets[0].id, newest);
+      const filters = {
+        search,
+        course: "SCY",
+        year: "2024",
+        meetDate: "2024-02-29",
+        limit: 2,
+      };
+      const first = await query("meets", filters);
+      const second = await query("meets", { ...filters, offset: 2 });
+      assert.equal(first.total, 4);
+      assert.equal(second.total, 4);
+      assert.deepEqual(first.meets.map(({ id }) => id), [exact, later]);
+      assert.deepEqual(second.meets.map(({ id }) => id), [earlier, newest]);
+      assert.ok(!("distance" in first.meets[0]));
+    } finally {
+      assert.ifError(
+        (await admin.rpc("collect_records", {
+          reads: [],
+          writes: changes
+            .toReversed()
+            .map(({ path }) => ({ path, after: null })),
+        })).error,
+      );
+    }
   });
   await test("profiles, histories and score cohorts preserve complete athlete semantics", async () => {
     const profile = await query("profile", { athleteId: prefix + "0" });

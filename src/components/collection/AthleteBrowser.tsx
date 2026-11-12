@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { VELOCITY_TEAM } from "@/features/swim-resources/lib/domain/entities";
 import { useTimesSelection } from "./use-times-selection";
 import {
   type AthleteRankingOptions,
@@ -122,7 +123,7 @@ export default function AthleteBrowser({
   const [options, setOptions] = useTimesSelection<
     Omit<AthleteRankingOptions, "today">
   >("athleteOptions", {
-    team: "",
+    team: VELOCITY_TEAM.id,
     course: "SCY",
     period: "recent",
   });
@@ -147,73 +148,75 @@ export default function AthleteBrowser({
     : null;
   const visible = groups;
   const sections = [...new Set(visible.map((g) => g.ageGroup))];
+  const hasVelocity = teams.some(([id]) => id === VELOCITY_TEAM.id);
+  const teamOptions: [string, string][] = hasVelocity
+    ? teams
+    : [[VELOCITY_TEAM.id, VELOCITY_TEAM.name], ...teams];
   const resetKey = JSON.stringify([
     options,
     ages,
     searchTerm,
     query.data?.expiresAt,
   ]);
-  return (
-    <div className={s.athleteBrowser}>
-      <div className={s.filters}>
-        <label className={s.field}>
-          Athlete team
-          <select
-            aria-label="Athlete team"
-            value={options.team}
-            onChange={(e) =>
-              setOptions((o) => ({ ...o, team: e.target.value }))
-            }
-          >
-            <option value="">Select a team…</option>
-            {teams.map(([id, name]) => (
-              <option key={id} value={id}>
-                {name}
-              </option>
-            ))}
-          </select>
-        </label>
-        <label className={s.field}>
-          Athlete course
-          <select
-            aria-label="Athlete course"
-            value={options.course}
-            onChange={(e) =>
-              setOptions((o) => ({ ...o, course: e.target.value }))
-            }
-          >
-            {["SCY", "LCM", "SCM"].map((c) => (
-              <option key={c}>{c}</option>
-            ))}
-          </select>
-        </label>
-        <label className={s.field}>
-          Athlete period
-          <select
-            aria-label="Athlete period"
-            value={options.period}
-            onChange={(e) =>
-              setOptions((o) => ({
-                ...o,
-                period: e.target.value as AthleteRankingOptions["period"],
-              }))
-            }
-          >
-            <option value="recent">Past 12 months</option>
-            <option value="all">All time</option>
-          </select>
-        </label>
-        <label className={s.field}>
-          Search team athletes
-          <input
-            type="search"
-            placeholder="Search athlete name…"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-          />
-        </label>
-      </div>
-      <fieldset className={s.courseField}>
+  const filterPanel = (
+    <div className={`${s.filters} ${s.athleteFilters}`}>
+      <label className={`${s.field} ${s.athleteFilterWide}`}>
+        Athlete team
+        <select
+          aria-label="Athlete team"
+          value={options.team}
+          onChange={(event) =>
+            setOptions((current) => ({ ...current, team: event.target.value }))
+          }
+        >
+          <option value="">Select a team…</option>
+          {teamOptions.map(([id, name]) => (
+            <option key={id} value={id}>
+              {name}
+            </option>
+          ))}
+        </select>
+      </label>
+      <label className={s.field}>
+        Athlete course
+        <select
+          aria-label="Athlete course"
+          value={options.course}
+          onChange={(e) =>
+            setOptions((o) => ({ ...o, course: e.target.value }))
+          }
+        >
+          {["SCY", "LCM", "SCM"].map((c) => (
+            <option key={c}>{c}</option>
+          ))}
+        </select>
+      </label>
+      <label className={s.field}>
+        Athlete period
+        <select
+          aria-label="Athlete period"
+          value={options.period}
+          onChange={(e) =>
+            setOptions((o) => ({
+              ...o,
+              period: e.target.value as AthleteRankingOptions["period"],
+            }))
+          }
+        >
+          <option value="recent">Past 12 months</option>
+          <option value="all">All time</option>
+        </select>
+      </label>
+      <label className={`${s.field} ${s.athleteFilterWide}`}>
+        Search team athletes
+        <input
+          type="search"
+          placeholder="Search athlete name…"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
+      </label>
+      <fieldset className={`${s.courseField} ${s.athleteAgeFilter}`}>
         <legend>Recorded age groups</legend>
         <div className={s.chips}>
           {ageGroups.map(([id, label]) => (
@@ -236,6 +239,10 @@ export default function AthleteBrowser({
           </button>
         </div>
       </fieldset>
+    </div>
+  );
+  const results = (
+    <div className={s.athleteBrowser}>
       <details className={s.scoreExplanation}>
         <summary>How this score works</summary>
         <p>
@@ -377,5 +384,11 @@ export default function AthleteBrowser({
         </>
       )}
     </div>
+  );
+  return (
+    <>
+      {filterPanel}
+      {results}
+    </>
   );
 }
