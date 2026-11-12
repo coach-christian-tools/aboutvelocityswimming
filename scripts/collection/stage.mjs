@@ -38,5 +38,5 @@ const { data, error } = await client.rpc("stage_collection", {
 });
 if (error) throw new Error(error.message);
 console.log(
-  `Staged batch ${data}. Review at /tools/review. Nothing was published.`,
+  `Staged batch ${data} for approval at /tools/review/batches.`,
 );

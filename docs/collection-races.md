@@ -7,6 +7,9 @@ and live execution are separate authorized steps. Every swimmer in each supplied
 archive is considered, including visiting clubs. Source availability, archive
 scope, and result-import completeness remain separate facts.
 
+For the additive import pilot, see [Velocity Imports](./velocity-imports.md).
+It accepts the same paired archive and reviewed mapping files.
+
 Use installed Node 24 for npm commands. Python uses only the standard library.
 Keep sources, baselines, mapping decisions, checkpoints, and proposals below the
 checkout's gitignored `backups/`; never commit source data or credentials. Output
@@ -407,7 +410,8 @@ not occurrence identity keys. S/TT rows without that evidence remain held.
 Staging is an actual hosted write and remains separately authorized. Use only
 batch files listed in the manifest, with the existing correctly scoped Times
 collector. Knowledge catalog proposals use their separate collector. Staff
-approve through `/tools/review`; selecting a catalog meet does not import races.
+approve through **Batch review and history** (`/tools/review/batches`). Catalog
+selection identifies meets for collection.
 No schedule is created. Public/anonymous access cannot supply the private raw
 baseline or staff approval. Never seed a hosted database.
 

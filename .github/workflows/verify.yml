@@ -33,6 +33,7 @@ jobs:
           npm run test:browser
           npm run test:collection:browser
           npm run test:baseline:browser
+          npm run test:imports:browser
       - name: Check database advisors
         run: supabase db advisors --local --type all --fail-on error
       - name: Stop local services

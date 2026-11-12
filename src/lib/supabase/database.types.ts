@@ -1621,6 +1621,10 @@ export type Database = {
         Args: { batch: Json; worker_token: string };
         Returns: string;
       };
+      stage_velocity_import: {
+        Args: { batch: Json; worker_token: string };
+        Returns: Json;
+      };
       times_page: {
         Args: {
           course_filter?: string;
@@ -1632,6 +1636,10 @@ export type Database = {
         Returns: Json;
       };
       update_meet_collection_work: { Args: { input: Json }; Returns: Json };
+      approve_velocity_import: { Args: { selection_id: string }; Returns: Json };
+      velocity_import_detail: { Args: { input: Json }; Returns: Json };
+      velocity_import_queue: { Args: { input: Json }; Returns: Json };
+      velocity_import_selection: { Args: { input: Json }; Returns: Json };
       workshare_action: {
         Args: { input: Json; operation: string };
         Returns: Json;

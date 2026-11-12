@@ -1,0 +1,152 @@
+.review {
+  display: grid;
+  min-width: 0;
+  gap: .75rem;
+  margin-top: .75rem;
+  font-size: .8125rem;
+}
+
+.section {
+  min-width: 0;
+}
+
+.section h2,
+.dialog h2 {
+  font-size: 1.125rem;
+  font-weight: 650;
+}
+
+.toolbar,
+.selection,
+.dialogHeading,
+.rowName {
+  display: flex;
+  align-items: center;
+  gap: .5rem .75rem;
+}
+
+.toolbar,
+.selection,
+.dialogHeading {
+  flex-wrap: wrap;
+}
+
+.selection {
+  margin-top: .625rem;
+}
+
+.review button,
+.dialog button,
+.dialog select {
+  min-height: 1.75rem;
+  padding: .125rem .5rem;
+  border: 1px solid var(--border);
+  border-radius: .25rem;
+  background: var(--background-alt);
+  color: var(--text-main);
+  font-size: .8125rem;
+  font-weight: 600;
+}
+
+.review button:hover:not(:disabled),
+.dialog button:hover:not(:disabled) {
+  border-color: var(--accent);
+}
+
+.review button:disabled,
+.dialog button:disabled {
+  opacity: .52;
+  cursor: default;
+}
+
+.review .primary,
+.dialog .primary {
+  background: var(--text-main);
+  color: var(--surface);
+}
+
+.review input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+  margin: 0;
+  flex: 0 0 auto;
+  vertical-align: -.17rem;
+  accent-color: var(--text-main);
+}
+
+.review thead input[type="checkbox"] {
+  margin-inline-end: .75rem;
+}
+
+.receipt {
+  font-variant-numeric: tabular-nums;
+}
+
+.blocker {
+  color: #854500;
+}
+
+:global(:root[data-theme="dark"]) .blocker {
+  color: #f3bf75;
+}
+
+.dialog {
+  position: fixed;
+  inset: 0;
+  width: min(42rem, calc(100vw - 2rem));
+  max-height: calc(100dvh - 2rem);
+  margin: auto;
+  padding: 1rem;
+  overflow: auto;
+  border: 1px solid var(--border);
+  border-radius: .375rem;
+  background: var(--surface);
+  color: var(--text-main);
+}
+
+.dialog::backdrop {
+  background: rgb(0 0 0 / .48);
+}
+
+.dialog[open] {
+  display: grid;
+  gap: .75rem;
+}
+
+.dialogHeading {
+  justify-content: space-between;
+}
+
+.dialog :is(h2, li, dd) {
+  overflow-wrap: anywhere;
+}
+
+.dialog ul {
+  margin-block: .375rem;
+  padding-inline-start: 1rem;
+  list-style: disc;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: .375rem .75rem;
+}
+
+.details dt,
+.muted {
+  color: var(--text-muted);
+}
+
+.captured summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.captured pre {
+  max-width: 100%;
+  max-height: 25vh;
+  overflow: auto;
+  padding: .5rem;
+  background: var(--background-alt);
+}

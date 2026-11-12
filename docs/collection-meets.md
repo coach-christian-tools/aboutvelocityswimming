@@ -89,7 +89,8 @@ names and other raw personal information.
    `parser-exceptions.json`, `identity-crosswalk.json`, and the coverage ledger.
    Stage only batch paths listed in the summary, using the existing
    `scripts/collection/stage.mjs`. Staff approve external facts in
-   `/tools/review`. No command here marks results fully imported.
+   **Batch review and history** (`/tools/review/batches`). Result completeness
+   is tracked separately from catalog approval.
    Collector credentials are division-scoped: these batches require Knowledge
    access. A Times-only token cannot stage them. Keep separate credentials in
    ignored files with mode `0600`; do not widen another collector's access.

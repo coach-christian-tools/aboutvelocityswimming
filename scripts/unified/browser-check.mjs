@@ -53,8 +53,9 @@ try {
     const href = await link.getAttribute("href");
     await link.click();
     await page.waitForURL(base + href);
-    await page.getByRole("heading", { name: `Explore ${name}`, exact: true }).waitFor();
-    assert.equal(await link.getAttribute("aria-current"), "page");
+    const imports = name === "Velocity Imports";
+    await page.getByRole("heading", { name: imports ? "Review queue" : `Explore ${name}`, exact: true }).waitFor();
+    assert.equal(await link.getAttribute("aria-current"), imports ? null : "page");
     for (const tool of toolNames) {
       assert.equal(await toolLink(tool).getAttribute("aria-expanded"), String(tool === name));
     }
@@ -97,14 +98,12 @@ try {
   assert.equal(await restoredAtlasMeets.getAttribute("aria-current"), "page");
 
   let reviewNavigation = await openTool("Velocity Imports");
-  assert.equal(await page.getByRole("main").getByRole("list").getByRole("link").count(), 6);
   let queueItem = reviewNavigation.getByRole("link", { name: "Review queue", exact: true });
-  await queueItem.click();
-  await page.waitForURL(base + "/tools/review");
   await reviewHeading.waitFor();
   await queueItem.waitFor();
   assert.equal(await queueItem.getAttribute("aria-current"), "page");
-  await page.getByRole("combobox", { name: "Status", exact: true }).waitFor();
+  await page.getByRole("table", { name: "Pending meets", exact: true }).waitFor();
+  await page.getByRole("table", { name: "Pending swims", exact: true }).waitFor();
   await overview.click();
   await page.waitForURL(base + "/tools");
   await home.click();
@@ -122,8 +121,6 @@ try {
   await page.goto(base + "/tools/times");
   reviewNavigation = await openTool("Velocity Imports");
   queueItem = reviewNavigation.getByRole("link", { name: "Review queue", exact: true });
-  await queueItem.click();
-  await page.waitForURL(base + "/tools/review");
   await reviewHeading.waitFor();
   await queueItem.waitFor();
   assert.equal(await page.getByText(/Collected changes stay private until approved/).count(), 0);
@@ -189,6 +186,7 @@ try {
   await page.getByRole('button',{name:/Create Shift|Post.*Shift|Add.*Shift/}).first().click();
   await page.getByRole('dialog').waitFor();await page.keyboard.press('Escape');assert.equal(await page.getByRole('dialog').count(),0);
 
+  const openDrawer = page.getByRole("button", { name: "Open navigation sidebar", exact: true });
   for (const width of [1440, 390, 320]) {
     await page.setViewportSize({ width, height: 900 });
     await page.goto(base + "/tools");
@@ -209,24 +207,30 @@ try {
       ["Velocity Imports", "review", 6],
     ]) {
       await page.getByRole("main").getByRole("link", { name, exact: true }).click();
-      await page.waitForURL(base + `/tools/${path}/overview`);
-      await page.getByRole("heading", { name: `Explore ${name}`, exact: true }).waitFor();
-      assert.equal(await page.getByRole("main").getByRole("list").getByRole("link").count(), count);
+      const imports = name === "Velocity Imports";
+      await page.waitForURL(base + `/tools/${path}${imports ? "" : "/overview"}`);
+      await page.getByRole("heading", { name: imports ? "Review queue" : `Explore ${name}`, exact: true }).waitFor();
+      if (imports) await page.getByRole("table", { name: "Pending meets", exact: true }).waitFor();
+      else assert.equal(await page.getByRole("main").getByRole("list").getByRole("link").count(), count);
       assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false, `${name} overflow at ${width}`);
       await page.evaluate(() => window.scrollTo({ top: 0, behavior: "instant" }));
       if (width >= 768) await navigation.waitFor();
       await page.screenshot({ path: `/tmp/velocity-${path}-home-${width}.png`, fullPage: true });
-      await page.getByRole("main").getByRole("link", { name: "All tools", exact: true }).click();
+      if (imports) {
+        if (width < 768) await openDrawer.click();
+        await overview.click();
+      } else {
+        await page.getByRole("main").getByRole("link", { name: "All tools", exact: true }).click();
+      }
       await page.waitForURL(base + "/tools");
     }
   }
   await page.setViewportSize({ width: 390, height: 900 });
   await page.goto(base + "/tools/times");
-  const openDrawer = page.getByRole("button", { name: "Open navigation sidebar", exact: true });
   await openDrawer.click();
   await toolLink("Velocity Imports").click();
-  await page.waitForURL(base + "/tools/review/overview");
-  await page.getByRole("heading", { name: "Explore Velocity Imports", exact: true }).waitFor();
+  await page.waitForURL(base + "/tools/review");
+  await reviewHeading.waitFor();
   await navigation.waitFor({ state: "hidden" });
   await openDrawer.click();
   reviewNavigation = await toolSection("Velocity Imports");

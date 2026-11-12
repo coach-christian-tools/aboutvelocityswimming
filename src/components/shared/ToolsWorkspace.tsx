@@ -65,6 +65,9 @@ function ToolsNavigation({ pathname, currentTool }: { pathname: string; currentT
         : timesViewHref(page.id as TimesView, timesSearch, timesHash) };
     }
     if (currentTool === "atlas") return { ...page, active: onAtlas && atlasView === page.id };
+    if (currentTool === "imports" && page.id === "queue" && pathname === `${page.href}/batches`) {
+      return { ...page, active: true };
+    }
     return routeItem(pathname, page.href, page.label, page.icon, page.includeChildren);
   }) : [];
 
@@ -75,13 +78,14 @@ function ToolsNavigation({ pathname, currentTool }: { pathname: string; currentT
         {getAvailableTools(isAdmin).map(([id, { homeHref, title, icon: Icon }]) => {
           const expanded = currentTool === id;
           const idForPages = `${sectionId}-${id}`;
+          const childIsCurrent = expanded && subpages.some((page) => page.active && page.href === homeHref);
           return (
             <li key={id}>
               <Link
                 href={homeHref}
                 className={`${styles.item} ${styles.groupLink}`}
                 data-current-tool={expanded}
-                aria-current={pathname === homeHref ? "page" : undefined}
+                aria-current={pathname === homeHref && !childIsCurrent ? "page" : undefined}
                 aria-expanded={expanded}
                 aria-controls={idForPages}
               >

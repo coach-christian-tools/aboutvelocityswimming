@@ -94,7 +94,7 @@ try {
   await page.locator("input[type=password]").fill("Velocity-local-test-2026!");
   await page.locator("button[type=submit]").click();
   await page.waitForURL(base + "/tools");
-  await page.goto(base + "/tools/review");
+  await page.goto(base + "/tools/review/batches");
   const article = page.locator("article").filter({ hasText: set.name });
   await article
     .getByText("Review records, conflicts and source evidence", { exact: true })

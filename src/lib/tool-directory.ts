@@ -64,7 +64,7 @@ export const toolDirectory = {
     description:
       "Inspect swim and meet data, and review proposed changes before publication.",
     href: "/tools/review",
-    homeHref: "/tools/review/overview",
+    homeHref: "/tools/review",
     icon: ClipboardList,
     adminOnly: true,
   },

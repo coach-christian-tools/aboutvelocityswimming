@@ -53,18 +53,21 @@ export function InventoryField({ label, children }: { label: string; children: R
   return <label className={styles.field}><span>{label}</span>{children}</label>;
 }
 
-export function InventoryTable({ label, columns, children, empty }: {
+export function InventoryTable({ label, columns, children, empty, firstColumnControl }: {
   label: string;
   columns: readonly string[];
   children: ReactNode;
   empty?: string;
+  firstColumnControl?: ReactNode;
 }) {
   return (
     <div className={styles.tableScroll} role="region" aria-label={label} tabIndex={0}>
       <table className={styles.table}>
         <caption className="sr-only">{label}</caption>
         <thead>
-          <tr>{columns.map((column) => <th key={column} scope="col">{column}</th>)}</tr>
+          <tr>{columns.map((column, index) => (
+            <th key={column} scope="col">{index === 0 && firstColumnControl}{column}</th>
+          ))}</tr>
         </thead>
         <tbody>
           {empty ? <tr><td colSpan={columns.length} className={styles.empty}>{empty}</td></tr> : children}

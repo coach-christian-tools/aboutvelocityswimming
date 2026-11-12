@@ -18,7 +18,7 @@ The extractor supports the verified October 10, 2025 revision of the 2024–2028
 
 Preparation reads the current public record and includes its full baseline. Staging requires `coverage: complete`, explicit baseline reads, official source metadata, and valid cuts. The server checks freshness at staging and approval. Existing batch limits are 1–100 records and 2 MB; split by complete editions, never by partial matrices at the same record path.
 
-Review at `/tools/review` under Velocity Times. Expand a standards record to inspect added/changed/removed cuts and raw metadata; expand source evidence for the capture and coverage. Approval publishes atomically. Hold and decline do not publish. The standards table trigger also validates direct writes. Existing database projection refreshes `standard_cuts` automatically. A standards-only approval avoids rebuilding unrelated athlete bests; Times rankings read the current benchmark dynamically.
+Review at `/tools/review/batches` under Velocity Imports. Expand a standards record to inspect added/changed/removed cuts and raw metadata; expand source evidence for the capture and coverage. Approval publishes atomically. Hold and decline do not publish. The standards table trigger also validates direct writes. Existing database projection refreshes `standard_cuts` automatically. A standards-only approval avoids rebuilding unrelated athlete bests; Times rankings read the current benchmark dynamically.
 
 ## Initial collection, October 13, 2026
 

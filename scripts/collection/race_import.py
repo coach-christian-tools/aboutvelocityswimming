@@ -785,9 +785,10 @@ def provenance_key(observation, canonical_round):
     return key
 
 
-def plan(manifest, baseline, snapshots, mappings, parsed_sources):
+def plan(manifest, snapshots, mappings, parsed_sources):
     teams, identity, identity_holds = mapping_tables(mappings, snapshots)
     holds, clean, duplicates = [], {}, []
+    clean_occurrences = collections.defaultdict(dict)
     tally = collections.defaultdict(collections.Counter)
     dependencies = {}
     name_index = collections.defaultdict(set)
@@ -838,8 +839,7 @@ def plan(manifest, baseline, snapshots, mappings, parsed_sources):
         if any(source_evidence(r).get("archiveSha256") == observation["archiveSha256"] and facts(r, relay) != facts(body, relay) for r in provenance_rows):
             raise ValueError("Previously imported exact source row differs; preserve it for reconciliation")
         same_id = snapshots.get(path)
-        prepared_same = [(p, item) for p, item in clean.items() if p != path and race_key(item["after"], relay) == key
-                         and p.startswith("relay_results/" if relay else "swims/")]
+        prepared_same = [(p, item) for p, item in clean_occurrences.get((relay, key), {}).items() if p != path]
         if prepared_same:
             if len(prepared_same) == 1 and facts(prepared_same[0][1]["after"], relay) == facts(body, relay):
                 duplicates.append({"sourceId": source["id"], "path": path, "existingId": prepared_same[0][0], "basis": "Same canonical occurrence already prepared"})
@@ -849,6 +849,7 @@ def plan(manifest, baseline, snapshots, mappings, parsed_sources):
             blocked_occurrences.add((relay, key))
             for prior_path, prior in prepared_same:
                 clean.pop(prior_path)
+                del clean_occurrences[(relay, key)][prior_path]
                 blocked.add(prior_path)
                 holds.append(held("race", "Competing source aliases disagree on one occurrence; both held", path=prior_path, sourceId=prior["sourceId"]))
                 tally[prior["sourceId"]]["heldRelays" if relay else "heldIndividuals"] += 1
@@ -868,6 +869,7 @@ def plan(manifest, baseline, snapshots, mappings, parsed_sources):
         elif path in clean:
             if facts(clean[path]["after"], relay) != facts(body, relay):
                 prior = clean.pop(path)
+                del clean_occurrences[(relay, race_key(prior["after"], relay))][path]
                 holds.append(held("race", "Conflicting repeated source result; both observations held", source,
                                   body["sourceObservation"]["line"], path=path, priorSourceId=prior["sourceId"]))
                 blocked.add(path)
@@ -882,6 +884,7 @@ def plan(manifest, baseline, snapshots, mappings, parsed_sources):
         else:
             clean[path] = {"path": path, "after": body, "sourceId": source["id"], "requires": sorted(set(requirements)),
                            "dependencyWrites": dict(pending_dependencies)}
+            clean_occurrences[(relay, key)][path] = clean[path]
 
     blocked = set()
     blocked_occurrences = set()
@@ -1329,7 +1332,7 @@ def prepare(sources_path, baseline_path, mappings_path, output, resume=False):
             if source["id"] in checkpoint["completedSources"]:
                 raise ValueError("Resumed source integrity failed: " + str(error)) from error
             holds.append(held("source", str(error), source))
-    clean, dependencies, row_holds, duplicates, tally = plan(manifest, baseline, snapshots, mappings, parsed_sources)
+    clean, dependencies, row_holds, duplicates, tally = plan(manifest, snapshots, mappings, parsed_sources)
     holds.extend(row_holds)
     listing = batches(clean, dependencies, snapshots, manifest, baseline, output, inputs)
     save(output / "manual-review.json", holds)
