@@ -2,9 +2,11 @@
 
 import { useEffect, useId, useRef, useState, useSyncExternalStore, type ReactNode } from "react";
 import { ImportReviewTable, importSelectionCount, type ImportTableSelection } from "./ImportReviewTable";
+import ImportSwimmerMatch from "./ImportSwimmerMatch";
 import {
   approveImportSelection,
   createImportSelection,
+  ImportRequestError,
   importPageSize,
   importPreviewPage,
   importQueueDetail,
@@ -17,6 +19,7 @@ import {
   type ImportQueuePage,
   type ImportQueueRow,
   type ImportSelectionPreview,
+  type ImportSwimmerResolution,
   type ImportTableKind,
 } from "./imports-review-api";
 import { clearTimesCache } from "./times-cache";
@@ -80,7 +83,12 @@ function SourceLink({ value }: { value: string }) {
   return <span>{value || "—"}</span>;
 }
 
-function ReviewDialog({ title, children, onClose }: { title: string; children: ReactNode; onClose: () => void }) {
+function ReviewDialog({ title, children, onClose, closeDisabled = false }: {
+  title: string;
+  children: ReactNode;
+  onClose: () => void;
+  closeDisabled?: boolean;
+}) {
   const ref = useRef<HTMLDialogElement>(null);
   const titleId = useId();
   useEffect(() => {
@@ -95,21 +103,29 @@ function ReviewDialog({ title, children, onClose }: { title: string; children: R
       aria-labelledby={titleId}
       onCancel={(event) => {
         event.preventDefault();
-        onClose();
+        if (!closeDisabled) onClose();
       }}
     >
       <div className={styles.dialogHeading}>
         <h2 id={titleId}>{title}</h2>
-        <button type="button" onClick={onClose}>Close</button>
+        <button type="button" onClick={onClose} disabled={closeDisabled}>Close</button>
       </div>
       {children}
     </dialog>
   );
 }
 
-function ImportDetail({ row, onClose }: { row: ImportQueueRow; onClose: () => void }) {
+function ImportDetail({ row, canResolve, clearsSelection, onClose, onResolved }: {
+  row: ImportQueueRow;
+  canResolve: boolean;
+  clearsSelection: boolean;
+  onClose: () => void;
+  onResolved: (resolution: ImportSwimmerResolution) => void;
+}) {
   const [detail, setDetail] = useState<ImportQueueDetail>();
   const [error, setError] = useState("");
+  const [resolving, setResolving] = useState(false);
+  const [saving, setSaving] = useState(false);
   useEffect(() => {
     const controller = new AbortController();
     void importQueueDetail(row.id, controller.signal).then(
@@ -122,15 +138,31 @@ function ImportDetail({ row, onClose }: { row: ImportQueueRow; onClose: () => vo
     );
     return () => controller.abort();
   }, [row.id]);
+  const blocker = detail ? detail.blocker : row.blocker;
   return (
-    <ReviewDialog title={row.label} onClose={onClose}>
-      {row.blocker && <p className={styles.blocker}>{row.blocker}</p>}
+    <ReviewDialog title={row.label} onClose={onClose} closeDisabled={saving}>
+      {blocker && <p className={styles.blocker}>{blocker}</p>}
       {error && <p role="alert">{error}</p>}
       {!detail && !error && <p role="status">Loading details…</p>}
       {detail && (
         <>
+          {canResolve && detail.canResolveSwimmerMatch && !resolving && (
+            <div className={styles.toolbar}>
+              <button type="button" className={styles.primary} onClick={() => setResolving(true)}>Resolve swimmer match</button>
+            </div>
+          )}
+          {resolving && (
+            <ImportSwimmerMatch
+              id={row.id}
+              source={<SourceLink value={detail.sourceUrl} />}
+              clearsSelection={clearsSelection}
+              saving={saving}
+              onSaving={setSaving}
+              onResolved={onResolved}
+            />
+          )}
           <dl className={styles.details}>
-            <dt>Source</dt><dd><SourceLink value={detail.sourceUrl} /></dd>
+            {!resolving && <><dt>Source</dt><dd><SourceLink value={detail.sourceUrl} /></dd></>}
             <dt>Scope</dt><dd>{detail.sourceScope || "—"}</dd>
             <dt>Captured</dt><dd>{new Date(detail.capturedAt).toLocaleString()}</dd>
             <dt>Coverage</dt><dd>{detail.coverage || "—"}</dd>
@@ -307,12 +339,15 @@ export default function ImportsReview() {
   const [pendingPreview, setPendingPreview] = useState<ImportSelectionPreview>();
   const [detail, setDetail] = useState<ImportQueueRow>();
   const [receipt, setReceipt] = useState<ImportApprovalReceipt>();
+  const [resolution, setResolution] = useState<ImportSwimmerResolution>();
+  const [correctedSwimIds, setCorrectedSwimIds] = useState<string[]>([]);
   const [error, setError] = useState("");
   const [activeApproval, setActiveApproval] = useState<string | null>(null);
   const persistedApproval = useSyncExternalStore(subscribeToSavedApproval, readSavedApproval, () => null);
   const savedApproval = activeApproval || persistedApproval;
   const previewRequest = useRef<AbortController>(null);
   const approvalRequest = useRef<AbortController>(null);
+  const resolutionMessage = useRef<HTMLParagraphElement>(null);
   const total = importSelectionCount(selection.meets) + importSelectionCount(selection.swims);
   const busy = working !== null || Boolean(savedApproval || pendingPreview);
 
@@ -320,6 +355,10 @@ export default function ImportsReview() {
     previewRequest.current?.abort();
     approvalRequest.current?.abort();
   }, []);
+
+  useEffect(() => {
+    if (resolution) resolutionMessage.current?.focus();
+  }, [resolution]);
 
   function updateSelection(kind: ImportTableKind, value: ImportTableSelection) {
     setSelection((previous) => ({ ...previous, [kind]: value }));
@@ -395,6 +434,8 @@ export default function ImportsReview() {
       while (!controller.signal.aborted) {
         const progress = await approveImportSelection(selectionId, controller.signal);
         setReceipt(progress);
+        setResolution(undefined);
+        setCorrectedSwimIds([]);
         if (progress.approved > 0) clearTimesCache();
         if (progress.done) {
           clearSavedApproval();
@@ -406,10 +447,37 @@ export default function ImportsReview() {
         remaining = progress.remaining;
       }
     } catch (failure) {
-      if (!controller.signal.aborted) setError(errorText(failure, "Approval was interrupted. Retry to continue."));
+      if (!controller.signal.aborted) {
+        if (failure instanceof ImportRequestError && (failure.status === 404 || failure.status === 409)) {
+          clearSavedApproval();
+          setSelection(emptySelections());
+          setRevision((value) => value + 1);
+        }
+        setError(errorText(failure, "Approval was interrupted. Retry to continue."));
+      }
     } finally {
       if (!controller.signal.aborted) setWorking(null);
     }
+  }
+
+  function finishSwimmerMatch(result: ImportSwimmerResolution) {
+    setDetail(undefined);
+    setSelection(emptySelections());
+    setReceipt(undefined);
+    setError("");
+    setResolution(result);
+    setCorrectedSwimIds((previous) => {
+      const combined = [...new Set([...previous, ...result.rowIds])];
+      return combined.length <= 5000 ? combined : result.rowIds;
+    });
+    setRevision((value) => value + 1);
+  }
+
+  function selectCorrectedSwims() {
+    setSelection({
+      meets: emptySelection(),
+      swims: { ...emptySelection(), ids: new Set(correctedSwimIds) },
+    });
   }
 
   return (
@@ -438,6 +506,16 @@ export default function ImportsReview() {
         </div>
       )}
       {working === "approval" && <p role="status">Publishing selected rows…</p>}
+      {resolution && (
+        <div className={styles.toolbar}>
+          <p ref={resolutionMessage} tabIndex={-1} role="status">
+            Swimmer match saved. {resolution.updated.toLocaleString()} {resolution.updated === 1 ? "swim" : "swims"} updated.
+          </p>
+          {correctedSwimIds.length > 0 && (
+            <button type="button" disabled={busy || total > 0} onClick={selectCorrectedSwims}>Select corrected swims</button>
+          )}
+        </div>
+      )}
       {receipt && (
         <p className={styles.receipt} role="status">
           {receipt.approved.toLocaleString()} approved · {receipt.duplicates.toLocaleString()} duplicates · {receipt.blocked.toLocaleString()} blocked
@@ -470,7 +548,16 @@ export default function ImportsReview() {
           onDetails={setDetail}
         />
       ))}
-      {detail && <ImportDetail key={detail.id} row={detail} onClose={() => setDetail(undefined)} />}
+      {detail && (
+        <ImportDetail
+          key={detail.id}
+          row={detail}
+          canResolve={!busy}
+          clearsSelection={total > 0}
+          onClose={() => setDetail(undefined)}
+          onResolved={finishSwimmerMatch}
+        />
+      )}
       {preview && <ApprovalPreview selection={preview} onClose={() => setPreview(undefined)} onApprove={() => void approve(preview.selectionId)} />}
     </div>
   );

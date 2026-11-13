@@ -21,6 +21,7 @@ export type ImportQueueRow = {
   batchId: string;
   capturedAt: string;
   selected: boolean;
+  canResolveSwimmerMatch?: boolean;
 };
 
 export type ImportQueuePage = {
@@ -37,6 +38,25 @@ export type ImportQueueDetail = ImportQueueRow & {
   sourceScope: string;
   sha256: string;
   locator: string | null;
+};
+
+export type ImportSwimmerMatch = {
+  affected: number;
+  capturedName: string;
+  capturedTeamName: string | null;
+  currentAthleteId: string;
+  matchVersion: string;
+  candidates: {
+    id: string;
+    name: string;
+    teamName: string | null;
+    evidence: "source_identity" | "staged_link" | "name_match" | "search";
+  }[];
+};
+
+export type ImportSwimmerResolution = {
+  updated: number;
+  rowIds: string[];
 };
 
 export type ImportMatch = {
@@ -81,10 +101,19 @@ export type ImportApprovalReceipt = {
 
 export const importPageSize = 30;
 
+export class ImportRequestError extends Error {
+  constructor(message: string, readonly status: number) {
+    super(message);
+    this.name = "ImportRequestError";
+  }
+}
+
 async function importRequest<T>(query: string, fallback: string, init: RequestInit): Promise<T> {
   const response = await fetch(`/api/collection/imports${query}`, { cache: "no-store", ...init });
   const body = await response.json().catch(() => null);
-  if (!response.ok || !body) throw new Error(typeof body?.error === "string" ? body.error : fallback);
+  if (!response.ok || !body) {
+    throw new ImportRequestError(typeof body?.error === "string" ? body.error : fallback, response.status);
+  }
   return body as T;
 }
 
@@ -94,6 +123,19 @@ export function importQueuePage(query: URLSearchParams, signal: AbortSignal) {
 
 export function importQueueDetail(id: string, signal: AbortSignal) {
   return importRequest<ImportQueueDetail>(`?${new URLSearchParams({ id })}`, "The record details could not be loaded.", { signal });
+}
+
+export function getImportSwimmerMatch(id: string, search: string, signal: AbortSignal) {
+  const query = new URLSearchParams({ swimmerMatch: id, search });
+  return importRequest<ImportSwimmerMatch>(`?${query}`, "Swimmer matches could not be loaded.", { signal });
+}
+
+export function resolveImportSwimmerMatch(input: { id: string; athleteId: string; reason: string; matchVersion: string }) {
+  return importRequest<ImportSwimmerResolution>("", "The swimmer match could not be confirmed.", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ action: "resolveSwimmerMatch", ...input }),
+  });
 }
 
 export function importPreviewPage(selectionId: string, section: ImportPreviewSection, offset: number, signal: AbortSignal) {

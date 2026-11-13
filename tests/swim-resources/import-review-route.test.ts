@@ -10,6 +10,7 @@ import { GET, POST } from "@/app/api/collection/imports/route";
 
 const selectionId = "a2a77c1d-5bde-4fa5-9d63-e0f678bd0b6e";
 const rowId = "3b2b6ce5-e93b-4c56-9107-ad6d746d820f";
+const matchVersion = "0123456789abcdef".repeat(4);
 const endpoint = "https://example.test/api/collection/imports";
 const post = (body: object, origin = "https://example.test") => new Request(endpoint, {
   method: "POST",
@@ -60,6 +61,45 @@ describe("Velocity Imports review API", () => {
     expect(mocks.rpc).not.toHaveBeenCalled();
     mocks.rpc.mockResolvedValueOnce({ error: { code: "42501" } });
     expect((await GET(new Request(`${endpoint}?id=${rowId}`))).status).toBe(403);
+  });
+
+  it("looks up private swimmer matches for a staged row", async () => {
+    const response = await GET(new Request(`${endpoint}?swimmerMatch=${rowId}&search=Swimmer`));
+    expect(response.status).toBe(200);
+    expect(response.headers.get("cache-control")).toBe("private, no-store");
+    expect(mocks.rpc).toHaveBeenCalledWith("velocity_import_swimmer_matches", {
+      input: { id: rowId, search: "Swimmer" },
+    });
+  });
+
+  it("saves a verified swimmer match without invalidating published results", async () => {
+    const input = { id: rowId, athleteId: "swimmer-123", reason: "Verified against the source archive.", matchVersion };
+    const receipt = { updated: 1, rowIds: [rowId] };
+    mocks.rpc.mockResolvedValueOnce({ data: receipt, error: null });
+    const response = await POST(post({ action: "resolveSwimmerMatch", ...input }));
+    expect(response.status).toBe(200);
+    expect(await response.json()).toEqual(receipt);
+    expect(mocks.rpc).toHaveBeenCalledWith("resolve_velocity_import_swimmer", { input });
+    expect(mocks.invalidateTimes).not.toHaveBeenCalled();
+  });
+
+  it("validates swimmer match inputs before calling the database", async () => {
+    const input = { action: "resolveSwimmerMatch", id: rowId, athleteId: "swimmer-123", reason: "Checked source evidence.", matchVersion };
+    expect((await GET(new Request(`${endpoint}?swimmerMatch=wrong`))).status).toBe(400);
+    expect((await POST(post({ ...input, athleteId: "wrong/id" }))).status).toBe(400);
+    expect((await POST(post({ ...input, reason: " " }))).status).toBe(400);
+    expect((await POST(post({ ...input, matchVersion: "old" }))).status).toBe(400);
+    expect((await POST(post(input, "https://elsewhere.test"))).status).toBe(403);
+    expect(mocks.rpc).not.toHaveBeenCalled();
+  });
+
+  it("requires a fresh review when the affected swims have changed", async () => {
+    mocks.rpc.mockResolvedValueOnce({ error: { code: "PT409" } });
+    const response = await POST(post({
+      action: "resolveSwimmerMatch", id: rowId, athleteId: "swimmer-123", reason: "Checked source evidence.", matchVersion,
+    }));
+    expect(response.status).toBe(409);
+    expect(mocks.invalidateTimes).not.toHaveBeenCalled();
   });
 
   it("invalidates Times and Archive after publication, including a confirmed retry", async () => {

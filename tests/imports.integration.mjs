@@ -82,16 +82,21 @@ async function account(userIds, label, staff = false) {
 
 test("private import, frozen review and transactional publication", async (t) => {
   const userIds = [];
+  const resolvedSwimIds = [];
   t.after(async () => {
     db(`begin;
       set local velocity.defer_bests = 'true';
       delete from private.velocity_import_selection_rows where row_id in (
         select r.id from private.velocity_import_rows r join private.velocity_import_batches b on b.id = r.batch_id where b.source_scope = ${sql(prefix)}
       );
+      update private.velocity_import_rows set swimmer_resolution_id = null, supersedes_id = null
+        where batch_id in (select id from private.velocity_import_batches where source_scope = ${sql(prefix)});
+      delete from private.velocity_import_swimmer_resolutions where reason like ${sql(`${prefix}%`)};
       delete from private.velocity_import_rows where batch_id in (select id from private.velocity_import_batches where source_scope = ${sql(prefix)});
       delete from private.velocity_import_batches where source_scope = ${sql(prefix)};
       delete from private.collection_workers where name in (${sql(prefix)},${sql(`${prefix}-catalog`)});
       delete from public.swims where id like ${sql(`${prefix}%`)};
+      delete from public.swims where id in (select jsonb_array_elements_text(${json(resolvedSwimIds)}));
       delete from public.relay_results where id like ${sql(`${prefix}%`)};
       delete from public.athlete_bests where athlete_id like ${sql(`${prefix}%`)};
       delete from public.athletes where id like ${sql(`${prefix}%`)};
@@ -214,6 +219,150 @@ test("private import, frozen review and transactional publication", async (t) =>
   const publishedRelay = await publicRelay();
   assert.ifError(publishedRelay.error);
   assert.equal(publishedRelay.data.data.members[0].athleteId, athlete.id);
+
+  await t.test("review one HY3 swimmer across pending batches and publish with a fresh approval", async () => {
+    const memberIdHash = digest(`${prefix}-member`).slice(0, 24);
+    const canonical = {
+      ...athlete, id: `${prefix}-canonical`, name: { first: "Sam", last: prefix }, teamId: team.id,
+      sourceObservation: { memberIdHash },
+    };
+    const captured = { ...canonical, id: `${prefix}-captured`, name: { first: "Samuel", last: prefix } };
+    db(write(`athletes/${canonical.id}`, canonical));
+
+    const raceHash = (athleteId, number, eventCode) =>
+      digest([meet.id, athleteId, number, eventCode, "F", faster.meet.date].join("|")).slice(0, 24);
+    const captureSwim = (distance, number, line, stagedAthlete = captured) => {
+      const eventCode = `${distance}_FR_SCY`;
+      const originalHash = raceHash(stagedAthlete.id, number, eventCode);
+      return row("swim", {
+        ...faster, id: `hytek_race_${originalHash}`, athleteId: stagedAthlete.id, athleteName: stagedAthlete.name,
+        distance, eventCode, timeMs: distance * 600, metadata: { source: "hytek_hy3" },
+        sourceObservation: {
+          memberIdHash: stagedAthlete.sourceObservation.memberIdHash,
+          eventNumber: number, line, affiliation: { name: team.name },
+          url: `https://example.test/imports/${prefix}/archive`,
+          file: "meet.hy3", companionFile: "meet.cl2", companionLine: line + 1,
+          archiveSha256: digest(`${prefix}-archive`), hy3Sha256: digest(`${prefix}-hy3`),
+          companionSha256: digest(`${prefix}-cl2`),
+        },
+        externalResult: { namespace: "hytek", id: originalHash },
+      }, { locator: String(line), prerequisites: [row("athlete", stagedAthlete)] });
+    };
+    const first = captureSwim(50, "1", 10);
+    const second = captureSwim(200, "2", 20);
+    const third = captureSwim(500, "3", 30, { ...captured, id: canonical.id });
+    const held = {
+      ...captureSwim(1000, "4", 40),
+      blocker: "Source time requires manual verification.",
+    };
+    for (const { data } of [first, second, third]) {
+      resolvedSwimIds.push(`hytek_race_${raceHash(canonical.id, data.sourceObservation.eventNumber, data.eventCode)}`);
+    }
+    const unrelated = { ...late, id: `${prefix}-unrelated-swim`, eventCode: "50_FR_SCY", distance: 50 };
+    const firstBatch = await stage(batch("match-first", [first, held, row("swim", unrelated)]));
+    const secondBatch = await stage(batch("match-second", [second]));
+    const firstRows = await list("swims", { batchId: firstBatch.batchId });
+    const secondRows = await list("swims", { batchId: secondBatch.batchId });
+    const original = firstRows.rows.find(({ recordId }) => recordId === first.id);
+    const unrelatedRow = firstRows.rows.find(({ recordId }) => recordId === unrelated.id);
+    assert.equal(original.canResolveSwimmerMatch, true);
+    assert.equal(unrelatedRow.canResolveSwimmerMatch, false);
+    assert.match(original.blocker, /swimmer identity/i);
+
+    const lookup = (input) => rpc(staff, "velocity_import_swimmer_matches", { input });
+    const reason = `${prefix} Verified the source identity against the original archive.`;
+    const before = await lookup({ id: original.id });
+    assert.equal(before.affected, 2);
+    assert.equal(before.capturedName, `Samuel ${prefix}`);
+    assert.match(before.matchVersion, /^[a-f0-9]{64}$/);
+    assert.ok(before.candidates.some(({ id, evidence }) => id === canonical.id && evidence === "source_identity"));
+    const input = { id: original.id, athleteId: canonical.id, reason, matchVersion: before.matchVersion };
+    for (const session of [anon, nonStaff]) {
+      assert.ok((await session.rpc("velocity_import_swimmer_matches", { input: { id: original.id } })).error);
+      assert.ok((await session.rpc("resolve_velocity_import_swimmer", { input })).error);
+    }
+
+    const oldSelection = await select({ ids: [original.id, secondRows.rows[0].id] });
+    assert.equal(oldSelection.blocked, 2);
+    await stage(batch("match-third", [third]));
+    const stale = await staff.rpc("resolve_velocity_import_swimmer", { input });
+    assert.equal(stale.error?.code, "PT409");
+
+    const latest = await lookup({ id: original.id });
+    assert.equal(latest.affected, 3);
+    assert.notEqual(latest.matchVersion, before.matchVersion);
+    const verified = { ...input, matchVersion: latest.matchVersion };
+    const wrongTarget = await staff.rpc("resolve_velocity_import_swimmer", { input: { ...verified, athleteId: athlete.id } });
+    assert.ok(wrongTarget.error, "an existing exact source claim must rule out a different swimmer");
+    const saves = await Promise.all([
+      rpc(staff, "resolve_velocity_import_swimmer", { input: verified }),
+      rpc(staff, "resolve_velocity_import_swimmer", { input: verified }),
+    ]);
+    assert.equal(saves[0].updated, 3);
+    assert.equal(saves[0].rowIds.length, 3);
+    assert.deepEqual(saves[0], saves[1]);
+    assert.equal(db(`select count(*) from private.velocity_import_swimmer_resolutions where reason = ${sql(reason)};`), "1");
+    assert.equal(db(`select count(*) from private.velocity_import_rows
+      where status = 'superseded' and record_id in (${[first.id, second.id, third.id].map(sql).join(",")});`), "3");
+
+    const oldApproval = await staff.rpc("approve_velocity_import", { selection_id: oldSelection.selectionId });
+    assert.equal(oldApproval.error?.code, "PT409");
+    const publicMatches = () => anon.from("public_swims").select("id,data").in("id", resolvedSwimIds);
+    const beforeApproval = await publicMatches();
+    assert.ifError(beforeApproval.error);
+    assert.deepEqual(beforeApproval.data, []);
+    const result = await list("swims", { search: prefix });
+    const corrected = result.rows.filter(({ recordId }) => resolvedSwimIds.includes(recordId));
+    assert.equal(corrected.length, 3);
+    assert.deepEqual(new Set(corrected.map(({ id }) => id)), new Set(saves[0].rowIds));
+    assert.ok(corrected.every(({ blocker }) => blocker === null));
+    assert.ok(corrected.every(({ label }) => label === `Sam ${prefix}`));
+    assert.ok(result.rows.some(({ id }) => id === unrelatedRow.id));
+    assert.ok(result.rows.some(({ recordId, blocker }) => recordId === held.id && blocker === held.blocker));
+    assert.ok(result.rows.every(({ recordId }) => ![first.id, second.id].includes(recordId)));
+    const detail = await rpc(staff, "velocity_import_detail", { input: { id: corrected.find(({ recordId }) => recordId === resolvedSwimIds[0]).id } });
+    assert.equal(detail.locator, first.locator);
+    assert.deepEqual(detail.data.sourceObservation, first.data.sourceObservation);
+    assert.equal(detail.data.athleteId, canonical.id);
+    assert.deepEqual(detail.data.athleteName, captured.name);
+    assert.equal(detail.data.externalResult.id, resolvedSwimIds[0].slice("hytek_race_".length));
+
+    const selection = await select({ ids: corrected.map(({ id }) => id) });
+    assert.equal(selection.blocked, 0);
+    assert.equal((await approve(selection.selectionId)).approved, 3);
+    const published = await publicMatches();
+    assert.ifError(published.error);
+    assert.equal(published.data.length, 3);
+    assert.ok(published.data.every(({ data }) => data.athleteId === canonical.id));
+
+    const named = { ...athlete, id: `${prefix}-name-match`, name: { first: "Morgan", last: prefix } };
+    db(write(`athletes/${named.id}`, named));
+    const unlinked = {
+      ...named, id: `${prefix}-name-unlinked`,
+      sourceObservation: { memberIdHash: digest(`${prefix}-other-member`).slice(0, 24) },
+    };
+    const byName = captureSwim(50, "5", 50, unlinked);
+    const nameBatch = await stage(batch("name-match", [byName]));
+    const { rows: [nameRow] } = await list("swims", { batchId: nameBatch.batchId });
+    assert.match(nameRow.blocker, /published swimmer has this name/i);
+    const nameMatch = await lookup({ id: nameRow.id });
+    assert.ok(nameMatch.candidates.some(({ id, evidence }) => id === named.id && evidence === "name_match"));
+    const nameReason = `${prefix} Confirmed the source affiliation and swimmer identity.`;
+    const namedReceipt = await rpc(staff, "resolve_velocity_import_swimmer", {
+      input: { id: nameRow.id, athleteId: named.id, reason: nameReason, matchVersion: nameMatch.matchVersion },
+    });
+    assert.equal(namedReceipt.updated, 1);
+    assert.equal((await list("swims", { batchId: nameBatch.batchId })).rows[0].blocker, null);
+    const namedResultId = `hytek_race_${raceHash(named.id, "5", byName.data.eventCode)}`;
+    const namePublication = await anon.from("public_swims").select("id").eq("id", namedResultId);
+    assert.ifError(namePublication.error);
+    assert.deepEqual(namePublication.data, []);
+    const nameSelection = await select({ ids: namedReceipt.rowIds });
+    resolvedSwimIds.push(namedResultId);
+    assert.equal((await approve(nameSelection.selectionId)).approved, 1);
+    assert.equal(db(`select athlete_id from private.athlete_source_identities
+      where namespace = 'hytek-member' and source_id = ${sql(unlinked.sourceObservation.memberIdHash)};`), named.id);
+  });
 
   const catalogToken = randomUUID();
   db(`insert into private.collection_workers(name,token_hash,divisions) values (${sql(`${prefix}-catalog`)},${sql(digest(catalogToken))},array['knowledge']);`);

@@ -5,6 +5,8 @@ import { serverClient } from "@/lib/supabase/server";
 import { invalidateTimes } from "@/lib/times/server";
 
 const uuidPattern = /^[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}$/i;
+const recordIdPattern = /^[a-zA-Z0-9_-]{1,180}$/;
+const matchVersionPattern = /^[a-f0-9]{64}$/;
 
 function uuid(value: unknown): value is string {
   return typeof value === "string" && uuidPattern.test(value);
@@ -28,10 +30,21 @@ function filters(value: unknown) {
 }
 
 type Operation =
-  | { name: "velocity_import_queue" | "velocity_import_detail" | "velocity_import_selection"; input: Json }
+  | {
+    name: "velocity_import_queue" | "velocity_import_detail" | "velocity_import_selection"
+      | "velocity_import_swimmer_matches" | "resolve_velocity_import_swimmer";
+    input: Json;
+  }
   | { name: "approve_velocity_import"; selectionId: string };
 
 function readOperation(params: URLSearchParams): Operation | null {
+  if (params.has("swimmerMatch")) {
+    const id = params.get("swimmerMatch");
+    const search = (params.get("search") ?? "").trim();
+    return uuid(id) && search.length <= 200
+      ? { name: "velocity_import_swimmer_matches", input: { id, search } }
+      : null;
+  }
   if (params.has("id")) {
     const id = params.get("id");
     return uuid(id) ? { name: "velocity_import_detail", input: { id } } : null;
@@ -60,6 +73,15 @@ function writeOperation(body: unknown): Operation | null {
   if (!object(body)) return null;
   if (body.action === "approve" && uuid(body.selectionId))
     return { name: "approve_velocity_import", selectionId: body.selectionId };
+  if (body.action === "resolveSwimmerMatch") {
+    const { id, athleteId, reason, matchVersion } = body;
+    if (!uuid(id) || typeof athleteId !== "string" || !recordIdPattern.test(athleteId)
+      || typeof reason !== "string" || typeof matchVersion !== "string" || !matchVersionPattern.test(matchVersion)) return null;
+    const note = reason.trim();
+    return note.length > 0 && note.length <= 1000
+      ? { name: "resolve_velocity_import_swimmer", input: { id, athleteId, reason: note, matchVersion } }
+      : null;
+  }
   if (body.action !== "selection") return null;
   if (body.prepareSelectionId !== undefined) {
     return uuid(body.prepareSelectionId)
@@ -105,7 +127,11 @@ async function run(
         case "42501": return respond({ error: "Staff access is required." }, 403);
         case "22023": case "22P02": return respond({ error: "Invalid import review request." }, 400);
         case "P0002": case "PT404": return respond({ error: "This import or selection is unavailable." }, 404);
-        case "PT409": return respond({ error: "This selection changed. Review the current rows and try again." }, 409);
+        case "PT409": return respond({
+          error: operation.name === "resolve_velocity_import_swimmer" || operation.name === "velocity_import_swimmer_matches"
+            ? "This swimmer match has changed or conflicts with an existing identity. Refresh the queue and review the match again."
+            : "This selection changed. Review the current rows and try again.",
+        }, 409);
         default: return respond({ error: "The import request could not be confirmed. Try again." }, 503);
       }
     }
